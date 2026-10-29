@@ -1,0 +1,222 @@
+{
+  "status": "executed_pass",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "sympy": "1.13.1",
+    "torch": "2.5.1+cpu",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "threads": 1
+  },
+  "command": "PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 /workspace/1028-cloud/venvs/learning/bin/python stage4/audit/program/chnn_audit_checks.py",
+  "source_sha256_before": {
+    "stage3/source_inputs/starter/stage2/program/learning/rod_rom.py": "5aebcea066b73f717c2c26fd0b8f3454e205fbcc1bafd970762f3fb9371ee3c9",
+    "stage3/source_inputs/starter/stage2/program/learning/run_learning.py": "868de74c224e46082555b5a6553ea70f52a0ee17ec23ed4631fc932e10aecdae",
+    "stage3/source_inputs/starter/stage2/program/learning/run_learning_trained_source.py": "8b5c0eb4f8a0c8b7b4b9db2b2330f49809bca10d3d8aeafef1e3b0e9dcfbd6a2",
+    "stage3/source_inputs/starter/stage2/program/learning/train_spd_complex.py": "6cfb62e29bdf141e3cbe2ca7f82c0a3ee8ac8bdac8525fc8bb1b8827ddb00d50"
+  },
+  "source_sha256_after": {
+    "stage3/source_inputs/starter/stage2/program/learning/rod_rom.py": "5aebcea066b73f717c2c26fd0b8f3454e205fbcc1bafd970762f3fb9371ee3c9",
+    "stage3/source_inputs/starter/stage2/program/learning/run_learning.py": "868de74c224e46082555b5a6553ea70f52a0ee17ec23ed4631fc932e10aecdae",
+    "stage3/source_inputs/starter/stage2/program/learning/run_learning_trained_source.py": "8b5c0eb4f8a0c8b7b4b9db2b2330f49809bca10d3d8aeafef1e3b0e9dcfbd6a2",
+    "stage3/source_inputs/starter/stage2/program/learning/train_spd_complex.py": "6cfb62e29bdf141e3cbe2ca7f82c0a3ee8ac8bdac8525fc8bb1b8827ddb00d50"
+  },
+  "tolerances": {
+    "identity_absolute": 1e-14,
+    "Hpp_autodiff_relative": 1e-12
+  },
+  "checks": {
+    "original_normalization": {
+      "coordinate": "original1025-p0350/m0194; xi=(q+i p)/sqrt(2)",
+      "printed_derivative": "original1025-p0351/m0195; (dq+i dp)/2",
+      "correct_derivative": "(dq+i dp)/sqrt(2)",
+      "corrected_oscillator_error": 0.0,
+      "printed_derivative_chain_rule_error": 0.16697482513464143,
+      "sqrt2_times_correct_derivative_error": 0.23613806228028603,
+      "two_wrong_factors_cancel_in_oscillator": 1.2412670766236366e-16
+    },
+    "original_energy_loss": {
+      "source": "original1025-p0591/m0284",
+      "damped_oscillator_Hdot": -0.048,
+      "omitted_contribution_for_tildeH_sqrt2_H_plus_iP": 0.004608,
+      "correction": "|d tildeH/dt|^2=2[(dH/dt)^2+(dP/dt)^2] for real H,P"
+    },
+    "original_rayleigh_mass_counterexample": {
+      "source": "original1025-p0342; H=p^2/(2m), C=c constant",
+      "mass_m": 2.0,
+      "damping_c": 0.3,
+      "momentum_p": 0.4,
+      "physical_force_minus_c_Hp": -0.06,
+      "printed_force_minus_dG1_dp": -0.12,
+      "force_abs_error": 0.06,
+      "correction": "D(q,v)=c*v^2/2; evaluate -D_v at v=H_p. If C depends on v, its derivatives also matter."
+    },
+    "original_HNN_loss_derivative_mismatch": {
+      "source": "original1025-p0593/m0286 versus p0598/m0289",
+      "test_energy": "(q^2+p^2)/2 in consistently normalized xi",
+      "correct_barxi_predictor_loss": 0.0,
+      "xi_derivative_loss_on_exact_trajectory": 0.32
+    },
+    "split_tanh_regularities": {
+      "CR_defect_at_0p2_plus_0p9i": 0.474125621817775,
+      "conclusion": "not holomorphic in one complex input; real analytic locally",
+      "continuation": "tanh((z+w)/2)+i*tanh((z-w)/(2i)), independent z,w; avoid tanh poles"
+    },
+    "finite_real_data_not_complex_norm": {
+      "polynomial": "z**10 - 5*z**8/2 + 33*z**6/16 - 5*z**4/8 + z**2/16",
+      "training_points": [
+        -1,
+        -0.5,
+        0,
+        0.5,
+        1
+      ],
+      "all_sample_values_and_gradients_zero": true,
+      "abs_value_at_i": 6.25,
+      "conclusion": "Multiplying this entire polynomial by any A leaves sampled losses zero and makes the complex norm arbitrarily large."
+    },
+    "discrete_divisor_counterexample": {
+      "omega": [
+        1.0,
+        1.4142135623730951
+      ],
+      "k": [
+        1000,
+        0
+      ],
+      "h": 0.006283185307179587,
+      "continuous_k_dot_omega": 1000,
+      "discrete_divisor_abs": 2.4492935982947064e-16,
+      "conclusion": "Even for the quadratic-irrational continuous frequency, arbitrarily small chosen steps h=2*pi/k can be exactly resonant."
+    },
+    "old_tube_exactness": {
+      "source": "external_v10/sections/measure_proof.tex:153-162",
+      "circular_torus_radius": 0.1,
+      "period_of_pulled_back_polar_primitive_on_cycle": 0.031415926535897934,
+      "conclusion": "The closed pullback difference has nonzero periods. Symplectic is sufficient for volume; exactness relative to I dt needs a primitive shift."
+    },
+    "actual_3d_model": {
+      "model": "3D inextensible unshearable Kirchhoff strain Ritz; exact SO(3) frame updates and midpoint centerline embedding",
+      "q_dof": 12,
+      "phase_dimension": 24,
+      "quadrature_elements": 20,
+      "configuration": "four Legendre curvature coefficients in each of two bending axes and torsion by default; all are dynamical",
+      "mass": "configuration dependent; includes translational and rotary inertia from embedding Jacobians",
+      "E0_J": 3.6200000000000004e-07,
+      "omega0_rad_s": 4.457629408507532,
+      "omega_rad_s": [
+        4.457629408507532,
+        4.457629408507532,
+        27.694195720027146,
+        27.694195720027146,
+        79.78328659507957,
+        79.78328659507957,
+        356.9402366587693,
+        356.9402366587693,
+        370.43091613854864,
+        1118.611090690932,
+        1984.631631100378,
+        3899.8926690677044
+      ],
+      "nu": [
+        1.0,
+        1.0,
+        6.212763148765096,
+        6.212763148765096,
+        17.898142551467057,
+        17.898142551467057,
+        80.0740043525236,
+        80.0740043525236,
+        83.10042899294614,
+        250.94304352803,
+        445.22131591124275,
+        874.8804155017085
+      ],
+      "canonical_scaling_defect": 5.55251128130777e-21,
+      "mass0_condition": 1264760.7588499414,
+      "repeated_frequency_pairs": [
+        {
+          "i": 0,
+          "j": 1,
+          "relative_difference": 0.0
+        },
+        {
+          "i": 2,
+          "j": 3,
+          "relative_difference": 0.0
+        },
+        {
+          "i": 4,
+          "j": 5,
+          "relative_difference": 0.0
+        },
+        {
+          "i": 6,
+          "j": 7,
+          "relative_difference": 0.0
+        }
+      ],
+      "KAM_status": "Standard nonresonant elliptic KAM is not certified; circular isotropic rod with axial bias has paired bending frequencies.",
+      "relation_to_full_model": "Shares material, distal magnet and field interface with the Cosserat model; shear/stretch omitted in this analytical ROM; modal truncation and fluid/contact closure errors are not yet bounded."
+    },
+    "training_normalization": {
+      "noncanonical_norm_DJD_minus_J": 226107.90220856137,
+      "correct_equation": "x_prime=D J D grad_x h; grad_z h=D grad_x h",
+      "identity_error": 0.0
+    },
+    "actual_complex_training_smoke": {
+      "status": "executed; five fresh updates, not historical retraining",
+      "labels": "16 new noiseless samples from the actual configuration-dependent 12-DOF geometric ROM",
+      "seed": 102504,
+      "steps": 5,
+      "losses": [
+        1.2033360594930582,
+        1.2025110376850268,
+        1.2015293774416254,
+        1.2001869788264297,
+        1.1982766555507134
+      ],
+      "complex_parameters": 3552,
+      "real_parameters": 7104,
+      "parameter_updates": {
+        "l1.weight": {
+          "real_norm": 0.4242950553856813,
+          "imaginary_norm": 0.41084414105462264
+        },
+        "l2.weight": {
+          "real_norm": 0.6448650926843914,
+          "imaginary_norm": 0.6465376708370826
+        },
+        "l2.bias": {
+          "real_norm": 0.09545422649661903,
+          "imaginary_norm": 0.09403612656946729
+        },
+        "l3.weight": {
+          "real_norm": 0.07567833777307037,
+          "imaginary_norm": 0.08258616923421057
+        }
+      },
+      "origin_residual_hessian_norm": 0.0,
+      "momentum_evenness_max_abs": 0.0
+    },
+    "actual_spd_architecture": {
+      "status": "fresh initialized architecture; no old checkpoint loaded",
+      "real_parameters": 13440,
+      "Hpp_formula": "diag(sqrt(nu)) L L^T diag(sqrt(nu))",
+      "formula_autodiff_relative_error": 1.6309787834925207e-16,
+      "minimum_eigenvalue": 0.9839904740556974,
+      "condition_number": 886.8953860460779,
+      "self_inverse_error": 5.834579367856216e-18,
+      "scope": "pointwise SPD for finite real outputs in exact arithmetic; no uniform accuracy/conditioning/complex-domain claim"
+    },
+    "source_snapshot_ast": {
+      "changed_common_definitions": [
+        "main"
+      ],
+      "ComplexResidual_unchanged": true,
+      "train_one_unchanged": true
+    }
+  },
+  "wall_seconds": 2.1989168810014235
+}

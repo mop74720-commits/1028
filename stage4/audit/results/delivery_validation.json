@@ -1,0 +1,94 @@
+{
+  "status": "passed",
+  "audited_head": "38ee6a7fb8f279fc80be05ee2bd4956817364ffc",
+  "rows": 115,
+  "columns": [
+    "id",
+    "item_kind",
+    "original_location",
+    "mathematical_item",
+    "old_v10",
+    "general_birkhoff",
+    "stage2",
+    "stage3",
+    "latest_manuscript_or_notes",
+    "source_code",
+    "evidence",
+    "material_exists",
+    "mentioned_in_latest",
+    "full_derivation_inherited",
+    "algorithm_reused",
+    "verified_on_3d",
+    "generalization_proved",
+    "proof_status",
+    "defect",
+    "repair",
+    "priority"
+  ],
+  "parts": {
+    "birkhoff.csv": 27,
+    "chnn.csv": 30,
+    "original.csv": 28,
+    "physics.csv": 30
+  },
+  "priorities": {
+    "P0": 40,
+    "P1": 58,
+    "P2": 17
+  },
+  "six_status_fields": [
+    "material_exists",
+    "mentioned_in_latest",
+    "full_derivation_inherited",
+    "algorithm_reused",
+    "verified_on_3d",
+    "generalization_proved"
+  ],
+  "checked_existing_paths": 102,
+  "reference_warnings": [],
+  "unchanged_start_tracked_files": 479,
+  "changed_start_files": [],
+  "required_deliverables": [
+    "1025_master_route.md",
+    "full_inheritance_matrix.csv",
+    "missing_or_weakened_results.md",
+    "birkhoff_full_audit.md",
+    "chnn_kam_inheritance.md",
+    "physical_and_control_audit.md",
+    "proof_errors_and_corrections.md",
+    "reproduction_and_tests.md",
+    "proposed_complete_manuscript_structure.md",
+    "final_verdict.md"
+  ],
+  "archive_checks": [
+    {
+      "path": "codex_stage3_starter_1MB.zip",
+      "matched_files": 120,
+      "archive_sha256": "4814a7f97bee92daf022c5d9ad7b6ca3d1a6539337f70a9eacff2b17f155a87b",
+      "crc_and_extracted_bytes": "passed"
+    },
+    {
+      "path": "v10_英文中文整合源码与复算包 (1).zip",
+      "matched_files": 263,
+      "archive_sha256": "121fec60cea516667b964bfe4c593492c711c70542c92bddf33d9f7a62c53b81",
+      "crc_and_extracted_bytes": "passed"
+    },
+    {
+      "path": "一般Birkhoff_推导与验证材料.zip",
+      "matched_files": 8,
+      "archive_sha256": "c7df06ff2aaaf877f11133c18fca35d07c998b85648375e16bb3b2acbe78809a",
+      "crc_and_extracted_bytes": "passed"
+    }
+  ],
+  "external_fixed_commit": "82519542dd057e8fbd6d6879ef33217761e8cbbb",
+  "external_text_files_hash_verified": 17,
+  "external_unsuccessful_requests": [
+    {
+      "path": "sections/learning_proof.tex",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "packaging_correction": "Initial validator assumed every manifest entry was downloaded; learning_proof.tex is a recorded failed request. Corrected to verify downloaded entries and retain unsuccessful requests explicitly; no missing file fabricated.",
+  "scope": "Packaging and source-preservation validation, not proof certification."
+}

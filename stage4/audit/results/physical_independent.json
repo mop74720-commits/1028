@@ -1,0 +1,432 @@
+{
+  "status": "actually_executed_pass",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "executable": "/workspace/1028-cloud/venvs/learning/bin/python",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "torch": "2.5.1+cpu",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41"
+  },
+  "command": "stage4/audit/program/physical_audit_checks.py",
+  "units": {
+    "E0_J": 3.6200000000000004e-07,
+    "omega0_rad_s": 4.457629408507532,
+    "physical_duration_s": 0.0008973379420832672
+  },
+  "tolerances": {
+    "field_abs_T": 1e-15,
+    "affine_force_abs_Q": 1e-10,
+    "energy_gradient_abs_Q": 2e-08,
+    "maxwell_abs_T_per_m": 1e-12,
+    "axis_relative": 1e-13,
+    "geometric_force_abs": 1e-12
+  },
+  "axial_closed_form_relative_error": 4.553418309208504e-15,
+  "variable_mass": {
+    "relative_change": 0.017118396770205924,
+    "minimum_eigenvalue": 0.0011429965302441484,
+    "condition": 875.127778488837,
+    "geometric_force_norm": 0.0004325719395894061,
+    "geometric_force_identity_error": 2.196377175129809e-18
+  },
+  "records": [
+    {
+      "index": 0,
+      "time_s": 5.60836213802042e-05,
+      "convention": "Both full and affine forces include total bias. H0 already includes ideal affine bias; a total coil force inserted into dynamics must subtract that ideal bias once.",
+      "coordinates": "q are dimensionless integrated-curvature Ritz coefficients; force_SI is joules per q coefficient. force_Q=Sq.T force_SI/E0 is dimensionless Pdot.",
+      "active_centers_m": [
+        [
+          0.00014004896486996334,
+          -0.00018637266045138534,
+          0.09749962941045898
+        ]
+      ],
+      "total_moment_A_m2": 0.0007240000000000007,
+      "full_force_Q": [
+        -0.09059214228953483,
+        0.005505769997372857,
+        0.03301661194499517,
+        -0.0014557422264534067,
+        0.018525234949795674,
+        1.115404036265092e-05,
+        0.0014628635841128328,
+        0.010604430061776388,
+        0.0013664591543606677,
+        0.00046056342705665663,
+        -1.6377213874888864e-06,
+        -0.00017096691781160356
+      ],
+      "affine_force_Q": [
+        -0.0005180285900942481,
+        -0.0011190646743871255,
+        0.0010997911468177608,
+        0.0012121346005551801,
+        0.0012533165599648848,
+        0.0012471583238307616,
+        0.0024152794406271114,
+        0.0026413974708196695,
+        6.346924837506342e-06,
+        -7.327622896416308e-06,
+        -3.923114304165665e-06,
+        3.978764097920896e-06
+      ],
+      "full_force_SI": [
+        -8.560114278789915e-08,
+        5.2289056745189925e-08,
+        -4.506285390970416e-11,
+        -9.723453543150694e-10,
+        4.914445082641547e-09,
+        -3.5082918024288552e-09,
+        -2.2752242132374296e-11,
+        1.6110251761384475e-10,
+        1.0699759412828466e-10,
+        -7.5676717167741e-11,
+        -5.273232673400377e-13,
+        4.9770901857125575e-12
+      ],
+      "affine_force_SI": [
+        -8.712504819651999e-10,
+        -1.267432383998018e-10,
+        6.111562677996156e-11,
+        5.921302309179567e-11,
+        -1.3951107835858159e-09,
+        2.692097095514123e-10,
+        5.2924924110001446e-11,
+        4.597387825739546e-11,
+        6.610887550696438e-13,
+        6.294619459024756e-14,
+        -3.2022719287607276e-13,
+        9.777025442032246e-14
+      ],
+      "force_difference_Q_norm": 0.09772051321899221,
+      "force_relative_error": 0.9876629334242254,
+      "field_implementation_difference_T": 1.3433419145937967e-19,
+      "origin_field_error_T": 5.1606485915839546e-20,
+      "origin_gradient_error_T_per_m": 5.371948850430332e-10,
+      "distal_gradient_change_T_per_m": 0.004313763198827696,
+      "maxwell_divergence_T_per_m": 6.5052130349130266e-18,
+      "maxwell_curl_T_per_m": 2.053468610733972e-17,
+      "energy_derivative_disagreement_Q": [
+        4.460821526950963e-10,
+        1.3546467287722483e-09
+      ],
+      "affine_Gm_disagreement_Q": 2.203434396037239e-18,
+      "frozen_audit_disagreement_Q": 1.2985391280837255e-09,
+      "torque_change_Q_norm": 0.006596975593779031,
+      "gradient_force_change_Q_norm": 0.10107342618469438,
+      "wire_refinement": [
+        {
+          "wire_points": 128,
+          "field_difference_T": 2.5462886774193886e-19,
+          "gradient_difference_T_per_m": 2.1830206124790322e-17
+        },
+        {
+          "wire_points": 256,
+          "field_difference_T": 0.0,
+          "gradient_difference_T_per_m": 0.0
+        },
+        {
+          "wire_points": 512,
+          "field_difference_T": 9.661345573727413e-19,
+          "gradient_difference_T_per_m": 3.041916571966247e-17
+        }
+      ],
+      "same_physical_q_rod_quadrature": [
+        {
+          "elements": 20,
+          "magnetic_points": 1,
+          "full_force_common_Q": [
+            -0.09059214228953485,
+            0.005505769997372857,
+            0.03301661194499516,
+            -0.0014557422264534067,
+            0.01852523494979565,
+            1.1154040362650837e-05,
+            0.00146286358411283,
+            0.010604430061776401,
+            0.001366459154360668,
+            0.00046056342705665674,
+            -1.6377213874888843e-06,
+            -0.00017096691781160345
+          ],
+          "relative_full_affine_difference": 0.9876629334242255,
+          "common_Q_difference_from_20": 4.011175678975834e-17
+        },
+        {
+          "elements": 40,
+          "magnetic_points": 2,
+          "full_force_common_Q": [
+            -0.0899702348944821,
+            0.004803942720708462,
+            0.030943204655125536,
+            -0.0010079203383905415,
+            0.018595330227275574,
+            0.00026605229139890156,
+            0.0020683128566284415,
+            0.005262038103310929,
+            0.0013214631985673966,
+            0.00045702954488187906,
+            1.4358304015529909e-05,
+            -0.0001787171427231743
+          ],
+          "relative_full_affine_difference": 0.9885793985399535,
+          "common_Q_difference_from_20": 0.0058616424964639735
+        },
+        {
+          "elements": 80,
+          "magnetic_points": 4,
+          "full_force_common_Q": [
+            -0.08981502277878863,
+            0.004628220034095072,
+            0.03042476945522042,
+            -0.0008970329052177109,
+            0.018608528185391365,
+            0.000334316651714767,
+            0.002218331550714416,
+            0.003936338556193209,
+            0.0013101980677072368,
+            0.0004561507962023525,
+            1.823227479151892e-05,
+            -0.0001805151437566685
+          ],
+          "relative_full_affine_difference": 0.9888266767397982,
+          "common_Q_difference_from_20": 0.007317993649073603
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "time_s": 0.0008973379420832672,
+      "convention": "Both full and affine forces include total bias. H0 already includes ideal affine bias; a total coil force inserted into dynamics must subtract that ideal bias once.",
+      "coordinates": "q are dimensionless integrated-curvature Ritz coefficients; force_SI is joules per q coefficient. force_Q=Sq.T force_SI/E0 is dimensionless Pdot.",
+      "active_centers_m": [
+        [
+          0.00014055181790574494,
+          -0.0001863357844769235,
+          0.09749962813693122
+        ]
+      ],
+      "total_moment_A_m2": 0.0007240000000000007,
+      "full_force_Q": [
+        -0.08652997986418794,
+        0.0031074433447358645,
+        0.032437348497601104,
+        -0.0036038173930707284,
+        0.01881448863365595,
+        -0.003350009794775337,
+        -0.0066974912393703255,
+        0.012658653989886859,
+        0.0013299635378112224,
+        0.0004125973843045709,
+        -2.4536950600105708e-05,
+        -0.00016971520154643403
+      ],
+      "affine_force_Q": [
+        0.0032787937023175742,
+        -0.00408422104108613,
+        0.0006219073409699603,
+        -0.0006710889584349909,
+        0.0015996880449113777,
+        -0.0019303776739156568,
+        -0.005735320787500768,
+        0.004718951115965135,
+        -3.529856614339011e-05,
+        -4.6368776234598314e-05,
+        -3.279163447522529e-05,
+        1.3445724494394467e-05
+      ],
+      "full_force_SI": [
+        -8.213828014851409e-08,
+        4.9526028060647015e-08,
+        2.011217224362346e-11,
+        -8.665504134958548e-10,
+        3.912714755031029e-09,
+        -7.155292515196992e-10,
+        -2.327027166811378e-10,
+        -9.59125393001443e-11,
+        1.0454126133321126e-10,
+        -7.245013209719962e-11,
+        -2.2321665758468522e-12,
+        4.927118645902165e-12
+      ],
+      "affine_force_SI": [
+        2.340088238099079e-09,
+        -2.737194821305197e-09,
+        1.2803117840313598e-10,
+        1.6303912079516595e-10,
+        -2.9465846360577622e-09,
+        3.3766817836565598e-09,
+        -1.3851388023323116e-10,
+        -2.016268608845194e-10,
+        -2.360096491719345e-12,
+        3.1944021096019123e-12,
+        -1.7741441300444446e-12,
+        4.816487149801606e-13
+      ],
+      "force_difference_Q_norm": 0.09748126288270798,
+      "force_relative_error": 1.019947662001113,
+      "field_implementation_difference_T": 7.931413169683192e-20,
+      "origin_field_error_T": 1.2365520656367663e-19,
+      "origin_gradient_error_T_per_m": 5.340367960253866e-10,
+      "distal_gradient_change_T_per_m": 0.004313703215972398,
+      "maxwell_divergence_T_per_m": 1.463672932855431e-17,
+      "maxwell_curl_T_per_m": 6.898116505343049e-18,
+      "energy_derivative_disagreement_Q": [
+        6.648689419928593e-10,
+        1.495404028335256e-09
+      ],
+      "affine_Gm_disagreement_Q": 8.12792196197073e-18,
+      "frozen_audit_disagreement_Q": 1.3588521434594465e-09,
+      "torque_change_Q_norm": 0.006582051847121935,
+      "gradient_force_change_Q_norm": 0.10082642400089237,
+      "wire_refinement": [
+        {
+          "wire_points": 128,
+          "field_difference_T": 5.920608827097535e-19,
+          "gradient_difference_T_per_m": 1.6239304001042653e-17
+        },
+        {
+          "wire_points": 256,
+          "field_difference_T": 0.0,
+          "gradient_difference_T_per_m": 0.0
+        },
+        {
+          "wire_points": 512,
+          "field_difference_T": 5.18904302097439e-19,
+          "gradient_difference_T_per_m": 2.4676264148781627e-17
+        }
+      ],
+      "same_physical_q_rod_quadrature": [
+        {
+          "elements": 20,
+          "magnetic_points": 1,
+          "full_force_common_Q": [
+            -0.08652997986418792,
+            0.0031074433447358645,
+            0.032437348497601104,
+            -0.003603817393070729,
+            0.018814488633655937,
+            -0.0033500097947753373,
+            -0.006697491239370325,
+            0.01265865398988682,
+            0.0013299635378112222,
+            0.0004125973843045708,
+            -2.4536950600105654e-05,
+            -0.0001697152015464342
+          ],
+          "relative_full_affine_difference": 1.019947662001113,
+          "common_Q_difference_from_20": 4.292886145675652e-17
+        },
+        {
+          "elements": 40,
+          "magnetic_points": 2,
+          "full_force_common_Q": [
+            -0.08588701242051507,
+            0.0023987019318372337,
+            0.03039199849669973,
+            -0.0031691880523233955,
+            0.018808305108596886,
+            -0.003040750241225413,
+            -0.00606879038881613,
+            0.007394884344696825,
+            0.0012841088896421808,
+            0.00040951406457195936,
+            -9.778214274351406e-06,
+            -0.0001765515165214787
+          ],
+          "relative_full_affine_difference": 1.0235821084539876,
+          "common_Q_difference_from_20": 0.005786939853643009
+        },
+        {
+          "elements": 80,
+          "magnetic_points": 4,
+          "full_force_common_Q": [
+            -0.08572654353750307,
+            0.0022212431611955985,
+            0.029880636044203435,
+            -0.003061590679154686,
+            0.01880229652573637,
+            -0.002958818913638311,
+            -0.005913091245738625,
+            0.006088873053887006,
+            0.0012726302655475554,
+            0.0004087490866134676,
+            -6.217153665895839e-06,
+            -0.00017811670374224932
+          ],
+          "relative_full_affine_difference": 1.024513239132469,
+          "common_Q_difference_from_20": 0.007224668922428614
+        }
+      ]
+    }
+  ],
+  "counterexamples": {
+    "morison": {
+      "original_acceleration_dimension": "L T^-2",
+      "original_Vf_dimension": "L T^-1",
+      "subtraction_valid": false,
+      "quadratic_drag_without_D": "M L^-1 T^-2, force per area rather than force per length",
+      "correction": "rho_f*A*a_f + m_a*(a_f-r_tt) - c1*v_rel - (rho_f*Cd*D/2)*abs(v_rel)*v_rel"
+    },
+    "contact": {
+      "d_minus_d0_m": -0.0001,
+      "exponent": 1.5,
+      "real_numpy_result": "NaN",
+      "correction": "delta=max(d0-d,0), F=-k*delta**1.5*n, with n and gap convention stated"
+    },
+    "moving_fluid": {
+      "u_f_m_s": 2.0,
+      "v_rod_m_s": 1.0,
+      "drag_coefficient_N_s_m": 1.0,
+      "force_N": 1.0,
+      "rod_power_W": 1.0,
+      "relative_dissipation_W": 1.0,
+      "identity": "F*v = F*u_f - F*(u_f-v); rod power can be positive"
+    },
+    "director_convention": {
+      "t_at_zero": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "t_s_at_zero": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "u_perp_from_t_cross_t_s": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "t_s_cross_t": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "qualification": "Sign contradiction only if original k is identified with Darboux u_perp; opposite-binormal naming alone is not an algebraic contradiction."
+    },
+    "centerline_torsion": {
+      "r": "(0,0,s)",
+      "R1": "I",
+      "R2": "rotation_z(theta(s,t))",
+      "same_centerline": true,
+      "distinct_energy": "R2 has 1/2 integral GJ theta_s^2 and 1/2 integral rho J theta_t^2; centerline alone cannot reconstruct independent torsion."
+    },
+    "contact_regularity": {
+      "damping_coefficient": "const*delta_+^(1/4)",
+      "local_lipschitz_quotient": "delta^(-3/4) tends to infinity at opening",
+      "implication": "Smooth-field uniqueness/order/KAM hypotheses require separate handling; this fact alone is not a proof of nonuniqueness."
+    }
+  },
+  "input_sha256": {
+    "stage3/results/control/control_results.json": "61d0016169d36fb0c9403bb081d396740e78e4dfe2a4553afb7f5f6e2ce8883d",
+    "stage3/results/control/trajectories.npz": "52374f17774099632c73bdde7028500bd4faa13fc8aeb8844af911db8b5574b0",
+    "stage3/results/control/full_coil_force_audit.json": "510b5241376bd1a6a20bc1dd1cb7afb11aaafb8fa7bef29918cd458efa3e4508"
+  },
+  "source_sha256": "d4f2245e71078da983abeeeae2be4c7da407f6405c6720361e07c3c25d101f37",
+  "elapsed_seconds": 20.4526802700002,
+  "limitation": "Pointwise force and quadrature audit at two historical saved states. No new coil-driven trajectories, continuous workspace bound, physiological validation, ROM-to-PDE error estimate, or KAM theorem."
+}

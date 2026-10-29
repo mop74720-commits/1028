@@ -1,0 +1,419 @@
+{
+  "started_at": "2026-10-29T13:48:21.415009+00:00",
+  "source_head": "38ee6a7fb8f279fc80be05ee2bd4956817364ffc",
+  "original_source_root": "/workspace/1028/stage3",
+  "scratch_root": "/workspace/1028-stage4-runs/reproduction-q8kwh8w7",
+  "environment": {
+    "python": "3.12.14",
+    "packages": {
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "torch": "2.5.1+cpu",
+      "matplotlib": "3.10.8",
+      "sympy": "1.13.1"
+    }
+  },
+  "thread_settings": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMBA_NUM_THREADS": "1",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "runs": [
+    {
+      "name": "original_23_tests",
+      "command": [
+        "/workspace/1028-cloud/venvs/learning/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "stage3/tests",
+        "-v"
+      ],
+      "cwd": "/workspace/1028",
+      "started_at": "2026-10-29T13:48:21.421782+00:00",
+      "log": "stage4/audit/logs/reproduction/original_23_tests.log",
+      "exit_code": 0,
+      "ended_at": "2026-10-29T13:49:13.251160+00:00",
+      "seconds": 51.82942331100094,
+      "status": "passed",
+      "test_count": 23,
+      "skipped": 0,
+      "runner_outcome": "OK",
+      "expected_outputs": []
+    },
+    {
+      "name": "fresh_integrators",
+      "command": [
+        "/workspace/1028-cloud/venvs/learning/bin/python",
+        "stage3/program/run_integrators.py"
+      ],
+      "cwd": "/workspace/1028-stage4-runs/reproduction-q8kwh8w7",
+      "started_at": "2026-10-29T13:49:13.253461+00:00",
+      "log": "stage4/audit/logs/reproduction/fresh_integrators.log",
+      "exit_code": 0,
+      "ended_at": "2026-10-29T13:52:49.503402+00:00",
+      "seconds": 216.24997636999979,
+      "status": "passed",
+      "expected_outputs": [
+        {
+          "path": "integrators/integrators.json",
+          "present": true,
+          "sha256": "417397fce480c75825fc06ddd61d93c540ee6cfdd5a774da65477cf85bdb9f1c",
+          "modified_after_command_started": true,
+          "bytes": 24354
+        },
+        {
+          "path": "integrators/integrators_traces.npz",
+          "present": true,
+          "sha256": "4e70807b59e8fd0b4edf580c942796bf3f95f1ecbd1ac595e0c835053d37f3c5",
+          "modified_after_command_started": true,
+          "bytes": 64027
+        },
+        {
+          "path": "integrators/integrators.csv",
+          "present": true,
+          "sha256": "f61354fd6d688eeecd34f44a0ee2189a88dd52a57247d8a5f59d53a67ebe273d",
+          "modified_after_command_started": true,
+          "bytes": 2202
+        }
+      ]
+    },
+    {
+      "name": "window_diagnostic",
+      "command": [
+        "/workspace/1028-cloud/venvs/learning/bin/python",
+        "stage3/program/diagnose_birkhoff_window.py"
+      ],
+      "cwd": "/workspace/1028-stage4-runs/reproduction-q8kwh8w7",
+      "started_at": "2026-10-29T13:52:49.504027+00:00",
+      "log": "stage4/audit/logs/reproduction/window_diagnostic.log",
+      "exit_code": 0,
+      "ended_at": "2026-10-29T13:53:09.078652+00:00",
+      "seconds": 19.574654853999164,
+      "status": "passed",
+      "expected_outputs": [
+        {
+          "path": "birkhoff/window_diagnostic.json",
+          "present": true,
+          "sha256": "4c46a796d6609e293a5500aa27ef7eb6932e61b026048f8b0d00ad4dc8524a5d",
+          "modified_after_command_started": true,
+          "bytes": 16489
+        }
+      ]
+    },
+    {
+      "name": "fresh_local_birkhoff",
+      "command": [
+        "/workspace/1028-cloud/venvs/learning/bin/python",
+        "stage3/program/run_birkhoff.py",
+        "--duration",
+        ".0005"
+      ],
+      "cwd": "/workspace/1028-stage4-runs/reproduction-q8kwh8w7",
+      "started_at": "2026-10-29T13:49:13.254915+00:00",
+      "log": "stage4/audit/logs/reproduction/fresh_local_birkhoff.log",
+      "exit_code": 0,
+      "ended_at": "2026-10-29T13:55:35.524169+00:00",
+      "seconds": 382.26929558200027,
+      "status": "passed",
+      "expected_outputs": [
+        {
+          "path": "birkhoff/results_T0.0005.json",
+          "present": true,
+          "sha256": "ac98f76ff9d395fdf7b8f4bab8b73377e3958adf9fdf96337ee15833fa4071e5",
+          "modified_after_command_started": true,
+          "bytes": 12658
+        },
+        {
+          "path": "birkhoff/trajectories_T0.0005.npz",
+          "present": true,
+          "sha256": "c063d5b59f9be091b6111f9b4918826ce9fc61141ce6cf1fa52a59b0fdda1c88",
+          "modified_after_command_started": true,
+          "bytes": 59710
+        },
+        {
+          "path": "birkhoff/metrics_T0.0005.csv",
+          "present": true,
+          "sha256": "1268662c6f6d1562471ade0b8a5de5ef450fdac1145ee1301d3a3ed6d011c968",
+          "modified_after_command_started": true,
+          "bytes": 1062
+        }
+      ]
+    },
+    {
+      "name": "fresh_control",
+      "command": [
+        "/workspace/1028-cloud/venvs/learning/bin/python",
+        "stage3/program/control_experiments.py"
+      ],
+      "cwd": "/workspace/1028-stage4-runs/reproduction-q8kwh8w7",
+      "started_at": "2026-10-29T13:55:35.524985+00:00",
+      "log": "stage4/audit/logs/reproduction/fresh_control.log",
+      "exit_code": 0,
+      "ended_at": "2026-10-29T13:59:20.594865+00:00",
+      "seconds": 225.06991216300048,
+      "status": "passed",
+      "expected_outputs": [
+        {
+          "path": "control/control_results.json",
+          "present": true,
+          "sha256": "7fd75fd6ec312663f9b4d3bbef85101a2246b42251e5a1f5dddae701436c805b",
+          "modified_after_command_started": true,
+          "bytes": 46400
+        },
+        {
+          "path": "control/trajectories.npz",
+          "present": true,
+          "sha256": "52374f17774099632c73bdde7028500bd4faa13fc8aeb8844af911db8b5574b0",
+          "modified_after_command_started": true,
+          "bytes": 21507
+        },
+        {
+          "path": "control/control_summary.csv",
+          "present": true,
+          "sha256": "ffc7fc66d0870ea88b6ad1d3dbe8c2d329932d862cccdc51801a8b0f596a9bf9",
+          "modified_after_command_started": true,
+          "bytes": 761
+        }
+      ]
+    },
+    {
+      "name": "fresh_coil_force",
+      "command": [
+        "/workspace/1028-cloud/venvs/learning/bin/python",
+        "stage3/program/control_coil_force.py"
+      ],
+      "cwd": "/workspace/1028-stage4-runs/reproduction-q8kwh8w7",
+      "started_at": "2026-10-29T13:59:20.596042+00:00",
+      "log": "stage4/audit/logs/reproduction/fresh_coil_force.log",
+      "exit_code": 0,
+      "ended_at": "2026-10-29T13:59:34.339371+00:00",
+      "seconds": 13.743358793999505,
+      "status": "passed",
+      "expected_outputs": [
+        {
+          "path": "control/full_coil_force_audit.json",
+          "present": true,
+          "sha256": "063940a90fc30f783f61d9756ff679d8f78c5cbd42f966661f43319793319dfa",
+          "modified_after_command_started": true,
+          "bytes": 6581
+        }
+      ]
+    },
+    {
+      "name": "fresh_quadrature",
+      "command": [
+        "/workspace/1028-cloud/venvs/learning/bin/python",
+        "stage3/program/control_quadrature.py"
+      ],
+      "cwd": "/workspace/1028-stage4-runs/reproduction-q8kwh8w7",
+      "started_at": "2026-10-29T13:59:34.339703+00:00",
+      "log": "stage4/audit/logs/reproduction/fresh_quadrature.log",
+      "exit_code": 0,
+      "ended_at": "2026-10-29T13:59:46.266452+00:00",
+      "seconds": 11.926779977000479,
+      "status": "passed",
+      "expected_outputs": [
+        {
+          "path": "control/port_quadrature_rank.json",
+          "present": true,
+          "sha256": "77c7e9a5a4a5f705e221c6a4029566a5678c7571f2c76459847dc476d60cde35",
+          "modified_after_command_started": true,
+          "bytes": 1920
+        }
+      ]
+    },
+    {
+      "name": "fresh_analytic_learning",
+      "command": [
+        "/workspace/1028-cloud/venvs/learning/bin/python",
+        "stage3/program/control_learning.py"
+      ],
+      "cwd": "/workspace/1028-stage4-runs/reproduction-q8kwh8w7",
+      "started_at": "2026-10-29T13:59:46.266831+00:00",
+      "log": "stage4/audit/logs/reproduction/fresh_analytic_learning.log",
+      "exit_code": 0,
+      "ended_at": "2026-10-29T14:00:35.967544+00:00",
+      "seconds": 49.700739939000414,
+      "status": "passed",
+      "expected_outputs": [
+        {
+          "path": "control_learning/learning_results.json",
+          "present": true,
+          "sha256": "be6484ccf978ca567370cf3a8b4dc7b8cd6d5c3601faf06905d6f8c013591362",
+          "modified_after_command_started": true,
+          "bytes": 6240
+        },
+        {
+          "path": "control_learning/learning_data_and_trajectories.npz",
+          "present": true,
+          "sha256": "5f8a8d5877635926924a3970a9e3e2606b96eeed7b340280364b8398405615af",
+          "modified_after_command_started": true,
+          "bytes": 16752
+        }
+      ]
+    },
+    {
+      "name": "fresh_23_tests",
+      "command": [
+        "/workspace/1028-cloud/venvs/learning/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "stage3/tests",
+        "-v"
+      ],
+      "cwd": "/workspace/1028-stage4-runs/reproduction-q8kwh8w7",
+      "started_at": "2026-10-29T14:00:35.968912+00:00",
+      "log": "stage4/audit/logs/reproduction/fresh_23_tests.log",
+      "exit_code": 0,
+      "ended_at": "2026-10-29T14:01:32.527233+00:00",
+      "seconds": 56.5973950839998,
+      "status": "passed",
+      "test_count": 23,
+      "skipped": 0,
+      "runner_outcome": "OK",
+      "expected_outputs": []
+    }
+  ],
+  "fresh_outputs": [
+    {
+      "path": "stage4/audit/results/reproduced/integrators/integrators.csv",
+      "sha256": "f61354fd6d688eeecd34f44a0ee2189a88dd52a57247d8a5f59d53a67ebe273d",
+      "bytes": 2202
+    },
+    {
+      "path": "stage4/audit/results/reproduced/integrators/integrators.json",
+      "sha256": "417397fce480c75825fc06ddd61d93c540ee6cfdd5a774da65477cf85bdb9f1c",
+      "bytes": 24354
+    },
+    {
+      "path": "stage4/audit/results/reproduced/integrators/integrators_traces.npz",
+      "sha256": "4e70807b59e8fd0b4edf580c942796bf3f95f1ecbd1ac595e0c835053d37f3c5",
+      "bytes": 64027
+    },
+    {
+      "path": "stage4/audit/results/reproduced/birkhoff/metrics_T0.0005.csv",
+      "sha256": "1268662c6f6d1562471ade0b8a5de5ef450fdac1145ee1301d3a3ed6d011c968",
+      "bytes": 1062
+    },
+    {
+      "path": "stage4/audit/results/reproduced/birkhoff/results_T0.0005.json",
+      "sha256": "ac98f76ff9d395fdf7b8f4bab8b73377e3958adf9fdf96337ee15833fa4071e5",
+      "bytes": 12658
+    },
+    {
+      "path": "stage4/audit/results/reproduced/birkhoff/trajectories_T0.0005.npz",
+      "sha256": "c063d5b59f9be091b6111f9b4918826ce9fc61141ce6cf1fa52a59b0fdda1c88",
+      "bytes": 59710
+    },
+    {
+      "path": "stage4/audit/results/reproduced/birkhoff/window_diagnostic.json",
+      "sha256": "4c46a796d6609e293a5500aa27ef7eb6932e61b026048f8b0d00ad4dc8524a5d",
+      "bytes": 16489
+    },
+    {
+      "path": "stage4/audit/results/reproduced/control/control_results.json",
+      "sha256": "7fd75fd6ec312663f9b4d3bbef85101a2246b42251e5a1f5dddae701436c805b",
+      "bytes": 46400
+    },
+    {
+      "path": "stage4/audit/results/reproduced/control/control_summary.csv",
+      "sha256": "ffc7fc66d0870ea88b6ad1d3dbe8c2d329932d862cccdc51801a8b0f596a9bf9",
+      "bytes": 761
+    },
+    {
+      "path": "stage4/audit/results/reproduced/control/full_coil_force_audit.json",
+      "sha256": "063940a90fc30f783f61d9756ff679d8f78c5cbd42f966661f43319793319dfa",
+      "bytes": 6581
+    },
+    {
+      "path": "stage4/audit/results/reproduced/control/point_audit.json",
+      "sha256": "8e0a05841c41a24e4ec8e66dfb43398511a1184e0b2e87e8abcbd7d38d5ae506",
+      "bytes": 10206
+    },
+    {
+      "path": "stage4/audit/results/reproduced/control/port_quadrature_rank.json",
+      "sha256": "77c7e9a5a4a5f705e221c6a4029566a5678c7571f2c76459847dc476d60cde35",
+      "bytes": 1920
+    },
+    {
+      "path": "stage4/audit/results/reproduced/control/trajectories.npz",
+      "sha256": "52374f17774099632c73bdde7028500bd4faa13fc8aeb8844af911db8b5574b0",
+      "bytes": 21507
+    },
+    {
+      "path": "stage4/audit/results/reproduced/control_learning/learning_data_and_trajectories.npz",
+      "sha256": "5f8a8d5877635926924a3970a9e3e2606b96eeed7b340280364b8398405615af",
+      "bytes": 16752
+    },
+    {
+      "path": "stage4/audit/results/reproduced/control_learning/learning_results.json",
+      "sha256": "be6484ccf978ca567370cf3a8b4dc7b8cd6d5c3601faf06905d6f8c013591362",
+      "bytes": 6240
+    },
+    {
+      "path": "stage4/audit/results/reproduced/rom_bridge.json",
+      "bytes": 4338,
+      "sha256": "5439eb9db08a02a96b5ff8d9dbdacbc3d75efe933e7473346225c30349298702"
+    },
+    {
+      "path": "stage4/audit/results/reproduced/birkhoff_identity_checks.json",
+      "bytes": 2108,
+      "sha256": "e42ee380d79862c55653546fa22bd84da2409d13a03979e9b176c4c998ee7a7f"
+    }
+  ],
+  "historical_copied_records": [
+    "birkhoff/results_T0.004.json"
+  ],
+  "tolerances": {
+    "implicit_increment_inf": 2e-13,
+    "integrator_reference": [
+      [
+        2e-11,
+        2e-13
+      ],
+      [
+        5e-13,
+        5e-15
+      ]
+    ],
+    "birkhoff_reference": [
+      [
+        2e-10,
+        2e-12
+      ],
+      [
+        5e-12,
+        5e-14
+      ]
+    ],
+    "birkhoff_max_step_refinement": [
+      "T/8",
+      "T/16"
+    ],
+    "control": "RK4 8/16 steps on tau=.004; this is a refinement observation, not an implicit residual tolerance"
+  },
+  "source_unchanged": true,
+  "source_files_hashed": 476,
+  "source_manifest_sha256": "ab37ff80793005d830d3a5dc1b89ae7eccb8b8dc7f01455ea059c850d1707c07",
+  "ended_at": "2026-10-29T14:01:33.288574+00:00",
+  "status": "all_selected_reruns_passed",
+  "starting_tracked_file_preservation": {
+    "source_head": "38ee6a7fb8f279fc80be05ee2bd4956817364ffc",
+    "tracked_files_checked": 479,
+    "changed": [],
+    "all_starting_tracked_files_unchanged": true,
+    "preserved_untracked": [
+      "stage3/install.sh"
+    ]
+  },
+  "execution_corrections": {
+    "record": "stage4/audit/results/test_side_effect_restore.json",
+    "detail": "The first tests were initially run in the source checkout, revealing test teardown evidence writes. The affected files were restored byte-for-byte from the pre-run copy after checking HEAD. The harness was corrected to isolate even this initial test invocation; its logged cwd remains the actual historical cwd. The final23-test run uses scratch and fresh scientific outputs."
+  }
+}

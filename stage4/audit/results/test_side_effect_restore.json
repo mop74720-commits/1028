@@ -1,0 +1,14 @@
+[
+  {
+    "path": "stage3/results/rom_bridge.json",
+    "before_restore_sha256": "d57d136f5e1cbcb6edcbd86587c8113c45ccea7f85701d32ac831c21c0735f43",
+    "restored_sha256": "0232edbfde7e7945bd429fe2800c6bd4e8c9ba5a37d2f3c3f696c8eeced3cc5d",
+    "cause": "Existing unittest tearDownClass rewrites evidence when executed in place; restored exact pre-run bytes from scratch backup after verifying git HEAD."
+  },
+  {
+    "path": "stage3/results/birkhoff_identity_checks.json",
+    "before_restore_sha256": "e42ee380d79862c55653546fa22bd84da2409d13a03979e9b176c4c998ee7a7f",
+    "restored_sha256": "e42ee380d79862c55653546fa22bd84da2409d13a03979e9b176c4c998ee7a7f",
+    "cause": "Existing unittest tearDownClass rewrites evidence when executed in place; restored exact pre-run bytes from scratch backup after verifying git HEAD."
+  }
+]

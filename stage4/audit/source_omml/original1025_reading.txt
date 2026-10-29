@@ -1,0 +1,1222 @@
+original1025-p0001 变系数非线性波动方程（二阶拟线性双曲型PDE）
+original1025-p0002 ①Kirohhoff弹性杆理论(几何精确) 
+original1025-p0003 ② Maxwell磁场张量理论(电磁力) 
+original1025-p0004 ③ 修正Morison方程(流圈耦合) 
+original1025-p0005 ④ 接触力学
+original1025-p0006 推导过程如下：
+original1025-p0007 (1)几何与运动学描述(① Kirohhoff 假设)
+original1025-p0008  ⟦original1025-m0001: \overset{⃗}{r}(s, t)⟧  : 杆的中心线位置矢量
+original1025-p0009 s:Lagrange 弧长坐标.
+original1025-p0010 t：时间
+original1025-p0011  ⟦original1025-m0002: \overset{⃗}{t}⟧ :变形后的切向量(单位向量)
+original1025-p0012  ⟦original1025-m0003: v⟧ ： ⟦original1025-m0004: 拉伸应变⟧ 
+original1025-p0013 (v)
+original1025-p0014  ⟦original1025-m0005: ⇒\frac{∂\overset{⃗}{r}}{∂s}=v\overset{⃗}{t},v=|\frac{∂\overset{⃗}{r}}{∂s}|=1⟧ 
+original1025-p0015  ⟦original1025-m0006: v=1+ε⟧ ,  ⟦original1025-m0007: \overset{⃗}{t}⟧ 取成 ⟦original1025-m0008: \overset{⃗}{ds}⟧ 
+original1025-p0016  ⟦original1025-m0009: \overset{⃗}{u}⟧  : Darboux矢量轴,描述杆的局部变形
+original1025-p0017  ⟦original1025-m0010: {{\overset{⃗}{d}}_{1}, {\overset{⃗}{d}}_{2}, {\overset{⃗}{d}}_{3}}⟧  ：局部标架
+original1025-p0018 (vi)
+original1025-p0019  ⟦original1025-m0011: \frac{∂{\overset{⃗}{d}}_{i}}{∂s}=\overset{⃗}{u}×{\overset{⃗}{d}}_{i}⟧ 
+original1025-p0020  ⟦original1025-m0012: \overset{⃗}{k}⟧ : 曲率矢量  ⟦original1025-m0013: ≈\frac{∂\overset{⃗}{t}}{∂s}×\overset{⃗}{t}=\frac{1}{v}\frac{∂}{∂s}\left( \frac{1}{v}\frac{∂\overset{⃗}{r}}{∂s} \right)×\frac{∂\overset{⃗}{r}}{∂s}⟧ 
+original1025-p0021 动力学平衡与本构关系
+original1025-p0022 (i)
+original1025-p0023   ⟦original1025-m0014: ρA\frac{{∂}^{2}\overset{⃗}{r}}{∂{t}^{2}}=\frac{∂\overset{⃗}{n}}{∂s}+{\overset{⃗}{f}}_{ext }⟧ 
+original1025-p0024 (牛顿第二定律. Euler-Cauchy 应力原理)
+original1025-p0025 平动方程  ⟦original1025-m0015: {\overset{⃗}{f}}_{ext }={\overset{⃗}{f}}_{mag } +{\overset{⃗}{f}}_{hydro } +{\overset{⃗}{f}}_{cont}+{\overset{⃗}{f}}_{gravity}={\overset{⃗}{f}}_{mag } +{\overset{⃗}{f}}_{hydro } +{\overset{⃗}{f}}_{cont}⟧ 
+original1025-p0026  ⟦original1025-m0016: ({\overset{⃗}{f}}_{gravity}=0：微重力 )⟧ 
+original1025-p0027   ⟦original1025-m0017: \overset{⃗}{n}(s, t)⟧ : 内力矢量
+original1025-p0028  ⟦original1025-m0018: \overset{⃗}{n}⟧ :杆件横截面上的内力矢量
+original1025-p0029  ⟦original1025-m0019: \overset{⃗}{m}⟧ :杆件横截面上的力矩矢量
+original1025-p0030  ⟦original1025-m0020: ρ,A,I⟧ : 杆的材料密度,横截面积,截面惯性矩
+original1025-p0031 
+original1025-p0032 
+original1025-p0033 
+original1025-p0034 
+original1025-p0035  ⟦original1025-m0021: {\overset{⃗}{f}}_{mag}={∮_{}^{}{\overset{⃗}{σ}}}_{m}⋅\overset{⃗}{n}dl⟧ (Maxwell磁场张量理论)磁力(4)(②证明公式含义)
+original1025-p0036  ⟦original1025-m0022: {\overset{⃗}{I}}_{m}⟧ :磁偶极矩
+original1025-p0037  ⟦original1025-m0023: {\overset{⃗}{σ}}_{m}⟧ :Maxwell应力张量
+original1025-p0038 (修正Morison方程计算得到的流体作用力)③
+original1025-p0039 
+original1025-p0040  ⟦original1025-m0024: {\overset{⃗}{f}}_{hydro}=−{ρ}_{f}A{C}_{m}(\frac{{∂}^{2}\overset{⃗}{r}}{∂{t}^{2}}−{\overset{⃗}{V}}_{f})−\frac{1}{2}{ρ}_{f}{C}_{d}\left| {\overset{⃗}{V}}_{r} \right|{\overset{⃗}{V}}_{r}⟧ (5)
+original1025-p0041 （惯性项+阻尼项）
+original1025-p0042  ⟦original1025-m0025: {\overset{⃗}{V}}_{f}⟧ :流体速度
+original1025-p0043  ⟦original1025-m0026: {ρ}_{f}⟧ :流体密度
+original1025-p0044  ⟦original1025-m0027: V⟧ :杆件体积
+original1025-p0045  ⟦original1025-m0028: {C}_{m}⟧ :附加质量系数
+original1025-p0046  ⟦original1025-m0029: {C}_{d}⟧ :拖曳系数
+original1025-p0047  ⟦original1025-m0030: {\overset{⃗}{V}}_{r}⟧ :杆件与流体的相对速度
+original1025-p0048 
+original1025-p0049  ⟦original1025-m0031: {\overset{⃗}{f}}_{cont}=\left{ \begin{aligned}−{k}_{p}(d−{d}_{0}{)}^{n} {\overset{⃗}{n}}_{wall}−{μ}_{f}\left| {\overset{⃗}{F}}_{normal} \right|{\overset{⃗}{t}}_{fric}, d≤{d}_{0} \\ 0,  &d>{d}_{0}\end{aligned} \right⟧ (6)
+original1025-p0050 (④接触力）
+original1025-p0051  ⟦original1025-m0032: d⟧ :杆表面到障碍物的距离
+original1025-p0052  ⟦original1025-m0033: {d}_{0}⟧ :接触判定阈值
+original1025-p0053  ⟦original1025-m0034: {k}_{p}⟧ :接触刚度
+original1025-p0054  ⟦original1025-m0035: n⟧ :指数(Hertz模型常取n=1.5)
+original1025-p0055 
+original1025-p0056  ⟦original1025-m0036: {\overset{⃗}{f}}_{gravity}⟧ (微重力环境下的残余重力)(7)
+original1025-p0057 
+original1025-p0058 (ii)
+original1025-p0059  ⟦original1025-m0037: \frac{∂\overset{⃗}{m}}{∂s}+\frac{∂\overset{⃗}{r}}{∂s}×\overset{⃗}{n}+{\overset{⃗}{I}}_{mag}+{\overset{⃗}{I}}_{cont }=J \frac{∂\overset{⃗}{w}}{∂t}+\overset{⃗}{w}×(J\overset{⃗}{w})⟧  (转动方程)
+original1025-p0060  ⟦original1025-m0038: \overset{⃗}{w}×(J\overset{⃗}{w})⟧ :(非线性旋转效应)描述大变形时需要考虑这一项
+original1025-p0061  ⟦original1025-m0039: \overset{⃗}{w}⟧ : 杆件截面的角速度矢量
+original1025-p0062  ⟦original1025-m0040: J = ρI⟧ 
+original1025-p0063  ⟦original1025-m0041: g⟧ : 材料密度. kg/m3
+original1025-p0064  ⟦original1025-m0042: I⟧ ：几何惯性致密, m4
+original1025-p0065 (iii)
+original1025-p0066 力—应变关系
+original1025-p0067  ⟦original1025-m0043: \overset{⃗}{n}= {K}_{s}(\overset{⃗}{r} −\overset{⃗}{{r}_{0}} )⟧ 
+original1025-p0068  ⟦original1025-m0044: \left{ \begin{aligned}\overset{⃗}{r}:剪切/拉伸应变矢量 \\ {K}_{s}: 剪切/拉伸刚度矩阵\end{aligned} \right⟧ 
+original1025-p0069 力矩—曲率关系
+original1025-p0070 (iv)
+original1025-p0071  ⟦original1025-m0045: \overset{⃗}{m}={K}_{b}(\overset{⃗}{u}−\overset{⃗}{{u}_{0}})⟧ 
+original1025-p0072  ⟦original1025-m0046: \left{ \begin{aligned}\overset{⃗}{u} = {({k}_{1},{k}_{2}, z)}^{T} : 曲率与扭率矢量  \\ {K}_{b}=diag\left( E{I}_{1},E{I}_{2},E{I}_{3}, \right): 弯曲与扭转刚度矩阵\end{aligned} \right⟧ 
+original1025-p0073 
+original1025-p0074 将(i),(ii),(iii),(iv),(v),(vi)这6个方程整理成以下方程组：
+original1025-p0075 Part1(四场耦合PDE建立)
+original1025-p0076  ⟦original1025-m0047: \left{ \begin{matrix}ρA\frac{{∂}^{2}\overset{⃗}{r}}{∂{t}^{2}}−\frac{∂\overset{⃗}{n}}{∂s}={\overset{⃗}{f}}_{mag } (B)+{\overset{⃗}{f}}_{hydro }(\frac{∂\overset{⃗}{r}}{∂t},\frac{{∂}^{2}\overset{⃗}{r}}{∂{t}^{2}}) +{\overset{⃗}{f}}_{cont}(\overset{⃗}{r})+{\overset{⃗}{f}}_{gravity}(\overset{⃗}{r}) \\  \\ J\frac{∂\overset{⃗}{w}}{∂t}+\overset{⃗}{w}×\left( J\overset{⃗}{w} \right)−\frac{∂m}{∂s}−\frac{∂r}{∂s}×\overset{⃗}{n}={\overset{⃗}{I}}_{mag}\left( \overset{⃗}{B} \right)+{\overset{⃗}{I}}_{cont}\left( \overset{⃗}{r} \right)\end{matrix} \right⟧  (1)
+original1025-p0077  ⟦original1025-m0048: \left{ \begin{aligned}\overset{⃗}{m}={K}_{b}(\overset{⃗}{u}−\overset{⃗}{{u}_{0}}) \\ \overset{⃗}{n}= {K}_{s}(\overset{⃗}{r}−\overset{⃗}{{r}_{0}} )\end{aligned} \right⟧ (2)
+original1025-p0078  ⟦original1025-m0049: \left{ \begin{aligned}\frac{∂\overset{⃗}{r}}{∂s}=(1+ε)\overset{⃗}{{d}_{3}} \\ \frac{∂{\overset{⃗}{d}}_{i}}{∂s}=\overset{⃗}{u}×{\overset{⃗}{d}}_{i}\end{aligned} \right⟧ (3)
+original1025-p0079 
+original1025-p0080  强非线性,强拟合,混合-PDE代数方程组. 
+original1025-p0081  四场耦合非线性偏微分方程组.
+original1025-p0082 注：①-③页内容为大致推导过程需要清晰每个变量的含义,核对公式是否正确？
+original1025-p0083 
+original1025-p0084 
+original1025-p0085 将内力矢量 ⟦original1025-m0050: \overset{⃗}{n}⟧ 写成两部分
+original1025-p0086  ⟦original1025-m0051: \overset{⃗}{n} = EA(v − 1)\overset{⃗}{t} + ∇s ⋅ \overset{⃗}{m}+ \overset{⃗}{{K}_{s}}r⟧ 
+original1025-p0087  ⟦original1025-m0052: r⟧ :小剪切假设,忽略
+original1025-p0088 三个分别为拉伸力，弯曲力矩，剪切力
+original1025-p0089  ⟦original1025-m0053: ≈ EA(v − 1)\overset{⃗}{t} + ∇s ⋅ \overset{⃗}{m}⟧ 
+original1025-p0090  ⟦original1025-m0054: =EA\left( |\frac{∂\overset{⃗}{r}}{∂s}|−1 \right)\frac{1}{v}\frac{∂\overset{⃗}{r}}{∂s}−\frac{∂}{∂s}(EI\frac{{∂}^{2}\overset{⃗}{r}}{∂{s}^{2}})⟧ 
+original1025-p0091  ⟦original1025-m0055: =EA\left( |\frac{∂\overset{⃗}{r}}{∂s}|−1 \right){\left| \frac{∂\overset{⃗}{r}}{∂s} \right|}^{−1}\frac{∂\overset{⃗}{r}}{∂s}−\frac{∂}{∂s}(EI\frac{{∂}^{2}\overset{⃗}{r}}{∂{s}^{2}}):={k}_{tan}(s,t,r)\frac{∂\overset{⃗}{r}}{∂s}−\frac{∂}{∂s}(EI\frac{{∂}^{2}\overset{⃗}{r}}{∂{s}^{2}})⟧ 
+original1025-p0092  ⟦original1025-m0056: \begin{matrix} \\ ⇒\frac{∂\overset{⃗}{n}}{∂s}=\frac{∂}{∂s}[{k}_{tan}(s,t,r)\frac{∂\overset{⃗}{r}}{∂s}]−\frac{{∂}^{2}}{∂{s}^{2}}(EI\frac{{∂}^{2}\overset{⃗}{r}}{∂{s}^{2}}) \\ \end{matrix}⟧ (8)
+original1025-p0093 将(5),(8)代入方程(1)得
+original1025-p0094  ⟦original1025-m0057: ρA\frac{{∂}^{2}\overset{⃗}{r}}{∂{t}^{2}}−\frac{∂}{∂s}[{k}_{tan}(s,t,r)\frac{∂\overset{⃗}{r}}{∂s}]+\frac{{∂}^{2}}{∂{s}^{2}}(EI\frac{{∂}^{2}\overset{⃗}{r}}{∂{s}^{2}})+{ρ}_{f}A{C}_{m}\frac{{∂}^{2}\overset{⃗}{r}}{∂{t}^{2}}−{ρ}_{f}A{C}_{m}{\overset{⃗}{V}}_{f}={\overset{⃗}{f}}_{mag } (B)−\frac{1}{2}{ρ}_{f}{C}_{d}\left| {\overset{⃗}{V}}_{r} \right|{\overset{⃗}{V}}_{r} +{\overset{⃗}{f}}_{cont}(\overset{⃗}{r})+{\overset{⃗}{f}}_{gravity}(\overset{⃗}{r})⟧ 
+original1025-p0095  ⟦original1025-m0058: ⇒(ρA+{ρ}_{f}A{C}_{m})I\frac{{∂}^{2}\overset{⃗}{r}}{∂{t}^{2}}−{ρ}_{f}A{C}_{m}=\frac{∂}{∂s}[{k}_{tan}(s,t,r)\frac{∂\overset{⃗}{r}}{∂s}]−\frac{{∂}^{2}}{∂{s}^{2}}(EI\frac{{∂}^{2}\overset{⃗}{r}}{∂{s}^{2}})−\frac{1}{2}{ρ}_{f}{DC}_{d}\left| \frac{∂\overset{⃗}{r}}{∂t}−{\overset{⃗}{V}}_{f} \right|(\frac{∂\overset{⃗}{r}}{∂t}−{\overset{⃗}{V}}_{f}) +{\overset{⃗}{f}}_{cont}(\overset{⃗}{r})+{\overset{⃗}{f}}_{gravity}(\overset{⃗}{r})+{\overset{⃗}{f}}_{mag } (B)⟧ 
+original1025-p0096  ⟦original1025-m0059: ⇒(ρA+{ρ}_{f}A{C}_{m}I)\frac{{∂}^{2}\overset{⃗}{r}}{∂{t}^{2}}+(\frac{1}{2}{ρ}_{f}{DC}_{d}\left| \frac{∂\overset{⃗}{r}}{∂t}−{\overset{⃗}{V}}_{f} \right|I)\frac{∂\overset{⃗}{r}}{∂t}=\frac{∂}{∂s}[{k}_{tan}(s,t,r)\frac{∂γ}{∂s}]−\frac{{∂}^{2}}{∂{s}^{2}}(EI\frac{{∂}^{2}\overset{⃗}{r}}{∂{s}^{2}})+{ρ}_{f}A{C}_{m}{\overset{⃗}{V}}_{f}+{\overset{⃗}{f}}_{cont}(\overset{⃗}{r})+{\overset{⃗}{f}}_{gravity}(\overset{⃗}{r})+{\overset{⃗}{f}}_{mag } (B)⟧ 
+original1025-p0097  ⟦original1025-m0060: ⇒M(s,t)\frac{{∂}^{2}\overset{⃗}{r}}{∂{t}^{2}}+C(s,t,\frac{∂\overset{⃗}{r}}{∂t})\frac{∂\overset{⃗}{r}}{∂t}=\frac{∂}{∂s}[{k}_{tan}(s,t,r)\frac{∂γ}{∂s}]−\frac{{∂}^{2}}{∂{s}^{2}}(EI\frac{{∂}^{2}\overset{⃗}{r}}{∂{s}^{2}})+\overset{⃗}{F}⟧ (9)
+original1025-p0098  ⟦original1025-m0061: M(s,t):=ρA+{ρ}_{f}A{C}_{m}I⟧ 
+original1025-p0099  ⟦original1025-m0062: C(s,t,\frac{∂\overset{⃗}{r}}{∂t})⟧ := ⟦original1025-m0063: \frac{1}{2}{ρ}_{f}{DC}_{d}\left| \frac{∂\overset{⃗}{r}}{∂t}−{\overset{⃗}{V}}_{f} \right|I⟧ 
+original1025-p0100  ⟦original1025-m0064: \overset{⃗}{F}:={ρ}_{f}A{C}_{m}{\overset{⃗}{V}}_{f}+{\overset{⃗}{f}}_{cont}(\overset{⃗}{r})+{\overset{⃗}{f}}_{gravity}(\overset{⃗}{r})+{\overset{⃗}{f}}_{mag } (B)⟧ (9)
+original1025-p0101 记为 ⟦original1025-m0065: L(s,t,\overset{⃗}{r}(s,t))=\overset{⃗}{F}⟧ 
+original1025-p0102 变系数非线性波动方程
+original1025-p0103 近似解:
+original1025-p0104   ⟦original1025-m0066: \overset{⃗}{r}(s,t)≈N(s)\overset{⃗}{{q}_{k}}\left( t \right):=\overset{⃗}{r}(s,t)⟧ ,
+original1025-p0105   ⟦original1025-m0067: \overset{⃗}{r}(s,t)=∑_{k=1}^{N}{{N}_{k}\left( s \right)\overset{⃗}{{q}_{k}}\left( t \right)}⟧ 
+original1025-p0106  ⟦original1025-m0068: s⟧ 与 ⟦original1025-m0069: t⟧ 分离, ⟦original1025-m0070: s∈[0, L]⟧ 
+original1025-p0107  ⟦original1025-m0071: N(S)⟧  : 已知的插值函数矩阵
+original1025-p0108  ⟦original1025-m0072: \overset{⃗}{{q}_{k}}\left( t \right)⟧ :未知的节点位移向量
+original1025-p0109 残差 ⟦original1025-m0073: \overset{⃗}{R}(s,t) = L(s,t,\overset{⃗}{r}(s,t))−\overset{⃗}{F}≠⟧ 0
+original1025-p0110 
+original1025-p0111 
+original1025-p0112 
+original1025-p0113 
+original1025-p0114 Galerkin 空间,离散化,Part 2.
+original1025-p0115 要求：  ⟦original1025-m0074: ∫_{0}^{L}{{N}^{T}\left( s \right)}⋅\overset{⃗}{R}\left( s,t \right)ds≡0⟧  (残差在整体域上的加权积分为0)
+original1025-p0116  ⟦original1025-m0075: ⇔∫_{0}^{L}{{N}^{T}\left( s \right)}[M\overset{̈}{\overset{^}{r}}+C\overset{̇}{\overset{^}{γ}}−\frac{∂}{∂s}({k}_{tan}\frac{∂\overset{^}{γ}}{∂s})+\frac{{∂}^{2}}{∂{s}^{2}}(EI\frac{{∂}^{2}\overset{^}{γ}}{∂{s}^{2}})−\overset{⃗}{F}]ds=0⟧ (10)
+original1025-p0117  ⟦original1025-m0076: ∫_{0}^{L}{{N}^{T}\left( s \right)}M\overset{̈}{\overset{^}{r}}ds=∫_{0}^{L}{{N}^{T}\left( s \right)}MN(s)\overset{̈}{\overset{⃗}{{q}_{k}}}\left( t \right)ds=(∫_{0}^{L}{{N}^{T}\left( s \right)}MN(s)ds)\overset{̈}{\overset{⃗}{{q}_{k}}}\left( t \right)⟧ 
+original1025-p0118  ⟦original1025-m0077: ∫_{0}^{L}{{N}^{T}\left( s \right)}C\overset{̇}{\overset{^}{γ}}ds=∫_{0}^{L}{{N}^{T}\left( s \right)}CN(s)\overset{̇}{\overset{⃗}{{q}_{k}}}\left( t \right)ds=(∫_{0}^{L}{{N}^{T}\left( s \right)}CN(s)ds)\overset{̇}{\overset{⃗}{{q}_{k}}}\left( t \right)⟧ 
+original1025-p0119  ⟦original1025-m0078: ∫_{0}^{L}{{N}^{T}\left( s \right)}\frac{∂}{∂s}({k}_{tan}\frac{∂\overset{^}{γ}}{∂s})ds={N}^{T}\left( s \right){k}_{tan}{\left \frac{∂\overset{^}{γ}}{∂s} \right|}_{0}^{L}−∫_{0}^{L}{\frac{d{N}^{T}\left( s \right)}{ds}}({k}_{tan}\frac{∂\overset{^}{γ}}{∂s})ds={N}^{T}\left( s \right){k}_{tan}{\left \frac{∂\overset{^}{γ}}{∂s} \right|}_{0}^{L}−(∫_{0}^{L}{\frac{d{N}^{T}\left( s \right)}{ds}}{k}_{tan}\frac{dN\left( s \right)}{ds}ds)\overset{⃗}{{q}_{k}}\left( t \right)⟧ 
+original1025-p0120  ⟦original1025-m0079: ∫_{0}^{L}{{N}^{T}\left( s \right)}\frac{{∂}^{2}}{∂{s}^{2}}(EI\frac{{∂}^{2}\overset{^}{γ}}{∂{s}^{2}})ds ={N}^{T}\left( s \right)\frac{∂}{∂s}(EI{\left \frac{{∂}^{2}\overset{^}{γ}}{∂{s}^{2}}) \right|}_{0}^{L}−∫_{0}^{L}{\frac{d{N}^{T}\left( s \right)}{ds}}\frac{∂}{∂s}(EI\frac{{∂}^{2}\overset{^}{γ}}{∂{s}^{2}})ds={N}^{T}\left( s \right)\frac{∂}{∂s}(EI{\left \frac{{∂}^{2}\overset{^}{γ}}{∂{s}^{2}}) \right|}_{0}^{L}−\frac{d{N}^{T}\left( s \right)}{ds}EI{\left \frac{{∂}^{2}\overset{^}{γ}}{∂{s}^{2}} \right|}_{0}^{L}+∫_{0}^{L}{\frac{{d}^{2}{N}^{T}\left( s \right)}{d{s}^{2}}}EI\frac{{∂}^{2}\overset{^}{γ}}{∂{s}^{2}}ds={N}^{T}\left( s \right)\frac{∂}{∂s}(EI{\left \frac{{∂}^{2}\overset{^}{γ}}{∂{s}^{2}}) \right|}_{0}^{L}−\frac{d{N}^{T}\left( s \right)}{ds}EI{\left \frac{{∂}^{2}\overset{^}{γ}}{∂{s}^{2}} \right|}_{0}^{L}+(∫_{0}^{L}{\frac{{d}^{2}{N}^{T}\left( s \right)}{d{s}^{2}}}EI\frac{{d}^{2}N\left( s \right)}{d{s}^{2}}ds)\overset{⃗}{{q}_{k}}\left( t \right)⟧ 
+original1025-p0121  ⟦original1025-m0080:  {M}_{global}:=∫_{0}^{L}{{N}^{T}\left( s \right)}MN(s)ds⟧ 
+original1025-p0122  ⟦original1025-m0081: {C}_{global}:=∫_{0}^{L}{{N}^{T}\left( s \right)}CN(s)ds⟧ 
+original1025-p0123  ⟦original1025-m0082:  {K}_{ten}:=∫_{0}^{L}{\frac{d{N}^{T}\left( s \right)}{ds}}{k}_{tan}\frac{dN\left( s \right)}{ds}ds⟧ 
+original1025-p0124  ⟦original1025-m0083: {K}_{bent}:=∫_{0}^{L}{\frac{{d}^{2}{N}^{T}\left( s \right)}{d{s}^{2}}}EI\frac{{d}^{2}N\left( s \right)}{d{s}^{2}}ds⟧ 
+original1025-p0125  ⟦original1025-m0084: {\overset{⃗}{F}}_{global}:=∫_{0}^{L}{{N}^{T}\left( s \right)}\overset{⃗}{F}ds⟧ 
+original1025-p0126  ⇒ ⟦original1025-m0085:  {M}_{global}\overset{̈}{\overset{⃗}{{q}_{k}}}\left( t \right)+{C}_{global}\overset{̇}{\overset{⃗}{{q}_{k}}}\left( t \right) + ({K}_{ten}+{K}_{bent})\overset{⃗}{{q}_{k}}\left( t \right) ={\overset{⃗}{F}}_{global}⟧ 
+original1025-p0127 简记成 ⟦original1025-m0086:  M\overset{̈}{q}\left( t \right)+C\overset{̇}{q}\left( t \right) + Kq\left( t \right) =F⟧ 
+original1025-p0128  ⟦original1025-m0087:  M\left( t \right)\overset{̈}{q}\left( t \right)+C\left( t,\overset{̇}{q}\left( t \right) \right)\overset{̇}{q}\left( t \right) + K(t,q\left( t \right))q\left( t \right) =F\left( t \right)⟧ 
+original1025-p0129 几何非线性 ⟦original1025-m0088: N(s)⟧ 
+original1025-p0130  ⟦original1025-m0089:  M\left( t,q \right)\overset{̈}{q}\left( t \right)+C\left( t,q,\overset{̇}{q} \right)\overset{̇}{q}\left( t \right) + K(t,q)q\left( t \right) =F\left( t,q \right)⟧ 
+original1025-p0131 大形变  ⟦original1025-m0090: N(s, q)⟧ 
+original1025-p0132 
+original1025-p0133 
+original1025-p0134 
+original1025-p0135 
+original1025-p0136 
+original1025-p0137 
+original1025-p0138 
+original1025-p0139 
+original1025-p0140 现在分析ODEs:
+original1025-p0141  ⟦original1025-m0091: M(t)\overset{̈}{q}(t)+C(t,\overset{̇}{q}(t))\overset{̇}{q}(t)+K(t,q(t))q(t)=F(t)⟧ 
+original1025-p0142 更一般的形式为：
+original1025-p0143  ⟦original1025-m0092: M(t,q(t))\overset{̈}{q}(t)+C(t,q(t),\overset{̇}{q}(t))\overset{̇}{q}(t)+K(t,q(t))q(t)=F(t,q(t))⟧ 
+original1025-p0144 简记为：
+original1025-p0145  ⟦original1025-m0093: M(q)\overset{̈}{q}+C(q,\overset{̇}{q})\overset{̇}{q}+K(q)q=F(q)⟧ 
+original1025-p0146 这几项依赖于什么，需要再次看之前的推导，特别是  ⟦original1025-m0094: K(q)⟧  这个矩阵
+original1025-p0147 定义：
+original1025-p0148  ⟦original1025-m0095: 广义坐标(广义位移):q∈{ℝ}^{n}（节点位移矢量）⟧ 
+original1025-p0149  ⟦original1025-m0096: 广义动量:p∈{ℝ}^{n}⟧ 
+original1025-p0150  ⟦original1025-m0097: p=\frac{∂L}{∂\overset{̇}{q}}=M(q)\overset{̇}{q} ⇒ \overset{̇}{q}={M}^{−1}(q)p⟧ 
+original1025-p0151  ⟦original1025-m0098: H(q,p)=T(q,p)+V(q), （能量=动能+势能）⟧ 
+original1025-p0152  ⟦original1025-m0099: T(q,p)=\frac{1}{2}{\overset{̇}{q}}^{T}M(q)\overset{̇}{q}=\frac{1}{2}{\left( {M}^{−1}(q)p \right)}^{T}M(q)\overset{̇}{q}=\frac{1}{2}{p}^{T}{\left( {M}^{−1}(q) \right)}^{T}p=\frac{1}{2}{p}^{T}{M}^{−1}(q)p⟧ 
+original1025-p0153 (因为 ⟦original1025-m0100: {M}^{−1}(q)⟧ 对称）
+original1025-p0154 (动能依赖于动量 ⟦original1025-m0101: p⟧ 和几何构型 ⟦original1025-m0102: q⟧ )
+original1025-p0155  ⟦original1025-m0103: {M}^{−1}(q)⟧ 为黎曼度规
+original1025-p0156  ⟦original1025-m0104: V(q)={U}_{stretch}(q)+{U}_{bend}(q)=∫_{}^{}{K(q)}q dq=∫_{}^{}{(}{K}_{tan}+{K}_{bend})q dq⟧ 
+original1025-p0157 
+original1025-p0158  ⟦original1025-m0105: {M}^{−1}(q)⟧ 不是常矩阵，无法提到积分因子，所以不能写成 ⟦original1025-m0106: \frac{1}{2}{q}^{T}Kq⟧ 的形式
+original1025-p0159 哈密顿正则方程
+original1025-p0160  Q ：广义非保守力。
+original1025-p0161  ⟦original1025-m0107: \left{ \begin{aligned}\overset{̇}{q}=\frac{∂H}{∂p} \\ \overset{̇}{p}=−\frac{∂H}{∂q}+Q(q,\overset{̇}{q})\end{aligned} \right⟧ 
+original1025-p0162  ⟦original1025-m0108: ⟹\overset{̇}{p}=−\frac{∂(T(q,p)+V(q))}{∂q}+Q(q,\overset{̇}{q})=−\frac{1}{2}{p}^{T}\left[ \frac{∂{M}^{−1}(q)}{∂q} \right]p−\frac{dV(q)}{dq}+Q(q,\overset{̇}{q})=−\frac{1}{2}{p}^{T}\left[ \frac{∂{M}^{−1}(q)}{∂q} \right]p−K(q)q+Q(q,\overset{̇}{q})⟧ 
+original1025-p0163    ⟦original1025-m0109: \frac{1}{2}{p}^{T}\left[ \frac{∂{M}^{−1}(q)}{∂q} \right]⟧  p：几何惯性力（由于质量矩阵 M(q) 随位形 q 变化而产生）。
+original1025-p0164    ⟦original1025-m0110: K(q)q⟧ ：保守恢复力（源于弹性势能 V(q) 的梯度，K(q) 为刚度矩阵）。
+original1025-p0165    ⟦original1025-m0111: Q(q,\overset{̇}{q})⟧ ：非保守广义力。
+original1025-p0166  ⟦original1025-m0112: Q(q,\overset{̇}{q})={F}_{mag}+{F}_{cont}−c(q,\overset{̇}{q}) \overset{̇}{q}={F}_{mag}+{F}_{cont}−C(q,\overset{̇}{q}){M}^{−1}(q)p⟧ 
+original1025-p0167  ⟦original1025-m0113: ⟹\left{ \begin{aligned}\overset{̇}{q}=\frac{∂H}{∂p} \\ \overset{̇}{p}=−\frac{∂H}{∂q}+{F}_{mag}+{F}_{cont}−C\frac{∂H}{∂p} \end{aligned} \right⟧ 
+original1025-p0168 ilton结构的构造part3
+original1025-p0169  ⟦original1025-m0114: ⟺\left{ \begin{aligned}\overset{̇}{q}={∇}_{p}H \\ \overset{̇}{p}=−{∇}_{q}H+{F}_{mag}+{F}_{cont}−C{∇}_{p}H \end{aligned} \right⟧ 
+original1025-p0170  ⟦original1025-m0115: H(q,p)=\frac{1}{2}{p}^{T}{M}^{−1}(q)p+{U}_{stretch}(q)+{U}_{bend}(q)⟧ 
+original1025-p0171  ⟦original1025-m0116: \frac{dH}{dt}=\frac{∂H}{∂q}\overset{̇}{q}+\frac{∂H}{∂p}\overset{̇}{p}=\frac{∂H}{∂q}\frac{∂H}{∂p}+\frac{∂H}{∂p}\left( −\frac{∂H}{∂q}+{F}_{ext}−C\frac{∂H}{∂p} \right)=\frac{∂H}{∂p}\left( {F}_{ext}−C\frac{∂H}{∂p} \right)⟧ (12)
+original1025-p0172 
+original1025-p0173 
+original1025-p0174 
+original1025-p0175 
+original1025-p0176 
+original1025-p0177 
+original1025-p0178 
+original1025-p0179 
+original1025-p0180 
+original1025-p0181 
+original1025-p0182 
+original1025-p0183 
+original1025-p0184 
+original1025-p0185 
+original1025-p0186 
+original1025-p0187 
+original1025-p0188 
+original1025-p0189 
+original1025-p0190 
+original1025-p0191 
+original1025-p0192 
+original1025-p0193 
+original1025-p0194 
+original1025-p0195 
+original1025-p0196 
+original1025-p0197 
+original1025-p0198 
+original1025-p0199 
+original1025-p0200 设计复值哈密顿神经网络CHNN  Part 4
+original1025-p0201 
+original1025-p0202  ⟦original1025-m0117: {F}_{mag}=(\overset{⃗}{m}⋅∇)\overset{⃗}{B}(s,t)⟧ 
+original1025-p0203  ⟦original1025-m0118: \overset{⃗}{m}⟧ ：磁偶极矩
+original1025-p0204  ⟦original1025-m0119: \overset{⃗}{B}⟧ ：磁场强度
+original1025-p0205  ⟦original1025-m0120: ∇⟧ ： ⟦original1025-m0121: \frac{∂}{∂x}\overset{^}{i}+\frac{∂}{∂y}\overset{^}{j}+\frac{∂}{∂z}\overset{^}{k}⟧ 磁场强度的梯度算子
+original1025-p0206 
+original1025-p0207 推导：一个磁偶极矩为 ⟦original1025-m0122: \overset{⃗}{m}⟧ 的物体，在外磁场  ⟦original1025-m0123: \overset{⃗}{B}⟧  中，具有势能： ⟦original1025-m0124: U=−\overset{⃗}{m}⋅\overset{⃗}{B}⟧ ，在势场中受到的力等于势能的负梯度：（以下过程理解即可，无需写出来）
+original1025-p0208  ⟦original1025-m0125: \overset{⃗}{F}=−∇U=\overset{⃗}{F}=−∇(−\overset{⃗}{m}⋅\overset{⃗}{B})=∇(\overset{⃗}{m}⋅\overset{⃗}{B})⟧ 
+original1025-p0209 
+original1025-p0210 假设 ⟦original1025-m0126: \overset{⃗}{m}⟧ 是常矢量，即  ⟦original1025-m0127: ∇\overset{⃗}{m}=0⟧ 。
+original1025-p0211 
+original1025-p0212 利用矢量分析中的恒等式：
+original1025-p0213 
+original1025-p0214    ⟦original1025-m0128: ∇(\overset{⃗}{A}⋅\overset{⃗}{B})=(\overset{⃗}{A}⋅∇)\overset{⃗}{B}+(\overset{⃗}{B}⋅∇)\overset{⃗}{A}+\overset{⃗}{A}×(∇×\overset{⃗}{B})+\overset{⃗}{B}×(∇×\overset{⃗}{A})⟧ 
+original1025-p0215 已知 ⟦original1025-m0129: (\overset{⃗}{B}⋅∇)\overset{⃗}{m}=0,\overset{⃗}{B}×(∇×\overset{⃗}{m})=0⟧ 
+original1025-p0216 
+original1025-p0217  ⟦original1025-m0130: ⟹∇(\overset{⃗}{m}⋅\overset{⃗}{B})=(\overset{⃗}{m}⋅∇)\overset{⃗}{B}+(\overset{⃗}{B}⋅∇)\overset{⃗}{m}+\overset{⃗}{m}×(∇×\overset{⃗}{B})+\overset{⃗}{B}×(∇×\overset{⃗}{m})=(\overset{⃗}{m}⋅∇)\overset{⃗}{B}+\overset{⃗}{m}×(∇×\overset{⃗}{B})⟧ 
+original1025-p0218 
+original1025-p0219       ⟦original1025-m0131: ⇒\overset{⃗}{F}=∇(\overset{⃗}{m}⋅\overset{⃗}{v})\overset{⃗}{B}=(\overset{⃗}{m}⋅∇)\overset{⃗}{B}+(\overset{⃗}{m}⋅\overset{⃗}{v})\overset{⃗}{B}⟧ 
+original1025-p0220 在静磁学条件（无电流或电流影响可忽略）下： ⟦original1025-m0132: ∇×\overset{⃗}{B}=0⟧ 。
+original1025-p0221 
+original1025-p0222  ⟦original1025-m0133: ⇒\overset{⃗}{F}=∇(\overset{⃗}{m}⋅\overset{⃗}{B})≈(\overset{⃗}{m}⋅∇)\overset{⃗}{B}⟧ 
+original1025-p0223 注： ⟦original1025-m0134: \overset{⃗}{m}⋅∇=({m}_{x}\overset{⃗}{i}+{m}_{y}\overset{⃗}{j}+{m}_{z}\overset{⃗}{k})⋅\left( \frac{∂}{∂x}\overset{⃗}{i}+\frac{∂}{∂y}\overset{⃗}{j}+\frac{∂}{∂z}\overset{⃗}{k} \right)={m}_{x}\frac{∂}{∂x}+{m}_{y}\frac{∂}{∂y}+{m}_{z}\frac{∂}{∂z}⟧ 
+original1025-p0224  ⟦original1025-m0135: \overset{⃗}{F}=(\overset{⃗}{m}⋅∇)\overset{⃗}{B}=\left( {m}_{x}\frac{∂}{∂x}+{m}_{y}\frac{∂}{∂y}+{m}_{z}\frac{∂}{∂z} \right)({B}_{x}\overset{⃗}{i}+{B}_{y}\overset{⃗}{j}+{B}_{z}\overset{⃗}{k})⟧ 
+original1025-p0225  ⟦original1025-m0136: \overset{⃗}{F}=\left( {m}_{x}\frac{∂{B}_{x}}{∂x}+{m}_{y}\frac{∂{B}_{x}}{∂y}+{m}_{z}\frac{∂{B}_{x}}{∂z} \right)\overset{⃗}{i}+\left( {m}_{x}\frac{∂{B}_{y}}{∂x}+{m}_{y}\frac{∂{B}_{y}}{∂y}+{m}_{z}\frac{∂{B}_{y}}{∂z} \right)\overset{⃗}{j}+\left( {m}_{x}\frac{∂{B}_{z}}{∂x}+{m}_{y}\frac{∂{B}_{z}}{∂y}+{m}_{z}\frac{∂{B}_{z}}{∂z} \right)\overset{⃗}{k}⟧ 
+original1025-p0226 
+original1025-p0227  ⟦original1025-m0137: \overset{⃗}{F}⟧  源于磁场的不均匀性。若磁场 ⟦original1025-m0138: \overset{⃗}{B}⟧ 不依赖于空间变量，则梯度 ⟦original1025-m0139: \overset{⃗}{F} =0⟧ 
+original1025-p0228 
+original1025-p0229   ⟦original1025-m0140: \overset{⃗}{F}⟧ 的方向取决于  ⟦original1025-m0141: \overset{⃗}{m}⟧ 的方向和磁场  ⟦original1025-m0142: \overset{⃗}{B}⟧  的空间变化率（梯度）
+original1025-p0230 
+original1025-p0231  ⟦original1025-m0143: \overset{⃗}{m}⋅∇⟧ 的物理意义：沿着  ⟦original1025-m0144: \overset{⃗}{m}⟧ 的方向去探测磁场的变化。
+original1025-p0232 
+original1025-p0233 
+original1025-p0234 
+original1025-p0235 
+original1025-p0236 
+original1025-p0237 
+original1025-p0238 
+original1025-p0239 引入泊松括号
+original1025-p0240 
+original1025-p0241  ⟦original1025-m0145: f(q,p,t),g(q,p,t)⟧  光滑函数
+original1025-p0242 
+original1025-p0243  ⟦original1025-m0146: q=({q}_{1}⋯{q}_{N}), p=({p}_{1}⋯{p}_{N})⟧ ：广义坐标，广义动量
+original1025-p0244 
+original1025-p0245 
+original1025-p0246  ⟦original1025-m0147: \left{ f,g \right}=∑_{i=1}^{N}{\left( \frac{∂f}{∂{q}_{i}}\frac{∂g}{∂{p}_{i}}−\frac{∂f}{∂{p}_{i}}\frac{∂g}{∂{q}_{i}} \right)} ⟧ (14)
+original1025-p0247 注： ⟦original1025-m0148: N⟧ ：系统的自由度
+original1025-p0248  ⟦original1025-m0149: {q}_{i}⟧ ：第i个广义坐标
+original1025-p0249  ⟦original1025-m0150: {p}_{i}⟧ ：第i个广义动量。
+original1025-p0250 
+original1025-p0251  ⟦original1025-m0151: f(q,p,t)⟧ 是t的一元函数，也是 ⟦original1025-m0152: q,p,t⟧ 的三元函数。
+original1025-p0252 全导数：
+original1025-p0253  ⟦original1025-m0153: \frac{df}{dt}=\frac{∂f}{∂q}\frac{dq}{dt}+\frac{∂f}{∂p}\frac{dp}{dt}+\frac{∂f}{∂t}⟧ 
+original1025-p0254 若考虑 Hamiltonian系统：
+original1025-p0255  ⟦original1025-m0154: \left{ \begin{matrix}dq=\frac{∂H}{∂p}dt \\ dp=−\frac{∂H}{∂q}dt\end{matrix} \right⟧ 
+original1025-p0256 则
+original1025-p0257  ⟦original1025-m0155: \frac{df}{dt}=\frac{∂f}{∂q}⋅\frac{∂H}{∂p}−\frac{∂f}{∂p}⋅\frac{∂H}{∂q}+\frac{∂f}{∂t}=\left{ f,H \right}+\frac{∂f}{∂t}⟧ 
+original1025-p0258 
+original1025-p0259  ⟦original1025-m0156: \left{ f,g \right}⟧ 满足以下性质
+original1025-p0260 1.  反对称性： ⟦original1025-m0157: \left{ f,g \right}=−\left{ g,f \right}⟧ 
+original1025-p0261 2.  线性性：  ⟦original1025-m0158: \left{ af+bg, h \right}=a\left{ f,h \right}+b\left{ g,h \right}⟧ 
+original1025-p0262 3.  莱布尼兹法则：  ⟦original1025-m0159: \left{ fg, h \right}=f\left{ g,h \right}+g\left{ f,h \right}⟧ 
+original1025-p0263 4.  雅可比恒等式：  ⟦original1025-m0160: \left{ f,\left{ g,h \right} \right}+\left{ g,\left{ h,f \right} \right}+\left{ h,\left{ f,g \right} \right}=0⟧ 
+original1025-p0264 
+original1025-p0265 基本泊松括号的计算
+original1025-p0266      ⟦original1025-m0161: \left{ {q}_{i},{q}_{j} \right}=∑_{k=1}^{N}{\left( \frac{∂{q}_{i}}{∂{q}_{k}}\frac{∂{q}_{j}}{∂{p}_{k}}−\frac{∂{q}_{i}}{∂{p}_{k}}\frac{∂{q}_{j}}{∂{q}_{k}} \right)}=0⟧ 
+original1025-p0267      ⟦original1025-m0162: \left{ {p}_{i},{p}_{j} \right}=0⟧ 
+original1025-p0268     ⟦original1025-m0163: \left{ {q}_{i},{p}_{j} \right}=∑_{k=1}^{N}{\left( \frac{∂{q}_{i}}{∂{q}_{k}}\frac{∂{p}_{j}}{∂{p}_{k}}−\frac{∂{q}_{i}}{∂{p}_{k}}\frac{∂{p}_{j}}{∂{q}_{k}} \right)}=\left{ \begin{aligned}1 ,i=j \\ 0 ,i≠j\end{aligned} \right={δ}_{ij}⟧ 
+original1025-p0269      ⟦original1025-m0164: \left{ {q}_{i},H \right}=∑_{k=1}^{N}{\left( \frac{∂{q}_{i}}{∂{q}_{k}}\frac{∂H}{∂{p}_{k}}−\frac{∂{q}_{i}}{∂{p}_{k}}\frac{∂H}{∂{q}_{k}} \right)}=\frac{∂{q}_{i}}{∂{q}_{i}}\frac{∂H}{∂{p}_{i}}−0=\frac{∂H}{∂{p}_{i}}⟧ 
+original1025-p0270      ⟦original1025-m0165: \left{ {p}_{i},H \right}=∑_{k=1}^{N}{\left( \frac{∂{p}_{i}}{∂{q}_{k}}\frac{∂H}{∂{p}_{k}}−\frac{∂{p}_{i}}{∂{p}_{k}}\frac{∂H}{∂{q}_{k}} \right)}=0−\frac{∂{p}_{i}}{∂{p}_{i}}\frac{∂H}{∂{q}_{i}}=−\frac{∂H}{∂{q}_{i}}⟧ 
+original1025-p0271 
+original1025-p0272  ⟦original1025-m0166: \left{ \begin{matrix}{{q}_{i},H}:=\frac{∂H}{∂{p}_{i}} \\ {{p}_{i},H}:=−\frac{∂H}{∂{q}_{i}}\end{matrix} \right⟹\left{ \begin{matrix}{\overset{̇}{q}}_{i}={{q}_{i},H} \\ {\overset{̇}{p}}_{i}={{p}_{i},H}\end{matrix} \right⟹\left{ \begin{matrix}\overset{̇}{q}={\overset{̇}{q},H} \\ \overset{̇}{p}={\overset{̇}{p},H}\end{matrix} \right⟧ 
+original1025-p0273 令 ⟦original1025-m0167: z=(q,p{)}^{T}⟧ ，则
+original1025-p0274 
+original1025-p0275  ⟦original1025-m0168: \frac{dH}{dt}=\frac{∂H}{∂q}\overset{̇}{q}+\frac{∂H}{∂p}\overset{̇}{p}=\frac{∂H}{∂q}\frac{∂H}{∂p}+\frac{∂H}{∂p}\left( −\frac{∂H}{∂q}+{F}_{ext}−C\frac{∂H}{∂p} \right)=\frac{∂H}{∂p}\left( {F}_{ext}−C\frac{∂H}{∂p} \right)⟧ 
+original1025-p0276  ⟦original1025-m0169: \overset{̇}{z}={z,H}=\left( \begin{matrix}0 & I \\ −I & 0\end{matrix} \right)\left( \begin{matrix}\frac{∂H}{∂p} \\ \frac{∂H}{∂q}\end{matrix} \right):=J∇H⟧ 
+original1025-p0277 显然
+original1025-p0278  ⟦original1025-m0170: ∇z=\left( \begin{matrix}\frac{∂H}{∂p} \\ \frac{∂H}{∂q}\end{matrix} \right)=I⟧ 
+original1025-p0279 方程(12)可进一步写成
+original1025-p0280  ⟦original1025-m0171: \overset{̇}{z}={z,H}+\left( \begin{matrix}0 \\ {F}_{mag}+{F}_{cont}\end{matrix} \right)−\left( \begin{matrix}0 \\ C(q,\overset{̇}{q}){∇}_{p}H\end{matrix} \right)⟧ 
+original1025-p0281  ⟦original1025-m0172: ⇒\overset{̇}{z}={z,H}+\left( \begin{matrix}0 \\ {F}_{mag}+{F}_{cont}\end{matrix} \right)+\left( \begin{matrix}0 & 0 \\ 0 & −C(q,\overset{̇}{q})\end{matrix} \right)\left( \begin{matrix}{∇}_{q}H \\ {∇}_{p}H\end{matrix} \right)⟧ 
+original1025-p0282  ⟦original1025-m0173: :={z,H}+{\overset{̃}{F}}_{ext}−D∇H={z,H}+\left( \begin{matrix}0 \\ {∇}_{q}{G}_{2}\end{matrix} \right)−D∇H={z,H}+{\left( \begin{matrix}0 & 0 \\ I & 0\end{matrix} \right)∇G}_{2}−D∇H⟧ 
+original1025-p0283 
+original1025-p0284 
+original1025-p0285 引入耗散泊松括号
+original1025-p0286  ⟦original1025-m0174: [f,H]=(∇f{)}^{T}D(∇H)⟧ 
+original1025-p0287  ⟦original1025-m0175: ⇒[z,H]=(∇z{)}^{T}D(∇H)=ID(∇H)=D∇H⟧ ⑮
+original1025-p0288  ⟦original1025-m0176: ⇒\overset{̇}{z}={z,H}−[z,H]+{\overset{̃}{F}}_{ext}=J∇H−D∇H+{\overset{̃}{F}}_{ext} =(J−D)∇H+{\overset{̃}{F}}_{ext}⟧ :metriplectic dynamics
+original1025-p0289 
+original1025-p0290 注：Coquinot, B. and Morrison, P.J. A general metriplectic framework with application to dissipative extended magnetohydrodynamics. J. Plasma Phys. 1-32, 2020.（可用结论，使用时再分析）
+original1025-p0291 方程 (1.3) ：
+original1025-p0292  ⟦original1025-m0177: \frac{df}{dt}=[[f,ℱ]]={f,ℋ}+T(f,S)⟧ 
+original1025-p0293 
+original1025-p0294  ⟦original1025-m0178: f⟧ 光滑函数
+original1025-p0295  ⟦original1025-m0179: ℋ⟧ ：哈密顿函数
+original1025-p0296  ⟦original1025-m0180: T⟧ ：拉格朗日乘子
+original1025-p0297  ⟦original1025-m0181: S⟧ ：  ⟦original1025-m0182: S=∫_{Ω}^{}{σ} ⟧ 总的熵。它是驱动不可逆过程的势函数。它与泊松括号满足对称的退化条件，是泊松括号的卡西米尔不变量（Casimir of the Poisson bracket）
+original1025-p0298 
+original1025-p0299 
+original1025-p0300 
+original1025-p0301 
+original1025-p0302  ⟦original1025-m0183: \left{ \begin{aligned}{f,S}=0, ∀f \\ (H,S)=0, ∀f ,退化性要求\end{aligned} \right⟧ 
+original1025-p0303  
+original1025-p0304 
+original1025-p0305 
+original1025-p0306  ⟦original1025-m0184: \left{ \begin{matrix}\frac{dH}{dt}={H,H}+Τ(H,S)=0+0=0  \\ \frac{dS}{dt}={S,H}+Τ(S,S)=0+Τ(S,S)≥0 \end{matrix} \right⟧ 
+original1025-p0307 
+original1025-p0308 
+original1025-p0309 
+original1025-p0310 
+original1025-p0311 
+original1025-p0312 
+original1025-p0313 
+original1025-p0314 
+original1025-p0315 
+original1025-p0316 
+original1025-p0317 
+original1025-p0318 
+original1025-p0319 
+original1025-p0320 
+original1025-p0321 
+original1025-p0322 
+original1025-p0323 
+original1025-p0324 
+original1025-p0325 
+original1025-p0326 
+original1025-p0327 
+original1025-p0328 
+original1025-p0329 
+original1025-p0330 
+original1025-p0331 
+original1025-p0332 
+original1025-p0333 
+original1025-p0334 
+original1025-p0335 
+original1025-p0336 
+original1025-p0337 构造复值生成函数（哈密顿量）：
+original1025-p0338  ⟦original1025-m0185: ℋ(q,p)=H(q,p)+i({G}_{1}(q,p)+{G}_{2}(q,p)):=H(q,p)+iG(q,p)⟧ (16)
+original1025-p0339  ⟦original1025-m0186: H(q,p)⟧ 是经典的实哈密顿量（能量）。
+original1025-p0340   ⟦original1025-m0187: G(q,p)⟧  是一个实函数，与系统的耗散有关。
+original1025-p0341 耗散力被纳入虚部 ⟦original1025-m0188: G⟧ 中
+original1025-p0342  ⟦original1025-m0189: −C{∇}_{p}H={\overset{̇}{p}}_{diss},  {G}_{1}(q,p)=\frac{1}{2}{p}^{T}C(q,\overset{̇}{q})p⇒{\overset{̇}{p}}_{diss}=−{∇}_{p}{G}_{1}⟧ 
+original1025-p0343  ⟦original1025-m0190: {F}_{mag}(q)+{F}_{cont}(q)={\overset{̇}{p}}_{ext}⟧ 
+original1025-p0344  ⟦original1025-m0191: {F}_{cont}(q)⟧ 可忽略
+original1025-p0345  ⟦original1025-m0192: {G}_{2}(q)=∫_{}^{}{{F}_{mag}}(q) dq=(\overset{⃗}{m}⋅∇)\overset{⃗}{B}(s,t) dq⇒{\overset{̇}{p}}_{ext}=−{∇}_{q}{G}_{2}⟧ 
+original1025-p0346 
+original1025-p0347 
+original1025-p0348 引入复坐标变换，将实相空间 ⟦original1025-m0193: ((q,p)∈{ℝ}^{2N})⟧  映射到复空间：这是一个正则变换，保持辛结构。相应的，偏导数算符变为
+original1025-p0349 
+original1025-p0350 定义复坐标 ⟦original1025-m0194: \left{ \begin{aligned}ξ=\frac{1}{\sqrt{2}}(q+ip) \\ \overset{̄}{\overset{̅}{ξ}}=\frac{1}{\sqrt{2}}(q−ip)\end{aligned} \right⟧ (17)
+original1025-p0351 Wirtinger 导数： ⟦original1025-m0195: \left{ \begin{aligned}\frac{∂}{∂ξ}=\frac{1}{2}\left( \frac{∂}{∂q}−i\frac{∂}{∂p} \right) \\ \frac{∂}{∂\overset{̅}{ξ}}=\frac{1}{2}\left( \frac{∂}{∂q}+i\frac{∂}{∂p} \right)\end{aligned} \right⟧ (18)
+original1025-p0352  ⟦original1025-m0196: (q,p)→(ξ,\overset{̅}{ξ})⟧ 正则变换，保持辛结构
+original1025-p0353 
+original1025-p0354 
+original1025-p0355 在 ⟦original1025-m0197: {ℝ}^{N}×{ℝ}^{N}⟧  实的相空间中，标准的辛形式为   ⟦original1025-m0198: ω=dq∧dp⟧ ，  ⟦original1025-m0199: {q,p}=1⟧ 。
+original1025-p0356 
+original1025-p0357 由(17)有 ⟦original1025-m0200: \left{ \begin{aligned}q=\frac{1}{\sqrt{2}}(ξ+\overset{̅}{ξ}) \\ p=\frac{−i}{\sqrt{2}}(ξ−\overset{̅}{ξ})\end{aligned} \right⇒\left{ \begin{aligned}dq=\frac{1}{\sqrt{2}}(dξ+d\overset{̅}{ξ}) \\ dp=\frac{−i}{\sqrt{2}}(dξ−d\overset{̅}{ξ})\end{aligned} \right⟧ 
+original1025-p0358  ⟦original1025-m0201: ⟹ω=dq∧dp=\left[ \frac{1}{\sqrt{2}}(dξ+d\overset{̅}{ξ}) \right]∧\left[ \frac{−i}{\sqrt{2}}(dξ−d\overset{̅}{ξ}) \right]=−\frac{i}{2}(dξ+d\overset{̅}{ξ})∧(dξ−d\overset{̅}{ξ})=−\frac{i}{2}(dξ∧dξ−dξ∧d\overset{̅}{ξ}+d\overset{̅}{ξ}∧dξ−d\overset{̅}{ξ}∧d\overset{̅}{ξ})=−\frac{i}{2}(−dξ∧d\overset{̅}{ξ}−dξ∧d\overset{̅}{ξ})=idξ∧d\overset{̅}{ξ}⟧ 
+original1025-p0359  ⟦original1025-m0202: idξ∧d\overset{̅}{ξ}⟧ 是一个实值2-形式
+original1025-p0360 
+original1025-p0361 
+original1025-p0362  ⟦original1025-m0203: {ξ,\overset{̅}{ξ}}=\frac{∂ξ}{∂q}\frac{∂\overset{̄}{\overset{̅}{ξ}}}{∂p}−\frac{∂ξ}{∂p}\frac{∂\overset{̅}{ξ}}{∂q}=\left( \frac{1}{\sqrt{2}} \right)\left( \frac{−i}{\sqrt{2}} \right)−\left( \frac{i}{\sqrt{2}} \right)\left( \frac{1}{\sqrt{2}} \right)=−\frac{i}{2}−\frac{i}{2}=−i⟧ 
+original1025-p0363 
+original1025-p0364  ⟦original1025-m0204: \begin{matrix}\frac{∂ℋ}{∂\overset{̄}{\overset{̅}{ξ}}} & =\frac{1}{2}\left( \frac{∂}{∂q}+i\frac{∂}{∂p} \right)(H+iG) \\  & =\frac{1}{2}(\frac{∂H}{∂q}+i\frac{∂G}{∂q}+i\frac{∂H}{∂p}−\frac{∂G}{∂p}) \\  & =\frac{1}{2}\left[ \left( \frac{∂H}{∂q}−\frac{∂G}{∂p} \right)+i\left( \frac{∂G}{∂q}+\frac{∂H}{∂p} \right) \right]\end{matrix}⟧ 
+original1025-p0365 
+original1025-p0366 
+original1025-p0367  ⟦original1025-m0205: \overset{̇}{ξ}=\frac{1}{\sqrt{2}}(\overset{̇}{q}+i\overset{̇}{p})=\frac{1}{\sqrt{2}}\left[ \frac{∂H}{∂p}+i\left( −\frac{∂H}{∂q}−c\frac{∂H}{∂p}+{F}_{ext} \right) \right]:=\frac{1}{\sqrt{2}}\left[ \left( \frac{∂H}{∂p}−i\frac{∂H}{∂q} \right)−ic\frac{∂H}{∂p}+{F}_{ext} \right]=\frac{1}{\sqrt{2}}\left[ \left( \frac{∂H}{∂p}−i\frac{∂H}{∂q} \right)−i{∇}_{p}{G}_{1}+{∇}_{q}{G}_{2} \right]⟧ (19)
+original1025-p0368  ⟦original1025-m0206: \frac{∂H}{∂\overset{̅}{ξ}}=\frac{1}{2}\left( \frac{∂}{∂q}+i\frac{∂}{∂p} \right)H=\frac{1}{2}\left( \frac{∂H}{∂q}+i\frac{∂H}{∂p} \right)H⇒−\sqrt{2}i\frac{∂H}{∂\overset{̄}{\overset{̄}{\overset{̅}{ξ}}}}=\frac{1}{\sqrt{2}}\left( \frac{∂H}{∂p}−i\frac{∂H}{∂q} \right)⟧ (20)
+original1025-p0369 
+original1025-p0370 
+original1025-p0371 
+original1025-p0372 
+original1025-p0373 
+original1025-p0374 
+original1025-p0375 
+original1025-p0376 
+original1025-p0377 
+original1025-p0378 
+original1025-p0379 
+original1025-p0380 
+original1025-p0381 
+original1025-p0382 
+original1025-p0383 
+original1025-p0384 
+original1025-p0385 
+original1025-p0386 
+original1025-p0387 
+original1025-p0388 
+original1025-p0389 
+original1025-p0390 
+original1025-p0391 
+original1025-p0392 
+original1025-p0393 
+original1025-p0394 
+original1025-p0395  ⟦original1025-m0207: \left{ \begin{aligned}\frac{∂}{∂ξ}=\frac{1}{2}\left( \frac{∂}{∂q}−i\frac{∂}{∂p} \right) \\ \frac{∂}{∂\overset{̅}{ξ}}=\frac{1}{2}\left( \frac{∂}{∂q}+i\frac{∂}{∂p} \right)\end{aligned} \right⟧ 
+original1025-p0396 
+original1025-p0397 
+original1025-p0398 
+original1025-p0399 
+original1025-p0400 
+original1025-p0401 
+original1025-p0402 
+original1025-p0403 
+original1025-p0404 
+original1025-p0405 、
+original1025-p0406 
+original1025-p0407 
+original1025-p0408 
+original1025-p0409  ⟦original1025-m0208: \overset{̇}{ξ}=\frac{1}{\sqrt{2}}(\overset{̇}{q}+i\overset{̇}{p})=\frac{1}{\sqrt{2}}\left[ \frac{∂H}{∂p}+i\left( −\frac{∂H}{∂q}−c\frac{∂H}{∂p}+{F}_{ext} \right) \right]:=\frac{1}{\sqrt{2}}\left[ \left( \frac{∂H}{∂p}−i\frac{∂H}{∂q} \right)−ic\frac{∂H}{∂p}+{F}_{ext} \right]=\frac{1}{\sqrt{2}}\left[ \left( \frac{∂H}{∂p}−i\frac{∂H}{∂q} \right)−i{∇}_{p}{G}_{1}+{∇}_{q}{G}_{2} \right]⟧ (19)
+original1025-p0410 
+original1025-p0411 
+original1025-p0412 
+original1025-p0413 由前文（公式(18)）定义的 Wirtinger 导数关系出发：
+original1025-p0414 
+original1025-p0415  ⟦original1025-m0209: \left{ \begin{aligned}\frac{∂}{∂q}=\frac{∂}{∂ξ}+\frac{∂}{∂\overset{̅}{ξ}} \\ \frac{∂}{∂p}=\frac{1}{i}\left( \frac{∂}{∂\overset{̅}{ξ}}−\frac{∂}{∂ξ} \right)=i\left( \frac{∂}{∂ξ}−\frac{∂}{∂\overset{̅}{ξ}} \right)\end{aligned} \right⟧ 
+original1025-p0416 代入(19)得
+original1025-p0417  ⟦original1025-m0210: \overset{̇}{ξ}=\frac{1}{\sqrt{2}}\left[ \left( \frac{∂H}{∂p}−i\frac{∂H}{∂q} \right)+\left( \frac{∂}{∂ξ}−\frac{∂}{∂\overset{̅}{ξ}} \right){G}_{1}+(\frac{∂}{∂ξ}+\frac{∂}{∂\overset{̅}{ξ}}){G}_{2} \right]⟧ 
+original1025-p0418 用(20)的条件，有
+original1025-p0419  ⟦original1025-m0211: =−\sqrt{2}i\frac{∂H}{∂\overset{̅}{ξ}}+\frac{1}{\sqrt{2}}\left( \frac{∂{G}_{1}}{∂ξ}−\frac{∂{G}_{1}}{∂\overset{̅}{ξ}} \right)+\frac{1}{\sqrt{2}}(\frac{∂{G}_{2}}{∂ξ}+\frac{∂{G}_{2}}{∂\overset{̅}{ξ}}) ⟧ 
+original1025-p0420 
+original1025-p0421 
+original1025-p0422 推导结果（图中红色框内公式修正后）：
+original1025-p0423 
+original1025-p0424  ⟦original1025-m0212: \overset{̇}{ξ}=−\sqrt{2}i\frac{∂H}{∂\overset{̅}{ξ}}+\frac{1}{\sqrt{2}}\left( \frac{∂({G}_{1}+{G}_{2})}{∂ξ}−\frac{∂({G}_{1}−{G}_{2})}{∂\overset{̅}{ξ}} \right)=−\sqrt{2}i\frac{∂H}{∂\overset{̅}{ξ}}+\frac{1}{2}P\left( ξ,\overset{̅}{ξ} \right) ⟧ (21)
+original1025-p0425 ( ⟦original1025-m0213: \frac{1}{\sqrt{2}}\left( \frac{∂({G}_{1}+{G}_{2})}{∂ξ}−\frac{∂({G}_{1}−{G}_{2})}{∂\overset{̅}{ξ}} \right)≜P\left( ξ,\overset{̅}{ξ} \right)⟧ )
+original1025-p0426 耗散哈密顿系统
+original1025-p0427 
+original1025-p0428 
+original1025-p0429 
+original1025-p0430  ⟦original1025-m0214: \frac{dH}{dt}=\frac{∂H}{∂ξ}\overset{̇}{ξ}+\frac{∂H}{∂\overset{̅}{ξ}}\overset{̇}{\overset{̅}{ξ}}=\frac{∂H}{∂ξ}[−\sqrt{2}i\frac{∂H}{∂\overset{̅}{ξ}}+\frac{1}{\sqrt{2}}\left( \frac{∂({G}_{1}+{G}_{2})}{∂ξ}−\frac{∂({G}_{1}−{G}_{2})}{∂\overset{̅}{ξ}} \right)]+\frac{∂H}{∂\overset{̅}{ξ}}[\sqrt{2}i\frac{∂H}{∂ξ}+\frac{1}{\sqrt{2}}\left( \frac{∂({G}_{1}+{G}_{2})}{∂\overset{̅}{ξ}}−\frac{∂({G}_{1}−{G}_{2})}{∂ξ} \right)]=\frac{1}{\sqrt{2}}[\frac{∂H}{∂ξ}\left( \frac{∂({G}_{1}+{G}_{2})}{∂ξ}−\frac{∂({G}_{1}−{G}_{2})}{∂\overset{̅}{ξ}} \right)+\frac{∂H}{∂\overset{̅}{ξ}}\left( \frac{∂({G}_{1}+{G}_{2})}{∂\overset{̅}{ξ}}−\frac{∂({G}_{1}−{G}_{2})}{∂ξ} \right)]=\frac{2}{\sqrt{2}}Re[\frac{∂H}{∂ξ}\left( \frac{∂({G}_{1}+{G}_{2})}{∂ξ}−\frac{∂({G}_{1}−{G}_{2})}{∂\overset{̅}{ξ}} \right)]⟧ 
+original1025-p0431  ⟦original1025-m0215: ∶=\frac{2}{\sqrt{2}}Re[\frac{∂H}{∂ξ}P\left( ξ,\overset{̅}{ξ} \right)]\left{ \begin{aligned}≤0, 耗散 \\ =0, 增益 \\ ≥0, 保守哈密顿系统\end{aligned} \right⟧ 
+original1025-p0432 
+original1025-p0433 
+original1025-p0434 
+original1025-p0435 进行正则变换  ⟦original1025-m0216: \left( ξ,\overset{̅}{ξ} \right)→(I,θ)⟧ 
+original1025-p0436  ⟦original1025-m0217: \left{ \begin{aligned}ξ=\sqrt{I} {e}^{iθ} \\ \overset{̅}{ξ}=\sqrt{I} {e}^{−iθ} \end{aligned} \right ⟧ (22)
+original1025-p0437 验证辛形式不变
+original1025-p0438  ⟦original1025-m0218: dξ∧d\overset{̅}{ξ}=(\frac{dI}{2\sqrt{I}}{e}^{iθ}+\sqrt{I} i{e}^{iθ}dθ)∧(\frac{dI}{2\sqrt{I}}{e}^{−iθ}+\sqrt{I} (−i){e}^{−iθ}dθ)=\frac{dI}{2\sqrt{I}}{e}^{iθ}∧\frac{dI}{2\sqrt{I}}{e}^{−iθ}+\frac{dI}{2\sqrt{I}}{e}^{iθ}∧\sqrt{I} (−i){e}^{−iθ}dθ+\sqrt{I} i{e}^{iθ}dθ∧\frac{dI}{2\sqrt{I}}{e}^{−iθ}+\sqrt{I} i{e}^{iθ}dθ∧\sqrt{I} (−i){e}^{−iθ}dθ)=\frac{dI}{2\sqrt{I}}{e}^{iθ}∧\sqrt{I} (−i){e}^{−iθ}dθ+\sqrt{I} i{e}^{iθ}dθ∧\frac{dI}{2\sqrt{I}}{e}^{−iθ}=\frac{−i}{2}dI∧ dθ+\frac{i}{2}dθ∧dI=−idI∧ dθ⟧ 
+original1025-p0439 
+original1025-p0440  ⟦original1025-m0219: ⇒ω=dq∧dp=dξ∧d\overset{̅}{ξ}=dI∧dθ⟧ 
+original1025-p0441 
+original1025-p0442 变换是正则的。
+original1025-p0443 
+original1025-p0444 
+original1025-p0445 
+original1025-p0446 
+original1025-p0447 
+original1025-p0448 
+original1025-p0449 
+original1025-p0450 
+original1025-p0451 
+original1025-p0452 
+original1025-p0453 
+original1025-p0454 
+original1025-p0455 
+original1025-p0456 
+original1025-p0457 
+original1025-p0458 
+original1025-p0459 
+original1025-p0460 
+original1025-p0461 
+original1025-p0462 
+original1025-p0463 
+original1025-p0464 
+original1025-p0465 
+original1025-p0466 
+original1025-p0467 
+original1025-p0468 
+original1025-p0469 
+original1025-p0470 
+original1025-p0471 
+original1025-p0472 
+original1025-p0473  ⟦original1025-m0220: \left{ \begin{aligned}ξ=\sqrt{I} {e}^{iθ} \\ \overset{̅}{ξ}=\sqrt{I} {e}^{−iθ} \end{aligned} \right ⟧ (22)
+original1025-p0474 
+original1025-p0475 
+original1025-p0476 
+original1025-p0477 由22有
+original1025-p0478  ⟦original1025-m0221: \left{ \begin{aligned}I={\left| ξ \right| }^{2}=ξ\overset{̅}{ξ} \\ θ=\frac{1}{2i} ln \frac{ξ}{\overset{̅}{ξ}} \end{aligned} \right ⟧ 
+original1025-p0479  ⟦original1025-m0222: \frac{∂}{∂ξ}=\frac{∂}{∂I}\frac{∂I}{∂ξ}+\frac{∂}{∂θ}\frac{∂θ}{∂ξ}=\overset{̅}{ξ}\frac{∂}{∂I}+\frac{1}{2i}\frac{\overset{̅}{ξ}}{ξ}\frac{1}{\overset{̅}{ξ}}\frac{∂}{∂θ}=\sqrt{I} {e}^{−iθ}\frac{∂}{∂I}+\frac{1}{2i\sqrt{I} {e}^{iθ}}\frac{∂}{∂θ}=\frac{{e}^{−iθ}}{2\sqrt{I}}(2I \frac{∂}{∂I}−i\frac{∂}{∂θ})⟧ 
+original1025-p0480  ⟦original1025-m0223: \frac{∂}{∂\overset{̅}{ξ}}=\frac{{e}^{iθ}}{2\sqrt{I}}(2I \frac{∂}{∂I}+i\frac{∂}{∂θ})⟧ 
+original1025-p0481  ⟦original1025-m0224: ⇒P(ξ,\overset{̅}{ξ})=\sqrt{2}[\frac{∂({G}_{1}+{G}_{2})}{∂ξ}−\frac{∂({G}_{1}−{G}_{2})}{∂\overset{̅}{ξ}}]=\sqrt{2}{\frac{{e}^{−iθ}}{2\sqrt{I}}(2I \frac{∂({G}_{1}+{G}_{2})}{∂I}−i\frac{∂({G}_{1}+{G}_{2})}{∂θ})−\frac{{e}^{iθ}}{2\sqrt{I}}(2I \frac{∂({G}_{1}−{G}_{2})}{∂I}+i\frac{∂({G}_{1}−{G}_{2})}{∂θ})}∶=\overset{^}{P}(I,θ)⟧ 
+original1025-p0482 
+original1025-p0483 
+original1025-p0484  ⟦original1025-m0225: \overset{̇}{I}=\overset{̇}{\left( ξ\overset{̅}{ξ}  \right)}=\overset{̇}{ξ}\overset{̅}{ξ}+ξ\overset{̇}{\overset{̅}{ξ}}=(−\sqrt{2} i\frac{∂H}{∂\overset{̅}{ξ}}+\frac{1}{2}P(ξ,\overset{̅}{ξ}))\overset{̅}{ξ}+ξ(\sqrt{2} i\frac{∂H}{∂ξ}+\frac{1}{2}\overset{̅}{P(ξ,\overset{̅}{ξ})})=(−\sqrt{2} i\frac{∂H}{∂I}ξ+\frac{1}{2}P(ξ,\overset{̅}{ξ}))\overset{̅}{ξ}+ξ(\sqrt{2} i\frac{∂H}{∂I}\overset{̅}{ξ}+\frac{1}{2}\overset{̅}{P(ξ,\overset{̅}{ξ})})=\frac{1}{2}P(ξ,\overset{̅}{ξ})\overset{̅}{ξ}+\frac{1}{2}\overset{̅}{P(ξ,\overset{̅}{ξ})}ξRe\left( P(ξ,\overset{̅}{ξ})\overset{̅}{ξ} \right)=Re\left( {P(ξ,\overset{̅}{ξ})\sqrt{I}e}^{−iθ} \right)=\sqrt{I}Re\left( {e}^{−iθ}P(ξ,\overset{̅}{ξ}) \right)∶=\sqrt{I}Re\left( {e}^{−iθ}\overset{^}{P}(I,θ) \right)⟧ 
+original1025-p0485 
+original1025-p0486  ⟦original1025-m0226: {e}^{−iθ}P(ξ,\overset{̅}{ξ})=\sqrt{2}{\frac{{e}^{−2iθ}}{2\sqrt{I}}(2I \frac{∂({G}_{1}+{G}_{2})}{∂I}−i\frac{∂({G}_{1}+{G}_{2})}{∂θ})−\frac{1}{2\sqrt{I}}(2I \frac{∂({G}_{1}−{G}_{2})}{∂I}+i\frac{∂({G}_{1}−{G}_{2})}{∂θ})}⟧ 
+original1025-p0487  ⟦original1025-m0227: ⇒Re\left( {e}^{−iθ}P(ξ,\overset{̅}{ξ}) \right)=\sqrt{2}{cos (2θ)\frac{2I}{2\sqrt{I}}\frac{∂({G}_{1}+{G}_{2})}{∂I}−sin (2θ)\frac{1}{2\sqrt{I}}\frac{∂({G}_{1}+{G}_{2})}{∂θ}−\frac{2I}{2\sqrt{I}}\frac{∂({G}_{1}−{G}_{2})}{∂I}}⇒c=2\sqrt{2}Icos (2θ)\frac{∂({G}_{1}+{G}_{2})}{∂I}−\sqrt{2}sin (2θ)\frac{∂({G}_{1}+{G}_{2})}{∂θ}−2\sqrt{2}I\frac{∂({G}_{1}−{G}_{2})}{∂I}∶=εf(I,θ)⟧ 
+original1025-p0488 未检查
+original1025-p0489  ⟦original1025-m0228: θ=?⟧ 
+original1025-p0490 
+original1025-p0491  ⟦original1025-m0229: ξ=\sqrt{I}{e}^{iθ}⇒\overset{̇}{ξ}=\frac{\overset{̇}{I}}{2\sqrt{I}}{e}^{iθ}+i\sqrt{I}\overset{̇}{θ}{e}^{iθ}{=}^{二十一}−\sqrt{2}i\frac{∂H}{∂I}\frac{∂I}{∂\overset{̅}{ξ}}+\frac{1}{2}P(ξ,\overset{̅}{ξ})⟧ 
+original1025-p0492 
+original1025-p0493  ⟦original1025-m0230: =−\sqrt{2}iH'(I)\sqrt{I}{e}^{iθ}+\frac{1}{2}\overset{^}{P}(I,θ)⇒左页. \frac{\overset{̇}{I}}{2\sqrt{I}}+i\sqrt{2}\overset{̇}{θ}=−\sqrt{2}iH'(I)\sqrt{I}+\frac{1}{2}{e}^{−iθ}\overset{^}{P}(I,θ)⟧ 
+original1025-p0494  ⟦original1025-m0231: \frac{\overset{̇}{I}}{2\sqrt{I}}+i\sqrt{I}\overset{̇}{θ}=−\sqrt{2}i\overset{̇}{H}(I)\sqrt{I}+\frac{1}{2}\overset{^}{p}(I,θ){e}^{−iθ}⇒⟧ 
+original1025-p0495  ⟦original1025-m0232: 实部:\left{ \begin{aligned}\frac{\overset{̇}{I}}{\sqrt{I}}= {R}_{e}\left( {\frac{1}{2}e}^{−iθ}\overset{^}{p}(I,θ) \right) \\ \sqrt{I}\overset{̇}{θ}=−\sqrt{2}\overset{̇}{H}(I)\sqrt{I}+{I}_{m}\left( {\frac{1}{2}e}^{−iθ}\overset{^}{p}(I,θ) \right)\end{aligned} \right⟧ 
+original1025-p0496  ⟦original1025-m0233: ⇒\left{ \begin{aligned}\overset{̇}{I}=\sqrt{I} {R}_{e}\left( {e}^{−iθ}\overset{^}{p}(I,θ) \right)∶=εf(I,θ) \\ \overset{̇}{θ}=−\sqrt{2}\overset{̇}{H}(I)+\frac{1}{2\sqrt{I}}{I}_{m}\left( {e}^{−iθ}\overset{^}{p}(I,θ) \right)∶=ω(I)+εg(I,θ)\end{aligned} \right⟧ 
+original1025-p0497 Part 4提取近可积结构与本征频率
+original1025-p0498 
+original1025-p0499  ⟦original1025-m0234: 其中ε为小参数，表示扰动强度；(ω(I)=−\sqrt{2}H(I))为未扰动系统的本征频率；f,g为扰动项。⟧ 
+original1025-p0500 
+original1025-p0501  ⟦original1025-m0235: 2. 可积条件与非退化条件⟧ 
+original1025-p0502 注：当 ⟦original1025-m0236: ε=0⟧ 时，系统退化为可积系统： ⟦original1025-m0237:     ⟧ 
+original1025-p0503  ⟦original1025-m0238: \left{ \begin{matrix}\overset{̇}{I}=0 \\ \overset{̇}{θ}=ω(I)=−\sqrt{2}H'(I)\end{matrix} \right    ⟧ 
+original1025-p0504 要求频率映射是非退化的，即： ⟦original1025-m0239:     ⟧ 
+original1025-p0505  ⟦original1025-m0240: ω'(I)=−\sqrt{2}H''(I)≠0⟧ 
+original1025-p0506  ⟦original1025-m0241:  Part 5验证KAM定理三大条件   ⟧ 
+original1025-p0507 
+original1025-p0508  ⟦original1025-m0242: ∀\left| ⟨k,ω(I)⟩ \right|≥\frac{γ}{ \left| k \right|{ }^{τ}},  ⟧ 
+original1025-p0509  ⟦original1025-m0243: k∈{ℤ}^{N}{0}, γ>0,τ>N−1，⟧ 
+original1025-p0510 
+original1025-p0511  ⟦original1025-m0244:  \left| k \right| =\left| {k}_{1} \right|+⋯+\left| {k}_{N} \right|⟧ 
+original1025-p0512 
+original1025-p0513 
+original1025-p0514 注： ⟦original1025-m0245: A Lecture on the Classical KAM Theorem” —— J. Pöschel, 2009. Page 6, Theorem.⟧ 
+original1025-p0515 必须要求扰动是实解析的（但如果哈密顿量 H 和扰动 P 是 C^r 光滑的，且光滑度 r 足够大，定理也可以适用。）
+original1025-p0516  ⟦original1025-m0246: 1.  Moser, J. (1962). On invariant curves of area−preserving mappings of an annulus.⟧ 
+original1025-p0517  ⟦original1025-m0247: 2.  Pöschel, J. (1982). Invariant tori in Hamiltonian systems.⟧ 
+original1025-p0518  ⟦original1025-m0248: 3.  Kuksin, S. B. (1998). Nearly integrable infinite−dimensional Hamiltonian systems.⟧ 
+original1025-p0519  ⟦original1025-m0249: 4.  Betti, M. & Belle, P. (2004). KAM tori for dissipative PDEs.⟧ 
+original1025-p0520 (结论可以直接拿来使用)
+original1025-p0521 
+original1025-p0522 
+original1025-p0523 
+original1025-p0524 
+original1025-p0525 
+original1025-p0526 
+original1025-p0527 
+original1025-p0528 
+original1025-p0529 回到设计CHNN主线Part 4
+original1025-p0530 
+original1025-p0531  Complex−Valued HNN: 复值哈密顿神经网络
+original1025-p0532 
+original1025-p0533 用复变量统一描述机器人状态（位置 ⟦original1025-m0250: q⟧ ，动量 ⟦original1025-m0251: p⟧ ，相位 ⟦original1025-m0252: α⟧ ）.通过学习复值哈密顿量，实现能量守恒的精准动力学建模与控制，适用于涉及波动、相位或复杂耦合的机器人系统。
+original1025-p0534 
+original1025-p0535 回顾
+original1025-p0536 
+original1025-p0537 
+original1025-p0538 方程(15)：
+original1025-p0539  ⟦original1025-m0253: \overset{̇}{z}={z,H}−[z,H]+{\overset{̂}{F}}_{ext}=J∇H−D∇H+{\overset{̂}{F}}_{ext}⟧ 
+original1025-p0540 其中 ⟦original1025-m0254: D=D(z)⟧ 是耗散度量矩阵（对称正定张量）。
+original1025-p0541  ⟦original1025-m0255: \frac{dH}{dt}=(∇H{)}^{T}\overset{̇}{z}=(∇H{)}^{T}(J∇H−D∇H+{\overset{̂}{F}}_{ext})=(∇H{)}^{T}J∇H−(∇H{)}^{T}D∇H+(∇H{)}^{T}{\overset{̂}{F}}_{ext}⟧ (26)
+original1025-p0542  ⟦original1025-m0256: {J}^{T}=−J⟧ 反对称， ⟦original1025-m0257: (∇H{)}^{T}J∇H=0⟧ 
+original1025-p0543  ⟦original1025-m0258:  ∀x≠0,{\left( (x{)}^{T}Jx \right)}^{T}={x}^{T}{J}^{T}x={x}^{T}(−J)x=−{x}^{T}Jx⇒{x}^{T}Jx=0,∀x≠0⟧ 
+original1025-p0544  ⟦original1025-m0259: 不考虑外力{\overset{̂}{F}}_{ext}时，若(D(z))正定，则\frac{dH}{dt}=−(∇H{)}^{T}D∇H<0，系统能量衰减（耗散）⟧ 
+original1025-p0545  ⟦original1025-m0260: \overset{̇}{ξ}=−\sqrt{2}i\frac{∂H}{∂\overset{̅}{ξ}}+\frac{1}{\sqrt{2}}\left( \frac{∂({G}_{1}+{G}_{2})}{∂ξ}−\frac{∂({G}_{1}−{G}_{2})}{∂\overset{̅}{ξ}} \right)=−\sqrt{2}i\frac{∂H}{∂\overset{̅}{ξ}}+\frac{1}{2}P\left( ξ,\overset{̅}{ξ} \right) ⟧ (21)
+original1025-p0546 
+original1025-p0547 方程(21)：
+original1025-p0548  ⟦original1025-m0261: \overset{̇}{ξ}=−\sqrt{2}i\frac{∂H}{∂\overset{̅}{ξ}}+\frac{1}{\sqrt{2}}\left( \frac{∂({G}_{1}+{G}_{2})}{∂ξ}−\frac{∂({G}_{1}−{G}_{2})}{∂\overset{̅}{ξ}} \right) ⟧ 
+original1025-p0549 定义泊松括号：
+original1025-p0550 
+original1025-p0551  ⟦original1025-m0262:     为统一形式，定义复数空间中的泊松括号：⟧ 
+original1025-p0552  ⟦original1025-m0263: {f,g{}}_{ℭ}=−i\left( \frac{∂f}{∂ξ}\frac{∂g}{∂\overset{̅}{ξ}}−\frac{∂f}{∂\overset{̅}{ξ}}\frac{∂g}{∂ξ} \right)⟧ 
+original1025-p0553  ⟦original1025-m0264: 据此，有{ξ,H{}}_{ℭ}=−i\frac{∂H}{∂\overset{̅}{ξ}}。⟧ ?
+original1025-p0554  ⟦original1025-m0265: \overset{̇}{ξ}=−\sqrt{2}i\frac{∂H}{∂\overset{̅}{ξ}}+\frac{1}{\sqrt{2}}\left( \frac{∂({G}_{1}+{G}_{2})}{∂ξ}−\frac{∂({G}_{1}−{G}_{2})}{∂\overset{̅}{ξ}} \right)=−\sqrt{2}i\frac{∂H}{∂\overset{̅}{ξ}}+\frac{1}{2}P\left( ξ,\overset{̅}{ξ} \right) ⟧ (21)
+original1025-p0555 
+original1025-p0556 (21) ⟦original1025-m0266: ⇒\overset{̇}{ξ}=\sqrt{2}{ξ,H{}}_{ℭ}+R(ξ,\overset{̅}{ξ})⟧ (系数可调整)(24)
+original1025-p0557 
+original1025-p0558 参考：      “KAM Theory Meets Statistical Learning Theory: Hamiltonian Neural Networks with Non-zero Training Loss” — Y. Chen, T. Matsubara, T. Yaguchi. The 36th AAAI Conference on Artificial Intelligence (AAAI-22).
+original1025-p0559 
+original1025-p0560 引入参数 ⟦original1025-m0267: λ⟧ ，用一个神经网络 ⟦original1025-m0268: {H}_{λ}(ξ,\overset{̅}{ξ})⟧ 来拟合或近似真实的复值哈密顿量函数。
+original1025-p0561 损失函数：需要设计并控制多个损失函数来训练网络：   
+original1025-p0562 1.能量损失 (Lenorgy)：保证能量演化符合物理规律。 
+original1025-p0563 2.雅可比损失 (Lacobi)：保证辛结构或某种守恒律。◦  
+original1025-p0564 3.辛结构损失 (Lsymplectic)：保证学习到的动力学具有辛几何结构。
+original1025-p0565 回顾方程(17):
+original1025-p0566  ⟦original1025-m0269: (q,p)→(ξ,\overset{̅}{ξ})⟧ 正则变换，保持辛结构
+original1025-p0567  ⟦original1025-m0270: \left{ \begin{aligned}ξ=\frac{1}{\sqrt{2}}(q+ip) \\ \overset{̄}{\overset{̅}{ξ}}=\frac{1}{\sqrt{2}}(q−ip)\end{aligned} \right⟧ 
+original1025-p0568  ⟦original1025-m0271: \overset{̇}{ξ}=−\sqrt{2}i\frac{∂H}{∂\overset{̅}{ξ}}+\frac{1}{\sqrt{2}}\left( \frac{∂({G}_{1}+{G}_{2})}{∂ξ}−\frac{∂({G}_{1}−{G}_{2})}{∂\overset{̅}{ξ}} \right)=−\sqrt{2}i\frac{∂H}{∂\overset{̅}{ξ}}+\frac{1}{2}P\left( ξ,\overset{̅}{ξ} \right) ⟧ (21)
+original1025-p0569 
+original1025-p0570 回顾方程(21):
+original1025-p0571  ⟦original1025-m0272: \overset{̇}{ξ}∶=−\sqrt{2}i\frac{∂H}{∂\overset{̅}{ξ}}+\frac{1}{2}P\left( ξ,\overset{̅}{ξ} \right)∶=−\sqrt{2}i(\frac{∂H}{∂\overset{̅}{ξ}}+\frac{i}{2\sqrt{2}}P\left( ξ,\overset{̅}{ξ} \right) )∶=−\sqrt{2}i(\frac{∂H}{∂\overset{̅}{ξ}}+i\frac{∂\overset{̃}{P}\left( ξ,\overset{̅}{ξ} \right)}{∂\overset{̅}{ξ}} )⟧ 
+original1025-p0572  ⟦original1025-m0273: \overset{̇}{ξ}∶=−\sqrt{2}i\frac{∂(H+i\overset{̃}{P})}{∂\overset{̅}{ξ}}∶=−i\frac{∂\overset{̃}{H}}{∂\overset{̅}{ξ}}⟧ (25)
+original1025-p0573  ⟦original1025-m0274: \left{ \begin{aligned}\overset{̃}{H}=\sqrt{2}(H+i\overset{̃}{P}) \\ \overset{̃}{H}=\overset{̃}{H}\left( ξ,\overset{̅}{ξ} \right)\end{aligned} \right⟧ 
+original1025-p0574 
+original1025-p0575  ⟦original1025-m0275: H⟧ :保守. ⟦original1025-m0276: i\overset{̃}{P}⟧ :耗散+驱动,值小
+original1025-p0576 其中：
+original1025-p0577  ⟦original1025-m0277: \frac{i}{2\sqrt{2}}P\left( ξ,\overset{̅}{ξ} \right)=i\frac{∂\overset{̃}{P}\left( ξ,\overset{̅}{ξ} \right)}{∂\overset{̅}{ξ}}⇔\frac{∂\overset{̃}{P}\left( ξ,\overset{̅}{ξ} \right)}{∂\overset{̅}{ξ}}=\frac{1}{2\sqrt{2}}P\left( ξ,\overset{̅}{ξ} \right)⟺\overset{̃}{P}\left( ξ,\overset{̅}{ξ} \right)=\frac{1}{2\sqrt{2}}̅_{}^{}{P\left( ξ,\overset{̅}{ξ} \right)}d\overset{̅}{ξ}⟧ 
+original1025-p0578  ⟦original1025-m0278: \overset{̃}{P}\left( ξ,\overset{̅}{ξ} \right)⟧ 复变量且实值
+original1025-p0579 从现在起考虑复值生成函数 ⟦original1025-m0279: \overset{̃}{H}\left( ξ,\overset{̅}{ξ} \right)=\sqrt{2}(H\left( ξ,\overset{̅}{ξ} \right)+i\overset{̃}{P}\left( ξ,\overset{̅}{ξ} \right))⟧ 
+original1025-p0580 （注:与方程16雷同，但经过转化得到的形式）
+original1025-p0581 根据您提供的图片，已提取文字公式内容如下。对手写字符进行了必要的辨识和修正，并对可能的歧义处进行了说明。
+original1025-p0582 
+original1025-p0583 引入参数 λ，考虑拟合  ⟦original1025-m0280: Hamiltonian({H}_{λ}(z,\overset{̄}{z}))⟧ 。
+original1025-p0584 
+original1025-p0585 
+original1025-p0586 引入参数  ⟦original1025-m0281: λ⟧ ，考虑拟合Hamiltonian  ⟦original1025-m0282: \overset{̃}{{H}_{λ}}(ξ,\overset{̄}{ξ})⟧ 
+original1025-p0587 
+original1025-p0588 (i)损失函数
+original1025-p0589 
+original1025-p0590  ⟦original1025-m0283: (a)⟧  能量损失函数：
+original1025-p0591  ⟦original1025-m0284: {L}_{energy}\underset{⇒}{26}{\left‖ \frac{d{\overset{̃}{H}}_{λ}(ξ,\overset{̄}{ξ})}{dt} \right‖}^{2}={\left‖ \sqrt{2}\frac{d\left[ {H}_{λ}(ξ,\overset{̄}{ξ})+i{\overset{̃}{P}}_{λ}(ξ,\overset{̄}{ξ}) \right]}{dt} \right‖}^{2}=2{\left‖ \frac{d{\overset{̃}{P}}_{λ}(ξ,\overset{̄}{ξ})}{dt} \right‖}^{2} (能量−耗散行为约束)⟧ 
+original1025-p0592  ⟦original1025-m0285: (b)⟧ 哈密顿损失函数：
+original1025-p0593  ⟦original1025-m0286: {L}_{hamilton}={\left‖ \overset{̇}{ξ}+i\frac{∂{\overset{̃}{H}}_{λ}(ξ,\overset{̄}{ξ})}{∂ξ} \right‖}^{2} (动力学约束)⟧ 
+original1025-p0594 
+original1025-p0595  ⟦original1025-m0287: (c)⟧ 轨迹损失函数：
+original1025-p0596  ⟦original1025-m0288: {L}_{trajectory}={\left‖ {ξ}_{t+Δt}−Integrate({ξ}_{t},{\overset{̇}{ξ}}_{predict},Δt) \right‖}^{2} (单步积分残差约束)⟧ 
+original1025-p0597 其中
+original1025-p0598  ⟦original1025-m0289: \left{ \begin{aligned}{\overset{̇}{ξ}}_{predict}=−i\frac{∂{\overset{̃}{H}}_{λ}(ξ,\overset{̄}{ξ})}{∂\overset{̄}{ξ}}{|}_{ξ={ξ}_{t}},{ξ}_{t}=\frac{1}{\sqrt{2}}({q}_{t}+i{p}_{t})∈{ℂ}^{N} (可直接观测的量) \\ Integrate: RK4(可能更优)或 Euler 积分器等尝试,步长(∆t)小，可调节 \end{aligned} \right⟧ 
+original1025-p0599 
+original1025-p0600 也可增加其它损失函数进去，待定
+original1025-p0601 
+original1025-p0602 
+original1025-p0603 
+original1025-p0604 
+original1025-p0605 
+original1025-p0606 
+original1025-p0607 
+original1025-p0608 
+original1025-p0609 
+original1025-p0610 
+original1025-p0611 
+original1025-p0612 
+original1025-p0613 
+original1025-p0614 
+original1025-p0615 
+original1025-p0616 
+original1025-p0617 
+original1025-p0618 
+original1025-p0619 
+original1025-p0620 
+original1025-p0621 
+original1025-p0622 
+original1025-p0623 
+original1025-p0624 
+original1025-p0625 
+original1025-p0626 
+original1025-p0627 
+original1025-p0628 
+original1025-p0629 
+original1025-p0630 
+original1025-p0631 
+original1025-p0632 
+original1025-p0633 
+original1025-p0634 
+original1025-p0635 
+original1025-p0636 
+original1025-p0637 物理机理与数据融合训练 Part 4
+original1025-p0638 
+original1025-p0639 (ii) 复值激活函数
+original1025-p0640 
+original1025-p0641 •幅角保持激活函数 ⟦original1025-m0290: modReLU(z)⟧ 
+original1025-p0642 
+original1025-p0643   ⟦original1025-m0291: modReLU(z)=ReLU(\left| z \right|+b){e}^{i{θ}_{z}}=\left{ \begin{matrix}(\left| z \right|+b)\frac{z}{\left| z \right|}, & \left| z \right|+b>0 \\ 0, & 其它\end{matrix} \right⟧ 不解析 
+original1025-p0644 
+original1025-p0645 •完全复数激活函数 ⟦original1025-m0292: zReLU(z)⟧ 
+original1025-p0646 
+original1025-p0647      ⟦original1025-m0293: zReLU(z)=\left{ \begin{matrix}z, & {θ}_{z}∈[0,\frac{π}{2}] \\ 0, & 其它\end{matrix} \right⟧ 在 x, y 正半轴不解析。
+original1025-p0648   
+original1025-p0649 •Split激活函数 ⟦original1025-m0294: CReLU(z)⟧ 
+original1025-p0650 
+original1025-p0651  ⟦original1025-m0295: CReLU(z)=ReLU(Re(z))+i ReLU(Im(z))⟧   在第一、三象限解析
+original1025-p0652 
+original1025-p0653 小结：复激活函数分三类（以此为例）：
+original1025-p0654 1.  Split激活函数（分离实部与虚部的激活函数） ⟦original1025-m0296: CReLU(z)⟧ 
+original1025-p0655 2.  完全复数激活函数 ⟦original1025-m0297: zReLU(z)⟧ 
+original1025-p0656 3.  幅角保持激活函数 ⟦original1025-m0298: modReLU(z)⟧ 
+original1025-p0657 
+original1025-p0658 刘维尔定理：在复平面上处处解析且有界的函数必是常数。
+original1025-p0659 
+original1025-p0660 因此，在设计复值神经网络时，①“处处解析”与②“有界”不能同时成立（否则只能是常数函数，没有实用价值）。
+original1025-p0661 
+original1025-p0662 注：解析函数类由定义域上每一点都可导的复变函数组成。
+original1025-p0663 
+original1025-p0664 (iii) 解析条件与柯西-黎曼方程组推导
+original1025-p0665  ⟦original1025-m0299: f'(z)={lim}_{h→0} \frac{f(z+h)−f(z)}{h}⟧ 
+original1025-p0666  ⟦original1025-m0300: f(z)∶=u(z)+iv(z)⟧ 
+original1025-p0667 
+original1025-p0668 令 h 为实数，则  ⟦original1025-m0301: f'(z)=\frac{∂f}{∂x}=\frac{∂u}{∂x}+i\frac{∂v}{∂x} (式a)⟧ 
+original1025-p0669 取h 为纯虚数 ik，则 ⟦original1025-m0302: f'(z)={lim}_{k→0} \frac{f(z+ik)−f(z)}{ik}={lim}_{k→0} \frac{f(x+iy+ik)−f(x+iy)}{ik}={lim}_{k→0} \frac{f(x+i(y+k))−f(x+iy)}{ik}=−i{lim}_{k→0} \frac{f(x+i(y+k))−f(x+iy)}{k}=−i\frac{∂f}{∂y}=−i(\frac{∂u}{∂y}+i\frac{∂v}{∂y})(式b)⟧ 
+original1025-p0670    
+original1025-p0671 
+original1025-p0672 联立式a与式b：
+original1025-p0673     要使  ⟦original1025-m0303: f'(z)⟧ 存在且唯一，两式必须相等：
+original1025-p0674  ⟦original1025-m0304: \frac{∂u}{∂x}+i\frac{∂v}{∂x}=\frac{∂v}{∂y}−i\frac{∂u}{∂y}⟧ 
+original1025-p0675     分别令实部与虚部相等，即得 柯西-黎曼方程组：
+original1025-p0676        ⟦original1025-m0305: \left{ \begin{aligned}\frac{∂u}{∂x}=\frac{∂v}{∂y} \\ \frac{∂u}{∂y}=−\frac{∂v}{∂x}\end{aligned} \right⟧ (27)
+original1025-p0677 此即复变函数  ⟦original1025-m0306: f(z)⟧  解析的必要条件。
+original1025-p0678  ⟦original1025-m0307: \frac{∂f}{∂x}=−i\frac{∂f}{∂y}⟧ (28)
+original1025-p0679 
+original1025-p0680 
+original1025-p0681 
+original1025-p0682 
+original1025-p0683 
+original1025-p0684 
+original1025-p0685 
+original1025-p0686 
+original1025-p0687 
+original1025-p0688 
+original1025-p0689 
+original1025-p0690 
+original1025-p0691 
+original1025-p0692 
+original1025-p0693 
+original1025-p0694 
+original1025-p0695 
+original1025-p0696 
+original1025-p0697 
+original1025-p0698 
+original1025-p0699 
+original1025-p0700 
+original1025-p0701 
+original1025-p0702 
+original1025-p0703 
+original1025-p0704 
+original1025-p0705 
+original1025-p0706 
+original1025-p0707 
+original1025-p0708 
+original1025-p0709 
+original1025-p0710 
+original1025-p0711 有(a)知
+original1025-p0712  ⟦original1025-m0308: f'(z)=\frac{∂u}{∂x}+i\frac{∂v}{∂x}⟧ 
+original1025-p0713 
+original1025-p0714  ⟦original1025-m0309: {\left| f'(z) \right|}^{2}={\left( \frac{∂u}{∂x} \right)}^{2}+{\left( \frac{∂v}{∂x} \right)}^{2}{=}^{(27)}\frac{∂u}{∂x}(\frac{∂v}{∂y})+\frac{∂v}{∂x}(−\frac{∂u}{∂y})=\frac{∂u}{∂x}\frac{∂v}{∂y}−\frac{∂u}{∂y}\frac{∂v}{∂x}=\left| \begin{matrix}\frac{∂u}{∂x} & \frac{∂u}{∂y} \\ \frac{∂v}{∂x} & \frac{∂v}{∂y}\end{matrix} \right|⟧ 
+original1025-p0715  ⟦original1025-m0310: u,v⟧ 是关于 ⟦original1025-m0311: x,y⟧ 的雅可比行列式
+original1025-p0716 
+original1025-p0717  ⟦original1025-m0312: Δu=\frac{{∂}^{2}u}{∂{x}^{2}}+\frac{{∂}^{2}u}{∂{y}^{2}}{=}^{(27)}\frac{∂}{∂x}(\frac{∂u}{∂x})+\frac{∂}{∂y}(\frac{∂u}{∂y})=\frac{∂}{∂x}(\frac{∂v}{∂y})+\frac{∂}{∂y}(−\frac{∂v}{∂x})=\frac{{∂}^{2}v}{∂y∂x}−\frac{{∂}^{2}v}{∂x∂y}=0⟧ 
+original1025-p0718 ( ⟦original1025-m0313: u,v⟧ 有各阶连续偏导数)
+original1025-p0719 
+original1025-p0720  ⟦original1025-m0314: Δu=0⟧ : ⟦original1025-m0315: u⟧ 是调和函数,
+original1025-p0721  ⟦original1025-m0316: Δv=0:v⟧ 是调和函数, ⟦original1025-m0317: −v(x,y+k)+v(x,y+k)⟧ 
+original1025-p0722  ⟦original1025-m0318:  u,v⟧ 为共轭调和函数
+original1025-p0723 若 ⟦original1025-m0319: u,v⟧ 为一对共轭调和函数，令
+original1025-p0724  ⟦original1025-m0320: f(z)=u+iv，\left{ \begin{matrix}u=u(x,y) \\ v=v(x,y)\end{matrix} \right,则⟧ 
+original1025-p0725 
+original1025-p0726  ⟦original1025-m0321: {lim}_{h+ik→0} \frac{f(z+h+ik)−f(z)}{h+ik}={lim}_{h+ik→0} \frac{[u(x+h,y+k)+iv(x+h,y+k)]−[u(x,y)+iv(x,y)]}{h+ik}⟧ 
+original1025-p0727 
+original1025-p0728  ⟦original1025-m0322: ={lim}_{h+ik→0} \frac{[u(x+h,y+k)−u(x,y+k)+u(x,y+k)−u(x,y)]+i[v(x+h,y+k)−v(x,y+k)+v(x,y+k)−v(x,y)]}{h+ik}⟧ 
+original1025-p0729    ⟦original1025-m0323: ={lim}_{h+ik→0}\frac{1}{h+ik}{[u(x+h,y+k)−u(x,y+k)+u(x,y+k)−u(x,y)]+i[v(x+h,y+k)−v(x,y+k)+v(x,y+k)−v(x,y)]}⟧ 
+original1025-p0730 
+original1025-p0731  ⟦original1025-m0324: ={lim}_{h+ik→0} \frac{(\frac{∂u}{∂x}h+\frac{∂u}{∂y}k)+{ε}_{1}+i(\frac{∂v}{∂x}h+\frac{∂v}{∂y}k+{ε}_{2})}{h+ik}⟧ 
+original1025-p0732 
+original1025-p0733  ⟦original1025-m0325: ={lim}_{h+ik→0} \frac{(\frac{∂u}{∂x}+i\frac{∂v}{∂x})h+(\frac{∂u}{∂y}+i\frac{∂v}{∂y})k+({ε}_{1}+i{ε}_{2})}{h+ik}⟧ 
+original1025-p0734 
+original1025-p0735  ⟦original1025-m0326: {=}^{(27)}{lim}_{h+ik→0} \frac{(\frac{∂u}{∂x}+i\frac{∂v}{∂x})h+(−\frac{∂v}{∂x}+i\frac{∂u}{∂x})k+({ε}_{1}+i{ε}_{2})}{h+ik}⟧ 
+original1025-p0736  ⟦original1025-m0327: ={lim}_{h+ik→0} \frac{(\frac{∂u}{∂x}+i\frac{∂v}{∂x})h+i(\frac{∂u}{∂x}+\frac{∂v}{∂x})k+({ε}_{1}+i{ε}_{2})}{h+ik}⟧ 
+original1025-p0737  ⟦original1025-m0328: ={lim}_{h+ik→0} \frac{(\frac{∂u}{∂x}+i\frac{∂u}{∂x})(h+ik)+({ε}_{1}+i{ε}_{2})}{h+ik},\left{ \begin{aligned}{ε}_{1}=o(h+ik) \\ {ε}_{2}=o(h+ik)\end{aligned} \right⟧ 
+original1025-p0738  ⟦original1025-m0329: =\frac{∂u}{∂x}+i\frac{∂u}{∂x}⟧ 
+original1025-p0739  ⟦original1025-m0330: ⇒{f}^{'}(z) 解析⟧ 
+original1025-p0740 
+original1025-p0741  ⟦original1025-m0331: Thm.u(x,y),v(x,y)满足(Cauchy−Riemann方程)，有连续一阶偏导数⟧ 
+original1025-p0742  ⟦original1025-m0332: ⇔f(z)=u(x,y)+iv(x,y) 解析,{f}^{'}(z) 连续.⟧ 
+original1025-p0743 
+original1025-p0744 
+original1025-p0745 
+original1025-p0746 
+original1025-p0747 
+original1025-p0748 
+original1025-p0749 
+original1025-p0750 
+original1025-p0751 
+original1025-p0752 
+original1025-p0753 
+original1025-p0754 
+original1025-p0755 
+original1025-p0756 
+original1025-p0757 
+original1025-p0758 
+original1025-p0759 
+original1025-p0760 
+original1025-p0761 
+original1025-p0762 
+original1025-p0763 
+original1025-p0764 
+original1025-p0765 
+original1025-p0766 
+original1025-p0767 
+original1025-p0768 
+original1025-p0769 
+original1025-p0770 
+original1025-p0771 
+original1025-p0772 
+original1025-p0773 
+original1025-p0774 
+original1025-p0775 
+original1025-p0776 
+original1025-p0777 
+original1025-p0778  ⟦original1025-m0333: f(x,y),x,y实变量.f(x,y)∈ℂ⟧ 
+original1025-p0779  ⟦original1025-m0334: \left{ \begin{aligned}z=x+iy \\ \overline{z}=x−iy\end{aligned} \right ⇒\left{ \begin{aligned}x=\frac{1}{2}(z+\overline{z}) \\ y=\frac{1}{2i}(z−\overline{z})=−\frac{i}{2}(z−\overline{z})\end{aligned} \right ⟧ 
+original1025-p0780  ⟦original1025-m0335:   ⟧ 
+original1025-p0781  ⟦original1025-m0336: f(x,y)=f(\frac{1}{2}(z+\overline{z}),−\frac{i}{2}(z−\overline{z}))是z,\overline{z}的函数⟧ 
+original1025-p0782 
+original1025-p0783  ⟦original1025-m0337:   ⟧ 
+original1025-p0784  ⟦original1025-m0338: \frac{∂f}{∂z}=\frac{∂f}{∂x}\frac{∂x}{∂z}+\frac{∂f}{∂y}\frac{∂y}{∂z}=\frac{1}{2}\frac{∂f}{∂x}−\frac{i}{2}\frac{∂f}{∂y}=\frac{1}{2}\left( \frac{∂f}{∂x}−i\frac{∂f}{∂y} \right)⟧ 
+original1025-p0785  ⟦original1025-m0339:   ⟧ 
+original1025-p0786  ⟦original1025-m0340:   ⟧ 
+original1025-p0787  ⟦original1025-m0341: \frac{∂f}{∂\overline{z}}=\frac{∂f}{∂x}\frac{∂x}{∂\overline{z}}+\frac{∂f}{∂y}\frac{∂y}{∂\overline{z}}=\frac{1}{2}\frac{∂f}{∂x}+\frac{i}{2}\frac{∂f}{∂y}=\frac{1}{2}\left( \frac{∂f}{∂x}+i\frac{∂f}{∂y} \right)⟧ 
+original1025-p0788  ⟦original1025-m0342:   ⟧ 
+original1025-p0789  ⟦original1025-m0343: f解析⇒(28)成立⇒\frac{∂f}{∂\overline{z}}=0⟧ 
+original1025-p0790 
+original1025-p0791 
+original1025-p0792 
+original1025-p0793  ⟦original1025-m0344: 哈密顿方程是 Birkhoff 方程的退化形式⟧ 
+original1025-p0794 
+original1025-p0795  ⟦original1025-m0345: Birkhoff方程一般形式：⟧ 
+original1025-p0796  ⟦original1025-m0346:   ⟧ 
+original1025-p0797  ⟦original1025-m0347: \left( \frac{∂{F}_{j}}{∂{z}_{i}}−\frac{∂{F}_{i}}{∂{z}_{j}} \right){\overset{̇}{z}}_{j}−\left( \frac{∂B}{∂{z}_{i}}+\frac{∂{F}_{i}}{∂t} \right)=0, i=1,2,⋯,2n (★)⟧ 
+original1025-p0798 
+original1025-p0799  ⟦original1025-m0348: B=B(z,t):Birkhoff函数    z=({z}_{1},⋯,{z}_{n},{p}_{1},⋯,{p}_{n})⟧ 
+original1025-p0800 
+original1025-p0801 当取
+original1025-p0802 
+original1025-p0803 
+original1025-p0804  ⟦original1025-m0349: \left{ \begin{matrix} & {z}_{i}=\left{ \begin{matrix}{q}_{i}, & i=1,2,⋯,n \\ {p}_{i−n}, & i=n+1,n+2,⋯,2n\end{matrix} \right \\  & {F}_{i}=\left{ \begin{matrix}{p}_{i}, & i=1,2,⋯,n \\ 0, & i=n+1,n+2,⋯,2n\end{matrix} \right \\  & B=H\end{matrix} \right⟧ 
+original1025-p0805 
+original1025-p0806 时，Birkhoff方程退化为哈密顿方程
+original1025-p0807 
+original1025-p0808 
+original1025-p0809 
+original1025-p0810  ⟦original1025-m0350: {F}_{i}={F}_{i}(z,t)⟧ 
+original1025-p0811  ⟦original1025-m0351: n=1{:F}_{i}(q,p,t)三元函数⟧ 
+original1025-p0812 
+original1025-p0813  ⟦original1025-m0352: e.g.n=1⟧ 
+original1025-p0814  ⟦original1025-m0353: {z}_{i}=\left{ \begin{aligned}{q}_{1} \\ {p}_{1}\end{aligned} \right,{F}_{i}=\left{ \begin{aligned}{p}_{1}, i=1 \\ 0, i=2\end{aligned} \right⇒{z}_{1}={q}_{1}≜q,{z}_{2}={p}_{1}≜p,{F}_{1}={p}_{1}≜p,{F}_{2}=0⟧ 
+original1025-p0815  ⟦original1025-m0354: \left{ \begin{matrix} & \left( \frac{∂{F}_{2}}{∂{z}_{1}}−\frac{∂{F}_{1}}{∂{z}_{2}} \right){\overset{̇}{z}}_{2}−\frac{∂B}{∂{z}_{1}}−\frac{∂{F}_{1}}{∂t}=0 \\  & \left( \frac{∂{F}_{1}}{∂{z}_{2}}−\frac{∂{F}_{2}}{∂{z}_{1}} \right){\overset{̇}{z}}_{1}−\frac{∂B}{∂{z}_{2}}−\frac{∂{F}_{2}}{∂t}=0\end{matrix} \right⟧ 
+original1025-p0816 代入设定值:
+original1025-p0817  ⟦original1025-m0355: \left{ \begin{matrix} & \left( 0−\frac{∂p}{∂p} \right)\overset{̇}{p}−\frac{∂H}{∂q}−\frac{∂p}{∂t}=0 \\  & \left( \frac{∂p}{∂p}−0 \right)\overset{̇}{q}−\frac{∂H}{∂p}−0=0\end{matrix} \right⟧ 
+original1025-p0818 
+original1025-p0819  ⟦original1025-m0356: 最终得到经典的哈密顿正则方程：⟧ 
+original1025-p0820  ⟦original1025-m0357:   \left{ \begin{aligned}\overset{̇}{q}=\frac{∂H}{∂p} \\ \overset{̇}{p}=−\frac{∂H}{∂q}\end{aligned} \right⟧ 
+original1025-p0821 
+original1025-p0822 
+original1025-p0823 
+original1025-p0824 
+original1025-p0825 
+original1025-p0826 
+original1025-p0827 
+original1025-p0828 
+original1025-p0829 
+original1025-p0830 
+original1025-p0831 
+original1025-p0832 
+original1025-p0833 
+original1025-p0834 
+original1025-p0835 
+original1025-p0836 
+original1025-p0837 
+original1025-p0838  ⟦original1025-m0358: \frac{dH}{dt}=\frac{∂H}{∂q}\overset{̇}{q}+\frac{∂H}{∂p}\overset{̇}{p}=\frac{∂H}{∂q}\frac{∂H}{∂p}+\frac{∂H}{∂p}\left( −\frac{∂H}{∂q}+{F}_{ext}−C\frac{∂H}{∂p} \right)=\frac{∂H}{∂p}\left( {F}_{ext}−C\frac{∂H}{∂p} \right)⟧ (12)
+original1025-p0839 
+original1025-p0840 
+original1025-p0841 
+original1025-p0842 回顾方程(12) ⟦original1025-m0359: \left{ \begin{aligned}\overset{̇}{q}=\frac{∂H}{∂q}={M}^{−1}(q)p , (a) \\ \overset{̇}{p}=−\frac{∂H}{∂q}+{F}_{ext}−C\frac{∂H}{∂p}=−\frac{∂H}{∂q}+{F}_{ext}−C{M}^{−1}p, (b)\end{aligned} \right⟧ 
+original1025-p0843  ⟦original1025-m0360: z={(q,p)}^{T},则⟧ 
+original1025-p0844  ⟦original1025-m0361: (★)⇒\left{ \begin{aligned}\left( \frac{∂{F}_{2}}{∂q}−\frac{∂{F}_{1}}{∂p} \right)\overset{̇}{p}−\left( \frac{∂B}{∂q}+\frac{∂{F}_{1}}{∂t} \right)\underset{⇒}{{F}_{2}=0}−\frac{∂{F}_{1}}{∂p}\overset{̇}{p}=\frac{∂B}{∂q}+\frac{∂{F}_{1}}{∂t},(c) \\ \left( \frac{∂{F}_{1}}{∂p}−\frac{∂{F}_{2}}{∂q} \right)\overset{̇}{q}−\left( \frac{∂B}{∂p}+\frac{∂{F}_{2}}{∂t} \right)\underset{⇒}{{F}_{2}=0}\frac{∂{F}_{1}}{∂p}\overset{̇}{q}=\frac{∂B}{∂p},(d)\end{aligned} \right⟧ 
+original1025-p0845 
+original1025-p0846  ⟦original1025-m0362: {F}_{1}(q,p),假设\left{ \begin{aligned}{F}_{1}里全含t \\ \frac{∂{F}_{1}}{∂p}=1\end{aligned}, \right则(c),(d)⇒\left{ \begin{aligned}\overset{̇}{p}=−\frac{∂B}{∂q}−\frac{∂{F}_{1}}{∂t},(e) \\ q=\frac{∂B}{∂p},(f)\end{aligned} \right⟧ 
+original1025-p0847  ⟦original1025-m0363: (e),(f)与(a),(b)对照，可取\left{ \begin{aligned}\frac{∂B}{∂p}=\frac{∂H}{∂p}={M}^{−1}(q)p \\ \frac{∂B}{∂q}+\frac{∂{F}_{1}}{∂t}=\frac{∂H}{∂q}+(C{M}^{−1}p−{F}_{ext})\end{aligned} \right⟧ 
+original1025-p0848  ⟦original1025-m0364: \left{ \begin{aligned}B=H=\frac{1}{2}{p}^{T}Mq+∫_{}^{}{K(q)q}dq \\ {F}_{1}=∫_{}^{}{[C{M}^{−1}q−{F}_{ext}(q)]}dt+p\end{aligned} \right⟧ 
+original1025-p0849 即有(12)可以转化为
+original1025-p0850  ⟦original1025-m0365: \left{ \begin{aligned}(\frac{∂{F}_{2}}{∂q}−\frac{∂{F}_{1}}{∂p})\overset{̇}{p}=\frac{∂B}{∂q}+\frac{∂{F}_{1}}{∂t} \\ (\frac{∂{F}_{1}}{∂p}−\frac{∂{F}_{2}}{∂q})\overset{̇}{q}=\frac{∂B}{∂q}\end{aligned} \right⟧ 
+original1025-p0851 其中 ⟦original1025-m0366: \left{ \begin{aligned}B=\frac{1}{2}{p}^{T}Mq+∫_{}^{}{K(q)q}dq \\ {F}_{1}=∫_{}^{}{[C{M}^{−1}q−{F}_{ext}(q)]}dt+p \\ {F}_{2}=0\end{aligned} \right⟧ 
+original1025-p0852 构造生成函数 ⟦original1025-m0367: ω⟧ ，可得Birkhoff保辛格式
+original1025-p0853 需要用到两个定理
+original1025-p0854  ⟦original1025-m0368: 记p=\left( \frac{\overset{^}{z}}{\overline{z}} \right)∈{ℝ}^{4n}，z=z\left( {t}_{0} \right)，\overset{^}{z}=\overset{^}{z}(t)⟧ 
+original1025-p0855  ⟦original1025-m0369: α({t}_{1}{t}_{0}):\left( \begin{matrix}\overset{^}{z} \\ z\end{matrix} \right)↦\left( \begin{matrix}\overset{^}{w} \\ w\end{matrix} \right)=\left( \begin{matrix}{α}_{1}(\overset{^}{z},z,t,{t}_{0}) \\ {α}_{2}(\overset{^}{z},z,t,{t}_{0})\end{matrix} \right)⟧ 
+original1025-p0856  ⟦original1025-m0370: {α}^{−1}({t}_{2}{t}_{0}):\left( \begin{matrix}\overset{^}{w} \\ w\end{matrix} \right)↦\left( \begin{matrix}\overset{^}{z} \\ z\end{matrix} \right)=\left( \begin{matrix}{α}^{1}(\overset{^}{w},w,t,{t}_{0}) \\ {α}^{2}(\overset{^}{w},w,t,{t}_{0})\end{matrix} \right)⟧ 
+original1025-p0857  ⟦original1025-m0371: α，{α}^{−1}的Jacobi矩阵为⟧ 
+original1025-p0858  ⟦original1025-m0372: {α}_{?}=\left( \begin{matrix}{A}_{α} & {B}_{α} \\ {C}_{α} & {D}_{α}\end{matrix} \right)，⟧ ?
+original1025-p0859  ⟦original1025-m0373: {α}_{?}^{−1}=\left( \begin{matrix}{A}^{α} & {B}^{α} \\ {C}^{α} & {D}^{α}\end{matrix} \right)。⟧ ?
+original1025-p0860 
+original1025-p0861 则有
+original1025-p0862 Theorem (A)
+original1025-p0863 
+original1025-p0864 对上述映射 ⟦original1025-m0374: α⟧ ，映射 ⟦original1025-m0375: z↦\overset{^}{z}=g(t;α,{t}_{0})⟧ 是Birkhoff系统的相流，
+original1025-p0865  ⟦original1025-m0376: M(t;z,{t}_{0})={g}_{z}(t;z,{t}_{0})⟧ 是其Jacobi矩阵。
+original1025-p0866 若其行列式满足
+original1025-p0867  ⟦original1025-m0377: \left| {C}_{α}(z,z,{t}_{0},{t}_{0})+{D}_{α}(z,z,{t}_{0},{t}_{0}) \right|≠0⟧ 
+original1025-p0868 则当 ⟦original1025-m0378: \left| t−{t}_{0} \right|⟧ 足够小时，在 ⟦original1025-m0379: z⟧ 的某邻域内存在梯度映射：
+original1025-p0869  ⟦original1025-m0380: w→\overset{^}{w}=f(w,t,{t}_{0})⟧ 
+original1025-p0870 此映射的雅可比矩阵 ⟦original1025-m0381: {f}_{w}(w,t,{t}_{0})=N(w,t,{t}_{0})⟧ 对称，且存在生成函数 ⟦original1025-m0382: ϕ(w,t,{t}_{0})⟧ ，使得：
+original1025-p0871  ⟦original1025-m0383: f(w,t,{t}_{0})={ϕ}_{w}(w,t,{t}_{0})⟧ 
+original1025-p0872  ⟦original1025-m0384: \frac{∂}{∂t}{ϕ}_{w}(w,t,{t}_{0})=A\left[ {ϕ}_{w}(w,t,{t}_{0}); w, {ϕ}_{ww}(w,t,{t}_{0}), t, {t}_{0} \right]⟧ 
+original1025-p0873  ⟦original1025-m0385: A(\overset{^}{w},w,\frac{∂\overset{^}{w}}{∂w},t,{t}_{0})=\overline{A}\left[ \overset{^}{z}(\overset{^}{w},w,t,{t}_{0});z(\overset{^}{w},w,t,{t}_{0}), \frac{∂\overset{^}{w}}{∂w}, t, {t}_{0} \right]⟧ 
+original1025-p0874  ⟦original1025-m0386: \overline{A}(\overset{^}{z},z,\frac{∂\overset{^}{w}}{∂w},t,{t}_{0})=\frac{d}{dt}\overset{^}{w}(\overset{^}{z},z,t,{t}_{0})−\frac{∂\overset{^}{w}}{∂w}\frac{d}{dt}w(\overset{^}{z},z,t,{t}_{0})=\left( {A}_{α}−\frac{∂\overset{^}{w}}{∂w}{C}_{α} \right){K}^{−1}D(\overset{^}{z},t)+\frac{∂{α}_{1}}{∂t}−\frac{∂\overset{^}{w}}{∂w}\frac{∂{α}_{2}}{∂t}⟧ 
+original1025-p0875 
+original1025-p0876  ⟦original1025-m0387: {α}_{1}[g(t,z,{t}_{0}),z,t,{t}_{0}]=f\left{ {α}_{2}[g(t;α,{t}_{0}),z,t,{t}_{0}], t, {t}_{0} \right}={ϕ}_{w}\left[ {α}_{2}(g(t;α,{t}_{0}),z,t,{t}_{0}), t, {t}_{0} \right]⟧ 
+original1025-p0877  ⟦original1025-m0388: {α}_{1}⟧ 关于 ⟦original1025-m0389: (z,{t}_{0}) ⟧ 唯一且
+original1025-p0878  ⟦original1025-m0390: N={σ}_{α}(M)=({A}_{α}M+{B}_{α}){({C}_{α}M+{D}_{α})}^{−1}⟧ 
+original1025-p0879  ⟦original1025-m0391: M={σ}_{{α}^{−1}}(N)=({A}^{α}N+{B}^{α})({C}^{α}N+{D}^{α}{)}^{−1}⟧ 
+original1025-p0880 
+original1025-p0881 Theorem (B)
+original1025-p0882 
+original1025-p0883  解析性与级数展开：
+original1025-p0884 假设 ⟦original1025-m0392: A,α⟧ 解析，则当 ⟦original1025-m0393: \left| t−{t}_{0} \right|⟧ 足够小时，生成函数 ⟦original1025-m0394: {ϕ}_{w}(w,t,{t}_{0})⟧ 可对 ⟦original1025-m0395: t⟧ 展开成收敛级数
+original1025-p0885  ⟦original1025-m0396: {ϕ}_{w}(w,t,{t}_{0})=∑_{k=0}^{+∞}{(}t−{t}_{0}{)}^{k}{ϕ}_{w}^{(k)}(w,{t}_{0})⟧ 
+original1025-p0886  ⟦original1025-m0397: {ϕ}_{w}^{(0)}(w,{t}_{0})=f(w,{t}_{0},{t}_{0})⟧ 
+original1025-p0887  ⟦original1025-m0398: {ϕ}_{w}^{(1)}(w,{t}_{0})=A\left( {ϕ}_{w}^{(0)}, w, {ϕ}_{ww}^{(0)}, {t}_{0}, {t}_{0} \right)⟧ 
+original1025-p0888  ⟦original1025-m0399: {ϕ}_{w}^{(k)}(w,{t}_{0})=\frac{1}{(k+1)!}{D}_{t}^{k}A\left( {ϕ}_{w}^{(0)}, w, {ϕ}_{ww}^{(0)}, {t}_{0}, {t}_{0} \right)⟧ 
+original1025-p0889 
+original1025-p0890 
+original1025-p0891 
+original1025-p0892 
+original1025-p0893 
+original1025-p0894 
+original1025-p0895 
+original1025-p0896 
+original1025-p0897 
+original1025-p0898 
+original1025-p0899 
+original1025-p0900 
+original1025-p0901 
+original1025-p0902 
+original1025-p0903 
+original1025-p0904 
+original1025-p0905 
+original1025-p0906 
+original1025-p0907 
+original1025-p0908 
+original1025-p0909 构造
+original1025-p0910  ⟦original1025-m0400: \left{ \begin{matrix}\overset{^}{q}(t)=q(t+δ) \\ \overset{^}{p}(t)=p(t+δ) \\ \overset{^}{Q}=\overset{^}{p}−p \\ \overset{^}{P}=\overset{^}{q}−q \\ Q=\frac{1}{2}(\overset{^}{q}+q) \\ P=−\frac{1}{2}(\overset{^}{p}+p)\end{matrix} \right⟧ (30) ⟦original1025-m0401: “左大右小”⟧ 
+original1025-p0911 
+original1025-p0912 变量定义：  
+original1025-p0913  ⟦original1025-m0402: \overset{^}{z}=\left( \begin{matrix}\overset{^}{q} \\ \overset{^}{p}\end{matrix} \right), z=\left( \begin{matrix}q \\ p\end{matrix} \right), \overset{^}{w}=\left( \begin{matrix}\overset{^}{Q} \\ \overset{^}{P}\end{matrix} \right), w=\left( \begin{matrix}Q \\ P\end{matrix} \right)⟧ 
+original1025-p0914 变换 ⟦original1025-m0403: α⟧ ：
+original1025-p0915  ⟦original1025-m0404: α:\left( \begin{matrix}\overset{^}{q} \\ \overset{^}{p} \\ q \\ p\end{matrix} \right)=\left( \begin{matrix}\overset{^}{z} \\ z\end{matrix} \right)↦\left( \begin{matrix}\overset{^}{w} \\ w\end{matrix} \right)=\left( \begin{matrix}\overset{^}{Q} \\ \overset{^}{P} \\ Q \\ P\end{matrix} \right) ⟧ 
+original1025-p0916  ⟦original1025-m0405: α⟧ 的Jacobi矩阵 ⟦original1025-m0406: {α}_{∗}⟧ （分块矩阵）：
+original1025-p0917  ⟦original1025-m0407: {α}_{∗}=\left( \begin{matrix}\frac{∂\overset{^}{Q}}{∂\overset{^}{q}} & \frac{∂\overset{^}{Q}}{∂\overset{^}{p}} & \frac{∂\overset{^}{Q}}{∂q} & \frac{∂\overset{^}{Q}}{∂p} \\ \frac{∂\overset{^}{P}}{∂\overset{^}{q}} & \frac{∂\overset{^}{P}}{∂\overset{^}{p}} & \frac{∂\overset{^}{P}}{∂q} & \frac{∂\overset{^}{P}}{∂p} \\ \frac{∂Q}{∂\overset{^}{q}} & \frac{∂Q}{∂\overset{^}{p}} & \frac{∂Q}{∂q} & \frac{∂Q}{∂p} \\ \frac{∂P}{∂\overset{^}{q}} & \frac{∂P}{∂\overset{^}{p}} & \frac{∂P}{∂q} & \frac{∂P}{∂p}\end{matrix} \right)=\left( \begin{matrix}0 & I & 0 & −I \\ I & 0 & −I & 0 \\ \frac{1}{2}I & 0 & \frac{1}{2}I & 0 \\ 0 & −\frac{1}{2}I & 0 & −\frac{1}{2}I\end{matrix} \right) ⟧ 
+original1025-p0918 由(30)知(31)“左小右大”
+original1025-p0919 
+original1025-p0920  ⟦original1025-m0408: \left{ \begin{matrix}\overset{^}{q}=\frac{\overset{^}{P}+2Q}{2}=Q+\frac{1}{2}\overset{^}{P} \\ \overset{^}{p}=\frac{\overset{^}{Q}−2P}{2}=\frac{1}{2}\overset{^}{Q}−P \\ q=\frac{2Q−\overset{^}{P}}{2}=Q−\frac{1}{2}\overset{^}{P} \\ p=\frac{−2P−\overset{^}{Q}}{2}=−\frac{1}{2}\overset{^}{Q}−P\end{matrix} \right⟧ 
+original1025-p0921 变换 ⟦original1025-m0409: {α}^{−1}⟧ ：
+original1025-p0922  ⟦original1025-m0410: {α}^{−1}:\left( \begin{matrix}\overset{^}{Q} \\ \overset{^}{P} \\ Q \\ P\end{matrix} \right)=\left( \begin{matrix}\overset{^}{w} \\ w\end{matrix} \right)↦\left( \begin{matrix}\overset{^}{z} \\ z\end{matrix} \right)=\left( \begin{matrix}\overset{^}{q} \\ \overset{^}{p} \\ q \\ p\end{matrix} \right)⟧ 
+original1025-p0923 
+original1025-p0924  ⟦original1025-m0411: {α}^{−1}⟧ 的 ⟦original1025-m0412: Jacobi⟧ 矩阵 ⟦original1025-m0413: {α}_{∗}^{−1}⟧ （分块矩阵）：
+original1025-p0925  ⟦original1025-m0414: {α}_{∗}^{−1}=\left( \begin{matrix}0 & \frac{1}{2}I & I & 0 \\ \frac{1}{2}I & 0 & 0 & −I \\ 0 & −\frac{1}{2}I & I & 0 \\ −\frac{1}{2}I & 0 & 0 & −I\end{matrix} \right)⟧ 
+original1025-p0926 
+original1025-p0927 
+original1025-p0928  ⟦original1025-m0415: \frac{d\overset{^}{w}}{dt}=\left( \begin{matrix}0 & I \\ I & 0\end{matrix} \right)\left( \begin{matrix}\overset{̇}{\overset{^}{q}} \\ \overset{̇}{\overset{^}{p}}\end{matrix} \right)=\left( \begin{matrix}\overset{̇}{\overset{^}{p}} \\ \overset{̇}{\overset{^}{q}}\end{matrix} \right){=}^{Page6}\left( \begin{matrix}−\frac{1}{2}{\overset{^}{p}}^{T}\frac{∂{M}^{−1}(\overset{^}{q})}{∂\overset{^}{q}}\overset{^}{p}−K(\overset{^}{q})\overset{^}{q}+{F}_{ext}−C{M}^{−1}\overset{^}{p} \\ {M}^{−1}(\overset{^}{q})\overset{^}{p}\end{matrix} \right)⟧ 
+original1025-p0929  ⟦original1025-m0416: {=}^{(31)}\left( \begin{matrix}−\frac{1}{2}{\left( \frac{1}{2}\overset{^}{Q}−P \right)}^{T}\frac{∂{M}^{−1}(Q+\frac{1}{2}\overset{^}{P})}{∂(Q+\frac{1}{2}\overset{^}{P})}\left( \frac{1}{2}\overset{^}{Q}−p \right)−K\left( \overset{^}{Q}+\frac{1}{2}\overset{^}{P} \right)\left( \overset{^}{Q}+\frac{1}{2}\overset{^}{P} \right)+{F}_{ext}−C{M}^{−1}\left( \frac{1}{2}\overset{^}{Q}−P \right) \\ {M}^{−1}\left( Q+\frac{1}{2}\overset{^}{P} \right)\left( \frac{1}{2}\overset{^}{Q}−P \right)\end{matrix} \right)⟧ 
+original1025-p0930 
+original1025-p0931  ⟦original1025-m0417: \frac{dw}{dt}=\left( \begin{matrix}\frac{1}{2}I & 0 \\ 0 & −\frac{1}{2}I\end{matrix} \right)\left( \begin{matrix}\overset{̇}{q} \\ \overset{̇}{p}\end{matrix} \right)=\left( \begin{matrix}\frac{1}{2}\overset{̇}{q} \\ \frac{1}{2}\overset{̇}{p}\end{matrix} \right)=\left( \begin{matrix}\frac{1}{2}[−\frac{1}{2}{\overset{^}{p}}^{T}\frac{∂{M}^{−1}(\overset{^}{q})}{∂\overset{^}{q}}\overset{^}{p}−K(\overset{^}{q})\overset{^}{q}+{F}_{ext}−C{M}^{−1}\overset{^}{p}] \\ \frac{1}{2}{M}^{−1}(\overset{^}{q})\overset{^}{p}\end{matrix} \right){|}_{\left{ \begin{aligned}p=−\frac{1}{2}\overset{^}{Q}−P \\ q=Q−\frac{1}{2}\overset{^}{P}\end{aligned} \right}⟧ (32)
+original1025-p0932  ⟦original1025-m0418: \frac{d\overset{^}{w}}{dt}=\left( \begin{matrix}0 & I \\ I & 0\end{matrix} \right)\left( \begin{matrix}\overset{̇}{\overset{^}{q}} \\ \overset{̇}{\overset{^}{p}}\end{matrix} \right)=\left( \begin{matrix}\overset{̇}{\overset{^}{p}} \\ \overset{̇}{\overset{^}{q}}\end{matrix} \right)=\left( \begin{matrix}−\frac{1}{2}{\overset{^}{p}}^{T}\frac{∂{M}^{−1}(\overset{^}{q})}{∂\overset{^}{q}}\overset{^}{p}−K(\overset{^}{q})\overset{^}{q}+{F}_{ext}−C{M}^{−1}\overset{^}{p} \\ {M}^{−1}(\overset{^}{q})\overset{^}{p}\end{matrix} \right){|}_{\left{ \begin{aligned}\overset{^}{p}=\frac{1}{2}\overset{^}{Q}−P \\ \overset{^}{q}=Q+\frac{1}{2}\overset{^}{P}\end{aligned} \right }⟧ 
+original1025-p0933 
+original1025-p0934 
+original1025-p0935 
+original1025-p0936 
+original1025-p0937 
+original1025-p0938 
+original1025-p0939 
+original1025-p0940 
+original1025-p0941 
+original1025-p0942 
+original1025-p0943 
+original1025-p0944 
+original1025-p0945 
+original1025-p0946 
+original1025-p0947 
+original1025-p0948 
+original1025-p0949 
+original1025-p0950 
+original1025-p0951 由Theorem(B)知    
+original1025-p0952  ⟦original1025-m0419: {ϕ}_{w}(w,t,{t}_{0})={ϕ}_{w}^{(0)}(w,{t}_{0})+{ϕ}_{w}^{(1)}(w,{t}_{0})(t−{t}_{0})+{ϕ}_{w}^{(2)}(w,{t}_{0})(t−{t}_{0}{)}^{2}+⋯⟧ 
+original1025-p0953 
+original1025-p0954  ⟦original1025-m0420: {ϕ}_{w}^{(0)}(w,{t}_{0})={\left \overset{^}{w} \right|}_{t={t}_{0}}={\left \left( \begin{matrix}\overset{^}{Q} \\ \overset{^}{P}\end{matrix} \right) \right|}_{t={t}_{0}}={\left \left( \begin{matrix}\overset{^}{Q} \\ \overset{^}{P}\end{matrix} \right) \right|}_{δ=0}=\left( \begin{matrix}0 \\ 0\end{matrix} \right)⟧ 
+original1025-p0955  ⟦original1025-m0421: {ϕ}_{w}^{(1)}(w,{t}_{0})=A({ϕ}_{w}^{(0)},w,{ϕ}_{ww}^{(0)},{t}_{0},{t}_{0})=A({\left \overset{^}{w} \right|}_{t={t}_{0}},w,{\left \frac{∂\overset{^}{w}}{∂w} \right|}_{t={t}_{0}},{t}_{0},{t}_{0})={\left \frac{d\overset{^}{w}}{dt} \right|}_{t={t}_{0}}−{\left \frac{∂\overset{^}{w}}{∂w} \right|}_{t={t}_{0}}{\left \frac{dw}{dt} \right|}_{t={t}_{0}}⟧ 
+original1025-p0956 
+original1025-p0957  ⟦original1025-m0422: {\left \frac{d\overset{^}{w}}{dt} \right|}_{t={t}_{0}}{=}^{(32)}{\left \frac{d\overset{^}{w}}{dt} \right|}_{δ=0}=\left( \begin{matrix}−\frac{1}{2}{P}^{T}\frac{∂{M}^{−1}}{∂Q}P−K(Q)Q+{F}_{ext}−C{M}^{−1}P \\ −{M}^{−1}(Q)P\end{matrix} \right)⟧ 
+original1025-p0958 当 ⟦original1025-m0423: δ=0⟧ 时，由(30),(31)知 ⟦original1025-m0424: \left{ \begin{aligned}\overset{^}{q}=q,\overset{^}{p}=p,\overset{^}{Q}=0,\overset{^}{P}=0,Q=q,P=−p \\ ⇒\overset{^}{p}=−P,\overset{^}{q}=Q\end{aligned} \right⟧ 
+original1025-p0959  ⟦original1025-m0425: {\left \frac{d\overset{^}{w}}{dw} \right|}_{t={t}_{0}}=\frac{∂{\left (\overset{^}{w} \right|}_{t={t}_{0}})}{∂w}=\frac{∂(0)}{∂w}=0⟧ 
+original1025-p0960  ⟦original1025-m0426: ⇒{ϕ}_{w}^{(1)}(w,{t}_{0})=\left( \begin{matrix}−\frac{1}{2}{P}^{T}\frac{∂{M}^{−1}}{∂Q}P−K(Q)Q+{F}_{ext}−C{M}^{−1}P \\ −{M}^{−1}(Q)P\end{matrix} \right),\left{ \begin{aligned}C=C(Q,\overset{̇}{Q}) \\ M=M(Q)\end{aligned} \right⟧ 
+original1025-p0961  ⟦original1025-m0427: \underset{⇒}{Thm(A),Thm(B)}\overset{^}{w}={ϕ}_{w}^{(0)}(w,{t}_{0})+{ϕ}_{w}^{(1)}(w,{t}_{0})(t−{t}_{0})+o(2)={ϕ}_{w}^{(1)}(w,{t}_{0})(t−{t}_{0}),t−{t}_{0}=δ⟧ (33)
+original1025-p0962 记 ⟦original1025-m0428: \left{ \begin{aligned}\overset{^}{p}={p}_{k+1},p={p}_{k} \\ \overset{^}{q}={q}_{k+1},q={q}_{k}\end{aligned} \right⟧ 
+original1025-p0963  ⟦original1025-m0429: \begin{matrix} \\  \\  \\  \\  \\ \end{matrix}\left{ \begin{aligned}P=−\frac{1}{2}(\overset{^}{p}+p) \\ Q=\frac{1}{2}(\overset{^}{q}+q)\end{aligned}, \right\overset{^}{w}={ϕ}_{w}^{(1)}(w,{t}_{0})δ=\left( \begin{matrix}\overset{^}{Q} \\ \overset{^}{P}\end{matrix} \right)=\left( \begin{matrix}\overset{^}{p}−p \\ \overset{^}{q}−q\end{matrix} \right)⟧ (34)
+original1025-p0964 
+original1025-p0965 
+original1025-p0966 
+original1025-p0967 
+original1025-p0968 
+original1025-p0969 
+original1025-p0970 
+original1025-p0971 
+original1025-p0972 
+original1025-p0973 
+original1025-p0974 
+original1025-p0975 
+original1025-p0976 
+original1025-p0977 
+original1025-p0978 
+original1025-p0979 
+original1025-p0980  ⟦original1025-m0430: 由(33)(34)有⟧ 
+original1025-p0981 
+original1025-p0982  ⟦original1025-m0431: \left( \begin{matrix}\overset{^}{p}−p \\ \overset{^}{q}−q\end{matrix} \right)={\left \left( \begin{matrix}−\frac{1}{2}{P}^{T}\frac{∂{M}^{−1}}{∂Q}P−K(Q)Q+{F}_{ext}−C{M}^{−1}P \\ −{M}^{−1}(Q)P\end{matrix} \right) \right|}_{\begin{aligned}δ \\ P=−\frac{1}{2}(\overset{^}{p}+p) \\ Q=\frac{1}{2}(\overset{^}{q}+q)\end{aligned}}=\left{ \begin{matrix}−\frac{1}{2}{[−\frac{1}{2}(\overset{^}{p}+p)]}^{T}\frac{∂{M}^{−1}}{∂\left{ \frac{1}{2}(\overset{^}{q}+q) \right}}[−\frac{1}{2}(\overset{^}{p}+p)]−K\left{ \frac{1}{2}(\overset{^}{q}+q) \right}\frac{1}{2}(\overset{^}{q}+q)+{F}_{ext}−C{M}^{−1}[−\frac{1}{2}(\overset{^}{p}+p)] \\ {−M}^{−1}\left{ \frac{1}{2}(\overset{^}{q}+q) \right}[−\frac{1}{2}(\overset{^}{p}+p)]\end{matrix} \right}⟧ 
+original1025-p0983 
+original1025-p0984  ⟦original1025-m0432: ⇒\left{ \begin{aligned}\overset{^}{q}=q+\frac{1}{2}{M}^{−1}{\frac{1}{2}(\overset{^}{q}+q)}(\overset{^}{p}+p)⋅δ \\ \overset{^}{p}=p+\left{ −\frac{1}{8}(\overset{^}{p}+p)\frac{∂{M}^{−1}}{∂\left{ \frac{1}{2}(\overset{^}{q}+q) \right}}(\overset{^}{p}+p)−\frac{1}{2}K\left{ (\overset{^}{q}+q) \right}(\overset{^}{q}+q)+{F}_{ext}−\frac{1}{2}C{M}^{−1}(\overset{^}{p}+p) \right}δ\end{aligned} \right⟧ 
+original1025-p0985  ⟦original1025-m0433: 简记为⟧ 
+original1025-p0986  ⟦original1025-m0434: ⇒\left{ \begin{aligned}\overset{^}{q}=q+\frac{1}{2}{M}^{−1}(\overset{^}{p}+p)⋅δ \\ \overset{^}{p}=p+\left{ −\frac{1}{8}(\overset{^}{p}+p)\frac{∂{M}^{−1}}{∂\left{ \frac{1}{2}(\overset{^}{q}+q) \right}}(\overset{^}{p}+p)−\frac{1}{2}K(\overset{^}{q}+q)+{F}_{ext}−\frac{1}{2}C{M}^{−1}(\overset{^}{p}+p) \right}δ\end{aligned} \right⟧ (35)
+original1025-p0987 
+original1025-p0988  ⟦original1025-m0435: 将(35)第一个方程代入第二个方程，有⟧ 
+original1025-p0989 
+original1025-p0990  ⟦original1025-m0436: \overset{^}{p}=p+\left{ −\frac{1}{8}(\overset{^}{p}+p)\frac{∂{M}^{−1}}{∂\left{ \frac{1}{2}(\overset{^}{q}+q) \right}}(\overset{^}{p}+p)−\frac{1}{2}K(2q+\frac{1}{2}{M}^{−1}(\overset{^}{p}+p)⋅δ)+{F}_{ext}−\frac{1}{2}C{M}^{−1}(\overset{^}{p}+p) \right}δ⟧ 
+original1025-p0991 移项得
+original1025-p0992 
+original1025-p0993  ⟦original1025-m0437: \overset{^}{p}(1+\frac{1}{4}K{M}^{−1}{δ}^{2}+\frac{1}{2}C{M}^{−1}δ)=p(1−\frac{1}{4}K{M}^{−1}{δ}^{2}−\frac{1}{2}C{M}^{−1}δ)−Kq⋅δ+(Δ+{F}_{ext})δ⟧ 
+original1025-p0994 
+original1025-p0995  ⟦original1025-m0438: 若 M ，K，{F}_{ext} 为常矩阵，则Δ=0,记ε=\frac{1}{4}K{M}^{−1}{δ}^{2}+\frac{1}{2}C{M}^{−1}δ,则⟧ 
+original1025-p0996  ⟦original1025-m0439: \overset{^}{p}=\frac{1}{1+ε}[{p}_{k}(1−ε)−K{q}_{k}δ+{F}_{ext}δ]⟧ 
+original1025-p0997 从而
+original1025-p0998  ⟦original1025-m0440: \left{ \begin{matrix}{q}_{k+1}={q}_{k}+\frac{1}{2}{M}^{−1}({p}_{k+1}+{p}_{k})⋅δ \\ {p}_{k+1}={p}_{k}⋅\frac{1−ε}{1+ε}−K{q}_{k}⋅\frac{δ}{1+ε}+{F}_{ext}\frac{δ}{1+ε}\end{matrix} \right⟧ 
+original1025-p0999 
+original1025-p1000  ⟦original1025-m0441: 若M，K，{F}_{ext}不是常矩阵时,即M=M(Q)，K=K(Q,\overset{̇}{Q}),则Δ≠0, Δ为二次型⟧ 
+original1025-p1001 
+original1025-p1002 
+original1025-p1003  ⟦original1025-m0442: \left{ \begin{matrix}{q}_{k+1}={q}_{k}+\frac{1}{2}{M}^{−1}({p}_{k+1}+{p}_{k})⋅δ,其中 {M}^{−1} 依赖于 {q}_{k+1}+{q}_{k} \\ {p}_{k+1}={p}_{k}⋅\frac{1−ε}{1+ε}−K{q}_{k}⋅\frac{δ}{1+ε}+(Δ+{F}_{ext})\frac{δ}{1+ε}\left{ \begin{aligned}K,{F}_{ext}ε, C依赖于{q}_{k+1}+{q}_{k} \\ Δ 依赖于 {{p}_{k+1}={p}_{k},q}_{k+1}+{q}_{k}\end{aligned} \right\end{matrix} \right⟧ (36)
+original1025-p1004 
+original1025-p1005  ⟦original1025-m0443: Birkhoff 保辛格式，一阶精度⟧ 
+original1025-p1006  ⟦original1025-m0444: 这是一个隐式方法⟧ 
+original1025-p1007 
+original1025-p1008 
+original1025-p1009 
+original1025-p1010 
+original1025-p1011 
+original1025-p1012 
+original1025-p1013 
+original1025-p1014 
+original1025-p1015 
+original1025-p1016 
+original1025-p1017 
+original1025-p1018 
+original1025-p1019 
+original1025-p1020 
+original1025-p1021 
+original1025-p1022 
+original1025-p1023 
+original1025-p1024 
+original1025-p1025 
+original1025-p1026 
+original1025-p1027 
+original1025-p1028 
+original1025-p1029 
+original1025-p1030 
+original1025-p1031 
+original1025-p1032 
+original1025-p1033 
+original1025-p1034 
+original1025-p1035 
+original1025-p1036 
+original1025-p1037 
+original1025-p1038 
+original1025-p1039 
+original1025-p1040  ⟦original1025-m0445: {ϕ}_{w}^{(2)}(w,{t}_{0}){=}^{Thm(B)}\frac{1}{2}{D}_{t}{ϕ}_{w}^{(1)}(w,{t}_{0}){=}^{(33)}\frac{1}{2}{D}_{t}\left( \begin{matrix}−\frac{1}{2}{P}^{T}\frac{∂{M}^{−1}}{∂Q}P−K(Q)Q+{F}_{ext}+C{M}^{−1}P \\ −{M}^{−1}(Q)P\end{matrix} \right)⟧ 
+original1025-p1041 已知
+original1025-p1042  ⟦original1025-m0446: \left{ \begin{aligned}\overset{̇}{Q}=−{M}^{−1}P \\ \overset{̇}{P}=KQ−{F}_{ext}−C{M}^{−1}P\end{aligned} \right⟧ 
+original1025-p1043 在(30)中
+original1025-p1044  ⟦original1025-m0447: \left{ \begin{aligned}Q=\frac{1}{2}(\overset{^}{q}+q) \\ P=−\frac{1}{2}(\overset{^}{p}+p)\end{aligned} \right\left{ \begin{aligned}\overset{^}{q}(t)=q(t+δ) \\ \overset{^}{p}(t)=p(t+δ)\end{aligned} \right⟧ 
+original1025-p1045 ，显然可以看出来
+original1025-p1046  事实上 ⟦original1025-m0448: \left{ \begin{aligned}\overset{̇}{q}={M}^{−1}(q)p \\ \overset{̇}{p}=−K(q)q+{F}_{ext}(q)−C(q,\overset{̇}{q}){M}^{−1}(q)p\end{aligned} \right⟧ 
+original1025-p1047   ⟦original1025-m0449: \left{ \begin{aligned}\overset{̇}{\overset{^}{q}}={M}^{−1}(\overset{^}{q})\overset{^}{p} \\ \overset{̇}{\overset{^}{p}}=−K(\overset{^}{q})\overset{^}{q}+{F}_{ext}(\overset{^}{q})−C(\overset{^}{q},\overset{̇}{\overset{^}{q}}){M}^{−1}(q)\overset{^}{p}\end{aligned} \right⟧  
+original1025-p1048   
+original1025-p1049  ⟦original1025-m0450: ⇒\overset{̇}{Q}=\frac{1}{2}(\overset{^}{q}+q)=\frac{1}{2}({M}^{−1}(q)p+{M}^{−1}(\overset{^}{q})\overset{^}{p})⟧ 
+original1025-p1050 
+original1025-p1051 
+original1025-p1052  ⟦original1025-m0451: 若 M 为常矩阵，则\overset{̇}{Q}={M}^{−1}\frac{1}{2}(p+\overset{^}{p})={−M}^{−1}p⟧ 
+original1025-p1053  ⟦original1025-m0452: \overset{̇}{P}=−\frac{1}{2}(\overset{̇}{\overset{^}{p}}+\overset{̇}{p})=−\frac{1}{2}\left{ \left[ −K(\overset{^}{q})\overset{^}{q}+{F}_{ext}(\overset{^}{q})−C(\overset{^}{q},\overset{̇}{\overset{^}{q}}){M}^{−1}(q)\overset{^}{p} \right]+\left[ −K(q)q+{F}_{ext}(q)−C(q,\overset{̇}{q}){M}^{−1}(q)p \right] \right}⟧ 
+original1025-p1054  ⟦original1025-m0453: 若{F}_{ext}， M ，C为常矩阵，则⟧ 
+original1025-p1055  ⟦original1025-m0454: \overset{̇}{P}=−\frac{1}{2}K(q+\overset{^}{q})−{F}_{ext}+\frac{1}{2}C{M}^{−1}\left( p+\overset{^}{p} \right)=KQ−{F}_{ext}−C{M}^{−1}P⟧ 
+original1025-p1056 从而
+original1025-p1057  ⟦original1025-m0455: {ϕ}_{w}^{(2)}(w,{t}_{0})=\frac{1}{2}{D}_{t}\left( \begin{matrix}0−KQ+{F}_{ext}+C{M}^{−1}P \\ −{M}^{−1}P\end{matrix} \right)=\frac{1}{2}{D}_{t}\left( \begin{matrix}0−K\overset{̇}{Q}+\overset{̇}{{F}_{ext}}+C{M}^{−1}\overset{̇}{P} \\ −{M}^{−1}\overset{̇}{P}\end{matrix} \right)=\frac{1}{2}{D}_{t}\left( \begin{matrix}0−K\left( {−M}^{−1}p \right)+\overset{̇}{{F}_{ext}}+C{M}^{−1}\left( KQ−{F}_{ext}−C{M}^{−1}P \right) \\ −{M}^{−1}\left( KQ−{F}_{ext}−C{M}^{−1}P \right)\end{matrix} \right)=\frac{1}{2}{D}_{t}\left( \begin{matrix}K{M}^{−1}p+\overset{̇}{{F}_{ext}}+C{M}^{−1}KQ−C{M}^{−1}{F}_{ext}−{\left( C{M}^{−1} \right)}^{2}P \\ −{M}^{−1}KQ+{M}^{−1}{F}_{ext}+{M}^{−1}C{M}^{−1}P\end{matrix} \right)⟧ 
+original1025-p1058 
+original1025-p1059  ⟦original1025-m0456: 用Theorem(B)的迭代公式，可以推出{ϕ}_{w}(w,{t}_{0})的形式(k≥2).从而分析生成函数\overset{^}{ω}={ϕ}_{w}(w,t,{t}_{0})=∑_{k=0}^{∞}{(}t−{t}_{0}{)}^{k}{ϕ}_{w}^{(k)}(w,{t}_{0})的截取形式.{Γ}_{K}{ϕ}_{w}(w,t;{t}_{0})∶=∑_{k=0}^{K}{(}t−{t}_{0}{)}^{k}{ϕ}_{w}^{(k)}(w,{t}_{0})，即可得到K阶精度的Birkhoff保辛格式(计算机操作).⟧ 
+original1025-p1060  ⟦original1025-m0457: 对方程 (36) 的讨论⟧ 
+original1025-p1061  ⟦original1025-m0458: 对方程 (36)：令 N=1，即 q,p 都是一维变量，此时 ⟧ (36) ⟦original1025-m0459: 为平面上的映射。⟧ 
+original1025-p1062  ⟦original1025-m0460: 理论上，由⟧ 生成 ⟦original1025-m0461: 函数法⟧ 将 ⟦original1025-m0462:  Birkhoff 系统转化为离散系统是保辛的。⟧ 
+original1025-p1063  ⟦original1025-m0463: 原始系统 （⟧ 11） ⟦original1025-m0464: 中的耗散项 K(q,\overset{̇}{q})\overset{̇}{q}等，驱动项 {F}_{ext} 在 Birkhoff 方程中已通过"伪⟧ 保辛 ⟦original1025-m0465: 化"处理（耗散项不强）。优势：几何结构保持⟧ 
+original1025-p1064  ⟦original1025-m0466: 两种数值检验方式⟧ 
+original1025-p1065  ⟦original1025-m0467: 对方程 (36)取初始值 ({q}_{0},{p}_{0})∈{ℝ}^{2}，生成 \left{ ({q}_{k},{p}_{k}),k∈{ℤ}^{+} \right} 轨道数据(36)中N=1时：⟧ 
+original1025-p1066  ⟦original1025-m0468: ①看是否有封闭的、类似环状的分布，验证环面结构；⟧ 
+original1025-p1067  ⟦original1025-m0469: ②看功率谱分析，对轨道做 FFT，看是否有离散的不可公度的频率峰，验证环面上运动的拟周期性。⟧ 
+original1025-p1068 
+original1025-p1069 
+original1025-p1070  ⟦original1025-m0470: \left{ \begin{matrix}{q}_{k+1}={q}_{k}+\frac{1}{2}{M}^{−1}({p}_{k+1}+{p}_{k})⋅δ,其中 {M}^{−1} 依赖于 {q}_{k+1}+{q}_{k} \\ {p}_{k+1}={p}_{k}⋅\frac{1−ε}{1+ε}−K{q}_{k}⋅\frac{δ}{1+ε}+(Δ+{F}_{ext})\frac{δ}{1+ε}\left{ \begin{aligned}K,{F}_{ext}ε, C依赖于{q}_{k+1}+{q}_{k} \\ Δ 依赖于 {{p}_{k+1}={p}_{k},q}_{k+1}+{q}_{k}\end{aligned} \right\end{matrix} \right⟧ (36)辛差分格式
+original1025-p1071 收敛
+original1025-p1072  ⟦original1025-m0471: (36) 的本质⟧ 
+original1025-p1073  ⟦original1025-m0472: （⟧ 36） ⟦original1025-m0473: 本质上是：{z}_{k+1}={Φ}_{h}({z}_{k}) ⟧ （保辛离散迭代，离散动力学统） ⟦original1025-m0474: 生成函数还保证了其是辛同胚的（Symplectomorphism）。⟧ 
+original1025-p1074  ⟦original1025-m0475: KAM 定理的离散版本（从两篇中选定理引用）⟧ 
+original1025-p1075  ⟦original1025-m0476: 引用文献：⟧ 
+original1025-p1076  ⟦original1025-m0477: "A note on KAM theorem for symplectic diffeomorphisms",J.D.E.5, 2000,Shang, Z. J.⟧ 
+original1025-p1077  ⟦original1025-m0478: "KAM theorem for symplectic algorithms for Hamiltonian systems",Numersche Mathematik, 1999,Shang, Z. J.⟧ ⭐
+original1025-p1078  ⟦original1025-m0479: "要求步长 δ 足够小"⟧ 
+original1025-p1079 
+original1025-p1080 
+original1025-p1081  ⟦original1025-m0480: 辨识未建模动力学效应 — Part 4⟧ 
+original1025-p1082  ⟦original1025-m0481: 在（36）方程右侧加入控制项 ({u}_{k},{v}_{k})∶={U}_{k}得到⟧ 
+original1025-p1083  ⟦original1025-m0482: {z}_{k+1}={Φ}_{h}({z}_{k},{u}_{k}), 用 {U}_{k} 调节模型的误差。 {U}_{k} 是动态的⟧ 
+original1025-p1084  ⟦original1025-m0483: 或⟧ 
+original1025-p1085  ⟦original1025-m0484: {z}_{k+1}={Φ}_{h}({z}_{k})+{U}_{k}, 看哪个更好？⟧ 
+original1025-p1086  ⟦original1025-m0485: （控制项 {U}_{k} 用于抵消残差）⟧ 
+original1025-p1087  ⟦original1025-m0486: 量化指标，对比⟧ 
+original1025-p1088  ⟦original1025-m0487: 或在生成函数 {ϕ}_{w}(w,t,{t}_{0})（Theorem (B)）中加入一个控制项 {U}_{k}−−加入后也得考虑辛差分格式收敛。⟧ 
+original1025-p1089  ⟦original1025-m0488: 维度⟧ 
+original1025-p1090  ⟦original1025-m0489: {U}_{k} 的形式可尝试（不要太大、有界、非常值、简单有代表性）⟧ 
+original1025-p1091  ⟦original1025-m0490: ……（其它与机器人、太空跳跃、微扰动……相关的陈述、自由发挥。）⟧ 
+original1025-p1092  ⟦original1025-m0491: 页码：25⟧ 
+original1025-p1093 
+original1025-p1094 
+original1025-p1095 
+original1025-p1096 
+original1025-p1097 
+original1025-p1098 
+original1025-p1099 
+original1025-p1100 
+original1025-p1101 
+original1025-p1102 
+original1025-p1103 
+original1025-p1104 
+original1025-p1105 
+original1025-p1106  ⟦original1025-m0492: 评估误差与 KAM 阈值关联 Part 5⟧ 
+original1025-p1107  ⟦original1025-m0493: 回顾 Theorem(A)，Theorem(B) 内容，看以下 pdf：⟧ 
+original1025-p1108  ⟦original1025-m0494: Symplectic Geometric Algorithms for Hamiltonian Systems, Kang Feng, Mengzhao Qin, Springer.⟧ 
+original1025-p1109  ⟦original1025-m0495: （看 Chapter 15: Structure Preserving Schemes for Birkhoff Systems）⟧ 
+original1025-p1110  ⟦original1025-m0496: Theorem (A) 即为 Theorem 4.1⟧ 
+original1025-p1111  ⟦original1025-m0497: Theorem (B) 即为 Theorem 4.4⟧ 
+original1025-p1112  ⟦original1025-m0498: 一些记号：P18 (⭐) 这个方程即为 P618. (2.1)⟧ 
+original1025-p1113  ⟦original1025-m0499: {K}_{ij}=\frac{∂{F}_{j}}{∂{z}_{i}}−\frac{∂{F}_{i}}{∂{z}_{j}}, K=({K}_{ij}{)}_{i,j=1,2,…,2n} ({∗}_{1})⟧ 
+original1025-p1114  ⟦original1025-m0500: 由 (⭐)⇒{K}_{ij}(z,t)\frac{d{z}_{j}}{dt}−\frac{∂B}{∂{z}_{i}}−\frac{∂{F}_{i}}{∂t}=0,⟧ 
+original1025-p1115 记 ⟦original1025-m0501: {D}_{i}(z,t)=−\frac{∂B}{∂{z}_{i}}−\frac{∂{F}_{i}}{∂t} ({∗}_{2})⟧ 
+original1025-p1116 则 ⟦original1025-m0502:  B=B(z,t),;{F}_{i}={F}_{i}(z,t) \left{ \begin{aligned}(2.3) \\  (2.4)\end{aligned} \right⟧ 
+original1025-p1117  ⟦original1025-m0503: 若 det ({K}_{ij})(\overset{̃}{Re})≠0，则(2.3)是正则的。⟧ 
+original1025-p1118 
+original1025-p1119  ⟦original1025-m0504: (2.4) 是自伴随⟧ 的
+original1025-p1120  ⟦original1025-m0505: ⇔\left{ \begin{aligned}{K}_{ij}+{K}_{ji}=0 （反对称性） \\ \frac{∂{K}_{ij}}{∂{z}_{k}}+\frac{∂{K}_{jk}}{∂{z}_{i}}+\frac{∂{K}_{ki}}{∂{z}_{j}}=0 （雅可比恒等式⇔即 dΩ=0）  \\ \frac{∂{K}_{ij}}{∂t}=\frac{∂{D}_{i}}{∂{z}_{j}}−\frac{∂{D}_{j}}{∂{z}_{i}} （时间相容性条件）\end{aligned} \right⟧ (2.5)
+original1025-p1121 
+original1025-p1122 
+original1025-p1123  ⟦original1025-m0506: {\overset{̃}{Re}}^{∗}：ℝ×{T}^{∗}M 上的星形区域，{T}^{∗}M：M 的余切空间，M 是 2n 维流形⟧ 
+original1025-p1124  ⟦original1025-m0507: （Ω⟧ 是 ⟦original1025-m0508: 闭形式）：⟧ 
+original1025-p1125  ⟦original1025-m0509: \left{ \begin{aligned}(2.5) \\ Ω=∑_{i,j=1}^{2n}{{K}_{ij}}(z,t),d{z}_{i}∧d{z}_{j}\end{aligned}⇒dΩ=0⇔Ω 是恰当2形式⇒Ω=d({F}_{i}d{z}_{i}) \right⟧ 
+original1025-p1126 
+original1025-p1127  ⟦original1025-m0510: {D}_{i}{=}^{({∗}_{2})}−\frac{∂{B}_{j}}{∂{z}_{i}}−\frac{∂{F}_{i}}{∂{z}_{j}}⇒−\frac{∂B}{∂{z}_{i}}={D}_{i}+\frac{∂{F}_{i}}{∂t}⇒\frac{∂}{∂{z}_{j}}\left( −\frac{∂B}{∂{z}_{i}} \right)=\frac{∂}{∂{z}_{i}}\left( \frac{∂B}{−∂{z}_{j}} \right)=\frac{∂}{∂{z}_{i}}\left( {D}_{j}+\frac{∂{F}_{j}}{∂t} \right)⟧ 
+original1025-p1128 
+original1025-p1129 
+original1025-p1130 
+original1025-p1131 
+original1025-p1132 
+original1025-p1133 
+original1025-p1134 
+original1025-p1135 
+original1025-p1136 
+original1025-p1137  ⟦original1025-m0511: ⇒\frac{∂}{∂{z}_{j}}\left( {D}_{i}+\frac{∂{F}_{i}}{∂t} \right)=\frac{∂}{∂{z}_{i}}\left( {D}_{j}+\frac{∂{F}_{j}}{∂t} \right)  ⟧ 
+original1025-p1138  ⟦original1025-m0512: ⇒\frac{∂{D}_{j}}{∂{z}_{j}}−\frac{∂{D}_{i}}{∂{z}_{i}}=\frac{∂}{∂{z}_{i}}\left( \frac{∂{F}_{j}}{∂t} \right)−\frac{∂}{∂{z}_{j}}\left( \frac{∂{F}_{i}}{∂t} \right){=}^{{∗}_{1}}\frac{∂}{∂t}\left( \frac{∂{F}_{j}}{∂{z}_{i}}−\frac{∂{F}_{i}}{∂{z}_{j}} \right)=\frac{∂}{∂t}({K}_{ij})(∗)⇒(2.5) 第三个方程成立⟧ 
+original1025-p1139  ⟦original1025-m0513: (2.4) 自伴随⇔(2.5)成立⟧ 
+original1025-p1140  ⟦original1025-m0514: {∗}_{1},{∗}_{2}⇒(2.5) 第三个方程成立⟧ 
+original1025-p1141  ⟦original1025-m0515: {∗}_{1} ⇒{K}_{ij}+{K}_{ji}=\left( \frac{∂{F}_{j}}{∂{z}_{i}}−\frac{∂{F}_{i}}{∂{z}_{j}} \right)+\left( \frac{∂{F}_{i}}{∂{z}_{j}}−\frac{∂{F}_{j}}{∂{z}_{i}} \right)=0⇒(2.5) 第一个方程成立⟧ 
+original1025-p1142  ⟦original1025-m0516: \frac{∂{K}_{ij}}{∂{z}_{k}}+\frac{∂{K}_{jk}}{∂{z}_{i}}+\frac{∂{K}_{ki}}{∂{z}_{j}}=\frac{∂}{∂{z}_{k}}\left( \frac{∂{F}_{j}}{∂{z}_{i}}−\frac{∂{F}_{i}}{∂{z}_{j}} \right)+\frac{∂}{∂{z}_{i}}\left( \frac{∂{F}_{k}}{∂{z}_{j}}−\frac{∂{F}_{j}}{∂{z}_{k}} \right)+\frac{∂}{∂{z}_{j}}\left( \frac{∂{F}_{i}}{∂{z}_{k}}−\frac{∂{F}_{k}}{∂{z}_{i}} \right)⟧ 
+original1025-p1143  ⟦original1025-m0517: =\left( \frac{{∂}^{2}{F}_{j}}{∂{z}_{k}∂{z}_{i}}−\frac{{∂}^{2}{F}_{i}}{∂{z}_{k}∂{z}_{j}} \right)+\left( \frac{{∂}^{2}{F}_{k}}{∂{z}_{i}∂{z}_{j}}−\frac{{∂}^{2}{F}_{j}}{∂{z}_{i}∂{z}_{k}} \right)+\left( \frac{{∂}^{2}{F}_{i}}{∂{z}_{j}∂{z}_{k}}−\frac{{∂}^{2}{F}_{k}}{∂{z}_{j}∂{z}_{i}} \right)=0⇒(2.5) 第一个方程成立}⟧ 
+original1025-p1144  ⟦original1025-m0518: 总之：{∗}_{1},{∗}_{2}成立⇒(2.5)成立⇔(2.4)是自伴的 （Theorem 2.2 内容）⟧ 
+original1025-p1145  ⟦original1025-m0519: 注：{∗}_{1},{∗}_{2}成立 ⇒⟧ 
+original1025-p1146  ⟦original1025-m0520: {K}_{ij}\frac{d{z}_{i}}{dt}+{D}_{i}(z,t)=\left( \frac{∂{F}_{j}}{∂{z}_{i}}−\frac{∂{F}_{i}}{∂{z}_{j}} \right)\frac{d{z}_{i}}{dt}−\left( \frac{∂B}{∂{z}_{i}}+\frac{∂{F}_{i}}{∂t} \right) (2.8)⟧ 
+original1025-p1147  ⟦original1025-m0521: （Birkhoff 系统）⟧ 
+original1025-p1148  ⟦original1025-m0522: 证明： {∗}_{1},Ω=∑_{i,j=1}^{2n}{{K}_{ij}d{z}_{i}∧d{z}_{j}}⇒dΩ=0⟧ 
+original1025-p1149  ⟦original1025-m0523: Proof：⟧ 
+original1025-p1150  ⟦original1025-m0524: Ω=∑_{i,j}^{2n}{\left( \frac{∂{F}_{j}}{∂{z}_{i}}−\frac{∂{F}_{i}}{∂{z}_{j}} \right)}d{z}_{i}∧d{z}_{j}⟧ 
+original1025-p1151  ⟦original1025-m0525: =∑_{i,j}^{}{\frac{∂{F}_{j}}{∂{z}_{i}}},d{z}_{i}∧d{z}_{j}−∑_{i,j}^{}{\frac{∂{F}_{i}}{∂{z}_{j}}},d{z}_{i}∧d{z}_{j}⟧ 
+original1025-p1152  ⟦original1025-m0526: =∑_{i,j}^{}{\frac{∂{F}_{j}}{∂{z}_{i}}},d{z}_{i}∧d{z}_{j}−∑_{j,i}^{}{\frac{∂{F}_{j}}{∂{z}_{i}}},d{z}_{j}∧d{z}_{i}⟧ 
+original1025-p1153  ⟦original1025-m0527: =∑_{i,j}^{}{\frac{∂{F}_{j}}{∂{z}_{i}}},d{z}_{i}∧d{z}_{j}+∑_{j,i}^{}{\frac{∂{F}_{j}}{∂{z}_{i}}},d{z}_{i}∧d{z}_{j}⟧ 
+original1025-p1154  ⟦original1025-m0528: =2∑_{i,j}^{}{\frac{∂{F}_{j}}{∂{z}_{i}}},d{z}_{i}∧d{z}_{j}⟧ 
+original1025-p1155  ⟦original1025-m0529: =2∑_{i}^{}{∑_{j}^{}{\frac{∂{F}_{j}}{∂{z}_{i}}}},d{z}_{i}∧d{z}_{j}⟧ 
+original1025-p1156  ⟦original1025-m0530: =2d\left( ∑_{k}^{}{{F}_{k},}d{z}_{k} \right)∶=2dα, α=∑_{k}^{}{{F}_{k},}d{z}_{k}⟧ 
+original1025-p1157  ⟦original1025-m0531: ⇒dΩ=2{d}^{2}α=0⟧ 
+original1025-p1158 
+original1025-p1159 
+original1025-p1160 
+original1025-p1161 
+original1025-p1162 
+original1025-p1163 
+original1025-p1164 数学前提:  ⟦original1025-m0532: dΩ=0⟧ 是 Birkhoff 系统存在的数学前提！
+original1025-p1165 在哈密顿/Birkhoff力学中， ⟦original1025-m0533: dΩ=0⟧  对应于泊松括号的Jacobi恒等式：
+original1025-p1166  ⟦original1025-m0534: {f,{g,h}}+{g,{h,f}}+{h,{f,g}}=0⟧ 
+original1025-p1167 保证哈密顿流（相空间的演化）保持辛形式不变（刘维尔定理），也就是相空间体积守恒；
+original1025-p1168 保证泊松括号的代数结构是李代数，是量子力学对易关系的经典对应；
+original1025-p1169 保证变分原理（哈密顿原理，Birkhoff原理）的自洽性，不会出现矛盾的运动方程。
+original1025-p1170 自伴性条件             ⟦original1025-m0535: Ω=∑_{ij}^{}{{K}_{ij}}d{z}_{i}∧d{z}_{j}⟧ 
+original1025-p1171  ⟦original1025-m0536: {K}_{ij}+{K}_{ji}=0 ↔ Ω是反对称2−形式⟧ 
+original1025-p1172  ⟦original1025-m0537: \frac{∂{K}_{ij}}{∂{z}_{k}}+\frac{∂{K}_{jk}}{∂{z}_{i}}+\frac{∂{K}_{ki}}{∂{z}_{j}}=0 ⇔ dΩ=0的空间分量（Jacobi恒等式）⟧ 
+original1025-p1173  ⟦original1025-m0538: {f,{g,h}}+{g,{h,f}}+{h,{f,g}}=0⟧ 
+original1025-p1174  ⟦original1025-m0539: \frac{∂{K}_{ij}}{∂t}=\frac{∂{D}_{i}}{∂{z}_{j}}−\frac{∂{D}_{j}}{∂{z}_{i}} ↔ dΩ=0的时间分量（时变系统的相容性）⟧ 
+original1025-p1175  ⟦original1025-m0540: \left{ \begin{aligned}{K}_{ij}=\frac{∂{F}_{j}}{∂{z}_{i}}−\frac{∂{F}_{i}}{∂{z}_{j}} \\ {D}_{i}=−\frac{∂B}{∂{z}_{i}}−\frac{∂{F}_{i}}{∂t}\end{aligned} \right⟧ 
+original1025-p1176 • 定理引用: Theorem (A), (B) ⇒ Page 23
+original1025-p1177 • 系统优点: Birkhoff 系统的优点在于，其在表示非保守系统时仍能保持辛结构（并具有误差传播关系）。
+original1025-p1178 
+original1025-p1179 Theorem(A)的证明：
+original1025-p1180 (关键证明： ⟦original1025-m0541: \frac{∂{ϕ}_{w}}{∂t}=\frac{d}{dt}\overset{^}{w}(\overset{^}{z},z,t,{t}_{0})−\frac{∂\overset{^}{w}}{∂w}\frac{d}{dt}w(\overset{^}{z},z,t,{t}_{0})=\left( {A}_{α}−\frac{∂\overset{^}{w}}{∂w}⋅{C}_{α} \right){K}^{−1}D(\overset{^}{z},t)+\frac{∂{α}_{1}}{∂t}−\frac{∂\overset{^}{w}}{∂w}\frac{∂{α}_{2}}{∂t}⟧ )
+original1025-p1181 
+original1025-p1182 
+original1025-p1183  ⟦original1025-m0542: 已知：⟧ 
+original1025-p1184  ⟦original1025-m0543: \left{ \begin{matrix}{\overset{^}{z}}_{i}=g(t;z,{t}_{0}) \\ M={g}_{z}=\frac{∂\overset{^}{z}}{∂z} \\ \overset{^}{w}=f(w,t,{t}_{0}) \\ N={f}_{N}=\frac{∂\overset{^}{w}}{∂w} \\ {C}_{α}(z,z,{t}_{0},{t}_{0})+{D}_{α}(z,z,{t}_{0},{t}_{0})≠0{{⇒}^{Theorem 3.5}}_{(3.2)成立}{C}_{α}(\overset{^}{z},z,t,{t}_{0})M+{D}_{α}(\overset{^}{z},z,t,{t}_{0})≠0,\left| t−{t}_{0} \right| 足够小\end{matrix} \right⟧ 
+original1025-p1185 
+original1025-p1186  ⟦original1025-m0544: ⇒∃梯度映射\overset{^}{w}=f(w,t,{t}_{0})，满足{f}_{w}=N，∃!生成函数ϕ(w,t,{t}_{0})，s.t.⟧ 
+original1025-p1187 
+original1025-p1188  ⟦original1025-m0545: f={ϕ}_{N}, α(\overset{^}{z},z,t,{t}_{0})=f({α}_{2}(\overset{^}{z},z,t,{t}_{0}),t,{t}_{0})={ϕ}_{N}({α}_{2}(\overset{^}{z},z,t,{t}_{0}),t,{t}_{0})⟧ 
+original1025-p1189  ⟦original1025-m0546: \begin{matrix}N & =({A}_{α}M+{B}_{α})({C}_{α}M+{D}_{α}{)}^{−1}, \\ M & =({A}^{α}N+{B}^{α})({C}^{α}N+{D}^{α}{)}^{−1}.\end{matrix}⟧ 
+original1025-p1190 
+original1025-p1191 
+original1025-p1192  ⟦original1025-m0547: \overset{^}{z}=g(t;z,{t}_{0}), (2.4) 重写成 K(z,t)\frac{dz}{dt}=∇B+\frac{∂F}{∂t}⇒⟧ 
+original1025-p1193  ⟦original1025-m0548: \left{ \begin{matrix}\frac{d\overset{^}{z}}{dt}={K}^{−1}(\overset{^}{z},t)\left( ∇B+\frac{∂F}{∂t} \right)(\overset{^}{z},t) \\ \overset{^}{z}{|}_{t={t}_{0}}=z\end{matrix} \right    \overset{^}{w}={α}_{1}(\overset{^}{z},z,t,{t}_{0})    （P19页下方）⟧ 
+original1025-p1194  ⟦original1025-m0549: 其中\overset{^}{z}⟼t⟧ 
+original1025-p1195 
+original1025-p1196  ⟦original1025-m0550: ⇒\frac{d\overset{^}{w}}{dt}=\frac{∂\overset{^}{w}}{∂\overset{^}{z}}⋅\frac{d\overset{^}{z}}{dt}+\frac{∂\overset{^}{w}}{∂z}⋅\frac{dz}{dt}+\frac{∂\overset{^}{w}}{∂t}⟧ 
+original1025-p1197  ⟦original1025-m0551: ={A}_{α}{K}^{−1}\left( ∇B+\frac{∂F}{∂t} \right)+{B}_{α}⋅0+\frac{∂{α}_{1}}{∂t}⟧ 
+original1025-p1198  ⟦original1025-m0552: ={A}_{α}{K}^{−1}\left( ∇B+\frac{∂F}{∂t} \right)+\frac{∂{α}_{1}}{∂t}⟧ 
+original1025-p1199  ⟦original1025-m0553: ⇒\frac{d\overset{^}{w}}{dt}=\frac{∂w}{∂\overset{^}{z}}⋅\frac{d\overset{^}{z}}{dt}+\frac{∂w}{∂t}={C}_{α}{K}^{−1}\left( ∇B+\frac{∂F}{∂t} \right)+\frac{∂{α}_{2}}{∂t},    \overset{^}{w}=f(w,t,{t}_{0})⟧ 
+original1025-p1200  ⟦original1025-m0554: 其中w⟼t⟧ 
+original1025-p1201  ⟦original1025-m0555: \frac{d\overset{^}{w}}{dt}=\frac{∂\overset{^}{w}}{∂w}\frac{dw}{dt}+\frac{∂\overset{^}{w}}{∂t}⇒⟧ 
+original1025-p1202  ⟦original1025-m0556: \frac{∂\overset{^}{w}}{∂t}=−\frac{∂\overset{^}{w}}{∂w}\frac{dw}{dt}+\frac{d\overset{^}{w}}{dt}=\frac{d\overset{^}{w}}{dt}−\frac{∂\overset{^}{w}}{∂w}\frac{dw}{dt}⟧ 
+original1025-p1203  ⟦original1025-m0557: \begin{matrix} & ={A}_{α}{K}^{−1}\left( ∇B+\frac{∂F}{∂t} \right)+\frac{∂{α}_{1}}{∂t}−\frac{∂\overset{^}{w}}{∂w}\left[ {C}_{α}{K}^{−1}\left( ∇B+\frac{∂F}{∂t} \right)+\frac{∂{α}_{2}}{∂t} \right] \\  & =\left( {A}_{α}−\frac{∂\overset{^}{w}}{∂w}{C}_{α} \right){K}^{−1}\left( ∇B+\frac{∂F}{∂t} \right)+\frac{∂{α}_{1}}{∂t}−\frac{∂\overset{^}{w}}{∂w}\frac{∂{α}_{2}}{∂t}    (4.5)\end{matrix}⟧ 
+original1025-p1204  ⟦original1025-m0558: \frac{∂\overset{^}{w}}{∂w}=\frac{∂\overset{^}{z}}{∂w}={f}_{w}=N 可逆，⟧ 
+original1025-p1205  ⟦original1025-m0559: 无法写成 w =?(\overset{^}{w})⇒⟧ 
+original1025-p1206  ⟦original1025-m0560: \frac{∂\overset{^}{w}}{∂t}∶=\overset{̅}{A}\left( \overset{̅}{z},z,\frac{∂\overset{^}{w}}{∂w},t,{t}_{0} \right)∶=A\left( \overset{^}{w},w,\frac{∂\overset{^}{w}}{∂w},t,{t}_{0} \right)=A\left( {ϕ}_{w},w,{ϕ}_{ww},t,{t}_{0} \right).⟧ （证毕）
+original1025-p1207 
+original1025-p1208  ⟦original1025-m0561: Theorem (B) 证明:⟧ 
+original1025-p1209  ⟦original1025-m0562: {ϕ}_{w}=\overset{^}{w}=f(w,t,{t}_{0}), {ϕ}_{w}^{(0)}=f(w,{t}_{0},{t}_{0})⟧ 
+original1025-p1210  ⟦original1025-m0563: \frac{∂{ϕ}_{w}}{∂t}=A({ϕ}_{w},w,{ϕ}_{ww},t,{t}_{0})=A({ϕ}_{w}^{(0)},w,{ϕ}_{ww}^{(0)},{t}_{0},{t}_{0})+∑_{k=1}^{∞}{\frac{1}{k!}}(t−{t}_{0}{)}^{k}{D}_{t}^{k}A({ϕ}_{w}^{(0)},w,{ϕ}_{ww}^{(0)},{t}_{0},{t}_{0}),⟧ 
+original1025-p1211  ⟦original1025-m0564: {ϕ}_{w}={ϕ}_{w}^{(0)}(w,{t}_{0})+∑_{k=P}^{∞}{(t−{t}_{0}{)}^{k+1}{ϕ}_{w}^{(k+1)}(w,{t}_{0})}⇒\frac{∂{ϕ}_{w}}{∂t}=∑_{k=0}^{∞}{(k+1)(t−{t}_{0}{)}^{k}{ϕ}_{w}^{(k+1)}(w,{t}_{0})}⟧ 
+original1025-p1212 
+original1025-p1213  ⟦original1025-m0565: ⇒\left{ \begin{aligned}{ϕ}_{w}^{(0)}(w,{t}_{0})=f(w,{t}_{0},{t}_{0}) \\ {ϕ}_{w}^{(k+1)}(w,{t}_{0})=\frac{1}{(k+1)!}{D}_{t}^{k}A({ϕ}_{w}^{(0)},w,{ϕ}_{ww}^{(0)},{t}_{0},{t}_{0})\end{aligned} \right⟧ 
+original1025-p1214 
+original1025-p1215 
+original1025-p1216  ⟦original1025-m0566: 底部总结（绿色圈标注）⟧ 
+original1025-p1217  ⟦original1025-m0567: Theorem (A), (B)⇒Page 23 (36)⟧ 
+original1025-p1218  ⟦original1025-m0568: 好处保持了用 Birkhoff 系统表示的非保守系统的辛结构（与误差相联系）⟧ 
+original1025-p1219  ⟦original1025-m0569: 说明此方法的优势，对减小误差的作用。⟧ 
+original1025-p1220  ⟦original1025-m0570: \left{ \begin{matrix}{q}_{k+1}={q}_{k}+\frac{1}{2}{M}^{−1}({p}_{k+1}+{p}_{k})⋅δ,其中 {M}^{−1} 依赖于 {q}_{k+1}+{q}_{k} \\ {p}_{k+1}={p}_{k}⋅\frac{1−ε}{1+ε}−K{q}_{k}⋅\frac{δ}{1+ε}+(Δ+{F}_{ext})\frac{δ}{1+ε}\left{ \begin{aligned}K,{F}_{ext}ε, C依赖于{q}_{k+1}+{q}_{k} \\ Δ 依赖于 {{p}_{k+1}={p}_{k},q}_{k+1}+{q}_{k}\end{aligned} \right\end{matrix} \right⟧ (36)
+original1025-p1221 
+original1025-p1222 

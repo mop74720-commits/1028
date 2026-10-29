@@ -1,0 +1,130 @@
+{
+  "fixed_commit": "82519542dd057e8fbd6d6879ef33217761e8cbbb",
+  "retrieved_utc": "2026-10-29T13:51:04Z",
+  "files": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/mop74720-commits/IJRR_CHNN_KAM_v10_20261007/82519542dd057e8fbd6d6879ef33217761e8cbbb/README.md",
+      "bytes": 4492,
+      "sha256": "983a9f940a4b27be1d4742753ab68dfb4ae7ec32521d6f86a9fb88c7146b098b",
+      "status": "downloaded"
+    },
+    {
+      "path": "sections/complex_theorem_note.tex",
+      "url": "https://raw.githubusercontent.com/mop74720-commits/IJRR_CHNN_KAM_v10_20261007/82519542dd057e8fbd6d6879ef33217761e8cbbb/sections/complex_theorem_note.tex",
+      "bytes": 2190,
+      "sha256": "e22b1fd021638620a55a4ff503ceca8997ddb0dd4e476c5012ad975a8211e2c3",
+      "status": "downloaded"
+    },
+    {
+      "path": "sections/core_derivation.tex",
+      "url": "https://raw.githubusercontent.com/mop74720-commits/IJRR_CHNN_KAM_v10_20261007/82519542dd057e8fbd6d6879ef33217761e8cbbb/sections/core_derivation.tex",
+      "bytes": 9192,
+      "sha256": "e4b154b42cbe36a4b3521c4d672218bfd8fc7d57d7a45082657fa5a7fdc9996d",
+      "status": "downloaded"
+    },
+    {
+      "path": "sections/core_kam.tex",
+      "url": "https://raw.githubusercontent.com/mop74720-commits/IJRR_CHNN_KAM_v10_20261007/82519542dd057e8fbd6d6879ef33217761e8cbbb/sections/core_kam.tex",
+      "bytes": 10933,
+      "sha256": "a1e400bcfdcb125c8412b9de73c99ea8e4776cba7f43b6620def7f63c87970b9",
+      "status": "downloaded"
+    },
+    {
+      "path": "sections/core_analysis.tex",
+      "url": "https://raw.githubusercontent.com/mop74720-commits/IJRR_CHNN_KAM_v10_20261007/82519542dd057e8fbd6d6879ef33217761e8cbbb/sections/core_analysis.tex",
+      "bytes": 11848,
+      "sha256": "949fadec9d2556ef8605446cc05906c853680a117dda16c08fa6d8ee5afd5460",
+      "status": "downloaded"
+    },
+    {
+      "path": "sections/core_application.tex",
+      "url": "https://raw.githubusercontent.com/mop74720-commits/IJRR_CHNN_KAM_v10_20261007/82519542dd057e8fbd6d6879ef33217761e8cbbb/sections/core_application.tex",
+      "bytes": 15371,
+      "sha256": "0cd7873ffb174b8488cdedae9feeee8ffed7d3bec938916bd1115b3dbc3e41e5",
+      "status": "downloaded"
+    },
+    {
+      "path": "sections/full_fe_kam_control.tex",
+      "url": "https://raw.githubusercontent.com/mop74720-commits/IJRR_CHNN_KAM_v10_20261007/82519542dd057e8fbd6d6879ef33217761e8cbbb/sections/full_fe_kam_control.tex",
+      "bytes": 10649,
+      "sha256": "2f61d51421a91b0649645525680e3a5c2555038eb11703cf8e6dbb6600d136a6",
+      "status": "downloaded"
+    },
+    {
+      "path": "sections/integral_comsol_to_kam.tex",
+      "url": "https://raw.githubusercontent.com/mop74720-commits/IJRR_CHNN_KAM_v10_20261007/82519542dd057e8fbd6d6879ef33217761e8cbbb/sections/integral_comsol_to_kam.tex",
+      "bytes": 8961,
+      "sha256": "716d23c040bfbaa3506f3d8d3d39b2ec04bc27f50c2fd9576a152fa7fe7483f0",
+      "status": "downloaded"
+    },
+    {
+      "path": "sections/measure_proof.tex",
+      "url": "https://raw.githubusercontent.com/mop74720-commits/IJRR_CHNN_KAM_v10_20261007/82519542dd057e8fbd6d6879ef33217761e8cbbb/sections/measure_proof.tex",
+      "bytes": 17549,
+      "sha256": "3e67ad0131d14b930c663d945f5e09ffc2e7f45fd594a70b103445d85f66a9d3",
+      "status": "downloaded"
+    },
+    {
+      "path": "sections/measure_persistence.tex",
+      "url": "https://raw.githubusercontent.com/mop74720-commits/IJRR_CHNN_KAM_v10_20261007/82519542dd057e8fbd6d6879ef33217761e8cbbb/sections/measure_persistence.tex",
+      "bytes": 3051,
+      "sha256": "042f950a8aabc2aec37a1df26081719db1c194138843c2a6af5a1d0f10a9ea28",
+      "status": "downloaded"
+    },
+    {
+      "path": "sections/learning_proof.tex",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "path": "supplement.tex",
+      "url": "https://raw.githubusercontent.com/mop74720-commits/IJRR_CHNN_KAM_v10_20261007/82519542dd057e8fbd6d6879ef33217761e8cbbb/supplement.tex",
+      "bytes": 12664,
+      "sha256": "64f5901b868445be59ddf7c03f85e310a3739cd0fa616dfe03071510cc9c4ca5",
+      "status": "downloaded"
+    },
+    {
+      "path": "reproducibility/ARTIFACT_INDEX.md",
+      "url": "https://raw.githubusercontent.com/mop74720-commits/IJRR_CHNN_KAM_v10_20261007/82519542dd057e8fbd6d6879ef33217761e8cbbb/reproducibility/ARTIFACT_INDEX.md",
+      "bytes": 6061,
+      "sha256": "9f954cd8817e9cd0e304f17381422cc10ca090900f38c787b2e2067dc8db058c",
+      "status": "downloaded"
+    },
+    {
+      "path": "sections/theorem_bridge.tex",
+      "url": "https://raw.githubusercontent.com/mop74720-commits/IJRR_CHNN_KAM_v10_20261007/82519542dd057e8fbd6d6879ef33217761e8cbbb/sections/theorem_bridge.tex",
+      "bytes": 12559,
+      "sha256": "c82002743354d590969ee9a85371e0994d121b4f18f7769958c36e8ba7ee0e16",
+      "status": "downloaded"
+    },
+    {
+      "path": "sections/unified_kam.tex",
+      "url": "https://raw.githubusercontent.com/mop74720-commits/IJRR_CHNN_KAM_v10_20261007/82519542dd057e8fbd6d6879ef33217761e8cbbb/sections/unified_kam.tex",
+      "bytes": 27373,
+      "sha256": "59dd7be0d9b13837f46a2cf89f0b39b66ab2fbe12a41ca268c9d293396f11b9e",
+      "status": "downloaded"
+    },
+    {
+      "path": "sections/s_path.tex",
+      "url": "https://raw.githubusercontent.com/mop74720-commits/IJRR_CHNN_KAM_v10_20261007/82519542dd057e8fbd6d6879ef33217761e8cbbb/sections/s_path.tex",
+      "bytes": 7459,
+      "sha256": "3196a9ea868a5f2e949af52293f0c43f2be227d25aef41518814bd3f1e4dec34",
+      "status": "downloaded"
+    },
+    {
+      "path": "sections/unified_model.tex",
+      "url": "https://raw.githubusercontent.com/mop74720-commits/IJRR_CHNN_KAM_v10_20261007/82519542dd057e8fbd6d6879ef33217761e8cbbb/sections/unified_model.tex",
+      "bytes": 8853,
+      "sha256": "ac919b25386d9c73dd6a218183a56a93f9b44a2358beb8c7a446f4e9272e6195",
+      "status": "downloaded"
+    },
+    {
+      "path": "sections/unified_integrator_check.tex",
+      "url": "https://raw.githubusercontent.com/mop74720-commits/IJRR_CHNN_KAM_v10_20261007/82519542dd057e8fbd6d6879ef33217761e8cbbb/sections/unified_integrator_check.tex",
+      "bytes": 2622,
+      "sha256": "f7813b09974524d3f5f4fe5a9740f95f40b4ab4e456f0719250816cae650cc7e",
+      "status": "downloaded"
+    }
+  ]
+}

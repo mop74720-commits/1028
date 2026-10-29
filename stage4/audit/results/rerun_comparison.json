@@ -1,0 +1,1260 @@
+{
+  "meaning": "Same source and scientific settings on this machine, freshly executed; not an independent solver implementation or a domain-wide proof.",
+  "scalar_comparisons": [
+    {
+      "label": "integrators.conservative.midpoint.h0.001.maximum_state_error",
+      "published": 1.6863455603259473e-05,
+      "rerun": 1.6863455603259473e-05,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.conservative.midpoint.h0.001.max_increment_residual_inf",
+      "published": 3.632662789351229e-15,
+      "rerun": 3.632662789351229e-15,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.conservative.midpoint.h0.001.maximum_midpoint_power_balance_residual",
+      "published": 1.6650717263311243e-11,
+      "rerun": 1.6650717263311243e-11,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.conservative.midpoint.h0.0005.maximum_state_error",
+      "published": 4.494400002828123e-06,
+      "rerun": 4.494400002828123e-06,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.conservative.midpoint.h0.0005.max_increment_residual_inf",
+      "published": 5.803996809528554e-17,
+      "rerun": 5.803996809528554e-17,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.conservative.midpoint.h0.0005.maximum_midpoint_power_balance_residual",
+      "published": 4.171004850100218e-12,
+      "rerun": 4.171004850100218e-12,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.conservative.midpoint.h0.0005.order",
+      "published": 1.9076997632482384,
+      "rerun": 1.9076997632482384,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.conservative.midpoint.h0.00025.maximum_state_error",
+      "published": 1.1429500832410844e-06,
+      "rerun": 1.1429500832410844e-06,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.conservative.midpoint.h0.00025.max_increment_residual_inf",
+      "published": 1.3484764520288461e-18,
+      "rerun": 1.3484764520288461e-18,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.conservative.midpoint.h0.00025.maximum_midpoint_power_balance_residual",
+      "published": 1.0432965255602333e-12,
+      "rerun": 1.0432965255602333e-12,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.conservative.midpoint.h0.00025.order",
+      "published": 1.9753661332605454,
+      "rerun": 1.9753661332605454,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.conservative.central4.h0.001.maximum_state_error",
+      "published": 1.100401141588409e-06,
+      "rerun": 1.100401141588409e-06,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.conservative.central4.h0.001.max_increment_residual_inf",
+      "published": 3.88473577104761e-15,
+      "rerun": 3.88473577104761e-15,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.conservative.central4.h0.001.maximum_midpoint_power_balance_residual",
+      "published": 2.2866127394327584e-13,
+      "rerun": 2.2866127394327584e-13,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.conservative.central4.h0.0005.maximum_state_error",
+      "published": 7.497035537920935e-08,
+      "rerun": 7.497035537920935e-08,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.conservative.central4.h0.0005.max_increment_residual_inf",
+      "published": 6.015627991400041e-17,
+      "rerun": 6.015627991400041e-17,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.conservative.central4.h0.0005.maximum_midpoint_power_balance_residual",
+      "published": 1.53350097377436e-14,
+      "rerun": 1.53350097377436e-14,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.conservative.central4.h0.0005.order",
+      "published": 3.8755654903203474,
+      "rerun": 3.8755654903203474,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.conservative.central4.h0.00025.maximum_state_error",
+      "published": 4.78611213693106e-09,
+      "rerun": 4.78611213693106e-09,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.conservative.central4.h0.00025.max_increment_residual_inf",
+      "published": 2.0405023699356095e-18,
+      "rerun": 2.0405023699356095e-18,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.conservative.central4.h0.00025.maximum_midpoint_power_balance_residual",
+      "published": 1.9811626297827623e-15,
+      "rerun": 1.9811626297827623e-15,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.conservative.central4.h0.00025.order",
+      "published": 3.9693941366915015,
+      "rerun": 3.9693941366915015,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.damped.midpoint.h0.001.maximum_state_error",
+      "published": 1.6858114961268332e-05,
+      "rerun": 1.6858114961268332e-05,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.damped.midpoint.h0.001.max_increment_residual_inf",
+      "published": 3.641911965618773e-15,
+      "rerun": 3.641911965618773e-15,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.damped.midpoint.h0.001.maximum_midpoint_power_balance_residual",
+      "published": 1.701657189717537e-11,
+      "rerun": 1.701657189717537e-11,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.damped.midpoint.h0.0005.maximum_state_error",
+      "published": 4.492917055824204e-06,
+      "rerun": 4.492917055824204e-06,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.damped.midpoint.h0.0005.max_increment_residual_inf",
+      "published": 5.890574164649784e-17,
+      "rerun": 5.890574164649784e-17,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.damped.midpoint.h0.0005.maximum_midpoint_power_balance_residual",
+      "published": 4.2642470391138775e-12,
+      "rerun": 4.2642470391138775e-12,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.damped.midpoint.h0.0005.order",
+      "published": 1.9077188927054491,
+      "rerun": 1.9077188927054491,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.damped.midpoint.h0.00025.maximum_state_error",
+      "published": 1.1425681032420165e-06,
+      "rerun": 1.1425681032420165e-06,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.damped.midpoint.h0.00025.max_increment_residual_inf",
+      "published": 2.4263258774099433e-18,
+      "rerun": 2.4263258774099433e-18,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.damped.midpoint.h0.00025.maximum_midpoint_power_balance_residual",
+      "published": 1.0671009190052948e-12,
+      "rerun": 1.0671009190052948e-12,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.damped.midpoint.h0.00025.order",
+      "published": 1.9753722680967682,
+      "rerun": 1.9753722680967682,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.damped.weighted_midpoint.h0.001.maximum_state_error",
+      "published": 1.685600994324261e-05,
+      "rerun": 1.685600994324261e-05,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.damped.weighted_midpoint.h0.001.max_increment_residual_inf",
+      "published": 3.632454419246205e-15,
+      "rerun": 3.632454419246205e-15,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.damped.weighted_midpoint.h0.001.maximum_midpoint_power_balance_residual",
+      "published": 2.1813471157575206e-09,
+      "rerun": 2.1813471157575206e-09,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.damped.weighted_midpoint.h0.0005.maximum_state_error",
+      "published": 4.4925236891032995e-06,
+      "rerun": 4.4925236891032995e-06,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.damped.weighted_midpoint.h0.0005.max_increment_residual_inf",
+      "published": 5.932819932894092e-17,
+      "rerun": 5.932819932894092e-17,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.damped.weighted_midpoint.h0.0005.maximum_midpoint_power_balance_residual",
+      "published": 5.592993671053214e-10,
+      "rerun": 5.592993671053214e-10,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.damped.weighted_midpoint.h0.0005.order",
+      "published": 1.907665054096667,
+      "rerun": 1.907665054096667,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.damped.weighted_midpoint.h0.00025.maximum_state_error",
+      "published": 1.142480008318948e-06,
+      "rerun": 1.142480008318948e-06,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.damped.weighted_midpoint.h0.00025.max_increment_residual_inf",
+      "published": 2.3483988462625477e-18,
+      "rerun": 2.3483988462625477e-18,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.damped.weighted_midpoint.h0.00025.maximum_midpoint_power_balance_residual",
+      "published": 1.4084785983152437e-10,
+      "rerun": 1.4084785983152437e-10,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "integrators.damped.weighted_midpoint.h0.00025.order",
+      "published": 1.9753571905827083,
+      "rerun": 1.9753571905827083,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "birkhoff.original_midpoint.h0.000125.error_to_original_max",
+      "published": 3.587288018918161e-08,
+      "rerun": 3.587288018918161e-08,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "birkhoff.original_midpoint.h0.000125.error_to_represented_max",
+      "published": 2.1874173962530014e-05,
+      "rerun": 2.1874173962530014e-05,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "birkhoff.original_midpoint.h0.000125.original_power_balance_residual_max",
+      "published": 5.697658546407514e-14,
+      "rerun": 5.697658546407514e-14,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "birkhoff.original_midpoint.h0.000125.residual_inf",
+      "published": 4.1324756286473686e-14,
+      "rerun": 4.1324756286473686e-14,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "birkhoff.original_midpoint.h6.25e-05.error_to_original_max",
+      "published": 8.97799928751588e-09,
+      "rerun": 8.97799928751588e-09,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "birkhoff.original_midpoint.h6.25e-05.error_to_represented_max",
+      "published": 2.1863558123499478e-05,
+      "rerun": 2.1863558123499478e-05,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "birkhoff.original_midpoint.h6.25e-05.original_power_balance_residual_max",
+      "published": 1.4611043338151773e-14,
+      "rerun": 1.4611043338151773e-14,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "birkhoff.original_midpoint.h6.25e-05.residual_inf",
+      "published": 2.586875043331365e-15,
+      "rerun": 2.586875043331365e-15,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "birkhoff.original_midpoint.h6.25e-05.order",
+      "published": 1.998427695270745,
+      "rerun": 1.998427695270745,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "birkhoff.original_midpoint.h3.125e-05.error_to_original_max",
+      "published": 2.245112243349582e-09,
+      "rerun": 2.245112243349582e-09,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "birkhoff.original_midpoint.h3.125e-05.error_to_represented_max",
+      "published": 2.1860903457193176e-05,
+      "rerun": 2.1860903457193176e-05,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "birkhoff.original_midpoint.h3.125e-05.original_power_balance_residual_max",
+      "published": 4.183781798632035e-15,
+      "rerun": 4.183781798632035e-15,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "birkhoff.original_midpoint.h3.125e-05.residual_inf",
+      "published": 1.6175025864062845e-16,
+      "rerun": 1.6175025864062845e-16,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "birkhoff.original_midpoint.h3.125e-05.order",
+      "published": 1.9996064081211344,
+      "rerun": 1.9996064081211344,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "birkhoff.birkhoff_chart_midpoint.h0.000125.error_to_original_max",
+      "published": 2.1821790424232397e-05,
+      "rerun": 2.1821790424232397e-05,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "birkhoff.birkhoff_chart_midpoint.h0.000125.error_to_represented_max",
+      "published": 1.595931621626738e-07,
+      "rerun": 1.595931621626738e-07,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "birkhoff.birkhoff_chart_midpoint.h0.000125.original_power_balance_residual_max",
+      "published": 3.2454248083724146e-06,
+      "rerun": 3.2454248083724146e-06,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "birkhoff.birkhoff_chart_midpoint.h0.000125.residual_inf",
+      "published": 4.02316475625478e-14,
+      "rerun": 4.02316475625478e-14,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "birkhoff.birkhoff_chart_midpoint.h6.25e-05.error_to_original_max",
+      "published": 2.185036695630555e-05,
+      "rerun": 2.185036695630555e-05,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "birkhoff.birkhoff_chart_midpoint.h6.25e-05.error_to_represented_max",
+      "published": 3.9931423382270874e-08,
+      "rerun": 3.9931423382270874e-08,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "birkhoff.birkhoff_chart_midpoint.h6.25e-05.original_power_balance_residual_max",
+      "published": 3.2509472110823425e-06,
+      "rerun": 3.2509472110823425e-06,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "birkhoff.birkhoff_chart_midpoint.h6.25e-05.residual_inf",
+      "published": 2.5463390110910897e-15,
+      "rerun": 2.5463390110910897e-15,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "birkhoff.birkhoff_chart_midpoint.h6.25e-05.order",
+      "published": 1.9988024361690373,
+      "rerun": 1.9988024361690373,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "birkhoff.birkhoff_chart_midpoint.h3.125e-05.error_to_original_max",
+      "published": 2.1857599706947744e-05,
+      "rerun": 2.1857599706947744e-05,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "birkhoff.birkhoff_chart_midpoint.h3.125e-05.error_to_represented_max",
+      "published": 9.984918015992914e-09,
+      "rerun": 9.984918015992914e-09,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "birkhoff.birkhoff_chart_midpoint.h3.125e-05.original_power_balance_residual_max",
+      "published": 3.2523320344327963e-06,
+      "rerun": 3.2523320344327963e-06,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "birkhoff.birkhoff_chart_midpoint.h3.125e-05.residual_inf",
+      "published": 1.5970022715003623e-16,
+      "rerun": 1.5970022715003623e-16,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "birkhoff.birkhoff_chart_midpoint.h3.125e-05.order",
+      "published": 1.99970201154349,
+      "rerun": 1.99970201154349,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "birkhoff.reference_gap",
+      "published": 2.1860018505905156e-05,
+      "rerun": 2.1860018505905156e-05,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "learning.beta_fitted",
+      "published": 0.19999999999999993,
+      "rerun": 0.19999999999999993,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "learning.heldout_force_relative_l2",
+      "published": 1.3046138437891983e-15,
+      "rerun": 1.3046138437891983e-15,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "coil.0.full_minus_affine_relative",
+      "published": 0.9876629337058201,
+      "rerun": 0.9876629337058201,
+      "absolute_difference": 0.0
+    },
+    {
+      "label": "coil.1.full_minus_affine_relative",
+      "published": 1.0199476617021581,
+      "rerun": 1.0199476617021581,
+      "absolute_difference": 0.0
+    }
+  ],
+  "array_comparisons": [
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "initial",
+      "shape": [
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_midpoint_0.001_time",
+      "shape": [
+        5
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_midpoint_0.001_state",
+      "shape": [
+        5,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_midpoint_0.001_reference",
+      "shape": [
+        5,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_midpoint_0.001_energy",
+      "shape": [
+        5
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_midpoint_0.001_power_balance",
+      "shape": [
+        5
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_midpoint_0.0005_time",
+      "shape": [
+        9
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_midpoint_0.0005_state",
+      "shape": [
+        9,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_midpoint_0.0005_reference",
+      "shape": [
+        9,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_midpoint_0.0005_energy",
+      "shape": [
+        9
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_midpoint_0.0005_power_balance",
+      "shape": [
+        9
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_midpoint_0.00025_time",
+      "shape": [
+        17
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_midpoint_0.00025_state",
+      "shape": [
+        17,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_midpoint_0.00025_reference",
+      "shape": [
+        17,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_midpoint_0.00025_energy",
+      "shape": [
+        17
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_midpoint_0.00025_power_balance",
+      "shape": [
+        17
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_central4_0.001_time",
+      "shape": [
+        5
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_central4_0.001_state",
+      "shape": [
+        5,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_central4_0.001_reference",
+      "shape": [
+        5,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_central4_0.001_energy",
+      "shape": [
+        5
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_central4_0.001_power_balance",
+      "shape": [
+        5
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_central4_0.0005_time",
+      "shape": [
+        9
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_central4_0.0005_state",
+      "shape": [
+        9,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_central4_0.0005_reference",
+      "shape": [
+        9,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_central4_0.0005_energy",
+      "shape": [
+        9
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_central4_0.0005_power_balance",
+      "shape": [
+        9
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_central4_0.00025_time",
+      "shape": [
+        17
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_central4_0.00025_state",
+      "shape": [
+        17,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_central4_0.00025_reference",
+      "shape": [
+        17,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_central4_0.00025_energy",
+      "shape": [
+        17
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "conservative_central4_0.00025_power_balance",
+      "shape": [
+        17
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_midpoint_0.001_time",
+      "shape": [
+        5
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_midpoint_0.001_state",
+      "shape": [
+        5,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_midpoint_0.001_reference",
+      "shape": [
+        5,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_midpoint_0.001_energy",
+      "shape": [
+        5
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_midpoint_0.001_power_balance",
+      "shape": [
+        5
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_midpoint_0.0005_time",
+      "shape": [
+        9
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_midpoint_0.0005_state",
+      "shape": [
+        9,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_midpoint_0.0005_reference",
+      "shape": [
+        9,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_midpoint_0.0005_energy",
+      "shape": [
+        9
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_midpoint_0.0005_power_balance",
+      "shape": [
+        9
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_midpoint_0.00025_time",
+      "shape": [
+        17
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_midpoint_0.00025_state",
+      "shape": [
+        17,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_midpoint_0.00025_reference",
+      "shape": [
+        17,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_midpoint_0.00025_energy",
+      "shape": [
+        17
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_midpoint_0.00025_power_balance",
+      "shape": [
+        17
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_weighted_midpoint_0.001_time",
+      "shape": [
+        5
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_weighted_midpoint_0.001_state",
+      "shape": [
+        5,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_weighted_midpoint_0.001_reference",
+      "shape": [
+        5,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_weighted_midpoint_0.001_energy",
+      "shape": [
+        5
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_weighted_midpoint_0.001_power_balance",
+      "shape": [
+        5
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_weighted_midpoint_0.0005_time",
+      "shape": [
+        9
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_weighted_midpoint_0.0005_state",
+      "shape": [
+        9,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_weighted_midpoint_0.0005_reference",
+      "shape": [
+        9,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_weighted_midpoint_0.0005_energy",
+      "shape": [
+        9
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_weighted_midpoint_0.0005_power_balance",
+      "shape": [
+        9
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_weighted_midpoint_0.00025_time",
+      "shape": [
+        17
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_weighted_midpoint_0.00025_state",
+      "shape": [
+        17,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_weighted_midpoint_0.00025_reference",
+      "shape": [
+        17,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_weighted_midpoint_0.00025_energy",
+      "shape": [
+        17
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "integrators/integrators_traces.npz",
+      "array": "damped_weighted_midpoint_0.00025_power_balance",
+      "shape": [
+        17
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "birkhoff/trajectories_T0.0005.npz",
+      "array": "reference_times",
+      "shape": [
+        129
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "birkhoff/trajectories_T0.0005.npz",
+      "array": "original_reference",
+      "shape": [
+        129,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "birkhoff/trajectories_T0.0005.npz",
+      "array": "represented_reference",
+      "shape": [
+        129,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "birkhoff/trajectories_T0.0005.npz",
+      "array": "original_midpoint_h0.000125",
+      "shape": [
+        5,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "birkhoff/trajectories_T0.0005.npz",
+      "array": "original_midpoint_h6.25e-05",
+      "shape": [
+        9,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "birkhoff/trajectories_T0.0005.npz",
+      "array": "original_midpoint_h3.125e-05",
+      "shape": [
+        17,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "birkhoff/trajectories_T0.0005.npz",
+      "array": "birkhoff_chart_midpoint_h0.000125",
+      "shape": [
+        5,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "birkhoff/trajectories_T0.0005.npz",
+      "array": "birkhoff_chart_midpoint_h6.25e-05",
+      "shape": [
+        9,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "birkhoff/trajectories_T0.0005.npz",
+      "array": "birkhoff_chart_midpoint_h3.125e-05",
+      "shape": [
+        17,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "control/trajectories.npz",
+      "array": "uncontrolled_state",
+      "shape": [
+        17,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "control/trajectories.npz",
+      "array": "uncontrolled_input",
+      "shape": [
+        16,
+        8
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "control/trajectories.npz",
+      "array": "projected_damping_compensation_state",
+      "shape": [
+        17,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "control/trajectories.npz",
+      "array": "projected_damping_compensation_input",
+      "shape": [
+        16,
+        8
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "control/trajectories.npz",
+      "array": "constant_magnetic_potential_state",
+      "shape": [
+        17,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "control/trajectories.npz",
+      "array": "constant_magnetic_potential_input",
+      "shape": [
+        16,
+        8
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "control/trajectories.npz",
+      "array": "collocated_damping_state",
+      "shape": [
+        17,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "control/trajectories.npz",
+      "array": "collocated_damping_input",
+      "shape": [
+        16,
+        8
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "control/trajectories.npz",
+      "array": "bounded_compensation_state",
+      "shape": [
+        17,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "control/trajectories.npz",
+      "array": "bounded_compensation_input",
+      "shape": [
+        16,
+        8
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "control/trajectories.npz",
+      "array": "time_tau",
+      "shape": [
+        17
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "control_learning/learning_data_and_trajectories.npz",
+      "array": "train_states",
+      "shape": [
+        8,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "control_learning/learning_data_and_trajectories.npz",
+      "array": "heldout_states",
+      "shape": [
+        8,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "control_learning/learning_data_and_trajectories.npz",
+      "array": "train_force",
+      "shape": [
+        8,
+        12
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "control_learning/learning_data_and_trajectories.npz",
+      "array": "heldout_force",
+      "shape": [
+        8,
+        12
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "control_learning/learning_data_and_trajectories.npz",
+      "array": "template_input",
+      "shape": [
+        8
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "control_learning/learning_data_and_trajectories.npz",
+      "array": "uncompensated_residual_states",
+      "shape": [
+        17,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "control_learning/learning_data_and_trajectories.npz",
+      "array": "uncompensated_residual_actuator_input",
+      "shape": [
+        16,
+        8
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "control_learning/learning_data_and_trajectories.npz",
+      "array": "learned_feature_compensation_states",
+      "shape": [
+        17,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "control_learning/learning_data_and_trajectories.npz",
+      "array": "learned_feature_compensation_actuator_input",
+      "shape": [
+        16,
+        8
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "control_learning/learning_data_and_trajectories.npz",
+      "array": "true_coefficient_compensation_states",
+      "shape": [
+        17,
+        24
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "path": "control_learning/learning_data_and_trajectories.npz",
+      "array": "true_coefficient_compensation_actuator_input",
+      "shape": [
+        16,
+        8
+      ],
+      "maximum_absolute_difference": 0.0
+    }
+  ],
+  "max_scalar_absolute_difference": 0.0,
+  "max_array_absolute_difference": 0.0,
+  "status": "all_compared_arrays_finite_and_shapes_match"
+}

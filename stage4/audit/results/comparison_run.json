@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/workspace/1028-cloud/venvs/learning/bin/python",
+    "stage4/audit/program/compare_reruns.py"
+  ],
+  "cwd": "/workspace/1028",
+  "started_at": "2026-10-29T14:02:03.449574+00:00",
+  "ended_at": "2026-10-29T14:02:04.045888+00:00",
+  "seconds": 0.5972639299998264,
+  "exit_code": 0,
+  "status": "passed",
+  "log": "stage4/audit/logs/reproduction/compare_reruns.log",
+  "comparison": "Measured floating differences; finite values and exact key/shape match required, no threshold altered"
+}

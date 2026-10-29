@@ -1,0 +1,9 @@
+{
+  "source_head": "38ee6a7fb8f279fc80be05ee2bd4956817364ffc",
+  "tracked_files_checked": 479,
+  "changed": [],
+  "all_starting_tracked_files_unchanged": true,
+  "preserved_untracked": [
+    "stage3/install.sh"
+  ]
+}

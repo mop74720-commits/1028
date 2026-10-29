@@ -1,0 +1,8 @@
+{
+  "field_vs_independent_numpy_relative_error": 3.1644923116561372e-15,
+  "analytic_gradient_vs_finite_difference_relative_error": 1.7344811078975145e-10,
+  "magnetic_force_virtual_work_relative_error": 3.922041278284142e-10,
+  "divergence_max": 1.734723475976807e-17,
+  "curl_defect_max": 2.780978572425319e-17,
+  "extension_sha256": "c35eb04ce426081ea4eb514fbb9bdd4317f47568de093a1ac821287a3332d35e"
+}

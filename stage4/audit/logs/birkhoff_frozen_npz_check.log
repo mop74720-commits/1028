@@ -1,0 +1,57 @@
+{
+  "status": "all six stored trajectory metrics independently recomputed from NPZ",
+  "command": "stage4/audit/program/check_frozen_birkhoff_results.py",
+  "executable": "/workspace/1028-cloud/venvs/learning/bin/python",
+  "numpy_version": "2.3.5",
+  "source_sha256": "73110d73b8298769c0493bcfbe6cb45be69eccefab43abe55e4fb6a9ab54f5a6",
+  "archive": "stage3/results/birkhoff/trajectories_T0.0005.npz",
+  "archive_sha256": "c063d5b59f9be091b6111f9b4918826ce9fc61141ce6cf1fa52a59b0fdda1c88",
+  "reference_gap": 2.1860018505905156e-05,
+  "gap_difference": 0.0,
+  "rows": [
+    {
+      "key": "original_midpoint_h0.000125",
+      "recomputed_error_to_original": 3.587288018918161e-08,
+      "recomputed_error_to_represented": 2.1874173962530014e-05,
+      "json_original_difference": 0.0,
+      "json_represented_difference": 0.0
+    },
+    {
+      "key": "original_midpoint_h6.25e-05",
+      "recomputed_error_to_original": 8.97799928751588e-09,
+      "recomputed_error_to_represented": 2.1863558123499478e-05,
+      "json_original_difference": 0.0,
+      "json_represented_difference": 0.0
+    },
+    {
+      "key": "original_midpoint_h3.125e-05",
+      "recomputed_error_to_original": 2.245112243349582e-09,
+      "recomputed_error_to_represented": 2.1860903457193176e-05,
+      "json_original_difference": 0.0,
+      "json_represented_difference": 0.0
+    },
+    {
+      "key": "birkhoff_chart_midpoint_h0.000125",
+      "recomputed_error_to_original": 2.1821790424232397e-05,
+      "recomputed_error_to_represented": 1.595931621626738e-07,
+      "json_original_difference": 0.0,
+      "json_represented_difference": 0.0
+    },
+    {
+      "key": "birkhoff_chart_midpoint_h6.25e-05",
+      "recomputed_error_to_original": 2.185036695630555e-05,
+      "recomputed_error_to_represented": 3.9931423382270874e-08,
+      "json_original_difference": 0.0,
+      "json_represented_difference": 0.0
+    },
+    {
+      "key": "birkhoff_chart_midpoint_h3.125e-05",
+      "recomputed_error_to_original": 2.1857599706947744e-05,
+      "recomputed_error_to_represented": 9.984918015992914e-09,
+      "json_original_difference": 0.0,
+      "json_represented_difference": 0.0
+    }
+  ],
+  "tolerance": 1e-16,
+  "scope": "Recompute frozen data metrics; not a fresh numerical integration."
+}
