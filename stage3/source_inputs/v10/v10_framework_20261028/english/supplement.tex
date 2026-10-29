@@ -1,0 +1,33 @@
+\documentclass[doublespace,Afour,sageh,times]{sagej}
+\input{preamble}
+\externaldocument{main_xr}[v10_Integrated_EN.pdf]
+\runninghead{Supplementary mechanics, proofs and reproducibility}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\theequation}{S\arabic{equation}}
+\renewcommand{\thetheorem}{S\arabic{theorem}}
+\renewcommand{\theassumption}{S\arabic{assumption}}
+\renewcommand{\theremark}{S\arabic{remark}}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\hypersetup{pdftitle={Supplement: Birkhoff discretization and complex Hamiltonian residual control of a magnetic catheter model},pdfauthor={Anonymous authors}}
+\begin{document}
+\title{Supplementary material: Birkhoff discretization and complex Hamiltonian residual control of a magnetic catheter model}
+\author{Anonymous authors}
+\begin{abstract}
+This supplement provides the mechanics, endpoint and matrix derivations, controlled-map identities, learning-error bounds and reproduction protocols for the three-subproblem article. The same revised beam and endpoint magnet are used throughout. Detailed formulas distinguish the matrix implementation, residual compensation and finite-time controlled convergence from the additional hypotheses of discrete KAM. A separate final section retains learned-reference tracking as a related extension; it does not replace the compensation objective analyzed in the main article. Source provenance and a framework-to-section map accompany the reproducible project.
+\end{abstract}
+\keywords{supplementary derivations, parameter provenance, numerical verification, reproducibility}
+\maketitle
+\raggedbottom
+\section{Mechanical derivation and parameter traceability}\label{sec:supp-mechanics}
+\input{sections/supp_mechanics}
+\section{Geometric identities and learning-to-KAM conditions}\label{sec:supp-structure}
+\input{sections/supp_structure}
+\section{Numerical protocol and result provenance}\label{sec:supp-experiments}
+\input{sections/supp_experiments}
+\section{Related extension: tracking a learned conservative reference}\label{sec:supp-tracking}
+\input{sections/extension_tracking_theory}
+\input{sections/extension_tracking_results}
+\clearpage
+\input{sections/references}
+\end{document}

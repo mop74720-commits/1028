@@ -1,0 +1,112 @@
+正文研究残差补偿及其产生的离散映射。本扩展保留另一任务，即跟踪学习得到的保守参考。两项任务使用同一组冻结辨识结果和物理输入端口，但目标轨迹与数学保证不同。
+
+\subsection{学习得到的保守参考与跟踪反馈}
+\label{struct:route-b-section}
+
+路线 B 由 $X_r'=\mathsf N Y_r$、$Y_r'=-\nabla\widehat V(X_r)$ 生成参考，其中 $\widehat V=V_0+\widehat R$。令 $e_X=X-X_r$、$e_Y=Y-Y_r$，采用
+\begin{equation}\label{struct:route-b-control}
+\begin{aligned}
+ U_B={}&\widehat\gamma Y+\nabla\widehat V(X)
+                     -\nabla\widehat V(X_r)\\
+       &-\kappa_p\mathsf N^{-1}e_X-\kappa_de_Y,
+       \qquad\kappa_p,\kappa_d>0.
+\end{aligned}
+\end{equation}
+误差严格满足
+\begin{equation}\label{struct:route-b-error}
+\begin{gathered}
+\begin{aligned}
+ e_X'&=\mathsf N e_Y,\\
+ e_Y'&=-\kappa_p\mathsf N^{-1}e_X-\kappa_de_Y
+           \\&\quad-\nabla\delta R(X)-\delta\gamma Y,
+\end{aligned}\\
+\begin{aligned}
+ &e_X''+\kappa_de_X'+\kappa_pe_X\\
+ &\qquad=-\mathsf N[\nabla\delta R(X)+\delta\gamma Y].
+\end{aligned}
+\end{gathered}
+\end{equation}
+齐次动力学指数稳定。在所声明的力误差和速度有界区域内，对这一稳定系统作卷积即可得到有限的跟踪误差界；临界阻尼下的公式见补充材料~\ref{ss:tracking}。非零残余外力产生非零误差包络。精确抵消给出渐近跟踪，并保持零初始跟踪误差。
+
+对仅用于合成实验的真值参数对照，定义 $V_*=V_0+R_*$，只替换受控对象的补偿项：
+\begin{equation}\label{struct:route-b-oracle}
+\begin{aligned}
+ U_B^{\rm or}={}&\gamma Y+\nabla V_*(X)
+                         -\nabla\widehat V(X_r)\\
+              &-\kappa_p\mathsf N^{-1}e_X-\kappa_de_Y.
+\end{aligned}
+\end{equation}
+这一真值参数对照保留同一个学习参考 $(X_r,Y_r)$，与式~\eqref{struct:route-b-control} 一致，不将参考替换为真实保守流。代入后得到齐次误差方程 $e_X''+\kappa_de_X'+\kappa_pe_X=0$。其中点更新是常系数误差系统矩阵的 Cayley 变换，为补充材料~\ref{num:route-b} 中的真值参数数值对照检验提供依据。实际实现的学习反馈仍为式~\eqref{struct:route-b-control}，不读取 $R_*$ 或 $\gamma$。
+
+这一路线中的 KAM 分析针对 $\widehat h$，从而涉及选定拟周期参考的存在性。反馈系统本身包含阻尼和含时参考，其跟踪保证来自式 \eqref{struct:route-b-error}，并非来自该闭环的辛性。在相同可逆性和驱动条件下，第~\ref{sec:application} 节的磁端口映射适用于这一两模态广义输入。参考误差、跟踪误差和受控对象补偿误差仍是不同的量。
+
+\subsection{模型与驱动误差有界时的跟踪}
+\label{ss:tracking}
+
+令动量方程中实际输入的加性误差为 $r_U$，则路线 B 的位置误差满足
+\[
+\begin{gathered}
+ e_X''+\kappa_de_X'+\kappa_pe_X=q(\tau),\\
+ q=-\mathsf N[\nabla\delta R(X)+\delta\gamma Y-r_U].
+\end{gathered}
+\]
+对 $\kappa_p=\omega_c^2$、$\kappa_d=2\omega_c$，直接求解得
+\begin{equation}\label{ss:tracking-convolution}
+\begin{aligned}
+ e_X(\tau)={}&e^{-\omega_c\tau}
+       [(1+\omega_c\tau)e_X(0)+\tau e_X'(0)]\\
+ &+\int_0^\tau(\tau-s)e^{-\omega_c(\tau-s)}q(s)\dd s.
+\end{aligned}
+\end{equation}
+若受控对象与参考始终位于所声明的域内，且 $\norm{q(s)}_2\le Q$，则有
+\begin{equation}\label{ss:tracking-bound}
+\begin{aligned}
+ \norm{e_X(\tau)}_2\le{}&e^{-\omega_c\tau}
+  [(1+\omega_c\tau)\norm{e_X(0)}_2+\tau\norm{e_X'(0)}_2]\\
+ &+\frac{Q}{\omega_c^2}
+       [1-(1+\omega_c\tau)e^{-\omega_c\tau}].
+\end{aligned}
+\end{equation}
+对卷积求导并利用 $e_Y=\mathsf N^{-1}e_X'$，即可得到速度误差。特别地，若 $\norm Y\le Y_{\max}$、$\norm{r_U}\le r_{\max}$，且式~\eqref{kam:analytic-error} 成立，则可取
+\[
+\begin{aligned}
+ Q={}&\norm{\mathsf N}_2\bigl[b_I B_{\nabla F}(K)+b_I Y_{\max}\\
+     &\qquad+\sup_K\norm{\nabla R_{\rm out}}_2+r_{\max}\bigr].
+\end{aligned}
+\]
+两模态尖端位移误差至多为
+$\norm{\ell(L)}_2\norm{e_X}_2$。
+只要定义域和驱动假设保持成立，这些不等式就适用。采用足够大的参考轨迹管域时，若其余量超过右端误差界，可通过自洽论证建立闭合估计；否则需单独检查是否离开该域。这些不等式并不构成存在任意饱和或未建模模态时的全局结论。
+
+
+\subsection{参考的持续存在及其与补偿预算的关系}
+\label{kam:budgets-section}
+
+路线 A 选用标称坐标图 $\mathcal T_A=\mathcal T_1$。对单特征模型中的路线 B，选取 $\mathcal T_B=\mathcal T_{\kappa_*}$，其中 $\kappa_*=1+\beta_*$。若真实残差属于更广的模型类，则需要相应的正规形，或将其新增项计入扰动预算。对单特征受控对象，两条结论所对应的能量满足
+\begin{equation}\label{kam:route-budgets}
+\begin{aligned}
+ h_c\circ\mathcal T_A
+   &=H_{\rm NF}^{1}+R_6^{1}+\delta R\circ\mathcal T_A,\\
+ \widehat h\circ\mathcal T_B
+   &=H_{\rm NF}^{\kappa_*}+R_6^{\kappa_*}
+                                      -\delta R\circ\mathcal T_B,\\
+ \epsilon_A&=\norm{R_6^{1}}_{\mathcal D_A}+b_R^A,\\
+ \epsilon_B&=\norm{R_6^{\kappa_*}}_{\mathcal D_B}+b_R^B.
+\end{aligned}
+\end{equation}
+其中 $b_R^s$ 是 $\delta R\circ\mathcal T_s$ 在所声明复作用--角域 $\mathcal D_s$ 上的上界。两条路线可以复用同一系数界；但只有两个坐标图的像都位于同一个已控制的物理复邻域内，才能共用同一解析函数界。两个正规形通常具有不同的频率、余项和允许作用变量范围。
+
+对合成受控对象，有 $\kappa_*=1.2$。对未知受控对象，式~\eqref{kam:integral-bound} 给出围绕 $\widehat\beta$ 的参数区间；扭转矩阵及余项估计必须在所声明区间内一致成立，并排除 $\kappa_*=0$。另一种方式是直接将冻结的学习哈密顿量化为正规形，并对其单独认证。上述任一程序都不能仅凭训练损失识别出物理不变环面。
+
+\begin{proposition}[连续模型的条件性持续存在结论]
+\label{kam:flow-theorem}
+对任一路线，令 $\mathcal T_s$ 在复邻域 $\mathcal D_s$ 上解析且正则，该邻域包含 $\mathcal I_s\times\T^2$，并满足 $\mathcal I_s\Subset(0,\infty)^2$。假设其在实域上的像位于所建模的工作域内，可积频率映射 $\omega_s=\nabla_IH_{\rm NF}^s$ 在该域非退化，且式~\eqref{kam:route-budgets} 中所有域与范数界均有效。选取满足下式的内部频率集合：
+\begin{equation}\label{kam:flow-divisors}
+ |k\cdot\omega|\ge\gamma_D|k|_1^{-\tau_D},
+ \quad k\in\mathbb Z^2\setminus\{0\},\quad\tau_D>1.
+\end{equation}
+若 $\epsilon_s$ 小于由这些域、扭转矩阵界和丢番图参数确定的解析 KAM 阈值，则相应哈密顿量存在承载拟周期流的不变拉格朗日环面 Cantor 族。在经典定理规定的内部域上，取足够小的排除参数，即可得到正测度环面族。对路线 A，只有在式~\eqref{struct:route-a-closed} 后所述的保守实现前提下，该结论才针对实际闭环；对路线 B，该结论针对学习参考。
+\end{proposition}
+
+将式~\eqref{kam:route-budgets} 代入解析近可积哈密顿系统定理 \citep{poschel}，即可得到此命题。阈值依赖于选定的复域宽度、频率域边界余量、扭转矩阵及其逆的界，以及 $\gamma_D,\tau_D$。这里不声称已有固定的数值阈值。所得环面描述的是选定的有界运动，并不意味着吸引任意初值，也不保证整个柔性梁的净空。
+

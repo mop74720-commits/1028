@@ -1,0 +1,287 @@
+{
+  "report_render": "stage2/report/render_release",
+  "report_total_pages": 109,
+  "inspector": "/root/physics_metriplectic",
+  "inspection_method": "每页单独tools.view_image(detail=\"original\")实际查看；第40页另裁底部放大检查确认无裁切。",
+  "range": [
+    30,
+    56
+  ],
+  "checked_page_count": 27,
+  "pages": [
+    {
+      "page": 30,
+      "actually_viewed_original": true,
+      "result": "pass",
+      "findings": [],
+      "clipped_equations": false,
+      "clipped_tables": false,
+      "missing_glyphs_or_placeholders": false
+    },
+    {
+      "page": 31,
+      "actually_viewed_original": true,
+      "result": "needs_source_math_formatting",
+      "findings": [
+        "正文r_s、R_s、R_t、μ_r、J_r、e=|r_s|为裸下标，需LaTeX规范化。"
+      ],
+      "clipped_equations": false,
+      "clipped_tables": false,
+      "missing_glyphs_or_placeholders": false
+    },
+    {
+      "page": 32,
+      "actually_viewed_original": true,
+      "result": "needs_source_math_formatting",
+      "findings": [
+        "本构矩阵、边界r_b/R_b及体磁矩μ_b等行内数学未规范化。"
+      ],
+      "clipped_equations": false,
+      "clipped_tables": false,
+      "missing_glyphs_or_placeholders": false
+    },
+    {
+      "page": 33,
+      "actually_viewed_original": true,
+      "result": "needs_source_math_formatting",
+      "findings": [
+        "磁输入下标、r_u=G_mu−U、线圈叠加求和、磁链/电功率与Ω_f为普通文本。"
+      ],
+      "clipped_equations": false,
+      "clipped_tables": false,
+      "missing_glyphs_or_placeholders": false
+    },
+    {
+      "page": 34,
+      "actually_viewed_original": true,
+      "result": "needs_source_math_formatting",
+      "findings": [
+        "应力、Womersley参数、投影与阻力系数等行内数学混用裸下标和Unicode。"
+      ],
+      "clipped_equations": false,
+      "clipped_tables": false,
+      "missing_glyphs_or_placeholders": false
+    },
+    {
+      "page": 35,
+      "actually_viewed_original": true,
+      "result": "needs_source_math_formatting",
+      "findings": [
+        "Morison加速度、接触互补、c_n根号/指数/λ_n、罚单位与正则性幂均需明确LaTeX；显示F16/F17完整。"
+      ],
+      "clipped_equations": false,
+      "clipped_tables": false,
+      "missing_glyphs_or_placeholders": false
+    },
+    {
+      "page": 36,
+      "actually_viewed_original": true,
+      "result": "needs_source_math_formatting",
+      "findings": [
+        "g_eff、几何Jacobian、动量与移动基座动能等行内公式混用普通文本。"
+      ],
+      "clipped_equations": false,
+      "clipped_tables": false,
+      "missing_glyphs_or_placeholders": false
+    },
+    {
+      "page": 37,
+      "actually_viewed_original": true,
+      "result": "needs_source_math_formatting",
+      "findings": [
+        "V_m为裸下标；第6章起本页未见排版缺陷。"
+      ],
+      "clipped_equations": false,
+      "clipped_tables": false,
+      "missing_glyphs_or_placeholders": false
+    },
+    {
+      "page": 38,
+      "actually_viewed_original": true,
+      "result": "pass",
+      "findings": [],
+      "clipped_equations": false,
+      "clipped_tables": false,
+      "missing_glyphs_or_placeholders": false
+    },
+    {
+      "page": 39,
+      "actually_viewed_original": true,
+      "result": "pass",
+      "findings": [],
+      "clipped_equations": false,
+      "clipped_tables": false,
+      "missing_glyphs_or_placeholders": false
+    },
+    {
+      "page": 40,
+      "actually_viewed_original": true,
+      "result": "pass",
+      "findings": [],
+      "clipped_equations": false,
+      "clipped_tables": false,
+      "missing_glyphs_or_placeholders": false
+    },
+    {
+      "page": 41,
+      "actually_viewed_original": true,
+      "result": "pass",
+      "findings": [],
+      "clipped_equations": false,
+      "clipped_tables": false,
+      "missing_glyphs_or_placeholders": false
+    },
+    {
+      "page": 42,
+      "actually_viewed_original": true,
+      "result": "pass",
+      "findings": [],
+      "clipped_equations": false,
+      "clipped_tables": false,
+      "missing_glyphs_or_placeholders": false
+    },
+    {
+      "page": 43,
+      "actually_viewed_original": true,
+      "result": "pass",
+      "findings": [],
+      "clipped_equations": false,
+      "clipped_tables": false,
+      "missing_glyphs_or_placeholders": false
+    },
+    {
+      "page": 44,
+      "actually_viewed_original": true,
+      "result": "pass",
+      "findings": [],
+      "clipped_equations": false,
+      "clipped_tables": false,
+      "missing_glyphs_or_placeholders": false
+    },
+    {
+      "page": 45,
+      "actually_viewed_original": true,
+      "result": "pass",
+      "findings": [],
+      "clipped_equations": false,
+      "clipped_tables": false,
+      "missing_glyphs_or_placeholders": false
+    },
+    {
+      "page": 46,
+      "actually_viewed_original": true,
+      "result": "pass",
+      "findings": [],
+      "clipped_equations": false,
+      "clipped_tables": false,
+      "missing_glyphs_or_placeholders": false
+    },
+    {
+      "page": 47,
+      "actually_viewed_original": true,
+      "result": "pass",
+      "findings": [],
+      "clipped_equations": false,
+      "clipped_tables": false,
+      "missing_glyphs_or_placeholders": false
+    },
+    {
+      "page": 48,
+      "actually_viewed_original": true,
+      "result": "pass",
+      "findings": [],
+      "clipped_equations": false,
+      "clipped_tables": false,
+      "missing_glyphs_or_placeholders": false
+    },
+    {
+      "page": 49,
+      "actually_viewed_original": true,
+      "result": "pass",
+      "findings": [],
+      "clipped_equations": false,
+      "clipped_tables": false,
+      "missing_glyphs_or_placeholders": false
+    },
+    {
+      "page": 50,
+      "actually_viewed_original": true,
+      "result": "pass",
+      "findings": [],
+      "clipped_equations": false,
+      "clipped_tables": false,
+      "missing_glyphs_or_placeholders": false
+    },
+    {
+      "page": 51,
+      "actually_viewed_original": true,
+      "result": "pass",
+      "findings": [],
+      "clipped_equations": false,
+      "clipped_tables": false,
+      "missing_glyphs_or_placeholders": false
+    },
+    {
+      "page": 52,
+      "actually_viewed_original": true,
+      "result": "pass",
+      "findings": [],
+      "clipped_equations": false,
+      "clipped_tables": false,
+      "missing_glyphs_or_placeholders": false
+    },
+    {
+      "page": 53,
+      "actually_viewed_original": true,
+      "result": "needs_source_math_formatting",
+      "findings": [
+        "图6-2中文图题“线性与真实ROM曲线接近”应统一为“线性与精确低维ROM曲线接近”，与图例/正文一致。"
+      ],
+      "clipped_equations": false,
+      "clipped_tables": false,
+      "missing_glyphs_or_placeholders": false
+    },
+    {
+      "page": 54,
+      "actually_viewed_original": true,
+      "result": "needs_source_math_formatting",
+      "findings": [
+        "第7章θ、Ω_t及流保持式等正文数学为裸下标/Unicode，需负责代理修复。"
+      ],
+      "clipped_equations": false,
+      "clipped_tables": false,
+      "missing_glyphs_or_placeholders": false
+    },
+    {
+      "page": 55,
+      "actually_viewed_original": true,
+      "result": "needs_source_math_formatting",
+      "findings": [
+        "第7章生成坐标映射、σ_t、D_z、∇_w、f_j、C^α、N_m等正文未正确数学排版。"
+      ],
+      "clipped_equations": false,
+      "clipped_tables": false,
+      "missing_glyphs_or_placeholders": false
+    },
+    {
+      "page": 56,
+      "actually_viewed_original": true,
+      "result": "needs_source_math_formatting",
+      "findings": [
+        "第7章常质量/阻尼化简和中点映射等正文下标/幂次仍为普通文本。"
+      ],
+      "clipped_equations": false,
+      "clipped_tables": false,
+      "missing_glyphs_or_placeholders": false
+    }
+  ],
+  "source_fix_assignment": {
+    "stage2/report/01_physical_framework.md": "已完成全部行内数学LaTeX规范化；原F1–F22显示公式未变，新增F17a仅将原已存在阻尼/合力公式改为显示排版；数字/模型/结论未变。",
+    "chapter7": "已报root，待负责代理修复",
+    "figure6_2_caption": "已报root，待root改精确低维ROM"
+  },
+  "pre_edit_physical_framework_sha256": "e4b3d81b6608abac98526561162e8a678b9d242059cc8597ebdac67a2689fbd1",
+  "rod3d_notes_source_change": "无需修改；第6章实际查看范围内已规范LaTeX。",
+  "overall_status": "source_math_formatting_fixed_awaiting_rerender",
+  "post_edit_physical_framework_sha256": "172c58abb386485fca9a95e022915c747ad3f6f545eb8c799082e34e546439c6"
+}

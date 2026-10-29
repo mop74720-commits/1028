@@ -1,0 +1,306 @@
+{
+  "reviewer": "birkhoff_discrete",
+  "completed_utc": "2026-10-29T02:59:07.092033+00:00",
+  "scope": "All 19 pages actually viewed at original rendered size; no contact sheets substituted. Rebuilt after explicit truncated endpoint inverse transversality addition and rechecked affected page 4 in each language.",
+  "pdfs": {
+    "en": {
+      "path": "stage2/paper/framework_en.pdf",
+      "sha256": "d18ef4ce45055915805524fed19018ce98275c8e743a279b0ad35c1b5bdff38f",
+      "pages": 10
+    },
+    "zh": {
+      "path": "stage2/paper/framework_zh.pdf",
+      "sha256": "a516a47e21929a9a54a5c13ee860885873c3792912857e759060c6c8eb18a2a2",
+      "pages": 9
+    }
+  },
+  "build": {
+    "engine": "XeLaTeX + BibTeX + XeLaTeX + XeLaTeX",
+    "status": "pass",
+    "final_log_warnings": {
+      "en": [],
+      "zh": []
+    }
+  },
+  "shared_formula_audit": {
+    "macro_count": 33,
+    "unique_labels": 33,
+    "each_language_uses_each_macro_exactly_once": true
+  },
+  "claim_count": 24,
+  "verified_doi_reference_count": 9,
+  "visual_pages": [
+    {
+      "language": "en",
+      "page": 1,
+      "path": "stage2/paper/render/en-01.png",
+      "sha256": "ebcebdd65b538e2dbc8524a8824a8ae001e5866ac7a63216dccc23491b906322",
+      "pixels": [
+        1075,
+        1521
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "result": "pass",
+      "issues": []
+    },
+    {
+      "language": "en",
+      "page": 2,
+      "path": "stage2/paper/render/en-02.png",
+      "sha256": "fc6f2a364176c7af0882a2e958fb95da94e130e6d3adc6244abb521714bb3b52",
+      "pixels": [
+        1075,
+        1521
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "result": "pass",
+      "issues": []
+    },
+    {
+      "language": "en",
+      "page": 3,
+      "path": "stage2/paper/render/en-03.png",
+      "sha256": "1197e1583b60021b33ccd37cc51f4408c16a49e787a893241e764eadda8ef965",
+      "pixels": [
+        1075,
+        1521
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "result": "pass",
+      "issues": []
+    },
+    {
+      "language": "en",
+      "page": 4,
+      "path": "stage2/paper/render/en-04.png",
+      "sha256": "7d8a30b3bab7b521227244ebbd25923bff2921063aad6cd1eb0d69f6e70a66f3",
+      "pixels": [
+        1075,
+        1521
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "result": "pass",
+      "issues": []
+    },
+    {
+      "language": "en",
+      "page": 5,
+      "path": "stage2/paper/render/en-05.png",
+      "sha256": "991b57001a6cd649c28f52aa5f7373c70bf8c41e491ed29376247c54a2eea41f",
+      "pixels": [
+        1075,
+        1521
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "result": "pass",
+      "issues": []
+    },
+    {
+      "language": "en",
+      "page": 6,
+      "path": "stage2/paper/render/en-06.png",
+      "sha256": "45a23dae559decb210856ad07a91b5c2621f84f4aebc73f89169d232e3e743dc",
+      "pixels": [
+        1075,
+        1521
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "result": "pass",
+      "issues": []
+    },
+    {
+      "language": "en",
+      "page": 7,
+      "path": "stage2/paper/render/en-07.png",
+      "sha256": "f4c4869ac631c1e7e4c9984bb9a4a2ea652c07e858fa4a2aa3f01a3a51d3689d",
+      "pixels": [
+        1075,
+        1521
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "result": "pass",
+      "issues": []
+    },
+    {
+      "language": "en",
+      "page": 8,
+      "path": "stage2/paper/render/en-08.png",
+      "sha256": "7c57dc02bc4bb481675020790448c87c46042e98ead1c7c6190f0e6adf2a9008",
+      "pixels": [
+        1075,
+        1521
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "result": "pass",
+      "issues": []
+    },
+    {
+      "language": "en",
+      "page": 9,
+      "path": "stage2/paper/render/en-09.png",
+      "sha256": "d34d5e0bbeb71daa5ddd537a18037aae0f884262cad5652d013ae696cf901dd8",
+      "pixels": [
+        1075,
+        1521
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "result": "pass",
+      "issues": []
+    },
+    {
+      "language": "en",
+      "page": 10,
+      "path": "stage2/paper/render/en-10.png",
+      "sha256": "3d88227eec002f64101a37e0bbc543017251093466c756882f4078027ff22402",
+      "pixels": [
+        1075,
+        1521
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "result": "pass",
+      "issues": []
+    },
+    {
+      "language": "zh",
+      "page": 1,
+      "path": "stage2/paper/render/zh-1.png",
+      "sha256": "94dc7aa6880723dfb9347452e97f063c43ec64f972af19d1c59574ad9aef1e2e",
+      "pixels": [
+        1075,
+        1521
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "result": "pass",
+      "issues": []
+    },
+    {
+      "language": "zh",
+      "page": 2,
+      "path": "stage2/paper/render/zh-2.png",
+      "sha256": "2cfdd5a4e7b903c522f48211b691620dbce971820f0bfc867bb02cd5679c4fcf",
+      "pixels": [
+        1075,
+        1521
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "result": "pass",
+      "issues": []
+    },
+    {
+      "language": "zh",
+      "page": 3,
+      "path": "stage2/paper/render/zh-3.png",
+      "sha256": "30bb683819c704abd7a3d31767918e5699c7f61efd5a2e2a168828b7e1066fb9",
+      "pixels": [
+        1075,
+        1521
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "result": "pass",
+      "issues": []
+    },
+    {
+      "language": "zh",
+      "page": 4,
+      "path": "stage2/paper/render/zh-4.png",
+      "sha256": "e1fd94db4498a91ba45b1979dd2ef3f1c6cc4f0eee66b876f795eb4612ed5440",
+      "pixels": [
+        1075,
+        1521
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "result": "pass",
+      "issues": []
+    },
+    {
+      "language": "zh",
+      "page": 5,
+      "path": "stage2/paper/render/zh-5.png",
+      "sha256": "cd55fb04e799991cf05aef0395f76c87e954c6937adcbb02f05d327894541bd6",
+      "pixels": [
+        1075,
+        1521
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "result": "pass",
+      "issues": []
+    },
+    {
+      "language": "zh",
+      "page": 6,
+      "path": "stage2/paper/render/zh-6.png",
+      "sha256": "f9ab72034d5e8345e58436462c7fd0c66b08115b3e23685033330cfeb1bf583f",
+      "pixels": [
+        1075,
+        1521
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "result": "pass",
+      "issues": []
+    },
+    {
+      "language": "zh",
+      "page": 7,
+      "path": "stage2/paper/render/zh-7.png",
+      "sha256": "3664f643d4b61b4eda070a97cce9a218287767e02c2cf4ff6fc1472c7023420c",
+      "pixels": [
+        1075,
+        1521
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "result": "pass",
+      "issues": []
+    },
+    {
+      "language": "zh",
+      "page": 8,
+      "path": "stage2/paper/render/zh-8.png",
+      "sha256": "6018f3a3cda8336ac9d8523fdb28f1efb662c3aaaa11801d19a8148df3ab1306",
+      "pixels": [
+        1075,
+        1521
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "result": "pass",
+      "issues": []
+    },
+    {
+      "language": "zh",
+      "page": 9,
+      "path": "stage2/paper/render/zh-9.png",
+      "sha256": "4eddef164b64eaed47cfbbc76ba67b2238c4f5c0ff4b1ad56fcdb4072fcc782f",
+      "pixels": [
+        1075,
+        1521
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "result": "pass",
+      "issues": []
+    }
+  ],
+  "remaining_issues": [],
+  "notes": [
+    "Finite numerical observations and failed SPD stress fit remain explicitly qualified.",
+    "Initial, evolving, and truncated endpoint transversality are distinct.",
+    "KAM is limited to an ideal analytic exact-symplectic map and proven hypotheses."
+  ]
+}

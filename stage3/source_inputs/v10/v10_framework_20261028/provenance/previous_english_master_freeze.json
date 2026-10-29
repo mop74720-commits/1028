@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-28",
+  "stage": "English master compiled and scientifically reviewed before Chinese translation",
+  "source_commit": "82519542dd057e8fbd6d6879ef33217761e8cbbb",
+  "files": [
+    {
+      "path": "english/figures/new_baseline_results.pdf",
+      "sha256": "e93496ad3c8b98432b8f1881cde91164fcd26b2cf1afc1e5d72a6c585801eb9c"
+    },
+    {
+      "path": "english/figures/new_baseline_verification.pdf",
+      "sha256": "b277e562bfbd215eab3ce76a14ca645595309e52b90d8f85c3c399c4ebca0c19"
+    },
+    {
+      "path": "english/layout_patch.tex",
+      "sha256": "5cfabb1f316add6a7dcc338030e3e0a82d487035100bcbfbe09cc987648e6391"
+    },
+    {
+      "path": "english/main.tex",
+      "sha256": "c106dd87e28d81bb29b08127ece0b9ad0a60b568c217f31952e80c984f65a89c"
+    },
+    {
+      "path": "english/preamble.tex",
+      "sha256": "f1b8d8594fe49711b0d9d3713425396dcb294803ec7193fe265ed6e1a3d24e94"
+    },
+    {
+      "path": "english/sections/analysis.tex",
+      "sha256": "9bcb7dc95e5394730e0d6631b6d4eae6bfd37163e6065106cda0cc22d55a2c67"
+    },
+    {
+      "path": "english/sections/application.tex",
+      "sha256": "6a7b65297fa998a213f29f0e478568ca1298d2b0c70cddb76e5e064430a720ed"
+    },
+    {
+      "path": "english/sections/background.tex",
+      "sha256": "417b71f4f33fb7bb1696da254f7b26c09faf5982e501ee0ef38cb6b2851d6559"
+    },
+    {
+      "path": "english/sections/conclusion.tex",
+      "sha256": "760f9a8a4b0bd89726ea4c125667eb9678ce69881c2e8782e96a8d9a62c4e413"
+    },
+    {
+      "path": "english/sections/endmatter.tex",
+      "sha256": "27bd6767324d8fc5de0859857296105e003e9d2b3f993fc22ead118c8502ebd1"
+    },
+    {
+      "path": "english/sections/kam.tex",
+      "sha256": "463db810c8261927700f4f9d0e6a324a7e180a65c47670d77001fefa1a7d618e"
+    },
+    {
+      "path": "english/sections/mechanics.tex",
+      "sha256": "7dde40756122ce9130c5edb99f2644101dbfaf591cc6af6ed0508bbc2c89546c"
+    },
+    {
+      "path": "english/sections/references.tex",
+      "sha256": "6ef6fac832bd75d9d2b479daf95ef8ee63f48ce4073cc13580efd6668fc276c5"
+    },
+    {
+      "path": "english/sections/structure.tex",
+      "sha256": "2e53eb35f712ca6e9ae6ce0f8c447daa6bc5776e52b1c158f62f56c5ac7f0da6"
+    },
+    {
+      "path": "english/sections/supp_experiments.tex",
+      "sha256": "3d0441f0a1561351525dfeaf1460bc05ddcc3d997fb1ff2a0e9beb8d83e4949b"
+    },
+    {
+      "path": "english/sections/supp_mechanics.tex",
+      "sha256": "8b15008787b9f6d6faf62d6579f7d26d744bbe4e847fac67f66f2e68ce86f3c6"
+    },
+    {
+      "path": "english/sections/supp_structure.tex",
+      "sha256": "61d2c24d0a41c29350460ca4e5b80464f0729bda75b63b969e6a3a31087e8a49"
+    },
+    {
+      "path": "english/supplement.tex",
+      "sha256": "c8afbd153869ba31d2487814ac3761e13ae8b6b42e34bb76766c1c22429fe4a4"
+    },
+    {
+      "path": "output/v10_Integrated_EN.pdf",
+      "sha256": "6e84a0436db3167c505d9caf339af0b013fbd78901ad5145d657b85d931fc9ad"
+    },
+    {
+      "path": "output/v10_Integrated_EN_Supplement.pdf",
+      "sha256": "381793d1fec27d66d05beeed9368b51049b65e96ea805f10e83ef008b19f0c4e"
+    }
+  ]
+}

@@ -1,0 +1,445 @@
+\subsection{Birkhoff 表示的相容性}
+\label{ss:birkhoff}
+
+令 $\alpha_t=\mathcal R(z,t)^{\mathsf T}\dd z$，并令 $\dd\alpha_t$ 的系数矩阵为 $\mathcal K_{ij}=\partial_i\mathcal R_j-\partial_j\mathcal R_i$。在这一约定下，正则一形式 $p^{\mathsf T}\dd q$ 对应 $\mathcal K=-J$。若 $b=\mathcal K\dot z$，则表示式~\eqref{struct:birkhoff} 蕴含
+\begin{equation}\label{ss:birkhoff-compatibility}
+\begin{aligned}
+ \partial_k\mathcal K_{ij}+\partial_i\mathcal K_{jk}
+                       +\partial_j\mathcal K_{ki}&=0,\\
+ \partial_t\mathcal K_{ij}&=\partial_i b_j-\partial_j b_i.
+\end{aligned}
+\end{equation}
+这些恒等式连同 $\det\mathcal K\ne0$，说明不能通过任意指定一个标量 Birkhoff 函数，将耗散力加入固定的正则二形式 \citep{su2007,fengqin}。
+
+对充分光滑局部流 $\Phi_{t,t_0}$，若其由一般向量场 $v(z,t)$ 生成，则可以给出局部存在性构造。选取初始一形式 $\alpha_0$，要求 $\dd\alpha_0$ 非退化，并沿逆流输运：
+\[
+ \alpha_t=(\Phi_{t,t_0}^{-1})^*\alpha_0,
+ \qquad\mathcal B=\alpha_t(v).
+\]
+输运方程 $\partial_t\alpha_t+\mathcal L_v\alpha_t=0$ 和 Cartan 恒等式给出 $\mathcal K v=\dd\mathcal B+\partial_t\alpha_t$。这是依赖相流的局部表示，并非仅由力学系数即可提供的可计算哈密顿约化。它既不建立全局解析坐标图，也不建立自治可积参考。
+
+式~\eqref{struct:weighted-hamiltonian} 中比例阻尼的选择具有构造性。事实上，
+\[
+ -aJ\binom{\dot q}{\dot p}
+ =\binom{aH_q+\dot a\,p}{aH_p},
+\]
+所以 $\dot q=H_p$ 且 $\dot p=-H_q-\alpha p$。作代换 $\Pi=ap$ 可得
+$\dot q=\widetilde H_\Pi$ 和 $\dot\Pi=-\widetilde H_q$，即使质量为 $M(q)$ 时也成立。对常质量情形，将时间中点规则用于
+$\widetilde H=e^{-\alpha t}\Pi^{\mathsf T}M^{-1}\Pi/2+e^{\alpha t}V(q)$，
+再利用 $e^{-\alpha t_m}\bar\Pi=(r p_++r^{-1}p_-)/2$，即可证明式~\eqref{struct:weighted-midpoint}。坐标映射 $T_t(q,p)=(q,e^{\alpha t}p)$ 满足 $DT_t^{\mathsf T}JDT_t=e^{\alpha t}J$。因此，$(q,\Pi)$ 中的辛性拉回后给出
+\[
+ D\Phi^{\mathsf T}\mathcal K(t_+)D\Phi=\mathcal K(t_-),
+ \qquad D\Phi^{\mathsf T}JD\Phi=e^{-\alpha\Delta_t}J.
+\]
+要得到所声明的二阶方法，显式时间依赖项必须在 $t_m$ 求值。对变质量情形，应保留完整的 $\widetilde H_q$，而不能重复使用常质量更新式。
+
+\subsection{端点投影、维度与隐式分支}
+\label{ss:projection}
+
+记 $Z=(q,\Pi)\in\R^{2n}$，并引入
+\[
+ T_0=\diag(I_n,-I_n),\qquad
+ \mathsf E=\begin{pmatrix}0&I_n\\I_n&0\end{pmatrix}.
+\]
+端点变换为
+$\widehat w=\mathsf E(Z_+-Z_-)$、
+$w=T_0(Z_++Z_-)/2$，因此
+\begin{equation}\label{ss:endpoint-matrix}
+ D\alpha=\begin{pmatrix}
+ \mathsf E&-\mathsf E\\T_0/2&T_0/2
+ \end{pmatrix}\in\R^{4n\times4n}.
+\end{equation}
+无需预先假设生成函数存在，即可核验相容恒等式：
+\[
+ \widehat w^{\mathsf T}\dd w
+ = (\Pi_+-\Pi_-)^{\mathsf T}\dd\bar q
+       -(q_+-q_-)^{\mathsf T}\dd\bar\Pi.
+\]
+对其取外微分，得到
+$\dd\lambda_{Z_+}-\dd\lambda_{Z_-}$，其中
+$\lambda_Z=\Pi^{\mathsf T}\dd q$。
+所以它在固定时间端点之间的辛映射图像上闭合。一旦到 $w$ 的投影局部可逆，Poincar\'e 引理便给出命题~\ref{struct:endpoint-proposition} 中的标量生成函数。这同时验证了相容性以及该构造所用的具体投影。
+
+在连续流或离散映射图像 $Z_+=\Phi(Z_-)$ 上，
+\begin{equation}\label{ss:endpoint-projection}
+ D_{Z_-}w=\tfrac12T_0(D\Phi+I_{2n}).
+\end{equation}
+零步长时该矩阵为 $T_0$，因此步长充分小时局部可逆。相流 Jacobian $D\Phi$ 的尺寸为 $2n\times2n$，与力学质量矩阵的尺寸无关。原端点变量可由
+$q_\pm=Q\pm\widehat P/2$ 和
+$\Pi_\pm=-P\pm\widehat Q/2$ 联合恢复。
+无需要求图像函数 $\widehat w=f(w)$ 可逆：它在零步长时恒为零，且 $f_w=0$。
+
+在端点约定中，时间中点生成函数为
+$\varphi_{\Delta_t}(Q,P)=-\Delta_t\widetilde H(Q,-P,t_m)$。
+由于 $P=-\bar\Pi$，其两个导数分别给出
+$\Pi_+-\Pi_-=-\Delta_t\widetilde H_q$ 和
+$q_+-q_-=\Delta_t\widetilde H_\Pi$，物理符号正确。自治约定 $S_\Delta$ 则使用
+$\varphi_\Delta(Q,P)=-S_\Delta(Q,-P)$。
+因此，生成函数须随提升后的动量同步改变；不能只在部分推导中交换物理动量 $p$ 和提升后的动量 $\Pi$。
+
+对中央格式，令
+$\mathcal F(x_+;x_-)=x_+-x_--J\nabla S_\Delta((x_++x_-)/2)$。
+其 Newton 矩阵与精确映射导数为
+\begin{equation}\label{ss:newton-matrix}
+\begin{aligned}
+ \partial_{x_+}\mathcal F&=I_{2n}-C_\Delta,\qquad
+ C_\Delta=\tfrac12J S_\Delta''(m),\\
+ D\Psi_\Delta&=(I_{2n}-C_\Delta)^{-1}(I_{2n}+C_\Delta).
+\end{aligned}
+\end{equation}
+若 $I-C_\Delta$ 可逆，则隐函数定理给出局部唯一分支；数据的解析性进一步给出该分支的解析性。此时式~\eqref{ss:endpoint-projection} 变为
+$D_{x_-}w=T_0(I-C_\Delta)^{-1}$。
+因此，端点投影与隐式求解具有相同的局部非退化条件。实现时求解 Newton 线性方程组，无需显式求矩阵逆。
+
+\subsection{普通中点法中的非交换矩阵消元}
+\label{ss:matrix}
+
+对常矩阵，物理方程为
+$\dot q=M^{-1}p$ 和
+$\dot p=-Kq-CM^{-1}p+F+U$，其中 $M$ 正定、$K$ 对称。普通中点法给出
+\[
+ \bar q=q_-+\frac{\Delta_t}{4}M^{-1}(p_++p_-).
+\]
+代入动量方程，得到
+\begin{equation}\label{ss:matrix-elimination}
+\begin{aligned}
+ E_{\Delta_t}&=\tfrac{\Delta_t^2}{4}KM^{-1}
+                            +\tfrac{\Delta_t}{2}CM^{-1},\\
+ (I_n+E_{\Delta_t})p_+
+   &=(I_n-E_{\Delta_t})p_--\Delta_tKq_-\\
+   &\quad+\Delta_t(F_m+U_m),\\
+ q_+&=q_-+\tfrac{\Delta_t}{2}M^{-1}(p_++p_-).
+\end{aligned}
+\end{equation}
+乘积次序 $KM^{-1}$ 由代入过程确定，不能与 $M^{-1}K$ 交换。依赖状态的输入仍会使更新保持隐式。若 $M=M(q)$，动量方程还包含向量
+\[
+ (b_M)_i=-\tfrac12\bar p^{\mathsf T}
+       [\partial_{q_i}M^{-1}(\bar q)]\bar p.
+\]
+此时更适合直接求解完整的 $2n$ 维中点残差。这一惯性贡献不是标量分母修正。
+
+在平衡坐标中，有效动能质量为 $M_{\rm eff}=\mathsf N^{-1}$，因此 $M_{\rm eff}^{-1}Y=\mathsf N Y$，比例阻尼对应 $C_{\rm eff}=\gamma\mathsf N^{-1}$。质量归一化物理模态坐标中的质量则为 $I_n$；组装后的有限元质量矩阵作用于梁的全部未约束自由度。这三个矩阵描述的是不同坐标系。
+
+\subsection{中央映射的精确辛性}
+\label{ss:exact-symplectic}
+
+由于 $S_\Delta''$ 对称，有 $C_\Delta^{\mathsf T}J+JC_\Delta=0$。展开两个乘积可得
+\[
+ (I-C_\Delta)^{\mathsf T}J(I-C_\Delta)
+ =(I+C_\Delta)^{\mathsf T}J(I+C_\Delta).
+\]
+因子 $I\pm C_\Delta$ 可交换，所以式~\eqref{ss:newton-matrix} 给出 $D\Psi_\Delta^{\mathsf T}JD\Psi_\Delta=J$。为验证更强的精确性，令 $\delta X=X_+-X_-$、$\delta Y=Y_+-Y_-$。中央关系给出 $\delta X=S_{\bar Y}$ 和 $\delta Y=-S_{\bar X}$。因此
+\begin{equation}\label{ss:primitive}
+\begin{aligned}
+ Y_+^{\mathsf T}\dd X_+-Y_-^{\mathsf T}\dd X_-
+ &=\bar Y^{\mathsf T}\dd(\delta X)+\delta Y^{\mathsf T}\dd\bar X\\
+ &=\dd(\bar Y^{\mathsf T}\delta X-S_\Delta).
+\end{aligned}
+\end{equation}
+只要映射分支与 $S_\Delta$ 单值，该原函数便单值。在用于正规形的极坐标图中，
+\[
+ \sum_jY_j\dd X_j
+   =\sum_j I_j\dd\phi_j
+      -\dd\sum_j I_j\sin\phi_j\cos\phi_j.
+\]
+二者之差是周期函数的全微分。随后采用的正规形变换由单值生成函数的哈密顿流给出。因此，共轭后的中央映射在作用--角环域上也具有精确辛性，这正是周期混合生成函数所需的全局一形式条件。
+
+\subsection{四阶中央生成函数的推导}
+\label{ss:central4}
+
+考虑自治光滑向量场 $f=J\nabla h$，令 $x_0$ 为一个时间步中点处的精确状态。Taylor 展开给出
+\begin{equation}\label{ss:central-taylor}
+\begin{aligned}
+ m&=x_0+\tfrac{\Delta^2}{8}f'f(x_0)+O(\Delta^4),\\
+ x_+-x_-&=\Delta f(x_0)\\
+   &\quad+\tfrac{\Delta^3}{24}
+         \{f''[f,f]+(f')^2f\}(x_0)+O(\Delta^5).
+\end{aligned}
+\end{equation}
+其中 $m$ 是端点状态的均值，而不是时间中点状态。消去 $x_0$ 得
+\begin{equation}\label{ss:central-correction}
+\begin{aligned}
+ x_+-x_-={}&\Delta f(m)\\
+ &+\tfrac{\Delta^3}{24}\{f''[f,f]-2(f')^2f\}(m)+O(\Delta^5).
+\end{aligned}
+\end{equation}
+对 $A=h''$ 和 $Q=f^{\mathsf T}Af$，求导可得
+\[
+\begin{aligned}
+ \nabla Q&=h^{(3)}[f,f]-2AJA f,\\
+ J\nabla Q&=f''[f,f]-2(f')^2f.
+\end{aligned}
+\]
+这就证明了式~\eqref{struct:central4}。在固定有限时间区间上，若相关导数有界且隐式分支稳定，局部五阶缺陷便给出全局四阶收敛。由于 $S_{-\Delta}^{[4]}=-S_\Delta^{[4]}$，交换端点并反转步长符号时，该方法也具有对称性。这些性质针对该自治哈密顿方法，并不意味着对一般时变反馈律采用中点离散也有四阶精度。
+
+对 $h=\nu(X^2+Y^2)/2$，中央系数为
+$a=\nu\Delta+(\nu\Delta)^3/12$。
+在正频率约定下，其角度增量为
+\begin{equation}\label{ss:harmonic-phase}
+ 2\arctan(a/2)=\nu\Delta-\frac{(\nu\Delta)^5}{120}+O(\Delta^7).
+\end{equation}
+中点法的角度则为 $2\arctan(\nu\Delta/2)$，局部相位缺陷为三次。该检验区分了两种格式，同时避免将精确辛性与非线性系统中能量或相位的精确保持混为一谈。
+
+\subsection{磁势的 Central4 显式导数}
+\label{ss:central4-magnetic-section}
+
+对于 $h_\kappa=Y^{\mathsf T}\mathsf N Y/2+V_\kappa(X)$，令
+$V_\kappa=X^{\mathsf T}\mathsf N X/2+\kappa g(d^{\mathsf T}X)$、
+$u=\nabla V_\kappa$、$A=\nabla^2V_\kappa$、$v=\mathsf N Y$、
+$s=d^{\mathsf T}X$ 及 $b=d^{\mathsf T}v$，则
+$f^{\mathsf T}h_\kappa''f=v^{\mathsf T}Av+u^{\mathsf T}\mathsf N u$。
+求导得到可直接实现的中央增量
+\begin{equation}\label{ss:central4-magnetic}
+\begin{aligned}
+ J\nabla S_\Delta^{[4]}
+ &=\Delta\binom{v}{-u}+\frac{\Delta^3}{24}\binom{Q}{P},\\
+ Q&=2\mathsf N A v,\\
+ P&=\kappa\sin(s)b^2d-2A\mathsf N u.
+\end{aligned}
+\end{equation}
+修正项 Jacobian 的各分块为
+\begin{equation}\label{ss:central4-magnetic-jacobian}
+\begin{aligned}
+ Q_X&=-2\kappa\sin(s)b(\mathsf N d)d^{\mathsf T},\\
+ Q_Y&=2\mathsf N A\mathsf N,\\
+ P_X&=\kappa[\cos(s)b^2\\
+    &\quad+2\sin(s)d^{\mathsf T}\mathsf N u]dd^{\mathsf T}-2A\mathsf N A,\\
+ P_Y&=2\kappa\sin(s)b\,d(\mathsf N d)^{\mathsf T}.
+\end{aligned}
+\end{equation}
+这些公式由
+$A=\mathsf N+\kappa(\cos s-1)dd^{\mathsf T}$ 及其导数推出，保留了全部跨模态项。它们适用于所指定的自治保守哈密顿量。对于更广泛的学习残差，必须以该残差的完整导数替换单特征公式。不能通过在此中央更新后追加阻尼力来将阻尼纳入该格式。
+
+\subsection{隐式可解性与代数残差累积}
+\label{ss:inexact-solve}
+
+对于普通受控中点方程，固定 $x_k$ 并定义
+$\mathcal F_k(z)=z-x_k-\Delta f_c((z+x_k)/2,\tau_m)$。
+在某个凸局部邻域内，设 $f_c$ 的 Lipschitz 常数为 $L_c$，令 $a=\Delta L_c/2<1$。当步长充分小、使该邻域映入自身时，不动点映射为压缩映射。若 $z_*$ 是其精确根，将 $\mathcal F_k(z_*)=0$ 与 $\mathcal F_k(z)=r$ 相减可得
+\[
+ (1-a)\norm{z-z_*}\le\norm r.
+\]
+对两个不同输入作同样的相减，得到精确一步映射的稳定性因子
+$q_\Delta=(1+a)/(1-a)$。对于命题~\ref{ctrl:convergence} 中的精确轨迹和计算轨迹，迭代得到显式加权和
+\begin{equation}\label{ss:residual-sum}
+\begin{aligned}
+ e_N\le{}&q_\Delta^N e_0\\
+ &+\frac{1}{1-a}\sum_{j=0}^{N-1}
+       q_\Delta^{N-1-j}(C\Delta^3+\eta_j).
+\end{aligned}
+\end{equation}
+当 $N\Delta\le T$ 且 $a$ 与一保持正距离时，
+$q_\Delta^N\le e^{C_LT}$，从而得到式
+\eqref{ctrl:global-error} 中的一致界。当常数满足 $L_c=0$ 时，取 $q_\Delta=1$，同一公式仍成立。该结果允许固定的非零 $\delta R$ 与 $\delta\gamma$：它们改变 $f_c$ 及其相关常数，但不改变中点法逼近同一向量场的阶数。
+
+若中央生成函数在该邻域满足 $S_\Delta''=O(\Delta)$，则隐式导数为 $I-JS_\Delta''/2$。一致的逆界和一步稳定性因子 $1+O(\Delta)$ 给出同样的残差累积论证。自治 Central4 构造在足够高阶导数有界的条件下，局部缺陷为 $O(\Delta^5)$，因此
+\[
+ \max_{k\Delta\le T}e_k
+       \le C_T\bigl(e_0+\Delta^4+\eta_\Delta/\Delta\bigr).
+\]
+特别地，每步残差为 $O(\Delta^5)$ 时保留四阶。无论这一估计还是较小的报告残差，都不能使非精确计算步成为精确辛映射。
+
+加权方法通过正则提升得到相应的二阶有限时间结果。在固定区间内，$T_\tau(X,Y)=(X,e^{\delta\gamma\tau}Y)$ 及其逆的范数有界。对提升后的哈密顿量作完整时间中点离散，满足前述局部与全局论证；变回原坐标仅改变依赖这些界的常数。物理加权方程中的残差必须先换算到提升后的增量方程，该换算在固定区间上有界。这并不给出 $T$ 趋于无穷时关于时间一致的误差界。
+
+残差 $r_k$ 在式 \eqref{ctrl:solve-residual} 中表示代数增量缺陷。辨识方程中的观测缺陷和求积缺陷是不同的量，它们进入式 \eqref{kam:integral-bound} 的系数界。有界但非保守的驱动误差影响已实现的向量场，零阶保持则改变反馈映射。除非首先论证了这些量的保守表示，否则不能将其加入解析哈密顿量范数。
+
+\subsection{复值能量读出的解析延拓}
+\label{ss:analytic-extension}
+
+对实值能量 $h(X,Y)$，延拓后将
+$\zeta=(X+\mathrm iY)/\sqrt2$ 和
+$\chi=(X-\mathrm iY)/\sqrt2$ 视为独立复变量。物理实切片为 $\chi=\bar\zeta$。若冻结的网络表达式 $F(\zeta,\chi)$ 在一个关于 $(\zeta,\chi)\mapsto(\bar\chi,\bar\zeta)$ 不变的域上全纯，则定义
+\begin{equation}\label{ss:conjugate-extension}
+ F^\sharp(\zeta,\chi)=\overline{F(\bar\chi,\bar\zeta)},
+ \qquad h^{\C}=\tfrac12(F+F^\sharp).
+\end{equation}
+对冻结系数取共轭，可使 $F^\sharp$ 保持全纯。限制到物理实切片得到 $h=\Rea F$，而在该切片之外求导时采用全纯微分。该构造明确区分实值读出与对延拓变量施加非全纯运算。仅关于 $\zeta$ 的实值全纯函数，在连通复开域上只能为常数，因此这并非所需的能量表示。
+
+对动量方程中的一般物理力 $f$，若能量自治，则归一化的复动力学与功率恒等式为
+\begin{equation}\label{ss:complex-force}
+ \zeta'=-\mathrm i h_\chi^{\C}+\frac{\mathrm i}{\sqrt2}f,
+ \qquad h'=h_Y^{\mathsf T}f
+\end{equation}
+若通过 $\zeta'=-\mathrm i h_\chi^{\C}+\mathcal P/2$ 定义残差符号，则其归一化为 $\mathcal P=\sqrt2\,\mathrm i f$。通过第二能量分支生成任意该力的实值标量势未必存在：相应导数必须满足混合偏导相容条件。直接解码力或指定的 Rayleigh 耗散，可以避免无依据地要求存在梯度表示。
+
+在复多圆盘上，Cauchy 公式用能量上确界范数除以缩减的域宽，来控制较小多圆盘上的各一阶导数。因此，在明确缩减定义域后，可以由解析能量界推得力范数界。反过来，不能由有限个实梯度样本推出复域上确界范数界。有限特征估计~\eqref{kam:analytic-error} 通过已知基函数提供所需延拓。
+
+\subsection{从线性正则归一化到四次正规形}
+\label{ss:normalform}
+
+在静止稳定平衡点，设 $M_*\succ0$ 且势能 Hessian 矩阵满足 $K_*\succ0$，进行对角化
+$E^{\mathsf T}M_*^{-1/2}K_*M_*^{-1/2}E=\Omega^2$，其中 $E$ 为正交矩阵。变换
+\[
+ q-q_*=A Q,\qquad p=A^{-\mathsf T}P,
+ \qquad A=M_*^{-1/2}E\Omega^{-1/2}
+\]
+是正则的，并给出 $H_2=\tfrac12\sum_j\omega_j(Q_j^2+P_j^2)$。这就是平衡二次型的一般来源；仅有物理质量与刚度模态，并不等于已经得到非线性作用变量。
+
+对 $H=H_2+H_3+H_4+\cdots$，当所需三次项除数非零时，求解
+$\{H_2,W_3\}=-H_3$。由 $W_3$ 的时间一映射作拉回，有
+$H\circ\Phi_{W_3}^1=H+\{H,W_3\}+\tfrac12\{\{H,W_3\},W_3\}+\cdots$，
+因此消去 $H_3$ 后的四次项为
+\begin{equation}\label{ss:cubic-correction}
+ Z_4=\left\langle H_4+\tfrac12\{H_3,W_3\}\right\rangle.
+\end{equation}
+未平均的四次部分由第二个同调方程消去。该公式同时确定了符号和三次项的贡献；一般情况下，仅对原 $H_4$ 求平均是不够的。一般余项从五次起始。在当前偶次磁模型中，$H_3=0$，余项从六次起始。
+
+为计算其四次项，展开
+\begin{equation}\label{ss:quartic-polynomial}
+\begin{aligned}
+ h_{4,\kappa}=-\frac{\kappa}{24}\bigl(&d_1^4X_1^4
+    +4d_1^3d_2X_1^3X_2+6d_1^2d_2^2X_1^2X_2^2\\
+    &+4d_1d_2^3X_1X_2^3+d_2^4X_2^4\bigr).
+\end{aligned}
+\end{equation}
+分别对两个角变量求平均，得到
+$\langle X_j^4\rangle=3I_j^2/2$、
+$\langle X_1^2X_2^2\rangle=I_1I_2$，而奇次交叉项的平均为零。因此
+\[
+ Z_{4,\kappa}=-\frac{\kappa}{16}
+       (d_1^4I_1^2+d_2^4I_2^2)
+       -\frac{\kappa}{4}d_1^2d_2^2I_1I_2,
+\]
+其关于作用变量的 Hessian 矩阵恰为 $A_\kappa$，见式~\eqref{kam:magnetic-twist}。在 $(\phi,I)$ 约定下，
+$\{h_2,W\}=-\nu\cdot\partial_\phi W$。
+若 $h_{4,\kappa}-Z_{4,\kappa}=\sum_{k\ne0}P_{4,k}(I)e^{\mathrm i k\cdot\phi}$，一个解为
+\begin{equation}\label{ss:quartic-generator}
+ W_{4,\kappa}=
+ \sum_{k\ne0}\frac{P_{4,k}(I)}{\mathrm i k\cdot\nu}
+                 e^{\mathrm i k\cdot\phi}.
+\end{equation}
+这里仅出现满足 $|k|_1\le4$ 的有限多个除数。将其写回笛卡尔坐标后，它是四次多项式，因此其局部流在平衡点处正则。极坐标图只用于与零保持距离的作用变量环域；在该域内，$\sqrt{I_j}$ 的分支具有解析延拓。
+
+对 $|X_j|\le r$，记 $z=\norm{d}_1r$。原余弦尾项满足
+\begin{equation}\label{ss:cosine-tail}
+ |h_{\ge6,\kappa}|\le|\kappa|\,\frac{z^6\cosh z}{720}.
+\end{equation}
+完整的变换后余项还包含
+$\{h_{4,\kappa},W_{4,\kappa}\}$ 和
+$\tfrac12\{\{h_2,W_{4,\kappa}\},W_{4,\kappa}\}$，
+二者均为六次项，此外还有更高阶 Lie 项。严格的有限振幅界必须在留有余量的域上控制 $W_{4,\kappa}$ 的局部流、其像及逆映射，以及这些括号项和尾项。记号 $R_6=O(r^6)$ 表示消失阶，而不是数值上确界范数证书。对新基准，计算保留的有限除数得到 $\min_{0<|k|_1\le4}|k\cdot\nu|=1$；这并未控制非线性频率处无穷多个除数。
+
+\subsection{积分误差不等式与实现不确定性}
+\label{ss:integral-error}
+
+对精确窗口积分和端点匹配曲线，物理缺陷为
+\begin{equation}\label{ss:physical-defect}
+\begin{aligned}
+ e_\ell={}&\int_{a_\ell}^{b_\ell}
+ [\dot c_{\ell Y}+\nabla V_0(c_{\ell X})]\dd\tau\\
+ &+\int_{a_\ell}^{b_\ell}
+ [\textstyle\sum_j\beta_{*,j}\nabla F_j(c_{\ell X})
+  +\gamma c_{\ell Y}-U_\ell^{\rm data}]\dd\tau.
+\end{aligned}
+\end{equation}
+它恰等于 $y_\ell-D_\ell\theta_*$。若真实势能存在模型类外残差 $R_{\rm out}$，该恒等式仍是 $e_\ell$ 的代数定义，且被省略的力会进入其界。重构轨迹不必是模型的解；其与真实轨迹的偏差属于观测不确定性。采用数值求积时，对导出矩阵定义 $e=y-D\theta_*$，并将积分误差及依赖系数的设计矩阵不确定性计入 $\epsilon_I$。
+
+为完整起见，令 $\widetilde D,\widetilde y$ 表示理想矩阵，并假设
+$\norm{D-\widetilde D}_2/\sqrt{nL_I}\le\epsilon_D$、
+$\norm{y-\widetilde y}_2/\sqrt{nL_I}\le\epsilon_y$，
+以及 $\norm{\widetilde y-\widetilde D\theta_*}_2/\sqrt{nL_I}\le\epsilon_{\rm obs}$。先验界 $\norm{\theta_*}_2\le B_\theta$ 给出
+\[
+ \epsilon_I\le\epsilon_{\rm obs}+\epsilon_y+\epsilon_D B_\theta.
+\]
+Gram 矩阵下界可以直接对导出矩阵进行认证，也可以通过奇异值扰动估计传递。若 $\sigma_{\min}(\widetilde D/\sqrt{nL_I})\ge s_0$，则有 $\lambda_{\min}(D^{\mathsf T}D/(nL_I))\ge(s_0-\epsilon_D)^2$，其中要求 $s_0>\epsilon_D$。这避免将依赖数值求积的激励结论当作精确结论。
+
+估计式~\eqref{kam:integral-bound} 由下式得到：
+\[
+ \sqrt{\underline\lambda}\norm{\widehat\theta-\theta_*}_2
+ \le\frac{\norm{D(\widehat\theta-\theta_*)}_2}{\sqrt{nL_I}}
+ \le r_I+\epsilon_I.
+\]
+它不要求最小二乘最优性。若所报告残差由冻结的导出系数重新计算，则系数存储舍入已计入其中；时间推进舍入仍属于独立的动力学实现误差。若先用 $\widehat\gamma$ 修正观测，修正后的缺陷仍保留
+$-\delta\gamma\int c_{\ell Y}\dd\tau$。
+联合辨识避免因将估计阻尼当作已知真值而丢失这一项。
+
+\subsection{超出单特征基准的有限 CHNN 读出}
+\label{ss:full-features}
+
+令 $m_4(x)$ 按预先声明的固定次序包含 $\binom{7}{4}=35$ 个四次齐次单项式，其自变量为 $x=(X_1,X_2,Y_1,Y_2)$。令 $v_4$ 为 $-(d^{\mathsf T}X)^4/24$ 在这一基下的系数向量，并令 $U_F\in\R^{35\times34}$ 的列向量标准正交且张成 $v_4^\perp$。定义
+\begin{equation}\label{ss:full-readout}
+\begin{aligned}
+ F(x)&=\binom{g(d^{\mathsf T}X)/\norm{v_4}_2}{U_F^{\mathsf T}m_4(x)},\\
+ h_\eta(x)&=h_2(x)+\eta^{\mathsf T}F(x),\\
+ \eta&=(a\norm{v_4}_2,c),\qquad c\in\R^{34}.
+\end{aligned}
+\end{equation}
+四次 Taylor 系数张成全部 $35$ 个方向，而第一个特征保留完整余弦尾项。标称能量满足 $a=1,c=0$；最小学习模型满足 $a=1+\widehat\beta,c=0$。因此，本次实验是该解析读出的一个受限成员。$35$ 系数模型未在新基准上重新训练，也不将先前参数集的性能或认证结果赋予它。
+
+若更广的状态方程建模为
+$x'=L_2x+V_F(x)\eta-\gamma Q(x)+u^{\rm data}$，
+其中 $L_2x=J\nabla h_2$、
+$V_F=[J\nabla F_1,\ldots,J\nabla F_{35}]$、
+$Q=(0,Y)^{\mathsf T}$ 和 $u^{\rm data}=(0,U^{\rm data})^{\mathsf T}$，则其积分设计为
+\begin{equation}\label{ss:full-design}
+\begin{aligned}
+ D_\ell^{35}&=\int_{a_\ell}^{b_\ell}[V_F(c_\ell),-Q(c_\ell)]\dd\tau,\\
+ y_\ell^{35}&=c_\ell(b_\ell)-c_\ell(a_\ell)
+       -\int_{a_\ell}^{b_\ell}(L_2c_\ell+u^{\rm data})\dd\tau.
+\end{aligned}
+\end{equation}
+每个窗口包含四个标量方程，以及计入阻尼后的 $36$ 个未知系数。归一化计数为 $4L_I$，必须在这一维度下重新进行缺陷与 Gram 矩阵分析。也可按窗口长度归一化，但必须同时施加于 $D_\ell$ 和 $y_\ell$，并一致地传递至各范数。经过认证的系数界随后给出
+$\norm{\widehat h-h_*}_{\mathcal U}\le b_{35}(\sum_{j=1}^{35}\norm{F_j}_{\mathcal U}^2)^{1/2}$，
+再加上所声明的模型类误差预算。
+
+列向量 $Q$ 以所声明的线性动量阻尼为前提。若一般能量改变了 $h_Y$，同时保留式~\eqref{mech:decoder} 中基于速度的 Rayleigh 定律，则阻尼力为 $-\gamma\mathsf N^{-1}h_Y$，而不是 $-\gamma Y$。此时必须改变阻尼回归项，且联合辨识未必仍对能量和阻尼系数保持线性。
+
+含动量的学习项会改变 $h_Y$，因此不能直接套用纯势反馈律~\eqref{struct:route-a-control} 和~\eqref{struct:route-b-control}。若要将这类模型用作参考，目标动量 $\widetilde Y$ 可由
+$\widehat h_Y(X,\widetilde Y)=\omega_0^{-1}D_s^{-1}\dot a$
+恢复，前提是 $\widehat h_{YY}$ 在所选域上局部可逆。参考加速度为
+\begin{equation}\label{ss:general-reference-acceleration}
+ \ddot a^{\rm ref}=\omega_0^2D_s
+    (\widehat h_{YX}\widehat h_Y-\widehat h_{YY}\widehat h_X).
+\end{equation}
+动能固定的物理受控对象仍需独立且适合其模型的物理力估计，才能进行补偿。学习参考中的动量项并不等于未知物理势能的估计。因此，对同一有限读出的复值实现与实值实现，应采用匹配的特征、数据和误差预算进行比较。
+
+\subsection{中央离散格式中的映射 KAM 假设}
+\label{ss:map-kam}
+
+对主要补偿问题，取 $\mathcal T=\mathcal T_1$、$H=h_c\circ\mathcal T_1=H_{\rm NF}^{1}+P_c$ 和 $\norm{P_c}\le\epsilon_c$。以下论证也适用于补充材料~\ref{sec:supp-tracking} 中经过单独验证的参考坐标图；对所声明的任一情形，统一写作 $H=H_{\rm NF}+P$、$\norm P\le\epsilon$。需要分析的精确数值映射为 $\widehat\Psi_\Delta=\mathcal T^{-1}\Psi_\Delta\mathcal T$。由命题~\ref{ctrl:structure-proposition} 和补充材料~\ref{ss:exact-symplectic}，该映射精确辛。在较小定义域上的解析局部误差估计给出
+$\norm{\widehat\Psi_\Delta-\Phi_H^\Delta}\le C\Delta^{p+1}$。
+对 $\nabla P$ 的 Cauchy 估计及短时间流估计给出
+$\norm{\Phi_H^\Delta-\Phi_{H_{\rm NF}}^\Delta}\le C'\Delta\epsilon$。
+将两者相加即证明式 \eqref{kam:map-closeness} 的形式。坐标图导数及其逆导数的界包含在这些常数中。
+
+当映射扰动充分小时，混合端点投影 $(I_-,\phi_-)\mapsto(I_+,\phi_-)$ 可逆。精确辛性由此给出周期混合生成函数扰动 $G_\Delta$，它在相差一个常数的意义下确定，并满足
+\begin{equation}\label{ss:mixed-map}
+\begin{aligned}
+ I_+&=I_--\partial_\phi G_\Delta(I_+,\phi_-),\\
+ \phi_+&=\phi_-+\Delta\omega(I_+)
+                   +\partial_I G_\Delta(I_+,\phi_-).
+\end{aligned}
+\end{equation}
+缩减定义域后的界为
+$\norm{G_\Delta}\le C_3\Delta\epsilon+C_4\Delta^{p+1}$，
+这就是 \citet[Section~4]{shang} 的近可积应用中使用的联合扰动形式。只有在具备所需解析界和逆映射界的已声明域族上，才能将这些常数统一选取。
+
+为使条件明确，下面完整列出一条充分的定理路径。在半径为 $\rho_I$ 的作用变量复邻域上，假设
+\begin{equation}\label{ss:twist-bounds}
+ \iota\norm v_\infty\le\norm{D_I\omega(I)v}_\infty
+                   \le\Theta\norm v_\infty,
+ \qquad0<\iota\le\Theta.
+\end{equation}
+对仿射频率映射，这些界由 $A$ 和 $A^{-1}$ 得到，例如可取 $\iota=\norm{A^{-1}}_\infty^{-1}$ 及 $\Theta=\norm A_\infty$。选择 $\tau_D>n+1$、$0<\Delta\le1$ 以及
+$0<\gamma_D\le\min(1,\rho_I\Theta/2)$。
+所保留频率到频率域边界的距离至少为 $2\gamma_D$，且满足式~\eqref{kam:map-divisors}。\citet[Theorem~2 and Remark~2]{shang} 的解析版本要求在其指定的较小复作用--角域上满足
+\begin{equation}\label{ss:map-threshold}
+ \norm{G_\Delta/\Delta}
+       \le\delta_0\gamma_D^2\iota^2\Theta^{-3},
+\end{equation}
+其中 $\delta_0>0$ 依赖于定理的维度、指数和复域宽度。若频率域有界且满足指定的边界正则性，即可使用其正测度结论。对两个模态，本文使用该定理中的充分指数条件 $\tau_D>3$。较弱的连续条件 $\tau_D>1$ 见式~\eqref{kam:flow-divisors}，属于另一条定理。
+
+因此，经过验证的不等式
+$C_3\epsilon+C_4\Delta^p\le\delta_0\gamma_D^2\iota^2\Theta^{-3}$，
+结合定义域与非共振条件，给出所提出的离散结论。该公式列明需要核验的内容，并不意味着已对新基准的 $\delta_0$、坐标图常数或完整余项完成数值核算。它也说明，在非零建模扰动固定时，取小步长极限不会消除该扰动。连续流环面与离散映射环面不必相同。
+
+\subsection{有限振幅认证与假设适用范围}
+\label{ss:certificate-scope}
+
+除了局部正规形预算，还可以对候选环面进行后验认证。给定周期解析嵌入 $K:\T^2\to\R^4$ 和固定频率 $\omega$，其流缺陷为
+\[
+ E(\phi)=J\nabla h(K(\phi))-D K(\phi)\omega.
+\]
+可用的后验定理还要求复条带延拓、定义域余量、非退化性与扭转矩阵逆的界，以及丢番图常数；该缺陷必须满足相应定理的定量不等式 \citep{haro2019aposteriori}。仅有数值 Fourier 表示和较小的采样缺陷，并不能验证这些前提。先前计算的嵌入、余项、修正半径或振幅证书，均未赋予当前新材料与磁体模型。
+
+主线将相容的生成函数构造、实际补偿隐式方程、包含代数残差的有限时间收敛，以及精确保守映射的条件性持续存在连接起来。各步所需假设不同：有限时间收敛允许残余阻尼，而经典映射 KAM 定理不允许。补充材料~\ref{sec:supp-tracking} 中的参考跟踪，以及第~\ref{sec:application} 节的整梁驱动与净空，都需要各自的控制和力学估计，不能仅由数值不变环面诊断推出。

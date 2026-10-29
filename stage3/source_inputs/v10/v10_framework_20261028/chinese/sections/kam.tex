@@ -1,0 +1,184 @@
+\subsection{从非零积分损失到可控扰动}
+\label{kam:learning-section}
+
+长期行为问题针对补偿后导管的精确隐式映射。由命题~\ref{ctrl:structure-proposition}，当残余阻尼为零且广义输入以保守方式实现时，该映射精确辛。其哈密顿量为 $h_c=h_0+\delta R$，因此连接离散 KAM 需要在某个邻域上界定 $\delta R$，而不只是沿有限条轨迹吻合。\citet{chen2022} 的非零损失观点启发了这一连接。对于本文采用的有限特征读出，可以将其写成确定性的显式关系，无须假设训练残差为零，也不将实域预测误差当作解析范数。
+
+令 $D,y$ 为式~\eqref{struct:integral-design} 中堆叠后的量，并记 $\theta_*=(\beta_*^{\mathsf T},\gamma)^{\mathsf T}$、$e=y-D\theta_*$。定义
+\begin{equation}\label{kam:gram}
+ G_I=\frac{D^{\mathsf T}D}{nL_I},\qquad
+ r_I=\frac{\norm{D\widehat\theta-y}_2}{\sqrt{nL_I}}.
+\end{equation}
+缺陷 $e$ 包含观测重构、输入标定、数值求积和模型类误差。假设独立估计对实际使用的矩阵给出
+$\norm e_2/\sqrt{nL_I}\le\epsilon_I$ 及
+$\lambda_{\min}(G_I)\ge\underline\lambda>0$，则有
+\begin{equation}\label{kam:integral-bound}
+ \norm{\widehat\theta-\theta_*}_2
+ \le b_I:=\frac{r_I+\epsilon_I}{\sqrt{\underline\lambda}}.
+\end{equation}
+事实上，$D(\widehat\theta-\theta_*)=(D\widehat\theta-y)+e$，而 $D/\sqrt{nL_I}$ 的最小奇异值给出其左端范数的下界。该论证适用于任意拟合系数，包括带约束的阻尼估计。增加观测量只有在改善缺陷界或改善 $G_I$ 所反映的激励程度时才有帮助。
+
+令 $\mathcal U\subset\C^{2n}$ 为真实工作域 $K$ 的指定复邻域，定义
+\begin{equation}\label{kam:feature-bounds}
+\begin{aligned}
+ B_F(\mathcal U)&=\left(\sum_j\norm{F_j}_{\mathcal U}^{2}\right)^{1/2},\\
+ B_{\nabla F}(K)&=\left(\sum_j\sup_K\norm{\nabla F_j}_2^2\right)^{1/2}.
+\end{aligned}
+\end{equation}
+若 $R_*=\sum_j\beta_{*,j}F_j+R_{\rm out}$，由 Cauchy--Schwarz 不等式得
+\begin{equation}\label{kam:analytic-error}
+\begin{aligned}
+ \norm{\delta R}_{\mathcal U}
+    &\le b_I B_F(\mathcal U)+\norm{R_{\rm out}}_{\mathcal U},\\
+ \sup_K\norm{\nabla\delta R}_2
+    &\le b_I B_{\nabla F}(K)+\sup_K\norm{\nabla R_{\rm out}}_2,\\
+ |\delta\gamma|&\le b_I.
+\end{aligned}
+\end{equation}
+第一行是 KAM 所需的能量扰动预算，第二、三行则进入跟踪方程。在较小复域上的导数界也可由 Cauchy 估计得到，并显式依赖于缩减的域宽。独立控制的 $R_{\rm out}$ 必须同时计入观测缺陷和这些函数界。对合成的单特征受控对象，该项为零。第~\ref{sec:analysis} 节报告的基于数值真值的缺陷，是对该实验的诊断；严格证书或实验验证还需要经过验证的不确定性界。
+
+\subsection{实解析性与正确的复延拓}
+\label{kam:analyticity}
+
+采用复状态坐标本身并不意味着满足解析性假设。能量在 $(X,Y)\in\R^{2n}$ 上为实值，其延拓关于 $2n$ 个独立复变量 $(X,Y)$ 全纯，等价地，也关于独立的 $(\zeta,\chi)$ 全纯。在物理实切片上满足 $\chi=\bar\zeta$，但在延拓域中求导时不施加这一共轭关系。例如，
+\begin{equation}\label{kam:complex-energy}
+\begin{aligned}
+ h_0^{\C}(\zeta,\chi)
+  ={}&\sum_j\nu_j\zeta_j\chi_j
+      +1-\cos\!\left(\frac{d^{\mathsf T}(\zeta+\chi)}{\sqrt2}\right)\\
+     &-\frac{[d^{\mathsf T}(\zeta+\chi)]^2}{4}.
+\end{aligned}
+\end{equation}
+这是物理实值能量的延拓，并非仅关于 $\zeta$ 的全纯函数。将
+$\zeta'=-\mathrm i h_\chi^{\C}$ 与
+$\chi'=\mathrm i h_\zeta^{\C}$ 限制到实切片，即得到对应的物理哈密顿方程。
+
+对神经网络读出，每一步运算都必须在选定域上具有全纯延拓。多项式与余弦特征满足这一要求。亚纯激活函数要求所选域避开其极点；分段线性激活函数不满足这里使用的解析 KAM 版本。输出端的取实部操作，应通过独立变量中的共轭对称系数进行延拓，而不是在复域内施加非全纯的取实部操作。补充材料~\ref{ss:analytic-extension} 给出这一构造。真实残差与学习残差都必须具备所声明的正则性。有限次可微 KAM 定理是另一种选择，其可微性和范数假设不同；本基准不调用该类定理。
+
+\subsection{真正的局部作用--角模型及其扭转矩阵}
+\label{kam:normalform-section}
+
+平衡变量已经将正定二次能量对角化为 $h_2=\tfrac12\sum_j\nu_j(X_j^2+Y_j^2)$。极坐标
+$X_j=\sqrt{2I_j}\cos\phi_j$、
+$Y_j=-\sqrt{2I_j}\sin\phi_j$
+是正则坐标，并给出 $h_2=\nu\cdot I$。其中的径向变量 $I_j$ 并不是耦合余弦哈密顿量的精确作用变量。在分离可积部分与余项之前，需要构造近恒等的正则正规形变换。
+
+为计算标称扭转矩阵，在标量族中取 $\kappa=1$，该族为 $h_\kappa=h_2+\kappa g(d^{\mathsf T}X)$。其四次项为 $h_{4,\kappa}=-\kappa(d^{\mathsf T}X)^4/24$。假设
+$k\cdot\nu\ne0$ 对 $0<|k|_1\le4$ 成立，则四次同调方程
+\begin{equation}\label{kam:homological}
+ \{h_2,W_{4,\kappa}\}
+    =-(h_{4,\kappa}-\langle h_{4,\kappa}\rangle)
+\end{equation}
+存在多项式解；泊松括号约定为
+$\{f,g\}=\nabla f^{\mathsf T}J\nabla g$。
+该解的局部 Hamiltonian 流，再接上正作用量域内的极坐标参数化，定义正则坐标图 $\mathcal T_\kappa$。直接作角平均得到
+\begin{equation}\label{kam:magnetic-twist}
+\begin{aligned}
+ h_\kappa\circ\mathcal T_\kappa
+       &=H_{\rm NF}^{\kappa}(I)+R_6^\kappa(I,\phi),\\
+ H_{\rm NF}^{\kappa}(I)
+       &=\nu\cdot I+\tfrac12I^{\mathsf T}A_\kappa I,\\
+ A_\kappa&=-\frac{\kappa}{8}
+ \begin{pmatrix}
+ d_1^4&2d_1^2d_2^2\\
+ 2d_1^2d_2^2&d_2^4
+ \end{pmatrix},\\
+ \det A_\kappa&=-\frac{3\kappa^2d_1^4d_2^4}{64}.
+\end{aligned}
+\end{equation}
+其中非对角项不可缺少。当 $\kappa d_1d_2\ne0$ 时，扭转矩阵不定且非奇异；Kolmogorov 非退化要求可逆，并不要求正定。对于新基准，直接浮点计算得到
+$\det A_1\simeq-1.719\times10^{-5}$ 及
+$\sigma_{\min}(A_1)\simeq2.065\times10^{-3}$。这些是可复现的代数检验，不是环面的区间界。四次阶以内的有限非共振检验，也不同于下文对所有整数向量要求的小除数条件。
+
+由于能量及四次变换保持偶次结构，余项关于笛卡尔坐标振幅从六阶起始。它既包含原余弦函数的尾项，也包含变换产生的泊松括号项。特别地，$W_{4,\kappa}=\kappa W_{4,1}$ 会产生正比于 $\kappa^2$ 的项，因此不能仅将标称尾项估计乘以 $\kappa$ 来得到完整余项。补充材料~\ref{ss:normalform} 给出该构造，以及存在三次项时的扩展。
+
+\subsection{受控正规形及其扰动预算}
+\label{kam:closed-budget-section}
+
+标称坐标图 $\mathcal T_1$ 由补偿控制器所要恢复的同一耦合余弦能量构造。将其用于实际保守闭环，得到
+\begin{equation}\label{kam:closed-budget}
+\begin{aligned}
+ h_c\circ\mathcal T_1
+    &=H_{\rm NF}^{1}(I)+P_c(I,\phi),\\
+ P_c&=R_6^{1}+\delta R\circ\mathcal T_1,\\
+ \epsilon_c&=\norm{R_6^{1}}_{\mathcal D_c}+b_R^c,\\
+ \norm{\delta R\circ\mathcal T_1}_{\mathcal D_c}&\le b_R^c.
+\end{aligned}
+\end{equation}
+选择正作用量域 $\mathcal I_c\Subset(0,\infty)^2$、其复作用量邻域和一个复角条带，合记为 $\mathcal D_c$。在所用定义域上，坐标图及其逆必须解析，且导数有界；它们的实像须位于力学工作域内。只有坐标图的像包含于同一个已有界控制的物理复邻域中，才能将式 \eqref{kam:analytic-error} 的函数界转化为 $b_R^c$。
+
+式 \eqref{kam:closed-budget} 包含两类误差：标称正规形余项和保守辨识误差。即使精确辨识，仍有 $R_6^1$；仅有较小的数据损失，不能界定其中任一项。前述 $A_1$ 的奇异值计算构成代数非退化性检验；要在有限幅度上应用 KAM，还需要定义域余量、完整余项和逆坐标图的界。该矩阵无须正定，但小量检验不能省略其最小奇异值和逆矩阵范数。
+
+学习得到的保守参考采用不同的比较能量：$\widehat h-h_*=-\delta R$；补偿闭环则满足 $h_c-h_0=\delta R$。补充材料~\ref{sec:supp-tracking} 保留了这一区分以及独立的参考跟踪分析。下述主要离散定理针对 $h_c$ 及标称正规形，不以 $\widehat h$ 替换其目标。
+
+\subsection{实际受控数值映射的持续存在结论}
+\label{kam:map-section}
+
+设 $\Psi_\Delta^c$ 为精确求解式 \eqref{ctrl:midpoint} 所定义的映射，其中 $\delta\gamma=0$；也可取由完整 $h_c$ 生成的 Central4 映射。其解析性要求在适当复邻域上存在唯一隐式分支。配合保证端点及映射像留在该邻域内的余量，一个充分的局部条件为
+\begin{equation}\label{kam:implicit-branch}
+ \tfrac12\sup\norm{J S_\Delta''}<1.
+\end{equation}
+对于中点法，该条件为 $\Delta\sup\norm{J\nabla^2h_c}/2<1$。它与补充材料~\ref{ss:projection} 中端点投影和 Newton 矩阵所需的可逆条件相同。式 \eqref{ctrl:exact-primitive} 证明的精确性在解析正则正规形坐标图变换下仍保持，包括周期作用角环域上的情形。
+
+需要分析的数值映射是
+$\mathcal T_1^{-1}\circ\Psi_\Delta^c\circ\mathcal T_1$。
+它通常不同于先作非线性坐标变换再应用中点法。令
+$\mathcal R_\Delta(I,\phi)=(I,\phi+\Delta\omega_0(I))$，
+其中 $\omega_0=\nabla_I H_{\rm NF}^{1}$。在共同且适当缩小的解析域上，局部一致性和流扰动估计给出
+\begin{equation}\label{kam:map-closeness}
+\begin{aligned}
+ &\norm{\mathcal T_1^{-1}\Psi_\Delta^c\mathcal T_1
+            -\mathcal R_\Delta}\\
+ &\qquad\le C_1\Delta\epsilon_c+C_2\Delta^{p+1}.
+\end{aligned}
+\end{equation}
+这里采用周期角变量的提升来比较映射，中点法对应 $p=2$，Central4 对应 $p=4$。这些常数需要相应定义域上的解析导数界和坐标图界。
+
+精确辛性与可逆的混合端点投影共同给出单值周期生成扰动 $G_\Delta$，其基准为 $\Delta H_{\rm NF}^{1}$。缩小定义域后，估计为
+\begin{equation}\label{kam:map-generator-budget}
+ \norm{G_\Delta/\Delta}
+       \le C_3\epsilon_c+C_4\Delta^p.
+\end{equation}
+按 $\Delta$ 归一化至关重要：每步生成函数误差为 $O(\Delta\epsilon_c+\Delta^{p+1})$，而映射定理中的小量为 $O(\epsilon_c+\Delta^p)$ \citep[Section~4]{shang}。减小步长仅能减少该预算中的离散化部分。
+
+非共振条件同样是离散的。每步的角增量为 $\Delta\omega$，允许的频率须满足
+\begin{equation}\label{kam:map-divisors}
+ \left|e^{\mathrm i\Delta k\cdot\omega}-1\right|
+       \ge\Delta\gamma_D|k|_1^{-\tau_D},
+       \qquad k\in\mathbb Z^2\setminus\{0\}.
+\end{equation}
+这包含与 $2\pi$ 的整数倍发生的共振，因此，对指定步长和频率而言，连续非共振条件或有限整数扫描都不够。
+
+\begin{proposition}[补偿后导管的条件性离散持续存在]
+\label{kam:map-theorem}
+假设命题~\ref{ctrl:structure-proposition} 中的保守实现条件成立，真实残差和学习残差实解析，式 \eqref{kam:closed-budget} 中的定义域与坐标图界成立，且精确隐式映射有唯一解析分支。设标称频率映射满足一致的扭转矩阵界
+\[
+ \iota\norm v_\infty\le\norm{D_I\omega_0(I)v}_\infty
+                \le\Theta\norm v_\infty,
+ \qquad0<\iota\le\Theta.
+\]
+选择 $0<\Delta\le1$、$\tau_D>3$，以及
+$0<\gamma_D\le\min(1,\rho_I\Theta/2)$，
+其中 $\rho_I$ 为复作用量半径。保留满足式 \eqref{kam:map-divisors} 且距频率域边界至少 $2\gamma_D$ 的频率。若相关常数及缩小后的解析域满足小量不等式
+\begin{equation}\label{kam:map-smallness}
+ C_3\epsilon_c+C_4\Delta^p
+       \le\delta_0\gamma_D^2\iota^2\Theta^{-3},
+\end{equation}
+其中 $\delta_0$ 取自所用解析映射定理，则 $\Psi_\Delta^c$ 具有相应的拟周期不变环面 Cantor 族。正测度族的结论还需要该定理关于频率域几何与测度的假设。
+\end{proposition}
+
+\begin{proof}
+四次正规形提供可积频率映射，式 \eqref{kam:closed-budget} 界定其 Hamiltonian 扰动。隐式分支与精确辛性在共轭后给出周期混合生成函数；一致性估计给出式 \eqref{kam:map-generator-budget}。该小量条件及所述离散小除数和频率余量，正是 \citet[Theorem~2 and Remark~2]{shang} 的解析假设，近可积应用见该文第~4 节。应用该定理，再通过 $\mathcal T_1$ 将不变环面共轭变换回原坐标，即得结论。补充材料~\ref{ss:map-kam} 列出混合生成方程和需要界定的常数。
+\end{proof}
+
+对于这一仿射频率映射，在所声明的定义域上可取
+$\iota=\norm{A_1^{-1}}_\infty^{-1}$ 和
+$\Theta=\norm{A_1}_\infty$。式 \eqref{kam:map-smallness} 给出的是待验证条件；当前基准尚未对依赖定理的常数、复余项和坐标图界进行数值认证。不能用测得的训练误差替代这些量。
+
+\subsection{连续系统对照与结论范围}
+\label{kam:scope}
+
+连续哈密顿量 $h_c$ 有其独立的条件性 KAM 结论。它采用连续小除数 $|k\cdot\omega|\ge\gamma_D|k|_1^{-\tau_D}$，在两个自由度下允许取指数 $\tau_D>1$，并需要自身的解析小量条件 \citep{poschel}。命题~\ref{kam:flow-theorem} 位于补充材料~\ref{sec:supp-tracking}，给出了该对照及其对学习参考的扩展。它不替代离散小除数检验，也不将连续环面等同于某个指定数值映射的环面。当非零 $\epsilon_c$ 固定时，令 $\Delta\to0$ 既不会消除建模扰动，也不能证明数值环面收敛到近可积连续流的某个指定环面。
+
+当前计算提供了更新后的物理与模态输入、冻结的系数辨识结果、有限数据诊断、四次扭转矩阵，以及理想隐式映射的代数结构。它们没有给出独立认证的观测缺陷界、完整复正规形余项或 KAM 阈值的数值核算。因此，命题~\ref{kam:map-theorem} 对当前基准仍是条件性结果。学习补偿计算保留非零阻尼误差，不能将该计算本身声明为精确辛映射；其有限时间数值收敛性则在命题~\ref{ctrl:convergence} 的假设下由该命题保证。
+
+也可采用后验定理认证有限幅度环面，此时需要近似嵌入、其复条带上的不变性缺陷、Diophantine 频率，以及经过验证的扭转量和定义域界 \citep{haro2019aposteriori}。这些量需要针对当前参数重新计算，先前的环面证书不会自动转移。不变环面描述选定的有界离散运动，并不意味着任意初态都会被吸引到环面上。它们也不能保证整根柔性梁的净空；相应空间与驱动条件在第~\ref{sec:application} 节单独处理。

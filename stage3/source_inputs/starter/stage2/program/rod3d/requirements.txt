@@ -1,0 +1,8 @@
+pyelastica==1.0.0
+numba==0.62.1
+llvmlite==0.45.1
+numpy==2.3.5
+scipy==1.17.0
+matplotlib==3.10.8
+cma==4.5.0
+tqdm==4.70.1

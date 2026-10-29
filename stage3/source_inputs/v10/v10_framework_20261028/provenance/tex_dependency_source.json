@@ -1,0 +1,10 @@
+{
+  "source": "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2023/tlnet-final/archive/",
+  "packages": [
+    "xecjk.tar.xz",
+    "xecjk.source.tar.xz",
+    "ctex.tar.xz",
+    "ctex.source.tar.xz"
+  ],
+  "reason": "Pinned TeX Live 2023 packages compatible with installed LaTeX kernel; no changes to package source."
+}

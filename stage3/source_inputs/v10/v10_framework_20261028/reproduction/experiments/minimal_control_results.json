@@ -1,0 +1,727 @@
+{
+  "scope": "New literature-based FE baseline, artificial two-mode model-error stress test; not robot/hardware identification, neural-network training or KAM certification.",
+  "new_baseline_provenance": {
+    "parameter_file": "/workspace/scratch/41c3ec762399/audit_parameter_sources/new_baseline/new_baseline.json",
+    "parameter_sha256": "d58a6823f1851390d0f4a9b3aba40e74d767649df02c92ac6aec49935814bba9",
+    "amplitude_scale_relative_to_archived_experiment": 0.5,
+    "amplitude_scaling_scope": "all training/validation initial states, route-A test initial state, route-B reference and initial-offset states",
+    "amplitude_scaling_origin": "explicit experimental design for the softer literature-based beam; not a measured amplitude distribution",
+    "beta_0p2_origin": "artificial potential-residual stress test, not a measured material or robot parameter",
+    "baseline_damping_design": "zeta1=0.025, alpha=2*zeta1*omega0, gamma=alpha/omega0=0.05; a scenario, not measured damping",
+    "nontransferable_old_results": "previous frozen modes, learned fit, long-run values and KAM diagnostics/certificates are not imported",
+    "state_error_definition": "sqrt(mean_k ||actual_k-reference_k||_2^2); four balanced dimensionless phase coordinates; no extra division by four",
+    "input_status": "ideal independent local field and gradient commands; no device calibration, saturation or hardware implementation claim"
+  },
+  "parameters": {
+    "nu": [
+      1.0,
+      6.045857300068718
+    ],
+    "d": [
+      0.30722439332376256,
+      0.4504263248454578
+    ],
+    "ell_m": [
+      0.018967344318651182,
+      0.007753476139325548
+    ],
+    "omega0_rad_s": 7.840009161840092,
+    "gamma_true": 0.05,
+    "alpha_s_inv_scenario": 0.3920004580920046,
+    "zeta1_scenario": 0.025,
+    "beta_artificial_true": 0.2,
+    "E0_J": 5.315526419670723e-07,
+    "dipole_A_m2": 1.771842139890241e-05,
+    "B0_T": 0.03,
+    "Ds": [
+      9.299435152722878e-05,
+      3.78205311840376e-05
+    ],
+    "mass_matrix_dimensionless": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.16540251454307958
+      ]
+    ],
+    "mass_matrix_note": "M_eff=N^-1 in (X,Y,tau); modal mass I2 applies before balanced scaling."
+  },
+  "identification": {
+    "method": "Two-scalar integral least squares; Simpson quadrature; exact state observations, nonzero numerical integration residual.",
+    "train_initials": [
+      [
+        0.09,
+        0.07,
+        0.025,
+        -0.02
+      ],
+      [
+        -0.075,
+        0.1,
+        0.01,
+        0.025
+      ],
+      [
+        0.11,
+        -0.06,
+        -0.015,
+        0.03
+      ],
+      [
+        0.05,
+        0.12,
+        0.02,
+        -0.01
+      ]
+    ],
+    "validation_initials": [
+      [
+        -0.095,
+        0.055,
+        0.03,
+        0.005
+      ],
+      [
+        0.065,
+        -0.105,
+        -0.02,
+        0.015
+      ]
+    ],
+    "duration_each": 4.0,
+    "training_trajectory_domains": [
+      {
+        "sample_count": 8001,
+        "maximum_abs_phase_coordinate": [
+          0.09337777981518192,
+          0.07186423290285127,
+          0.08983533779418333,
+          0.07233385608686928
+        ],
+        "minimum_phase_coordinate": [
+          -0.08632199421878618,
+          -0.07186423290285127,
+          -0.08983533779418333,
+          -0.07233385608686928
+        ],
+        "maximum_phase_coordinate": [
+          0.09337777981518192,
+          0.07093779921192779,
+          0.0471966800143258,
+          0.07140019030681011
+        ],
+        "maximum_phase_pair_radius": [
+          0.09340770846134702,
+          0.07280109889280519
+        ],
+        "maximum_abs_tip_angle_rad": 0.05918003813832068,
+        "minimum_abs_cos_tip_angle": 0.9982493725642949,
+        "maximum_abs_tip_displacement_m": 0.0022498043184313947,
+        "maxima_status": "sampled along numerical trajectory, not a continuous-time certified bound",
+        "maximum_abs_beam_slope_spatial_grid": 0.0598210965155212,
+        "maximum_abs_beam_displacement_spatial_grid_m": 0.0022498043184313947,
+        "spatial_grid_count": 257
+      },
+      {
+        "sample_count": 8001,
+        "maximum_abs_phase_coordinate": [
+          0.075,
+          0.10307352341008734,
+          0.07279544478452642,
+          0.10240790703971835
+        ],
+        "minimum_phase_coordinate": [
+          -0.075,
+          -0.1017446168585582,
+          -0.057065751834585406,
+          -0.10240790703971835
+        ],
+        "maximum_phase_coordinate": [
+          0.06994886500604518,
+          0.10307352341008734,
+          0.07279544478452642,
+          0.10108634941127985
+        ],
+        "maximum_phase_pair_radius": [
+          0.07566372975210778,
+          0.10307764064044153
+        ],
+        "maximum_abs_tip_angle_rad": 0.06420318364303107,
+        "minimum_abs_cos_tip_angle": 0.99793968347804,
+        "maximum_abs_tip_displacement_m": 0.0020520928602189006,
+        "maxima_status": "sampled along numerical trajectory, not a continuous-time certified bound",
+        "maximum_abs_beam_slope_spatial_grid": 0.06483194032196811,
+        "maximum_abs_beam_displacement_spatial_grid_m": 0.0020520928602189,
+        "spatial_grid_count": 257
+      },
+      {
+        "sample_count": 8001,
+        "maximum_abs_phase_coordinate": [
+          0.11,
+          0.06623537518814432,
+          0.10681063504024975,
+          0.06666655010974573
+        ],
+        "minimum_phase_coordinate": [
+          -0.10263331091211125,
+          -0.0653793711041923,
+          -0.10681063504024975,
+          -0.0658065729823982
+        ],
+        "maximum_phase_coordinate": [
+          0.11,
+          0.06623537518814432,
+          0.0838906201759705,
+          0.06666655010974573
+        ],
+        "maximum_phase_pair_radius": [
+          0.11101801655587258,
+          0.0670820393249937
+        ],
+        "maximum_abs_tip_angle_rad": 0.0594714520392927,
+        "minimum_abs_cos_tip_angle": 0.9982320943569502,
+        "maximum_abs_tip_displacement_m": 0.002426907606718468,
+        "maxima_status": "sampled along numerical trajectory, not a continuous-time certified bound",
+        "maximum_abs_beam_slope_spatial_grid": 0.060152044128309434,
+        "maximum_abs_beam_displacement_spatial_grid_m": 0.0024269076067184674,
+        "spatial_grid_count": 257
+      },
+      {
+        "sample_count": 8001,
+        "maximum_abs_phase_coordinate": [
+          0.053804973833907234,
+          0.12,
+          0.051763237454106124,
+          0.11963689394111167
+        ],
+        "minimum_phase_coordinate": [
+          -0.04973892263814248,
+          -0.11886041574496872,
+          -0.051763237454106124,
+          -0.11963689394111167
+        ],
+        "maximum_phase_coordinate": [
+          0.053804973833907234,
+          0.12,
+          0.02270034903870287,
+          0.11809278959657502
+        ],
+        "maximum_phase_pair_radius": [
+          0.05385164807134505,
+          0.12041594578792295
+        ],
+        "maximum_abs_tip_angle_rad": 0.06941237864764306,
+        "minimum_abs_cos_tip_angle": 0.997591927934851,
+        "maximum_abs_tip_displacement_m": 0.001878784352651625,
+        "maxima_status": "sampled along numerical trajectory, not a continuous-time certified bound",
+        "maximum_abs_beam_slope_spatial_grid": 0.07004676245391649,
+        "maximum_abs_beam_displacement_spatial_grid_m": 0.0018787843526516248,
+        "spatial_grid_count": 257
+      }
+    ],
+    "validation_trajectory_domains": [
+      {
+        "sample_count": 8001,
+        "maximum_abs_phase_coordinate": [
+          0.095,
+          0.0552266917800013,
+          0.09589080562614753,
+          0.05487012881855747
+        ],
+        "minimum_phase_coordinate": [
+          -0.095,
+          -0.05451470579123125,
+          -0.08225760211777627,
+          -0.05487012881855747
+        ],
+        "maximum_phase_coordinate": [
+          0.09214044307065748,
+          0.0552266917800013,
+          0.09589080562614753,
+          0.05416219066795376
+        ],
+        "maximum_phase_pair_radius": [
+          0.09962429422585638,
+          0.055226805085936304
+        ],
+        "maximum_abs_tip_angle_rad": 0.050113398479627556,
+        "minimum_abs_cos_tip_angle": 0.9987445864115978,
+        "maximum_abs_tip_displacement_m": 0.0020750072257886163,
+        "maxima_status": "sampled along numerical trajectory, not a continuous-time certified bound",
+        "maximum_abs_beam_slope_spatial_grid": 0.05069330525376908,
+        "maximum_abs_beam_displacement_spatial_grid_m": 0.0020750072257886163,
+        "spatial_grid_count": 257
+      },
+      {
+        "sample_count": 8001,
+        "maximum_abs_phase_coordinate": [
+          0.065,
+          0.105,
+          0.06545567688837113,
+          0.10538185728900522
+        ],
+        "minimum_phase_coordinate": [
+          -0.06289623385085828,
+          -0.105,
+          -0.06545567688837113,
+          -0.10402192715306419
+        ],
+        "maximum_phase_coordinate": [
+          0.065,
+          0.10469906452431475,
+          0.05597650671561009,
+          0.10538185728900522
+        ],
+        "maximum_phase_pair_radius": [
+          0.06800735254367722,
+          0.10606601717798211
+        ],
+        "maximum_abs_tip_angle_rad": 0.06291427916816804,
+        "minimum_abs_cos_tip_angle": 0.998021549460536,
+        "maximum_abs_tip_displacement_m": 0.0019175899045616245,
+        "maxima_status": "sampled along numerical trajectory, not a continuous-time certified bound",
+        "maximum_abs_beam_slope_spatial_grid": 0.06351708731162052,
+        "maximum_abs_beam_displacement_spatial_grid_m": 0.0019175899045616245,
+        "spatial_grid_count": 257
+      }
+    ],
+    "generator_RK4_step": 0.0005,
+    "observation_step": 0.002,
+    "window_length": 0.04,
+    "observations_per_trajectory": 2001,
+    "training_windows": 400,
+    "validation_windows": 200,
+    "training_scalar_rows": 800,
+    "validation_scalar_rows": 400,
+    "columns_order": [
+      "beta",
+      "gamma"
+    ],
+    "Gram_matrix": [
+      [
+        4.132016967646897e-11,
+        1.9070386514439454e-08
+      ],
+      [
+        1.9070386514439454e-08,
+        0.004476070685569331
+      ]
+    ],
+    "raw_design_cond2": 10418.251254279161,
+    "column_scaled_design_cond2": 1.0453717881660793,
+    "beta_hat": 0.20000336849105763,
+    "gamma_hat": 0.04999999998680363,
+    "training_RMSE": 1.0123438289547264e-12,
+    "validation_RMSE": 9.249159738508334e-13,
+    "test_data_used_for_fit": false,
+    "noise": "none; measurement noise and generalization beyond this family are untested"
+  },
+  "dimension_checks": [
+    {
+      "n": 1,
+      "mass_matrix_shape": [
+        1,
+        1
+      ],
+      "phase_Jacobian_shape": [
+        2,
+        2
+      ],
+      "matrix_elimination_error_Euclidean": 3.878959614448864e-18
+    },
+    {
+      "n": 2,
+      "mass_matrix_shape": [
+        2,
+        2
+      ],
+      "phase_Jacobian_shape": [
+        4,
+        4
+      ],
+      "matrix_elimination_error_Euclidean": 7.757919228897728e-18
+    },
+    {
+      "n": 4,
+      "mass_matrix_shape": [
+        4,
+        4
+      ],
+      "phase_Jacobian_shape": [
+        8,
+        8
+      ],
+      "matrix_elimination_error_Euclidean": 9.813077866773595e-18
+    }
+  ],
+  "comparison": {
+    "initial_state": [
+      0.09,
+      0.08,
+      0.015,
+      -0.01
+    ],
+    "duration_tau": 20.0,
+    "duration_seconds": 2.551017427039064,
+    "step_tau": 0.001,
+    "samples_per_group": 20001,
+    "groups": {
+      "passive": {
+        "beta_hat": 0.0,
+        "gamma_hat": 0.0,
+        "RMS_target_state_error": 0.02924528069078887,
+        "maximum_target_state_error": 0.047302291074977146,
+        "endpoint_target_state_error": 0.047302291074977146,
+        "maximum_nominal_energy_drift": 0.015014160982802028,
+        "relative_maximum_nominal_energy_drift": 0.6305596137210682,
+        "RMS_control_norm": 0.0,
+        "integral_control_norm_squared": 0.0,
+        "maximum_abs_By_T": 3.6546516168594663e-22,
+        "maximum_gradient_spectral2_T_per_m": 2.0549027272706725e-20,
+        "maximum_abs_tip_force_N": 3.640963245553561e-25,
+        "maximum_input_reconstruction_error": 9.258410400700661e-21,
+        "maximum_Lambda_U_reconstruction_error": 5.296324741683903e-23,
+        "RMS_continuous_vectorfield_mismatch_to_V0": 0.0034051324652329485,
+        "maximum_abs_tip_angle_rad": 0.06368430138677525,
+        "physical_target_errors": {
+          "RMS_tip_displacement_error_m": 0.00032237613685468127,
+          "maximum_abs_tip_displacement_error_m": 0.0008535027292659849,
+          "RMS_tip_angle_error_rad": 0.007982772152005277
+        },
+        "state_domain": {
+          "sample_count": 20001,
+          "maximum_abs_phase_coordinate": [
+            0.09123483338549788,
+            0.08,
+            0.0877736235238908,
+            0.08010045481545029
+          ],
+          "minimum_phase_coordinate": [
+            -0.08434123972104236,
+            -0.07958071466307615,
+            -0.0877736235238908,
+            -0.08010045481545029
+          ],
+          "maximum_phase_coordinate": [
+            0.09123483338549788,
+            0.08,
+            0.08114125633509058,
+            0.07906681860864205
+          ],
+          "maximum_phase_pair_radius": [
+            0.09124143795447329,
+            0.0806225774829855
+          ],
+          "maximum_abs_tip_angle_rad": 0.06368430138677525,
+          "minimum_abs_cos_tip_angle": 0.9979728401450986,
+          "maximum_abs_tip_displacement_m": 0.0023273390798246502,
+          "maxima_status": "sampled along numerical trajectory, not a continuous-time certified bound",
+          "maximum_abs_beam_slope_spatial_grid": 0.06435639840126012,
+          "maximum_abs_beam_displacement_spatial_grid_m": 0.0023273390798246502,
+          "spatial_grid_count": 257
+        },
+        "input_domain": {
+          "maximum_abs_By_T": 3.6546543307030837e-22,
+          "maximum_total_local_field_T": 0.03,
+          "total_local_field_formula": "sqrt(B0^2 + By^2)",
+          "maximum_local_gradient_spectral2_T_per_m": 2.152924162308694e-20,
+          "maximum_abs_tip_force_N": 3.8146417547664417e-25,
+          "maximum_abs_added_By_torque_N_m": 6.46234853557053e-27,
+          "maximum_input_reconstruction_error": 9.87706574737609e-21,
+          "sampled_sites": "all stored endpoints and all adjacent state midpoints",
+          "implementation_status": "algebraic ideal local port realization; no coil design or device limit verified"
+        },
+        "maximum_Newton_residual_infinity_norm": 7.901123331988114e-18,
+        "maximum_Newton_corrections": 1,
+        "maximum_ideal_Cayley_symplectic_defect_spectral2": null
+      },
+      "damping_only": {
+        "beta_hat": 0.0,
+        "gamma_hat": 0.04999999998680363,
+        "RMS_target_state_error": 2.4343704998429105e-05,
+        "maximum_target_state_error": 4.246183906188449e-05,
+        "endpoint_target_state_error": 4.246183906188449e-05,
+        "maximum_nominal_energy_drift": 1.3705613244319181e-07,
+        "relative_maximum_nominal_energy_drift": 5.756036719632535e-06,
+        "RMS_control_norm": 0.004268544856161302,
+        "integral_control_norm_squared": 0.0003644120341038921,
+        "maximum_abs_By_T": 0.0005444887561944637,
+        "maximum_gradient_spectral2_T_per_m": 0.01603424489467793,
+        "maximum_abs_tip_force_N": 2.841015078571031e-07,
+        "maximum_input_reconstruction_error": 8.845388854693243e-18,
+        "maximum_Lambda_U_reconstruction_error": 6.769338820198498e-20,
+        "RMS_continuous_vectorfield_mismatch_to_V0": 1.5399761539221329e-06,
+        "maximum_abs_tip_angle_rad": 0.06371654828841886,
+        "physical_target_errors": {
+          "RMS_tip_displacement_error_m": 1.43530560648017e-07,
+          "maximum_abs_tip_displacement_error_m": 4.423079857963513e-07,
+          "RMS_tip_angle_error_rad": 7.699745465304729e-06
+        },
+        "state_domain": {
+          "sample_count": 20001,
+          "maximum_abs_phase_coordinate": [
+            0.0912418155349706,
+            0.08062259071599348,
+            0.09123991681342865,
+            0.08062127232028116
+          ],
+          "minimum_phase_coordinate": [
+            -0.09124179342402564,
+            -0.08062259071599348,
+            -0.09123991681342865,
+            -0.08062123948861939
+          ],
+          "maximum_phase_coordinate": [
+            0.0912418155349706,
+            0.08062258297218161,
+            0.09123936953230954,
+            0.08062127232028116
+          ],
+          "maximum_phase_pair_radius": [
+            0.09124181782246862,
+            0.0806225936695522
+          ],
+          "maximum_abs_tip_angle_rad": 0.06371654828841886,
+          "minimum_abs_cos_tip_angle": 0.9979707873926791,
+          "maximum_abs_tip_displacement_m": 0.0023273390798246502,
+          "maxima_status": "sampled along numerical trajectory, not a continuous-time certified bound",
+          "maximum_abs_beam_slope_spatial_grid": 0.06438686545405249,
+          "maximum_abs_beam_displacement_spatial_grid_m": 0.0023273390798246502,
+          "spatial_grid_count": 257
+        },
+        "input_domain": {
+          "maximum_abs_By_T": 0.0005444887561944637,
+          "maximum_total_local_field_T": 0.030004940726580717,
+          "total_local_field_formula": "sqrt(B0^2 + By^2)",
+          "maximum_local_gradient_spectral2_T_per_m": 0.016034244894677925,
+          "maximum_abs_tip_force_N": 2.841015078571031e-07,
+          "maximum_abs_added_By_torque_N_m": 9.647480625825257e-09,
+          "maximum_input_reconstruction_error": 9.69739903612216e-18,
+          "sampled_sites": "all stored endpoints and all adjacent state midpoints",
+          "implementation_status": "algebraic ideal local port realization; no coil design or device limit verified"
+        },
+        "maximum_Newton_residual_infinity_norm": 8.090858712173077e-18,
+        "maximum_Newton_corrections": 1,
+        "maximum_ideal_Cayley_symplectic_defect_spectral2": null
+      },
+      "learned": {
+        "beta_hat": 0.20000336849105763,
+        "gamma_hat": 0.04999999998680363,
+        "RMS_target_state_error": 1.714378882260593e-05,
+        "maximum_target_state_error": 2.969359242512617e-05,
+        "endpoint_target_state_error": 2.969359242512617e-05,
+        "maximum_nominal_energy_drift": 5.645199585568861e-12,
+        "relative_maximum_nominal_energy_drift": 2.37085167405093e-10,
+        "RMS_control_norm": 0.004268588951032626,
+        "integral_control_norm_squared": 0.0003644195625316654,
+        "maximum_abs_By_T": 0.000544490197569228,
+        "maximum_gradient_spectral2_T_per_m": 0.016034287405048836,
+        "maximum_abs_tip_force_N": 2.841022610737687e-07,
+        "maximum_input_reconstruction_error": 8.228515941976643e-18,
+        "maximum_Lambda_U_reconstruction_error": 5.985080437407925e-20,
+        "RMS_continuous_vectorfield_mismatch_to_V0": 2.5942267576526466e-11,
+        "maximum_abs_tip_angle_rad": 0.06371626997440989,
+        "physical_target_errors": {
+          "RMS_tip_displacement_error_m": 9.411953656586998e-08,
+          "maximum_abs_tip_displacement_error_m": 2.3243671226135397e-07,
+          "RMS_tip_angle_error_rad": 5.466922194106969e-06
+        },
+        "state_domain": {
+          "sample_count": 20001,
+          "maximum_abs_phase_coordinate": [
+            0.09124175330710017,
+            0.08062259001410373,
+            0.09124017033521585,
+            0.08062148793297313
+          ],
+          "minimum_phase_coordinate": [
+            -0.09124173370747513,
+            -0.08062259001410373,
+            -0.09124017033521585,
+            -0.08062145957200265
+          ],
+          "maximum_phase_coordinate": [
+            0.09124175330710017,
+            0.08062258234849884,
+            0.0912397142717354,
+            0.08062148793297313
+          ],
+          "maximum_phase_pair_radius": [
+            0.09124175445616194,
+            0.08062259095101051
+          ],
+          "maximum_abs_tip_angle_rad": 0.06371626997440989,
+          "minimum_abs_cos_tip_angle": 0.9979708051138519,
+          "maximum_abs_tip_displacement_m": 0.0023273390798246502,
+          "maxima_status": "sampled along numerical trajectory, not a continuous-time certified bound",
+          "maximum_abs_beam_slope_spatial_grid": 0.06438658200196617,
+          "maximum_abs_beam_displacement_spatial_grid_m": 0.0023273390798246502,
+          "spatial_grid_count": 257
+        },
+        "input_domain": {
+          "maximum_abs_By_T": 0.000544490197569228,
+          "maximum_total_local_field_T": 0.030004940752736856,
+          "total_local_field_formula": "sqrt(B0^2 + By^2)",
+          "maximum_local_gradient_spectral2_T_per_m": 0.016034287405048836,
+          "maximum_abs_tip_force_N": 2.841022610737687e-07,
+          "maximum_abs_added_By_torque_N_m": 9.64750616884504e-09,
+          "maximum_input_reconstruction_error": 1.1636878843346593e-17,
+          "sampled_sites": "all stored endpoints and all adjacent state midpoints",
+          "implementation_status": "algebraic ideal local port realization; no coil design or device limit verified"
+        },
+        "maximum_Newton_residual_infinity_norm": 7.779150587583494e-18,
+        "maximum_Newton_corrections": 1,
+        "maximum_ideal_Cayley_symplectic_defect_spectral2": null
+      },
+      "oracle": {
+        "beta_hat": 0.2,
+        "gamma_hat": 0.05,
+        "RMS_target_state_error": 1.71439037554454e-05,
+        "maximum_target_state_error": 2.9693795982411895e-05,
+        "endpoint_target_state_error": 2.9693795982411895e-05,
+        "maximum_nominal_energy_drift": 3.24492863135184e-12,
+        "relative_maximum_nominal_energy_drift": 1.3627940626728193e-10,
+        "RMS_control_norm": 0.0042685889516890715,
+        "integral_control_norm_squared": 0.0003644195626437565,
+        "maximum_abs_By_T": 0.0005444901977174012,
+        "maximum_gradient_spectral2_T_per_m": 0.01603428740940502,
+        "maximum_abs_tip_force_N": 2.8410226115095345e-07,
+        "maximum_input_reconstruction_error": 8.375768792001969e-18,
+        "maximum_Lambda_U_reconstruction_error": 6.173654400019971e-20,
+        "RMS_continuous_vectorfield_mismatch_to_V0": 0.0,
+        "maximum_abs_tip_angle_rad": 0.06371626998580344,
+        "physical_target_errors": {
+          "RMS_tip_displacement_error_m": 9.412018510937041e-08,
+          "maximum_abs_tip_displacement_error_m": 2.3244035846012745e-07,
+          "RMS_tip_angle_error_rad": 5.466958920197646e-06
+        },
+        "state_domain": {
+          "sample_count": 20001,
+          "maximum_abs_phase_coordinate": [
+            0.09124175331950216,
+            0.08062259002269453,
+            0.09124017033189363,
+            0.08062148793196887
+          ],
+          "minimum_phase_coordinate": [
+            -0.09124173371037402,
+            -0.08062259002269453,
+            -0.09124017033189363,
+            -0.0806214595761817
+          ],
+          "maximum_phase_coordinate": [
+            0.09124175331950216,
+            0.0806225823518283,
+            0.0912397142763139,
+            0.08062148793196887
+          ],
+          "maximum_phase_pair_radius": [
+            0.09124175446859051,
+            0.0806225909596258
+          ],
+          "maximum_abs_tip_angle_rad": 0.06371626998580344,
+          "minimum_abs_cos_tip_angle": 0.9979708051131265,
+          "maximum_abs_tip_displacement_m": 0.0023273390798246502,
+          "maxima_status": "sampled along numerical trajectory, not a continuous-time certified bound",
+          "maximum_abs_beam_slope_spatial_grid": 0.06438658201351646,
+          "maximum_abs_beam_displacement_spatial_grid_m": 0.0023273390798246502,
+          "spatial_grid_count": 257
+        },
+        "input_domain": {
+          "maximum_abs_By_T": 0.0005444901977174012,
+          "maximum_total_local_field_T": 0.030004940752739545,
+          "total_local_field_formula": "sqrt(B0^2 + By^2)",
+          "maximum_local_gradient_spectral2_T_per_m": 0.01603428740940502,
+          "maximum_abs_tip_force_N": 2.8410226115095345e-07,
+          "maximum_abs_added_By_torque_N_m": 9.647506171470365e-09,
+          "maximum_input_reconstruction_error": 9.055522398700297e-18,
+          "sampled_sites": "all stored endpoints and all adjacent state midpoints",
+          "implementation_status": "algebraic ideal local port realization; no coil design or device limit verified"
+        },
+        "maximum_Newton_residual_infinity_norm": 7.765598060427426e-18,
+        "maximum_Newton_corrections": 1,
+        "maximum_ideal_Cayley_symplectic_defect_spectral2": 2.226534318924483e-16
+      }
+    }
+  },
+  "reference_validation": {
+    "method": "Independent explicit RK4 for conservative V0; no implicit solver or controller used.",
+    "coarse_step": 0.0005,
+    "fine_step": 0.00025,
+    "maximum_refinement_state_difference": 6.360010191661372e-12
+  },
+  "oracle_midpoint_convergence": [
+    {
+      "step": 0.04,
+      "maximum_state_error": 0.046431032339580236,
+      "endpoint_state_error": 0.046431032339580236,
+      "observed_order": null,
+      "maximum_Newton_residual_infinity_norm": 1.8086281170642815e-14,
+      "maximum_Newton_corrections": 2,
+      "maximum_ideal_Cayley_symplectic_defect_spectral2": 4.442868391489575e-16
+    },
+    {
+      "step": 0.02,
+      "maximum_state_error": 0.011840935522794945,
+      "endpoint_state_error": 0.011840935522794945,
+      "observed_order": 1.9713062886860877,
+      "maximum_Newton_residual_infinity_norm": 1.918127115474455e-14,
+      "maximum_Newton_corrections": 2,
+      "maximum_ideal_Cayley_symplectic_defect_spectral2": 4.440962471207095e-16
+    },
+    {
+      "step": 0.01,
+      "maximum_state_error": 0.0029676014370004413,
+      "endpoint_state_error": 0.0029676014370004413,
+      "observed_order": 1.9964138199381876,
+      "maximum_Newton_residual_infinity_norm": 1.9953656782423224e-14,
+      "maximum_Newton_corrections": 2,
+      "maximum_ideal_Cayley_symplectic_defect_spectral2": 4.440948121542916e-16
+    },
+    {
+      "step": 0.005,
+      "maximum_state_error": 0.0007422446245796148,
+      "endpoint_state_error": 0.0007422446245796148,
+      "observed_order": 1.9993306989573856,
+      "maximum_Newton_residual_infinity_norm": 5.137383574105314e-15,
+      "maximum_Newton_corrections": 1,
+      "maximum_ideal_Cayley_symplectic_defect_spectral2": 3.330673707943791e-16
+    }
+  ],
+  "physical_interface": {
+    "A_mag": [
+      [
+        203.96232682043637,
+        3303.6887539756344
+      ],
+      [
+        205.00706617780008,
+        11909.571620071882
+      ]
+    ],
+    "raw_condition_number_not_unit_invariant": 87.23237432191863,
+    "column_normalized_condition_number": 3.8185962704197705,
+    "Lambda_diagonal": [
+      0.005715966972590088,
+      0.014054605404151953
+    ],
+    "minimum_abs_cos_theta_observed": 0.9979707873926791,
+    "source": "new_baseline.json: recomputed FE with literature-based material and designed N50 magnet core; no old frozen mode coefficients.",
+    "assumption": "Two independently commanded local field and gradient ports, exact sensing and no saturation; only algebraic realization checked.",
+    "all_groups_simulate_reconstructed_physical_control": true
+  },
+  "interpretation": [
+    "V0 retains its cross-mode cosine coupling; no new separable target is introduced.",
+    "Only oracle damping cancellation supports the ideal standard-symplectic claim. gamma_hat differs from gamma_true.",
+    "Cayley defects test the ideal implicitly defined map evaluated at solved midpoints, not exact symplecticity of floating-point code.",
+    "Energy drift refers to h0; no expression is labeled an exact nonlinear action.",
+    "Control efficacy here is closeness to the same conservative reference, not tracking attraction or hardware safety.",
+    "Noiseless two-parameter fitting does not establish general CHNN learning performance."
+  ],
+  "elapsed_seconds": 28.736418997999863,
+  "status": "all assertions passed",
+  "metadata_correction_after_run": "Corrected the textual RMS formula to the Euclidean-vector form actually used by the unchanged numerical code; numerical results were not modified."
+}

@@ -1,0 +1,570 @@
+{
+  "reviewer": "birkhoff_discrete",
+  "status": "complete_with_required_fixes",
+  "started_utc": "2026-10-29T02:59:21.080114+00:00",
+  "method": "Individual page images opened via view_image with detail=original; no thumbnail contact sheet or text-only substitute.",
+  "scope": {
+    "first_page": 84,
+    "last_page": 109,
+    "count": 26
+  },
+  "pages": [
+    {
+      "page": 84,
+      "path": "stage2/report/render_release/page-84.png",
+      "sha256": "c1705f7b2e7b856cd2e7d28b1eaef3db00a8e28518f1d15c6b525515cc63f10d",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "status": "needs_fix",
+      "issues": [
+        {
+          "page": 84,
+          "severity": "must_fix",
+          "location": "Equation (L5), integer-index domain and end of equation",
+          "description": "Two visible red inverted-question-mark placeholders. The nonzero integer domain is rendered with missing set difference / opening brace, and another placeholder follows the (L5) label.",
+          "expected": "k in Z^n \\setminus \\{0\\}; no red placeholders."
+        }
+      ]
+    },
+    {
+      "page": 85,
+      "path": "stage2/report/render_release/page-85.png",
+      "sha256": "ed70cd29419f6370bdc1b2ab4d571843ae17c50cd0ad606512422e59fbc0d890",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 86,
+      "path": "stage2/report/render_release/page-86.png",
+      "sha256": "57e4d6df8594aa869529ee5238840c690f74480696a94528995a60707d35fb4f",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 87,
+      "path": "stage2/report/render_release/page-87.png",
+      "sha256": "10fcfa48bd94d9f51f190c83482083cfc2cff12a03659e57dfa40f3c4242ce73",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "status": "needs_fix",
+      "issues": [
+        {
+          "page": 87,
+          "severity": "must_fix",
+          "location": "Section 8.6.3.2 energy error table, final column, all four rows",
+          "description": "Right table boundary clips the powers of ten in all four complex-network ranges; exponent values are not visible.",
+          "expected": "Complete ranges with visible multiplication and exponents, using lawful line breaks or wider/common-exponent presentation."
+        }
+      ]
+    },
+    {
+      "page": 88,
+      "path": "stage2/report/render_release/page-88.png",
+      "sha256": "2e320c3d53447efee4efe81d32b01da9347ca08e96327b5c97f633dbc95f02d2",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 89,
+      "path": "stage2/report/render_release/page-89.png",
+      "sha256": "2f3e058c5ee20b6d0fb9ee3a01b2693398c4cc8964d8fc920a70e5baf7a59b9c",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "status": "needs_fix",
+      "issues": [
+        {
+          "page": 89,
+          "severity": "must_fix",
+          "location": "Section 8.7 imported SPD note mathematics",
+          "description": "Backslash math delimiters were not recognized; inline or display commands disappear or render as literal underscores/braces. Major formulas are absent on pages 89–92, numerical exponents or symbols are damaged on pages 93–98.",
+          "expected": "Render complete unchanged source mathematics after delimiter normalization.",
+          "source_fix": "Parent-authorized normalization of 103 inline and 14 display delimiter pairs in notes/learning_spd.md completed; rebuild and reinspection pending."
+        }
+      ]
+    },
+    {
+      "page": 90,
+      "path": "stage2/report/render_release/page-90.png",
+      "sha256": "d83d70981e59310ff6ecb28fe4f22be1babfb88269139ba63693b60b8b626fce",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "status": "needs_fix",
+      "issues": [
+        {
+          "page": 90,
+          "severity": "must_fix",
+          "location": "Section 8.7 imported SPD note mathematics",
+          "description": "Backslash math delimiters were not recognized; inline or display commands disappear or render as literal underscores/braces. Major formulas are absent on pages 89–92, numerical exponents or symbols are damaged on pages 93–98.",
+          "expected": "Render complete unchanged source mathematics after delimiter normalization.",
+          "source_fix": "Parent-authorized normalization of 103 inline and 14 display delimiter pairs in notes/learning_spd.md completed; rebuild and reinspection pending."
+        }
+      ]
+    },
+    {
+      "page": 91,
+      "path": "stage2/report/render_release/page-91.png",
+      "sha256": "35300ae984589ab0efbbd39277ef40cf48488023d5912938a566743b63f268fc",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "status": "needs_fix",
+      "issues": [
+        {
+          "page": 91,
+          "severity": "must_fix",
+          "location": "Section 8.7 imported SPD note mathematics",
+          "description": "Backslash math delimiters were not recognized; inline or display commands disappear or render as literal underscores/braces. Major formulas are absent on pages 89–92, numerical exponents or symbols are damaged on pages 93–98.",
+          "expected": "Render complete unchanged source mathematics after delimiter normalization.",
+          "source_fix": "Parent-authorized normalization of 103 inline and 14 display delimiter pairs in notes/learning_spd.md completed; rebuild and reinspection pending."
+        }
+      ]
+    },
+    {
+      "page": 92,
+      "path": "stage2/report/render_release/page-92.png",
+      "sha256": "57371578387cb48b4dd5f4d4ff480901e1fe40ac84ac9f146444d17dc6c78f01",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "status": "needs_fix",
+      "issues": [
+        {
+          "page": 92,
+          "severity": "must_fix",
+          "location": "Section 8.7 imported SPD note mathematics",
+          "description": "Backslash math delimiters were not recognized; inline or display commands disappear or render as literal underscores/braces. Major formulas are absent on pages 89–92, numerical exponents or symbols are damaged on pages 93–98.",
+          "expected": "Render complete unchanged source mathematics after delimiter normalization.",
+          "source_fix": "Parent-authorized normalization of 103 inline and 14 display delimiter pairs in notes/learning_spd.md completed; rebuild and reinspection pending."
+        }
+      ]
+    },
+    {
+      "page": 93,
+      "path": "stage2/report/render_release/page-93.png",
+      "sha256": "cc1c40a8b9b69675d9bc85a9300ab70a86c9d130735f59f4e682c1c4514f5c51",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "status": "needs_fix",
+      "issues": [
+        {
+          "page": 93,
+          "severity": "must_fix",
+          "location": "Section 8.7 imported SPD note mathematics",
+          "description": "Backslash math delimiters were not recognized; inline or display commands disappear or render as literal underscores/braces. Major formulas are absent on pages 89–92, numerical exponents or symbols are damaged on pages 93–98.",
+          "expected": "Render complete unchanged source mathematics after delimiter normalization.",
+          "source_fix": "Parent-authorized normalization of 103 inline and 14 display delimiter pairs in notes/learning_spd.md completed; rebuild and reinspection pending."
+        }
+      ]
+    },
+    {
+      "page": 94,
+      "path": "stage2/report/render_release/page-94.png",
+      "sha256": "75c868959b980f0947e2106eacf01436ce26d64c5ef8f5cc5f9e16edf2107b4a",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "status": "needs_fix",
+      "issues": [
+        {
+          "page": 94,
+          "severity": "must_fix",
+          "location": "Section 8.7 imported SPD note mathematics",
+          "description": "Backslash math delimiters were not recognized; inline or display commands disappear or render as literal underscores/braces. Major formulas are absent on pages 89–92, numerical exponents or symbols are damaged on pages 93–98.",
+          "expected": "Render complete unchanged source mathematics after delimiter normalization.",
+          "source_fix": "Parent-authorized normalization of 103 inline and 14 display delimiter pairs in notes/learning_spd.md completed; rebuild and reinspection pending."
+        }
+      ]
+    },
+    {
+      "page": 95,
+      "path": "stage2/report/render_release/page-95.png",
+      "sha256": "48f068f55fc60032e216ead6ce3ca95deebc1b9547a29b742a581c70a83add8e",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "status": "needs_fix",
+      "issues": [
+        {
+          "page": 95,
+          "severity": "must_fix",
+          "location": "Section 8.7 imported SPD note mathematics",
+          "description": "Backslash math delimiters were not recognized; inline or display commands disappear or render as literal underscores/braces. Major formulas are absent on pages 89–92, numerical exponents or symbols are damaged on pages 93–98.",
+          "expected": "Render complete unchanged source mathematics after delimiter normalization.",
+          "source_fix": "Parent-authorized normalization of 103 inline and 14 display delimiter pairs in notes/learning_spd.md completed; rebuild and reinspection pending."
+        }
+      ]
+    },
+    {
+      "page": 96,
+      "path": "stage2/report/render_release/page-96.png",
+      "sha256": "2275ddbf33c6dc34122ea8c7e57a5aefcee6b91d4dec74fc143ee7ce5ea5b235",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "status": "needs_fix",
+      "issues": [
+        {
+          "page": 96,
+          "severity": "must_fix",
+          "location": "Section 8.7 imported SPD note mathematics",
+          "description": "Backslash math delimiters were not recognized; inline or display commands disappear or render as literal underscores/braces. Major formulas are absent on pages 89–92, numerical exponents or symbols are damaged on pages 93–98.",
+          "expected": "Render complete unchanged source mathematics after delimiter normalization.",
+          "source_fix": "Parent-authorized normalization of 103 inline and 14 display delimiter pairs in notes/learning_spd.md completed; rebuild and reinspection pending."
+        }
+      ]
+    },
+    {
+      "page": 97,
+      "path": "stage2/report/render_release/page-97.png",
+      "sha256": "103bda6ff37941eab5acd8f7ef2023e4b23675f284ed93488b30601c3d023a7a",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "status": "needs_fix",
+      "issues": [
+        {
+          "page": 97,
+          "severity": "must_fix",
+          "location": "Section 8.7 imported SPD note mathematics",
+          "description": "Backslash math delimiters were not recognized; inline or display commands disappear or render as literal underscores/braces. Major formulas are absent on pages 89–92, numerical exponents or symbols are damaged on pages 93–98.",
+          "expected": "Render complete unchanged source mathematics after delimiter normalization.",
+          "source_fix": "Parent-authorized normalization of 103 inline and 14 display delimiter pairs in notes/learning_spd.md completed; rebuild and reinspection pending."
+        }
+      ]
+    },
+    {
+      "page": 98,
+      "path": "stage2/report/render_release/page-98.png",
+      "sha256": "e9516f4e386ba9ad124c281072ff4ad09c36014ceb817a47ca8c7a5a721a566f",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "status": "needs_fix",
+      "issues": [
+        {
+          "page": 98,
+          "severity": "must_fix",
+          "location": "Section 8.7 imported SPD note mathematics",
+          "description": "Backslash math delimiters were not recognized; inline or display commands disappear or render as literal underscores/braces. Major formulas are absent on pages 89–92, numerical exponents or symbols are damaged on pages 93–98.",
+          "expected": "Render complete unchanged source mathematics after delimiter normalization.",
+          "source_fix": "Parent-authorized normalization of 103 inline and 14 display delimiter pairs in notes/learning_spd.md completed; rebuild and reinspection pending."
+        }
+      ]
+    },
+    {
+      "page": 99,
+      "path": "stage2/report/render_release/page-99.png",
+      "sha256": "835d577f38044875406ff8ff7abf55983005aa75876483b16f227f1d7db827a9",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 100,
+      "path": "stage2/report/render_release/page-100.png",
+      "sha256": "5c3ff5b53d98c370645cdf3b18cb9940b9b6242ee03626c27fad074e549a66f5",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 101,
+      "path": "stage2/report/render_release/page-101.png",
+      "sha256": "b9369390e810ed6f671fc77f01e1ae6f5aa4da2bc52ff55406d47e5c2135c45c",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 102,
+      "path": "stage2/report/render_release/page-102.png",
+      "sha256": "36d6b37b634748882f81825911c2e8a2259c5f002140a185819115673f3e59a2",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 103,
+      "path": "stage2/report/render_release/page-103.png",
+      "sha256": "64c6064801355a97d41e3f5120bad38c1a68370bcf12b6780dfe5a692f1fbd2e",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 104,
+      "path": "stage2/report/render_release/page-104.png",
+      "sha256": "067db597d7988db61089e6feef78b159f4b6543d7ddc95474addb83c4ca95a0f",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 105,
+      "path": "stage2/report/render_release/page-105.png",
+      "sha256": "2945a791688cc6a9b3717d1e5a054feb3261c5513e5a8416907a6e5fa7bcf8f5",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 106,
+      "path": "stage2/report/render_release/page-106.png",
+      "sha256": "ca3bf788945aa4b3de0610255d7e9319634a9e77ebdf16a76a220751582ee307",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 107,
+      "path": "stage2/report/render_release/page-107.png",
+      "sha256": "6f4262c18c23f65b15716de4fcb6dbe94dcb22e280689f6f6d07eeb652801f0a",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 108,
+      "path": "stage2/report/render_release/page-108.png",
+      "sha256": "a90ed27ebffa5301607380b83ff533d696b6a9cc5e8025bd56a8c52edade416d",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 109,
+      "path": "stage2/report/render_release/page-109.png",
+      "sha256": "437d090b07418f31b2bab1020b8ba8ef01b444bf34b39d0835d039cfdd278125",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "status": "pass",
+      "issues": []
+    }
+  ],
+  "issues": [
+    {
+      "page": 84,
+      "severity": "must_fix",
+      "location": "Equation (L5), integer-index domain and end of equation",
+      "description": "Two visible red inverted-question-mark placeholders. The nonzero integer domain is rendered with missing set difference / opening brace, and another placeholder follows the (L5) label.",
+      "expected": "k in Z^n \\setminus \\{0\\}; no red placeholders."
+    },
+    {
+      "page": 87,
+      "severity": "must_fix",
+      "location": "Section 8.6.3.2 energy error table, final column, all four rows",
+      "description": "Right table boundary clips the powers of ten in all four complex-network ranges; exponent values are not visible.",
+      "expected": "Complete ranges with visible multiplication and exponents, using lawful line breaks or wider/common-exponent presentation."
+    },
+    {
+      "page": 89,
+      "severity": "must_fix",
+      "location": "Section 8.7 imported SPD note mathematics",
+      "description": "Backslash math delimiters were not recognized; inline or display commands disappear or render as literal underscores/braces. Major formulas are absent on pages 89–92, numerical exponents or symbols are damaged on pages 93–98.",
+      "expected": "Render complete unchanged source mathematics after delimiter normalization.",
+      "source_fix": "Parent-authorized normalization of 103 inline and 14 display delimiter pairs in notes/learning_spd.md completed; rebuild and reinspection pending."
+    },
+    {
+      "page": 90,
+      "severity": "must_fix",
+      "location": "Section 8.7 imported SPD note mathematics",
+      "description": "Backslash math delimiters were not recognized; inline or display commands disappear or render as literal underscores/braces. Major formulas are absent on pages 89–92, numerical exponents or symbols are damaged on pages 93–98.",
+      "expected": "Render complete unchanged source mathematics after delimiter normalization.",
+      "source_fix": "Parent-authorized normalization of 103 inline and 14 display delimiter pairs in notes/learning_spd.md completed; rebuild and reinspection pending."
+    },
+    {
+      "page": 91,
+      "severity": "must_fix",
+      "location": "Section 8.7 imported SPD note mathematics",
+      "description": "Backslash math delimiters were not recognized; inline or display commands disappear or render as literal underscores/braces. Major formulas are absent on pages 89–92, numerical exponents or symbols are damaged on pages 93–98.",
+      "expected": "Render complete unchanged source mathematics after delimiter normalization.",
+      "source_fix": "Parent-authorized normalization of 103 inline and 14 display delimiter pairs in notes/learning_spd.md completed; rebuild and reinspection pending."
+    },
+    {
+      "page": 92,
+      "severity": "must_fix",
+      "location": "Section 8.7 imported SPD note mathematics",
+      "description": "Backslash math delimiters were not recognized; inline or display commands disappear or render as literal underscores/braces. Major formulas are absent on pages 89–92, numerical exponents or symbols are damaged on pages 93–98.",
+      "expected": "Render complete unchanged source mathematics after delimiter normalization.",
+      "source_fix": "Parent-authorized normalization of 103 inline and 14 display delimiter pairs in notes/learning_spd.md completed; rebuild and reinspection pending."
+    },
+    {
+      "page": 93,
+      "severity": "must_fix",
+      "location": "Section 8.7 imported SPD note mathematics",
+      "description": "Backslash math delimiters were not recognized; inline or display commands disappear or render as literal underscores/braces. Major formulas are absent on pages 89–92, numerical exponents or symbols are damaged on pages 93–98.",
+      "expected": "Render complete unchanged source mathematics after delimiter normalization.",
+      "source_fix": "Parent-authorized normalization of 103 inline and 14 display delimiter pairs in notes/learning_spd.md completed; rebuild and reinspection pending."
+    },
+    {
+      "page": 94,
+      "severity": "must_fix",
+      "location": "Section 8.7 imported SPD note mathematics",
+      "description": "Backslash math delimiters were not recognized; inline or display commands disappear or render as literal underscores/braces. Major formulas are absent on pages 89–92, numerical exponents or symbols are damaged on pages 93–98.",
+      "expected": "Render complete unchanged source mathematics after delimiter normalization.",
+      "source_fix": "Parent-authorized normalization of 103 inline and 14 display delimiter pairs in notes/learning_spd.md completed; rebuild and reinspection pending."
+    },
+    {
+      "page": 95,
+      "severity": "must_fix",
+      "location": "Section 8.7 imported SPD note mathematics",
+      "description": "Backslash math delimiters were not recognized; inline or display commands disappear or render as literal underscores/braces. Major formulas are absent on pages 89–92, numerical exponents or symbols are damaged on pages 93–98.",
+      "expected": "Render complete unchanged source mathematics after delimiter normalization.",
+      "source_fix": "Parent-authorized normalization of 103 inline and 14 display delimiter pairs in notes/learning_spd.md completed; rebuild and reinspection pending."
+    },
+    {
+      "page": 96,
+      "severity": "must_fix",
+      "location": "Section 8.7 imported SPD note mathematics",
+      "description": "Backslash math delimiters were not recognized; inline or display commands disappear or render as literal underscores/braces. Major formulas are absent on pages 89–92, numerical exponents or symbols are damaged on pages 93–98.",
+      "expected": "Render complete unchanged source mathematics after delimiter normalization.",
+      "source_fix": "Parent-authorized normalization of 103 inline and 14 display delimiter pairs in notes/learning_spd.md completed; rebuild and reinspection pending."
+    },
+    {
+      "page": 97,
+      "severity": "must_fix",
+      "location": "Section 8.7 imported SPD note mathematics",
+      "description": "Backslash math delimiters were not recognized; inline or display commands disappear or render as literal underscores/braces. Major formulas are absent on pages 89–92, numerical exponents or symbols are damaged on pages 93–98.",
+      "expected": "Render complete unchanged source mathematics after delimiter normalization.",
+      "source_fix": "Parent-authorized normalization of 103 inline and 14 display delimiter pairs in notes/learning_spd.md completed; rebuild and reinspection pending."
+    },
+    {
+      "page": 98,
+      "severity": "must_fix",
+      "location": "Section 8.7 imported SPD note mathematics",
+      "description": "Backslash math delimiters were not recognized; inline or display commands disappear or render as literal underscores/braces. Major formulas are absent on pages 89–92, numerical exponents or symbols are damaged on pages 93–98.",
+      "expected": "Render complete unchanged source mathematics after delimiter normalization.",
+      "source_fix": "Parent-authorized normalization of 103 inline and 14 display delimiter pairs in notes/learning_spd.md completed; rebuild and reinspection pending."
+    }
+  ],
+  "completed_utc": "2026-10-29T03:02:17.339365+00:00",
+  "images_changed_during_review": [],
+  "summary": {
+    "actual_pages_viewed": 26,
+    "issue_groups": 3,
+    "affected_pages": [
+      84,
+      87,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98
+    ],
+    "passed_pages": [
+      85,
+      86,
+      88,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109
+    ],
+    "required_next_action": "Root rebuild after all reviewers finish, then actual visual reinspection of affected pages and any repaginated continuation."
+  },
+  "source_fix": {
+    "path": "stage2/notes/learning_spd.md",
+    "operation": "Normalize math delimiters only; 103 inline and 14 display pairs; mathematical interiors unchanged.",
+    "sha256": "840f4552126226bd4696dc58ab179e4508fd6d28472c4480e28a67bedf3ce54e",
+    "remaining_backslash_math_delimiters": 0
+  }
+}

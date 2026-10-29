@@ -1,0 +1,102 @@
+{
+  "created_utc": "2026-10-29T02:59:07.094632+00:00",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 4105,
+      "sha256": "fe5820eaa335b1c7d26aa33b18696e943b4f1ac71fe8d9292d5a387a082ca3b0"
+    },
+    {
+      "path": "body_en.tex",
+      "bytes": 21308,
+      "sha256": "1178c6f193a035d85f4d46458232f48ae00804225187dc566e8441e3b28eba1c"
+    },
+    {
+      "path": "body_zh.tex",
+      "bytes": 17544,
+      "sha256": "b15f108702ca53a1d9d15887c35ab0ca1722ac40f8767a2f9703b40f1cb73493"
+    },
+    {
+      "path": "build.sh",
+      "bytes": 651,
+      "sha256": "ee95f553b389d2a0cee12b1520ee4ea17648116198986386fb2cf1c582287fde"
+    },
+    {
+      "path": "claims.tsv",
+      "bytes": 10174,
+      "sha256": "5b12cf3559f8f001e5cf2d17268dc2676d918bfe662339cd5b83dfcb73acd9bb"
+    },
+    {
+      "path": "fonts/NotoSansCJKsc-Regular.otf",
+      "bytes": 16437364,
+      "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b"
+    },
+    {
+      "path": "fonts/OFL.txt",
+      "bytes": 4301,
+      "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+    },
+    {
+      "path": "framework_en.pdf",
+      "bytes": 119811,
+      "sha256": "d18ef4ce45055915805524fed19018ce98275c8e743a279b0ad35c1b5bdff38f"
+    },
+    {
+      "path": "framework_en.tex",
+      "bytes": 274,
+      "sha256": "1f0f2778df7204525a87075881fdcf9ab259c590a482c700acd7fd56baa8f94f"
+    },
+    {
+      "path": "framework_zh.pdf",
+      "bytes": 200878,
+      "sha256": "a516a47e21929a9a54a5c13ee860885873c3792912857e759060c6c8eb18a2a2"
+    },
+    {
+      "path": "framework_zh.tex",
+      "bytes": 246,
+      "sha256": "b54fa3dc41cd47a4d24d3bd34136549ccabff250fd36b1a288a5ca043d69ee0b"
+    },
+    {
+      "path": "preamble.tex",
+      "bytes": 2117,
+      "sha256": "e5b288e60b5817c38264b807a4ae9f877dac06d834895d1880c472a31c2490a8"
+    },
+    {
+      "path": "provenance.json",
+      "bytes": 2000,
+      "sha256": "37547e5e2c70264c6065c3973f25c828ee8e7a736d0da21a3afaa91daf89626b"
+    },
+    {
+      "path": "qa.json",
+      "bytes": 7853,
+      "sha256": "4c0ecd5cbf411c7b8c0c4b7849af17fb420a6360dbdef510c5f217977d551ccf"
+    },
+    {
+      "path": "reference_verification.tsv",
+      "bytes": 2722,
+      "sha256": "e9056d645586399855c96402105727b75b6bac0637cb35f9915c81d2b2af1814"
+    },
+    {
+      "path": "references.bib",
+      "bytes": 3293,
+      "sha256": "e8c867c12a1c7806c8857a65d092dab1402a66b69182f0e9be513d68a14d3ff9"
+    },
+    {
+      "path": "shared_formulas.tex",
+      "bytes": 8720,
+      "sha256": "802840bf14ce36cea44c195b56777c4ee78d4e2869ff235249a63937e713fb17"
+    },
+    {
+      "path": "shared_notation.tex",
+      "bytes": 1545,
+      "sha256": "dc1c27c66d0d41b8914f9536e8813954ed832419d76e13e265ad3aa4cfaf365a"
+    },
+    {
+      "path": "shared_symbols.tex",
+      "bytes": 749,
+      "sha256": "c1f11982999882a20e0034c2922250fd6ed8db6eb3e238716b4636306cd901d2"
+    }
+  ],
+  "excludes": "Reproducible build intermediates and PNG page renders; retained in workspace separately.",
+  "updated_utc": "2026-10-29T03:07:03.932524+00:00"
+}

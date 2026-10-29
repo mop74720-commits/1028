@@ -1,0 +1,81 @@
+{
+  "all_checks_passed": true,
+  "total_inline_math_count": 1652,
+  "files": [
+    {
+      "file": "analysis.tex",
+      "inline_math_count": 188,
+      "identical": true
+    },
+    {
+      "file": "application.tex",
+      "inline_math_count": 64,
+      "identical": true
+    },
+    {
+      "file": "background.tex",
+      "inline_math_count": 3,
+      "identical": true
+    },
+    {
+      "file": "conclusion.tex",
+      "inline_math_count": 0,
+      "identical": true
+    },
+    {
+      "file": "controlled_analysis.tex",
+      "inline_math_count": 59,
+      "identical": true
+    },
+    {
+      "file": "endmatter.tex",
+      "inline_math_count": 0,
+      "identical": true
+    },
+    {
+      "file": "extension_tracking_results.tex",
+      "inline_math_count": 109,
+      "identical": true
+    },
+    {
+      "file": "extension_tracking_theory.tex",
+      "inline_math_count": 35,
+      "identical": true
+    },
+    {
+      "file": "kam.tex",
+      "inline_math_count": 82,
+      "identical": true
+    },
+    {
+      "file": "mechanics.tex",
+      "inline_math_count": 140,
+      "identical": true
+    },
+    {
+      "file": "references.tex",
+      "inline_math_count": 0,
+      "identical": true
+    },
+    {
+      "file": "structure.tex",
+      "inline_math_count": 88,
+      "identical": true
+    },
+    {
+      "file": "supp_experiments.tex",
+      "inline_math_count": 405,
+      "identical": true
+    },
+    {
+      "file": "supp_mechanics.tex",
+      "inline_math_count": 252,
+      "identical": true
+    },
+    {
+      "file": "supp_structure.tex",
+      "inline_math_count": 227,
+      "identical": true
+    }
+  ]
+}

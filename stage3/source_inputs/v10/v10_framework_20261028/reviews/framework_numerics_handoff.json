@@ -1,0 +1,12 @@
+{
+  "english_freeze_files_unchanged": 24,
+  "numeric_source_hashes_current": 9,
+  "current_numerical_tokens": 111,
+  "visual_qa": {
+    "framework_matrix_checks.pdf": "passed: labels, legends, powers and data visible",
+    "framework_closed_loop_checks.pdf": "passed; final Chinese nominal label uses 标称",
+    "new_baseline_results.pdf": "passed: both panels and bar labels visible",
+    "new_baseline_verification.pdf": "passed: all three panels, damping superscripts and legends visible"
+  },
+  "scope": "No LaTeX compilation; root assembles and checks final manuscript layout."
+}

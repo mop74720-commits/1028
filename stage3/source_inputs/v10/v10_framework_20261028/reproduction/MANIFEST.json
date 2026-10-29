@@ -1,0 +1,102 @@
+{
+  "experiments/README.md": {
+    "bytes": 4380,
+    "sha256": "9ee1d6644df749305c1d471c80a7c2a3c296fab0993ead84c1ede25f1c87fa67"
+  },
+  "experiments/baseline_config.py": {
+    "bytes": 5065,
+    "sha256": "7bdb257115686fe5c9f025d7fc7677e351a71f28453e8116f36aa34dd0dff206"
+  },
+  "experiments/control_audit_summary.json": {
+    "bytes": 36881,
+    "sha256": "65cf8e206bc38fee0543d476813aaefb66455e28504e41cb587825102bfd1e5e"
+  },
+  "experiments/damping_sensitivity.py": {
+    "bytes": 8046,
+    "sha256": "e5997e633d4a6a91f02f7f33cc780b48eda0529fec627e2db7341c306098a5b1"
+  },
+  "experiments/damping_sensitivity_results.json": {
+    "bytes": 175491,
+    "sha256": "76a4ad091b38f51271ac08687bcae08030fbf60875f464158b6e26b036d01263"
+  },
+  "experiments/minimal_control_loop.py": {
+    "bytes": 17349,
+    "sha256": "58caffc15104072873bf5bf524173f597d75a1baff11f19130a6e7f700507373"
+  },
+  "experiments/minimal_control_loop.svg": {
+    "bytes": 57086,
+    "sha256": "61c2ebd1545cec58485a4d72d0a467f8086223817808f535034c8a9ecb44cec4"
+  },
+  "experiments/minimal_control_results.json": {
+    "bytes": 28202,
+    "sha256": "dcf128d5ad062a80d525d9cde96d1e7d0eae657da7a2287a23455ed2df4b605d"
+  },
+  "experiments/route_b_shared_data.py": {
+    "bytes": 18534,
+    "sha256": "5d4c0795c832944f995603322ed711a30d7109e255643d81e9522a14d27cae48"
+  },
+  "experiments/route_b_shared_results.json": {
+    "bytes": 39585,
+    "sha256": "63c5453ee02288311878ed335008ca4aabe3be228be79fe31fc6537766075099"
+  },
+  "experiments/run_all.py": {
+    "bytes": 581,
+    "sha256": "5bcee17bd60caebd8f451c9a0d8d1de180021aceb3ecc67e34487711ada5473d"
+  },
+  "experiments/summarize_results.py": {
+    "bytes": 9808,
+    "sha256": "542ce33c4b1e360f5aa4a1317f4ca786753e545be7722610ce35a2a35517a5cc"
+  },
+  "new_baseline.json": {
+    "bytes": 73189,
+    "sha256": "2bac37b2f4444efc6a0ba742139fbf0b35e268e9f4f3597ba13a0793bc2049ac"
+  },
+  "parameter_section.tex": {
+    "bytes": 4738,
+    "sha256": "383627c3b4753b01ee4e08e2cceb862a14c2a6f4fbba7197c4263916e739e133"
+  },
+  "parameter_sources.bib": {
+    "bytes": 1591,
+    "sha256": "a6beab897dcb6a8fadc6b610d0302dd5aacf8927b0a74f0d4079c2cc5b1bc50e"
+  },
+  "reproduce_baseline.py": {
+    "bytes": 19364,
+    "sha256": "b469c746c90b65497005198a5d0102a73110398751cae1985183be631d00e5ec"
+  },
+  "run_all.py": {
+    "bytes": 380,
+    "sha256": "5b05729fad02829b4beb5a3e89aa9bb3b95a5d50c87166491dcfa17072c54c75"
+  },
+  "source_annotation_update.json": {
+    "bytes": 2079,
+    "sha256": "00ff93b55b5fb7a3b33dfbe0d0a185f4b5c5febdc692253b4ad732f8f8349d6e"
+  },
+  "sources/damping_sources.json": {
+    "bytes": 10682,
+    "sha256": "de534dad2a6df02785f17fcea1d9c6b26c27865dc097cf3886d788e24ac11e36"
+  },
+  "sources/material_magnet_sources.json": {
+    "bytes": 12750,
+    "sha256": "a940e79dd5cb8f9d671518b3e8704681b86e6720f55c794acb1a87bf988d5f48"
+  },
+  "sources/missing_parameters_evidence.json": {
+    "bytes": 19880,
+    "sha256": "32fc67e1958d4af72b2a336583ee7291dafb53fbeedd9f307a74f18f13836c47"
+  },
+  "sources/original_reference_model_spec.json": {
+    "bytes": 2503,
+    "sha256": "fd18c090c9f58dac7a5813a5445b7f14c5409ec767c5cb9a4ec38dd2e883ae8c"
+  },
+  "sources/tong_francescon_field_sources.json": {
+    "bytes": 30256,
+    "sha256": "b66305d92a0132b46d5943c5dd7377248aa0673fca98c04638d5be7850308771"
+  },
+  "sources/upstream_fixed_commit_manifest.json": {
+    "bytes": 4043,
+    "sha256": "760447f2b640e93c38dfa28b662e5598bc0856469bb6d2322e80c6a7ba331844"
+  },
+  "参数依据与复算说明.txt": {
+    "bytes": 8590,
+    "sha256": "870fc5748f952d4680b030730c99a90935ad3b813ca7a1a16219728033e4b2d0"
+  }
+}

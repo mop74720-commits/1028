@@ -1,0 +1,129 @@
+{
+  "scope": "Chinese labels and CJK font only; the English data fields, plot geometry, scales and style are unchanged; no experiment was rerun.",
+  "source_files": {
+    "fe": {
+      "path": "reproduction/new_baseline.json",
+      "sha256": "2bac37b2f4444efc6a0ba742139fbf0b35e268e9f4f3597ba13a0793bc2049ac"
+    },
+    "a": {
+      "path": "reproduction/experiments/minimal_control_results.json",
+      "sha256": "dcf128d5ad062a80d525d9cde96d1e7d0eae657da7a2287a23455ed2df4b605d"
+    },
+    "b": {
+      "path": "reproduction/experiments/route_b_shared_results.json",
+      "sha256": "63c5453ee02288311878ed335008ca4aabe3be228be79fe31fc6537766075099"
+    },
+    "audit": {
+      "path": "reproduction/experiments/control_audit_summary.json",
+      "sha256": "65cf8e206bc38fee0543d476813aaefb66455e28504e41cb587825102bfd1e5e"
+    }
+  },
+  "english_plot_source_sha256": "4febb8a2cbe25c2c8a3c9d283b2d42fb8a9dc54d9bef8317647f6d00151e8ad6",
+  "font": "fonts/NotoSansCJKsc-Regular.otf",
+  "font_family": "Noto Sans CJK SC",
+  "font_embedding": "Type 3 vector glyphs for the supplied CFF OpenType font; plot data and graphical styles are unchanged.",
+  "plotted_data": {
+    "route_a_RMS": [
+      0.02924528069078887,
+      2.4343704998429105e-05,
+      1.714378882260593e-05,
+      1.71439037554454e-05
+    ],
+    "route_b_independent_RMS_all": [
+      0.025587481768660523,
+      0.006021845321318727,
+      0.0015891190653289848,
+      0.001589119071098301
+    ],
+    "route_b_independent_RMS_late": [
+      0.034158345660954666,
+      0.00602248758308574,
+      2.2676741956115454e-05,
+      2.2676743094634733e-05
+    ],
+    "fe_elements": [
+      16,
+      32,
+      64
+    ],
+    "fe_relative_errors": [
+      [
+        1.4418888216738424e-07,
+        5.241091991736724e-06,
+        3.986677845180253e-05,
+        0.00015070624228807894
+      ],
+      [
+        9.015081126051427e-09,
+        3.292887267303257e-07,
+        2.518550789254448e-06,
+        9.59029494596031e-06
+      ],
+      [
+        6.245297612395007e-10,
+        2.060500459144521e-08,
+        1.5783055284934733e-07,
+        6.020809784068604e-07
+      ]
+    ],
+    "oracle_midpoint_steps": [
+      0.04,
+      0.02,
+      0.01,
+      0.005
+    ],
+    "oracle_midpoint_errors": [
+      0.046431032339580236,
+      0.011840935522794945,
+      0.0029676014370004413,
+      0.0007422446245796148
+    ],
+    "quadratic_guide": [
+      0.047503655973095346,
+      0.011875913993273837,
+      0.002968978498318459,
+      0.0007422446245796148
+    ],
+    "damping_ratios": [
+      0.0,
+      0.01,
+      0.025,
+      0.05,
+      0.1
+    ],
+    "damping_errors": {
+      "Ap": [
+        3.7736225795142524e-05,
+        0.0067365659144882255,
+        0.015950075018543067,
+        0.029239589781136995,
+        0.0497373832285228
+      ],
+      "Al": [
+        3.428846719542186e-05,
+        3.428846489583986e-05,
+        3.4288461680169695e-05,
+        3.428845717107241e-05,
+        3.428845211932288e-05
+      ],
+      "Bp": [
+        0.00602444449487639,
+        0.00371320927608779,
+        0.016206317453262602,
+        0.03424968348828785,
+        0.0613726632134848
+      ],
+      "Bl": [
+        0.00010956671588884144,
+        0.00010956671618093788,
+        0.00010956671658508406,
+        0.00010956671713825553,
+        0.00010956671768403795
+      ]
+    }
+  },
+  "figures": [
+    "chinese/figures/new_baseline_results.pdf",
+    "chinese/figures/new_baseline_verification.pdf"
+  ]
+}

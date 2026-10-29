@@ -1,0 +1,68 @@
+{
+  "scope": "Exact matrix formula36 and ordinary midpoint are the same method for constant matrices; no distinct efficiency/error claim from renaming.",
+  "cases": [
+    {
+      "n": 8,
+      "commutator_MK_spectral2": 0.01090273147873745,
+      "commutator_MC_spectral2": 0.002368117066020265,
+      "rows": [
+        {
+          "h": 0.2,
+          "eq36_midpoint_matrix_difference_spectral2": 3.376830765136094e-16,
+          "minimum_SPD_elimination_eigenvalue": 1.0287103404441522
+        },
+        {
+          "h": 0.1,
+          "eq36_midpoint_matrix_difference_spectral2": 2.3636218105709635e-16,
+          "minimum_SPD_elimination_eigenvalue": 1.0168875143785747
+        },
+        {
+          "h": 0.05,
+          "eq36_midpoint_matrix_difference_spectral2": 2.2218916192694903e-16,
+          "minimum_SPD_elimination_eigenvalue": 1.0128871415862908
+        },
+        {
+          "h": 0.025,
+          "eq36_midpoint_matrix_difference_spectral2": 2.22153190338181e-16,
+          "minimum_SPD_elimination_eigenvalue": 1.0113648161592115
+        }
+      ]
+    },
+    {
+      "n": 16,
+      "commutator_MK_spectral2": 0.02209853587611829,
+      "commutator_MC_spectral2": 0.006735953153396385,
+      "rows": [
+        {
+          "h": 0.2,
+          "eq36_midpoint_matrix_difference_spectral2": 2.3516895860613097e-16,
+          "minimum_SPD_elimination_eigenvalue": 1.0246174896144156
+        },
+        {
+          "h": 0.1,
+          "eq36_midpoint_matrix_difference_spectral2": 2.2420317908517393e-16,
+          "minimum_SPD_elimination_eigenvalue": 1.0129740571801369
+        },
+        {
+          "h": 0.05,
+          "eq36_midpoint_matrix_difference_spectral2": 2.238304298675594e-16,
+          "minimum_SPD_elimination_eigenvalue": 1.00904912724914
+        },
+        {
+          "h": 0.025,
+          "eq36_midpoint_matrix_difference_spectral2": 2.225024405809142e-16,
+          "minimum_SPD_elimination_eigenvalue": 1.0075608868282728
+        }
+      ]
+    }
+  ],
+  "one_dof_counterexample": {
+    "m": 1,
+    "k": 1,
+    "c": 0.2,
+    "h": 0.1,
+    "det_midpoint": 0.980246913580247,
+    "det_exact": 0.9801986733067554,
+    "weighted_factor_residual": 4.9214791659313306e-05
+  }
+}

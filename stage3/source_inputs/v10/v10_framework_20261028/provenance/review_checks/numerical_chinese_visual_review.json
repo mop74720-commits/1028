@@ -1,0 +1,159 @@
+{
+  "scope": "Read-only visual QA of requested final Chinese PDF render pages. No source, figure, experiment, or compilation was modified or run.",
+  "requested_pages": {
+    "ZH": [
+      10,
+      11,
+      12,
+      13
+    ],
+    "ZH_Supplement": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ]
+  },
+  "actually_reviewed_page_count": 12,
+  "layout_conclusion": "PASS: no clipping, overflow, table overlap, hidden legend data, missing mathematical glyphs or obstructed equation numbers on the reviewed pages.",
+  "packaging_blockers": [],
+  "minor_nonblocking_notes": [
+    {
+      "document": "ZH_Supplement",
+      "page": 16,
+      "location": "S3.12 heading",
+      "observation": "Final character 果 wraps to the second heading line; full title remains present and readable.",
+      "action": "Reported to root; no modification made."
+    }
+  ],
+  "specific_checks": {
+    "long_path_reordering": "Passed on Supplement page 14",
+    "P1_matrix_table_and_figure": "Passed on main page 11",
+    "P3_fixed_error_table_and_figure": "Passed on main page 13",
+    "manufactured_defect_formula_and_table": "Passed on Supplement pages 15 and 17",
+    "S4_tracking_laws_and_reference_corrections": "Passed on Supplement pages 17-19",
+    "S4_figures_damping_and_final_port_table": "Passed on Supplement page 20"
+  },
+  "pages": [
+    {
+      "document": "ZH",
+      "page": 10,
+      "image": "qa/chinese_render/ZH/page_10.png",
+      "sha256": "527e86ad869dcffa511ecb686f43ba02c390d296c9066b3c6efeb455e9518096",
+      "actually_opened": true,
+      "layout_result": "pass",
+      "observations": "P1 geometric-diagnostic prose, physical baseline, equations (53)-(57), P2 fit and physical-interface description are complete and within the two columns."
+    },
+    {
+      "document": "ZH",
+      "page": 11,
+      "image": "qa/chinese_render/ZH/page_11.png",
+      "sha256": "4c3709c16b486ede9323ea886e90927b37114f89b1f4edbf63aa75ecc53218af",
+      "actually_opened": true,
+      "layout_result": "pass",
+      "observations": "Table 4 and all three Figure 1 panels have clear headers, legends, powers and captions. The corrected reference now visibly reads supplementary equation (S63). Fixed-error field (58) fits at the bottom."
+    },
+    {
+      "document": "ZH",
+      "page": 12,
+      "image": "qa/chinese_render/ZH/page_12.png",
+      "sha256": "146347490f9a9de86434206ddee06c95b6c817020f16228954154f7bd323abd7",
+      "actually_opened": true,
+      "layout_result": "pass",
+      "observations": "Restoration Table 5 and nonlinear-order Table 6 fit with all values visible. Damping/port/cap paragraphs and equations (59)-(61) are complete."
+    },
+    {
+      "document": "ZH",
+      "page": 13,
+      "image": "qa/chinese_render/ZH/page_13.png",
+      "sha256": "47a88efb394222e14c6d1bfe93cf89f8ed0b0f09f94db170f088dc8b1b34767b",
+      "actually_opened": true,
+      "layout_result": "pass",
+      "observations": "Table 7 and all three Figure 2 panels fit; Chinese labels and nominal-target legend are complete. Caption and subsequent analytic equations (62)-(63) do not overlap."
+    },
+    {
+      "document": "ZH_Supplement",
+      "page": 13,
+      "image": "qa/chinese_render/ZH_Supplement/page_13.png",
+      "sha256": "3c2906a81c9d427e1cb621783ba6357c873226fdcc1ac9908a7dbe4093ea0c64",
+      "actually_opened": true,
+      "layout_result": "pass",
+      "observations": "Boundary equations (S78), Gram matrix (S79), long Newton stopping condition (S80), and fit/midpoint protocols fit. Equation-number positioning is clear."
+    },
+    {
+      "document": "ZH_Supplement",
+      "page": 14,
+      "image": "qa/chinese_render/ZH_Supplement/page_14.png",
+      "sha256": "901f2eb567a0afbce49eae199679d8124dd5617ee280962ee77ae0b374ddad47",
+      "actually_opened": true,
+      "layout_result": "pass",
+      "observations": "Tables S4-S7 are complete. The repaired package-path sentence starts with reproduction/framework_experiments and fits within the right column; both reproduction command lines are visible."
+    },
+    {
+      "document": "ZH_Supplement",
+      "page": 15,
+      "image": "qa/chinese_render/ZH_Supplement/page_15.png",
+      "sha256": "8b4c4960789670f4fb92d924615959a19c8abd443dacbdd66607de042cab8e12",
+      "actually_opened": true,
+      "layout_result": "pass",
+      "observations": "Tables S8-S9 show all damping estimates and exponents. Matrix initial states and DOP853 settings fit. The two-line manufactured residual equation (S83) and its number are not clipped."
+    },
+    {
+      "document": "ZH_Supplement",
+      "page": 16,
+      "image": "qa/chinese_render/ZH_Supplement/page_16.png",
+      "sha256": "27a1192f4438073ae1d4fa3dbcc7f3fcd19a7d26a2abc59afa1ea1b3508f27ce",
+      "actually_opened": true,
+      "layout_result": "pass",
+      "observations": "Tables S10-S11, nonlinear weighted comparison, historical-scope text, and S4 start fit. Minor cosmetic note: the final character 果 of the S3.12 heading wraps to its second line; no content is missing."
+    },
+    {
+      "document": "ZH_Supplement",
+      "page": 17,
+      "image": "qa/chinese_render/ZH_Supplement/page_17.png",
+      "sha256": "4ee74b9cc68d68260142fed7d9192aa910e446d4c165d04158df5d795f90712f",
+      "actually_opened": true,
+      "layout_result": "pass",
+      "observations": "Tables S12-S13 and tracking equations (S86)-(S89) fit with no number collision. The corrected oracle numerical-check reference visibly points to Supplement S4.4."
+    },
+    {
+      "document": "ZH_Supplement",
+      "page": 18,
+      "image": "qa/chinese_render/ZH_Supplement/page_18.png",
+      "sha256": "9a6cb83f54aac2e7d3efb9c97c71aba94b34c6c194e4d575fb007491c7d057f5",
+      "actually_opened": true,
+      "layout_result": "pass",
+      "observations": "Migration Table S14 wraps within its three columns without row overlap. Conditional proposition and S4.4 tracking result prose are complete; (S86) is now described as the oracle control law."
+    },
+    {
+      "document": "ZH_Supplement",
+      "page": 19,
+      "image": "qa/chinese_render/ZH_Supplement/page_19.png",
+      "sha256": "0848e523098da485cd008fff10e2616cc6de40aeb09915e50ad84c35ac3cc948",
+      "actually_opened": true,
+      "layout_result": "pass",
+      "observations": "Table S15 and S4.5-S4.6 tracking protocols fit. Learned/oracle laws point explicitly to (S84)/(S86). Large end-of-section whitespace is ordinary float placement, not omitted content."
+    },
+    {
+      "document": "ZH_Supplement",
+      "page": 20,
+      "image": "qa/chinese_render/ZH_Supplement/page_20.png",
+      "sha256": "b9ac600224e2e279f58de8f074d96d6bcbb9374c56fb6fadd6fccd1bf632e306",
+      "actually_opened": true,
+      "layout_result": "pass",
+      "observations": "The S4 float page contains both complete comparison figures, their captions, damping Table S16 and final port Table S17. Bar labels, grayscale markers, hatching, damping superscripts and bottom table row are all visible."
+    }
+  ],
+  "root_layout_followup": {
+    "at_utc": "2026-10-28T09:46:46.470319+00:00",
+    "document": "ZH_Supplement",
+    "page": 16,
+    "heading": "条件性净空与历史结果的迁移限制",
+    "viewed_after_final_compile": true,
+    "result": "No orphan final character; formulas, text and table remain complete."
+  }
+}

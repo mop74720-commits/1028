@@ -1,0 +1,131 @@
+\subsection{将反馈置于同一隐式方程中}
+\label{ctrl:placement}
+
+第二个子问题给出已辨识残差及其补偿。第三个子问题考察施加该反馈后形成何种差分格式、保留何种结构，以及数值轨迹如何逼近实际闭环动力学。这些问题针对第~\ref{sec:derivation} 节中的同一受控对象和同一未知中点。将式 \eqref{struct:route-a-control} 代入受控对象，得到受控更新式
+\begin{equation}\label{ctrl:midpoint}
+\begin{aligned}
+ X_+-X_-&=\Delta\mathsf N\bar Y,\\
+ Y_+-Y_-&=-\Delta\nabla(V_0+R_*)(\bar X)
+               -\Delta\gamma\bar Y\\
+        &\quad+\Delta U_A(\bar X,\bar Y)\\
+        &=-\Delta\nabla(V_0+\delta R)(\bar X)
+               -\Delta\delta\gamma\bar Y.
+\end{aligned}
+\end{equation}
+因此，其连续时间目标为
+$f_c(x)=J\nabla h_c(x)+(0,-\delta\gamma Y)^{\mathsf T}$，其中包含固定的辨识误差。连续广义力 $U_A\in\R^2$ 与其离散相空间贡献应加以区分：
+\begin{equation}\label{ctrl:control-increment}
+ \mathcal U_k=\Delta\binom{0}{U_A(\bar X,\bar Y)}\in\R^4.
+\end{equation}
+这种控制放置方式一般不等价于在无控制步之后追加一个向量，也不等价于在未推导相应力的情况下修改生成函数。仿真的受控对象含有 $R_*$；反馈只计算 $\widehat R$ 和 $\widehat\gamma$。第~\ref{sec:application} 节的磁输入映射必须实现同一个力，闭环恒等式才成立。
+
+Birkhoff 构造也有相应的闭环形式。对于常残余阻尼，将阻尼系数 $\delta\gamma$ 和势能 $V_0+\delta R$ 代入式 \eqref{struct:weighted-midpoint}，并令 $r_c=e^{\delta\gamma\Delta/2}$，得到
+\begin{equation}\label{ctrl:weighted-midpoint}
+\begin{aligned}
+ X_+-X_-&=\tfrac{\Delta}{2}\mathsf N
+                  (r_cY_++r_c^{-1}Y_-),\\
+ r_cY_+-r_c^{-1}Y_-&=-\Delta\nabla(V_0+\delta R)(\bar X).
+\end{aligned}
+\end{equation}
+当 $\delta\gamma=0$ 时，它恰为式 \eqref{ctrl:midpoint}。否则，其精确映射保持共形因子 $e^{-\delta\gamma\Delta}$，而普通中点法一般不保持这一精确指数因子。式 \eqref{ctrl:weighted-midpoint} 描述闭环的数学离散及所指定的合成对照。实现其中的权重，需要残余阻尼已被指定或独立辨识；这不意味着学习控制器可以使用未知的受控对象参数。
+
+\subsection{受控映射的精确结构}
+\label{ctrl:structure}
+
+\begin{proposition}[补偿后的结构]
+\label{ctrl:structure-proposition}
+假设广义输入被精确实现，残差能量二阶连续可微，且隐式分支局部唯一。若 $\delta\gamma=0$，则式 \eqref{ctrl:midpoint} 定义的映射精确辛，其中央生成函数为 $S_\Delta^c=\Delta h_c$。若 $\delta\gamma$ 为非零常数，则式 \eqref{ctrl:weighted-midpoint} 的精确映射满足
+\[
+ (D\Phi_c)^{\mathsf T}JD\Phi_c=e^{-\delta\gamma\Delta}J.
+\]
+后一结论针对加权格式，不针对普通受控中点格式。
+\end{proposition}
+
+\begin{proof}
+残余阻尼为零时，式 \eqref{ctrl:midpoint} 为
+$x_+-x_-=\Delta J\nabla h_c(\bar x)$。其切映射由式 \eqref{struct:cayley} 给出，其中 $C_\Delta=\Delta J\nabla^2h_c/2$。由于 $J\nabla^2h_c$ 是 Hamiltonian 矩阵，Cayley 变换保持 $J$。进一步，由式 \eqref{struct:exact-symplectic} 有
+\begin{equation}\label{ctrl:exact-primitive}
+ \Psi_c^*\lambda-\lambda
+ =\dd[\bar Y^{\mathsf T}(X_+-X_-)-\Delta h_c(\bar x)].
+\end{equation}
+这一单值原函数证明了精确辛性。对于非零常残余阻尼，采用
+$\Pi=e^{\delta\gamma\tau}Y$ 的正则提升得到式 \eqref{ctrl:weighted-midpoint}；将其辛形式拉回到两个时间端点，便得到所述因子。补充材料~\ref{ss:exact-symplectic} 给出代数推导以及原函数在周期作用角坐标中的形式。
+\end{proof}
+
+保守学习误差将哈密顿量从 $h_0$ 改为 $h_c=h_0+\delta R$，与上述精确结构相容。阻尼误差即使数值很小，其结构作用也不同。若已实现的广义力还含有误差 $r_U$，则
+\begin{equation}\label{ctrl:power}
+ h_c'=-(\delta\gamma)Y^{\mathsf T}\mathsf N Y
+                         +(\mathsf N Y)^{\mathsf T}r_U.
+\end{equation}
+只有附加误差具有相应的梯度结构时，才能将其纳入自治势能；在单连通位置域上，与动量和时间无关、且关于位置的 Jacobian 对称，是充分条件。一般输入误差、有限 Newton 残差和浮点舍入误差并不具备这一保证。因此，第~\ref{sec:kam} 节的 KAM 结果针对精确保守隐式映射，而下述有限时间收敛结果允许实际闭环含耗散。
+
+\subsection{包含代数求解残差的收敛性}
+\label{ctrl:convergence-section}
+
+设 $x_c(\tau)$ 满足 $x'=f_c(x,\tau)$，其中 $f_c$ 包含固定反馈、受控对象参数和辨识误差。该记号也允许光滑的显式时间依赖。假设 $f_c$ 在包含精确轨迹和数值轨迹的邻域内二阶连续可微，导数有界，关于状态的 Lipschitz 常数为 $L_c$。轨迹及一步映射像与该邻域的边界之间有正余量。当 $\Delta$ 充分小且 $\Delta L_c/2<1$ 时，局部中点方程有唯一分支。
+
+允许计算得到的一步 $\widetilde x_k\mapsto\widetilde x_{k+1}$ 留下如下增量残差：
+\begin{equation}\label{ctrl:solve-residual}
+\begin{aligned}
+ r_k={}&\widetilde x_{k+1}-\widetilde x_k\\
+       &-\Delta f_c((\widetilde x_{k+1}+\widetilde x_k)/2,\tau_m),\\
+ &\norm{r_k}\le\eta_k.
+\end{aligned}
+\end{equation}
+这里始终使用同一个固定向量范数。它是完整增量方程的残差，不是 Newton 修正量的大小。若实现中报告无穷范数，而轨迹误差采用欧氏范数，则残差的范数换算因子至多为 $\sqrt{2n}$；在两模态实验中该因子为 $2$。
+
+\begin{proposition}[包含求解残差的有限时间收敛]
+\label{ctrl:convergence}
+在前述光滑性、定义域和小步长假设下，令
+$e_k=\norm{\widetilde x_k-x_c(\tau_k)}$，并取 $k\Delta\le T$。存在与 $\Delta$ 及残差序列无关的常数，使得
+\begin{equation}\label{ctrl:error-recurrence}
+\begin{aligned}
+ (1-\Delta L_c/2)e_{k+1}
+ &\le(1+\Delta L_c/2)e_k\\
+ &\quad+C\Delta^3+\eta_k.
+\end{aligned}
+\end{equation}
+若每步均满足 $\eta_k\le\eta_\Delta$，则
+\begin{equation}\label{ctrl:global-error}
+ \max_{k\Delta\le T}e_k
+ \le C_T\bigl(e_0+\Delta^2+\eta_\Delta/\Delta\bigr).
+\end{equation}
+更一般地，最后一项可以替换为
+$\sum_{k\Delta<T}\eta_k$。特别地，每步残差为
+$O(\Delta^3)$ 时保留二阶收敛。
+\end{proposition}
+
+\begin{proof}
+将精确解在时间中点作 Taylor 展开，可知代入中点增量方程后留下的缺陷以 $C\Delta^3$ 为上界。从式 \eqref{ctrl:solve-residual} 中减去该方程，利用两组端点平均值处的 Lipschitz 估计，得到
+\[
+ e_{k+1}\le e_k+\tfrac{\Delta L_c}{2}(e_{k+1}+e_k)
+                              +C\Delta^3+\eta_k,
+\]
+从而证明式 \eqref{ctrl:error-recurrence}。选择步长范围，使 $\Delta L_c/2$ 始终小于某个严格小于一的固定数，则放大比
+$(1+\Delta L_c/2)/(1-\Delta L_c/2)$ 以 $1+C_L\Delta$ 为上界。迭代至多 $T/\Delta$ 步，得到有界的指数因子；同时，局部缺陷累积为 $O(\Delta^2)$，代数残差累积至多为 $T\eta_\Delta/\Delta$。这证明式 \eqref{ctrl:global-error} 及其变残差版本。定义域余量保证上述局部方程在整个比较过程中有效；也可利用该余量完成小误差延拓论证。
+\end{proof}
+
+这一结果将求解器容差纳入精度结论。采用固定绝对容差，在不断细化步长时未必能一直保持二阶渐近收敛率。自治 Central4 方法在五阶局部缺陷、更高阶导数界及稳定隐式分支条件成立时，具有类似估计
+$C_T(e_0+\Delta^4+\eta_\Delta/\Delta)$；每步残差为 $O(\Delta^5)$ 时保留四阶。补充材料~\ref{ss:inexact-solve} 给出这一扩展。下文的残差预算检验有意扰动增量方程，以考察累积项；它们与 Newton 迭代实际留下的微小残差加以区分。
+
+\subsection{区分离散误差与补偿误差}
+\label{ctrl:error-separation}
+
+命题~\ref{ctrl:convergence} 中的精确轨迹属于同一实际闭环，并非标称轨迹 $x_0$，后者由 $h_0$ 生成。因此，
+\begin{equation}\label{ctrl:target-error-split}
+ \norm{\widetilde x_k-x_0(\tau_k)}
+ \le e_k+\norm{x_c(\tau_k)-x_0(\tau_k)}.
+\end{equation}
+对于相同初态和共同工作域，记
+$f_c=f_0+\delta f$、$f_0=J\nabla h_0$，并假设
+$\norm{\delta f}\le\rho_f$，且 $f_0$ 在该域内满足常数为 $L_0$ 的 Lipschitz 条件。由 Gronwall 不等式得到
+\[
+ \norm{x_c(\tau)-x_0(\tau)}
+ \le \rho_f\frac{e^{L_0\tau}-1}{L_0},
+\]
+其中，连续延拓值取 $\rho_f\tau$，对应 $L_0=0$ 的情形。对于精确驱动，
+$\rho_f$ 可取上界 $\sup\norm{\nabla\delta R}+|\delta\gamma|\sup\norm Y$。
+减小 $\Delta$ 可以控制式 \eqref{ctrl:target-error-split} 的第一项，但不会消除第二项中固定的保守误差或阻尼误差。因此，独立收敛比较同时使用 $f_c$ 的参考解和标称目标，以回答不同问题。
+
+这些结果适用于在同一隐式步内求值的连续反馈。硬件零阶保持、时延或饱和启动都会改变已实现的向量场或映射。相应误差需要采样控制分析，不能直接改称为 Hamiltonian 扰动。以下实验分别报告实际实现的方程、求解残差和比较轨迹，使数值阶数、补偿效果和几何结构都能得到独立评估。
+

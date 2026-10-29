@@ -1,0 +1,408 @@
+{
+  "central4_identity": "J grad(f^T hessian(h) f) = f_second[f,f] - 2 (f_prime)^2 f",
+  "central4_exact_rational_polynomial_components_pass": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "test_hamiltonian": "(x1^2+2*x2^2+y1^2+2*y2^2)/2+x1^2*x2/7+2*x1*y1*y2/9+(x1+x2)^4/11",
+  "harmonic_phase_through_degree6": "t-t^5/120",
+  "A_nominal": [
+    [
+      -0.001113609159022615,
+      -0.004787391325039717
+    ],
+    [
+      -0.004787391325039717,
+      -0.005145233296927314
+    ]
+  ],
+  "detA_nominal": -1.7189336774299156e-05,
+  "sigma_min_A_nominal": 0.0020650579563513613,
+  "min_finite_divisor_order4": [
+    1.0,
+    [
+      -1,
+      0
+    ]
+  ],
+  "scope": "Algebra checks and floating-point parameter evaluation; no rigorous complex norm, observation defect, KAM threshold or torus certificate.",
+  "revision": "Direction-I framework, 2026-10-28",
+  "script_sha256": "e41d2850948940b1a9e8566d89789d39119c69f7dc827a430e23d94d61123507",
+  "baseline_sha256": "2bac37b2f4444efc6a0ba742139fbf0b35e268e9f4f3597ba13a0793bc2049ac",
+  "magnetic_central4_derivatives": {
+    "method": "Complex-step derivative of f^T hessian(h) f and of its correction vector; sampled floating-point diagnostic.",
+    "cases": [
+      {
+        "kappa": 0.8,
+        "state": [
+          0.17,
+          -0.11,
+          0.09,
+          0.04
+        ],
+        "gradient_max_error": 7.105427357601002e-15,
+        "jacobian_max_error": 5.684341886080802e-14,
+        "hamiltonian_jacobian_max_defect": 0.0,
+        "scale": 441.9810311407616,
+        "passed": true
+      },
+      {
+        "kappa": 0.8,
+        "state": [
+          -0.31,
+          0.23,
+          -0.08,
+          0.13
+        ],
+        "gradient_max_error": 1.4210854715202004e-14,
+        "jacobian_max_error": 5.684341886080802e-14,
+        "hamiltonian_jacobian_max_defect": 0.0,
+        "scale": 441.98065930865084,
+        "passed": true
+      },
+      {
+        "kappa": 1.0,
+        "state": [
+          0.17,
+          -0.11,
+          0.09,
+          0.04
+        ],
+        "gradient_max_error": 3.552713678800501e-15,
+        "jacobian_max_error": 5.684341886080802e-14,
+        "hamiltonian_jacobian_max_defect": 0.0,
+        "scale": 441.9810204780409,
+        "passed": true
+      },
+      {
+        "kappa": 1.0,
+        "state": [
+          -0.31,
+          0.23,
+          -0.08,
+          0.13
+        ],
+        "gradient_max_error": 1.4210854715202004e-14,
+        "jacobian_max_error": 5.684341886080802e-14,
+        "hamiltonian_jacobian_max_defect": 0.0,
+        "scale": 441.9805556879024,
+        "passed": true
+      },
+      {
+        "kappa": 1.2,
+        "state": [
+          0.17,
+          -0.11,
+          0.09,
+          0.04
+        ],
+        "gradient_max_error": 5.551115123125783e-17,
+        "jacobian_max_error": 5.684341886080802e-14,
+        "hamiltonian_jacobian_max_defect": 0.0,
+        "scale": 441.98100981532014,
+        "passed": true
+      },
+      {
+        "kappa": 1.2,
+        "state": [
+          -0.31,
+          0.23,
+          -0.08,
+          0.13
+        ],
+        "gradient_max_error": 1.4210854715202004e-14,
+        "jacobian_max_error": 3.712308238590367e-16,
+        "hamiltonian_jacobian_max_defect": 0.0,
+        "scale": 441.9804520671539,
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "english_source_checks": {
+    "files": {
+      "structure.tex": {
+        "sha256": "66d0a28086b69815af268c9148d119beace1d393d9a5d44bebb6b96a7a82267e",
+        "frozen_english_sha256": "66d0a28086b69815af268c9148d119beace1d393d9a5d44bebb6b96a7a82267e",
+        "matches_english_freeze": true,
+        "display_math_count": 24,
+        "inline_math_count": 88,
+        "label_count": 30,
+        "labels": [
+          "struct:birkhoff-section",
+          "struct:birkhoff",
+          "struct:compatibility",
+          "struct:weighted-hamiltonian",
+          "struct:endpoint-section",
+          "struct:endpoint-proposition",
+          "struct:endpoint-variables",
+          "struct:endpoint-projection",
+          "struct:lifted-generator",
+          "struct:weighted-midpoint",
+          "struct:weighted-structure",
+          "struct:matrix-section",
+          "struct:mechanical-midpoint",
+          "struct:matrix-elimination",
+          "struct:effective-matrices",
+          "struct:schemes",
+          "struct:central-map",
+          "struct:midpoint",
+          "struct:cayley",
+          "struct:exact-symplectic",
+          "struct:central4",
+          "struct:general-midpoint",
+          "struct:objects-section",
+          "struct:objects",
+          "struct:plant",
+          "struct:identification-section",
+          "struct:integral-design",
+          "struct:route-a-section",
+          "struct:route-a-control",
+          "struct:route-a-closed"
+        ],
+        "environment_events": 74,
+        "missing_required_labels": [],
+        "duplicate_labels": [],
+        "unresolved_source_refs": [],
+        "passed": true
+      },
+      "controlled_analysis.tex": {
+        "sha256": "c5ee1c63bd9b80802486f3be7b7a210b3b857f6ace6a2003b761174166c9caa6",
+        "frozen_english_sha256": "c5ee1c63bd9b80802486f3be7b7a210b3b857f6ace6a2003b761174166c9caa6",
+        "matches_english_freeze": true,
+        "display_math_count": 12,
+        "inline_math_count": 59,
+        "label_count": 15,
+        "labels": [
+          "ctrl:placement",
+          "ctrl:midpoint",
+          "ctrl:control-increment",
+          "ctrl:weighted-midpoint",
+          "ctrl:structure",
+          "ctrl:structure-proposition",
+          "ctrl:exact-primitive",
+          "ctrl:power",
+          "ctrl:convergence-section",
+          "ctrl:solve-residual",
+          "ctrl:convergence",
+          "ctrl:error-recurrence",
+          "ctrl:global-error",
+          "ctrl:error-separation",
+          "ctrl:target-error-split"
+        ],
+        "environment_events": 34,
+        "missing_required_labels": [],
+        "duplicate_labels": [],
+        "unresolved_source_refs": [],
+        "passed": true
+      },
+      "kam.tex": {
+        "sha256": "dd8624e6e0db34a2382d73d47b9545bbd989ca4025ccd063d3eb16ed189664af",
+        "frozen_english_sha256": "dd8624e6e0db34a2382d73d47b9545bbd989ca4025ccd063d3eb16ed189664af",
+        "matches_english_freeze": true,
+        "display_math_count": 14,
+        "inline_math_count": 82,
+        "label_count": 20,
+        "labels": [
+          "kam:learning-section",
+          "kam:gram",
+          "kam:integral-bound",
+          "kam:feature-bounds",
+          "kam:analytic-error",
+          "kam:analyticity",
+          "kam:complex-energy",
+          "kam:normalform-section",
+          "kam:homological",
+          "kam:magnetic-twist",
+          "kam:closed-budget-section",
+          "kam:closed-budget",
+          "kam:map-section",
+          "kam:implicit-branch",
+          "kam:map-closeness",
+          "kam:map-generator-budget",
+          "kam:map-divisors",
+          "kam:map-theorem",
+          "kam:map-smallness",
+          "kam:scope"
+        ],
+        "environment_events": 44,
+        "missing_required_labels": [],
+        "duplicate_labels": [],
+        "unresolved_source_refs": [],
+        "passed": true
+      },
+      "supp_structure.tex": {
+        "sha256": "aee5940db1be366ab88b9cdd4daa0c167044b844ee1e7c11bf7f392a3861b594",
+        "frozen_english_sha256": "aee5940db1be366ab88b9cdd4daa0c167044b844ee1e7c11bf7f392a3861b594",
+        "matches_english_freeze": true,
+        "display_math_count": 42,
+        "inline_math_count": 227,
+        "label_count": 38,
+        "labels": [
+          "ss:birkhoff",
+          "ss:birkhoff-compatibility",
+          "ss:projection",
+          "ss:endpoint-matrix",
+          "ss:endpoint-projection",
+          "ss:newton-matrix",
+          "ss:matrix",
+          "ss:matrix-elimination",
+          "ss:exact-symplectic",
+          "ss:primitive",
+          "ss:central4",
+          "ss:central-taylor",
+          "ss:central-correction",
+          "ss:harmonic-phase",
+          "ss:central4-magnetic-section",
+          "ss:central4-magnetic",
+          "ss:central4-magnetic-jacobian",
+          "ss:inexact-solve",
+          "ss:residual-sum",
+          "ss:analytic-extension",
+          "ss:conjugate-extension",
+          "ss:complex-force",
+          "ss:normalform",
+          "ss:cubic-correction",
+          "ss:quartic-polynomial",
+          "ss:quartic-generator",
+          "ss:cosine-tail",
+          "ss:integral-error",
+          "ss:physical-defect",
+          "ss:full-features",
+          "ss:full-readout",
+          "ss:full-design",
+          "ss:general-reference-acceleration",
+          "ss:map-kam",
+          "ss:mixed-map",
+          "ss:twist-bounds",
+          "ss:map-threshold",
+          "ss:certificate-scope"
+        ],
+        "environment_events": 84,
+        "missing_required_labels": [],
+        "duplicate_labels": [],
+        "unresolved_source_refs": [],
+        "passed": true
+      },
+      "extension_tracking_theory.tex": {
+        "sha256": "119d66eb1278c5f15959d31891bff28af592c41dacaa07a572336d32d5a55144",
+        "frozen_english_sha256": "119d66eb1278c5f15959d31891bff28af592c41dacaa07a572336d32d5a55144",
+        "matches_english_freeze": true,
+        "display_math_count": 9,
+        "inline_math_count": 35,
+        "label_count": 11,
+        "labels": [
+          "struct:route-b-section",
+          "struct:route-b-control",
+          "struct:route-b-error",
+          "struct:route-b-oracle",
+          "ss:tracking",
+          "ss:tracking-convolution",
+          "ss:tracking-bound",
+          "kam:budgets-section",
+          "kam:route-budgets",
+          "kam:flow-theorem",
+          "kam:flow-divisors"
+        ],
+        "environment_events": 36,
+        "missing_required_labels": [],
+        "duplicate_labels": [],
+        "unresolved_source_refs": [],
+        "passed": true
+      }
+    },
+    "passed": true,
+    "scope": "All five English theory files; protected mathematics, expected anchor placement, unique labels, source references and comparison to the English-freeze manifest when present. No PDF compilation."
+  },
+  "translation_checks": {
+    "requested": true,
+    "status": "checked",
+    "passed": true,
+    "files": {
+      "structure.tex": {
+        "english_sha256": "66d0a28086b69815af268c9148d119beace1d393d9a5d44bebb6b96a7a82267e",
+        "chinese_sha256": "1f0995895898d9d47d2fa1eca4b2f2727b5991969b7426f618ca3c495d49bb03",
+        "english_math_count": 112,
+        "chinese_math_count": 112,
+        "display_math_count": 24,
+        "inline_math_count": 88,
+        "math_literal_equal": true,
+        "math_whitespace_normalized_equal": true,
+        "ordered_labels_equal": true,
+        "ordered_reference_citation_label_commands_equal": true,
+        "ordered_environment_events_equal": true,
+        "math_mismatch_indices_0based": [],
+        "command_mismatch_indices_0based": [],
+        "passed": true
+      },
+      "controlled_analysis.tex": {
+        "english_sha256": "c5ee1c63bd9b80802486f3be7b7a210b3b857f6ace6a2003b761174166c9caa6",
+        "chinese_sha256": "c01d6b13854f5bcd3299fdce93a3aa6e1768c403799cf33da7d70eb48a1fb524",
+        "english_math_count": 71,
+        "chinese_math_count": 71,
+        "display_math_count": 12,
+        "inline_math_count": 59,
+        "math_literal_equal": true,
+        "math_whitespace_normalized_equal": true,
+        "ordered_labels_equal": true,
+        "ordered_reference_citation_label_commands_equal": true,
+        "ordered_environment_events_equal": true,
+        "math_mismatch_indices_0based": [],
+        "command_mismatch_indices_0based": [],
+        "passed": true
+      },
+      "kam.tex": {
+        "english_sha256": "dd8624e6e0db34a2382d73d47b9545bbd989ca4025ccd063d3eb16ed189664af",
+        "chinese_sha256": "4946980d19f4f65c64fbe5830f011b9e2fd1238821ab177d564acddbe047d167",
+        "english_math_count": 96,
+        "chinese_math_count": 96,
+        "display_math_count": 14,
+        "inline_math_count": 82,
+        "math_literal_equal": true,
+        "math_whitespace_normalized_equal": true,
+        "ordered_labels_equal": true,
+        "ordered_reference_citation_label_commands_equal": true,
+        "ordered_environment_events_equal": true,
+        "math_mismatch_indices_0based": [],
+        "command_mismatch_indices_0based": [],
+        "passed": true
+      },
+      "supp_structure.tex": {
+        "english_sha256": "aee5940db1be366ab88b9cdd4daa0c167044b844ee1e7c11bf7f392a3861b594",
+        "chinese_sha256": "74b59dc4661044c1a035bc7572ab726b234abcab811ed6455c31e1a7111274dd",
+        "english_math_count": 269,
+        "chinese_math_count": 269,
+        "display_math_count": 42,
+        "inline_math_count": 227,
+        "math_literal_equal": true,
+        "math_whitespace_normalized_equal": true,
+        "ordered_labels_equal": true,
+        "ordered_reference_citation_label_commands_equal": true,
+        "ordered_environment_events_equal": true,
+        "math_mismatch_indices_0based": [],
+        "command_mismatch_indices_0based": [],
+        "passed": true
+      },
+      "extension_tracking_theory.tex": {
+        "english_sha256": "119d66eb1278c5f15959d31891bff28af592c41dacaa07a572336d32d5a55144",
+        "chinese_sha256": "44a776b9fcb85f33d874dd4b0c2a0b763f71634d91587b4883f3a757733a00c9",
+        "english_math_count": 44,
+        "chinese_math_count": 44,
+        "display_math_count": 9,
+        "inline_math_count": 35,
+        "math_literal_equal": true,
+        "math_whitespace_normalized_equal": true,
+        "ordered_labels_equal": true,
+        "ordered_reference_citation_label_commands_equal": true,
+        "ordered_environment_events_equal": true,
+        "math_mismatch_indices_0based": [],
+        "command_mismatch_indices_0based": [],
+        "passed": true
+      }
+    },
+    "scope": "Literal protected mathematics and label/reference/citation and environment order only; prose completeness and rendered layout need separate review."
+  },
+  "passed": true
+}

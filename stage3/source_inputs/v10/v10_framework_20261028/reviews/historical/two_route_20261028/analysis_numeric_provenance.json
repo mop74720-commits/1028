@@ -1,0 +1,750 @@
+{
+  "source_files": {
+    "fe": {
+      "path": "reproduction/new_baseline.json",
+      "sha256": "2bac37b2f4444efc6a0ba742139fbf0b35e268e9f4f3597ba13a0793bc2049ac"
+    },
+    "a": {
+      "path": "reproduction/experiments/minimal_control_results.json",
+      "sha256": "dcf128d5ad062a80d525d9cde96d1e7d0eae657da7a2287a23455ed2df4b605d"
+    },
+    "b": {
+      "path": "reproduction/experiments/route_b_shared_results.json",
+      "sha256": "63c5453ee02288311878ed335008ca4aabe3be228be79fe31fc6537766075099"
+    },
+    "scan": {
+      "path": "reproduction/experiments/damping_sensitivity_results.json",
+      "sha256": "76a4ad091b38f51271ac08687bcae08030fbf60875f464158b6e26b036d01263"
+    },
+    "audit": {
+      "path": "reproduction/experiments/control_audit_summary.json",
+      "sha256": "65cf8e206bc38fee0543d476813aaefb66455e28504e41cb587825102bfd1e5e"
+    }
+  },
+  "numerical_tokens": {
+    "OMEGA0": {
+      "value": 7.840009161840092,
+      "rendered": "7.84000916",
+      "source": "fe.reduced.omega0_rad_s"
+    },
+    "OMEGA2": {
+      "value": 47.39957662371655,
+      "rendered": "47.39957662",
+      "source": "fe.reduced.omega_rad_s[1]"
+    },
+    "NU2": {
+      "value": 6.045857300068718,
+      "rendered": "6.04585730",
+      "source": "fe.reduced.nu[1]"
+    },
+    "D_VECTOR": {
+      "value": [
+        0.30722439332376256,
+        0.4504263248454578
+      ],
+      "rendered": "\\bigl(0.30722439,\\,0.45042632\\bigr)^{\\mathsf T}",
+      "source": "fe.reduced.d"
+    },
+    "ELL_VECTOR": {
+      "value": [
+        0.018967344318651182,
+        0.007753476139325548
+      ],
+      "rendered": "\\bigl(0.0189673443,\\,0.0077534761\\bigr)^{\\mathsf T}",
+      "source": "fe.reduced.ell_m"
+    },
+    "DS_VECTOR": {
+      "value": [
+        9.299435152722878e-05,
+        3.7820531184037606e-05
+      ],
+      "rendered": "\\bigl(9.299435153\\times10^{-5},\\,3.782053118\\times10^{-5}\\bigr)",
+      "source": "fe.reduced.Ds"
+    },
+    "MU": {
+      "value": 1.771842139890241e-05,
+      "rendered": "1.77184214\\times10^{-5}",
+      "source": "fe.properties.mu_A_m2"
+    },
+    "TIP_MASS": {
+      "value": 1.171875e-07,
+      "rendered": "1.171875\\times10^{-7}",
+      "source": "fe.properties.tip_mass_kg"
+    },
+    "TIP_J": {
+      "value": 1.220703125e-15,
+      "rendered": "1.2207031\\times10^{-15}",
+      "source": "fe.properties.tip_rotary_inertia_kg_m2"
+    },
+    "ENERGY_SCALE": {
+      "value": 5.315526419670723e-07,
+      "rendered": "5.31552642\\times10^{-7}",
+      "source": "fe.properties.E0_J"
+    },
+    "ALPHA": {
+      "value": 0.3920004580920046,
+      "rendered": "0.3920004581",
+      "source": "fe.reduced.alpha_s_inv"
+    },
+    "ZETA2": {
+      "value": 0.0041350628635769895,
+      "rendered": "0.0041350629",
+      "source": "fe.reduced.zeta[1]"
+    },
+    "BETA_HAT": {
+      "value": 0.20000336849105763,
+      "rendered": "0.200003368491",
+      "source": "a.identification.beta_hat"
+    },
+    "GAMMA_HAT": {
+      "value": 0.04999999998680363,
+      "rendered": "0.04999999998680",
+      "source": "a.identification.gamma_hat"
+    },
+    "TRAIN_RMSE": {
+      "value": 1.0123438289547264e-12,
+      "rendered": "1.0123\\times10^{-12}",
+      "source": "a.identification.training_RMSE"
+    },
+    "VALID_RMSE": {
+      "value": 9.249159738508334e-13,
+      "rendered": "9.2492\\times10^{-13}",
+      "source": "a.identification.validation_RMSE"
+    },
+    "GRAM_MIN": {
+      "value": 5.1548649902228405e-14,
+      "rendered": "5.15486\\times10^{-14}",
+      "source": "b.shared_identification.lambda_min_normalized_Gram"
+    },
+    "COND_RAW": {
+      "value": 10418.251254279161,
+      "rendered": "10418.25",
+      "source": "a.identification.raw_design_cond2"
+    },
+    "COND_SCALED": {
+      "value": 1.0453717881660793,
+      "rendered": "1.04537179",
+      "source": "a.identification.column_scaled_design_cond2"
+    },
+    "COEFF_FACTOR": {
+      "value": 4404446.634939195,
+      "rendered": "4.40445\\times10^{6}",
+      "source": "b.shared_identification.coefficient_bound_multiplier_1_over_sqrt_lambda_min"
+    },
+    "EPS_TRUTH": {
+      "value": 1.2687616852763968e-12,
+      "rendered": "1.26876\\times10^{-12}",
+      "source": "b.shared_identification.epsilonI_using_synthetic_truth_diagnostic_only"
+    },
+    "COEFF_DIAG": {
+      "value": 1.004700750609651e-05,
+      "rendered": "1.00470\\times10^{-5}",
+      "source": "b.shared_identification.coefficient_bound_expression_using_truth_diagnostic_only"
+    },
+    "COEFF_ACTUAL": {
+      "value": 3.3684910576406797e-06,
+      "rendered": "3.36849\\times10^{-6}",
+      "source": "b.shared_identification.actual_coefficient_error_using_synthetic_truth"
+    },
+    "TIME_S": {
+      "value": 2.551017427039064,
+      "rendered": "2.551017",
+      "source": "a.comparison.duration_seconds"
+    },
+    "SCAN_TIME_S": {
+      "value": 1.275508713519532,
+      "rendered": "1.275509",
+      "source": "scan.duration_seconds"
+    },
+    "A_REFINE": {
+      "value": 6.360010191661372e-12,
+      "rendered": "6.3600\\times10^{-12}",
+      "source": "a.reference_validation.maximum_refinement_state_difference"
+    },
+    "B_REFINE": {
+      "value": 6.358406725976876e-12,
+      "rendered": "6.3584\\times10^{-12}",
+      "source": "b.numerical_checks.reference_RK4_maximum_difference"
+    },
+    "A_VF": {
+      "value": 2.5942267576526466e-11,
+      "rendered": "2.5942\\times10^{-11}",
+      "source": "a.comparison.groups.learned.RMS_continuous_vectorfield_mismatch_to_V0"
+    },
+    "A_TIP_UM": {
+      "value": 0.09411953656586998,
+      "rendered": "0.094120",
+      "source": "a.comparison.groups.learned.physical_target_errors.RMS_tip_displacement_error_m * 1e6"
+    },
+    "A_PASSIVE_RMS": {
+      "value": 0.02924528069078887,
+      "rendered": "2.92453\\times10^{-2}",
+      "source": "a.comparison.groups.passive.RMS_target_state_error"
+    },
+    "A_DAMP_RMS": {
+      "value": 2.4343704998429105e-05,
+      "rendered": "2.43437\\times10^{-5}",
+      "source": "a.comparison.groups.damping_only.RMS_target_state_error"
+    },
+    "A_LEARNED_RMS": {
+      "value": 1.714378882260593e-05,
+      "rendered": "1.71438\\times10^{-5}",
+      "source": "a.comparison.groups.learned.RMS_target_state_error"
+    },
+    "A_ORACLE_RMS": {
+      "value": 1.71439037554454e-05,
+      "rendered": "1.71439\\times10^{-5}",
+      "source": "a.comparison.groups.oracle.RMS_target_state_error"
+    },
+    "A_CAYLEY": {
+      "value": 2.226534318924483e-16,
+      "rendered": "2.2265\\times10^{-16}",
+      "source": "a.comparison.groups.oracle.maximum_ideal_Cayley_symplectic_defect_spectral2"
+    },
+    "B_PRED_NOMINAL": {
+      "value": 8.040721848251114e-06,
+      "rendered": "8.04072\\times10^{-6}",
+      "source": "b.prediction.nominal_h0_RMS_state_error_vs_hstar"
+    },
+    "B_PRED_LEARNED": {
+      "value": 1.3542649599735999e-10,
+      "rendered": "1.35426\\times10^{-10}",
+      "source": "b.prediction.learned_hhat_RMS_state_error_vs_hstar"
+    },
+    "B_FULL_RMS": {
+      "value": 0.0015891190653289848,
+      "rendered": "1.58912\\times10^{-3}",
+      "source": "b.tracking.groups.learned_tracking.RMS_state_error_independent_reference"
+    },
+    "B_HALF_RMS": {
+      "value": 2.2676741956115454e-05,
+      "rendered": "2.26767\\times10^{-5}",
+      "source": "b.tracking.groups.learned_tracking.second_half_RMS_state_error_independent_reference"
+    },
+    "B_HALF_SYNC": {
+      "value": 8.551003516511539e-07,
+      "rendered": "8.55100\\times10^{-7}",
+      "source": "b.tracking.groups.learned_tracking.second_half_RMS_state_error_synchronous_reference"
+    },
+    "B_FINAL_SYNC": {
+      "value": 2.983230113613144e-10,
+      "rendered": "2.98323\\times10^{-10}",
+      "source": "b.tracking.groups.learned_tracking.final_state_error_synchronous_reference"
+    },
+    "B_FINAL_IND": {
+      "value": 2.969369685455977e-05,
+      "rendered": "2.96937\\times10^{-5}",
+      "source": "b.tracking.groups.learned_tracking.final_state_error_independent_reference"
+    },
+    "B_REF_PHASE": {
+      "value": 2.9693567759927822e-05,
+      "rendered": "2.96936\\times10^{-5}",
+      "source": "b.tracking.groups.learned_tracking.maximum_reference_midpoint_error_vs_RK4"
+    },
+    "B_HALF_RATIO": {
+      "value": 3.999983701901915,
+      "rendered": "3.999984",
+      "source": "b.numerical_checks.reference_midpoint_error_ratio_on_halving_step"
+    },
+    "B_CAYLEY": {
+      "value": 1.0039891551218213e-15,
+      "rendered": "1.0040\\times10^{-15}",
+      "source": "b.numerical_checks.oracle_linear_error_Cayley_comparison_maximum"
+    },
+    "SCAN_ZERO_GAMMA": {
+      "value": -1.403789671563059e-12,
+      "rendered": "-1.4038\\times10^{-12}",
+      "source": "scan.scenarios[0].identification.gamma_hat"
+    },
+    "PORT_COND": {
+      "value": 3.8185962704197705,
+      "rendered": "3.8185963",
+      "source": "a.physical_interface.column_normalized_condition_number"
+    },
+    "ALL_ANGLE": {
+      "value": 0.07069883412918385,
+      "rendered": "0.07069883",
+      "source": "audit.all_run_domain_maxima.maximum_abs_tip_angle_rad"
+    },
+    "ALL_SLOPE": {
+      "value": 0.07134939065400761,
+      "rendered": "0.07134939",
+      "source": "audit.all_run_domain_maxima.maximum_abs_beam_slope_spatial_grid"
+    },
+    "ALL_COS": {
+      "value": 0.9975018782218941,
+      "rendered": "0.99750188",
+      "source": "audit.all_run_domain_maxima.minimum_abs_cos_tip_angle"
+    },
+    "ALL_TOTAL_MT": {
+      "value": 30.2146775842341,
+      "rendered": "30.214678",
+      "source": "audit.all_run_domain_maxima.maximum_total_local_field_T * 1e3"
+    },
+    "ALL_GRAD": {
+      "value": 0.075673153493818,
+      "rendered": "0.07567315",
+      "source": "audit.all_run_domain_maxima.maximum_local_gradient_spectral2_T_per_m"
+    },
+    "ALL_PORT_ERR": {
+      "value": 5.3860300581534765e-17,
+      "rendered": "5.3860\\times10^{-17}",
+      "source": "audit.all_run_domain_maxima.maximum_input_reconstruction_error"
+    },
+    "INITIAL_ENERGY_NJ": {
+      "value": 12.656720734508879,
+      "rendered": "12.656721",
+      "source": "h0(a.comparison.initial_state) * fe.properties.E0_J * 1e9"
+    },
+    "EC_NJ": {
+      "value": 10.01971706954294,
+      "rendered": "10.019717",
+      "source": "fe.properties.Ec_at_4mm_J * 1e9"
+    },
+    "BUDGET_NJ": {
+      "value": 9.518731216065792,
+      "rendered": "9.518731",
+      "source": ".95 * fe.properties.Ec_at_4mm_J * 1e9"
+    },
+    "MAIN_STEP_S": {
+      "value": 0.0001275508713519532,
+      "rendered": "1.27551\\times10^{-4}",
+      "source": "computed from supplied JSON"
+    },
+    "TRAIN_TIME_S": {
+      "value": 0.5102034854078128,
+      "rendered": "0.510203",
+      "source": "computed from supplied JSON"
+    },
+    "FE32_MAX": {
+      "value": 9.59029494596031e-06,
+      "rendered": "9.59029\\times10^{-6}",
+      "source": "computed from supplied JSON"
+    },
+    "FE64_MAX": {
+      "value": 6.020809784068604e-07,
+      "rendered": "6.02081\\times10^{-7}",
+      "source": "computed from supplied JSON"
+    },
+    "TIP_EFFECT_PERCENT": {
+      "value": -0.2440118655117396,
+      "rendered": "-0.24401",
+      "source": "computed from supplied JSON"
+    },
+    "ORDER_LAST": {
+      "value": 1.9993306989573856,
+      "rendered": "1.999331",
+      "source": "a.oracle_midpoint_convergence[-1].observed_order"
+    },
+    "PYTHON_VERSION": {
+      "value": "3.12.14",
+      "rendered": "3.12.14",
+      "source": "fe.environment.python"
+    },
+    "NUMPY_VERSION": {
+      "value": "2.3.5",
+      "rendered": "2.3.5",
+      "source": "fe.environment.numpy"
+    },
+    "SCIPY_VERSION": {
+      "value": "1.17.0",
+      "rendered": "1.17.0",
+      "source": "fe.environment.scipy"
+    },
+    "B_REFINED_DIFF": {
+      "value": 2.227014566878007e-05,
+      "rendered": "2.22701\\times10^{-5}",
+      "source": "b.numerical_checks.maximum_actual_state_difference_at_common_times"
+    },
+    "B_JAC_CHECK": {
+      "value": 3.690198147054957e-11,
+      "rendered": "3.6902\\times10^{-11}",
+      "source": "b.numerical_checks.analytic_augmented_Jacobian_finite_difference_maximum_error"
+    },
+    "FE_ROWS": {
+      "value": [
+        [
+          "16",
+          "$7.84001022$",
+          "$47.39980944$",
+          "$131.21158140$",
+          "$256.37539514$",
+          "$1.5071\\times10^{-4}$"
+        ],
+        [
+          "32",
+          "$7.84000916$",
+          "$47.39957662$",
+          "$131.20668107$",
+          "$256.33922193$",
+          "$9.5903\\times10^{-6}$"
+        ],
+        [
+          "64",
+          "$7.84000910$",
+          "$47.39956199$",
+          "$131.20637133$",
+          "$256.33691793$",
+          "$6.0208\\times10^{-7}$"
+        ]
+      ],
+      "rendered": "16 & $7.84001022$ & $47.39980944$ & $131.21158140$ & $256.37539514$ & $1.5071\\times10^{-4}$ \\\\\n32 & $7.84000916$ & $47.39957662$ & $131.20668107$ & $256.33922193$ & $9.5903\\times10^{-6}$ \\\\\n64 & $7.84000910$ & $47.39956199$ & $131.20637133$ & $256.33691793$ & $6.0208\\times10^{-7}$ \\\\",
+      "source": "fe.finite_element_convergence"
+    },
+    "ORDER_ROWS": {
+      "value": [
+        [
+          "$0.04$",
+          "$4.64310\\times10^{-2}$",
+          "---"
+        ],
+        [
+          "$0.02$",
+          "$1.18409\\times10^{-2}$",
+          "$1.971306$"
+        ],
+        [
+          "$0.01$",
+          "$2.96760\\times10^{-3}$",
+          "$1.996414$"
+        ],
+        [
+          "$0.005$",
+          "$7.42245\\times10^{-4}$",
+          "$1.999331$"
+        ]
+      ],
+      "rendered": "$0.04$ & $4.64310\\times10^{-2}$ & --- \\\\\n$0.02$ & $1.18409\\times10^{-2}$ & $1.971306$ \\\\\n$0.01$ & $2.96760\\times10^{-3}$ & $1.996414$ \\\\\n$0.005$ & $7.42245\\times10^{-4}$ & $1.999331$ \\\\",
+      "source": "a.oracle_midpoint_convergence"
+    },
+    "A_ROWS": {
+      "value": [
+        [
+          "Passive",
+          "$2.92453\\times10^{-2}$",
+          "$322.376137$"
+        ],
+        [
+          "Damping compensation",
+          "$2.43437\\times10^{-5}$",
+          "$0.143531$"
+        ],
+        [
+          "Learned restoration",
+          "$1.71438\\times10^{-5}$",
+          "$0.094120$"
+        ],
+        [
+          "Oracle restoration",
+          "$1.71439\\times10^{-5}$",
+          "$0.094120$"
+        ]
+      ],
+      "rendered": "Passive & $2.92453\\times10^{-2}$ & $322.376137$ \\\\\nDamping compensation & $2.43437\\times10^{-5}$ & $0.143531$ \\\\\nLearned restoration & $1.71438\\times10^{-5}$ & $0.094120$ \\\\\nOracle restoration & $1.71439\\times10^{-5}$ & $0.094120$ \\\\",
+      "source": "a.comparison.groups"
+    },
+    "B_ROWS": {
+      "value": [
+        [
+          "Passive",
+          "$2.55875\\times10^{-2}$",
+          "$3.41583\\times10^{-2}$",
+          "$3.41580\\times10^{-2}$"
+        ],
+        [
+          "Damping compensation",
+          "$6.02185\\times10^{-3}$",
+          "$6.02249\\times10^{-3}$",
+          "$6.02060\\times10^{-3}$"
+        ],
+        [
+          "Learned tracking",
+          "$1.58912\\times10^{-3}$",
+          "$2.26767\\times10^{-5}$",
+          "$8.55100\\times10^{-7}$"
+        ],
+        [
+          "Oracle tracking",
+          "$1.58912\\times10^{-3}$",
+          "$2.26767\\times10^{-5}$",
+          "$8.55090\\times10^{-7}$"
+        ]
+      ],
+      "rendered": "Passive & $2.55875\\times10^{-2}$ & $3.41583\\times10^{-2}$ & $3.41580\\times10^{-2}$ \\\\\nDamping compensation & $6.02185\\times10^{-3}$ & $6.02249\\times10^{-3}$ & $6.02060\\times10^{-3}$ \\\\\nLearned tracking & $1.58912\\times10^{-3}$ & $2.26767\\times10^{-5}$ & $8.55100\\times10^{-7}$ \\\\\nOracle tracking & $1.58912\\times10^{-3}$ & $2.26767\\times10^{-5}$ & $8.55090\\times10^{-7}$ \\\\",
+      "source": "b.tracking.groups"
+    },
+    "INITIAL_ROWS": {
+      "value": [
+        [
+          "Training 1",
+          "$0.09$",
+          "$0.07$",
+          "$0.025$",
+          "$-0.02$"
+        ],
+        [
+          "Training 2",
+          "$-0.075$",
+          "$0.1$",
+          "$0.01$",
+          "$0.025$"
+        ],
+        [
+          "Training 3",
+          "$0.11$",
+          "$-0.06$",
+          "$-0.015$",
+          "$0.03$"
+        ],
+        [
+          "Training 4",
+          "$0.05$",
+          "$0.12$",
+          "$0.02$",
+          "$-0.01$"
+        ],
+        [
+          "Validation 1",
+          "$-0.095$",
+          "$0.055$",
+          "$0.03$",
+          "$0.005$"
+        ],
+        [
+          "Validation 2",
+          "$0.065$",
+          "$-0.105$",
+          "$-0.02$",
+          "$0.015$"
+        ]
+      ],
+      "rendered": "Training 1 & $0.09$ & $0.07$ & $0.025$ & $-0.02$ \\\\\nTraining 2 & $-0.075$ & $0.1$ & $0.01$ & $0.025$ \\\\\nTraining 3 & $0.11$ & $-0.06$ & $-0.015$ & $0.03$ \\\\\nTraining 4 & $0.05$ & $0.12$ & $0.02$ & $-0.01$ \\\\\nValidation 1 & $-0.095$ & $0.055$ & $0.03$ & $0.005$ \\\\\nValidation 2 & $0.065$ & $-0.105$ & $-0.02$ & $0.015$ \\\\",
+      "source": "a.identification.train_initials and validation_initials"
+    },
+    "DAMP_FIT_ROWS": {
+      "value": [
+        [
+          "$0$",
+          "$0.000000000$",
+          "$0.200003040949$",
+          "$-1.4037896716\\times10^{-12}$",
+          "$6.9451\\times10^{-14}$"
+        ],
+        [
+          "$0.01$",
+          "$0.156800183$",
+          "$0.200003177492$",
+          "$1.9999999994\\times10^{-2}$",
+          "$6.1346\\times10^{-14}$"
+        ],
+        [
+          "$0.025$",
+          "$0.392000458$",
+          "$0.200003368491$",
+          "$4.9999999987\\times10^{-2}$",
+          "$5.1549\\times10^{-14}$"
+        ],
+        [
+          "$0.05$",
+          "$0.784000916$",
+          "$0.200003636621$",
+          "$9.9999999975\\times10^{-2}$",
+          "$3.9870\\times10^{-14}$"
+        ],
+        [
+          "$0.1$",
+          "$1.568001832$",
+          "$0.200003938495$",
+          "$1.9999999995\\times10^{-1}$",
+          "$2.6883\\times10^{-14}$"
+        ]
+      ],
+      "rendered": "$0$ & $0.000000000$ & $0.200003040949$ & $-1.4037896716\\times10^{-12}$ & $6.9451\\times10^{-14}$ \\\\\n$0.01$ & $0.156800183$ & $0.200003177492$ & $1.9999999994\\times10^{-2}$ & $6.1346\\times10^{-14}$ \\\\\n$0.025$ & $0.392000458$ & $0.200003368491$ & $4.9999999987\\times10^{-2}$ & $5.1549\\times10^{-14}$ \\\\\n$0.05$ & $0.784000916$ & $0.200003636621$ & $9.9999999975\\times10^{-2}$ & $3.9870\\times10^{-14}$ \\\\\n$0.1$ & $1.568001832$ & $0.200003938495$ & $1.9999999995\\times10^{-1}$ & $2.6883\\times10^{-14}$ \\\\",
+      "source": "scan.scenarios.*.identification"
+    },
+    "DAMP_ERROR_ROWS": {
+      "value": [
+        [
+          "$0$",
+          "$3.77362\\times10^{-5}$",
+          "$3.42885\\times10^{-5}$",
+          "$6.02444\\times10^{-3}$",
+          "$1.09567\\times10^{-4}$"
+        ],
+        [
+          "$0.01$",
+          "$6.73657\\times10^{-3}$",
+          "$3.42885\\times10^{-5}$",
+          "$3.71321\\times10^{-3}$",
+          "$1.09567\\times10^{-4}$"
+        ],
+        [
+          "$0.025$",
+          "$1.59501\\times10^{-2}$",
+          "$3.42885\\times10^{-5}$",
+          "$1.62063\\times10^{-2}$",
+          "$1.09567\\times10^{-4}$"
+        ],
+        [
+          "$0.05$",
+          "$2.92396\\times10^{-2}$",
+          "$3.42885\\times10^{-5}$",
+          "$3.42497\\times10^{-2}$",
+          "$1.09567\\times10^{-4}$"
+        ],
+        [
+          "$0.1$",
+          "$4.97374\\times10^{-2}$",
+          "$3.42885\\times10^{-5}$",
+          "$6.13727\\times10^{-2}$",
+          "$1.09567\\times10^{-4}$"
+        ]
+      ],
+      "rendered": "$0$ & $3.77362\\times10^{-5}$ & $3.42885\\times10^{-5}$ & $6.02444\\times10^{-3}$ & $1.09567\\times10^{-4}$ \\\\\n$0.01$ & $6.73657\\times10^{-3}$ & $3.42885\\times10^{-5}$ & $3.71321\\times10^{-3}$ & $1.09567\\times10^{-4}$ \\\\\n$0.025$ & $1.59501\\times10^{-2}$ & $3.42885\\times10^{-5}$ & $1.62063\\times10^{-2}$ & $1.09567\\times10^{-4}$ \\\\\n$0.05$ & $2.92396\\times10^{-2}$ & $3.42885\\times10^{-5}$ & $3.42497\\times10^{-2}$ & $1.09567\\times10^{-4}$ \\\\\n$0.1$ & $4.97374\\times10^{-2}$ & $3.42885\\times10^{-5}$ & $6.13727\\times10^{-2}$ & $1.09567\\times10^{-4}$ \\\\",
+      "source": "audit.damping_scenarios"
+    },
+    "PORT_ROWS": {
+      "value": [
+        [
+          "A: learned",
+          "$0.544490$",
+          "$30.004941$",
+          "$0.01603429$",
+          "$0.284102$"
+        ],
+        [
+          "B: learned",
+          "$2.197941$",
+          "$30.080408$",
+          "$0.03453753$",
+          "$0.611950$"
+        ]
+      ],
+      "rendered": "A: learned & $0.544490$ & $30.004941$ & $0.01603429$ & $0.284102$ \\\\\nB: learned & $2.197941$ & $30.080408$ & $0.03453753$ & $0.611950$ \\\\",
+      "source": "a/b learned input_domain"
+    },
+    "SENS_ROWS": {
+      "value": [
+        [
+          "$B_r=1.40$ T",
+          "$7.83350702$",
+          "$-0.08294$",
+          "$0.02502075$"
+        ],
+        [
+          "$B_r=1.45$ T",
+          "$7.84648941$",
+          "$+0.08266$",
+          "$0.02497935$"
+        ],
+        [
+          "$m_t,J_t$ scaled by $0.9$",
+          "$7.84192087$",
+          "$+0.02438$",
+          "$0.02499391$"
+        ],
+        [
+          "$m_t,J_t$ scaled by $1.1$",
+          "$7.83809879$",
+          "$-0.02437$",
+          "$0.02500609$"
+        ],
+        [
+          "$E$ scaled by $0.8$",
+          "$7.09311163$",
+          "$-9.52674$",
+          "$0.02763247$"
+        ],
+        [
+          "$E$ scaled by $1.2$",
+          "$8.51964699$",
+          "$+8.66884$",
+          "$0.02300567$"
+        ]
+      ],
+      "rendered": "$B_r=1.40$ T & $7.83350702$ & $-0.08294$ & $0.02502075$ \\\\\n$B_r=1.45$ T & $7.84648941$ & $+0.08266$ & $0.02497935$ \\\\\n$m_t,J_t$ scaled by $0.9$ & $7.84192087$ & $+0.02438$ & $0.02499391$ \\\\\n$m_t,J_t$ scaled by $1.1$ & $7.83809879$ & $-0.02437$ & $0.02500609$ \\\\\n$E$ scaled by $0.8$ & $7.09311163$ & $-9.52674$ & $0.02763247$ \\\\\n$E$ scaled by $1.2$ & $8.51964699$ & $+8.66884$ & $0.02300567$ \\\\",
+      "source": "fe.design_sensitivity; nominal alpha held fixed"
+    },
+    "PROPERTY_ROWS": {
+      "value": [
+        [
+          "Area $A$",
+          "$1.13097336\\times10^{-6}$",
+          "m$^2$"
+        ],
+        [
+          "Second moment $I$",
+          "$1.01787602\\times10^{-13}$",
+          "m$^4$"
+        ],
+        [
+          "Flexural rigidity $EI$",
+          "$2.13753964\\times10^{-7}$",
+          "N\\,m$^2$"
+        ],
+        [
+          "Beam mass $\\rho AL$",
+          "$9.30112487\\times10^{-5}$",
+          "kg"
+        ],
+        [
+          "Core volume $V_m$",
+          "$1.56250000\\times10^{-11}$",
+          "m$^3$"
+        ],
+        [
+          "Core mass $m_t$",
+          "$1.17187500\\times10^{-7}$",
+          "kg"
+        ],
+        [
+          "Core inertia $J_t$",
+          "$1.22070312\\times10^{-15}$",
+          "kg\\,m$^2$"
+        ],
+        [
+          "Dipole moment $\\mu$",
+          "$1.77184214\\times10^{-5}$",
+          "A\\,m$^2$"
+        ],
+        [
+          "Energy scale $E_0$",
+          "$5.31552642\\times10^{-7}$",
+          "J"
+        ]
+      ],
+      "rendered": "Area $A$ & $1.13097336\\times10^{-6}$ & m$^2$ \\\\\nSecond moment $I$ & $1.01787602\\times10^{-13}$ & m$^4$ \\\\\nFlexural rigidity $EI$ & $2.13753964\\times10^{-7}$ & N\\,m$^2$ \\\\\nBeam mass $\\rho AL$ & $9.30112487\\times10^{-5}$ & kg \\\\\nCore volume $V_m$ & $1.56250000\\times10^{-11}$ & m$^3$ \\\\\nCore mass $m_t$ & $1.17187500\\times10^{-7}$ & kg \\\\\nCore inertia $J_t$ & $1.22070312\\times10^{-15}$ & kg\\,m$^2$ \\\\\nDipole moment $\\mu$ & $1.77184214\\times10^{-5}$ & A\\,m$^2$ \\\\\nEnergy scale $E_0$ & $5.31552642\\times10^{-7}$ & J \\\\",
+      "source": "fe.properties"
+    },
+    "GRAM_MATRIX": {
+      "value": [
+        [
+          5.165021209558621e-14,
+          2.3837983143049317e-11
+        ],
+        [
+          2.3837983143049317e-11,
+          5.595088356961663e-06
+        ]
+      ],
+      "rendered": "\\begin{pmatrix}5.16502121\\times10^{-14} & 2.38379831\\times10^{-11}\\\\2.38379831\\times10^{-11} & 5.59508836\\times10^{-6}\\end{pmatrix}",
+      "source": "b.shared_identification.normalized_joint_Gram_AtransA_over_2L"
+    }
+  },
+  "transcribed_protocol_checks": {
+    "geometry": true,
+    "material": true,
+    "core": true,
+    "bias": true,
+    "nominal_damping": true,
+    "training": true,
+    "main_protocol": true,
+    "tracking_gains": true,
+    "scan_protocol": true
+  },
+  "figure_sources": {
+    "new_baseline_results.pdf": "a.comparison.groups and b.tracking.groups",
+    "new_baseline_verification.pdf": "fe.finite_element_convergence, a.oracle_midpoint_convergence, audit.damping_scenarios"
+  },
+  "scope": "No rerun and no fabricated time histories; all reported outputs are rendered from the supplied run records. Protocol constants are transcribed from the associated scripts and JSON."
+}

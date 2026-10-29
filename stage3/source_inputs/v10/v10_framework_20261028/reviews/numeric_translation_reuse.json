@@ -1,0 +1,154 @@
+{
+  "supp_experiments.tex:1": {
+    "en_sha256": "bb16086e6d6588ce6edec33b0134c6d5276c023c95e7d66a9c0ce43a2d4055e5",
+    "zh": "记录的运行环境为 Python 3.12.14、NumPy 2.3.5 和 SciPy 1.17.0。\n在随附源码包的根目录下，可通过以下命令重新生成完整的数值依赖链：\n\\begin{verbatim}\ncd reproduction\npython run_all.py\n\\end{verbatim}\n外层驱动程序先重建有限元基准，再调用实验驱动程序。\n后者按以下顺序执行各阶段：\n\\begin{enumerate}\n\\item \\texttt{minimal\\_control\\_loop.py};\n\\item \\texttt{route\\_b\\_shared\\_data.py};\n\\item \\texttt{damping\\_sensitivity.py};\n\\item \\texttt{summarize\\_results.py}.\n\\end{enumerate}\n程序将 OpenBLAS、OpenMP 和 MKL 的线程数均设为一。\n路线 B 使用新生成的路线 A 结果进行一致性核查，\n同时独立重新生成共享观测并重新拟合系数。"
+  },
+  "supp_experiments.tex:3": {
+    "en_sha256": "806598322d464dfe42ad8a3ad14cfb617b4aae6d13d483bb522bfdde10610432",
+    "zh": "\\subsection{完整物理输入与坐标约定}\n\\label{sx:physical-inputs}\n物理模型是一根均匀、实心、平面的 Euler--Bernoulli 梁，\n根部固支，自由端带有理想刚性磁芯。\n其自由长度为 $L=0.08$ m，半径为 $r=0.0006$ m，\n近似杨氏模量为 $E=2.1\\times10^6$ Pa，近似密度为 $\\rho=1028$ kg/m$^3$。\n后两个数值是一组配对材料参考值，对应约 $10$ wt\\% 的固化剂质量分数，\n以及在 $80\\,^{\\circ}$C 下固化 $2$ h 的条件 \\citep{cho2021pdms}。\n固化剂占完整混合物的 $10$ wt\\%，约对应 $9{:}1$ 的基料与固化剂质量比。\n这些数据并不意味着本文的目标圆梁就是该研究测量的试样。"
+  },
+  "supp_experiments.tex:4": {
+    "en_sha256": "1e80644b99bd6d703aefd275fbb2edb04ac9a5f97a348fae07e5476f02b76186",
+    "zh": "裸磁芯设计为立方体，边长 $a=0.00025$ m，\n名义密度 $\\rho_m=7500$ kg/m$^3$，剩磁 $B_r=1.425$ T。\n用于比较的制造商范围为 $1.40$--$1.45$ T，\n密度取其声明的下限 \\citep{smN50}。\n有量纲磁偶极矩估计为 $\\mu\\simeq B_ra^3/\\mu_0$，其中\n$\\mu_0\\simeq4\\pi\\times10^{-7}$ H/m \\citep{kjMoment}。\n这是针对均匀磁化硬磁体的工程近似。\n假定磁芯中心与梁端点重合，磁化方向沿直参考梁的切向。\n恒定纵向磁场为 $B_0=0.03$ T。\n模型不包含横向重力、接触、外部流动、梁的分布转动惯量、\n剪切变形、镀层、胶黏剂或夹具质量。\n每一项省略都是建模假设。"
+  },
+  "supp_experiments.tex:5": {
+    "en_sha256": "8dbb0089b68e6f07bc18eee500805408cb5be72cc508bf890bf370061d2d1ecb",
+    "zh": "\\begin{table}[t]\n\\centering\n\\caption{由名义输入推导的物性量。数值取自\n\\texttt{new\\_baseline.json}；显示精度描述计算精度，而非实验精度。}\n\\label{sx:properties}\n\\setlength{\\tabcolsep}{3pt}\n\\begin{tabular}{lcl}\n\\toprule\n物理量 & 计算值 & 单位\\\\\n\\midrule\n截面积 $A$ & $1.13097336\\times10^{-6}$ & m$^2$ \\\\\n截面二次矩 $I$ & $1.01787602\\times10^{-13}$ & m$^4$ \\\\\n抗弯刚度 $EI$ & $2.13753964\\times10^{-7}$ & N\\,m$^2$ \\\\\n梁质量 $\\rho AL$ & $9.30112487\\times10^{-5}$ & kg \\\\\n磁芯体积 $V_m$ & $1.56250000\\times10^{-11}$ & m$^3$ \\\\\n磁芯质量 $m_t$ & $1.17187500\\times10^{-7}$ & kg \\\\\n磁芯转动惯量 $J_t$ & $1.22070312\\times10^{-15}$ & kg\\,m$^2$ \\\\\n磁偶极矩 $\\mu$ & $1.77184214\\times10^{-5}$ & A\\,m$^2$ \\\\\n能量尺度 $E_0$ & $5.31552642\\times10^{-7}$ & J \\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}"
+  },
+  "supp_experiments.tex:6": {
+    "en_sha256": "09f8c7646dce77c818ad73516111d3c2a04cb6c6989fe04c4a342470ac2a8e47",
+    "zh": "有量纲模态基满足 $\\Phi^{\\mathsf T}M_{\\mathrm{total}}\\Phi=I$。\n其平衡位移尺度为 $S_j=\\sqrt{E_0/(\\omega_0\\omega_j)}$，\n其中 $E_0=\\mu B_0$ 且 $\\omega_0=\\omega_1$。\n因此，物理模态位移与动量分别为 $a_j=S_jX_j$ 和\n$\\pi_j=\\sqrt{E_0\\omega_j/\\omega_0}\\,Y_j$。\n在无量纲时间 $\\tau=\\omega_0t$ 下，\n$X'=\\mathsf NY$，二阶 $X$ 方程中的等效质量为 $\\mathsf N^{-1}$。\n平衡缩放后，该质量矩阵不是单位矩阵。\n端点转角与位移分别为 $d^{\\mathsf T}X$ 和 $\\ell^{\\mathsf T}X$，\n其中系数见式~\\eqref{num:scales}。\n全部物理误差指标均使用同一映射。"
+  },
+  "supp_experiments.tex:7": {
+    "en_sha256": "9a5357072d82e3a42bd537a605a3e7aa0d526ed1042f638dc624c26ce4c47829",
+    "zh": "\\subsection{有限元与独立边界核查}\n\\label{sx:fe}\n每个三次 Hermite 单元采用通常的一致平动质量与弯曲刚度。\n消去根部位移与斜率后，保留 $2n_e$ 个位形坐标。\n磁芯在末端位移质量项上增加 $m_t$，\n在末端转动惯量项上增加 $J_t=m_ta^2/6$。\n偏置磁场在末端转动刚度项上增加 $\\mu B_0$。\n特征值求解采用质量归一化，并以缩放后的逆算子构造对称特征值问题，\n直接分辨最低阶模态，避免从高频谱端作相减运算来恢复它们。\n前四阶频率用于网格核查，前两阶用于定义控制模型。"
+  },
+  "supp_experiments.tex:8": {
+    "en_sha256": "cadaa365b54a7efd75322de96f6938fc4ead52347b92d0f1deaddefed5ca98a6",
+    "zh": "独立连续体核查求解 $EIw''''=\\rho A\\omega^2w$，\n边界条件为 $w(0)=w'(0)=0$ 及\n\\begin{equation}\n \\begin{split}\n EIw'''(L)+m_t\\omega^2w(L)&=0,\\\\\n EIw''(L)+(\\mu B_0-J_t\\omega^2)w'(L)&=0.\n \\end{split}\n \\label{sx:boundary-check}\n\\end{equation}\n满足固支条件的基函数为 $\\cosh(kx)-\\cos(kx)$ 和 $\\sinh(kx)-\\sin(kx)$。\n对其端点行列式独立确定根的括区间，\n再采用绝对求根容差为 $2\\times10^{-13}$ 的 Brent 迭代求解。\n这针对同一理想边界模型给出独立浮点核查，不是特征值的区间证明。"
+  },
+  "supp_experiments.tex:9": {
+    "en_sha256": "545fbf80d24e1f2c075ba7e7f29e5a8111a894ea91889fe5fe940a5723c3b1bb",
+    "zh": "\\begin{table*}[t]\n\\centering\n\\caption{有限元频率（rad/s），以及前四阶模态相对于独立连续体根的最大相对误差。\n采用 $32$ 个单元的结果定义本文基准。}\n\\label{sx:fe-table}\n\\setlength{\\tabcolsep}{5pt}\n\\begin{tabular}{rccccc}\n\\toprule\n单元数 & $\\omega_1$ & $\\omega_2$ & $\\omega_3$ & $\\omega_4$ & 最大相对误差\\\\\n\\midrule\n16 & $7.84001022$ & $47.39980944$ & $131.21158140$ & $256.37539514$ & $1.5071\\times10^{-4}$ \\\\\n32 & $7.84000916$ & $47.39957662$ & $131.20668107$ & $256.33922193$ & $9.5903\\times10^{-6}$ \\\\\n64 & $7.84000910$ & $47.39956199$ & $131.20637133$ & $256.33691793$ & $6.0208\\times10^{-7}$ \\\\\n\\bottomrule\n\\end{tabular}\n\\end{table*}"
+  },
+  "supp_experiments.tex:10": {
+    "en_sha256": "ce179e882b269e071aef34e153871b0d86178c6c26af9fe1a5bb15d99849565c",
+    "zh": "表~\\ref{sx:sensitivity-table} 每次仅改变一个声明的输入。\n磁芯质量系数同时乘于 $m_t$ 和 $J_t$，并保持几何与磁偶极矩不变。\n这是独立的惯性敏感性分析，不是制造商公差或完全耦合的制造模型。\n特别是，系数 $0.9$ 不被解释为所采用密度规格内的同尺寸磁芯。\n$20\\%$ 的模量变化同样是设计扰动。\nJSON 中还保留了剩磁与惯性组合的四个角点。\n在这些有限元参数敏感性分析中，名义有量纲 $\\alpha$ 始终固定，\n因此所得到的阻尼比随频率变化。\n这一约定与另行进行的阻尼扫描有意区分：后者保持物理基准不变而改变 $\\alpha$。"
+  },
+  "supp_experiments.tex:11": {
+    "en_sha256": "c96c19ef156f2c1c350bc96506732faa1c2d73ad8fab4904350902f977699141",
+    "zh": "\\begin{table*}[t]\n\\centering\n\\caption{选定的有限元设计敏感性。末列采用固定的名义\n$\\alpha=0.3920004581$ s$^{-1}$。这些数值均非实测置信区间。}\n\\label{sx:sensitivity-table}\n\\begin{tabular}{lccc}\n\\toprule\n扰动 & $\\omega_1$（rad/s） & 变化（\\%） & $\\alpha/(2\\omega_1)$\\\\\n\\midrule\n$B_r=1.40$ T & $7.83350702$ & $-0.08294$ & $0.02502075$ \\\\\n$B_r=1.45$ T & $7.84648941$ & $+0.08266$ & $0.02497935$ \\\\\n$m_t,J_t$ 乘以 $0.9$ & $7.84192087$ & $+0.02438$ & $0.02499391$ \\\\\n$m_t,J_t$ 乘以 $1.1$ & $7.83809879$ & $-0.02437$ & $0.02500609$ \\\\\n$E$ 乘以 $0.8$ & $7.09311163$ & $-9.52674$ & $0.02763247$ \\\\\n$E$ 乘以 $1.2$ & $8.51964699$ & $+8.66884$ & $0.02300567$ \\\\\n\\bottomrule\n\\end{tabular}\n\\end{table*}"
+  },
+  "supp_experiments.tex:12": {
+    "en_sha256": "f4ef1ad0f82ed2cbc0d8cf57bf7950d0027be5dad64649176901316f2b2cd16f",
+    "zh": "\\subsection{训练数据、验证数据与积分拟合}\n\\label{sx:training}\n名义合成受控对象取 $\\beta_*=0.2$ 和 $\\gamma_*=0.05$，并保留完整余弦。\n训练状态和验证状态由经典 RK4 以步长 $0.0005$ 在 $0\\leq\\tau\\leq4$ 上生成。\n每条记录的物理时长为 $0.510203$ s，并非四秒。\n每隔四个生成步长采样一次，可得到每条轨迹的 $2001$ 个状态，观测间隔为 $0.002$。\n不施加随机噪声、平滑或导数估计。\n六个固定初始状态列于表~\\ref{sx:initial-states}。\n它们针对这一更柔软的梁重新设计，采用更小振幅，\n每个状态均为前一个最小实验中对应初始状态的一半。\n它们不是从实测分布中取得的样本。"
+  },
+  "supp_experiments.tex:13": {
+    "en_sha256": "8de2261497c388e4de244a14d7a33016f1801a89d05b3d9a13038cda594eebb9",
+    "zh": "\\begin{table}[t]\n\\centering\n\\caption{无量纲初始状态。验证轨迹不参与参数拟合。}\n\\label{sx:initial-states}\n\\setlength{\\tabcolsep}{3.3pt}\n\\begin{tabular}{lrrrr}\n\\toprule\n记录 & $X_1$ & $X_2$ & $Y_1$ & $Y_2$\\\\\n\\midrule\n训练 1 & $0.09$ & $0.07$ & $0.025$ & $-0.02$ \\\\\n训练 2 & $-0.075$ & $0.1$ & $0.01$ & $0.025$ \\\\\n训练 3 & $0.11$ & $-0.06$ & $-0.015$ & $0.03$ \\\\\n训练 4 & $0.05$ & $0.12$ & $0.02$ & $-0.01$ \\\\\n验证 1 & $-0.095$ & $0.055$ & $0.03$ & $0.005$ \\\\\n验证 2 & $0.065$ & $-0.105$ & $-0.02$ & $0.015$ \\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}"
+  },
+  "supp_experiments.tex:14": {
+    "en_sha256": "e9bc260610a70ccf4aa599bd3c28730dd9cdc33430d52d2556765b3be1b376c4",
+    "zh": "每个互不重叠时窗包含 $20$ 个区间和 $21$ 个状态。\n相邻时窗共享边界观测。\n复合 Simpson 权重直接作用于式~\\eqref{num:regression} 中的两个积分。\n每条轨迹提供 $100$ 个向量时窗：四条训练轨迹给出 $800$ 个标量行，\n两条验证轨迹给出 $400$ 个标量行。\n将两列设计向量分别除以各自的 Euclidean 范数，\n采用无约束最小二乘例程求解，再恢复原尺度。\n不使用正则化或非负约束。\n源脚本检验了矩阵满列秩。"
+  },
+  "supp_experiments.tex:15": {
+    "en_sha256": "0c4e4b11e03d3ae31bbaa19944ee1fd4b9a1a42b054ef69f39710f566be1ea3d",
+    "zh": "归一化联合 Gram 矩阵 $G=A^{\\mathsf T}A/800$ 为\n\\begin{equation}\n G=\\begin{pmatrix}5.16502121\\times10^{-14} & 2.38379831\\times10^{-11}\\\\2.38379831\\times10^{-11} & 5.59508836\\times10^{-6}\\end{pmatrix}.\n \\label{sx:gram}\n\\end{equation}\n这里按标量行数归一化；若改用向量时窗数，系数界中的数值常数会发生变化。\n令 $r_I=\\|A\\widehat\\theta-b\\|_2/\\sqrt{800}$，\n若能独立确立缺陷界 $\\|A\\theta_*-b\\|_2/\\sqrt{800}\\leq\\varepsilon_I$，\n即可得到第~\\ref{sec:kam}~节描述的条件性估计。\n利用已知合成真值进行诊断，得到\n$\\varepsilon_{I,\\mathrm{diag}}=1.26876\\times10^{-12}$，相应界表达式的数值为\n$1.00470\\times10^{-5}$，而实际系数误差为 $3.36849\\times10^{-6}$。\n该诊断使用了仅在合成实验中可知的真值，以及普通浮点求积。\n它不是 $\\varepsilon_I$ 的独立包围，不能据此完成严格的解析范数或 KAM 论证。\n留出验证残差考察同一特征族内的不同轨迹，\n并未检验更大的特征类或含噪观测模型。"
+  },
+  "supp_experiments.tex:16": {
+    "en_sha256": "4dc55d10b1fa1b97060d655269c2d87f99628acad005dc851c595a19e81f6568",
+    "zh": "\\subsection{路线 A 协议与中点法验证}\n\\label{sx:route-a}\n初始状态为 $(0.09,0.08,0.015,-0.01)$，目标为 $h_0$ 的保守流。\n评估以下四种指令：\n$U=0$、$U=\\widehat\\gamma Y$、\n$U=\\widehat\\gamma Y+\\widehat\\beta\\phi(X)$，以及\n$U=\\gamma_*Y+\\beta_*\\phi(X)$。\n最后一种为真值参数对照。\n各指令均通过相同的理想物理端口例程重构，\n重构值随后代入受控对象的微分方程。\n因此，端口逆映射在积分过程中实际参与计算，\n而非仅在模态仿真完成后进行评估。"
+  },
+  "supp_experiments.tex:17": {
+    "en_sha256": "393f18fa5fa345479cb8d51d1eeb2f8c56675bc7da9ae149f22ed3a54c1164c1",
+    "zh": "主要中点步长为 $0.001$，终止时间为 $\\tau=20$，\n保存全部端点，共得到 $20001$ 个状态。\n物理时间步长为 $1.27551\\times10^{-4}$ s；\n这里不声称这一数值是硬件能够实现的采样周期。\n每次 Newton 求解均由显式 Euler 预测值初始化。\n停止准则为\n\\begin{equation}\n \\left\\|x_{k+1}-x_k-\n \\Delta f\\!\\left(\\frac{x_k+x_{k+1}}2\\right)\\right\\|_\\infty\n \\leq2\\times10^{-14}.\n \\label{sx:newton-stop}\n\\end{equation}\n迭代使用解析中点 Jacobian，连续 $12$ 次修正尝试仍未成功时抛出错误。\n此准则针对完整增量方程，而非仅针对修正量范数。\n记录的路线 A 主要计算最多使用一次修正；较粗步长的收敛阶核查最多使用两次。"
+  },
+  "supp_experiments.tex:18": {
+    "en_sha256": "1add379c691549f4517fab9f71b082e3a5d165cdb87e003bf95b16edd0472ce1",
+    "zh": "独立 $h_0$ 参考由 RK4 计算，步长分别为 $0.0005$ 和 $0.00025$。\n主要比较每隔四步对细步长参考采样一次。\n真值参数对照的中点收敛测试采用步长 $0.04$、$0.02$、$0.01$ 和 $0.005$，\n始终在共同时间点与上述独立细步长参考进行比较。"
+  },
+  "supp_experiments.tex:19": {
+    "en_sha256": "96699782534166357ab447f5676b05e912932fd5f750f1a47dcc83471d101e5a",
+    "zh": "\\begin{table}[t]\n\\centering\n\\caption{路线 A 真值参数对照的中点法收敛，终止时间为 $\\tau=20$。\n最大值取遍所有保存的共同时间点。}\n\\label{sx:order-table}\n\\setlength{\\tabcolsep}{4pt}\n\\begin{tabular}{rcc}\n\\toprule\n$\\Delta$ & 最大状态误差 & 观测收敛阶\\\\\n\\midrule\n$0.04$ & $4.64310\\times10^{-2}$ & --- \\\\\n$0.02$ & $1.18409\\times10^{-2}$ & $1.971306$ \\\\\n$0.01$ & $2.96760\\times10^{-3}$ & $1.996414$ \\\\\n$0.005$ & $7.42245\\times10^{-4}$ & $1.999331$ \\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}"
+  },
+  "supp_experiments.tex:20": {
+    "en_sha256": "9ddb36d7848607653539bbbf2bb2675888ee8975aef26aa003b33df210775e9c",
+    "zh": "观测收敛阶为 $\\log_2(E_\\Delta/E_{\\Delta/2})$。\n辛性诊断采用 $D\\Psi^{\\mathsf T}JD\\Psi-J$ 的谱范数，\n其中 $D\\Psi$ 是在求得的中点处计算的理想隐式 Cayley 切映射。\n仅对真值参数对照恢复使用这一诊断，以检验哈密顿目标映射。\n随附的矩阵消元核查另外采用 $n=1,2,4$ 个位形坐标，\n验证二阶更新的代数关系；它不是高阶模态梁精度实验。"
+  },
+  "supp_experiments.tex:21": {
+    "en_sha256": "5d8b8305c42e0a0e4afd720a57ae92a7be9b1267294008f25a9479dd21d2e8e5",
+    "zh": "\\subsection{重新生成观测的阻尼扫描}\n\\label{sx:damping}\n五个第一阶模态阻尼比分别为 $0$、$0.01$、$0.025$、$0.05$ 和 $0.1$。\n对于每个值，有量纲阻尼系数为 $\\alpha=2\\zeta_1^{\\mathrm{d}}\\omega_0$，\n真实无量纲阻尼系数为 $\\gamma=2\\zeta_1^{\\mathrm{d}}$。\n有限元基底、人工设定的 $\\beta_*=0.2$ 及全部初始状态保持不变。\n重新生成所有训练与验证观测，\n并采用不变的无约束双列拟合过程重新拟合两个系数。\n因此，没有任何数值是通过复制基准拟合结果或仅改变控制器参数得到的。"
+  },
+  "supp_experiments.tex:22": {
+    "en_sha256": "d3418728431f03b97d62255b60c88e6dd85bdca193871c65d85c1048dd1799f2",
+    "zh": "\\begin{table*}[t]\n\\centering\n\\caption{每个阻尼情景均重新拟合。零阻尼情景中的极小负估计值来自数值计算，未施加约束将其消除。}\n\\label{sx:damping-fit}\n\\setlength{\\tabcolsep}{5pt}\n\\begin{tabular}{rcccc}\n\\toprule\n$\\zeta_1^{\\mathrm{d}}$ & $\\alpha$（s$^{-1}$） & $\\widehat\\beta$ & $\\widehat\\gamma$ & $\\lambda_{\\min}(G)$\\\\\n\\midrule\n$0$ & $0.000000000$ & $0.200003040949$ & $-1.4037896716\\times10^{-12}$ & $6.9451\\times10^{-14}$ \\\\\n$0.01$ & $0.156800183$ & $0.200003177492$ & $1.9999999994\\times10^{-2}$ & $6.1346\\times10^{-14}$ \\\\\n$0.025$ & $0.392000458$ & $0.200003368491$ & $4.9999999987\\times10^{-2}$ & $5.1549\\times10^{-14}$ \\\\\n$0.05$ & $0.784000916$ & $0.200003636621$ & $9.9999999975\\times10^{-2}$ & $3.9870\\times10^{-14}$ \\\\\n$0.1$ & $1.568001832$ & $0.200003938495$ & $1.9999999995\\times10^{-1}$ & $2.6883\\times10^{-14}$ \\\\\n\\bottomrule\n\\end{tabular}\n\\end{table*}"
+  },
+  "supp_experiments.tex:26": {
+    "en_sha256": "99906c8b85bc27a24498d005e57e718719c3e8b01ebd14424754626af592d726",
+    "zh": "路线 A 的能量漂移为 $\\max_k|h_0(x_k)-h_0(x_0)|$，\n其相对形式再除以 $|h_0(x_0)|$。\n这是名义能量，并非精确的非线性作用量，也不是所有扰动受控对象各自的能量。\n指令代价采用 $\\int\\|U\\|_2^2\\,\\mathrm d\\tau$ 的梯形求积近似；\n它是无量纲广义控制代价，而非执行器电功率。\n回归残差是另一种指标，即 $A\\widehat\\theta-b$ 各标量行的均方根误差。"
+  },
+  "supp_experiments.tex:27": {
+    "en_sha256": "b251b93f9abb4b057cca4e35d0b2d4e1364e0abbc83d13b5504372183af369da",
+    "zh": "局部端口重构假定力与力矩可独立指令，并具有精确状态信息。\n将重构磁场与梯度代回模态方程，记录广义力差值。\n局部总磁场为 $\\sqrt{B_0^2+B_y^2}$，\n局部梯度大小为其对称、无迹二维矩阵的谱范数。\n没有实现执行器电流映射或饱和限制。"
+  },
+  "supp_experiments.tex:29": {
+    "en_sha256": "61475a105330bf8b06c718f2bafe8cb5fc99b14a30eba75a81a1516e8db90ab0",
+    "zh": "轨迹的角度与位移最大值在保存时间点处采样。\n全梁斜率与位移在 $257$ 点空间网格上通过 Hermite 插值计算，\n每个单元划分为八个子区间。\n随附节点模态形状，因此可另行检查空间多项式极值；\n但所报告数值使用上述网格，不包围连续时间极值。\n指令诊断包含中点积分器使用的所有端点与算术中点。\n作为设计比较讨论的 $20$ mT 横向场值并非强制截幅规则。"
+  },
+  "supp_experiments.tex:43": {
+    "en_sha256": "066bec3f9ccd44a9d81f5786b3d07b4aaceee49f4197edba299240a016f35bdf",
+    "zh": "\\subsection{条件性净空与历史结果的迁移限制}\n\\label{sx:migration}\n$4$ mm 净空是扣除杆半径后的中心线净余量。\n名义能量比较采用 $E_c=3EIc^2/(2L^3)=10.019717$ nJ，\n并选取系数 $0.95$。\n它通过非负的名义动能、弹性能与静磁场能定义了条件性充分界。\n主要实验的初始能量为 $12.656721$ nJ，超过所提出的 $9.518731$ nJ 能量上限。\n当前控制没有实现输入功约束器。\n因此，采样位移小于净空不能被报告为已验证该能量上限前提。"
+  },
+  "supp_experiments.tex:44": {
+    "en_sha256": "07d1a32da7760caec3191682a9e9228048008a9731d679b5c9311c68ecf30d15",
+    "zh": "原稿中的角度、角速度、速度和执行器误差预算，原本就已声明为确定性工程假设。\n它们仍保持这种假设地位，不能重新归类为实测传感器规格。\n在将其用于保证之前，必须针对新的物理映射，\n重新计算运行裕量及任何延迟界。"
+  },
+  "supp_experiments.tex:45": {
+    "en_sha256": "bf16716743f813db6e27da938064d9f181676bb6108effd4c1f1765391269649",
+    "zh": "\\begin{table*}[t]\n\\centering\n\\caption{改变材料输入、端点惯性与模态映射后，主要数值结论的处理方式。\n完整的章节级登记表随源码包提供。}\n\\label{sx:migration-table}\n\\begin{tabular}{p{.23\\textwidth}p{.29\\textwidth}p{.41\\textwidth}}\n\\toprule\n原有组成部分 & 当前处理 & 建立新数值结论所需工作\\\\\n\\midrule\n梁能量、复数表示与控制恒等式 & 使用新的质量与坐标映射保留推导 & 针对所选残差与端口，核查全部特化假设及导数。\\\\\n有限元频率与平衡映射 & 已在 $16/32/64$ 个单元下重新计算 & 高阶模态受迫轨迹仍需单独验证。\\\\\n匹配条件下的实数／复数 CHNN 拟合及训练随机种子对比 & 作为历史结果；本文用明确声明的双标量测试替代 & 生成新数据，执行完整的匹配训练与验证协议。\\\\\nGC17 中点法／Central4 表 & 不采用历史数值 & 重新拟合目标能量，并在该函数上重复两种积分测试。\\\\\nCOMSOL 全有限元、两模态与模型失配比较 & 不采用历史数值 & 重建每个独立模型、输入、求解器协议及降阶比较。\\\\\n有限振幅 KAM、族／测度与尾项证书 & 保留条件性理论；不采用旧数值证书 & 重新计算拟合函数、解析域、Gram／缺陷界、扭转、环面及经验证的余项不等式。\\\\\n全梁环面提升与持续控制界 & 保留条件性构造；没有新的全阶仿真 & 重新计算高阶模态、尾项强迫、输入界及启动暂态。\\\\\n输入功约束器、运行容差与 S 形路径结果 & 保留条件性论证；不采用旧输出 & 针对新模型重新初始化并实现相应控制器及裕量。\\\\\n长期与共振边界诊断 & 不采用历史输出 & 重新执行所述时域、采样、延拓及收敛研究。\\\\\n\\bottomrule\n\\end{tabular}\n\\end{table*}"
+  },
+  "supp_experiments.tex:46": {
+    "en_sha256": "e33763a546a6bc214f35357a33c25ae027759b0f09618aa5afa0e7068311e214",
+    "zh": "特别地，旧有 $22.66$ nJ 能量预算不是新基准输入。\n旧环面频率、Fourier 系数、$35$ 参数拟合、COMSOL 轨迹、\n$200$ s 预测统计及全阶跟踪误差均描述不同的数值对象。\n它们的来源可以保留在历史登记表中，但不作为本文所报告计算的输出。\n因此，重新计算的两模态测试与保留的条件性定理，具有明确不同的证据作用。"
+  },
+  "extension_tracking_results.tex:1": {
+    "en_sha256": "0e98ab71d581f5d158e5cb902d9b2d05092f40a25f5265f75857d5a57024e192",
+    "zh": "实际状态与参考状态合并为一个八维中点系统进行积分。\n另保留第二条独立积分的 RK4 参考，仅用于评估。\n记 $x_k$ 为实际状态，$\\bar x_k$ 为同步中点参考，\n$x_{\\mathrm{ref}}(\\tau_k)$ 为独立参考，则\n\\begin{equation}\n x_k-x_{\\mathrm{ref}}(\\tau_k)\n =(x_k-\\bar x_k)+\n   (\\bar x_k-x_{\\mathrm{ref}}(\\tau_k)).\n \\label{num:reference-split}\n\\end{equation}\n第一项衡量对实际实现参考的同步误差；第二项保留该参考自身的积分误差。\n表~\\ref{num:b-table} 同时报告这两种口径。"
+  },
+  "extension_tracking_results.tex:2": {
+    "en_sha256": "1f78721511e9d7c77209987f80242a1d4b3c13a2a0869f0fd399250f152efe64",
+    "zh": "\\begin{table*}[t]\n\\centering\n\\caption{路线 B 在 $\\Delta=0.001$ 时的状态均方根误差。\n“独立”指同一冻结 $\\widehat h$ 的小步长 RK4 参考；\n“同步”指增广中点系统中的参考分量。}\n\\label{num:b-table}\n\\begin{tabular}{lccc}\n\\toprule\n控制方式 & 独立，$[0,20]$ & 独立，$[10,20]$ & 同步，$[10,20]$\\\\\n\\midrule\n无控制 & $2.55875\\times10^{-2}$ & $3.41583\\times10^{-2}$ & $3.41580\\times10^{-2}$ \\\\\n阻尼补偿 & $6.02185\\times10^{-3}$ & $6.02249\\times10^{-3}$ & $6.02060\\times10^{-3}$ \\\\\n学习跟踪 & $1.58912\\times10^{-3}$ & $2.26767\\times10^{-5}$ & $8.55100\\times10^{-7}$ \\\\\n真值参数对照跟踪 & $1.58912\\times10^{-3}$ & $2.26767\\times10^{-5}$ & $8.55090\\times10^{-7}$ \\\\\n\\bottomrule\n\\end{tabular}\n\\end{table*}"
+  },
+  "extension_tracking_results.tex:3": {
+    "en_sha256": "d002eb4349dd7a3d94105ee78de5004a56408327774649f41d0f65e86da11b17",
+    "zh": "学习控制器相对于独立参考的全时窗均方根误差为 $1.58912\\times10^{-3}$，\n其中包含预先设定的启动误差。\n在 $10\\leq\\tau\\leq20$ 上，该值降为 $2.26767\\times10^{-5}$，\n而同步均方根误差为 $8.55100\\times10^{-7}$。\n在终点，同步误差为 $2.98323\\times10^{-10}$，但相对于独立参考的误差为 $2.96937\\times10^{-5}$。\n中点参考的最大误差为 $2.96936\\times10^{-5}$；将中点步长减半后，该误差缩小 $3.999984$ 倍。\n因此，近乎完美的同步可以与已经分辨出的二阶参考相位误差同时存在。\n不能将同步误差报告为对连续参考运动的逼近精度。"
+  },
+  "extension_tracking_results.tex:4": {
+    "en_sha256": "ff7067eef86103f74db48f6a0350e1641ed27f19c4217ef8a93bbceebf91af77",
+    "zh": "另一项检查将真值参数对照的跟踪误差，与其线性误差方程的 Cayley 更新进行比较。\n最大差值为 $1.0040\\times10^{-15}$。\n这验证了增广中点耦合，但并未使稳定跟踪闭环成为哈密顿系统。\n实验也说明了单独补偿阻尼为何不足以实现此目标：它不能消除预先施加的初始位置偏差。"
+  },
+  "extension_tracking_results.tex:5": {
+    "en_sha256": "3c19659dc3b039817af4a1736d836bf26c97d10bc4f412c4196604feaf2d0b64",
+    "zh": "\\begin{figure*}[t]\n\\centering\n\\includegraphics[width=\\textwidth]{figures/new_baseline_results.pdf}\n\\caption{采用独立保守参考的新基准比较。\n(a) 路线 A 从相同初态恢复 $h_0$。\n(b) 路线 B 从非零初始偏差出发，跟踪冻结的 $\\widehat h$ 轨迹。\n全时窗与后半时窗误差揭示了跟踪暂态。\n两个面板使用不同参考对象，因此柱高不能用于对两条路线作优劣排序。}\n\\label{num:results}\n\\end{figure*}"
+  },
+  "extension_tracking_results.tex:6": {
+    "en_sha256": "a66f20248f5e237fd6aa93040c1cad0304859e9e774109ac17e5a1beeb166b7f",
+    "zh": "\\subsection{路线 B 预测与跟踪协议}\n\\label{sx:route-b}\n路线 B 脚本重新生成同一组训练与验证数据，\n并检查其新拟合的系数向量与路线 A 向量的差异是否在 $10^{-13}$ 以内。\n随后针对 $h_0$、$\\widehat h$ 和 $h_*$ 分别计算三条保守轨迹，\n采用 RK4 步长 $0.00025$，从共同初态积分至 $\\tau=20$。\n预测误差将 $h_0$ 和 $\\widehat h$ 与 $h_*$ 比较；\n后者是合成真值，而非独立物理数据。\n对 $\\widehat h$ 和 $h_*$ 参考，均另用 RK4 以步长 $0.0005$ 计算进行核查。"
+  },
+  "extension_tracking_results.tex:7": {
+    "en_sha256": "6e7b1be30a2f95a952e1bf9883bd8fb40c5ca89a35c2cae917f881e26e8d5dfb",
+    "zh": "反馈控制的参考是冻结的保守 $\\widehat h$ 流，\n初态为 $(0.09,0.08,0.015,-0.01)$。\n实际初态为 $(0.0945,0.084,0.015,-0.01)$。\n位置偏差分别为参考各位置坐标的 $5\\%$，动量偏差为零。\n在无量纲时间下，增益取 $\\kappa_p=1$、$\\kappa_d=2$。\n无控制、基于拟合参数的仅阻尼补偿、学习跟踪和真值参数对照跟踪组均使用同一参考。\n学习指令与真值参数对照指令分别对应式~\\eqref{struct:route-b-control} 和式~\\eqref{struct:route-b-oracle} 中的不同控制律；\n真值参数对照使用真实受控对象系数进行抵消，但保留拟合参考轨迹。"
+  },
+  "extension_tracking_results.tex:8": {
+    "en_sha256": "02ca8a21a051ca7f70b7aed75a47daf0c5ebc0c345af7c0337fec9de2e48c5a4",
+    "zh": "四个实际状态变量与四个参考变量共同构成八维中点求解，\nNewton 设置与式~\\eqref{sx:newton-stop} 相同。\n独立 RK4 轨迹不输入该控制器，\n仅在计算后用于报告式~\\eqref{num:reference-split} 中的积分误差分量。\n另一次计算将中点步长减半至 $0.0005$；\n实际状态在共同时间点处的最大差值为 $2.22701\\times10^{-5}$，\n参考误差缩小 $3.999984$ 倍。\n在记录的检查中，解析增广 Jacobian 与有限差分的最大差异为 $3.6902\\times10^{-11}$。\n这些有限差分是实现诊断，不能替代已经推导的 Jacobian。"
+  },
+  "extension_tracking_results.tex:9": {
+    "en_sha256": "206d2897a36ed11d1708048ee018c1dd3649d55f472c82e788df49f4752e19e0",
+    "zh": "对于真值参数对照，初始动量误差向量为零，连续误差满足\n$e_X(\\tau)=(1+\\tau)e^{-\\tau}e_X(0)$ 和\n$e_Y(\\tau)=-\\tau e^{-\\tau}\\mathsf N^{-1}e_X(0)$。\n还将离散误差与独立构造的该线性系统 Cayley 更新进行比较。\n这一比较利用已知误差方程检验反馈与参考之间的耦合。"
+  },
+  "extension_tracking_results.tex:11": {
+    "en_sha256": "50854ba1af3129377ddf206877b2af0937a0fde62bd6a22508c5074950b336b7",
+    "zh": "\\begin{table*}[t]\n\\centering\n\\caption{阻尼扫描中相对于独立参考的状态均方根误差。\n两条路线使用不同的目标哈密顿量与时间窗口。}\n\\label{sx:damping-errors}\n\\begin{tabular}{rcccc}\n\\toprule\n$\\zeta_1^{\\mathrm{d}}$ & A 无控制，$[0,10]$ & A 学习，$[0,10]$ & B 无控制，$[5,10]$ & B 学习，$[5,10]$\\\\\n\\midrule\n$0$ & $3.77362\\times10^{-5}$ & $3.42885\\times10^{-5}$ & $6.02444\\times10^{-3}$ & $1.09567\\times10^{-4}$ \\\\\n$0.01$ & $6.73657\\times10^{-3}$ & $3.42885\\times10^{-5}$ & $3.71321\\times10^{-3}$ & $1.09567\\times10^{-4}$ \\\\\n$0.025$ & $1.59501\\times10^{-2}$ & $3.42885\\times10^{-5}$ & $1.62063\\times10^{-2}$ & $1.09567\\times10^{-4}$ \\\\\n$0.05$ & $2.92396\\times10^{-2}$ & $3.42885\\times10^{-5}$ & $3.42497\\times10^{-2}$ & $1.09567\\times10^{-4}$ \\\\\n$0.1$ & $4.97374\\times10^{-2}$ & $3.42885\\times10^{-5}$ & $6.13727\\times10^{-2}$ & $1.09567\\times10^{-4}$ \\\\\n\\bottomrule\n\\end{tabular}\n\\end{table*}"
+  }
+}

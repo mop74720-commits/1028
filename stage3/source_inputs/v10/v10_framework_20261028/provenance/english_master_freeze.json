@@ -1,0 +1,56 @@
+{
+  "revision": "v10 plus Direction I three-subproblem framework",
+  "frozen_at_utc": "2026-10-28T09:25:17.752777+00:00",
+  "translation_started_after_this_freeze": true,
+  "english_main_pages": 23,
+  "english_supplement_pages": 25,
+  "files": {
+    "english/figures/framework_closed_loop_checks.pdf": "a23520015861627aa3071bcf9343283451bb5eb1f2a20ac2941e838c72e20a42",
+    "english/figures/framework_matrix_checks.pdf": "5b9f05e0a294c7e1b02505959ccc1c74a9fd870a7c802fb3b42558f08902d52e",
+    "english/figures/new_baseline_results.pdf": "e93496ad3c8b98432b8f1881cde91164fcd26b2cf1afc1e5d72a6c585801eb9c",
+    "english/figures/new_baseline_verification.pdf": "b277e562bfbd215eab3ce76a14ca645595309e52b90d8f85c3c399c4ebca0c19",
+    "english/layout_patch.tex": "746f4a0f1ec080293b07fb4d6116cdaab5fbd04c8478c3934717808df7ca65d5",
+    "english/main.tex": "180174ae55a768c980273c4fc1742cea5b482786f62f579bb79446547379b73a",
+    "english/preamble.tex": "8cf9d58048b1feff8899754a71e289b11988029593e47699c0f9d78e68ad0f08",
+    "english/sagej.cls": "3d355246afa097b6dc8b637ff49d74fccaf8886f9331b3a97bb1b0a3b22b9e23",
+    "english/sections/analysis.tex": "1b9ab871927851e073488f246f2ec8abb6b0959fa6de44c544a8438d1cfc1264",
+    "english/sections/application.tex": "4f3a54346949646fb699c36e5052b8d8959ad37f55c2e26aef6a0f184a7d3a1f",
+    "english/sections/background.tex": "35d909d92e07299eae059aecde65db2507f4aa0819257c28420036427649c600",
+    "english/sections/conclusion.tex": "3686c5c15e2d71dd44d79908d993bf58c3ed4262589883bf7c187e496b1aca77",
+    "english/sections/controlled_analysis.tex": "c5ee1c63bd9b80802486f3be7b7a210b3b857f6ace6a2003b761174166c9caa6",
+    "english/sections/endmatter.tex": "37ad93207906f0f3d50e3f8748be315629c7441d7848436447a359474ee197a9",
+    "english/sections/extension_tracking_results.tex": "64d9e9ea981777647ca7ea72e7e2b9a9aef5214126d9a389b69285d2676b6850",
+    "english/sections/extension_tracking_theory.tex": "119d66eb1278c5f15959d31891bff28af592c41dacaa07a572336d32d5a55144",
+    "english/sections/kam.tex": "dd8624e6e0db34a2382d73d47b9545bbd989ca4025ccd063d3eb16ed189664af",
+    "english/sections/mechanics.tex": "b0535fab18350cd5f35e126ee57a1ce8a40f37f81bc05132b12b3c1eefb96f9b",
+    "english/sections/references.tex": "6ef6fac832bd75d9d2b479daf95ef8ee63f48ce4073cc13580efd6668fc276c5",
+    "english/sections/structure.tex": "66d0a28086b69815af268c9148d119beace1d393d9a5d44bebb6b96a7a82267e",
+    "english/sections/supp_experiments.tex": "ce1006086e0d03f0c4a628365dc610333fb1540b36af86b6614aedde041501a1",
+    "english/sections/supp_mechanics.tex": "be44f8c35ebf88198f0569f566fc5fccbe38fca64663f89160cdb75fc27d594b",
+    "english/sections/supp_structure.tex": "aee5940db1be366ab88b9cdd4daa0c167044b844ee1e7c11bf7f392a3861b594",
+    "english/supplement.tex": "4698cf4d2a0ac05d0c7a52ca4a9d536df976f301fd50d03137686dd026c2a386"
+  },
+  "review": [
+    "independent theory and mechanics checks",
+    "298 unique and resolved labels; 25 cited bibliography entries",
+    "both final English compiler logs free of unresolved references, overfull boxes and missing characters",
+    "all scientific-content page contact sheets reviewed; final bibliography spacing checked separately"
+  ],
+  "baseline_sha256": "2bac37b2f4444efc6a0ba742139fbf0b35e268e9f4f3597ba13a0793bc2049ac",
+  "built_document_sha256": {
+    "output/v10_Integrated_EN.pdf": "f3edf6bfbd321290b09616ebb2f971ba6726a1240ce32f386e14ee89d360d367",
+    "output/v10_Integrated_EN_Supplement.pdf": "8e4a7ca8d514db801e73d55980069df0ff05272576f252106d78be399369ed05"
+  },
+  "freeze_scope": "Reviewed English source and figure assets; PDF hashes separately record this build, whose metadata can change on recompilation.",
+  "post_freeze_reference_corrections": {
+    "updated_at_utc": "2026-10-28T09:34:53.688170+00:00",
+    "record": "reviews/post_freeze_reference_corrections.json",
+    "changed_sources": [
+      "english/sections/analysis.tex",
+      "english/sections/extension_tracking_results.tex",
+      "english/sections/extension_tracking_theory.tex"
+    ],
+    "mathematical_and_numeric_content_changed": false,
+    "reason": "Page review identified four stale or incorrectly typed cross-references after moving the tracking extension."
+  }
+}

@@ -1,0 +1,403 @@
+{
+  "reviewed_utc": "2026-10-29T02:56:48.179539+00:00",
+  "reviewer": "kam_sources",
+  "candidate": "stage2/report/render_release",
+  "total_candidate_pages": 109,
+  "assigned_pages": [
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83
+  ],
+  "actually_viewed_pages": [
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83
+  ],
+  "view_count": 27,
+  "method": "Every page individually emitted by view_image(detail=original); no contact-sheet or text-extraction substitute.",
+  "findings": [
+    {
+      "id": "KQA01",
+      "pages": [
+        57,
+        58
+      ],
+      "severity": "mathematical_formatting",
+      "status": "source_repaired_pending_rerender",
+      "source": "stage2/report/03_birkhoff_bridge.md",
+      "issue": "Several inline and table mathematical expressions retain literal underscores. In particular K_yy and phi_ref,a obscure the intended scope of indices; Newton matrix, C_h, H_p, K_u and the error estimates need explicit math markup.",
+      "repair": "Use explicit LaTeX with K_y y and phi_{ref,a}; preserve mathematical content and all digits."
+    },
+    {
+      "id": "KQA02",
+      "pages": [
+        64
+      ],
+      "severity": "clipped_mathematical_content",
+      "status": "source_repaired_pending_rerender",
+      "source": "stage2/notes/route_a.md",
+      "issue": "Bottom table, second row, final column: gamma=0.55558524/11.417... extends to and is clipped by the right table boundary.",
+      "repair": "Render the same full-precision quotient as a stacked fraction or separate short mathematical segments."
+    },
+    {
+      "id": "KQA03",
+      "pages": [
+        80,
+        81,
+        82,
+        83
+      ],
+      "severity": "mathematical_formatting",
+      "status": "source_repaired_pending_rerender",
+      "source": "stage2/report/02_learning_metriplectic.md",
+      "issue": "Raw inline math remains in the generalized eigenproblem, Hamilton equations, normalized-input formula, network gate, H_PP/H_P/H_Q notation, reference momentum and alpha_s. Some derivatives currently look like juxtaposed products.",
+      "repair": "Use complete explicit LaTeX expressions and braced multi-character subscripts, with overline for conjugation; preserve scientific conclusions and digits."
+    }
+  ],
+  "otherwise": "No missing Chinese glyphs, red placeholders, broken delimiters, figure-caption omissions, table row/column overlaps or page-edge loss observed in this assigned range, beyond KQA02. Display equations A13-A15 and the later Birkhoff derivations render completely.",
+  "pages": [
+    {
+      "page": 57,
+      "path": "stage2/report/render_release/page-57.png",
+      "sha256": "7dc566d9bdef5b5dd40f78c1a43be5ac2c4020146b309f0b691ff9412d387d83",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actually_viewed_original_size": true
+    },
+    {
+      "page": 58,
+      "path": "stage2/report/render_release/page-58.png",
+      "sha256": "900c2e012343cc97ec2fc2607893ef01c542946ffb542b66afac6f7a55bfeeb0",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actually_viewed_original_size": true
+    },
+    {
+      "page": 59,
+      "path": "stage2/report/render_release/page-59.png",
+      "sha256": "b3e0fbfaaba349d0dc087e6057b598ac6809f4320ebb8434b2be20b9e733744b",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actually_viewed_original_size": true
+    },
+    {
+      "page": 60,
+      "path": "stage2/report/render_release/page-60.png",
+      "sha256": "721d0e063da73ff95884f182ceb7babddc1621056cd5f18746ba958dddefa512",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actually_viewed_original_size": true
+    },
+    {
+      "page": 61,
+      "path": "stage2/report/render_release/page-61.png",
+      "sha256": "4de85bcc440c4976eadfa33fc2ccf56df4590b8d76e21c9eeaa8bd8c891ae12c",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actually_viewed_original_size": true
+    },
+    {
+      "page": 62,
+      "path": "stage2/report/render_release/page-62.png",
+      "sha256": "377d3b8f459ac98a4669ccdb6d85f1d4ad292cffbca0d97d710ccd0da8a20a1c",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actually_viewed_original_size": true
+    },
+    {
+      "page": 63,
+      "path": "stage2/report/render_release/page-63.png",
+      "sha256": "4f0e97f9b4f4739f044b32a70e6c4a191da7e352461681e6fedfd1bc7ffbee6d",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actually_viewed_original_size": true
+    },
+    {
+      "page": 64,
+      "path": "stage2/report/render_release/page-64.png",
+      "sha256": "0548e0f8335634a46e49e22cb8b23b69dad7fe18f4aa34fc42ddfa96cf0a8adf",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actually_viewed_original_size": true
+    },
+    {
+      "page": 65,
+      "path": "stage2/report/render_release/page-65.png",
+      "sha256": "bb620b15a949b548559ef76d0cbc25346bf9216c3e41b421bf6eccddb9a12737",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actually_viewed_original_size": true
+    },
+    {
+      "page": 66,
+      "path": "stage2/report/render_release/page-66.png",
+      "sha256": "d3822c25164497a88c2b9f79efeedb9997c90a5e780af838b24ab5041ba564f2",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actually_viewed_original_size": true
+    },
+    {
+      "page": 67,
+      "path": "stage2/report/render_release/page-67.png",
+      "sha256": "4b2d57791d349f1805050cecdc5928ec21b2d98b818dff1af7597400aedf9698",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actually_viewed_original_size": true
+    },
+    {
+      "page": 68,
+      "path": "stage2/report/render_release/page-68.png",
+      "sha256": "92d61e0bfb9e33b996e5b9951872a376ab1708f363f34d7ddafecb1bee242a81",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actually_viewed_original_size": true
+    },
+    {
+      "page": 69,
+      "path": "stage2/report/render_release/page-69.png",
+      "sha256": "3ef0ec148515e7f140e9edce5b29677c8efb7572732e01b8a184d55c0cd27637",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actually_viewed_original_size": true
+    },
+    {
+      "page": 70,
+      "path": "stage2/report/render_release/page-70.png",
+      "sha256": "ed91f77482c314bb74680d2584c2bbbf4bbfc1d099c5d54fa173aaeed2704628",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actually_viewed_original_size": true
+    },
+    {
+      "page": 71,
+      "path": "stage2/report/render_release/page-71.png",
+      "sha256": "f35209dd264172b551c71b2b733f059adfa960bf322e942e21098dac31902d42",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actually_viewed_original_size": true
+    },
+    {
+      "page": 72,
+      "path": "stage2/report/render_release/page-72.png",
+      "sha256": "c14f7f07074900d83119ffd8fc15b9282030fd8e9b7fc2179138ee3e140403db",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actually_viewed_original_size": true
+    },
+    {
+      "page": 73,
+      "path": "stage2/report/render_release/page-73.png",
+      "sha256": "69029ff31a57b6c68fbaf8c08356b13f4f9c3fc50144ae3f828fd6f0e5e75b71",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actually_viewed_original_size": true
+    },
+    {
+      "page": 74,
+      "path": "stage2/report/render_release/page-74.png",
+      "sha256": "fab3249c988abe340a743bbf7e5090316b05727032c4945b67ac73c6a8e1cd70",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actually_viewed_original_size": true
+    },
+    {
+      "page": 75,
+      "path": "stage2/report/render_release/page-75.png",
+      "sha256": "4a00c83a85a4e89062b26ae4c883571e9e631336dca6a71c852f8197761c61b5",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actually_viewed_original_size": true
+    },
+    {
+      "page": 76,
+      "path": "stage2/report/render_release/page-76.png",
+      "sha256": "c6a4fb770ea26870196ed6aa4197f4ec8cf93aa5c5121930d318dac08079f3ce",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actually_viewed_original_size": true
+    },
+    {
+      "page": 77,
+      "path": "stage2/report/render_release/page-77.png",
+      "sha256": "ac3ccb1c75dfdaf41b59a9a2025bc73a21adf726e0b0124692b6efd6a104ce78",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actually_viewed_original_size": true
+    },
+    {
+      "page": 78,
+      "path": "stage2/report/render_release/page-78.png",
+      "sha256": "0f0137bc411c88e6b2f753440552cf4bd43b9c01a6b2032c3ceb5e0860af5295",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actually_viewed_original_size": true
+    },
+    {
+      "page": 79,
+      "path": "stage2/report/render_release/page-79.png",
+      "sha256": "0ee9da4581e09abded9084ed85cc02c10ec63b88c642cacfb347d74a1aeb425c",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actually_viewed_original_size": true
+    },
+    {
+      "page": 80,
+      "path": "stage2/report/render_release/page-80.png",
+      "sha256": "e318eec8056e7222c6f8e674e2c2be24dba1645c5a28ded17d35695608c17166",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actually_viewed_original_size": true
+    },
+    {
+      "page": 81,
+      "path": "stage2/report/render_release/page-81.png",
+      "sha256": "a9f0b5b5940c5a51ae31bd86f4f2ab7365fe7077a0e80f4614e5168f891aea6d",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actually_viewed_original_size": true
+    },
+    {
+      "page": 82,
+      "path": "stage2/report/render_release/page-82.png",
+      "sha256": "42d3eeff1b0184a8676bf7f5e060740e85ba8592dbb07a2b501782801710fc48",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actually_viewed_original_size": true
+    },
+    {
+      "page": 83,
+      "path": "stage2/report/render_release/page-83.png",
+      "sha256": "73eaac71ab6e52911598961ccdea87f3ad473df8b83cecc0dd2a25751df4f395",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actually_viewed_original_size": true
+    }
+  ],
+  "status": "source_repairs_complete_pending_rerender",
+  "source_repairs": [
+    {
+      "path": "stage2/report/03_birkhoff_bridge.md",
+      "sha256": "0f2d57bdf7b680a5f6f6551c8e54e38b9a5a3d7183d26941e322998c254c926a"
+    },
+    {
+      "path": "stage2/report/02_learning_metriplectic.md",
+      "sha256": "437fe9da75df4defde717c789f5d36ddf24775980211885b0f0134034c5e9e2e"
+    },
+    {
+      "path": "stage2/notes/route_a.md",
+      "sha256": "c91ce9bc1d3e3ae940733e0bbf83651aac87fd77021362d829ffe96c005db60e"
+    }
+  ],
+  "external_findings_repaired": [
+    {
+      "page": 84,
+      "reported_by": "root/tail_QA",
+      "issue": "L5 set-minus/escaped-set braces rendered as red placeholders",
+      "repair": "Equivalent conditions k in Z^n and k != 0, without set-minus or escaped braces",
+      "status": "source_repaired_pending_rerender",
+      "not_in_this_reviewers_visual_coverage": true
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "scope": "Read-only research audit of damping and sensing/actuation tolerances; no manuscript or uploaded result modified.",
+  "conclusion": "No checked primary source establishes zeta=0.025 or alpha=0.55558524 as measured values for the declared 80 mm, 1.2 mm diameter tip-magnet beam. Retain them only as declared design/sensitivity values until calibrated.",
+  "internal_provenance": {
+    "file": "audit_parameter_sources/upstream_v10/reproducibility/reviewer_revision_20261008/stability_scan/inputs/reference_model_spec.json",
+    "declared_damping_ratio_first": 0.025,
+    "derived_drag_mass_factor_s_inv": 0.5555852368222173,
+    "common_model_alpha_s_inv": 0.55558524,
+    "bare_omega1_from_independent_xlsx_reconstruction_rad_s": 11.111704786636802,
+    "alpha_from_bare_omega1_and_zeta_0025_s_inv": 0.5555852393318401,
+    "biased_omega1_rad_s": 11.417287282852458,
+    "biased_omega2_rad_s": 70.24049294294339,
+    "zeta1_actual_with_current_alpha": 0.02433087765227864,
+    "zeta2_actual_with_current_alpha": 0.003954878565924244,
+    "alpha_if_zeta1_0025_defined_at_biased_omega1_s_inv": 0.5708643641426229,
+    "qualification": "Algebraic agreement and an internal input file do not establish external literature provenance. State reference magnetic bias and modal-frequency convention explicitly. Recompute alpha when defining a new design zeta after changing material parameters. For a fixed physical damper, instead retain its calibrated coefficient and let modal zeta vary with stiffness/bias."
+  },
+  "primary_sources": [
+    {
+      "id": "Tuna2018",
+      "citation": "Tuna EE et al. Analysis of Dynamic Response of an MRI-Guided Magnetically-Actuated Steerable Catheter System. IROS 2018. DOI 10.1109/IROS.2018.8594308.",
+      "url": "https://eetuna.github.io/files/eet_iros18.pdf",
+      "web_refs": ["turn60view0", "turn64view0", "turn64view2"],
+      "anchors": "PDF p4 Eq.(7); p5 experimental setup; p3 identification excitation.",
+      "verified": "Second-order reduced black-box transfer denominator s^2+4.59s+1.136; derived denominator zeta=2.1532453806, not 0.025. 15th-order ARX reduced by balanced truncation. 3 T MRI, current-carrying coils on QOSINA T2011 silicone tube, immersed in distilled water plus contrast agent. Input chirp 0.5-8 Hz; camera 60 Hz.",
+      "use": "Primary precedent for excitation, system identification and independent validation. Cannot transfer its denominator damping parameter to a different permanent-magnet beam or call it intrinsic material/modal damping."
+    },
+    {
+      "id": "Fischer2017",
+      "citation": "Fischer SCL et al. Adhesion and Cellular Compatibility of Silicone-Based Skin Adhesives. Macromolecular Materials and Engineering 302, 1600526 (2017). DOI 10.1002/mame.201600526.",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/mame.201600526",
+      "web_refs": ["turn88view1", "turn91view4", "turn91view5"],
+      "anchors": "Sections 2.1, 2.3 and 3.1; Figure 2.",
+      "verified": "Sylgard184 base:curing agent 10:1. Rheometry sample cured 90 C for 30 min, cooled to 25 C; strain amplitude 0.1%, frequency sweep 0.01-100 Hz. Material loss factor tan(delta) about 0.1 at 20 Hz.",
+      "use": "Material-loss magnitude and frequency/preparation dependence; not a measured catheter modal damping ratio."
+    },
+    {
+      "id": "Hasler2025",
+      "citation": "Hasler J et al. Development and Characterization of a Tunable PDMS Substrate Model for Investigating Elastic Properties and Mechanical Stretching in Intervertebral Disc Cells. JOR Spine 8(4), e70140 (2025). DOI 10.1002/jsp2.70140.",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/jsp2.70140",
+      "web_refs": ["turn90view0", "turn91view0", "turn91view1"],
+      "anchors": "Section 2.4, Table 2; supplemental Figure S2; data DOI 10.6084/m9.figshare.28883804.",
+      "verified": "Pure Sylgard184 at 1 Hz: shear storage G'=276.90+/-21.45 kPa, shear loss G''=30.29+/-3.79 kPa (n=3). Ratio of means G''/G'=0.1093897. Rheometer disks diameter8 mm, thickness1 mm; frequency sweeps0.1-30 Hz, pure Sylgard184 strain5%, primary temperature20 C and additional37 C measurements.",
+      "use": "Accessible original material DMA data. Its material, preparation, frequency and loading must match before any transfer; shear loss tangent is not automatically beam modal zeta."
+    },
+    {
+      "id": "Rotaru2014",
+      "citation": "Rotaru I et al. Experimental testing on free vibration behaviour for silicone rubbers proposed within lumbar disc prosthesis. Materials Science and Engineering C 42, 192-198 (2014). DOI 10.1016/j.msec.2014.05.021.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25063110/",
+      "web_refs": ["turn60view2", "turn66search1"],
+      "verified": "Free-vibration tests near6 Hz, mass11.8 kg, silicone69 and99 ShoreA: reported relative damping0.058 and0.077; empty test setup0.042.",
+      "use": "Demonstrates setup-dependent effective damping and logarithmic-decrement identification. These are not properties of the proposed catheter and should not be transplanted."
+    },
+    {
+      "id": "Ilg2012",
+      "citation": "Ilg J, Rupitsch S, Sutor A, Lerch R. Determination of Dynamic Material Properties of Silicone Rubber Using One-Point Measurements and Finite Element Simulations. IEEE TIM61(11),3031-3038(2012). DOI10.1109/TIM.2012.2203449.",
+      "url": "https://cris.fau.de/publications/114300164/",
+      "web_refs": ["turn60view3"],
+      "verified": "Laser triangulation plus shaker and inverse finite-element fit estimates complex material properties over10-400 Hz.",
+      "use": "Measurement-method precedent; no numeric damping value extracted or claimed."
+    }
+  ],
+  "secondary_lead_not_used_as_primary_numeric_evidence": {
+    "source": "Becker et al., Physical Sciences Reviews, DOI10.1515/psr-2019-0125; https://d-nb.info/136359625X/34",
+    "finding": "Review reports D<0.05 for its MAE free-vibration cantilevers; Alpa-Sil Classic6-8ShA plus carbonyl-iron particles,40/60/80 mm beams,10x5 mm approximate section,0-60 mT fields. Traces original study to Becker et al., Smart Materials and Structures26,095035(2017), DOI10.1088/1361-665X/aa75ec.",
+    "limitation": "Original2017 full damping passage could not be verified within this pass; do not cite it as independently verified exact zeta or transfer review's upper bound to a tip-magnet round catheter."
+  },
+  "recommended_executable_damping_policy": {
+    "scenario_grid_zeta1": [0, 0.01, 0.025, 0.05, 0.1],
+    "classification": "Explicitly selected sensitivity scenarios, inspired by small material-loss scales; not a literature-measured interval, probability distribution or confidence interval. Zero is a conservative-dynamics baseline, not a worst-case engineering guarantee.",
+    "conversion": "For each declared reference model solve the eigenproblem and set alpha=2*zeta1*omega1_ref. State whether omega1_ref uses magnetic bias. Mass-proportional C=alpha*M implies zeta_j=alpha/(2*omega_j); it does not impose equal damping ratios on modes.",
+    "preserve_scope": "The scalar-weighted Birkhoff construction is valid within this declared mass-proportional surrogate. Literature material loss does not prove C=alpha*M physically. Replacing damping with a general viscoelastic model requires reconsidering that structural branch.",
+    "material_to_modal_derivation": "For weak loss, modal eta_j=(phi_j^T K'' phi_j)/(phi_j^T K' phi_j), zeta_j approximately eta_j/2 near resonance. Uniform material-only elastic stiffness may give eta_j approximately E''/E' (approximately G''/G' only with justified real Poisson ratio). Magnetic conservative stiffness dilutes material loss; fluid, tip attachment and clamp add other damping. Kelvin-Voigt internal damping scales with mechanical stiffness, not generally with mass.",
+    "measurement_plan": "At specified fluid, temperature, fixture, magnet mass and bias, excite/release small deflections; fit dominant ring-down exp(-sigma*t)*cos(omega_d*t+phase). Then omega_n=sqrt(sigma^2+omega_d^2), zeta=sigma/omega_n and modal alpha_eff=2*sigma. Repeat amplitudes, samples and modes; verify whether2*zeta_j*omega_j is approximately common. If overdamped or modes overlap, fit a validated multi-mode transfer/impulse model rather than applying peak decrement blindly.",
+    "fluid_alternative": "Conditional FE derivation only: a declared local linear transverse force density f=-c_d*w_t with uniform rho*A yields C=c_d*integral(N^T*N ds)=(c_d/(rho*A))*M. A physical c_d must come from a justified hydrodynamic model/calibration with viscosity, geometry, Reynolds/frequency regime and wall-distance specified; unsteady added mass, near walls, flow and large amplitude can invalidate this approximation. Current c_d=alpha*rho*A is a derived model coefficient, not independently sourced fluid data."
+  },
+  "tolerances": {
+    "local_evidence": "audit_parameter_sources/upstream_v10/supplement.txt, S7.5, Eqs(S145)-(S153), TableS12; uploaded_checklist.json sheet逐项核对 rows171-176.",
+    "values": {"angle_rad":0.001,"angular_rate_rad_s":0.01,"tip_speed_m_s":0.0001,"relative_force_error":0.01,"relative_field_error":0.01,"additive_force_N":5e-10,"additive_field_T":5e-8},
+    "existing_correct_label": "TableS12 already explicitly identifies these as deterministic hypotheses, not measured sensor specifications. S145 defines multiplicative gain plus additive error on commanded ports. S152 includes observation age/latency; S153 includes slew-delay reserve; the numerical study does not identify hardware latency.",
+    "do_not_overstate": "0.05 microtesla is the additive floor, not total full-scale field accuracy. Under the stated envelope, a6 mT command allows0.01*6 mT+0.05 microtesla=60.05 microtesla total error.",
+    "needed_for_hardware_guarantee": [
+      "Angle: selected imaging/sensor geometry and absolute-reference calibration, pose/workspace-dependent bias/noise, bandwidth, temperature and occlusion conditions.",
+      "Angular/tip velocity: actual sampling clock, estimator/differentiation/filter specification, latency and ground-truth dynamic calibration. A position/angle error bound alone does not establish a derivative error bound.",
+      "Force/field: command-to-local-field/gradient calibration over workspace, amplitude, frequency and temperature; gain, offset, power-supply noise, saturation and delays. Force additionally needs magnetic-moment magnitude/orientation uncertainty and error propagation.",
+      "Guarantee type: distinguish RMS/std/percentile specifications from uniform deterministic bounds required by the conditional theorem, and cover the whole time interval rather than only saved sample times."
+    ]
+  }
+}

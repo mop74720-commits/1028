@@ -1,0 +1,295 @@
+{
+  "purpose_zh": "为独立文献依据仿真基准保存材料与磁芯证据；不是证明原稿参数原来来自这些来源，也不是制造、采购或测量记录。",
+  "audit_date": "2026-10-28",
+  "selected_beam_material": {
+    "material": "Dow Corning Sylgard 184A/184B; no added iron oxide pigment in reported preparation",
+    "reference": {
+      "authors": "Han Saem Cho; Heh-Young Moon; Heung Soon Lee; Yong Tae Kim; Sae Chae Jeoung",
+      "title": "Formulation Prediction for Young's Modulus of Poly(dimethylsiloxane) by Spectroscopic Methods",
+      "journal": "Bulletin of the Korean Chemical Society",
+      "year": 2021,
+      "volume": 42,
+      "issue": 9,
+      "pages": "1225–1231",
+      "doi": "10.1002/bkcs.12352",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/bkcs.12352",
+      "open_pdf_url": "https://d-nb.info/1237384486/34",
+      "web_refs": [
+        "turn80view0",
+        "turn82view0",
+        "turn84view0"
+      ]
+    },
+    "reported_values": {
+      "young_modulus_Pa_approx": 2100000.0,
+      "density_kg_m3_approx": 1028.0,
+      "curing_agent_mass_fraction_approx": 0.1
+    },
+    "formulation_note_zh": "正文在约10 wt%固化剂附近同时给出E约2.1 MPa与密度1.028 g/cm³；10 wt%对应基料:固化剂约9:1，不是10:1。原研究也测试9:1和10:1等多种配比。采用的是近似文献点，不宣称批次精确值或公差。",
+    "preparation": {
+      "mixing_time_min": 10,
+      "degassing_time_min": 10,
+      "cure_temperature_C": 80,
+      "cure_time_h": 2,
+      "source_location": "Materials and Methods; downloadable PDF p.2 (zero-based index 1), lines 117–130; web turn80view0 lines163–165"
+    },
+    "modulus_method": {
+      "type": "tensile test",
+      "specimen": "ASTM D412 dog-bone; cross-section 7 × 3 mm²",
+      "source_location": "Materials and Methods; PDF p.2; Results PDF p.3 and Fig.1(a)"
+    },
+    "density_method": {
+      "instrument": "Mettler Toledo XSE 205 specific gravity balance",
+      "source_location": "Materials and Methods PDF p.2; numerical value in Results PDF p.3 and Fig.1(b)"
+    },
+    "values_location": "Results, first two paragraphs and Fig.1(a,b); PDF p.3 (index2), lines175–203; web turn82view0 lines172–181",
+    "uncertainty_note_zh": "正文明确用about给出E；没有支持将此数值写成目标圆梁实测参数或制造公差。固化条件、配比、试样形式、温度与应变率改变时需复测。",
+    "damping_evidence_zh": "本文未给可直接采用的该配方机械损耗角、模态阻尼比、Rayleigh阻尼系数或自由衰减率；不能据该文为alpha=.55558524或ζ=.025背书。"
+  },
+  "beam_design_values": {
+    "L_m": 0.08,
+    "r_m": 0.0006,
+    "status_zh": "本研究明确选择的均匀实心圆梁设计值；不是Cho论文几何。",
+    "derived": {
+      "A_m2": 1.1309733552923253e-06,
+      "I_m4": 1.0178760197630926e-13,
+      "EI_N_m2": 2.1375396415024945e-07,
+      "beam_mass_kg": 9.301124873924084e-05,
+      "beam_mass_mg": 93.01124873924084
+    }
+  },
+  "selected_magnet_core_design": {
+    "geometry": "cube",
+    "core_edge_m": 0.00025,
+    "shape_status_zh": "未计涂层的磁性芯体边长0.250 mm为本研究设计输入；不可声称就是库存C0005-10的去镀层芯尺寸。",
+    "grade": "N50 sintered NdFeB",
+    "magnetization_direction": "one cube edge, aligned with beam tangent in the reference configuration; design assumption",
+    "Br_T": {
+      "lower": 1.4,
+      "nominal": 1.425,
+      "upper": 1.45,
+      "status": "manufacturer grade range; midpoint chosen for simulation"
+    },
+    "density_kg_m3": {
+      "nominal": 7500.0,
+      "status_zh": "厂家表给≥7.5 g/cm³；7500取作名义建模点，不是单件实测密度。"
+    },
+    "derived": {
+      "core_volume_m3": 1.5625e-11,
+      "dipole_moment_Am2_nominal": 1.771842139890241e-05,
+      "dipole_moment_Am2_Br_only_range": [
+        1.7407571900676052e-05,
+        1.8029270897128768e-05
+      ],
+      "core_mass_kg_nominal": 1.171875e-07,
+      "core_mass_mg_nominal": 0.1171875,
+      "core_transverse_inertia_kg_m2_nominal": 1.2207031250000003e-15,
+      "magnet_to_beam_mass_ratio": 0.0012599282515659781
+    },
+    "formulas": {
+      "moment": "mu_mag ≈ Br * V_core / mu0, mu0 ≈ 4*pi*1e-7 H/m",
+      "mass": "m_tip = rho_m * a^3",
+      "inertia": "J_c = m_tip*a^2/6 about a transverse axis through cube center"
+    },
+    "mass_scenarios": {
+      "factors": [
+        0.9,
+        1.0,
+        1.1
+      ],
+      "mass_kg": [
+        1.0546875000000001e-07,
+        1.171875e-07,
+        1.2890625e-07
+      ],
+      "inertia_kg_m2": [
+        1.0986328125000003e-15,
+        1.2207031250000003e-15,
+        1.3427734375000005e-15
+      ],
+      "status_zh": "±10%为人为质量敏感性情景，不是厂家公差或实测误差区间。"
+    },
+    "limits_zh": [
+      "Br对应材料牌号范围，不包含芯体加工公差、温度、实际磁化状态、自退磁与涂层尺寸影响。",
+      "m≈BrV/mu0是均匀磁化/高矫顽力硬磁体的名义工程近似，不能作为单件磁矩校准证书。",
+      "若实际加涂层、封装、胶粘层或支架，应计入附加质量与惯量；当前派生量仅是裸磁芯。",
+      "0.250mm芯体设计的名义磁矩约1.77e-5 Am²，不强行保持原稿2.00e-5。"
+    ]
+  },
+  "magnet_primary_sources": [
+    {
+      "id": "stock_size_feasibility",
+      "organization": "SM Magnetics / SuperMagnetMan",
+      "title": "C0005-10 - Cube Magnet - 0.25mm - N50 - Nickel Plated",
+      "url": "https://supermagnetman.com/products/c0005-10",
+      "web_refs": [
+        "turn61view1",
+        "turn65view2"
+      ],
+      "location": "Product specification table, lines117–130",
+      "facts": {
+        "listed_dimensions_mm": [
+          0.25,
+          0.25,
+          0.25
+        ],
+        "listed_imperial_dimensions_inch": [
+          0.01,
+          0.01,
+          0.01
+        ],
+        "grade": "N50",
+        "coating": "Nickel",
+        "max_working_temperature_C": 60
+      },
+      "caution_zh": "页上同时列0.010英寸和0.25mm（0.010英寸精确为0.254mm）；不能将两组圆整展示当加工公差。未明确列尺寸是磁芯还是涂层后外尺寸；本基准将其仅作近尺度可加工微磁体示例。"
+    },
+    {
+      "id": "grade_properties",
+      "organization": "SM Magnetics / SuperMagnetMan",
+      "title": "Magnet Material Grades",
+      "url": "https://supermagnetman.com/pages/magnet-material-grades",
+      "pdf_url": "https://supermagnetman.com/cdn/shop/files/Updated_SM_NdFeb_Magnet_Materials_Tables_Curves_v2.pdf?v=16654367452540870164",
+      "web_refs": [
+        "turn54view1",
+        "turn61view2"
+      ],
+      "location": "Neodymium (NdFeB)—Stock Grades table; N50 row (HTML line121)",
+      "facts": {
+        "N50_Br_T": [
+          1.4,
+          1.45
+        ],
+        "density_g_cm3_lower_bound": 7.5,
+        "HcB_kA_m_lower_bound": 836,
+        "HcJ_kA_m_lower_bound": 955,
+        "BHmax_kJ_m3": [
+          374,
+          406
+        ],
+        "generic_grade_working_temperature_upper_C": 80
+      },
+      "caution_zh": "材料通用80°C不替代具体库存件页60°C。设计基准在室温使用；密度为下限。"
+    },
+    {
+      "id": "coating",
+      "organization": "SM Magnetics / SuperMagnetMan",
+      "title": "Magnet Coating Specifications",
+      "url": "https://supermagnetman.com/pages/magnet-coating-specifications",
+      "web_refs": [
+        "turn70view3",
+        "turn74view0"
+      ],
+      "location": "Corrosion-Resistant Magnet Coatings, Nickel (NiCuNi) row, line110",
+      "facts": {
+        "typical_NiCuNi_thickness_um": [
+          15,
+          25
+        ]
+      },
+      "caution_zh": "此为通用典型涂层范围，不是C0005-10特定批次厚度。若a是外尺寸且每面镀层厚度t，则芯体体积是(a−2t)^3；不能使用a^3冒充芯体积。"
+    },
+    {
+      "id": "moment_formula",
+      "organization": "K&J Magnetics",
+      "title": "Magnetic Dipole Moment",
+      "url": "https://www.kjmagnetics.com/blog/magnetic-dipole-moment",
+      "web_refs": [
+        "turn61search0",
+        "turn70view2",
+        "turn72view4"
+      ],
+      "location": "What is the magnetic dipole moment of a magnet? lines366–376",
+      "fact": "m=Br*V/mu0 as manufacturer engineering moment formula"
+    },
+    {
+      "id": "recoil_approximation",
+      "organization": "K&J Magnetics",
+      "title": "Neodymium Magnet Specifications",
+      "url": "https://www.kjmagnetics.com/neodymium-magnet-specifications.asp",
+      "web_refs": [
+        "turn61search1",
+        "turn65view3"
+      ],
+      "location": "Neodymium Magnet Physical and Mechanical Specifications & Tolerances",
+      "facts": {
+        "typical_relative_recoil_permeability": 1.05,
+        "density_g_cm3": [
+          7.4,
+          7.5
+        ]
+      },
+      "caution_zh": "只用于说明Br体积公式的近似背景；本设计磁体主要参数采用SM Magnetics同厂表。"
+    }
+  ],
+  "beam_model_update": {
+    "definitions": "w(L)=b^T q, theta(L)=s^T q; e=magnet center offset from beam endpoint along tangent",
+    "added_mass_matrix": "Delta M = m_tip*(b+e*s)*(b+e*s)^T + J_c*s*s^T",
+    "centered_tip_special_case": "If e=0: Delta M = m_tip*b*b^T + J_c*s*s^T",
+    "model_notes_zh": [
+      "附加质量与惯量必须在模态求解前进入M，不能继续使用原裸梁冻结模态和频率。",
+      "若磁芯位于尖端外侧而非中心在s=L，需指定e并保留质量—转角耦合/平行轴项。",
+      "磁芯和封装重力应按实际安装平面进入势能或平衡位置；不能只添加动态惯性而遗漏有作用的静载。",
+      "在外磁场跨磁芯近似均匀时，磁势能−mu_vec·B保持集中磁偶极结构；显著场梯度时需考虑合力和作用点。"
+    ]
+  },
+  "alternatives_and_exclusions": [
+    {
+      "source": "Noichl and Schönecker, Soft Matter 2022, DOI10.1039/D1SM01789F",
+      "url": "https://pubs.rsc.org/en/content/articlehtml/2022/sm/d1sm01789f",
+      "preprint_url": "https://arxiv.org/pdf/2105.13474",
+      "web_refs": [
+        "turn79search0",
+        "turn63search0",
+        "turn65view1"
+      ],
+      "values": {
+        "E_Pa": 1712000.0,
+        "E_reported_spread_Pa": 82550.0,
+        "rho_kg_m3": 1040.01,
+        "rho_reported_spread_kg_m3": 1.9
+      },
+      "reason_not_selected_zh": "§3.2的基料加入1 wt%氧化铁颜料；不作为纯非磁梁材料。§3.3 E来自低应变压缩斜率、ρ水静力测量；文中没有可直接用于本梁的机械损耗或模态阻尼参数。液体粘度不是材料阻尼。"
+    },
+    {
+      "source": "Sandia National Laboratories Polymer Properties: Sylgard184",
+      "url": "https://www.sandia.gov/polymer-properties/sylgard-184-youngs-modulus-at-23c/",
+      "composition_url": "https://www.sandia.gov/polymer-properties/sylgard-184/",
+      "web_refs": [
+        "turn52view1",
+        "turn70view4"
+      ],
+      "E_Pa": 1840000.0,
+      "temperature_C": 23,
+      "test": "Instron with extensometers; tension 4in grip distance; compression cylinder 0.5in×0.5in",
+      "preparation": "100pbw base,10pbw curing agent,71°C for16h; parent page lists either0 or5wt%3-6559 accelerator",
+      "limitation_zh": "E单页没有区分促进剂组，不能未经确认称为无添加特定组实测；故仅备选。"
+    },
+    {
+      "source": "Dow SYLGARD184 official product page and Dow2017 TDS Form11-3184-01C",
+      "url": "https://www.dow.com/en-us/pdp.sylgard-184-silicone-elastomer-kit.01064291z.html",
+      "manufacturer_TDS_mirror": "https://web.mit.edu/scholvin/www/nt245/Documents/TDS-11-3184-sylgard-184-elastomer.pdf",
+      "web_refs": [
+        "turn70view0",
+        "turn87view0"
+      ],
+      "specific_gravity_cured": 1.03,
+      "location": "TDS p.1 Typical Properties",
+      "limitation_zh": "名义固化密度约1030kg/m³，不是与Sandia同批次测量。TDS p.2的Dissipation Factor at100Hz/100kHz是介电损耗，不是机械阻尼，不能拿来定ζ。"
+    },
+    {
+      "source": "Liu et al., IEEE TBME2016, DOI10.1109/TBME.2015.2510743",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4917491/",
+      "web_refs": [
+        "turn50view0",
+        "turn51view0"
+      ],
+      "location": "§V.B Estimation of Material Parameters",
+      "values": {
+        "rho_kg_m3_measured_approx": 1120,
+        "E_effective_fit_Pa": 10150000.0
+      },
+      "reason_not_selected_zh": "E为含六线圈及导线的导管整体抗弯等效辨识，不是裸均匀硅胶材料；不能用其一般范围追认原E5MPa和rho1100。"
+    }
+  ]
+}

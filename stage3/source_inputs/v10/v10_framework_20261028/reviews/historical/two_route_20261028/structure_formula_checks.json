@@ -1,0 +1,31 @@
+{
+  "central4_identity": "J grad(f^T hessian(h) f) = f_second[f,f] - 2 (f_prime)^2 f",
+  "central4_exact_rational_polynomial_components_pass": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "test_hamiltonian": "(x1^2+2*x2^2+y1^2+2*y2^2)/2+x1^2*x2/7+2*x1*y1*y2/9+(x1+x2)^4/11",
+  "harmonic_phase_through_degree6": "t-t^5/120",
+  "A_nominal": [
+    [
+      -0.001113609159022615,
+      -0.004787391325039717
+    ],
+    [
+      -0.004787391325039717,
+      -0.005145233296927314
+    ]
+  ],
+  "detA_nominal": -1.7189336774299156e-05,
+  "sigma_min_A_nominal": 0.0020650579563513613,
+  "min_finite_divisor_order4": [
+    1.0,
+    [
+      -1,
+      0
+    ]
+  ],
+  "scope": "Algebra checks and floating-point parameter evaluation; no rigorous complex norm, observation defect, KAM threshold or torus certificate."
+}

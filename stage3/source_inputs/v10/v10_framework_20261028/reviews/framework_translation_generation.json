@@ -1,0 +1,29 @@
+{
+  "analysis.tex": {
+    "english_sha256": "de243b68ed41dc0ce08b2c79afeeac9a08ff702c3c385a7ec6c3ccac99cd569d",
+    "chinese_sha256": "279db066d2758625069e33117032e84f63cb76fc1c08949acca4ea8ece90bf1c",
+    "block_counts": {
+      "reused": 0,
+      "translated_prose": 19,
+      "translated_labels": 6
+    }
+  },
+  "supp_experiments.tex": {
+    "english_sha256": "ce1006086e0d03f0c4a628365dc610333fb1540b36af86b6614aedde041501a1",
+    "chinese_sha256": "013af6fee3d67aa92e7dd1eaace82129b258f7f7c33d10034822991d9235761e",
+    "block_counts": {
+      "reused": 28,
+      "translated_prose": 14,
+      "translated_labels": 5
+    }
+  },
+  "extension_tracking_results.tex": {
+    "english_sha256": "ffdcba71ee5c59bb8047aab0587157d152d630be661a6d17f4256e865b318539",
+    "chinese_sha256": "bf3c7252b41ea9e1af9e2f4034d61005f0fc845cf6334517288c5c20ac037acb",
+    "block_counts": {
+      "reused": 10,
+      "translated_prose": 2,
+      "translated_labels": 1
+    }
+  }
+}

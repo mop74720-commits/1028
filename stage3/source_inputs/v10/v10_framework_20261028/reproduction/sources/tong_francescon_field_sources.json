@@ -1,0 +1,823 @@
+{
+  "audit_date_utc": "2026-10-28",
+  "purpose": "Read-only primary-source audit for parameter provenance; not a claim that original example parameters were measured",
+  "sources": {
+    "tong_published": {
+      "title": "Real-time simulation enabled navigation control of magnetic soft continuum robots in confined lumens",
+      "authors": "Tong et al.",
+      "year": 2025,
+      "doi": "10.1016/j.jmps.2025.106198",
+      "url": "https://eprints.ncl.ac.uk/file_store/production/306197/7CAB59D2-D36A-4A12-8648-428A2D798BBC.pdf",
+      "local_file": "/workspace/scratch/41c3ec762399/parameter_provenance/tong2025/tong_published.pdf",
+      "pages": 18,
+      "sha256": "41c2420bccc7e27e12050605a5d4bd5a56174af456e415ea91e5662c11a9f6f5"
+    },
+    "tong_v1": {
+      "title": "Real-time simulation enabled navigation control of magnetic soft continuum robots in confined lumens",
+      "authors": "Tong et al.",
+      "year": 2025,
+      "url": "https://arxiv.org/html/2503.08864v1",
+      "local_file": "/workspace/scratch/41c3ec762399/parameter_provenance/tong2025/tong_arxiv_v1.pdf",
+      "pages": 22,
+      "sha256": "92b1437a1b879af4a5e13438828b2e58828b8d5e391a778f4ea5bc38c1de68b5"
+    },
+    "francescon2025": {
+      "title": "Closed-Loop Shape-Forming Control of a Magnetic Soft Continuum Robot",
+      "authors": "Francescon et al.",
+      "year": 2025,
+      "doi": "10.1109/LRA.2025.3565124",
+      "url": "https://eprints.whiterose.ac.uk/id/eprint/227177/1/24-3637_final_manuscript.pdf",
+      "local_file": "/workspace/scratch/41c3ec762399/parameter_provenance/tong2025/francescon_2025.pdf",
+      "pages": 9,
+      "page_note": "PDF page 1 is repository cover; article page = PDF page minus 1.",
+      "sha256": "e6c401d9d8c84ab066c32f2054fd2100590b694b96bf6553f152c82b979bbcf4"
+    },
+    "kummer2010": {
+      "title": "OctoMag: An Electromagnetic System for 5-DOF Wireless Micromanipulation",
+      "authors": "Kummer et al.",
+      "year": 2010,
+      "doi": "10.1109/TRO.2010.2073030",
+      "url": "https://mmrobotics.mech.utah.edu/wp-content/uploads/2023/01/Kummer_TRO10.pdf",
+      "local_file": "/workspace/scratch/41c3ec762399/parameter_provenance/tong2025/octomag2010.pdf",
+      "pages": 12,
+      "sha256": "c9d5c86da0c49af0de9cd0f10c02251a5068bee5e821dc420b7c7324ff45d118"
+    },
+    "ullrich2013": {
+      "title": "Mobility Experiments with Microrobots for Minimally Invasive Intraocular Surgery",
+      "authors": "Ullrich et al.",
+      "year": 2013,
+      "doi": "10.1167/iovs.13-11825",
+      "url": "https://discovery.ucl.ac.uk/id/eprint/1503368/1/Bergeles_ulrich2013mobility_revised.pdf",
+      "local_file": "/workspace/scratch/41c3ec762399/parameter_provenance/tong2025/octomag2013.pdf",
+      "pages": 18,
+      "sha256": "28e8e46f19fdaf5e6ca3a87ada16582ce25c6e5d1393b07318a54d7ca1c1be12"
+    },
+    "hoshiar2018": {
+      "title": "Steering Algorithm for a Flexible Microrobot to Enhance Guidewire Control in a Coronary Angioplasty Application",
+      "authors": "Hoshiar et al.",
+      "year": 2018,
+      "doi": "10.3390/mi9120617",
+      "url": "https://www.mdpi.com/2072-666X/9/12/617",
+      "pdf_url": "https://scholar.dgist.ac.kr/bitstream/20.500.11750/9570/2/2_s2.0_85057819745.pdf",
+      "local_file": "/workspace/scratch/41c3ec762399/parameter_provenance/tong2025/hoshiar2018.pdf",
+      "pages": 13,
+      "sha256": "02f3464b67c2b86566d7e172b6e728d87bf8a41756e31e3861be050fb4275cef"
+    },
+    "lussi2021": {
+      "title": "A Submillimeter Continuous Variable Stiffness Catheter for Compliance Control",
+      "authors": "Lussi et al.",
+      "year": 2021,
+      "doi": "10.1002/advs.202101290",
+      "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.202101290"
+    }
+  },
+  "entries": [
+    {
+      "id": "tong_L",
+      "system": "Tong2025",
+      "quantity": "total length",
+      "value": 0.1,
+      "unit": "m",
+      "source": "tong_published",
+      "location": "Published PDF p.10, §5.1 Experimental setup; arXiv v1 PDF p.12",
+      "status": "reported",
+      "note": ""
+    },
+    {
+      "id": "tong_r",
+      "system": "Tong2025",
+      "quantity": "rod radius",
+      "value": 0.0006,
+      "unit": "m",
+      "source": "tong_published",
+      "location": "Published PDF p.10, §5.1 Experimental setup; arXiv v1 PDF p.12",
+      "status": "reported",
+      "note": ""
+    },
+    {
+      "id": "tong_Lm",
+      "system": "Tong2025",
+      "quantity": "magnetized distal length",
+      "value": 0.005,
+      "unit": "m",
+      "source": "tong_published",
+      "location": "Published PDF p.10, §5.1 Experimental setup; arXiv v1 PDF p.12",
+      "status": "reported",
+      "note": ""
+    },
+    {
+      "id": "tong_E",
+      "system": "Tong2025",
+      "quantity": "magnetic composite Young modulus",
+      "value": 3000000.0,
+      "unit": "Pa",
+      "source": "tong_published",
+      "location": "Published PDF p.10, §5.1 Experimental setup; arXiv v1 PDF p.12",
+      "status": "reported",
+      "note": ""
+    },
+    {
+      "id": "tong_G",
+      "system": "Tong2025",
+      "quantity": "magnetic composite shear modulus",
+      "value": 1000000.0,
+      "unit": "Pa",
+      "source": "tong_published",
+      "location": "Published PDF p.10, §5.1 Experimental setup; arXiv v1 PDF p.12",
+      "status": "reported",
+      "note": ""
+    },
+    {
+      "id": "tong_Mline",
+      "system": "Tong2025",
+      "quantity": "axial line magnetization (moment per unit length)",
+      "value": 0.1448,
+      "unit": "A m",
+      "source": "tong_published",
+      "location": "Published PDF p.10, §5.1 Experimental setup; arXiv v1 PDF p.12",
+      "status": "reported",
+      "note": "The source expressly calls this line magnetization, not total dipole moment."
+    },
+    {
+      "id": "tong_dparticle",
+      "system": "Tong2025",
+      "quantity": "approximate NdFeB particle diameter",
+      "value": 5e-06,
+      "unit": "m",
+      "source": "tong_published",
+      "location": "Published PDF p.10, §5.1 Experimental setup; arXiv v1 PDF p.12",
+      "status": "reported",
+      "note": ""
+    },
+    {
+      "id": "tong_pulse",
+      "system": "Tong2025",
+      "quantity": "approximate fabrication pulse field",
+      "value": 4.0,
+      "unit": "T",
+      "source": "tong_published",
+      "location": "Published PDF p.10, §5.1 Experimental setup; arXiv v1 PDF p.12",
+      "status": "reported",
+      "note": "The 4 T pulse is magnetization processing, not the operating field."
+    },
+    {
+      "id": "tong_material",
+      "system": "Tong2025",
+      "quantity": "magnetized segment constituents",
+      "value": "NdFeB particles dispersed in Sylgard 184 PDMS (Dow Corning)",
+      "unit": "text",
+      "source": "tong_published",
+      "location": "Published PDF p.10, §5.1 Experimental setup; arXiv v1 PDF p.12",
+      "status": "reported",
+      "note": "Base-to-curing-agent mass ratio 10:1. NdFeB loading fraction and distinct shaft composition/modulus are not specified here."
+    },
+    {
+      "id": "tong_ratio",
+      "system": "Tong2025",
+      "quantity": "PDMS base to curing agent mass ratio",
+      "value": [
+        10,
+        1
+      ],
+      "unit": "mass ratio",
+      "source": "tong_published",
+      "location": "Published PDF p.10, §5.1 Experimental setup; arXiv v1 PDF p.12",
+      "status": "reported",
+      "note": ""
+    },
+    {
+      "id": "tong_A",
+      "system": "Tong2025",
+      "quantity": "cross-sectional area",
+      "value": 1.1309733552923253e-06,
+      "unit": "m^2",
+      "source": "tong_published",
+      "location": "Derived from §5.1 and Eq.(46)",
+      "status": "derived",
+      "note": "",
+      "formula": "pi*r^2"
+    },
+    {
+      "id": "tong_I",
+      "system": "Tong2025",
+      "quantity": "second area moment",
+      "value": 1.0178760197630926e-13,
+      "unit": "m^4",
+      "source": "tong_published",
+      "location": "Derived from §5.1 and Eq.(46)",
+      "status": "derived",
+      "note": "",
+      "formula": "pi*r^4/4"
+    },
+    {
+      "id": "tong_EI",
+      "system": "Tong2025",
+      "quantity": "bending rigidity using stated composite E throughout",
+      "value": 3.053628059289278e-07,
+      "unit": "N m^2",
+      "source": "tong_published",
+      "location": "Derived from §5.1 and Eq.(46)",
+      "status": "derived",
+      "note": "",
+      "formula": "E*I"
+    },
+    {
+      "id": "tong_mu_equiv",
+      "system": "Tong2025",
+      "quantity": "total moment for locally parallel magnetized segment",
+      "value": 0.000724,
+      "unit": "A m^2",
+      "source": "tong_published",
+      "location": "Derived from §5.1 and Eq.(46)",
+      "status": "derived",
+      "note": "",
+      "formula": "Mline*Lm"
+    },
+    {
+      "id": "tong_Mvolume",
+      "system": "Tong2025",
+      "quantity": "equivalent volumetric magnetization",
+      "value": 128031.30977614695,
+      "unit": "A/m",
+      "source": "tong_published",
+      "location": "Derived from §5.1 and Eq.(46)",
+      "status": "derived",
+      "note": "",
+      "formula": "Mline/A"
+    },
+    {
+      "id": "tong_mu0M",
+      "system": "Tong2025",
+      "quantity": "magnetization-equivalent flux scale",
+      "value": 0.16088888888888891,
+      "unit": "T",
+      "source": "tong_published",
+      "location": "Derived from §5.1 and Eq.(46)",
+      "status": "derived",
+      "note": "mu0M is not a measured remanent flux density or operating field.",
+      "formula": "mu0*Mline/A"
+    },
+    {
+      "id": "tong_Bscale",
+      "system": "Tong2025",
+      "quantity": "dimensional field per unit normalized field",
+      "value": 0.00021088591569677325,
+      "unit": "T",
+      "source": "tong_published",
+      "location": "Derived from §5.1 and Eq.(46)",
+      "status": "derived",
+      "note": "",
+      "formula": "E*I/(Mline*L^2)"
+    },
+    {
+      "id": "tong_speed",
+      "system": "Tong2025",
+      "quantity": "insertion speed",
+      "value": 0.001,
+      "unit": "m/s",
+      "source": "tong_published",
+      "location": "PDF p.11, Numerical setup",
+      "status": "reported",
+      "note": "The paper states this speed is low compared with elastic-wave propagation to ensure quasi-static analysis."
+    },
+    {
+      "id": "tong_dt",
+      "system": "Tong2025",
+      "quantity": "numerical step",
+      "value": 0.01,
+      "unit": "s",
+      "source": "tong_published",
+      "location": "PDF p.11, Numerical setup",
+      "status": "reported",
+      "note": ""
+    },
+    {
+      "id": "tong_N",
+      "system": "Tong2025",
+      "quantity": "rod nodes",
+      "value": 100,
+      "unit": "count",
+      "source": "tong_published",
+      "location": "PDF pp.10-11, Numerical setup",
+      "status": "reported",
+      "note": ""
+    },
+    {
+      "id": "tong_Kc",
+      "system": "Tong2025",
+      "quantity": "contact stiffness",
+      "value": 1000,
+      "unit": "Pa",
+      "source": "tong_published",
+      "location": "PDF p.11, Numerical setup",
+      "status": "reported",
+      "note": ""
+    },
+    {
+      "id": "tong_BC",
+      "system": "Tong2025",
+      "quantity": "boundary and contact conditions",
+      "value": "Nodes and edges outside the lumen initially fixed and translated along entrance x axis; released when inside lumen. Proximal mechanical advancer, confined lumen contact.",
+      "unit": "text",
+      "source": "tong_published",
+      "location": "PDF p.10, Numerical setup",
+      "status": "reported",
+      "note": "Not a fixed-length clamped-free no-contact vibration validation."
+    },
+    {
+      "id": "tong_actuation",
+      "system": "Tong2025",
+      "quantity": "actuation apparatus",
+      "value": "Three-axis Helmholtz coils, fields normalized for evaluation",
+      "unit": "text",
+      "source": "tong_published",
+      "location": "Published PDF p.10, §5.1 Experimental setup; arXiv v1 PDF p.12",
+      "status": "reported",
+      "note": "No specified bias B0=30 mT or maximum vector field rating. Uniform field does not establish independent gradient force and torque ports."
+    },
+    {
+      "id": "tong_rho",
+      "system": "Tong2025",
+      "quantity": "numerical density of actual composite/shaft",
+      "value": null,
+      "unit": null,
+      "source": "tong_published",
+      "location": "Inspected full article including §3, §5.1, Appendix A, Data availability",
+      "status": "not_reported_in_inspected_source",
+      "note": "This is a bounded source audit, not a claim that the information does not exist elsewhere."
+    },
+    {
+      "id": "tong_damping",
+      "system": "Tong2025",
+      "quantity": "calibrated viscous or modal damping",
+      "value": null,
+      "unit": null,
+      "source": "tong_published",
+      "location": "Inspected full article including §3, §5.1, Appendix A, Data availability",
+      "status": "not_reported_in_inspected_source",
+      "note": "This is a bounded source audit, not a claim that the information does not exist elsewhere."
+    },
+    {
+      "id": "tong_tipmass",
+      "system": "Tong2025",
+      "quantity": "lumped end mass or rotary inertia",
+      "value": null,
+      "unit": null,
+      "source": "tong_published",
+      "location": "Inspected full article including §3, §5.1, Appendix A, Data availability",
+      "status": "not_reported_in_inspected_source",
+      "note": "This is a bounded source audit, not a claim that the information does not exist elsewhere."
+    },
+    {
+      "id": "tong_loading",
+      "system": "Tong2025",
+      "quantity": "NdFeB particle mass or volume fraction",
+      "value": null,
+      "unit": null,
+      "source": "tong_published",
+      "location": "Inspected full article including §3, §5.1, Appendix A, Data availability",
+      "status": "not_reported_in_inspected_source",
+      "note": "This is a bounded source audit, not a claim that the information does not exist elsewhere."
+    },
+    {
+      "id": "tong_Bmax",
+      "system": "Tong2025",
+      "quantity": "coil maximum vector field",
+      "value": null,
+      "unit": null,
+      "source": "tong_published",
+      "location": "Inspected full article including §3, §5.1, Appendix A, Data availability",
+      "status": "not_reported_in_inspected_source",
+      "note": "This is a bounded source audit, not a claim that the information does not exist elsewhere."
+    },
+    {
+      "id": "tong_eom",
+      "system": "Tong2025",
+      "quantity": "printed damping convention",
+      "value": "Eq.(37) places -mu*M*qdot on the left",
+      "unit": "text",
+      "source": "tong_published",
+      "location": "PDF p.7, Eq.(37)",
+      "status": "needs_author_clarification",
+      "note": "For positive mu and standard force signs this would be antidamping. The v1 also multiplies forces by dt; the published equation removes that dt. No positive calibrated damping should be imported from this expression."
+    },
+    {
+      "id": "tong_data",
+      "system": "Tong2025",
+      "quantity": "data availability",
+      "value": "Data available on request",
+      "unit": "text",
+      "source": "tong_published",
+      "location": "PDF p.17, Data availability",
+      "status": "reported",
+      "note": ""
+    },
+    {
+      "id": "fr_L",
+      "system": "Francescon2025",
+      "quantity": "total length",
+      "value": 0.05,
+      "unit": "m",
+      "source": "francescon2025",
+      "location": "Article p.4 / PDF p.5, §IV-A Fabrication",
+      "status": "reported",
+      "note": ""
+    },
+    {
+      "id": "fr_D",
+      "system": "Francescon2025",
+      "quantity": "mold/robot outer diameter",
+      "value": 0.0018,
+      "unit": "m",
+      "source": "francescon2025",
+      "location": "Article p.4 / PDF p.5, §IV-A Fabrication",
+      "status": "reported",
+      "note": ""
+    },
+    {
+      "id": "fr_braid_D",
+      "system": "Francescon2025",
+      "quantity": "nylon braid outer diameter",
+      "value": 0.001,
+      "unit": "m",
+      "source": "francescon2025",
+      "location": "Article p.4 / PDF p.5, §IV-A Fabrication",
+      "status": "reported",
+      "note": ""
+    },
+    {
+      "id": "fr_Ebend",
+      "system": "Francescon2025",
+      "quantity": "effective bending modulus",
+      "value": 500000.0,
+      "unit": "Pa",
+      "source": "francescon2025",
+      "location": "Article p.4 / PDF p.5, §IV-A Fabrication",
+      "status": "reported",
+      "note": "Effective reinforced-composite property; not an isotropic E/G pair."
+    },
+    {
+      "id": "fr_Gtwist",
+      "system": "Francescon2025",
+      "quantity": "effective twisting modulus",
+      "value": 10000000.0,
+      "unit": "Pa",
+      "source": "francescon2025",
+      "location": "Article p.4 / PDF p.5, §IV-A Fabrication",
+      "status": "reported",
+      "note": "Effective reinforced-composite property; not an isotropic E/G pair."
+    },
+    {
+      "id": "fr_particle",
+      "system": "Francescon2025",
+      "quantity": "NdFeB particle diameter",
+      "value": 5e-06,
+      "unit": "m",
+      "source": "francescon2025",
+      "location": "Article p.4 / PDF p.5, §IV-A Fabrication",
+      "status": "reported",
+      "note": ""
+    },
+    {
+      "id": "fr_pulse",
+      "system": "Francescon2025",
+      "quantity": "fabrication pulse field",
+      "value": 4.644,
+      "unit": "T",
+      "source": "francescon2025",
+      "location": "Article p.4 / PDF p.5, §IV-A Fabrication",
+      "status": "reported",
+      "note": "Fabrication pulse, not operating field."
+    },
+    {
+      "id": "fr_material",
+      "system": "Francescon2025",
+      "quantity": "body composition",
+      "value": "Ecoflex 00-30 + MQFP-B+ NdFeB powder, silicone:powder mass ratio 1:1, reinforced by nylon braid",
+      "unit": "text",
+      "source": "francescon2025",
+      "location": "Article p.4 / PDF p.5, §IV-A Fabrication",
+      "status": "reported",
+      "note": ""
+    },
+    {
+      "id": "fr_magnetization",
+      "system": "Francescon2025",
+      "quantity": "magnetization distribution",
+      "value": "Bespoke lengthwise profiles, not a 5 mm distal-only segment",
+      "unit": "text",
+      "source": "francescon2025",
+      "location": "Article p.4 / PDF p.5, §IV-A Fabrication",
+      "status": "reported",
+      "note": ""
+    },
+    {
+      "id": "fr_coil",
+      "system": "Francescon2025",
+      "quantity": "coil stated rating",
+      "value": 0.025,
+      "unit": "T",
+      "source": "francescon2025",
+      "location": "Article p.5 / PDF p.6, §IV-B Apparatus",
+      "status": "reported",
+      "note": "Dexing 3DXHC12.5-300; wording up to 25 mT in three orthogonal directions does not unambiguously establish arbitrary-direction vector bound."
+    },
+    {
+      "id": "fr_Bexp",
+      "system": "Francescon2025",
+      "quantity": "maximum magnitude used in this work",
+      "value": 0.022,
+      "unit": "T",
+      "source": "francescon2025",
+      "location": "Article p.6 / PDF p.7, Table I (Max |B|)",
+      "status": "reported",
+      "note": ""
+    },
+    {
+      "id": "fr_model",
+      "system": "Francescon2025",
+      "quantity": "physical regime",
+      "value": "Static pseudo-rigid-link torque balance; magnetic gradients neglected; water-immersed phantom, planar shape control",
+      "unit": "text",
+      "source": "francescon2025",
+      "location": "§II, §IV-B, §V",
+      "status": "reported",
+      "note": "Not a calibrated dynamic two-mode beam experiment. Independent force port is not validated."
+    },
+    {
+      "id": "fr_rho",
+      "system": "Francescon2025",
+      "quantity": "actual composite mass density",
+      "value": null,
+      "unit": null,
+      "source": "francescon2025",
+      "location": "Full inspected accepted manuscript",
+      "status": "not_reported_in_inspected_source",
+      "note": ""
+    },
+    {
+      "id": "fr_mu",
+      "system": "Francescon2025",
+      "quantity": "remanence magnitude / total magnetic moment",
+      "value": null,
+      "unit": null,
+      "source": "francescon2025",
+      "location": "Full inspected accepted manuscript",
+      "status": "not_reported_in_inspected_source",
+      "note": ""
+    },
+    {
+      "id": "fr_damping",
+      "system": "Francescon2025",
+      "quantity": "viscous or modal damping",
+      "value": null,
+      "unit": null,
+      "source": "francescon2025",
+      "location": "Full inspected accepted manuscript",
+      "status": "not_reported_in_inspected_source",
+      "note": ""
+    },
+    {
+      "id": "fr_tipmass",
+      "system": "Francescon2025",
+      "quantity": "attached end-magnet lumped mass",
+      "value": null,
+      "unit": null,
+      "source": "francescon2025",
+      "location": "Full inspected accepted manuscript",
+      "status": "not_reported_in_inspected_source",
+      "note": ""
+    },
+    {
+      "id": "octo2010_B",
+      "system": "OctoMag_Kummer2010",
+      "quantity": "field magnitude used in experiments",
+      "value": 0.015,
+      "unit": "T",
+      "source": "kummer2010",
+      "location": "Article p.1009 / PDF p.4, end of §II",
+      "status": "reported",
+      "note": "The paper does not directly state a universal 40 mT continuous field rating; do not retroactively assign later-version ratings to this prototype."
+    },
+    {
+      "id": "octo2010_control",
+      "system": "OctoMag_Kummer2010",
+      "quantity": "current-to-field/force relation",
+      "value": "[B;F]=A_BF(M,P) I",
+      "unit": "text",
+      "source": "kummer2010",
+      "location": "Article p.1009 / PDF p.4, Eqs.(12)-(13)",
+      "status": "reported",
+      "note": "B and force/gradients share coil currents; scalar field and gradient maxima cannot be presumed independently and simultaneously attainable."
+    },
+    {
+      "id": "octo2013_Bmax",
+      "system": "OctoMag_Ullrich2013",
+      "quantity": "maximum field",
+      "value": 0.04,
+      "unit": "T",
+      "source": "ullrich2013",
+      "location": "Accepted PDF p.5, §2.2",
+      "status": "reported",
+      "note": "Specific in vivo/ex vivo apparatus; maxima are not a certified simultaneous B-gradient feasible set."
+    },
+    {
+      "id": "octo2013_Gmax",
+      "system": "OctoMag_Ullrich2013",
+      "quantity": "maximum gradient",
+      "value": 1.0,
+      "unit": "T/m",
+      "source": "ullrich2013",
+      "location": "Accepted PDF p.5, §2.2",
+      "status": "reported",
+      "note": "Specific in vivo/ex vivo apparatus; maxima are not a certified simultaneous B-gradient feasible set."
+    },
+    {
+      "id": "octo2013_workspace",
+      "system": "OctoMag_Ullrich2013",
+      "quantity": "workspace dimensions",
+      "value": [
+        0.02,
+        0.02,
+        0.02
+      ],
+      "unit": "m",
+      "source": "ullrich2013",
+      "location": "Accepted PDF p.5, §2.2",
+      "status": "reported",
+      "note": "Specific in vivo/ex vivo apparatus; maxima are not a certified simultaneous B-gradient feasible set."
+    },
+    {
+      "id": "octo2018_cont",
+      "system": "OctoMag_Hoshiar2018",
+      "quantity": "maximum continuous-use field",
+      "value": 0.04,
+      "unit": "T",
+      "source": "hoshiar2018",
+      "location": "PDF p.3, §2 Flexible Microrobotic Platform",
+      "status": "manufacturer_rating_reported_by_primary_experiment",
+      "note": "This paper explicitly attributes field ratings to manufacturer; own steering experiments use 15 mT."
+    },
+    {
+      "id": "octo2018_peak",
+      "system": "OctoMag_Hoshiar2018",
+      "quantity": "nominal maximum field",
+      "value": 0.12,
+      "unit": "T",
+      "source": "hoshiar2018",
+      "location": "PDF p.3, §2 Flexible Microrobotic Platform",
+      "status": "manufacturer_rating_reported_by_primary_experiment",
+      "note": "This paper explicitly attributes field ratings to manufacturer; own steering experiments use 15 mT."
+    },
+    {
+      "id": "octo2018_workspace",
+      "system": "OctoMag_Hoshiar2018",
+      "quantity": "reported homogeneous workspace",
+      "value": [
+        0.08,
+        0.08,
+        0.06
+      ],
+      "unit": "m",
+      "source": "hoshiar2018",
+      "location": "PDF p.3, §2 Flexible Microrobotic Platform",
+      "status": "manufacturer_rating_reported_by_primary_experiment",
+      "note": "This paper explicitly attributes field ratings to manufacturer; own steering experiments use 15 mT."
+    },
+    {
+      "id": "octo2021_Bmax",
+      "system": "OctoMag_Lussi2021",
+      "quantity": "maximum field magnitude in any direction",
+      "value": 0.04,
+      "unit": "T",
+      "source": "lussi2021",
+      "location": "§4 Experimental Section, Magnetic Navigation",
+      "status": "reported",
+      "note": "Within a cube of side 10 cm. Specific apparatus version; no frequency-independent or simultaneous-gradient guarantee."
+    },
+    {
+      "id": "octo2021_cube",
+      "system": "OctoMag_Lussi2021",
+      "quantity": "workspace cube side",
+      "value": 0.1,
+      "unit": "m",
+      "source": "lussi2021",
+      "location": "§4 Experimental Section, Magnetic Navigation",
+      "status": "reported",
+      "note": ""
+    },
+    {
+      "id": "octo2021_Bexp",
+      "system": "OctoMag_Lussi2021",
+      "quantity": "oscillating field magnitude used",
+      "value": 0.04,
+      "unit": "T",
+      "source": "lussi2021",
+      "location": "§2.4 Stiffness Characterization, Fig.3",
+      "status": "reported",
+      "note": "Actual catheter experiment with changing field direction at 2 Hz, ±90 degree offset from horizontal."
+    },
+    {
+      "id": "octo2021_fexp",
+      "system": "OctoMag_Lussi2021",
+      "quantity": "experimental field oscillation frequency",
+      "value": 2.0,
+      "unit": "Hz",
+      "source": "lussi2021",
+      "location": "§2.4 Stiffness Characterization",
+      "status": "reported",
+      "note": ""
+    },
+    {
+      "id": "design_norm_6",
+      "system": "Proposed_current_model",
+      "quantity": "total norm of perpendicular bias and transverse component",
+      "value": 0.030594117081556706,
+      "unit": "T",
+      "source": null,
+      "location": "Algebraic design calculation",
+      "status": "derived_from_design_values",
+      "note": "Numerically below a 40 mT vector bound. Does not turn design values into literature-measured values or certify combined field-gradient/current/bandwidth feasibility.",
+      "formula": "sqrt(B0^2+By^2)",
+      "components_T": [
+        0.03,
+        0.006
+      ]
+    },
+    {
+      "id": "design_norm_20",
+      "system": "Proposed_current_model",
+      "quantity": "total norm of perpendicular bias and transverse component",
+      "value": 0.03605551275463989,
+      "unit": "T",
+      "source": null,
+      "location": "Algebraic design calculation",
+      "status": "derived_from_design_values",
+      "note": "Numerically below a 40 mT vector bound. Does not turn design values into literature-measured values or certify combined field-gradient/current/bandwidth feasibility.",
+      "formula": "sqrt(B0^2+By^2)",
+      "components_T": [
+        0.03,
+        0.02
+      ]
+    },
+    {
+      "id": "design_Bymax40",
+      "system": "Proposed_current_model",
+      "quantity": "transverse capacity if isotropic 40 mT norm bound and fixed 30 mT bias",
+      "value": 0.026457513110645908,
+      "unit": "T",
+      "source": null,
+      "location": "Algebraic design calculation",
+      "status": "derived_from_design_values",
+      "note": "",
+      "formula": "sqrt(Bmax^2-B0^2)"
+    }
+  ],
+  "excluded_code_provenance": [
+    {
+      "repository": "https://github.com/weicheng-huang-mechanics/rod_in_tube",
+      "commit": "66d78ed5b9389d13ff4dd4d8b44f0910adf691cf",
+      "file": "option.txt",
+      "default_parameters": {
+        "L_m": 1,
+        "r_m": 0.0001,
+        "E_Pa": 100000000000.0,
+        "rho_kg_m3": 10000,
+        "viscosity": 0.0001,
+        "dt_s": 0.05
+      },
+      "decision": "Excluded as Tong experimental provenance: no inspected explicit paper correspondence and geometry/material defaults differ by orders of magnitude."
+    },
+    {
+      "repository": "https://github.com/weicheng-huang-mechanics/rod_in_confined_space",
+      "decision": "No inspected direct paper correspondence; incompatible defaults; not used."
+    },
+    {
+      "repository": "https://github.com/weicheng-huang-mechanics/mag_beam_sim",
+      "decision": "No inspected direct paper correspondence; incompatible defaults; not used."
+    }
+  ],
+  "transfer_limits": {
+    "Tong2025": [
+      "Geometric/magnetic quasi-static benchmark is usable; a fully sourced dynamic benchmark still lacks actual density and damping.",
+      "Do not use neat Sylgard 184 vendor density for unknown-loading NdFeB composite.",
+      "For two-mode reduction, retain distributed magnetic potential -integral_(L-Lm)^L Mline*(B0*cos(theta(s))+By*sin(theta(s))) ds unless a nearly rigid magnetized-segment approximation is justified.",
+      "Its linear magnetic stiffness is B0*Mline*integral b(s)b(s)^T ds, generally not the rank-one terminal point-dipole stiffness.",
+      "A clamped-free no-contact, fixed-length two-mode model is an explicitly newly defined benchmark variation.",
+      "Changing geometry, stiffness, mass or magnetization requires recomputing modal coefficients."
+    ],
+    "Francescon2025": [
+      "Reinforced Ecoflex/NdFeB device is not a uniform isotropic Sylgard beam.",
+      "Effective bending/twisting moduli must not be inserted into isotropic E=2G(1+nu).",
+      "Spatially programmed full-body magnetization is not a terminal point dipole.",
+      "Uniform Helmholtz control demonstrates torque control; it does not establish independent magnetic-gradient force control."
+    ],
+    "field_design": [
+      "30 mT bias plus 6 mT transverse needs 30.594 mT total magnitude.",
+      "30 mT bias plus 20 mT transverse needs 36.056 mT total magnitude.",
+      "If a rating is single-axis only, simultaneous orthogonal currents and resultant norm require separate validation.",
+      "40 mT capacity has primary experimental evidence, but does not prove any intended combined gradient command, workspace trajectory or bandwidth feasible."
+    ]
+  },
+  "decision": "Tong and Francescon each supply partial, coherent facts but neither inspected article supplies all inertial/dissipative quantities for the current dynamic point-dipole two-mode model. Do not splice their unrelated material properties into one purportedly reproduced device."
+}

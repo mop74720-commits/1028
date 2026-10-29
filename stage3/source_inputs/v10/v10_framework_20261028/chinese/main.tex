@@ -1,0 +1,30 @@
+\documentclass[doublespace,Afour,sageh]{sagej}
+\input{preamble}
+\externaldocument{supplement_xr}[v10_Integrated_ZH_Supplement.pdf]
+\hypersetup{pdftitle={磁性导管模型的Birkhoff离散化与复哈密顿残差控制},pdfauthor={匿名作者},pdfsubject={V10与方向一研究框架整合，2026年10月28日}}
+\begin{document}
+\title{磁性导管模型的 Birkhoff 离散化\\与复哈密顿残差控制}
+\author{匿名作者}
+\begin{abstract}
+磁性导管模型需要将力学降阶、学习补偿和数值动力学一致地连接起来。本文通过三个相互衔接的子问题建立这一联系：Birkhoff 差分格式的矩阵实现、保守残差辨识与磁输入实现，以及受控离散格式的结构和收敛。带端部磁体的平面梁提供统一且参数来源可追溯的模型，并保留完整的耦合余弦势和端部惯量。相容的含时正则表示导出加权中点映射，端点投影和非交换矩阵消元则明确它与普通中点格式的关系。利用状态的积分观测，在不使用加速度标签的条件下联合辨识解析势能残差和比例阻尼。所得补偿在同一个隐式更新中求值，并通过磁力和磁力矩实现。本文建立含有显式累积求解残差项的有限时间收敛估计，并将其与相对于标称目标的误差区分开来。当非保守残差被消除时，由隐式方程精确定义的映射是精确辛映射。闭环哈密顿量的四次正规形和学习误差预算进一步给出离散 KAM 持久性的条件性论证。线性矩阵检验和非线性磁控制实验分别检验三个子问题。全模态实现、执行器标定和有限振幅 KAM 证书仍需满足文中明确列出的附加要求。
+\end{abstract}
+\keywords{Birkhoff 系统，磁性导管控制，残差学习，几何积分，数值收敛，离散 KAM}
+\maketitle
+\raggedbottom
+\section{研究背景与问题}\label{sec:background}
+\input{sections/background}
+\section{力学降阶与 Birkhoff 生成函数构造}\label{sec:derivation}
+\input{sections/mechanics}
+\input{sections/structure}
+\section{受控离散格式：收敛与数值验证}\label{sec:analysis}
+\input{sections/controlled_analysis}
+\input{sections/analysis}
+\section{补偿动力学的离散 KAM 持久性}\label{sec:kam}
+\input{sections/kam}
+\section{磁输入实现与全梁验证}\label{sec:application}
+\input{sections/application}
+\section{结论}\label{sec:conclusion}
+\input{sections/conclusion}
+\input{sections/endmatter}
+\input{sections/references}
+\end{document}

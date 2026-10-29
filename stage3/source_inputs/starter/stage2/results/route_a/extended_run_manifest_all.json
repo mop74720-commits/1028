@@ -1,0 +1,21 @@
+{
+  "python": "3.12.14",
+  "numpy": "1.26.4",
+  "scipy": "1.13.1",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "source_sha256": {
+    "integrators.py": "ae6ef5668e48dc490152fd3a214bed200fd0198d5ce0ca7c4153c024220a7d4e",
+    "models.py": "493281eb2570f230ebcd006df64f781327d0bd42f755b0150c3872e77fad1523",
+    "replay_supplied.py": "5ce371a9ad1482e80d6f70db1e1af2e46f8a7e8ead09c4e4bb3b8dc40a51c373",
+    "run_extended.py": "0beea9474a0d899c8be14aa52415f03f342360748f72cfe5ab62c7c49c098759"
+  },
+  "elapsed_seconds": 49.81275923699968,
+  "dimensions": [
+    8,
+    16
+  ],
+  "family": "all",
+  "case_count": 8,
+  "status": "all scoped numerical assertions passed",
+  "source_policy": "All new outputs are independent; no supplied source edited."
+}

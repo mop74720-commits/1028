@@ -1,0 +1,56 @@
+{
+  "input_order": [
+    "Bx",
+    "By",
+    "Bz",
+    "Gxx",
+    "Gyy",
+    "Gxy",
+    "Gxz",
+    "Gyz"
+  ],
+  "mapping_units": "first 3 T/A; last 5 T/m/A",
+  "rank": 8,
+  "scaled_singular_values": [
+    0.7129168012552166,
+    0.6555367936358234,
+    0.4656620834615045,
+    0.42266714650910403,
+    0.3219918744645516,
+    0.24407928827239778,
+    0.12215428662871526,
+    0.10685407083999077
+  ],
+  "scaled_condition": 6.671873103672184,
+  "maxwell_finite_difference": {
+    "raw_divergence_max": 4.0841489240030227e-10,
+    "raw_curl_max": 3.9750443041330907e-10
+  },
+  "affine_approximation": [
+    {
+      "radius_m": 0.001,
+      "max_abs_T": 1.0126362427105406e-06,
+      "rms_abs_T": 5.031074882547094e-07,
+      "relative_l2": 0.0005375376479318269
+    },
+    {
+      "radius_m": 0.003,
+      "max_abs_T": 7.839071833118139e-06,
+      "rms_abs_T": 4.2833888457393755e-06,
+      "relative_l2": 0.004530626184411341
+    },
+    {
+      "radius_m": 0.005,
+      "max_abs_T": 2.1933291501789895e-05,
+      "rms_abs_T": 1.1849318431265488e-05,
+      "relative_l2": 0.012777266966728257
+    },
+    {
+      "radius_m": 0.01,
+      "max_abs_T": 0.00012416877866634925,
+      "rms_abs_T": 4.708724399956897e-05,
+      "relative_l2": 0.047521739347600664
+    }
+  ],
+  "limit": "Physical Biot-Savart model with chosen geometry; no manufactured-coil, thermal, mutual-inductance or calibration validation"
+}

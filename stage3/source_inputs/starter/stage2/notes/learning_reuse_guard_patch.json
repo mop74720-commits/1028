@@ -1,0 +1,15 @@
+{
+  "snapshot_sha256": "8b5c0eb4f8a0c8b7b4b9db2b2330f49809bca10d3d8aeafef1e3b0e9dcfbd6a2",
+  "patched_source_sha256": "868de74c224e46082555b5a6553ea70f52a0ee17ec23ed4631fc932e10aecdae",
+  "all_non_main_functions_and_classes_unchanged": {
+    "ComplexResidual": true,
+    "polynomial_features": true,
+    "polynomial_design": true,
+    "labels": true,
+    "scores": true,
+    "network_prediction": true,
+    "model_checks": true,
+    "train_one": true
+  },
+  "change_scope": "main data-reuse validation and defer metadata writes until validation succeeds; no architecture, label, fitting, optimizer or scoring change"
+}

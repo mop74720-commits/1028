@@ -1,0 +1,119 @@
+STRUCTURE / KAM INTEGRATION NOTES -- English draft, 28 October 2026
+
+Owned manuscript files
+  english/sections/structure.tex
+  english/sections/kam.tex
+  english/sections/supp_structure.tex
+All begin at subsection level. Labels use struct:, kam:, ss: only.
+No new macros are required beyond the agreed preamble and standard AMS environments.
+
+Shared conventions
+  x=(X,Y); J=[0 I;-I 0]; mathsf N=diag(nu).
+  h_0 is the nominal physical energy in balanced variables.
+  h_*=h_0+R_* is the declared true conservative model.
+  hhat=h_0+Rhat is the learned reference energy.
+  deltaR=R_*-Rhat and deltagamma=gamma-gammahat.
+  h_c=h_0+deltaR is the conservative part of Route A.
+  U is dimensionless generalized force; the physical torque is tau_B.
+  tau is dimensionless time; Delta is its step; Delta_t is physical step.
+  General CHNN energy+dissipation decoder is retained in mechanics and connected
+  to finite analytic readouts here. The rerun only fits one cosine-potential
+  coefficient plus damping; the full 35-feature extension has no new training.
+
+Principal mathematical decisions
+  - Birkhoff K and flow Jacobians have size 2n, mass matrices size n; endpoint
+    transformation has size 4n. No invertibility of zero-step graph derivative f_w.
+  - The weighted canonical transformation allows M(q); the explicit weighted
+    momentum update specializes to constant mass and constant alpha.
+  - Ordinary midpoint on a damped field and weighted midpoint are distinct.
+  - The exactly solved autonomous central map is exact symplectic; its primitive
+    is Ybar^T deltaX - S_Delta. Finite Newton/roundoff errors are separate.
+  - Central4 retained: S=Delta h + Delta^3 f^T h'' f / 24. The full derivation
+    is in ss:central4. New-parameter experiments use only ordinary midpoint.
+  - The complex continuation uses independent zeta,chi, with chi=conj(zeta)
+    imposed only on the real physical slice. No assumption that real energy
+    is holomorphic in zeta alone. General-force normalization is i f / sqrt2.
+  - Four objects above remain distinct. Only exact conservative realization
+    allows classical KAM for Route A's actual loop; Route B KAM is for the
+    learned reference, and tracking is a separate forced stable error equation.
+  - Integral Gram normalization is n L_I for momentum-only observations, n=2.
+    The 35-feature full-state extension instead has 4 L_I rows and 36 unknowns.
+    It cannot reuse the two-column numerical Gram bound.
+  - Quartic normal form includes the cross-action entries. For cubic terms,
+    Z4=<H4+{H3,W3}/2>, {H2,W3}=-H3. The cosine model has no cubic term.
+  - Full R6 includes Lie terms proportional to kappa^2, not only cosine tail.
+  - Flow and map Diophantine conditions are stated separately. Conjugation of
+    the actual physical-coordinate map is used, not a claim of midpoint
+    covariance under nonlinear canonical maps.
+  - The map path is Shang 1999, Theorem 2, Remark 2 and Section 4: joint
+    generator-per-step budget C epsilon + C Delta^p. For n=2 use tau_D>3;
+    frequency-boundary margins and analytic domains are required.
+  - No old finite-amplitude torus, interval remainder, probability, measure
+    fraction, COMSOL identification or Central4 experiment is transplanted.
+
+Citation keys used / sources checked
+  Existing: feng, chen2022, poschel, haro2019aposteriori.
+  Added by root: fengqin, shang, su2007.
+
+  feng: Feng, Wu, Qin and Wang (1989), Journal of Computational Mathematics
+    7(1), 71--96, canonical difference schemes via generating functions.
+    https://computmath.cjoe.ac.cn/jcm/EN/Y1989/V7/I1/71
+  fengqin: Feng and Qin (2010), Symplectic Geometric Algorithms for
+    Hamiltonian Systems. DOI 10.1007/978-3-642-01777-3.
+  su2007: Su, Sun, Qin and Scherer (2007), structure preserving Birkhoffian
+    schemes; parent added verified original reference.
+    https://www.ijpam.eu/contents/2007-40-3/4/4.pdf
+  chen2022: Chen, Matsubara and Yaguchi (2022), AAAI 36(6), 6322--6332.
+    https://ojs.aaai.org/index.php/AAAI/article/view/20582
+    DOI 10.1609/aaai.v36i6.20582. Used for nonzero-learning-error motivation;
+    the present deterministic finite-feature inequality is proved directly.
+  poschel: Poeschel, A Lecture on the Classical KAM Theorem.
+    https://arxiv.org/pdf/0908.2234
+    Used for the conditional analytic near-integrable flow theorem.
+  shang: Shang (1999), Numerische Mathematik 83, 477--496.
+    https://doi.org/10.1007/s002110050460
+    Original full PDF locally inspected: audit_references/
+      KAM theorem of symplectic algorithms for Hamiltonian systems(1).pdf
+    pp.482--483: discrete divisors, Theorem 2, analytic Remark 2.
+    pp.492--494: nearly integrable Section 4, (4.2)--(4.6), joint
+      O(Delta*epsilon+Delta^(p+1)) map and generating-function error.
+    This does not establish fixed-nonzero-epsilon convergence of numerical
+    tori to perturbed-flow tori merely by Delta -> 0.
+  haro2019aposteriori: Haro and Luque (2019), JDE 266, 1605--1674.
+    DOI 10.1016/j.jde.2018.08.003; arXiv 1711.05515.
+    Used only to describe a possible new finite-amplitude certificate.
+
+Additional verification
+  reviews/structure_formula_checks.py is a small independent exact-rational
+  polynomial check of the Central4 Hamiltonian derivative identity, including
+  mixed cubic position/momentum terms; all four components vanish exactly.
+  It also checks the harmonic phase series through degree six and reevaluates
+  the new nominal twist from reproduction/new_baseline.json.
+  Results: reviews/structure_formula_checks.json.
+  A1=[[-0.001113609159022615,-0.004787391325039717],
+      [-0.004787391325039717,-0.005145233296927314]].
+  det(A1)=-1.7189336774299156e-5, sigma_min=0.0020650579563513613.
+  min_{0<|k|_1<=4}|k dot nu|=1. These floating-point values are algebraic
+  diagnostics, not a rigorous analytic remainder or KAM certificate.
+  Static checks: balanced braces/environments; all labels/citekeys resolve;
+  no duplicate labels across main and supplement source files.
+
+Layout pass
+  Parent performed the compile. All owned overfull formulas identified in
+  the first main/supplement logs have been split without changing their
+  mathematics; no independent compile was run to avoid aux-file contention.
+  The next parent-generated main/supplement logs were inspected: no Overfull
+  remains within structure.tex, kam.tex or supp_structure.tex.
+  English is awaiting the parent's final render-and-review pass before
+  translation. Do not translate until that review is complete.
+
+Cross-chapter clarification after independent review
+  structure.tex now labels the actual closed-loop midpoint update
+  struct:general-midpoint; struct:midpoint is explicitly its conservative
+  specialization. Simultaneously integrated references are part of the
+  augmented state; independent comparison trajectories retain their stated
+  reference solvers.
+  struct:route-b-oracle explicitly compensates with gamma and V_* at the
+  plant state while retaining Vhat at the same learned reference state.
+  This yields the homogeneous tracking-error ODE and its midpoint Cayley
+  update; no true-model reference is substituted into the comparison.

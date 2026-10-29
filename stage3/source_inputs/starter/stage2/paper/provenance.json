@@ -1,0 +1,44 @@
+{
+  "purpose": "Bilingual expandable framework only; no new experiment",
+  "source_priority": "Current scientific reports, with route_a and learning_spd detailed records; root corrections on initial transversality and exact-symplectic KAM class included",
+  "upstream_sources": [
+    {
+      "path": "stage2/report/01_physical_framework.md",
+      "sha256": "e4b3d81b6608abac98526561162e8a678b9d242059cc8597ebdac67a2689fbd1"
+    },
+    {
+      "path": "stage2/report/02_learning_metriplectic.md",
+      "sha256": "3085903b70c399872fb19d7fdcc6db370907aed3a065b1793bf50c6ce34a1e30"
+    },
+    {
+      "path": "stage2/report/03_birkhoff_bridge.md",
+      "sha256": "986bbd1b1fb3b4f728b85bafaf6bc65f9841da661bd239c024eea4377c1a301d"
+    },
+    {
+      "path": "stage2/report/04_synthesis_reproduction.md",
+      "sha256": "945c95b6489a5b41e014101b4fb80473ed3e4e43464220731d1fbdbc2c75e55f"
+    },
+    {
+      "path": "stage2/notes/route_a.md",
+      "sha256": "80b76c6adf0520edd01d3d085860b664030c96531166ae9b8db0d91376e4a099"
+    },
+    {
+      "path": "stage2/notes/learning_spd.md",
+      "sha256": "acfbbace639d527d4dcde9a05efcdd3c61081174c7bc71854aaff5f06833c226"
+    }
+  ],
+  "claims": 24,
+  "doi_references": 9,
+  "post_framework_formatting_updates": [
+    {
+      "path": "stage2/notes/learning_spd.md",
+      "sha256": "840f4552126226bd4696dc58ab179e4508fd6d28472c4480e28a67bedf3ce54e",
+      "change": "After framework compilation, parent authorized normalization of 103 inline and 14 display math delimiter pairs for DOCX report rendering. Mathematical interiors unchanged; original source hash above records the framework drafting basis."
+    },
+    {
+      "path": "stage2/notes/learning_spd.md",
+      "sha256": "66027c545ae2a11749d543795cbdbfaad1cb8191423d31893f585d01855ace1a",
+      "change": "After verified-report visual QA, one table-header slash ratio became an equivalent stacked fraction to prevent cell clipping. Scientific meaning and all numerical values unchanged."
+    }
+  ]
+}

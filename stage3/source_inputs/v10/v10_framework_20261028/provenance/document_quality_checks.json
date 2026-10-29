@@ -1,0 +1,119 @@
+{
+  "completed_at_utc": "2026-10-28T09:46:46.470319+00:00",
+  "revision": "v10 integrated with supplied Direction I framework",
+  "pdfs": {
+    "v10_Integrated_EN.pdf": {
+      "pages": 23,
+      "bytes": 560966,
+      "sha256": "f3edf6bfbd321290b09616ebb2f971ba6726a1240ce32f386e14ee89d360d367"
+    },
+    "v10_Integrated_EN_Supplement.pdf": {
+      "pages": 25,
+      "bytes": 564906,
+      "sha256": "8e4a7ca8d514db801e73d55980069df0ff05272576f252106d78be399369ed05"
+    },
+    "v10_Integrated_ZH.pdf": {
+      "pages": 19,
+      "bytes": 564502,
+      "sha256": "35005860a32c4f9e2a80f96996882ab8b65915935f6e11bdfc813e973e09f3eb"
+    },
+    "v10_Integrated_ZH_Supplement.pdf": {
+      "pages": 22,
+      "bytes": 592420,
+      "sha256": "357bcb89dcfbdbc1ade1af1cc3c9fd5c4db9c8c21f223afb7d92f04a12d6e20d"
+    }
+  },
+  "cross_language": {
+    "all_checks_passed": true,
+    "labels": 298,
+    "cited_bibliographic_entries": 25,
+    "named_display_blocks": 176,
+    "unnumbered_display_blocks": 25,
+    "inline_math_spans": 1652,
+    "equation_and_theorem_numbers_identical": true,
+    "figure_data_and_geometry_match": true
+  },
+  "framework_mapping_components": 46,
+  "pdf_geometry": {
+    "EN": {
+      "pages": 23,
+      "page_sizes": [
+        [
+          595.28,
+          841.89
+        ]
+      ],
+      "out_of_page_text_blocks": [],
+      "links": 261,
+      "render_directory": "qa/english_render/EN"
+    },
+    "EN_Supplement": {
+      "pages": 25,
+      "page_sizes": [
+        [
+          595.28,
+          841.89
+        ]
+      ],
+      "out_of_page_text_blocks": [],
+      "links": 164,
+      "render_directory": "qa/english_render/EN_Supplement"
+    },
+    "ZH": {
+      "pages": 19,
+      "page_sizes": [
+        [
+          595.28,
+          841.89
+        ]
+      ],
+      "out_of_page_text_blocks": [],
+      "links": 261,
+      "render_directory": "qa/chinese_render/ZH"
+    },
+    "ZH_Supplement": {
+      "pages": 22,
+      "page_sizes": [
+        [
+          595.28,
+          841.89
+        ]
+      ],
+      "out_of_page_text_blocks": [],
+      "links": 165,
+      "render_directory": "qa/chinese_render/ZH_Supplement"
+    }
+  },
+  "visual_review": {
+    "all_pages_rendered": true,
+    "all_page_contact_sheets_reviewed": true,
+    "detailed_theory_mechanics_and_numerical_pages_reviewed": true,
+    "english_reference_corrections_recompiled_and_rechecked": [
+      "EN p14",
+      "EN supplement p20",
+      "EN supplement p22"
+    ],
+    "chinese_title_adjustments_recompiled_and_rechecked": [
+      "ZH supplement p1",
+      "ZH supplement p7",
+      "ZH supplement p16"
+    ],
+    "open_layout_issues": []
+  },
+  "compiler_gate": {
+    "unresolved_references": false,
+    "multiply_defined_labels": false,
+    "missing_characters": false,
+    "overfull_boxes": false,
+    "english_engine": "pdflatex",
+    "chinese_pipeline": "xelatex -no-pdf then xdvipdfmx",
+    "auxiliary_handling": "Complete aux and outline snapshots restored atomically before each ordered pass."
+  },
+  "scientific_scope": {
+    "new_framework_experiments": "All four result records report all assertions passed; conservative nonlinear Central4 test included.",
+    "fixed_learned_controller_high_mode_responses": "Protocol specified, not newly simulated.",
+    "independent_FE_or_COMSOL_and_hardware": "Not performed for this revision.",
+    "KAM": "Conditional theorem and algebraic/analytic budgets; no new finite-amplitude interval certificate."
+  },
+  "baseline_sha256": "2bac37b2f4444efc6a0ba742139fbf0b35e268e9f4f3597ba13a0793bc2049ac"
+}

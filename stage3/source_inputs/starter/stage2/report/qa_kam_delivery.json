@@ -1,0 +1,506 @@
+{
+  "reviewed_utc": "2026-10-29T03:09:28.311464+00:00",
+  "reviewer": "kam_sources",
+  "candidate": "stage2/report/render_delivery",
+  "total_candidate_pages": 110,
+  "assigned_pages": [
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83
+  ],
+  "actually_viewed_delivery_pages": [
+    65,
+    66,
+    67,
+    71,
+    73,
+    75,
+    82,
+    83
+  ],
+  "delivery_visual_view_count": 8,
+  "sha_identical_prior_visual_evidence_reused_pages": [
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    68,
+    69,
+    70,
+    72,
+    74,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81
+  ],
+  "total_pages_covered": 27,
+  "method": "All eight specified redrawn pages were actually viewed individually at original size using view_image(detail=original). All other 19 assigned pages were checked for strict byte identity by SHA-256 against qa_kam_verified.json; all match. No contact-sheet or extracted-text substitute.",
+  "status": "PASS",
+  "findings": [],
+  "scope_limit": "This reviewer covers only pages 57-83; Hessian table-header fixes on pages 95-96 remain with the tail QA reviewer.",
+  "pages": [
+    {
+      "page": 57,
+      "path": "stage2/report/render_delivery/page-57.png",
+      "sha256": "58d4ee10cd60f16e49b4bd542dbf721e3c5b6b3fb44fe3c8b9e92438ff7713b8",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "Strict SHA-256 identity with previously verified render; reuse prior visual evidence",
+      "actually_viewed_delivery_render": false,
+      "prior_visual_evidence": "stage2/report/qa_kam_verified.json",
+      "prior_sha256": "58d4ee10cd60f16e49b4bd542dbf721e3c5b6b3fb44fe3c8b9e92438ff7713b8",
+      "identical_to_verified_render": true,
+      "conclusion": "PASS",
+      "notes": "PASS: strict SHA-256 identity with the already reviewed verified-render image; prior visual conclusion applies unchanged."
+    },
+    {
+      "page": 58,
+      "path": "stage2/report/render_delivery/page-58.png",
+      "sha256": "19813771c8add6a42b2822690b8a46f3e157d9f1681f4dce3d847ddfb37ad7bb",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "Strict SHA-256 identity with previously verified render; reuse prior visual evidence",
+      "actually_viewed_delivery_render": false,
+      "prior_visual_evidence": "stage2/report/qa_kam_verified.json",
+      "prior_sha256": "19813771c8add6a42b2822690b8a46f3e157d9f1681f4dce3d847ddfb37ad7bb",
+      "identical_to_verified_render": true,
+      "conclusion": "PASS",
+      "notes": "PASS: strict SHA-256 identity with the already reviewed verified-render image; prior visual conclusion applies unchanged."
+    },
+    {
+      "page": 59,
+      "path": "stage2/report/render_delivery/page-59.png",
+      "sha256": "c815a131e8f5585a8c914b6c27714e2ed3e6b270de680f81a329d9f393d7a3e0",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "Strict SHA-256 identity with previously verified render; reuse prior visual evidence",
+      "actually_viewed_delivery_render": false,
+      "prior_visual_evidence": "stage2/report/qa_kam_verified.json",
+      "prior_sha256": "c815a131e8f5585a8c914b6c27714e2ed3e6b270de680f81a329d9f393d7a3e0",
+      "identical_to_verified_render": true,
+      "conclusion": "PASS",
+      "notes": "PASS: strict SHA-256 identity with the already reviewed verified-render image; prior visual conclusion applies unchanged."
+    },
+    {
+      "page": 60,
+      "path": "stage2/report/render_delivery/page-60.png",
+      "sha256": "b13f98e00183a17843accd922cc2fb852f9fe045f59becd2403b5e4e304128d3",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "Strict SHA-256 identity with previously verified render; reuse prior visual evidence",
+      "actually_viewed_delivery_render": false,
+      "prior_visual_evidence": "stage2/report/qa_kam_verified.json",
+      "prior_sha256": "b13f98e00183a17843accd922cc2fb852f9fe045f59becd2403b5e4e304128d3",
+      "identical_to_verified_render": true,
+      "conclusion": "PASS",
+      "notes": "PASS: strict SHA-256 identity with the already reviewed verified-render image; prior visual conclusion applies unchanged."
+    },
+    {
+      "page": 61,
+      "path": "stage2/report/render_delivery/page-61.png",
+      "sha256": "4de85bcc440c4976eadfa33fc2ccf56df4590b8d76e21c9eeaa8bd8c891ae12c",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "Strict SHA-256 identity with previously verified render; reuse prior visual evidence",
+      "actually_viewed_delivery_render": false,
+      "prior_visual_evidence": "stage2/report/qa_kam_verified.json",
+      "prior_sha256": "4de85bcc440c4976eadfa33fc2ccf56df4590b8d76e21c9eeaa8bd8c891ae12c",
+      "identical_to_verified_render": true,
+      "conclusion": "PASS",
+      "notes": "PASS: strict SHA-256 identity with the already reviewed verified-render image; prior visual conclusion applies unchanged."
+    },
+    {
+      "page": 62,
+      "path": "stage2/report/render_delivery/page-62.png",
+      "sha256": "377d3b8f459ac98a4669ccdb6d85f1d4ad292cffbca0d97d710ccd0da8a20a1c",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "Strict SHA-256 identity with previously verified render; reuse prior visual evidence",
+      "actually_viewed_delivery_render": false,
+      "prior_visual_evidence": "stage2/report/qa_kam_verified.json",
+      "prior_sha256": "377d3b8f459ac98a4669ccdb6d85f1d4ad292cffbca0d97d710ccd0da8a20a1c",
+      "identical_to_verified_render": true,
+      "conclusion": "PASS",
+      "notes": "PASS: strict SHA-256 identity with the already reviewed verified-render image; prior visual conclusion applies unchanged."
+    },
+    {
+      "page": 63,
+      "path": "stage2/report/render_delivery/page-63.png",
+      "sha256": "4f0e97f9b4f4739f044b32a70e6c4a191da7e352461681e6fedfd1bc7ffbee6d",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "Strict SHA-256 identity with previously verified render; reuse prior visual evidence",
+      "actually_viewed_delivery_render": false,
+      "prior_visual_evidence": "stage2/report/qa_kam_verified.json",
+      "prior_sha256": "4f0e97f9b4f4739f044b32a70e6c4a191da7e352461681e6fedfd1bc7ffbee6d",
+      "identical_to_verified_render": true,
+      "conclusion": "PASS",
+      "notes": "PASS: strict SHA-256 identity with the already reviewed verified-render image; prior visual conclusion applies unchanged."
+    },
+    {
+      "page": 64,
+      "path": "stage2/report/render_delivery/page-64.png",
+      "sha256": "a78cef4dd9857ac07d1cd87bfec8fed2f69f65a608171ab024665c60f432e7c2",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "Strict SHA-256 identity with previously verified render; reuse prior visual evidence",
+      "actually_viewed_delivery_render": false,
+      "prior_visual_evidence": "stage2/report/qa_kam_verified.json",
+      "prior_sha256": "a78cef4dd9857ac07d1cd87bfec8fed2f69f65a608171ab024665c60f432e7c2",
+      "identical_to_verified_render": true,
+      "conclusion": "PASS",
+      "notes": "PASS: strict SHA-256 identity with the already reviewed verified-render image; prior visual conclusion applies unchanged."
+    },
+    {
+      "page": 65,
+      "path": "stage2/report/render_delivery/page-65.png",
+      "sha256": "54ff1b76f153eed7a8db37d57ee9e70d6d5e2e14fab54aad65fd636b0f8c9eaa",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "original-size visual inspection of delivery render",
+      "actually_viewed_delivery_render": true,
+      "prior_visual_evidence": "stage2/report/qa_kam_verified.json",
+      "prior_sha256": "bb620b15a949b548559ef76d0cbc25346bf9216c3e41b421bf6eccddb9a12737",
+      "identical_to_verified_render": false,
+      "conclusion": "PASS",
+      "notes": "PASS: full multirow experiment table, initial-state vectors, time steps and defect formula are complete; no table-edge clipping."
+    },
+    {
+      "page": 66,
+      "path": "stage2/report/render_delivery/page-66.png",
+      "sha256": "f422ab5d34f2f9abe28668b5b18baa3518c19267705fc3ebd57687aaf2eabeb6",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "original-size visual inspection of delivery render",
+      "actually_viewed_delivery_render": true,
+      "prior_visual_evidence": "stage2/report/qa_kam_verified.json",
+      "prior_sha256": "de9388b2e39e861a318110418ef09b00c72244c120a12b4c296f8f8fc4c3cfad",
+      "identical_to_verified_render": false,
+      "conclusion": "PASS",
+      "notes": "PASS: magnetic parameters, structural norm and convergence-result table are complete; scientific-notation wraps preserve all digits."
+    },
+    {
+      "page": 67,
+      "path": "stage2/report/render_delivery/page-67.png",
+      "sha256": "ebf61bc3ed7eda93225f05bc945996c48ebd80ad5dfb49f60590821c64b8e84d",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "original-size visual inspection of delivery render",
+      "actually_viewed_delivery_render": true,
+      "prior_visual_evidence": "stage2/report/qa_kam_verified.json",
+      "prior_sha256": "e5a176313d3795d4c47fce537171d0dd7234dd11fb4b7c1b140303e39b07354b",
+      "identical_to_verified_render": false,
+      "conclusion": "PASS",
+      "notes": "PASS: continued result table and variable-mass coordinate formulas are complete and delimited correctly."
+    },
+    {
+      "page": 68,
+      "path": "stage2/report/render_delivery/page-68.png",
+      "sha256": "f23d15870747dd856889da86d2225f38f4c1b65c7f15bbd44c6fa5949adf90ea",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "Strict SHA-256 identity with previously verified render; reuse prior visual evidence",
+      "actually_viewed_delivery_render": false,
+      "prior_visual_evidence": "stage2/report/qa_kam_verified.json",
+      "prior_sha256": "f23d15870747dd856889da86d2225f38f4c1b65c7f15bbd44c6fa5949adf90ea",
+      "identical_to_verified_render": true,
+      "conclusion": "PASS",
+      "notes": "PASS: strict SHA-256 identity with the already reviewed verified-render image; prior visual conclusion applies unchanged."
+    },
+    {
+      "page": 69,
+      "path": "stage2/report/render_delivery/page-69.png",
+      "sha256": "f1064eb4225d5b41c1c1459f8797493e0315e005e89da9f5bcfb81aec0100420",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "Strict SHA-256 identity with previously verified render; reuse prior visual evidence",
+      "actually_viewed_delivery_render": false,
+      "prior_visual_evidence": "stage2/report/qa_kam_verified.json",
+      "prior_sha256": "f1064eb4225d5b41c1c1459f8797493e0315e005e89da9f5bcfb81aec0100420",
+      "identical_to_verified_render": true,
+      "conclusion": "PASS",
+      "notes": "PASS: strict SHA-256 identity with the already reviewed verified-render image; prior visual conclusion applies unchanged."
+    },
+    {
+      "page": 70,
+      "path": "stage2/report/render_delivery/page-70.png",
+      "sha256": "71b315b675aaa36e19f0e8e6d7b344dee105dd19d260229d81529395e8a01e81",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "Strict SHA-256 identity with previously verified render; reuse prior visual evidence",
+      "actually_viewed_delivery_render": false,
+      "prior_visual_evidence": "stage2/report/qa_kam_verified.json",
+      "prior_sha256": "71b315b675aaa36e19f0e8e6d7b344dee105dd19d260229d81529395e8a01e81",
+      "identical_to_verified_render": true,
+      "conclusion": "PASS",
+      "notes": "PASS: strict SHA-256 identity with the already reviewed verified-render image; prior visual conclusion applies unchanged."
+    },
+    {
+      "page": 71,
+      "path": "stage2/report/render_delivery/page-71.png",
+      "sha256": "a0ab0a69fd42ec124e4453fd848eab860c40b31a705b81bbb9a9988f67ae84a4",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "original-size visual inspection of delivery render",
+      "actually_viewed_delivery_render": true,
+      "prior_visual_evidence": "stage2/report/qa_kam_verified.json",
+      "prior_sha256": "bc93d29e4d3f08d59d227b876d55461b6101d8c9fbb15abdfb63183b7aa1d4c1",
+      "identical_to_verified_render": false,
+      "conclusion": "PASS",
+      "notes": "PASS: all 16-DOF comparison rows, exponents and asterisk annotations fit the table; lower border is clear of footer."
+    },
+    {
+      "page": 72,
+      "path": "stage2/report/render_delivery/page-72.png",
+      "sha256": "aead08340bc9da9d3e50a80f322a5462c007719fdc1f7c4cef6f4b3071704010",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "Strict SHA-256 identity with previously verified render; reuse prior visual evidence",
+      "actually_viewed_delivery_render": false,
+      "prior_visual_evidence": "stage2/report/qa_kam_verified.json",
+      "prior_sha256": "aead08340bc9da9d3e50a80f322a5462c007719fdc1f7c4cef6f4b3071704010",
+      "identical_to_verified_render": true,
+      "conclusion": "PASS",
+      "notes": "PASS: strict SHA-256 identity with the already reviewed verified-render image; prior visual conclusion applies unchanged."
+    },
+    {
+      "page": 73,
+      "path": "stage2/report/render_delivery/page-73.png",
+      "sha256": "a553ccb43e530559535af87a78100c3c45b5d96952d7d12937f61fcbe4b9a1dd",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "original-size visual inspection of delivery render",
+      "actually_viewed_delivery_render": true,
+      "prior_visual_evidence": "stage2/report/qa_kam_verified.json",
+      "prior_sha256": "94f34c5c4b5bfc9b88378944cbae3b5a0363f7b22c4c9c77c71c35c3c4978b79",
+      "identical_to_verified_render": false,
+      "conclusion": "PASS",
+      "notes": "PASS: frozen-current step-refinement table and convergence/defect discussion are complete; no overlaps or clipping."
+    },
+    {
+      "page": 74,
+      "path": "stage2/report/render_delivery/page-74.png",
+      "sha256": "fab3249c988abe340a743bbf7e5090316b05727032c4945b67ac73c6a8e1cd70",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "Strict SHA-256 identity with previously verified render; reuse prior visual evidence",
+      "actually_viewed_delivery_render": false,
+      "prior_visual_evidence": "stage2/report/qa_kam_verified.json",
+      "prior_sha256": "fab3249c988abe340a743bbf7e5090316b05727032c4945b67ac73c6a8e1cd70",
+      "identical_to_verified_render": true,
+      "conclusion": "PASS",
+      "notes": "PASS: strict SHA-256 identity with the already reviewed verified-render image; prior visual conclusion applies unchanged."
+    },
+    {
+      "page": 75,
+      "path": "stage2/report/render_delivery/page-75.png",
+      "sha256": "e4f6595c9e814ca520d6ac35f43d072ddfd743cf4505b3854f525abb74cb8b8f",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "original-size visual inspection of delivery render",
+      "actually_viewed_delivery_render": true,
+      "prior_visual_evidence": "stage2/report/qa_kam_verified.json",
+      "prior_sha256": "4716a03643eeb380fa11d96009c328dee90dccfd68f03abbedd4fa5472b7bdd0",
+      "identical_to_verified_render": false,
+      "conclusion": "PASS",
+      "notes": "PASS: norm inequality, gauge-adjustment formulas and measured-value table are complete, with correct norm delimiters."
+    },
+    {
+      "page": 76,
+      "path": "stage2/report/render_delivery/page-76.png",
+      "sha256": "c6a4fb770ea26870196ed6aa4197f4ec8cf93aa5c5121930d318dac08079f3ce",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "Strict SHA-256 identity with previously verified render; reuse prior visual evidence",
+      "actually_viewed_delivery_render": false,
+      "prior_visual_evidence": "stage2/report/qa_kam_verified.json",
+      "prior_sha256": "c6a4fb770ea26870196ed6aa4197f4ec8cf93aa5c5121930d318dac08079f3ce",
+      "identical_to_verified_render": true,
+      "conclusion": "PASS",
+      "notes": "PASS: strict SHA-256 identity with the already reviewed verified-render image; prior visual conclusion applies unchanged."
+    },
+    {
+      "page": 77,
+      "path": "stage2/report/render_delivery/page-77.png",
+      "sha256": "7a45f0da9eeeb8f4311027446e1c42b0fd9ffed064857345361837884056919f",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "Strict SHA-256 identity with previously verified render; reuse prior visual evidence",
+      "actually_viewed_delivery_render": false,
+      "prior_visual_evidence": "stage2/report/qa_kam_verified.json",
+      "prior_sha256": "7a45f0da9eeeb8f4311027446e1c42b0fd9ffed064857345361837884056919f",
+      "identical_to_verified_render": true,
+      "conclusion": "PASS",
+      "notes": "PASS: strict SHA-256 identity with the already reviewed verified-render image; prior visual conclusion applies unchanged."
+    },
+    {
+      "page": 78,
+      "path": "stage2/report/render_delivery/page-78.png",
+      "sha256": "1daacf1d6901d1aa7eddbc557046c39381144e0d3f60d30133735bc10b18ce5d",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "Strict SHA-256 identity with previously verified render; reuse prior visual evidence",
+      "actually_viewed_delivery_render": false,
+      "prior_visual_evidence": "stage2/report/qa_kam_verified.json",
+      "prior_sha256": "1daacf1d6901d1aa7eddbc557046c39381144e0d3f60d30133735bc10b18ce5d",
+      "identical_to_verified_render": true,
+      "conclusion": "PASS",
+      "notes": "PASS: strict SHA-256 identity with the already reviewed verified-render image; prior visual conclusion applies unchanged."
+    },
+    {
+      "page": 79,
+      "path": "stage2/report/render_delivery/page-79.png",
+      "sha256": "cb0a845cfc9f7d659be30b4a1e863c5c8124685064a120602d8c31b82cdef77a",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "Strict SHA-256 identity with previously verified render; reuse prior visual evidence",
+      "actually_viewed_delivery_render": false,
+      "prior_visual_evidence": "stage2/report/qa_kam_verified.json",
+      "prior_sha256": "cb0a845cfc9f7d659be30b4a1e863c5c8124685064a120602d8c31b82cdef77a",
+      "identical_to_verified_render": true,
+      "conclusion": "PASS",
+      "notes": "PASS: strict SHA-256 identity with the already reviewed verified-render image; prior visual conclusion applies unchanged."
+    },
+    {
+      "page": 80,
+      "path": "stage2/report/render_delivery/page-80.png",
+      "sha256": "e72c19f3843a6081af495d41af70bf2706693b4f5c7c27238db9f26bf148427f",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "Strict SHA-256 identity with previously verified render; reuse prior visual evidence",
+      "actually_viewed_delivery_render": false,
+      "prior_visual_evidence": "stage2/report/qa_kam_verified.json",
+      "prior_sha256": "e72c19f3843a6081af495d41af70bf2706693b4f5c7c27238db9f26bf148427f",
+      "identical_to_verified_render": true,
+      "conclusion": "PASS",
+      "notes": "PASS: strict SHA-256 identity with the already reviewed verified-render image; prior visual conclusion applies unchanged."
+    },
+    {
+      "page": 81,
+      "path": "stage2/report/render_delivery/page-81.png",
+      "sha256": "e7de964cb3fb64735ff3cd9407466d80aca4a55cddef22d32e6927008b3d353d",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "Strict SHA-256 identity with previously verified render; reuse prior visual evidence",
+      "actually_viewed_delivery_render": false,
+      "prior_visual_evidence": "stage2/report/qa_kam_verified.json",
+      "prior_sha256": "e7de964cb3fb64735ff3cd9407466d80aca4a55cddef22d32e6927008b3d353d",
+      "identical_to_verified_render": true,
+      "conclusion": "PASS",
+      "notes": "PASS: strict SHA-256 identity with the already reviewed verified-render image; prior visual conclusion applies unchanged."
+    },
+    {
+      "page": 82,
+      "path": "stage2/report/render_delivery/page-82.png",
+      "sha256": "64980f61eceb20bf185d80890b8a719598bc5de83bd8b9b34db418cea8f955f4",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "original-size visual inspection of delivery render",
+      "actually_viewed_delivery_render": true,
+      "prior_visual_evidence": "stage2/report/qa_kam_verified.json",
+      "prior_sha256": "b190ea146b0f82e26d323b713e76e3c2d8f2360d30f140de8c3aa28ba5d91475",
+      "identical_to_verified_render": false,
+      "conclusion": "PASS",
+      "notes": "PASS: activation, cubic gate, complex conjugation, canonical-gradient and Hessian notation remain complete after redrawing."
+    },
+    {
+      "page": 83,
+      "path": "stage2/report/render_delivery/page-83.png",
+      "sha256": "aa659f576959f2f8c7b6b8f50faac337d38ece6f880fd1227f7221d7c87e9328",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "original-size visual inspection of delivery render",
+      "actually_viewed_delivery_render": true,
+      "prior_visual_evidence": "stage2/report/qa_kam_verified.json",
+      "prior_sha256": "aad55d2c39648c19725dda51898202aeb3401c9258959999e66f16054d2ff4c7",
+      "identical_to_verified_render": false,
+      "conclusion": "PASS",
+      "notes": "PASS: L3/L4, reference momentum, alpha_s / omega_0 and magnetic-input/error expressions are complete; no content loss."
+    }
+  ]
+}

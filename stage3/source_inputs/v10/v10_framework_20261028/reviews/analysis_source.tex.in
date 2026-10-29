@@ -1,0 +1,385 @@
+\subsection{Numerical questions and the objects being compared}
+\label{num:scope}
+The numerical study follows the two control objectives derived in
+Section~\ref{sec:derivation}. Route A restores the nominal, coupled
+Hamiltonian $h_0$. Route B retains the fitted Hamiltonian $\widehat h$ as
+a predictive model and tracks one of its conservative trajectories.
+Both routes act on the same synthetic damped plant and use the same
+identified coefficients. Their reference motions differ, so their error
+levels answer different questions and are reported separately.
+
+The new calculations isolate a controlled, single-feature potential
+perturbation. For the scalar function $g$ of
+Section~\ref{sec:derivation}, define
+\begin{equation}
+ \begin{split}
+ \phi(X)&=\nabla_X g(d^{\mathsf T}X)\\
+        &=d[\sin(d^{\mathsf T}X)-d^{\mathsf T}X].
+ \end{split}
+ \label{num:feature-gradient}
+\end{equation}
+The true and fitted perturbations are
+\begin{equation}
+ \begin{split}
+ R_*(X)&=\beta_*g(d^{\mathsf T}X),\qquad \beta_*=0.2,\\
+ \widehat R(X)&=\widehat\beta g(d^{\mathsf T}X).
+ \end{split}
+ \label{num:feature}
+\end{equation}
+The second fitted scalar is the dimensionless drag $\gamma$.
+The coefficient $0.2$ defines a synthetic stress test; it is not an
+identified material discrepancy. This two-parameter experiment verifies
+the passage from state increments to a conservative residual, damping
+compensation and physical input reconstruction. A general CHNN may have
+many coefficients and momentum-dependent terms. Its approximation,
+optimization and generalization errors are not measured by this test.
+
+Five error sources remain distinct: uncertainty in physical inputs,
+spatial and modal discretization, coefficient identification, time
+integration, and feedback tracking. The supplied records identify the
+source of each reported quantity. In particular, mesh convergence does
+not establish a two-mode truncation error, a small regression residual
+does not establish a uniform analytic error, and a small error against
+a jointly discretized reference does not by itself resolve the error
+against the corresponding continuous trajectory. The experiments below
+use separate checks for these interfaces.
+
+\subsection{Recomputed finite-element coordinates and parameter sensitivity}
+\label{num:fe}
+All modal quantities are recomputed from the material and magnet choices
+in Section~\ref{sec:derivation}. The material reference values are
+$E\simeq2.1$ MPa and $\rho\simeq1028$ kg/m$^3$, with the formulation and
+curing conditions reported by \citet{cho2021pdms}. The free length
+$80$ mm and solid radius $0.6$ mm are research design inputs. A nominal
+$0.250$ mm cubic magnetic core, $B_r=1.425$ T and density
+$7500$ kg/m$^3$ give the engineering estimate
+$\mu\simeq@@MU@@$ A\,m$^2$, together with
+$m_t=@@TIP_MASS@@$ kg and
+$J_t=@@TIP_J@@$ kg\,m$^2$.
+The remanence and density are interpreted as manufacturer-grade
+information and a selected nominal point, respectively
+\citep{smN50,kjMoment}; they are not a calibration of an assembled device.
+
+The translational mass and rotary inertia of the core enter the mass
+matrix before modal reduction. The bias contribution enters the
+stiffness through $\mu B_0ss^{\mathsf T}$, where $s$ reads the endpoint
+rotation. Consistent cubic-Hermite assemblies with $16$, $32$ and $64$
+elements are compared with a separate continuum boundary determinant
+for this same ideal endpoint model. At $32$ elements the largest
+relative error among the first four frequencies is $@@FE32_MAX@@$;
+at $64$ elements it is $@@FE64_MAX@@$.
+Figure~\ref{num:verification}(a) and
+Table~\ref{sx:fe-table} show the complete comparison.
+
+The $32$-element basis supplies
+\begin{align}
+ \omega_0=\omega_1&=@@OMEGA0@@\ \mathrm{rad/s},\notag\\
+ \omega_2&=@@OMEGA2@@\ \mathrm{rad/s},\qquad
+ \nu_2=@@NU2@@,\notag\\
+ d&=@@D_VECTOR@@,\notag\\
+ \ell&=@@ELL_VECTOR@@\ \mathrm m.
+ \label{num:scales}
+\end{align}
+The same $d$, $\ell$, frequencies and energy scale are used in the
+data generator, fitted model, controls and physical readouts. Relative
+to the biased beam with no endpoint inertia, including the core changes
+the first frequency by $@@TIP_EFFECT_PERCENT@@\%$. Even this modest
+change requires a consistent update of the modal maps.
+
+The baseline damping convention is explicitly
+$C=\alpha M_{\mathrm{total}}$, with
+$\zeta_1^{\mathrm{d}}=0.025$ at the biased first frequency, hence
+$\alpha=@@ALPHA@@$ s$^{-1}$ and $\gamma=0.05$.
+It gives $\zeta_2^{\mathrm{d}}=@@ZETA2@@$, rather than equal damping ratios for
+both modes. Separate design perturbations vary $E$ by $20\%$, core
+inertia by $10\%$, and remanence over the stated grade interval.
+Table~\ref{sx:sensitivity-table} reports their frequency consequences
+while holding the nominal $\alpha$ fixed. These are sensitivity points,
+not material confidence intervals. The below-nominal inertia point is
+an independent matrix perturbation and does not assert a below-specification
+density for a fixed-size N50 core.
+
+\subsection{Shared noiseless integral identification}
+\label{num:identification}
+Four training trajectories and two disjoint validation trajectories are
+generated from the same two-mode plant. Each lasts $\tau=4$ and is
+sampled every $0.002$ dimensionless time units. Composite Simpson
+integration on windows of length $0.04$ produces $400$ training
+vector increments, or $800$ scalar rows. The initial states are fixed
+and listed in Table~\ref{sx:initial-states}; no test state enters the
+least-squares fit. Both routes regenerate these observations and
+recover identical coefficients before any control comparison.
+
+For a window $W=[\tau_a,\tau_b]$, the fitted balance is
+\begin{equation}
+ \begin{split}
+ b_W&=Y_b-Y_a+\int_W\{\mathsf NX+\phi(X)\}\,\mathrm d\tau,\\
+ A_W&=\left[-\int_W\phi(X)\,\mathrm d\tau,
+                 -\int_WY\,\mathrm d\tau\right],\\
+ A_W\binom{\beta}{\gamma}&\simeq b_W.
+ \end{split}
+ \label{num:regression}
+\end{equation}
+Here $\mathsf N=\operatorname{diag}(\nu_1,\nu_2)$. Columns are scaled before
+unconstrained least squares and the coefficients are then returned
+to the original units. No regularization, derivative labels or
+measurement noise are introduced. The recovered values are
+\begin{equation}
+ \widehat\beta=@@BETA_HAT@@,\qquad
+ \widehat\gamma=@@GAMMA_HAT@@.
+ \label{num:fitted-values}
+\end{equation}
+Training and held-out scalar-increment RMS residuals are
+$@@TRAIN_RMSE@@$ and $@@VALID_RMSE@@$, respectively.
+They are nonzero because the states and integrals are computed
+numerically, despite the absence of observational noise.
+
+The raw design condition number is $@@COND_RAW@@$, whereas column
+scaling reduces it to $@@COND_SCALED@@$. This improves the numerical
+solve without increasing the physical excitation of the weak cubic
+feature. The normalized Gram matrix $G=A^{\mathsf T}A/800$ has
+$\lambda_{\min}(G)=@@GRAM_MIN@@$. Consequently the coefficient
+bound discussed in Section~\ref{sec:kam} amplifies a residual or
+integration-defect bound by $@@COEFF_FACTOR@@$.
+The small observed residual must therefore be read together with
+this scale and the declared feature family. The known synthetic
+truth permits a diagnostic coefficient error of $@@COEFF_ACTUAL@@$;
+it does not provide an independent rigorous integration-defect bound.
+The experiment establishes in-family recovery under its stated
+observations, rather than statistical learning performance or a new
+learning-to-KAM certificate.
+
+\subsection{Time discretization and independent reference checks}
+\label{num:integration}
+The principal comparisons run to $\tau=20$, corresponding to
+$@@TIME_S@@$ s, with midpoint step $\Delta=0.001$.
+Newton iteration uses the full midpoint Jacobian, an increment-residual
+infinity-norm tolerance $2\times10^{-14}$ and at most $12$ correction
+attempts. Failure to converge stops the run. These tolerances describe
+the algebraic solve and are separate from the time-discretization error.
+
+An explicit RK4 calculation supplies each independent conservative
+reference, using steps $0.0005$ and $0.00025$ for refinement.
+The maximum common-time differences are $@@A_REFINE@@$ for $h_0$
+and $@@B_REFINE@@$ for $\widehat h$.
+These numerical comparisons resolve the much larger midpoint errors
+reported here; they are not interval enclosures of the exact flow.
+For the route-A oracle, midpoint step halvings from $0.04$ to $0.005$
+give orders approaching two, with the final estimate $@@ORDER_LAST@@$
+(Table~\ref{sx:order-table}). The complete-cosine target is retained
+throughout. The fourth-order central construction in
+Section~\ref{sec:derivation} has a separate theoretical role;
+no earlier Central4 error table is reused as a new-baseline experiment.
+
+The oracle route-A closed field is Hamiltonian. At the solved
+midpoints its ideal Cayley tangent has maximum symplectic defect
+$@@A_CAYLEY@@$. This checks the tangent of the implicitly defined
+map at numerical solution points. It does not imply exact
+symplecticity of floating-point Newton code. With fitted cancellation,
+the remaining damping coefficient is nonzero, however small, so a
+strict canonical-symplectic conclusion is not assigned to that loop.
+Route-B tracking has a dissipative error dynamics and receives no
+symplecticity claim. This separates the analytical structure statements
+from the finite-precision diagnostics used to assess their implementation.
+
+\subsection{Route A: restoration of the nominal conservative dynamics}
+\label{num:route-a}
+The route-A comparison starts the plant and the $h_0$ reference at
+$(X_1,X_2,Y_1,Y_2)=(0.09,0.08,0.015,-0.01)$.
+Passive evolution, fitted damping compensation, fitted full restoration
+and an oracle using $(\beta_*,\gamma_*)$ are tested on this same initial
+value problem. Every nonzero generalized command passes through the
+magnetic-port reconstruction of Section~\ref{sec:application} before
+it is applied to the plant. The oracle is an assessment benchmark;
+the learned controller does not read the true coefficients.
+
+\begin{table}[t]
+\centering
+\caption{Route A at $\Delta=0.001$, $0\leq\tau\leq20$.
+Both errors use an independent RK4 trajectory of $h_0$.}
+\label{num:a-table}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lcc}
+\toprule
+Control & State RMS & Tip RMS ($\mu$m)\\
+\midrule
+@@A_ROWS@@
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{num:a-table} shows a substantial reduction from the passive
+state RMS $@@A_PASSIVE_RMS@@$ to $@@A_DAMP_RMS@@$ with damping
+compensation. Restoring the fitted residual further reduces it to
+$@@A_LEARNED_RMS@@$. The learned tip RMS is $@@A_TIP_UM@@\,\mu$m
+in this idealized two-mode experiment.
+Its continuous-vector-field mismatch to the target, sampled along
+the controlled states, is only $@@A_VF@@$ RMS. The trajectory error
+nevertheless remains close to the oracle value $@@A_ORACLE_RMS@@$
+because both use the same midpoint approximation to an independent
+continuous reference. A slightly smaller fitted-controller error is
+consistent with cancellation between its small model error and the
+shared phase error; it does not demonstrate improvement over exact
+parameter knowledge. Route A tests restoration from a shared initial
+state, not attraction from a tracking offset.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/new_baseline_results.pdf}
+\caption{New-baseline comparisons using independent conservative
+references. (a) Route A restores $h_0$ from the same initial state.
+(b) Route B tracks a frozen $\widehat h$ trajectory from a nonzero
+initial offset. Whole-window and late-window errors expose the tracking
+transient. The panels compare different reference objects; their bars
+are not a ranking of one route against the other.}
+\label{num:results}
+\end{figure*}
+
+\subsection{Route B: prediction, tracking and reference synchronization}
+\label{num:route-b}
+Before control is applied, conservative prediction is tested against
+$h_*$ using separate fine-step RK4 trajectories from the same initial
+state. The nominal $h_0$ state RMS is $@@B_PRED_NOMINAL@@$; replacing
+it by the fitted $\widehat h$ gives $@@B_PRED_LEARNED@@$.
+This comparison tests recovery of the chosen conservative perturbation.
+The control experiment then freezes $\widehat h$, initializes its
+reference at the route-A initial state, and offsets the actual plant
+by $(0.0045,0.004,0,0)$. Gains $\kappa_p=1$ and $\kappa_d=2$ produce the
+critical-damping oracle position-error equation derived in
+Section~\ref{sec:derivation}. The same frozen reference is supplied
+to all four control groups, including the oracle.
+
+The actual and reference states are integrated as one eight-dimensional
+midpoint system. A second, independently integrated RK4 reference is
+retained solely for assessment. Let $x_k$ be the actual state,
+$\bar x_k$ the synchronous midpoint reference and
+$x_{\mathrm{ref}}(\tau_k)$ the independent reference. Then
+\begin{equation}
+ x_k-x_{\mathrm{ref}}(\tau_k)
+ =(x_k-\bar x_k)+
+   (\bar x_k-x_{\mathrm{ref}}(\tau_k)).
+ \label{num:reference-split}
+\end{equation}
+The first term measures synchronization to the implemented reference;
+the second retains its integration error. The two are reported
+together in Table~\ref{num:b-table}.
+
+\begin{table*}[t]
+\centering
+\caption{Route-B state RMS at $\Delta=0.001$. ``Independent'' refers
+to fine-step RK4 for the same frozen $\widehat h$; ``synchronous''
+refers to the reference component of the augmented midpoint system.}
+\label{num:b-table}
+\begin{tabular}{lccc}
+\toprule
+Control & Independent, $[0,20]$ & Independent, $[10,20]$ & Synchronous, $[10,20]$\\
+\midrule
+@@B_ROWS@@
+\bottomrule
+\end{tabular}
+\end{table*}
+
+The learned controller has whole-window independent-reference RMS
+$@@B_FULL_RMS@@$, including the prescribed startup error. On
+$10\leq\tau\leq20$ it decreases to $@@B_HALF_RMS@@$, while the
+synchronous RMS is $@@B_HALF_SYNC@@$.
+At the endpoint, the synchronous error is $@@B_FINAL_SYNC@@$ but
+the independent-reference error is $@@B_FINAL_IND@@$.
+The maximum midpoint-reference error is $@@B_REF_PHASE@@$; halving
+the midpoint step reduces that error by a factor $@@B_HALF_RATIO@@$.
+Thus near-perfect synchronization is compatible with a resolved
+second-order reference phase error. It must not be reported as the
+accuracy of the continuous reference motion.
+
+An additional check compares the oracle tracking error against the
+Cayley update of its linear error equation. The maximum discrepancy
+is $@@B_CAYLEY@@$. This verifies the augmented midpoint coupling
+without making the stable tracking loop Hamiltonian. The experiment
+also shows why damping compensation alone is insufficient for this
+objective: it does not remove the imposed initial position offset.
+
+\subsection{Damping scenarios with an independent fit in every case}
+\label{num:damping}
+The declared first-mode damping ratios are
+$\zeta_1^{\mathrm{d}}\in\{0,0.01,0.025,0.05,0.1\}$.
+For each value, all four training and two validation trajectories are
+regenerated and $(\widehat\beta,\widehat\gamma)$ is refitted.
+The true model uses $\alpha=2\zeta_1^{\mathrm{d}}\omega_0$ and
+$\gamma=2\zeta_1^{\mathrm{d}}$, so the second modal ratio is
+$\zeta_1^{\mathrm{d}}/\nu_2$. The scan runs to $\tau=10$ with midpoint step
+$0.002$ and an independent RK4 reference of step $0.00025$.
+It therefore has a different time window and discretization floor
+from the principal comparisons. The late interval for route B is
+$5\leq\tau\leq10$.
+
+Figure~\ref{num:verification}(c) and
+Tables~\ref{sx:damping-fit}--\ref{sx:damping-errors} show that
+the fitted and oracle controls remain close throughout this
+in-family, exact-observation sweep. Their nearly unchanged errors
+reflect successful cancellation together with common discretization
+and startup effects. Every setting receives its own fit; this is not
+a test of one frozen controller against unknown changing damping.
+The zero-damping least-squares fit returns
+$\widehat\gamma=@@SCAN_ZERO_GAMMA@@$. This minute negative value
+comes from an unconstrained numerical solve and is not evidence of
+negative material damping. The selected ratios are design scenarios;
+material loss data, which depend on preparation and frequency,
+cannot identify these modal ratios without an additional model or
+device measurement \citep{fischer2017adhesion}.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/new_baseline_verification.pdf}
+\caption{Independent numerical checks from the supplied JSON records.
+(a) The first four FE frequencies converge to roots of the continuum
+endpoint determinant. (b) Route-A oracle errors converge at second
+order against an independent RK4 reference. (c) Each damping setting
+is refitted before either route is evaluated; A uses the full $[0,10]$
+window and B the late $[5,10]$ window. Lines connect tested settings
+and do not represent additional simulations or statistical intervals.}
+\label{num:verification}
+\end{figure*}
+
+\subsection{Magnetic demands, sampled domains and the scope of the evidence}
+\label{num:ports}
+The modal force/torque matrix has column-normalized condition number
+$@@PORT_COND@@$. Its columns have different physical units, so this
+normalization is stated rather than treating a raw condition number as
+a unit-independent controllability measure. Commands are reconstructed
+at all stored endpoints and integration midpoints. Across the principal
+tests and damping scan, the maximum generalized-command reconstruction
+error is $@@ALL_PORT_ERR@@$. This verifies the local algebraic port map;
+a coil-current allocation, bandwidth model and actuator calibration
+are outside the present experiment.
+
+The baseline learned demands are listed in Table~\ref{sx:port-table}.
+The total local field includes the $30$ mT longitudinal bias:
+$|B|=\sqrt{B_0^2+B_y^2}$. Across all runs its sampled maximum is
+$@@ALL_TOTAL_MT@@$ mT, and the maximum local gradient spectral norm is
+$@@ALL_GRAD@@$ T/m. Published magnetic systems provide a useful
+field-scale comparison \citep{lussi2021cvs}, but they do not verify
+simultaneous field/gradient feasibility for these commands.
+The largest sampled endpoint angle is $@@ALL_ANGLE@@$ rad; the
+largest beam slope on the $257$-point spatial grid is $@@ALL_SLOPE@@$.
+The minimum sampled $|\cos\theta|$ is $@@ALL_COS@@$.
+These diagnostics support the sampled small-slope operating regime
+and separation from the port singularity. They are not continuous-time
+or spatially certified extrema.
+
+No saturation or energy governor is executed. For the separate
+$4$ mm clearance comparison, the nominal energy threshold is
+$E_c=@@EC_NJ@@$ nJ and $0.95E_c=@@BUDGET_NJ@@$ nJ, whereas the
+route-A initial nominal energy is $@@INITIAL_ENERGY_NJ@@$ nJ.
+Consequently the present trajectories do not satisfy the proposed
+energy-cap premise at initialization, even when their sampled
+displacements remain below the clearance. Section~\ref{sec:application}
+states the applicable conditional energy argument.
+
+The results resolve a minimal numerical chain on the newly sourced
+benchmark. They do not carry forward the earlier CHNN contrasts,
+COMSOL reduction comparisons, long-time simulations or finite-amplitude
+KAM certificates. Reestablishing those conclusions requires their
+respective data, fitted functions, higher-mode comparisons and
+validated analytic calculations on this same new baseline.
+Supplementary Section~\ref{sec:supp-experiments} records the complete
+protocol and the scope of that migration.

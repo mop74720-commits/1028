@@ -1,0 +1,145 @@
+{
+  "scope": "Translation-only equivalence checks; no LaTeX compilation and no numerical experiment rerun.",
+  "sections": {
+    "analysis.tex": {
+      "english_sha256": "9bcb7dc95e5394730e0d6631b6d4eae6bfd37163e6065106cda0cc22d55a2c67",
+      "chinese_sha256": "d5e7768ae32301ab3409186c452fa20e8ac673f049e7d48616edf36529cc587e",
+      "comparisons": {
+        "display_math": {
+          "identical": true,
+          "english_count": 6,
+          "chinese_count": 6
+        },
+        "inline_math": {
+          "identical": true,
+          "english_count": 160,
+          "chinese_count": 160
+        },
+        "references": {
+          "identical": true,
+          "english_count": 42,
+          "chinese_count": 42
+        },
+        "environment_order": {
+          "identical": true,
+          "english_count": 30,
+          "chinese_count": 30
+        },
+        "verbatim": {
+          "identical": true,
+          "english_count": 0,
+          "chinese_count": 0
+        },
+        "numeric_tokens_in_order": {
+          "identical": true,
+          "english_count": 290,
+          "chinese_count": 290
+        },
+        "code_identifiers": {
+          "identical": true,
+          "english_count": 0,
+          "chinese_count": 0
+        },
+        "figure_paths": {
+          "identical": true,
+          "english_count": 2,
+          "chinese_count": 2
+        },
+        "paragraph_math": {
+          "identical": true,
+          "english_count": 29,
+          "chinese_count": 29
+        }
+      }
+    },
+    "supp_experiments.tex": {
+      "english_sha256": "3d0441f0a1561351525dfeaf1460bc05ddcc3d997fb1ff2a0e9beb8d83e4949b",
+      "chinese_sha256": "dd4ff963d6460546cb8eae5220ff4abbb66de368cf91a0f48a740923e458614c",
+      "comparisons": {
+        "display_math": {
+          "identical": true,
+          "english_count": 4,
+          "chinese_count": 4
+        },
+        "inline_math": {
+          "identical": true,
+          "english_count": 339,
+          "chinese_count": 339
+        },
+        "references": {
+          "identical": true,
+          "english_count": 34,
+          "chinese_count": 34
+        },
+        "environment_order": {
+          "identical": true,
+          "english_count": 54,
+          "chinese_count": 54
+        },
+        "verbatim": {
+          "identical": true,
+          "english_count": 2,
+          "chinese_count": 2
+        },
+        "numeric_tokens_in_order": {
+          "identical": true,
+          "english_count": 510,
+          "chinese_count": 510
+        },
+        "code_identifiers": {
+          "identical": true,
+          "english_count": 5,
+          "chinese_count": 5
+        },
+        "figure_paths": {
+          "identical": true,
+          "english_count": 0,
+          "chinese_count": 0
+        },
+        "paragraph_math": {
+          "identical": true,
+          "english_count": 38,
+          "chinese_count": 38
+        }
+      }
+    }
+  },
+  "figures": {
+    "numerical_artists_scales_ticks_styles_identical": true,
+    "figure_names": [
+      "new_baseline_results.pdf",
+      "new_baseline_verification.pdf"
+    ],
+    "panel_count": 5,
+    "compared": [
+      "figure size",
+      "data arrays",
+      "axis scales and limits",
+      "tick values",
+      "line colors and widths",
+      "markers",
+      "bar geometry",
+      "hatches"
+    ],
+    "intentionally_excluded": [
+      "translated labels",
+      "CJK font and its vector glyph encoding",
+      "automatic layout adjustments caused by text width"
+    ]
+  },
+  "manual_review": {
+    "terminology": "provenance/translation_terms.tsv followed; oracle = 真值参数对照; input-work governor = 输入功约束器; energy cap = 能量上限.",
+    "scope_preserved": [
+      "synthetic two-scalar feature test, not full CHNN training",
+      "material references versus design choices versus computed outputs",
+      "route A h0 restoration versus route B frozen learned reference tracking",
+      "independent versus synchronous reference errors",
+      "five damping scenarios each with fresh observations and refitting",
+      "principal and scan time windows and solver tolerances remain distinct",
+      "no saturation or input-work governor executed",
+      "initial energy exceeds the proposed cap; no safety-cap verification claimed",
+      "legacy outputs are not transferred to the new baseline"
+    ],
+    "full_chinese_manuscript_layout": "To be checked by the root assembly; no LaTeX compilation was performed by this agent."
+  }
+}

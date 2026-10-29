@@ -1,0 +1,47 @@
+% Shared typesetting. Compile either entry point with XeLaTeX + BibTeX.
+\usepackage[a4paper,left=21mm,right=21mm,top=20mm,bottom=22mm]{geometry}
+\usepackage{fontspec}
+\ifFrameworkChinese
+  % A bundled OFL font makes the source portable without ctex/xeCJK.
+  \setmainfont{NotoSansCJKsc-Regular.otf}[Path=fonts/,AutoFakeBold=1.5,AutoFakeSlant=.16]
+  \setsansfont{NotoSansCJKsc-Regular.otf}[Path=fonts/,AutoFakeBold=1.5,AutoFakeSlant=.16]
+  \XeTeXlinebreaklocale "zh"
+  \XeTeXlinebreakskip=0pt plus 1pt
+  \renewcommand{\refname}{参考文献}
+\else
+  \setmainfont{Latin Modern Roman}
+  \setsansfont{Latin Modern Sans}
+\fi
+\setmonofont{Latin Modern Mono}[Scale=0.88]
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{booktabs,tabularx,array,longtable}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\renewcommand{\tabularxcolumn}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage{enumitem}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{xcolor}
+\definecolor{inkblue}{HTML}{16496B}
+\usepackage[unicode,colorlinks=true,linkcolor=inkblue,citecolor=inkblue,urlcolor=inkblue]{hyperref}
+\usepackage{xurl}
+\urlstyle{same}
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries\sffamily\color{inkblue}}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\normalsize\bfseries\sffamily}{\thesubsection}{0.6em}{}
+\titlespacing*{\section}{0pt}{2.0ex plus .5ex}{1.0ex}
+\titlespacing*{\subsection}{0pt}{1.5ex}{.5ex}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{.45em}
+\setlength{\emergencystretch}{2em}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.16}
+\setlist{nosep,leftmargin=1.3em,topsep=.3em}
+\setlength{\bibsep}{.45em}
+\raggedbottom
+\newcommand{\lang}[2]{\ifFrameworkChinese #2\else #1\fi}
+\newcommand{\Status}[2]{\par\smallskip\textbf{\lang{Status}{状态}: #1.} #2\par}
+\newcommand{\Next}[1]{\par\smallskip\textbf{\lang{Expansion task}{后续写作与证明任务}:} #1\par}
+\newcommand{\PaperPage}{\clearpage}
+\input{shared_symbols}
+\input{shared_formulas}
+\hypersetup{pdfsubject={Unified 3D magnetic intravascular robot framework; conditional claims and open proof obligations}}
+

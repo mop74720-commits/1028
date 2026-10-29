@@ -1,0 +1,147 @@
+{
+  "project": "v10_framework_20261028",
+  "reviewer": "audit_complex_kam",
+  "reviewed_at_utc": "2026-10-28T09:44:03.131574+00:00",
+  "revision": "Final Chinese Direction-I framework integration after authorized cross-reference corrections",
+  "method": "Each of the 13 listed rendered PNGs was actually opened with view_image at original detail and inspected visually.",
+  "checks": [
+    "Chinese derivation and proposition text",
+    "Fonts, superscripts and subscripts",
+    "Equation cropping and horizontal/vertical limits",
+    "Adjacent-column separation",
+    "Equation numbering and nearby references",
+    "Tables and page margins"
+  ],
+  "pages": [
+    {
+      "document": "main",
+      "page": 6,
+      "image": "qa/chinese_render/ZH/page_06.png",
+      "sha256": "81045db7b1175404fceff35cc77afe271ba344d1854e6e843e0ffa93a2b4ff6f",
+      "actually_opened": true,
+      "status": "passed",
+      "findings": "Endpoint projection and lifted generator, weighted midpoint, noncommuting matrix elimination and central generator: formulas and text fit their columns."
+    },
+    {
+      "document": "main",
+      "page": 7,
+      "image": "qa/chinese_render/ZH/page_07.png",
+      "sha256": "ea2e5c10d954c0423070beaf48cea48de366b672cc3f159e326be15b7e9e2be2",
+      "actually_opened": true,
+      "status": "passed",
+      "findings": "Central4, general midpoint, CHNN energy objects, integral identification and residual compensation: complete formulas, clear subscripts and labels."
+    },
+    {
+      "document": "main",
+      "page": 8,
+      "image": "qa/chinese_render/ZH/page_08.png",
+      "sha256": "6476f816061f853d63161ed213ecc4ed3c8a40591ecc8627f9ea54107d132674",
+      "actually_opened": true,
+      "status": "passed",
+      "findings": "Controlled midpoint, four-dimensional input increment, weighted residual-damping map, structure proposition and proof: no clipping or overlap."
+    },
+    {
+      "document": "main",
+      "page": 9,
+      "image": "qa/chinese_render/ZH/page_09.png",
+      "sha256": "61cc0a7e64acdb98f123ca28589fb81d76a5f084db0988065b537f3e5cee59a6",
+      "actually_opened": true,
+      "status": "passed",
+      "findings": "Increment residual, convergence proposition, recurrence, global-error bound and proof: full formula and equation-number visibility."
+    },
+    {
+      "document": "main",
+      "page": 14,
+      "image": "qa/chinese_render/ZH/page_14.png",
+      "sha256": "5a2a1634ff624d8f4573a0cb4d89c74b7f179dfe201751c1609c66c929963aae",
+      "actually_opened": true,
+      "status": "passed",
+      "findings": "Quartic twist, closed-loop perturbation budget, exact-map construction and discrete divisors: complete equations and clear adjacent-column separation. Opening continuation from the preceding page is normal."
+    },
+    {
+      "document": "main",
+      "page": 15,
+      "image": "qa/chinese_render/ZH/page_15.png",
+      "sha256": "256c58576a6c783cc9a3f1006c7b6ea7162e0dc58f0b2f54d8ec559ede43510a",
+      "actually_opened": true,
+      "status": "passed",
+      "findings": "Discrete KAM proposition and proof, continuous-flow comparison and transition to actuation: correct rendering of statements, formulas and references."
+    },
+    {
+      "document": "supplement",
+      "page": 8,
+      "image": "qa/chinese_render/ZH_Supplement/page_08.png",
+      "sha256": "a2378b98b689f5daac00090d3948dd5fcbf75c99ef5fd97a7b6d515066ec63bc",
+      "actually_opened": true,
+      "status": "passed",
+      "findings": "Endpoint Newton matrix, noncommuting elimination, exact one-form proof and Central4 derivation: formulas and numbering remain inside margins."
+    },
+    {
+      "document": "supplement",
+      "page": 9,
+      "image": "qa/chinese_render/ZH_Supplement/page_09.png",
+      "sha256": "e950f995d9ebd396050f43f081e79dc83c4b145a23910c2c4083483b603fadde",
+      "actually_opened": true,
+      "status": "passed",
+      "findings": "Explicit magnetic Central4 correction and Jacobian, inexact-solve accumulation and complex extension: no missing symbols or overlap."
+    },
+    {
+      "document": "supplement",
+      "page": 10,
+      "image": "qa/chinese_render/ZH_Supplement/page_10.png",
+      "sha256": "33f5b4c69c834ad8a07eccdf97f6b5dbafee250a2ae3a85b2dc3f9173ce49ff8",
+      "actually_opened": true,
+      "status": "passed",
+      "findings": "Symplectic normalization, quartic/cubic normal forms, integral/Gram error proof and larger readout: readable text and full displayed mathematics."
+    },
+    {
+      "document": "supplement",
+      "page": 11,
+      "image": "qa/chinese_render/ZH_Supplement/page_11.png",
+      "sha256": "59c030f08b8e2516d21b9fa6fb50a4ebb940af28a34e4d6b00d1f5868a15ea4e",
+      "actually_opened": true,
+      "status": "passed",
+      "findings": "Full-feature observation model, map-KAM generating function, twist bounds and normalized threshold: complete formulas, subscripts and citations."
+    },
+    {
+      "document": "supplement",
+      "page": 12,
+      "image": "qa/chinese_render/ZH_Supplement/page_12.png",
+      "sha256": "ee067af886d7d657eeb721dd9653965884052a8e25a1282af9985814310c6abc",
+      "actually_opened": true,
+      "status": "passed",
+      "findings": "End of certification scope, reproduction protocol and physical-input table: no clipping, table overlap or broken symbols."
+    },
+    {
+      "document": "supplement",
+      "page": 17,
+      "image": "qa/chinese_render/ZH_Supplement/page_17.png",
+      "sha256": "4ee74b9cc68d68260142fed7d9192aa910e446d4c165d04158df5d795f90712f",
+      "actually_opened": true,
+      "status": "passed",
+      "findings": "Solver-residual and weighted-map tables, same-reference oracle, tracking convolution/bound and two-route budgets: full content fits. Corrected oracle reference visibly reads S4.4."
+    },
+    {
+      "document": "supplement",
+      "page": 18,
+      "image": "qa/chinese_render/ZH_Supplement/page_18.png",
+      "sha256": "9a6cb83f54aac2e7d3efb9c97c71aba94b34c6c194e4d575fb007491c7d057f5",
+      "actually_opened": true,
+      "status": "passed",
+      "findings": "Scope table, conditional continuous KAM proposition and Route-B numerical extension: table, proposition, formulas and equation numbers are readable and inside the page."
+    }
+  ],
+  "page_count": 13,
+  "passed": true,
+  "issues": [],
+  "manuscript_source_files_modified": false,
+  "latex_compilation_performed_by_reviewer": false,
+  "automatic_check_record": "reviews/structure_formula_checks.json",
+  "automatic_check_passed": true,
+  "english_freeze_matches_all_five_theory_files": true,
+  "updated_review_notes": [
+    "reviews/translation_structure_notes.txt",
+    "reviews/structure_notes.txt"
+  ],
+  "scope_limit": "Visual review covers only the 13 listed rendered pages. It does not certify other pages or replace mathematical assumptions, the complete bilingual comparison, or a numerical KAM certificate."
+}

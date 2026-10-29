@@ -1,0 +1,69 @@
+理论部分中文翻译完成记录
+日期：2026-10-28
+
+输入：当前已冻结英文的以下三个文件。
+输出：仅写对应中文文件及本记录；未修改英文，未执行编译。
+  english/sections/structure.tex -> chinese/sections/structure.tex
+  english/sections/kam.tex -> chinese/sections/kam.tex
+  english/sections/supp_structure.tex -> chinese/sections/supp_structure.tex
+
+完整性与一致性检查
+  structure.tex：21 个源段落/标题单元，6 个小节，17 个显示数学块，
+                 115 个受保护的数学或引用字面量。
+  kam.tex：23 个源段落/标题单元，6 个小节，2 个命题，12 个显示数学块，
+           104 个受保护的数学或引用字面量。
+  supp_structure.tex：44 个源段落/标题单元，12 个小节，40 个显示数学块，
+                      266 个受保护的数学或引用字面量。
+  总计：88 个完整单元、24 个小节、2 个命题、69 个显示数学块、
+        485 个受保护字面量。
+
+  对显示公式、全部 $...$ 行内数学、label、citep/citet（含可选参数）、
+  ref/eqref 逐字并按出现顺序比较，全部与英文一致。
+  所有 begin/end 环境名称及顺序与英文一致。
+  各文件段落/标题单元数一致，每个中文单元均含中文翻译。
+  花括号平衡检查通过。未省略显示公式、命题、推导或条件性结论。
+  引用命令可选参数中的英文 Section/Theorem/Remark 原样保留，
+  以满足全部 citation 命令逐字相同的要求。
+
+术语
+  遵循 provenance/translation_terms.tsv：哈密顿量、名义模型、
+  真实保守模型、学习得到的保守参考、受控对象、隐式中点法、
+  四阶中央生成函数格式、精确辛、正规形、扭转矩阵、拟周期、
+  净空、真值参数对照、有限特征读出、质量归一化。
+  Birkhoff、Cayley、Hessian、Rayleigh、Newton、Gram、Fourier、
+  Lie、CHNN、KAM、QR、SVD 等名称或缩写保留。
+
+人工逐段复核的重点
+  - general-midpoint 明确对实际闭环向量场离散；保守式只是特例；
+    同步参考进入增广状态，独立参考求解器仍由数值节定义。
+  - 路线 B 真值参数对照仅替换受控对象补偿，保留同一学习参考；
+    齐次误差方程与 Cayley 检验的解释完整。
+  - h_0、h_*、hhat、h_c 四对象与两条路线的不同 KAM 对象完整保留。
+  - 一般含动量读出的 Rayleigh 力与积分列改变条件完整保留。
+  - 复延拓采用独立 zeta、chi，实切片约束和全纯性边界完整保留。
+  - 完整四次扭转矩阵、三次项修正和六阶 Lie 余项均未删减。
+  - 独立观测缺陷、Gram 下界、模型类外误差、解析范数与域缩减
+    的各自作用完整保留。
+  - 连续流与离散映射小除数、阈值及保守性前提分开。
+  - 新基准尚无完整严格 KAM 数值证书，未移用旧参数证书。
+  - 跟踪、KAM 持续存在与整梁净空仍是分别满足条件的结论。
+
+冻结英文 SHA256（翻译前后未变）
+  structure.tex
+  2e53eb35f712ca6e9ae6ce0f8c447daa6bc5776e52b1c158f62f56c5ac7f0da6
+  kam.tex
+  463db810c8261927700f4f9d0e6a324a7e180a65c47670d77001fefa1a7d618e
+  supp_structure.tex
+  61d2c24d0a41c29350460ca4e5b80464f0729bda75b63b969e6a3a31087e8a49
+
+中文 SHA256（本次自检版本）
+  structure.tex
+  794a80b4a6f24fc6f183cdc22fe82f917a1617f40c8aafc2a2a4553778a17345
+  kam.tex
+  85c3427cda3fd339c33c4b468c5a882d25474191a26c2ff9960523636cc67d9b
+  supp_structure.tex
+  513b04d4a9aa15eba2eba805b983ba388c591bbc601bf9cc5192e041071f962d
+
+排版状态
+  尚未自行编译。中文排版与最终视觉检查交由 root 统一进行，
+  避免共享辅助文件竞争。需要拆行时应由 root 另行记录数学同一性。

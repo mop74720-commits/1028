@@ -1,0 +1,60 @@
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setsansfont{lmsans10-regular.otf}[BoldFont=lmsans10-bold.otf,ItalicFont=lmsans10-oblique.otf,BoldItalicFont=lmsans10-boldoblique.otf]
+\setmonofont{lmmono10-regular.otf}
+\setCJKmainfont[Path=../fonts/,AutoFakeBold=2,AutoFakeSlant=.12]{NotoSerifCJKsc-Regular.otf}
+\setCJKsansfont[Path=../fonts/,AutoFakeBold=2,AutoFakeSlant=.12]{NotoSansCJKsc-Regular.otf}
+\setCJKmonofont[Path=../fonts/,AutoFakeBold=2]{NotoSansCJKsc-Regular.otf}
+\usepackage{amsmath,amssymb,amsthm,mathtools,graphicx,booktabs,array,url,tabularx,multirow}
+\usepackage{microtype,etoolbox}
+\usepackage{xr-hyper}
+\usepackage[colorlinks,bookmarksopen,bookmarksnumbered,citecolor=blue,urlcolor=blue,linkcolor=blue]{hyperref}
+% In the bundled TeX Live driver, named remote destinations can retain a
+% previous page-action counter. A named destination has no page argument.
+\makeatletter
+\patchcmd{\hyper@linkfile}{\Hy@MakeRemoteAction}
+  {\ifx\\#3\\\else\let\Hy@href@page\@empty\fi\Hy@MakeRemoteAction}
+  {}{\errmessage{Named remote destination patch failed}}
+\makeatother
+\setcounter{secnumdepth}{3}
+\setcounter{dbltopnumber}{2}
+\renewcommand{\dbltopfraction}{0.90}
+\renewcommand{\textfraction}{0.08}
+\renewcommand{\floatpagefraction}{0.8}
+\emergencystretch=2em
+\renewcommand{\bibfont}{\fontsize{9}{11pt}\selectfont}
+\setlength{\tabcolsep}{4pt}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\def\journalname{V10 整合修订稿}
+\def\volumenumber{1}
+\def\issuenumber{ZH}
+\newcommand{\versionlanguage}{中文译稿，与英文定稿对应}
+\runninghead{Birkhoff 离散化与残差控制}
+\newtheorem{theorem}{定理}
+\newtheorem{proposition}[theorem]{命题}
+\newtheorem{lemma}[theorem]{引理}
+\newtheorem{corollary}[theorem]{推论}
+\theoremstyle{definition}
+\newtheorem{assumption}{假设}
+\newtheorem{remark}{注}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\T}{\mathbb T}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\Ima}{\operatorname{Im}}
+\newcommand{\eps}{\varepsilon}
+\providecommand{\doi}[1]{\href{https://doi.org/#1}{doi: #1}.}
+\input{layout_patch}
+
+\renewcommand{\proofname}{证明}
+\renewcommand{\tablename}{表}
+\renewcommand{\figurename}{图}
+\renewcommand{\refname}{{\normalsize 参考文献}}
+\makeatletter
+\patchcmd{\abstract}{Abstract}{摘要}{}{\errmessage{Abstract translation patch failed}}
+\patchcmd{\keywords}{Keywords}{关键词}{}{\errmessage{Keywords translation patch failed}}
+\makeatother

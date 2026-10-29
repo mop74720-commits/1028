@@ -1,0 +1,312 @@
+{
+  "scope": "Synthetic known-chart test; no physical catheter or KAM certification.",
+  "M0": [
+    [
+      1.12,
+      0.12
+    ],
+    [
+      0.12,
+      1.32
+    ]
+  ],
+  "C0": [
+    [
+      0.18,
+      0.025
+    ],
+    [
+      0.025,
+      0.37
+    ]
+  ],
+  "Cd": [
+    [
+      0.09,
+      0.009
+    ],
+    [
+      0.009,
+      0.14
+    ]
+  ],
+  "Ks": [
+    [
+      1.05,
+      0.05
+    ],
+    [
+      0.05,
+      2.05
+    ]
+  ],
+  "Kp": [
+    [
+      0.05,
+      0.0
+    ],
+    [
+      0.0,
+      0.1
+    ]
+  ],
+  "initial_state": [
+    0.25,
+    -0.18,
+    0.03,
+    0.04
+  ],
+  "point_chart": "Q1=q1+0.2*q1^3; Q2=(1+0.15*q1)*q2; P=DQ(q)^(-T)*p",
+  "cases": [
+    {
+      "label": "uncontrolled",
+      "T": 2.0,
+      "A": [
+        [
+          0.0,
+          0.0,
+          0.9016393442622951,
+          -0.08196721311475409
+        ],
+        [
+          0.0,
+          0.0,
+          -0.08196721311475409,
+          0.7650273224043715
+        ],
+        [
+          -1.05,
+          -0.05,
+          -0.16024590163934427,
+          -0.004371584699453554
+        ],
+        [
+          -0.05,
+          -2.05,
+          0.007786885245901636,
+          -0.2810109289617486
+        ]
+      ],
+      "mass_min_eigenvalue_at_initial": 1.166410635122301,
+      "damping_min_eigenvalue": 0.17676558647805748,
+      "CM_inverse_commutator_norm": 0.01215846994535519,
+      "nonlinear_physical_equation_conjugacy_error": 1.2605126751125787e-16,
+      "reference_check_DOP853_error": 9.533931645316098e-15,
+      "results": [
+        {
+          "method": "ordinary_midpoint",
+          "h": 0.2,
+          "endpoint_error": 0.0033421616654937267,
+          "order": null,
+          "max_K_defect_spectral_2_norm": 0.0014022612168180623,
+          "max_Newton_increment_residual": 1.7645607197636082e-14,
+          "max_chart_congruence_defect": 0.0,
+          "max_transformed_Hamiltonian_defect": 0.0
+        },
+        {
+          "method": "ordinary_midpoint",
+          "h": 0.1,
+          "endpoint_error": 0.0008398743707994252,
+          "order": 1.9925360710050668,
+          "max_K_defect_spectral_2_norm": 0.00018219945757281852,
+          "max_Newton_increment_residual": 2.949029909160572e-17,
+          "max_chart_congruence_defect": 0.0,
+          "max_transformed_Hamiltonian_defect": 0.0
+        },
+        {
+          "method": "ordinary_midpoint",
+          "h": 0.05,
+          "endpoint_error": 0.0002102405764331452,
+          "order": 1.9981324080156355,
+          "max_K_defect_spectral_2_norm": 2.3159552295120146e-05,
+          "max_Newton_increment_residual": 2.6454533008646308e-17,
+          "max_chart_congruence_defect": 0.0,
+          "max_transformed_Hamiltonian_defect": 0.0
+        },
+        {
+          "method": "ordinary_midpoint",
+          "h": 0.025,
+          "endpoint_error": 5.257716032456883e-05,
+          "order": 1.9995330066489285,
+          "max_K_defect_spectral_2_norm": 2.917312239572652e-06,
+          "max_Newton_increment_residual": 2.862293735361732e-17,
+          "max_chart_congruence_defect": 0.0,
+          "max_transformed_Hamiltonian_defect": 0.0
+        },
+        {
+          "method": "birkhoff_chart_midpoint",
+          "h": 0.2,
+          "endpoint_error": 0.0032460373832252937,
+          "order": null,
+          "max_K_defect_spectral_2_norm": 3.184046410315059e-15,
+          "max_Newton_increment_residual": 0.0,
+          "max_chart_congruence_defect": 1.5902396087597066e-15,
+          "max_transformed_Hamiltonian_defect": 7.690956266808689e-16
+        },
+        {
+          "method": "birkhoff_chart_midpoint",
+          "h": 0.1,
+          "endpoint_error": 0.0008175341411045651,
+          "order": 1.989328729406595,
+          "max_K_defect_spectral_2_norm": 2.7342871241042404e-15,
+          "max_Newton_increment_residual": 0.0,
+          "max_chart_congruence_defect": 2.563833550372929e-15,
+          "max_transformed_Hamiltonian_defect": 1.07894829336732e-15
+        },
+        {
+          "method": "birkhoff_chart_midpoint",
+          "h": 0.05,
+          "endpoint_error": 0.00020476370913008514,
+          "order": 1.9973189354243108,
+          "max_K_defect_spectral_2_norm": 3.1446260536169437e-15,
+          "max_Newton_increment_residual": 0.0,
+          "max_chart_congruence_defect": 3.054736529218421e-15,
+          "max_transformed_Hamiltonian_defect": 1.091376938436422e-15
+        },
+        {
+          "method": "birkhoff_chart_midpoint",
+          "h": 0.025,
+          "endpoint_error": 5.1214745349023564e-05,
+          "order": 1.999328900320402,
+          "max_K_defect_spectral_2_norm": 4.3046240953562584e-15,
+          "max_Newton_increment_residual": 0.0,
+          "max_chart_congruence_defect": 3.3819087797387336e-15,
+          "max_transformed_Hamiltonian_defect": 8.724525652161819e-16
+        }
+      ],
+      "finite_difference_tangent_error": 3.593514929372396e-11,
+      "finite_difference_K_defect": 4.7970207899246224e-12,
+      "endpoint_compatibility_defect": 1.6321043969920148e-15
+    },
+    {
+      "label": "controlled",
+      "T": 2.0,
+      "A": [
+        [
+          0.0,
+          0.0,
+          0.9016393442622951,
+          -0.08196721311475409
+        ],
+        [
+          0.0,
+          0.0,
+          -0.08196721311475409,
+          0.7650273224043715
+        ],
+        [
+          -1.1,
+          -0.05,
+          -0.08040983606557378,
+          0.0004918032786885248
+        ],
+        [
+          -0.05,
+          -2.15,
+          0.0033606557377049194,
+          -0.10636612021857925
+        ]
+      ],
+      "mass_min_eigenvalue_at_initial": 1.166410635122301,
+      "damping_min_eigenvalue": 0.08842933948882714,
+      "CM_inverse_commutator_norm": 0.0028688524590163946,
+      "nonlinear_physical_equation_conjugacy_error": 1.2605126751125787e-16,
+      "reference_check_DOP853_error": 9.273654529346135e-15,
+      "results": [
+        {
+          "method": "ordinary_midpoint",
+          "h": 0.2,
+          "endpoint_error": 0.004188889534313043,
+          "order": null,
+          "max_K_defect_spectral_2_norm": 0.0004149192826782129,
+          "max_Newton_increment_residual": 2.9427849046470556e-14,
+          "max_chart_congruence_defect": 0.0,
+          "max_transformed_Hamiltonian_defect": 0.0
+        },
+        {
+          "method": "ordinary_midpoint",
+          "h": 0.1,
+          "endpoint_error": 0.0010546786039256663,
+          "order": 1.9897644110689126,
+          "max_K_defect_spectral_2_norm": 5.302939359523474e-05,
+          "max_Newton_increment_residual": 2.6020852139652106e-17,
+          "max_chart_congruence_defect": 0.0,
+          "max_transformed_Hamiltonian_defect": 0.0
+        },
+        {
+          "method": "ordinary_midpoint",
+          "h": 0.05,
+          "endpoint_error": 0.0002641396785488541,
+          "order": 1.9974304864202348,
+          "max_K_defect_spectral_2_norm": 6.683177880769524e-06,
+          "max_Newton_increment_residual": 2.699663409488906e-17,
+          "max_chart_congruence_defect": 0.0,
+          "max_transformed_Hamiltonian_defect": 0.0
+        },
+        {
+          "method": "ordinary_midpoint",
+          "h": 0.025,
+          "endpoint_error": 6.606435954728236e-05,
+          "order": 1.999356956173782,
+          "max_K_defect_spectral_2_norm": 8.382002674061539e-07,
+          "max_Newton_increment_residual": 2.688821387764051e-17,
+          "max_chart_congruence_defect": 0.0,
+          "max_transformed_Hamiltonian_defect": 0.0
+        },
+        {
+          "method": "birkhoff_chart_midpoint",
+          "h": 0.2,
+          "endpoint_error": 0.004196297313913804,
+          "order": null,
+          "max_K_defect_spectral_2_norm": 2.1070583212798766e-15,
+          "max_Newton_increment_residual": 0.0,
+          "max_chart_congruence_defect": 2.1012010347086927e-15,
+          "max_transformed_Hamiltonian_defect": 4.800328110043265e-16
+        },
+        {
+          "method": "birkhoff_chart_midpoint",
+          "h": 0.1,
+          "endpoint_error": 0.0010574589396311054,
+          "order": 1.9885152530049952,
+          "max_K_defect_spectral_2_norm": 3.2320100786937203e-15,
+          "max_Newton_increment_residual": 0.0,
+          "max_chart_congruence_defect": 2.3289904201179484e-15,
+          "max_transformed_Hamiltonian_defect": 9.377586734642345e-16
+        },
+        {
+          "method": "birkhoff_chart_midpoint",
+          "h": 0.05,
+          "endpoint_error": 0.00026489412676046855,
+          "order": 1.99711388392111,
+          "max_K_defect_spectral_2_norm": 3.4465591888723792e-15,
+          "max_Newton_increment_residual": 0.0,
+          "max_chart_congruence_defect": 2.2921243136109397e-15,
+          "max_transformed_Hamiltonian_defect": 7.902238852951176e-16
+        },
+        {
+          "method": "birkhoff_chart_midpoint",
+          "h": 0.025,
+          "endpoint_error": 6.625670322242681e-05,
+          "order": 1.9992775313812878,
+          "max_K_defect_spectral_2_norm": 3.0913504038022145e-15,
+          "max_Newton_increment_residual": 0.0,
+          "max_chart_congruence_defect": 2.455039238184609e-15,
+          "max_transformed_Hamiltonian_defect": 1.1928809713206845e-15
+        }
+      ],
+      "finite_difference_tangent_error": 3.772944130956057e-11,
+      "finite_difference_K_defect": 4.598462513509168e-12,
+      "endpoint_compatibility_defect": 1.3734108683502067e-15
+    }
+  ],
+  "control_comparison": {
+    "reference": "exact controlled target, common initial state and step",
+    "h": 0.025,
+    "T": 2.0,
+    "uncontrolled_RMS_to_target": 0.035812974721177705,
+    "controlled_RMS_to_target": 3.397716941965621e-05,
+    "maximum_physical_generalized_control_norm": 0.06071194479574,
+    "note": "Ideal fully actuated synthetic control. No learning, noise, saturation, or magnetic realization."
+  },
+  "controlled_and_uncontrolled_K_difference_at_t1": 0.21211101460049994
+}

@@ -1,0 +1,45 @@
+{
+  "status": "pass",
+  "report_pages": 110,
+  "review_coverage": "Every final page either actually viewed at original resolution or SHA-identical to a page with documented original-resolution visual review.",
+  "unresolved_issues": [],
+  "records": [
+    {
+      "reviewer": "root",
+      "record": "stage2/report/qa_root_delivery.json",
+      "sha256": "ef117ac29b9de4259ea0ff6775930a3a2dc658904ef328963602b90116e5e2fa",
+      "pages": 29
+    },
+    {
+      "reviewer": "physics",
+      "record": "stage2/report/qa_physics_delivery.json",
+      "sha256": "5d032fc249be8a443b5e03418f370dd46616b3fb1573a53ff6df7b4ef723edb7",
+      "pages": 27
+    },
+    {
+      "reviewer": "kam",
+      "record": "stage2/report/qa_kam_delivery.json",
+      "sha256": "40267d1269d4dda3078137f14c7ac88bfb6221a8fc095f4ddbac28a6b196ec06",
+      "pages": 27
+    },
+    {
+      "reviewer": "birkhoff",
+      "record": "stage2/report/qa_birkhoff_delivery.json",
+      "sha256": "3cf25ca19e542c98c89ab2d6b2f755b97190fb885b64e4ad862fed7970db106e",
+      "pages": 27
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "stage2/deliverables/1025_v10_第二阶段融合研究报告.pdf",
+      "bytes": 4466853,
+      "sha256": "58bbf7180babc1b108ae9bc06a30381b33e6851ba31ff5a61410679b8f23019c"
+    },
+    {
+      "path": "stage2/deliverables/1025_v10_第二阶段融合研究报告.docx",
+      "bytes": 1442553,
+      "sha256": "7f15777fda46f1c32d7d86790b07ba17ca8a9bc73f031e8fe36da85df7980326"
+    }
+  ],
+  "pandoc_warnings_bytes": 0
+}

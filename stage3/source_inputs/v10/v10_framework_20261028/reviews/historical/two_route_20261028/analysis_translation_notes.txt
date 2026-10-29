@@ -1,0 +1,59 @@
+Numerical analysis and experiment supplement: Chinese translation handoff
+
+Translated files:
+  chinese/sections/analysis.tex
+  chinese/sections/supp_experiments.tex
+Chinese scientific figures:
+  chinese/figures/new_baseline_results.pdf
+  chinese/figures/new_baseline_verification.pdf
+
+Every paragraph, subsection, table, caption and numerical protocol in the
+frozen English inputs has a Chinese counterpart. The terminology follows
+provenance/translation_terms.tsv. In particular:
+  oracle = 真值参数对照
+  input-work governor = 输入功约束器
+  energy cap = 能量上限
+  nominal model = 名义模型
+  plant = 受控对象
+  passive (U=0) = 无控制
+
+Automated comparison, recorded in analysis_translation_checks.json:
+  10 displayed mathematical blocks: byte-identical, same order.
+  499 inline mathematical spans: byte-identical, same order.
+  800 numerical tokens: identical, same order, including raw table numbers.
+  76 label/ref/eqref/citation commands: identical, same order.
+  All begin/end environments: identical, same order.
+  Both verbatim reproduction commands and all texttt identifiers: identical.
+  Paragraph-level ordered inline mathematics: identical (29 and 38 blocks).
+  Figure include paths: unchanged (resolved under the Chinese entry point).
+
+Protocol and scope were also reviewed in prose: two-scalar synthetic fit is
+not described as full CHNN training; physical reference/design/calculated
+inputs remain distinct; route A and route B retain their different targets;
+independent and synchronous references remain separate; all five damping
+scenarios regenerate observations and refit; the principal and scan time
+windows remain distinct; no saturation/governor is claimed; initial energy
+still exceeds the proposed energy cap; historical results are not carried
+over to the new baseline.
+
+Figure regeneration:
+  python reviews/build_chinese_figures.py
+This independent script reads the existing JSON, changes only text/font,
+and never invokes the English authoring script or numerical experiments.
+It records source hashes and plotted arrays in chinese_figure_provenance.json.
+The supplied NotoSansCJKsc-Regular.otf font has CFF outlines, so the Chinese
+PDFs use Type 3 vector glyph embedding to avoid falsely advertising a
+TrueType font. This affects font encoding only. Poppler renders both final
+figures without warnings. Full-size visual inspection found no clipping,
+legend/data overlap, missing glyphs, or title/axis truncation.
+
+Equivalence check:
+  python reviews/check_analysis_translation.py
+It intercepts savefig when evaluating only the two plotting blocks and
+compares all numerical artists, axes, ticks, line/marker styles, bar geometry
+and hatches. Both figures and all five panels match the English instructions.
+It writes only its audit JSON and does not compile LaTeX.
+
+No English file was edited. No manuscript was compiled by this agent.
+Chinese manuscript pagination/table fitting remains for the root assembly
+and its rendered-page QA.

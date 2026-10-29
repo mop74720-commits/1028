@@ -1,0 +1,297 @@
+The application objective is to restore the coupled nominal magnetic
+motion through learned residual and damping compensation. The physical
+input map must realize the feedback in
+\eqref{struct:route-a-control}, preserve its estimation errors and use
+the same midpoint convention as \eqref{ctrl:midpoint}. We first close
+that chain for the two-mode object, then expose the additional terms
+when the same fitted controller acts on more beam modes. The
+full-beam clearance argument is a separate condition on physical
+energy. Tracking a learned reference is retained as an extension in
+Supplementary Section~\ref{sec:supp-tracking}.
+
+\subsection{Magnetic realization of the learned residual compensation}
+\label{app:ports}
+Use $U=U_A=\widehat\gamma Y+\nabla\widehat R(X)$ from
+\eqref{struct:route-a-control} and solve
+\begin{equation}
+ \binom{F}{\tau_B}=A_{\rm mag}^{-1}\Lambda U.
+ \label{app:port-inverse}
+\end{equation}
+The continuous input $U\in\mathbb R^2$ is dimensionless; $F$ and
+$\tau_B$ have units N and N\,m. The four-dimensional discrete increment
+in \eqref{ctrl:midpoint} also contains the time step. These conversions
+keep the physical force, the continuous generalized input and the
+phase-space increment distinct.
+
+Here $\tau_B$ is the active magnetic torque. In the two-mode physical
+variables, the synthetic plant used in Section~\ref{sec:analysis} is
+\begin{align}
+ \ddot a+\alpha\dot a+\Omega_2^2a
+ &=\boldsymbol t E_0(\vartheta-\sin\vartheta)
+       -\Lambda\nabla R_*(X)\nonumber\\
+ &\quad+A_{\rm mag}\binom{F}{\tau_B},
+ \qquad a=D_sX.
+ \label{app:residual-plant}
+\end{align}
+Since $\ddot a=\Lambda Y'$ and
+$\Lambda\nabla V_0=\Omega_2^2a+\boldsymbol tE_0(\sin\vartheta-\vartheta)$,
+substitution recovers \eqref{struct:plant}. A total modal moment is an
+equivalent port convention:
+\begin{align}
+ T&=E_0(\vartheta-\sin\vartheta)+\tau_B,\nonumber\\
+ A_{\rm mag}\binom{F}{T}
+ &=\Lambda U+\boldsymbol tE_0(\vartheta-\sin\vartheta).
+ \label{app:total-port}
+\end{align}
+The bias-field remainder is known, while the true residual force
+$-\Lambda\nabla R_*$ remains in the plant. The controller does not
+read $R_*$ through this change of convention.
+
+Substituting the learned law into the physical plant now gives
+\begin{align}
+ \ddot a&=-\Lambda\nabla V_0
+       +(\widehat\alpha-\alpha)\dot a\nonumber\\
+       &\quad-\Lambda\nabla\delta R,\nonumber\\
+ \widehat\alpha&=\omega_0\widehat\gamma,\qquad
+ \delta R=R_*-\widehat R.
+ \label{app:physical-closed-loop}
+\end{align}
+Thus the physical closed loop and
+\eqref{struct:route-a-closed} carry the same potential and damping
+errors. The compensated target retains the complete coupled nominal
+magnetic potential. The truth-only comparator uses known synthetic
+parameters solely to separate numerical error from identification
+error.
+
+Let the planar dipole be
+$m=\mu(\cos\vartheta,\sin\vartheta,0)^{\mathsf T}$.
+A local field with the required force and torque is
+\begin{align}
+ B(r)&=(B_0,B_y,0)^{\mathsf T}+G(r-r_{\rm tip}),\nonumber\\
+ B_y&=\frac{\tau_B}{\mu\cos\vartheta},\nonumber\\
+ G&=\frac{F}{\mu}
+ \begin{pmatrix}
+ -\sin\vartheta&\cos\vartheta&0\\
+ \cos\vartheta&\sin\vartheta&0\\
+ 0&0&0
+ \end{pmatrix}.
+ \label{app:field-gradient}
+\end{align}
+Direct multiplication gives $Gm=(0,F,0)^{\mathsf T}$ and
+$\|G\|_2=|F|/\mu$. Symmetry and zero trace satisfy the local
+source-free curl and divergence conditions \citep{abbott}.
+The active torque is $\mu B_y\cos\vartheta$; the axial bias torque
+$-\mu B_0\sin\vartheta$ remains in the stored-energy model.
+
+Every compensation ablation passes through this same interface.
+For the learned group, reconstruct the applied transverse force and active torque from the
+field and gradient, and form
+\begin{align}
+ U_{\rm rec}&=\Lambda^{-1}A_{\rm mag}
+                    \binom{F_{\rm app}}{\tau_{B,\rm app}},\nonumber\\
+ e_{\rm port}&=U_{\rm rec}-U_A(X,Y).
+ \label{app:input-reconstruction}
+\end{align}
+Ideal exact conversion gives $e_{\rm port}=0$. Calibration errors,
+angle-estimation errors, current limits and saturation can make this
+quantity nonzero; an input-reconstruction check must retain them in
+the applied plant. The reported tests verify the local algebraic
+conversion and do not implement saturation.
+
+The interface requires $A_{\rm mag}$ to have rank two, an angle domain
+with $|\cos\vartheta|$ bounded away from zero, and feasible joint
+field--gradient commands. Column normalization of the nominal matrix
+gives condition number $3.8186$, a geometric diagnostic. A physical
+authority calculation instead scales the columns by available force
+and torque and uses an identified coil-current allocation. A single
+uniform field supplies only one modal input direction.
+
+Bias and transverse fields combine as vector magnitudes: a $30$ mT
+bias with a $6$ mT transverse component requires $30.594$ mT, whereas
+a $20$ mT transverse component requires $36.056$ mT. The published
+$40$ mT arbitrary-direction capability of the OctoMag apparatus
+\citep{lussi2021cvs} supports this field scale without determining
+simultaneous gradient, workspace or bandwidth limits for the present
+design. The learned residual-compensation test requires a peak
+transverse field of approximately $0.54449$ mT. Section~\ref{sec:analysis}
+reports its input reconstruction and sampled operating-domain checks.
+
+\subsection{The same controller on an enriched modal plant}
+\label{app:full-model}
+Fix the mass-normalized eigenbasis of the $32$-element beam. Retaining
+$N\in\{2,4,8,64\}$ modes changes the plant while the fitted two-mode
+feedback stays fixed. Write
+$a^{(N)}=(a_1,\ldots,a_N)^{\mathsf T}$, and let
+$\boldsymbol b_N,\boldsymbol t_N$ collect the corresponding tip
+coefficients. Define
+\begin{align}
+ \vartheta_N&=\boldsymbol t_N^{\mathsf T}a^{(N)},\nonumber\\
+ A_{\rm mag}^{(N)}&=[\boldsymbol b_N\ \boldsymbol t_N]
+                         \in\mathbb R^{N\times2},\nonumber\\
+ X&=D_s^{-1}a_{1:2},\nonumber\\
+ Y&=\omega_0^{-1}\mathsf N^{-1}D_s^{-1}\dot a_{1:2}.
+ \label{app:enriched-coordinates}
+\end{align}
+Here $D_s,\mathsf N$ and $A_{\rm mag}$ still denote the fixed low-mode
+maps. The first two rows of $A_{\rm mag}^{(N)}$ are $A_{\rm mag}$;
+two physical ports cannot independently prescribe all $N$ modal
+forces.
+
+A complete conservative residual must now be specified as a physical
+potential $\mathcal R_N(a^{(N)})$, measured in joules. The enriched
+plant is
+\begin{align}
+ &\ddot a^{(N)}+\alpha\dot a^{(N)}+\Omega_N^2a^{(N)}\nonumber\\
+ &\quad=\boldsymbol t_NE_0(\vartheta_N-\sin\vartheta_N)
+       -\nabla_a\mathcal R_N\nonumber\\
+ &\qquad+A_{\rm mag}^{(N)}\binom{F_{\rm app}}{\tau_{B,\rm app}}.
+ \label{app:enriched-plant}
+\end{align}
+For a matched synthetic hierarchy, impose
+$\mathcal R_N(D_sX,0)=E_0R_*(X)$ by restricting one declared full
+potential to each modal subspace. This condition does not identify
+that full potential from two-mode data. Supplement~\ref{sm:enriched}
+gives explicit extensions and the low-mode projection.
+
+Set $\vartheta_2=d^{\mathsf T}X$ and define the two additional terms
+\begin{align}
+ e_{\rm mag}^{(N)}
+ &=d[\vartheta_N-\sin\vartheta_N\nonumber\\
+ &\qquad-\vartheta_2+\sin\vartheta_2],\nonumber\\
+ e_R^{(N)}
+ &=\Lambda^{-1}\nabla_{a_{1:2}}\mathcal R_N(a^{(N)})\nonumber\\
+ &\quad-\nabla R_*(X).
+ \label{app:enriched-defects}
+\end{align}
+With the unchanged learned law, the exact low-mode equations become
+\begin{align}
+ X'&=\mathsf N Y,\nonumber\\
+ Y'&=-\nabla(V_0+\delta R)(X)-\delta\gamma Y\nonumber\\
+   &\quad+e_{\rm mag}^{(N)}-e_R^{(N)}+e_{\rm port}.
+ \label{app:enriched-closed-loop}
+\end{align}
+The field conversion uses the actual full angle
+$\vartheta=\vartheta_N$; replacing it by a two-mode estimate can also
+create $e_{\rm port}$. Even exact port inversion does not eliminate the
+high-mode angle or residual differences. A small two-mode training
+loss alone therefore supplies neither a truncation bound nor the
+Hamiltonian structure needed for the full plant's KAM analysis.
+
+\subsection{A staged full-model validation protocol}
+\label{app:staged-validation}
+The next validation stages keep the fitted coefficients, low-mode
+initial state, reference $h_0$ trajectory and port convention fixed.
+The passive, damping-only, learned-compensation and truth-only groups
+use the same plant, state information and actuator constraints at each
+stage. The truth-only comparator retains its two-mode compensation
+law; it is distinct from the stronger full-state feedback described
+below. Zero initial high coordinates can still develop a response
+because the same two ports act on every retained mode.
+Table~\ref{app:validation-stages} separates the completed
+numerical check from the proposed enrichments. Mesh convergence in
+$16/32/64$ elements checks linear spatial discretization; changing the
+number of retained modes checks the forced reduction and controller.
+
+\begin{table*}[t]
+\centering\small
+\caption{Staged validation of the same fitted residual controller.
+The higher-mode and independent finite-element stages are specified
+protocols, not newly reported simulation results.}
+\label{app:validation-stages}
+\begin{tabular}{p{.15\textwidth}p{.45\textwidth}p{.30\textwidth}}
+\toprule
+Stage & Fixed object and controlled change & Status and required outputs\\
+\midrule
+Two modes & Fixed-kinetic residual class, one joint fit, common midpoint and magnetic interface & Completed: independent-reference errors, step convergence, reconstruction and sampled demands.\\
+$4$ and $8$ modes & Same $32$-element basis, fixed learned law; declared full residual restricted consistently; first zero, then prescribed nonzero high-mode initial conditions & Planned: low-state error, high-mode response and the three defects in \eqref{app:enriched-closed-loop}.\\
+All $64$ modes & Same finite-element mass, bias stiffness, core inertia and physical ports; full tip angle used in conversion & Planned: whole-centreline displacement and slope, input peaks, initialization and startup transients.\\
+Independent FE model & Rebuild the same geometry, material assumptions, end mass/inertia and boundary loads in COMSOL or an independently specified solver & Planned: verify linear modes first, then compare driven responses and reduction errors under identical input definitions.\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Each enriched run should record the full reconstructed centreline,
+maximum sampled slope, minimum $|\cos\vartheta_N|$, state RMS error,
+tip error, dominant and combination frequencies, force/field/gradient
+peaks and saturation fraction. Compare time steps and spatial
+extrema within each Hermite element; a plotted tip trace cannot bound
+the rest of the beam. Sensor noise, damping mismatch and imposed
+limits are introduced in separately declared tests with the same
+constraints for every controller. A clipped command is applied to the
+plant and included in $e_{\rm port}$, rather than retaining the
+unclipped generalized force.
+
+Supplement~\ref{sm:exact-lift} retains a conditional invariant-torus
+construction for a stronger exact feedback using known damping and a
+target acceleration. That theorem is useful when its full-state
+hypotheses can be verified, but it does not replace the unchanged
+learned controller in \eqref{app:enriched-closed-loop}. No new
+$4/8/64$-mode forced trajectory, COMSOL comparison or finite-amplitude
+torus certificate is claimed here.
+
+\subsection{Whole-beam clearance from physical energy}
+\label{app:clearance}
+Let $E(t)=H_0(q,M_f\dot q)$ be the physical energy of
+\eqref{mech:fe-plant}. For every clamped displacement,
+\begin{equation}
+ w(s)=\int_0^s(s-\xi)w_{ss}(\xi)\dd\xi.
+ \label{app:clamped-identity}
+\end{equation}
+Cauchy--Schwarz and the nonnegative kinetic and bias energies give
+\begin{equation}
+ \|w\|_\infty^2\le\frac{2L^3E_{\rm bend}}{3EI}
+                    \le\frac{2L^3E}{3EI},\qquad
+ E_c=\frac{3EIc^2}{2L^3}.
+ \label{app:energy-bound}
+\end{equation}
+Thus $E<E_c$ guarantees clearance of the entire centreline and its
+radius tube in the declared straight corridor. The result holds for
+arbitrary admissible displacement shapes, including all retained modes;
+it is not restricted to a static tip-load shape. For this benchmark,
+$E_c=10.0197171$ nJ and the selected cap
+$E_{\max}=0.95E_c=9.5187312$ nJ.
+
+An input-work governor can enforce this sufficient condition without
+assuming the requested trajectory remains on a torus. Let
+$u=(F,B_y)^{\mathsf T}$ and define the physical power coefficient
+\begin{equation}
+ a_P=\binom{\dot w(L)}{\mu\cos\vartheta\,\dot\vartheta},\qquad
+ W(0)\ge E(0),\quad \dot W=a_P^{\mathsf T}u.
+ \label{app:work-observer}
+\end{equation}
+By \eqref{mech:physical-power}, $E(t)\le W(t)$.
+Given a request $u_{\rm req}$, choose the closest admissible input in
+a scaled positive definite metric $R_u$:
+\begin{align}
+ u=\mathop{\arg\min}_{\widetilde u\in\mathcal U(q)}
+       &\ \tfrac12(\widetilde u-u_{\rm req})^{\mathsf T}
+                 R_u(\widetilde u-u_{\rm req}),\nonumber\\
+ \text{subject to }&\quad
+ a_P^{\mathsf T}\widetilde u\le\kappa(E_{\max}-W),
+ \qquad \kappa>0.
+ \label{app:work-governor}
+\end{align}
+Here $\mathcal U(q)$ is a nonempty closed convex feasible joint port set containing zero active
+input; $R_u$ accounts for the different force and field units.
+If $W(0)<E_{\max}$, zero input is feasible, and
+$E_{\max}-W(t)\ge[E_{\max}-W(0)]e^{-\kappa t}>0$.
+Together with \eqref{app:energy-bound}, this proves clearance for
+solutions satisfying the power identity. Supplement~\ref{sm:work}
+extends the argument to specified sensing and execution-error bounds.
+For the enriched plant with residual $\mathcal R_N$, the derivative
+of the nominal energy also contains
+$-\dot a^{(N)\mathsf T}\nabla_a\mathcal R_N$. Its power must be
+bounded and included in this ledger, or a separate lower bound of an
+augmented energy by bending energy must be proved. The nominal
+clearance theorem does not absorb that residual automatically. Activation of the governor can change the requested
+Hamiltonian motion, so the clearance proof is distinct from torus
+preservation.
+
+The reported residual-compensation tests do not use this governor.
+Their nominal-reference initial state has energy $12.6567$ nJ, already
+above the $9.5187$ nJ cap.
+Consequently, the observed displacement and slope maxima in
+Section~\ref{sec:analysis} are numerical operating-domain diagnostics,
+not consequences of this energy-cap guarantee. The governor supplies
+a precise condition for a future full-state experiment initialized
+inside the admissible energy set.

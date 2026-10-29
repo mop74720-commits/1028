@@ -1,0 +1,35 @@
+Mechanics/application Chinese translation check — direction-one framework edition
+Date: 2026-10-28
+Project: v10_framework_20261028
+English master freeze: provenance/english_master_freeze.json (2026-10-28T09:25:17.752777+00:00)
+Scope: Only chinese/sections/{mechanics,application,supp_mechanics}.tex and the mechanics translation-review notes were written. Frozen English sources and numerical records were not changed. No LaTeX compilation was run.
+
+Translation basis: The current frozen English edition, provenance/translation_terms.tsv, and the root editor's subsequent terminology instruction. The latter overrides the older nominal=名义 entry: nominal h0/model/energy now consistently uses 标称. All prose paragraphs, captions, table content, proposition titles and proof text are translated; the sequence of environments and source paragraphs is preserved.
+Terminology: modal = 模态; endpoint core = 端部磁芯; residual compensation = 残差补偿; magnetic dipole moment = 磁偶极矩; magnetic torque = 磁力矩; input-work governor = 输入功约束器; energy cap = 能量上限; clearance = 净空; exact symplectic = 精确辛; normal form = 正规形; plant = 受控对象; oracle = 真值参数对照; quasiperiodic = 拟周期; mass-normalized = 质量归一化. Damping ratios retain the superscript d and remain distinct from the complex coordinate zeta.
+
+Automated invariance checks (all passed):
+mechanics.tex: 19 display blocks byte-identical; 140 inline math strings byte-identical and in identical order; 44 label/citation/reference commands unchanged and in identical order; 199 numeric tokens unchanged and in identical order; environment sequence unchanged and balanced; 16 blank-separated blocks retained.
+  English SHA256 (matches freeze): b0535fab18350cd5f35e126ee57a1ce8a40f37f81bc05132b12b3c1eefb96f9b
+  Chinese SHA256: 7fabad5d8ac896a0c10347754cf816e8a5b18cf92f618c5cb54cb47bd5b8e506
+application.tex: 14 display blocks byte-identical; 64 inline math strings byte-identical and in identical order; 40 label/citation/reference commands unchanged and in identical order; 102 numeric tokens unchanged and in identical order; environment sequence unchanged and balanced; 18 blank-separated blocks retained.
+  English SHA256 (matches freeze): 4f3a54346949646fb699c36e5052b8d8959ad37f55c2e26aef6a0f184a7d3a1f
+  Chinese SHA256: 05c880ebefe1d36fa607ca57edc33433d5a2e48ee00325b4a1d0d7c31518106e
+supp_mechanics.tex: 52 display blocks byte-identical; 252 inline math strings byte-identical and in identical order; 98 label/citation/reference commands unchanged and in identical order; 420 numeric tokens unchanged and in identical order; environment sequence unchanged and balanced; 43 blank-separated blocks retained.
+  English SHA256 (matches freeze): be44f8c35ebf88198f0569f566fc5fccbe38fca64663f89160cdb75fc27d594b
+  Chinese SHA256: 2e8ca8cae60b87377b050dcfde86d0dabcadb0fe4839ccccac6f00c64b3647c4
+
+Total: 85 display blocks, 456 inline math strings, 182 label/citation/reference commands and 721 numeric tokens preserved exactly and in source order. The 109 labels defined by these three files are unique. No unexpanded translation placeholders remain.
+The phrase "subject to" inside the preserved constrained-minimization display is intentionally unchanged to keep the display byte-identical. No formula reformatting or numbering changes were made.
+
+Semantic self-review:
+  The direction-one residual-compensation objective remains the principal application. The tracking extension is referenced only in Supplement S4.
+  The physical FE mass Mf, mass-normalized modal identity, balanced mass N^-1, state dimension and Jacobian dimension remain distinct.
+  The physical closure preserves the unknown residual force in the plant. The learned controller does not obtain true residual derivatives through the port convention; the oracle is explicitly labeled.
+  Active magnetic torque tau_B and total modal moment T remain distinct; actual applied inputs are reconstructed through the common magnetic interface.
+  The same learned controller on 4/8/64 modes retains the full-angle difference, conservative-residual difference and applied-port error. The full residual is a physical energy in joules; its extension is declared rather than inferred from two-mode data.
+  Two-mode tests are completed; higher-mode and independent-FE/COMSOL stages remain planned. Element-count convergence is distinguished from retained-mode validation. No new full-model controlled response or finite-amplitude torus certificate is claimed.
+  The stronger exact full-feedback realization and its conditional finite-dimensional lift remain in Supplement S1, with all positivity, convexity, damping, angle-domain and actuator hypotheses; they do not replace same-controller validation.
+  The clearance proof covers arbitrary admissible full-centreline shapes. The residual-power condition, initialization above the selected energy cap, and absence of an implemented input-work governor in the reported runs are preserved.
+  Literature references, design selections, nominal specifications, unmeasured specimen properties and effective-damping scenarios remain distinguished. The extra-digit precision statement is retained.
+
+Status: Translation and exact-source consistency checks complete. Ready for the root editor to compile and visually inspect the Chinese edition. This record supersedes the earlier integrated-edition translation counts and hashes.

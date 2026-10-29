@@ -1,0 +1,25 @@
+{
+  "old_file_sha256": "d58a6823f1851390d0f4a9b3aba40e74d767649df02c92ac6aec49935814bba9",
+  "new_file_sha256": "2bac37b2f4444efc6a0ba742139fbf0b35e268e9f4f3597ba13a0793bc2049ac",
+  "unchanged_canonical_section_sha256": {
+    "parameters": "791851a797c18ff7ab2528bcf41c7f5ecb022e288ff3ec6cccd1c199760b1f6c",
+    "properties": "4d375603b634d143d389a6e7b03e4336e63180aedcf088d69f837570abc68c5c",
+    "reduced": "a15c01d7275700bcc6f0d3bfb7241a9b8ef9d63050d2263d55733789b8954479",
+    "sampled_modes": "c8aa6e3ccd7918f9c0e2fa15f7d5a67916843e04dcfd4d07bb7c99c21ea76e5d",
+    "finite_element_convergence": "77d08151354a8ab950dc99b0b5b8f454d61bee3644f18e98ba1167a1550c82c4",
+    "independent_continuum_boundary_check": "58f436ba843b1ca4770cb48d7d516404b85e8626ea4dfba5c810606c50c83222",
+    "tip_mass_and_bias_effects": "78dc8fad447da27ad9fdbd2b2a344f009a5f0059acae5ea784cf28fa4d0e7974",
+    "design_sensitivity": "eb32c76264861a05934e23f4509e97772433509d790015d11dd1c2eea99d3104"
+  },
+  "canonicalization": "json.dumps(section, sort_keys=True, separators=(\",\", \":\")).encode(); default ensure_ascii=True; UTF-8",
+  "changed_fields": [
+    "energy_scale_note",
+    "legacy_reproduction.computed.alpha_s_inv",
+    "legacy_reproduction.computed.gamma",
+    "legacy_reproduction.computed.zeta",
+    "legacy_reproduction.computed.damping_statement"
+  ],
+  "verification": "All eight listed physical sections were hashed immediately before and after the annotation/legacy correction; each hash was equal. The current listed hashes are recomputed from the resulting file. No FE computations or new-baseline physical values changed.",
+  "old_sha_provenance": "Original full-file SHA preserved in the existing route A/B and damping-sensitivity run records, verified and supplied by audit_complex_kam. The overwritten old JSON bytes were not retained.",
+  "说明": "保留历史运行实际读取的旧SHA，不将历史运行改记为读取新文件。本次只更正能量界适用条件与旧S1阻尼记录；八个列明物理区段在修改前后已逐节规范化SHA核验一致。"
+}

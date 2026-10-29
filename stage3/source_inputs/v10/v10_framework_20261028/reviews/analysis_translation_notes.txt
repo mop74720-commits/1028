@@ -1,0 +1,20 @@
+Current translation work is controlled by root after English freeze.
+=================================================================
+
+Translate all three corresponding inputs: analysis.tex, supp_experiments.tex,
+and extension_tracking_results.tex. Preserve mathematical blocks, numbers,
+units, labels, references, citations, environment order and protocol commands.
+Use provenance/translation_terms.tsv. The previous translation notes and
+checks are archived under historical/two_route_20261028; they do not certify
+this newly expanded text.
+
+Current bilingual figure generator:
+  python reviews/build_chinese_figures.py
+Current three-input/four-figure equivalence check:
+  python reviews/check_analysis_translation.py
+Read-only figure-design audit before translation:
+  python reviews/check_analysis_translation.py --figures-only
+
+The renderer can recreate four figures, including the two retained S4 figures,
+without running an experiment or editing any English artifact. Root alone
+compiles the assembled documents and performs the final layout verification.

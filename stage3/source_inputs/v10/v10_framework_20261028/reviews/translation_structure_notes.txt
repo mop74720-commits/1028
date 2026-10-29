@@ -1,0 +1,84 @@
+理论部分中文翻译完成记录：方向一框架整合
+日期：2026-10-28
+
+英文冻结依据：provenance/english_master_freeze.json
+翻译过程中只更新五份中文理论文件和 reviews 中的理论检查/说明，未执行 LaTeX 编译。随后按 root 的单独授权，同步更正 S4 中一处中英文交叉引用；未改数学，详见末尾勘误记录。
+
+覆盖范围与数量（非空的空行分隔段落/标题块）
+文件	完整单元	小节	命题	显示数学	行内数学	标签
+structure.tex	28	7	1	24	88	30
+controlled_analysis.tex	16	4	2	12	59	15
+kam.tex	27	6	1	14	82	20
+supp_structure.tex	50	13	0	42	227	38
+extension_tracking_theory.tex	12	3	1	9	35	11
+
+合计：133 个非空单元、33 个小节、5 个命题、101 个显示数学块、491 个行内数学块、114 个标签。
+其中 60 个完全对应的旧正确译文块复用，73 个新增或迁移块完整翻译；2 个末尾空块不计入单元数。
+
+自动一致性检查
+  命令：python3 reviews/structure_formula_checks.py --check-translation
+  最终结果：整体 passed=true，中英数学/标签/引用/环境全部通过；授权引用勘误已纳入更新后的英文冻结记录。完整结果为 reviews/structure_formula_checks.json。
+  显示/行内数学逐字比对通过（仅先去除 TeX 注释并规范换行格式）。
+  label、ref/eqref、cite/citep/citet 命令及出现顺序一致。
+  begin/end 环境名称、嵌套顺序及配对一致。
+  root 已更新英文冻结清单并重跑检查；当前五份英文 SHA 全部匹配更新后的冻结清单，无待处理的冻结差异。
+  所有非空译文分块含中文；剔除受保护数学和引用后，无整段遗留英文。
+  脚本不把这些检查称为译文语义、排版或 KAM 证书的自动证明。
+
+逐段人工核对重点
+  P1 的相容 Birkhoff 表示、端点投影命题及证明、定理 A/B 对应作用、
+  lifted generator、普通/加权中点和非交换矩阵次序完整保留。
+  P2 的四个能量对象、受控对象与控制器的信息界面、积分辨识及共同端口完整保留。
+  P3 的控制放置、二维输入/四维增量、残余阻尼加权格式、精确辛命题、
+  eta_Delta/Delta 收敛证明及固定模型误差分离完整保留。
+  Central4 的非线性导数与 Jacobian、四阶残差要求、加权格式有限时间解释完整保留。
+  主文 KAM 对象仍为 hc 对 h0 的实际精确隐式映射；复扩张、扭转、解析域、
+  小除数、归一化扰动预算和尚未完成数值认证的边界均保留。
+  S4 保留路线 B 控制律、同一学习参考下的真值参数对照、跟踪界、
+  两路线不同扰动预算和连续 KAM 命题；没有转而声称实际 PD 闭环保辛。
+
+术语与格式
+  按本轮统一意见使用“标称模型/标称目标”，替代上一版的“名义”用词。
+  exact symplectic=精确辛；normal form=正规形；twist matrix=扭转矩阵；
+  quasiperiodic=拟周期；plant=受控对象；oracle=真值参数对照；
+  residual compensation=残差补偿；weighted/conformal=加权/共形。
+  “精确辛”与“精确求解定义的隐式映射”仍分别表述。
+  数学块内文字以及引用命令可选参数保留英文原样，满足严格字面一致。
+
+英文与中文 SHA256
+  structure.tex
+    EN 66d0a28086b69815af268c9148d119beace1d393d9a5d44bebb6b96a7a82267e
+    ZH 1f0995895898d9d47d2fa1eca4b2f2727b5991969b7426f618ca3c495d49bb03
+  controlled_analysis.tex
+    EN c5ee1c63bd9b80802486f3be7b7a210b3b857f6ace6a2003b761174166c9caa6
+    ZH c01d6b13854f5bcd3299fdce93a3aa6e1768c403799cf33da7d70eb48a1fb524
+  kam.tex
+    EN dd8624e6e0db34a2382d73d47b9545bbd989ca4025ccd063d3eb16ed189664af
+    ZH 4946980d19f4f65c64fbe5830f011b9e2fd1238821ab177d564acddbe047d167
+  supp_structure.tex
+    EN aee5940db1be366ab88b9cdd4daa0c167044b844ee1e7c11bf7f392a3861b594
+    ZH 74b59dc4661044c1a035bc7572ab726b234abcab811ed6455c31e1a7111274dd
+  extension_tracking_theory.tex
+    EN 119d66eb1278c5f15959d31891bff28af592c41dacaa07a572336d32d5a55144
+    ZH 44a776b9fcb85f33d874dd4b0c2a0b763f71634d91587b4883f3a757733a00c9
+
+排版状态
+  未自行编译。root 已统一完成中文主文/补充编译，报告零警告及全局公式、编号和 298 个标签一致。
+  本代理逐张实际打开原分辨率页面完成最终视觉检查：主文 6、7、8、9、14、15 页；补充材料 8、9、10、11、12、17、18 页，共 13 页，全部通过。
+  检查命题/证明文字、中文与上下标、公式裁切/越栏、相邻栏、表格和编号，未发现需修正的问题。已更正的路线 B 真值参数对照引用在补充第 17 页正确显示为 S4.4。
+  逐页记录与图像 SHA256 见 qa/theory_chinese_visual_review.json；该记录只覆盖所列 13 页，不代替 root 的全篇检查。
+  当前没有已知翻译、数学一致性或所查页面排版问题。此轮视觉检查未修改任何文稿源文件或执行编译。
+
+历史记录
+  上一版三文件翻译记录和哈希保留于 reviews/historical/two_route_20261028/，
+  不用于证明本轮五文件状态。
+
+授权的冻结后交叉引用勘误
+  文件：english/sections/extension_tracking_theory.tex 与对应中文。
+  英文：Section~\ref{sec:analysis} -> Supplement~\ref{num:route-b}。
+  中文：第~\ref{sec:analysis} 节 -> 补充材料~\ref{num:route-b}。
+  原因：路线 B 的真值参数数值对照已迁入 S4。
+  数学公式、其他引用和全部环境均未改动。
+  最终中英比较通过；正式英文冻结记录已由 root 在统一编译后更新。
+  精确 before/after 与前后 SHA 已提交统一 post_freeze_reference_corrections.json 记录的维护者。
+  更新冻结清单后 root 已重跑 --check-translation，全部通过；冻结检查保留且未绕过。

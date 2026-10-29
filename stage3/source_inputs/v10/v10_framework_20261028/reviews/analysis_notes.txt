@@ -1,0 +1,53 @@
+Current framework numerical authoring handoff
+============================================
+
+Current inputs:
+  english/sections/analysis.tex
+  english/sections/supp_experiments.tex
+  english/sections/extension_tracking_results.tex
+All contain subsections only. Root owns the section wrappers and compilation.
+The main numerical chapter follows P1/P2/P3; reference tracking is in S4.
+
+Current authoring entry (reads JSON; does not run experiments):
+  python reproduction/framework_experiments/build_manuscript_assets.py
+Compatibility entry:
+  python reviews/build_analysis_assets.py
+Both use reproduction/framework_experiments/authoring/*.tex.in, generate the
+three current English inputs, and render two main plus two retained S4 figures.
+The historical two-route generator/templates are isolated under
+reviews/historical/two_route_20261028 and must not generate this revision.
+
+Current numeric provenance: reviews/framework_numeric_provenance.json
+  111 automatically generated tokens, from five audited-baseline JSON files
+  and four new framework-result JSON files. Each source has a SHA256 record.
+Framework-to-paper mapping: reviews/framework_numerics_map.tsv
+Experiments: reproduction/framework_experiments/run_all.py
+  --experiment matrix|closed|defect|weighted|all
+All four new experiments were executed successfully. Do not rerun them merely
+to rebuild prose or figures. Detailed inputs/settings and full residual records
+are in the result JSON; closed-loop trajectories are in the adjacent NPZ file.
+
+New findings and limits:
+* P1: n=1,2,4; T=4; all four steps use independent matrix exponentials and
+  full-grid maximum errors. General Cg is nonproportional only for n=2,4.
+* Nonlinear Central4 is tested on conservative full-cosine h0 only. The main
+  imperfect compensation simulations remain midpoint. No control kick claim.
+* Fixed delta beta=.02, delta gamma=.01 is a declared synthetic error scenario,
+  distinct from the near-exact noiseless integral fit and five each-refit scans.
+* Manufactured eta=.01 Delta^q test is an independent harmonic diagnostic,
+  not an observed Newton error or catheter experiment. Added and total errors
+  have separately reported orders; every actual algebraic residual is saved.
+* Geometric defects use ideal implicit tangents at numerical solution points.
+  The weighted diagnostic uses known mathematical fields, not hidden knowledge
+  supplied to the learning controller.
+* No new full CHNN, COMSOL, high-mode trajectory, hardware, saturation, governor,
+  long-time frequency map or KAM certificate is claimed. Physical source status,
+  failed initial-energy cap and legacy migration exclusions are retained.
+
+Chinese figure entry (never writes English):
+  python reviews/build_chinese_figures.py
+Current translation check (all three inputs/four figures):
+  python reviews/check_analysis_translation.py
+  --figures-only can audit common figure designs before text translation.
+All plots use the same shared bilingual numerical renderer and current JSON.
+Only labels and fonts differ. There are no newly invented time histories.

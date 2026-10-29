@@ -1,0 +1,154 @@
+DIRECTION-I STRUCTURE / CONTROLLED ANALYSIS / KAM NOTES
+Revision: framework integration, 28 October 2026
+
+Current owned English files
+  english/sections/structure.tex
+  english/sections/controlled_analysis.tex
+  english/sections/kam.tex
+  english/sections/supp_structure.tex
+  english/sections/extension_tracking_theory.tex
+All enter below section level. Labels use struct:, ctrl:, kam:, ss:.
+No new LaTeX macros are required.
+The root compiles and reviews main and supplement; this agent does not compile.
+
+Relation to the prior two-route integration
+  The prior three-file script, result and English/Chinese notes are preserved
+  under reviews/historical/two_route_20261028/. They describe the earlier
+  v10_integrated_20261028 deliverable, not this framework revision.
+  The source-to-section map for the current framework is
+  reviews/framework_theory_map.tsv (15 rows, pure-label destination fields).
+  A prior Chinese-completion statement or SHA is not a certificate for the
+  expanded five-file English text. The five-file framework translation is now complete and compared with the formal English freeze; see translation_structure_notes.txt.
+
+Three-subproblem organization
+  P1: compatible Birkhoff form -> canonical lift -> local endpoint projection
+      -> explicit generator -> weighted midpoint and ordinary midpoint ->
+      noncommuting matrix implementation. The endpoint proposition is proved
+      directly and explains the original Theorem A role; the midpoint and
+      Central4 truncations explain Theorem B's constructive role. No numbered
+      theorem from Feng's book is presented as an unchecked verbatim statement.
+  P2: same known-kinetic plant, analytic potential residual, shared integral
+      fit and magnetic port interface; h0, h*, hhat and hc remain distinct.
+      The general CHNN decoder and larger analytic readout are retained, while
+      the primary reproduced fit has one cosine coefficient plus damping.
+  P3: control inside the same midpoint equation; the actual closed loop has
+      fixed deltaR/deltagamma; exact versus weighted structure is separated.
+      The finite-time bound includes Delta^2 + eta_Delta/Delta. Numerical
+      error to the same actual closed loop differs from its model error to h0.
+      The principal KAM object is the exact conservative implicit map of hc
+      compared with the nominal h0 normal form. Route B is a supplement extension.
+
+Current mathematical details
+  - x=(X,Y); J=[0 I;-I 0]; N=diag(nu); h*=h0+R*; hhat=h0+Rhat;
+    deltaR=R*-Rhat; hc=h0+deltaR; deltagamma=gamma-gammahat.
+  - U is a dimensionless two-component generalized force. The controlled
+    phase increment is Delta*(0,U) in R4. Physical active torque is tau_B.
+  - Birkhoff/flow matrices are 2n, mass is n, endpoint transform is 4n.
+    Projection invertibility is not invertibility of the graph gradient f_w.
+  - Canonical lift permits M(q); simple weighted p updates require constant
+    mass. Ordinary damped midpoint does not inherit the exponential factor.
+  - Exact symplecticity is the property of an exactly defined conservative
+    map. Finite solver residuals and roundoff are implementation errors.
+  - The primary four control ablations use midpoint. New P1/P3 checks also
+    test Central4 on the same nonlinear conservative h0; its fourth-order
+    result is not transferred to general damped feedback.
+  - Central4 scalar correction f^T h'' f and the full magnetic increment/Jac
+    are written in ss:central4 and ss:central4-magnetic. Cross-mode terms stay.
+  - eta_Delta is the residual of the increment equation, not the Newton step.
+    O(Delta^3) residuals preserve order two; O(Delta^5) preserves order four
+    under the separately stated smoothness and stable-branch assumptions.
+  - Complex continuation uses independent zeta,chi. No holomorphic-in-zeta
+    assertion for a nonconstant real energy; true and learned residuals both
+    require the stated analytic continuation.
+  - Quartic twist retains cross-action terms. Full R6 includes the generated
+    Lie terms, not just the cosine tail. Small-divisor tests through degree
+    four do not establish all-integer Diophantine conditions.
+  - The actual physical-coordinate numerical map is conjugated by the
+    normal-form chart; midpoint is not claimed covariant under nonlinear maps.
+  - Shang's discrete path uses C epsilon + C Delta^p, tau_D>3 for n=2,
+    complex domains, frequency margins and the stated smallness threshold.
+    No new finite-amplitude interval KAM certificate is claimed.
+  - Route-B original control/error/oracle labels and ss:tracking now live in
+    extension_tracking_theory.tex. The oracle keeps the same learned reference.
+    The two-route budgets and continuous theorem are also supplementary.
+
+Current verification commands and scope
+  python3 reviews/structure_formula_checks.py
+    Checks exact-rational Central4 identity and harmonic phase; reevaluates
+    nominal twist from reproduction/new_baseline.json; independently checks
+    the magnetic correction/Jac by complex-step differentiation; inventories
+    all five English theory sources, required labels, unique labels, refs and
+    environment order. Writes reviews/structure_formula_checks.json.
+  python3 reviews/structure_formula_checks.py --check-translation
+    Additionally checks all five English/Chinese file pairs. Every display
+    and inline math block is compared literally after removing TeX comments
+    and normalizing line endings. Ordered labels, reference/citation commands
+    and begin/end environments must match. Whitespace-normalized math equality
+    is reported as diagnostic only and does not relax the literal check.
+    Missing new Chinese files or stale three-file translations cause failure.
+    The flag must be used after the framework translation is finished.
+  Neither command certifies prose translation, page layout, global nonlinear
+  convergence assumptions, an analytic error radius or a KAM threshold.
+
+Latest agent checks and completed translation after root freeze
+  Default English/algebra run passed for all five theory files.
+  Protected math inventory: 101 display blocks and 491 inline blocks.
+  Six magnetic derivative cases passed (kappa=.8,1,1.2, two mixed states).
+  Max complex-step discrepancy: gradient 1.4211e-14; Jacobian 5.6844e-14.
+  The pending-translation path was tested in memory and correctly rejected
+  stale prior Chinese content and the two not-yet-created Chinese files.
+  The subsequent authorized translation updated all five Chinese theory files.
+  The --check-translation run passed: 101 display and 491 inline math blocks,
+  114 labels, ordered reference/citation commands and environment events match.
+  All five English SHA256 values match the formal English-freeze manifest.
+  Root reports no theoretical-file overfull or undefined references in the
+  frozen English builds. Final Chinese builds have zero warnings, with the
+  global equations, numbering and 298 labels agreeing across languages.
+  This agent actually opened and visually reviewed the assigned 13 Chinese
+  pages: main 6--9 and 14--15; supplement 8--12 and 17--18. All passed the
+  text, script/subscript, equation, adjacent-column and numbering inspection.
+  The per-page record with image hashes is qa/theory_chinese_visual_review.json.
+  No manuscript source was edited and no LaTeX was compiled during this review.
+
+Citation keys used / sources checked
+  Existing: feng, chen2022, poschel, haro2019aposteriori.
+  Added by root: fengqin, shang, su2007.
+
+  feng: Feng, Wu, Qin and Wang (1989), Journal of Computational Mathematics
+    7(1), 71--96, canonical difference schemes via generating functions.
+    https://computmath.cjoe.ac.cn/jcm/EN/Y1989/V7/I1/71
+  fengqin: Feng and Qin (2010), Symplectic Geometric Algorithms for
+    Hamiltonian Systems. DOI 10.1007/978-3-642-01777-3.
+  su2007: Su, Sun, Qin and Scherer (2007), structure preserving Birkhoffian
+    schemes; parent added verified original reference.
+    https://www.ijpam.eu/contents/2007-40-3/4/4.pdf
+  chen2022: Chen, Matsubara and Yaguchi (2022), AAAI 36(6), 6322--6332.
+    https://ojs.aaai.org/index.php/AAAI/article/view/20582
+    DOI 10.1609/aaai.v36i6.20582. Used for nonzero-learning-error motivation;
+    the present deterministic finite-feature inequality is proved directly.
+  poschel: Poeschel, A Lecture on the Classical KAM Theorem.
+    https://arxiv.org/pdf/0908.2234
+    Used for the conditional analytic near-integrable flow theorem.
+  shang: Shang (1999), Numerische Mathematik 83, 477--496.
+    https://doi.org/10.1007/s002110050460
+    Original full PDF locally inspected: audit_references/
+      KAM theorem of symplectic algorithms for Hamiltonian systems(1).pdf
+    pp.482--483: discrete divisors, Theorem 2, analytic Remark 2.
+    pp.492--494: nearly integrable Section 4, (4.2)--(4.6), joint
+      O(Delta*epsilon+Delta^(p+1)) map and generating-function error.
+    This does not establish fixed-nonzero-epsilon convergence of numerical
+    tori to perturbed-flow tori merely by Delta -> 0.
+  haro2019aposteriori: Haro and Luque (2019), JDE 266, 1605--1674.
+    DOI 10.1016/j.jde.2018.08.003; arXiv 1711.05515.
+    Used only to describe a possible new finite-amplitude certificate.
+
+
+Authorized post-freeze reference correction
+  The Route-B oracle cross-reference in extension_tracking_theory.tex now
+  points to Supplement~\ref{num:route-b}, replacing Section~\ref{sec:analysis}.
+  The Chinese sentence was changed correspondingly; mathematics is unchanged.
+  Root has recorded the revised English freeze and rerun --check-translation.
+  The overall result is passed=true, including all five English freeze hashes,
+  literal bilingual mathematics, labels, references/citations and environments.
+  The temporary freeze mismatch is resolved; no pending re-freeze check remains.
+  The corrected oracle reference is visibly rendered as S4.4 on supplement p.17.

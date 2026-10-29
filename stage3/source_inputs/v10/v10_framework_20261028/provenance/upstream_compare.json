@@ -1,0 +1,22 @@
+{
+  "status": "ahead",
+  "ahead_by": 1,
+  "behind_by": 0,
+  "files": [
+    {
+      "path": "README.md",
+      "status": "modified",
+      "changes": 13
+    },
+    {
+      "path": "reproducibility/ARTIFACT_INDEX.md",
+      "status": "modified",
+      "changes": 2
+    },
+    {
+      "path": "verification/package_s1_exports.py",
+      "status": "added",
+      "changes": 121
+    }
+  ]
+}

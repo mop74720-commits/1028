@@ -1,0 +1,579 @@
+{
+  "numerical_replay_comparison": [
+    {
+      "name": "B_general",
+      "compared_numeric_entries": 188,
+      "maximum_absolute_difference": 8.092637671097691e-12,
+      "largest_differences": [
+        {
+          "path": "/cases/1/results/7/order",
+          "supplied": 1.9992775313812878,
+          "rerun": 1.9992775313893805,
+          "absolute_difference": 8.092637671097691e-12
+        },
+        {
+          "path": "/cases/0/results/7/order",
+          "supplied": 1.999328900320402,
+          "rerun": 1.9993289003138837,
+          "absolute_difference": 6.518341422179219e-12
+        },
+        {
+          "path": "/cases/1/results/3/order",
+          "supplied": 1.999356956173782,
+          "rerun": 1.9993569561766071,
+          "absolute_difference": 2.8250735084611733e-12
+        },
+        {
+          "path": "/cases/0/results/6/order",
+          "supplied": 1.9973189354243108,
+          "rerun": 1.99731893542583,
+          "absolute_difference": 1.5192291868970642e-12
+        },
+        {
+          "path": "/cases/1/results/6/order",
+          "supplied": 1.99711388392111,
+          "rerun": 1.9971138839221916,
+          "absolute_difference": 1.0815792705898275e-12
+        },
+        {
+          "path": "/cases/0/results/3/order",
+          "supplied": 1.9995330066489285,
+          "rerun": 1.9995330066481227,
+          "absolute_difference": 8.057998712729386e-13
+        },
+        {
+          "path": "/cases/1/results/2/order",
+          "supplied": 1.9974304864202348,
+          "rerun": 1.997430486420911,
+          "absolute_difference": 6.761258219967203e-13
+        },
+        {
+          "path": "/cases/1/results/5/order",
+          "supplied": 1.9885152530049952,
+          "rerun": 1.9885152530054753,
+          "absolute_difference": 4.800604358479177e-13
+        }
+      ],
+      "excluded": "Wall times and environment/provenance, which are not repeatable numerical outputs."
+    },
+    {
+      "name": "B_special",
+      "compared_numeric_entries": 49,
+      "maximum_absolute_difference": 1.1102230907996055e-16,
+      "largest_differences": [
+        {
+          "path": "/results/3/max_conformal_defect_spectral_2_norm",
+          "supplied": 5.752671916603752e-08,
+          "rerun": 5.752671905501521e-08,
+          "absolute_difference": 1.1102230907996055e-16
+        },
+        {
+          "path": "/results/0/max_conformal_defect_spectral_2_norm",
+          "supplied": 2.8972333601665433e-05,
+          "rerun": 2.897233360155441e-05,
+          "absolute_difference": 1.1102230246251565e-16
+        },
+        {
+          "path": "/results/2/max_conformal_defect_spectral_2_norm",
+          "supplied": 4.5977569129829355e-07,
+          "rerun": 4.5977569118727135e-07,
+          "absolute_difference": 1.1102219658339725e-16
+        },
+        {
+          "path": "/results/4/max_conformal_defect_spectral_2_norm",
+          "supplied": 3.4135030015306885e-16,
+          "rerun": 4.523564552444882e-16,
+          "absolute_difference": 1.1100615509141932e-16
+        },
+        {
+          "path": "/results/7/max_conformal_defect_spectral_2_norm",
+          "supplied": 3.3363623289655197e-16,
+          "rerun": 4.44097469234807e-16,
+          "absolute_difference": 1.1046123633825504e-16
+        },
+        {
+          "path": "/results/6/max_conformal_defect_spectral_2_norm",
+          "supplied": 3.333528145228669e-16,
+          "rerun": 3.3631693506450587e-16,
+          "absolute_difference": 2.9641205416389485e-18
+        },
+        {
+          "path": "/nu/0",
+          "supplied": 1.0,
+          "rerun": 1.0,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/nu/1",
+          "supplied": 6.152117504,
+          "rerun": 6.152117504,
+          "absolute_difference": 0.0
+        }
+      ],
+      "excluded": "Wall times and environment/provenance, which are not repeatable numerical outputs."
+    },
+    {
+      "name": "matrix_structure_results",
+      "compared_numeric_entries": 521,
+      "maximum_absolute_difference": 1.984095350371362e-05,
+      "largest_differences": [
+        {
+          "path": "/cases/0/methods/conservative_central4/3/observed_order",
+          "supplied": 3.9999451690076557,
+          "rerun": 3.9999650099611594,
+          "absolute_difference": 1.984095350371362e-05
+        },
+        {
+          "path": "/cases/1/methods/conservative_central4/3/observed_order",
+          "supplied": 3.9998131858874397,
+          "rerun": 3.9998277264657665,
+          "absolute_difference": 1.4540578326727172e-05
+        },
+        {
+          "path": "/cases/0/methods/conservative_central4/2/observed_order",
+          "supplied": 3.999746048307962,
+          "rerun": 3.999747288902784,
+          "absolute_difference": 1.24059482198291e-06
+        },
+        {
+          "path": "/cases/2/methods/conservative_central4/3/observed_order",
+          "supplied": 3.9998635091772727,
+          "rerun": 3.999864479372819,
+          "absolute_difference": 9.701955461238754e-07
+        },
+        {
+          "path": "/cases/1/methods/conservative_central4/2/observed_order",
+          "supplied": 3.99960406284114,
+          "rerun": 3.999604890601533,
+          "absolute_difference": 8.277603931183819e-07
+        },
+        {
+          "path": "/cases/0/methods/conservative_central4/1/observed_order",
+          "supplied": 3.9989876364800114,
+          "rerun": 3.9989877140248673,
+          "absolute_difference": 7.754485586985993e-08
+        },
+        {
+          "path": "/cases/2/methods/conservative_central4/2/observed_order",
+          "supplied": 3.999441806563162,
+          "rerun": 3.999441867199235,
+          "absolute_difference": 6.063607305151208e-08
+        },
+        {
+          "path": "/cases/1/methods/conservative_central4/1/observed_order",
+          "supplied": 3.9978194043322635,
+          "rerun": 3.9978194551728667,
+          "absolute_difference": 5.084060328286455e-08
+        }
+      ],
+      "excluded": "Wall times and environment/provenance, which are not repeatable numerical outputs."
+    },
+    {
+      "name": "closed_loop_convergence_results",
+      "compared_numeric_entries": 140,
+      "maximum_absolute_difference": 8.881784197001252e-16,
+      "largest_differences": [
+        {
+          "path": "/conservative_nonlinear_central4/rows/2/observed_order",
+          "supplied": 3.997648263623225,
+          "rerun": 3.997648263623224,
+          "absolute_difference": 8.881784197001252e-16
+        },
+        {
+          "path": "/rows/2/maximum_ideal_exponential_weighted_defect_spectral2",
+          "supplied": 9.128833933528308e-08,
+          "rerun": 9.128833922426076e-08,
+          "absolute_difference": 1.1102231569740545e-16
+        },
+        {
+          "path": "/rows/3/maximum_ideal_exponential_weighted_defect_spectral2",
+          "supplied": 1.141943206688388e-08,
+          "rerun": 1.1419431955861576e-08,
+          "absolute_difference": 1.1102230411687688e-16
+        },
+        {
+          "path": "/duration_tau",
+          "supplied": 20.0,
+          "rerun": 20.0,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/initial_state/0",
+          "supplied": 0.09,
+          "rerun": 0.09,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/initial_state/1",
+          "supplied": 0.08,
+          "rerun": 0.08,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/initial_state/2",
+          "supplied": 0.015,
+          "rerun": 0.015,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/initial_state/3",
+          "supplied": -0.01,
+          "rerun": -0.01,
+          "absolute_difference": 0.0
+        }
+      ],
+      "excluded": "Wall times and environment/provenance, which are not repeatable numerical outputs."
+    },
+    {
+      "name": "algebraic_defect_results",
+      "compared_numeric_entries": 6925,
+      "maximum_absolute_difference": 8.414469121476031e-11,
+      "largest_differences": [
+        {
+          "path": "/cases/2/rows/3/observed_order",
+          "supplied": 1.9999690298621835,
+          "rerun": 1.9999690299463282,
+          "absolute_difference": 8.414469121476031e-11
+        },
+        {
+          "path": "/cases/2/rows/2/observed_order",
+          "supplied": 1.9998761274640482,
+          "rerun": 1.999876127485084,
+          "absolute_difference": 2.103583973678269e-11
+        },
+        {
+          "path": "/cases/2/rows/1/observed_order",
+          "supplied": 1.9995046432107122,
+          "rerun": 1.999504643215971,
+          "absolute_difference": 5.2589044230444415e-12
+        },
+        {
+          "path": "/cases/2/rows/3/error_over_step_squared_plus_actual_residual_over_step",
+          "supplied": 0.05134770178834549,
+          "rerun": 0.05134770178435147,
+          "absolute_difference": 3.994020392195097e-12
+        },
+        {
+          "path": "/cases/2/rows/2/error_over_step_squared_plus_actual_residual_over_step",
+          "supplied": 0.05134659952635575,
+          "rerun": 0.0513465995253566,
+          "absolute_difference": 9.991521499053135e-13
+        },
+        {
+          "path": "/cases/2/rows/1/error_over_step_squared_plus_actual_residual_over_step",
+          "supplied": 0.0513421909991398,
+          "rerun": 0.051342190998889356,
+          "absolute_difference": 2.504454976737236e-13
+        },
+        {
+          "path": "/cases/1/rows/3/observed_order",
+          "supplied": 1.0187762921496775,
+          "rerun": 1.0187762921498396,
+          "absolute_difference": 1.6209256159527285e-13
+        },
+        {
+          "path": "/cases/1/rows/3/error_over_step_squared_plus_actual_residual_over_step",
+          "supplied": 1.0131510288757704,
+          "rerun": 1.0131510288756855,
+          "absolute_difference": 8.482103908136196e-14
+        }
+      ],
+      "excluded": "Wall times and environment/provenance, which are not repeatable numerical outputs."
+    },
+    {
+      "name": "nonlinear_weighted_results",
+      "compared_numeric_entries": 199,
+      "maximum_absolute_difference": 4.596323321948148e-14,
+      "largest_differences": [
+        {
+          "path": "/cases/1/methods/weighted_midpoint/2/observed_order",
+          "supplied": 1.9975792184668726,
+          "rerun": 1.9975792184668266,
+          "absolute_difference": 4.596323321948148e-14
+        },
+        {
+          "path": "/cases/1/methods/weighted_midpoint/3/observed_order",
+          "supplied": 1.9994031350550456,
+          "rerun": 1.9994031350550727,
+          "absolute_difference": 2.708944180085382e-14
+        },
+        {
+          "path": "/cases/1/methods/weighted_midpoint/1/observed_order",
+          "supplied": 1.989793666777651,
+          "rerun": 1.9897936667776697,
+          "absolute_difference": 1.865174681370263e-14
+        },
+        {
+          "path": "/cases/0/methods/weighted_midpoint/1/observed_order",
+          "supplied": 1.989723913384168,
+          "rerun": 1.9897239133841829,
+          "absolute_difference": 1.4876988529977098e-14
+        },
+        {
+          "path": "/cases/0/methods/midpoint/1/observed_order",
+          "supplied": 1.9905538720668217,
+          "rerun": 1.9905538720668212,
+          "absolute_difference": 4.440892098500626e-16
+        },
+        {
+          "path": "/cases/1/methods/weighted_midpoint/1/maximum_ideal_exponential_weighted_defect_spectral2",
+          "supplied": 3.3928393762113466e-16,
+          "rerun": 5.619120147710757e-16,
+          "absolute_difference": 2.226280771499411e-16
+        },
+        {
+          "path": "/cases/1/methods/weighted_midpoint/1/maximum_ideal_standard_symplectic_defect_spectral2",
+          "supplied": 0.00019998000133358916,
+          "rerun": 0.00019998000133336698,
+          "absolute_difference": 2.22180130196592e-16
+        },
+        {
+          "path": "/cases/0/methods/midpoint/3/observed_order",
+          "supplied": 1.999452362092351,
+          "rerun": 1.9994523620923508,
+          "absolute_difference": 2.220446049250313e-16
+        }
+      ],
+      "excluded": "Wall times and environment/provenance, which are not repeatable numerical outputs."
+    },
+    {
+      "name": "magnetic_method_comparison",
+      "compared_numeric_entries": 994,
+      "maximum_absolute_difference": 9.069643621728776e-13,
+      "largest_differences": [
+        {
+          "path": "/cases/1/representative_step_derivative_checks/2/epsilon_sweep/2/finite_difference_K_defect_spectral2",
+          "supplied": 9.06900911661259e-12,
+          "rerun": 9.975973478785468e-12,
+          "absolute_difference": 9.069643621728776e-13
+        },
+        {
+          "path": "/cases/0/representative_step_derivative_checks/2/epsilon_sweep/2/finite_difference_K_defect_spectral2",
+          "supplied": 9.299004541441964e-12,
+          "rerun": 9.740271276260038e-12,
+          "absolute_difference": 4.41266734818074e-13
+        },
+        {
+          "path": "/cases/0/methods/chart_midpoint/3/endpoint_error_order",
+          "supplied": 1.9993995904853108,
+          "rerun": 1.9993995904857471,
+          "absolute_difference": 4.363176486776865e-13
+        },
+        {
+          "path": "/cases/0/methods/chart_midpoint/3/maximum_grid_error_order",
+          "supplied": 1.9993995904853108,
+          "rerun": 1.9993995904857471,
+          "absolute_difference": 4.363176486776865e-13
+        },
+        {
+          "path": "/cases/1/methods/chart_midpoint/3/endpoint_error_order",
+          "supplied": 1.999403135173147,
+          "rerun": 1.9994031351729313,
+          "absolute_difference": 2.156053113822054e-13
+        },
+        {
+          "path": "/cases/1/methods/chart_midpoint/3/maximum_grid_error_order",
+          "supplied": 1.999403135173147,
+          "rerun": 1.9994031351729313,
+          "absolute_difference": 2.156053113822054e-13
+        },
+        {
+          "path": "/cases/0/methods/chart_midpoint/2/endpoint_error_order",
+          "supplied": 1.997564363934732,
+          "rerun": 1.9975643639345535,
+          "absolute_difference": 1.7852386235972517e-13
+        },
+        {
+          "path": "/cases/0/methods/chart_midpoint/2/maximum_grid_error_order",
+          "supplied": 1.997564363934732,
+          "rerun": 1.9975643639345535,
+          "absolute_difference": 1.7852386235972517e-13
+        }
+      ],
+      "excluded": "Wall times and environment/provenance, which are not repeatable numerical outputs."
+    },
+    {
+      "name": "synthetic_method_comparison",
+      "compared_numeric_entries": 497,
+      "maximum_absolute_difference": 8.401279671943485e-12,
+      "largest_differences": [
+        {
+          "path": "/cases/1/methods/birkhoff_chart_midpoint/3/endpoint_error_order",
+          "supplied": 1.9992775313487121,
+          "rerun": 1.9992775313571134,
+          "absolute_difference": 8.401279671943485e-12
+        },
+        {
+          "path": "/cases/1/methods/birkhoff_chart_midpoint/3/maximum_grid_error_order",
+          "supplied": 1.9992775313487121,
+          "rerun": 1.9992775313571134,
+          "absolute_difference": 8.401279671943485e-12
+        },
+        {
+          "path": "/cases/0/methods/birkhoff_chart_midpoint/3/endpoint_error_order",
+          "supplied": 1.9993289002063679,
+          "rerun": 1.9993289002003323,
+          "absolute_difference": 6.035616451072201e-12
+        },
+        {
+          "path": "/cases/0/methods/birkhoff_chart_midpoint/3/maximum_grid_error_order",
+          "supplied": 1.9993289002063679,
+          "rerun": 1.9993289002003323,
+          "absolute_difference": 6.035616451072201e-12
+        },
+        {
+          "path": "/cases/1/methods/ordinary_midpoint/3/endpoint_error_order",
+          "supplied": 1.9993569561741922,
+          "rerun": 1.9993569561766071,
+          "absolute_difference": 2.4149571231646405e-12
+        },
+        {
+          "path": "/cases/1/methods/ordinary_midpoint/3/maximum_grid_error_order",
+          "supplied": 1.9993569561741922,
+          "rerun": 1.9993569561766071,
+          "absolute_difference": 2.4149571231646405e-12
+        },
+        {
+          "path": "/cases/0/methods/birkhoff_chart_midpoint/2/endpoint_error_order",
+          "supplied": 1.9973189354153114,
+          "rerun": 1.9973189354163028,
+          "absolute_difference": 9.914291609902648e-13
+        },
+        {
+          "path": "/cases/0/methods/birkhoff_chart_midpoint/2/maximum_grid_error_order",
+          "supplied": 1.9973189354153114,
+          "rerun": 1.9973189354163028,
+          "absolute_difference": 9.914291609902648e-13
+        }
+      ],
+      "excluded": "Wall times and environment/provenance, which are not repeatable numerical outputs."
+    }
+  ],
+  "code_inheritance": [
+    {
+      "path": "reproduction/framework_experiments/build_manuscript_assets.py",
+      "status": "unchanged",
+      "latest_sha256": "9538a6a3d6ae2a3782be3765a158d32f5ef60c1e267b82e8483f089cfbf54b73"
+    },
+    {
+      "path": "reproduction/framework_experiments/framework_common.py",
+      "status": "unchanged",
+      "latest_sha256": "c31934c80b01c72a877ce7aa858663461a1dcb39d8e76c3c686305e7518d83c8"
+    },
+    {
+      "path": "reproduction/framework_experiments/framework_values.py",
+      "status": "unchanged",
+      "latest_sha256": "a3f3a9e8478d081d3b656c63de5528f7ccc6a2bd0c563136c6057f5cf5404743"
+    },
+    {
+      "path": "reproduction/framework_experiments/run_all.py",
+      "status": "unchanged",
+      "latest_sha256": "91868f920d3f068d9e00cac22149402bda777d6ca72e4d31dfec28678bc48eb0"
+    },
+    {
+      "path": "reproduction/framework_experiments/supplement_figures.py",
+      "status": "unchanged",
+      "latest_sha256": "c6215e36ee911478216d1670db387fc219e2aea1b1c4bb86b667e007def5d1c7"
+    },
+    {
+      "path": "reproduction/experiments/baseline_config.py",
+      "status": "unchanged",
+      "latest_sha256": "7bdb257115686fe5c9f025d7fc7677e351a71f28453e8116f36aa34dd0dff206"
+    },
+    {
+      "path": "reproduction/experiments/damping_sensitivity.py",
+      "status": "unchanged",
+      "latest_sha256": "e5997e633d4a6a91f02f7f33cc780b48eda0529fec627e2db7341c306098a5b1"
+    },
+    {
+      "path": "reproduction/experiments/minimal_control_loop.py",
+      "status": "unchanged",
+      "latest_sha256": "58caffc15104072873bf5bf524173f597d75a1baff11f19130a6e7f700507373"
+    },
+    {
+      "path": "reproduction/experiments/route_b_shared_data.py",
+      "status": "unchanged",
+      "latest_sha256": "5d4c0795c832944f995603322ed711a30d7109e255643d81e9522a14d27cae48"
+    },
+    {
+      "path": "reproduction/experiments/run_all.py",
+      "status": "unchanged",
+      "latest_sha256": "5bcee17bd60caebd8f451c9a0d8d1de180021aceb3ecc67e34487711ada5473d"
+    },
+    {
+      "path": "reproduction/experiments/summarize_results.py",
+      "status": "unchanged",
+      "latest_sha256": "542ce33c4b1e360f5aa4a1317f4ca786753e545be7722610ce35a2a35517a5cc"
+    },
+    {
+      "path": "reproduction/general_birkhoff_experiments/build_assets.py",
+      "status": "added",
+      "latest_sha256": "9fcfd879203ee7b03f21ec0eb41f624a0e34f41c2801d8e5815eae6b3c051db9"
+    },
+    {
+      "path": "reproduction/general_birkhoff_experiments/build_chinese.py",
+      "status": "added",
+      "latest_sha256": "8f7259864c107157d465520db05a8d0790b504c39bc0b1c0b4a8f946e9b9f157"
+    },
+    {
+      "path": "reproduction/general_birkhoff_experiments/check_translation.py",
+      "status": "added",
+      "latest_sha256": "e27b586d18039fedc2fe1ada850f75e72e31cc9cc2ae8a3da79c876fd3fd59a3"
+    },
+    {
+      "path": "reproduction/general_birkhoff_experiments/common.py",
+      "status": "added",
+      "latest_sha256": "3221eb0a30f9492e6b84849db4170b13690bf9d7c5fd8f7831307b5eaba84139"
+    },
+    {
+      "path": "reproduction/general_birkhoff_experiments/magnetic.py",
+      "status": "added",
+      "latest_sha256": "484247c253ac13f4fd4f6e648d4fd73c1a2a7af3ce4ee3c53fadc3d73e80d825"
+    },
+    {
+      "path": "reproduction/general_birkhoff_experiments/run_all.py",
+      "status": "added",
+      "latest_sha256": "9c327074b858d8362ebba2ded9699ea7fcd670b7c3aee69b5287b96aa89bfa54"
+    },
+    {
+      "path": "reproduction/general_birkhoff_experiments/synthetic.py",
+      "status": "added",
+      "latest_sha256": "d12e55c255121841a2a288418eb8abca0c0a11f0d08e60442418e1677bc1c28c"
+    }
+  ],
+  "B_original_preservation": [
+    {
+      "file": "README.md",
+      "byte_identical_to_integrated_original": true
+    },
+    {
+      "file": "environment.json",
+      "byte_identical_to_integrated_original": true
+    },
+    {
+      "file": "v10_results.json",
+      "byte_identical_to_integrated_original": true
+    },
+    {
+      "file": "verification_results.json",
+      "byte_identical_to_integrated_original": true
+    },
+    {
+      "file": "verify_general_birkhoff.py",
+      "byte_identical_to_integrated_original": true
+    },
+    {
+      "file": "verify_v10_special_case.py",
+      "byte_identical_to_integrated_original": true
+    },
+    {
+      "file": "一般Birkhoff_两个核心连接与验证.md",
+      "byte_identical_to_integrated_original": true
+    },
+    {
+      "file": "本轮数值结果.md",
+      "byte_identical_to_integrated_original": true
+    }
+  ],
+  "read_only_source_preservation": true
+}

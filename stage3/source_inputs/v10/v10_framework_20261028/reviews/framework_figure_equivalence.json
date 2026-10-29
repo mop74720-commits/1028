@@ -1,0 +1,35 @@
+{
+  "scope": "Current P1/P2/P3 and S4 translation equivalence; no compilation, experiment run or figure write.",
+  "mode": "figures only",
+  "sections": {},
+  "figures": {
+    "numerical_data_artists_scales_ticks_styles_identical": true,
+    "figure_names": [
+      "framework_matrix_checks.pdf",
+      "framework_closed_loop_checks.pdf",
+      "new_baseline_results.pdf",
+      "new_baseline_verification.pdf"
+    ],
+    "panel_count": 11,
+    "compared": [
+      "figure size",
+      "data arrays",
+      "axis scales and limits",
+      "tick values",
+      "line colors and widths",
+      "markers",
+      "bar geometry",
+      "hatches"
+    ],
+    "intentionally_excluded": [
+      "translated labels",
+      "CJK font encoding",
+      "automatic text-width layout adjustments"
+    ]
+  },
+  "renderer_files": {
+    "build_manuscript_assets.py": "d2023bf874af13e398577c69ea98fac901e454b6ea8079196110b292cd0cc783",
+    "supplement_figures.py": "c6215e36ee911478216d1670db387fc219e2aea1b1c4bb86b667e007def5d1c7"
+  },
+  "layout_review": "Separate root PDF review; this program does not compile LaTeX."
+}

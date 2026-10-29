@@ -1,0 +1,86 @@
+{
+  "scope": "v10 known-kinetic, full-cosine, proportional-damping example; display-precision coefficients.",
+  "nu": [
+    1.0,
+    6.152117504
+  ],
+  "d": [
+    0.225670773,
+    0.321798806
+  ],
+  "gamma": 0.04866175530392844,
+  "T": 5.0,
+  "initial_state": [
+    0.18,
+    0.16,
+    0.03,
+    -0.02
+  ],
+  "reference_tolerance_refinement_endpoint_difference": 1.120306372424564e-13,
+  "results": [
+    {
+      "method": "ordinary_midpoint",
+      "h": 0.04,
+      "endpoint_error": 0.021991701489835855,
+      "order": null,
+      "max_conformal_defect_spectral_2_norm": 2.8972333601665433e-05,
+      "max_increment_residual": 1.4716960289318237e-15
+    },
+    {
+      "method": "ordinary_midpoint",
+      "h": 0.02,
+      "endpoint_error": 0.005536045837571317,
+      "order": 1.9900314358743236,
+      "max_conformal_defect_spectral_2_norm": 3.6660257208832223e-06,
+      "max_increment_residual": 3.427054647009431e-15
+    },
+    {
+      "method": "ordinary_midpoint",
+      "h": 0.01,
+      "endpoint_error": 0.001386170368975911,
+      "order": 1.997751303724598,
+      "max_conformal_defect_spectral_2_norm": 4.5977569129829355e-07,
+      "max_increment_residual": 3.782564539367428e-15
+    },
+    {
+      "method": "ordinary_midpoint",
+      "h": 0.005,
+      "endpoint_error": 0.00034667393465050774,
+      "order": 1.999453310665643,
+      "max_conformal_defect_spectral_2_norm": 5.752671916603752e-08,
+      "max_increment_residual": 3.9772872495458245e-15
+    },
+    {
+      "method": "weighted_midpoint",
+      "h": 0.04,
+      "endpoint_error": 0.021968653340187466,
+      "order": null,
+      "max_conformal_defect_spectral_2_norm": 3.4135030015306885e-16,
+      "max_increment_residual": 1.4843811943499041e-15
+    },
+    {
+      "method": "weighted_midpoint",
+      "h": 0.02,
+      "endpoint_error": 0.005534184261010321,
+      "order": 1.9890038520079192,
+      "max_conformal_defect_spectral_2_norm": 3.381433350411912e-16,
+      "max_increment_residual": 3.436324575584182e-15
+    },
+    {
+      "method": "weighted_midpoint",
+      "h": 0.01,
+      "endpoint_error": 0.0013859538678047928,
+      "order": 1.9974914419493095,
+      "max_conformal_defect_spectral_2_norm": 3.333528145228669e-16,
+      "max_increment_residual": 3.761747857655706e-15
+    },
+    {
+      "method": "weighted_midpoint",
+      "h": 0.005,
+      "endpoint_error": 0.0003466354415600556,
+      "order": 1.9993881626649739,
+      "max_conformal_defect_spectral_2_norm": 3.3363623289655197e-16,
+      "max_increment_residual": 3.9859608669257085e-15
+    }
+  ]
+}

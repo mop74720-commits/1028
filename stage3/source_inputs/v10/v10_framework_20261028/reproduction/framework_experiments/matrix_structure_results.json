@@ -1,0 +1,863 @@
+{
+  "scope": "Dimensionless synthetic matrix verification, not a beam-modal validation",
+  "dimensions": [
+    1,
+    2,
+    4
+  ],
+  "duration": 4.0,
+  "steps": [
+    0.08,
+    0.04,
+    0.02,
+    0.01
+  ],
+  "gamma": 0.2,
+  "reference": "scipy.linalg.expm(A*t), evaluated independently at every point of the finest common grid",
+  "error": "maximum Euclidean state error over all common grid times; endpoint error also retained",
+  "conservative_control": "U=0.2*p-Ks*q on the proportional-damping plant, yielding stiffness K+Ks",
+  "central4_scope": "Only the resulting conservative quadratic Hamiltonian; not a generic damped Central4 scheme",
+  "cases": [
+    {
+      "n": 1,
+      "M": [
+        [
+          1.12
+        ]
+      ],
+      "K": [
+        [
+          1.05
+        ]
+      ],
+      "C_proportional": [
+        [
+          0.22400000000000003
+        ]
+      ],
+      "Ks": [
+        [
+          0.05
+        ]
+      ],
+      "initial_state": [
+        0.1,
+        0.0
+      ],
+      "commutator_MK_spectral2": 0.0,
+      "equivalence": [
+        {
+          "step": 0.08,
+          "maximum_trajectory_equivalence_error": 8.886119947416683e-17,
+          "minimum_singular_I_plus_E": 1.0095
+        },
+        {
+          "step": 0.04,
+          "maximum_trajectory_equivalence_error": 4.282483846487626e-16,
+          "minimum_singular_I_plus_E": 1.004375
+        },
+        {
+          "step": 0.02,
+          "maximum_trajectory_equivalence_error": 2.8752485607825645e-16,
+          "minimum_singular_I_plus_E": 1.00209375
+        },
+        {
+          "step": 0.01,
+          "maximum_trajectory_equivalence_error": 1.1443916996305594e-15,
+          "minimum_singular_I_plus_E": 1.0010234375
+        }
+      ],
+      "methods": {
+        "ordinary_midpoint": [
+          {
+            "step": 0.08,
+            "maximum_state_error": 0.00012724383929470996,
+            "endpoint_state_error": 0.00012724383929470996,
+            "RMS_state_error": 8.77688648357756e-05,
+            "observed_order": null,
+            "standard_symplectic_defect_spectral2": 0.01584943041109466,
+            "exponential_weighted_defect_spectral2": 2.324953362021084e-05
+          },
+          {
+            "step": 0.04,
+            "maximum_state_error": 3.1823773447727865e-05,
+            "endpoint_state_error": 3.1823773447727865e-05,
+            "RMS_state_error": 2.1946438605879937e-05,
+            "observed_order": 1.9994189917621152,
+            "standard_symplectic_defect_spectral2": 0.007965152457996227,
+            "exponential_weighted_defect_spectral2": 2.9327049431155545e-06
+          },
+          {
+            "step": 0.02,
+            "maximum_state_error": 7.956744540312859e-06,
+            "endpoint_state_error": 7.956744540312859e-06,
+            "RMS_state_error": 5.486518787867383e-06,
+            "observed_order": 1.9998547252249201,
+            "standard_symplectic_defect_spectral2": 0.003991642498518798,
+            "exponential_weighted_defect_spectral2": 3.681574898273269e-07
+          },
+          {
+            "step": 0.01,
+            "maximum_state_error": 1.9892362149690703e-06,
+            "endpoint_state_error": 1.9892362149690703e-06,
+            "RMS_state_error": 1.371579591290707e-06,
+            "observed_order": 1.999963679064799,
+            "standard_symplectic_defect_spectral2": 0.0019979552177068483,
+            "exponential_weighted_defect_spectral2": 4.61149601838079e-08
+          }
+        ],
+        "weighted_midpoint": [
+          {
+            "step": 0.08,
+            "maximum_state_error": 0.00012612816775783744,
+            "endpoint_state_error": 0.0001252645458352296,
+            "RMS_state_error": 8.328654039896657e-05,
+            "observed_order": null,
+            "standard_symplectic_defect_spectral2": 0.015872679944714974,
+            "exponential_weighted_defect_spectral2": 1.1115997139795845e-16
+          },
+          {
+            "step": 0.04,
+            "maximum_state_error": 3.154994019138371e-05,
+            "endpoint_state_error": 3.133319745006431e-05,
+            "RMS_state_error": 2.0822883392950277e-05,
+            "observed_order": 1.9991813281982427,
+            "standard_symplectic_defect_spectral2": 0.007968085162939457,
+            "exponential_weighted_defect_spectral2": 1.1393113100035287e-16
+          },
+          {
+            "step": 0.02,
+            "maximum_state_error": 7.888707209518353e-06,
+            "endpoint_state_error": 7.834366461162508e-06,
+            "RMS_state_error": 5.204933593108204e-06,
+            "observed_order": 1.9997764724771687,
+            "standard_symplectic_defect_spectral2": 0.003992010656008627,
+            "exponential_weighted_defect_spectral2": 1.1130033432764152e-16
+          },
+          {
+            "step": 0.01,
+            "maximum_state_error": 1.9722554228697466e-06,
+            "endpoint_state_error": 1.9586583222987957e-06,
+            "RMS_state_error": 1.301075734903074e-06,
+            "observed_order": 1.9999424883558385,
+            "standard_symplectic_defect_spectral2": 0.001998001332666699,
+            "exponential_weighted_defect_spectral2": 2.222468753793785e-16
+          }
+        ],
+        "conservative_midpoint": [
+          {
+            "step": 0.08,
+            "maximum_state_error": 0.0002183279474487991,
+            "endpoint_state_error": 0.0002183279474487991,
+            "RMS_state_error": 0.00012941918771265586,
+            "observed_order": null,
+            "standard_symplectic_defect_spectral2": 1.1150788898728297e-16,
+            "exponential_weighted_defect_spectral2": 0.01587267994471475
+          },
+          {
+            "step": 0.04,
+            "maximum_state_error": 5.461613825115691e-05,
+            "endpoint_state_error": 5.461613825115691e-05,
+            "RMS_state_error": 3.230802292079539e-05,
+            "observed_order": 1.9990976028014555,
+            "standard_symplectic_defect_spectral2": 2.0746233726171367e-18,
+            "exponential_weighted_defect_spectral2": 0.007968085162939342
+          },
+          {
+            "step": 0.02,
+            "maximum_state_error": 1.3656170647531207e-05,
+            "endpoint_state_error": 1.3656170647531207e-05,
+            "RMS_state_error": 8.069699681337213e-06,
+            "observed_order": 1.999774317413822,
+            "standard_symplectic_defect_spectral2": 1.270770520379039e-18,
+            "exponential_weighted_defect_spectral2": 0.003992010656008516
+          },
+          {
+            "step": 0.01,
+            "maximum_state_error": 3.4141761923840116e-06,
+            "endpoint_state_error": 3.4141761923840116e-06,
+            "RMS_state_error": 2.016420377016116e-06,
+            "observed_order": 1.9999435742186833,
+            "standard_symplectic_defect_spectral2": 6.376639348308653e-19,
+            "exponential_weighted_defect_spectral2": 0.001998001332666921
+          }
+        ],
+        "conservative_central4": [
+          {
+            "step": 0.08,
+            "maximum_state_error": 1.3722078984982732e-07,
+            "endpoint_state_error": 1.3722078984982732e-07,
+            "RMS_state_error": 8.13481653940069e-08,
+            "observed_order": null,
+            "standard_symplectic_defect_spectral2": 2.125401627736787e-18,
+            "exponential_weighted_defect_spectral2": 0.015872679944714863
+          },
+          {
+            "step": 0.04,
+            "maximum_state_error": 8.582319611993796e-09,
+            "endpoint_state_error": 8.582319611993796e-09,
+            "RMS_state_error": 5.076961128401985e-09,
+            "observed_order": 3.9989876364800114,
+            "standard_symplectic_defect_spectral2": 1.765319270949009e-18,
+            "exponential_weighted_defect_spectral2": 0.007968085162939344
+          },
+          {
+            "step": 0.02,
+            "maximum_state_error": 5.364894034682352e-10,
+            "endpoint_state_error": 5.364894034682352e-10,
+            "RMS_state_error": 3.1702371531669717e-10,
+            "observed_order": 3.999746048307962,
+            "standard_symplectic_defect_spectral2": 1.345315761833931e-18,
+            "exponential_weighted_defect_spectral2": 0.003992010656008516
+          },
+          {
+            "step": 0.01,
+            "maximum_state_error": 3.353186210274649e-11,
+            "endpoint_state_error": 3.353186210274649e-11,
+            "RMS_state_error": 1.980398046289756e-11,
+            "observed_order": 3.9999451690076557,
+            "standard_symplectic_defect_spectral2": 2.222465967236008e-16,
+            "exponential_weighted_defect_spectral2": 0.001998001332667143
+          }
+        ]
+      },
+      "general_drag_algebra_only": {
+        "C": [
+          [
+            0.254
+          ]
+        ],
+        "commutator_MC_spectral2": 0.0,
+        "equivalence": [
+          {
+            "step": 0.08,
+            "maximum_trajectory_equivalence_error": 1.9292121753525021e-16
+          },
+          {
+            "step": 0.04,
+            "maximum_trajectory_equivalence_error": 4.122076774437418e-16
+          },
+          {
+            "step": 0.02,
+            "maximum_trajectory_equivalence_error": 7.066097494957106e-16
+          },
+          {
+            "step": 0.01,
+            "maximum_trajectory_equivalence_error": 2.1228933251263785e-15
+          }
+        ]
+      }
+    },
+    {
+      "n": 2,
+      "M": [
+        [
+          1.12,
+          0.12
+        ],
+        [
+          0.12,
+          1.3199999999999998
+        ]
+      ],
+      "K": [
+        [
+          1.05,
+          0.05
+        ],
+        [
+          0.05,
+          2.05
+        ]
+      ],
+      "C_proportional": [
+        [
+          0.22400000000000003,
+          0.024
+        ],
+        [
+          0.024,
+          0.26399999999999996
+        ]
+      ],
+      "Ks": [
+        [
+          0.05,
+          0.0
+        ],
+        [
+          0.0,
+          0.1
+        ]
+      ],
+      "initial_state": [
+        0.1,
+        0.06,
+        0.0,
+        0.02
+      ],
+      "commutator_MK_spectral2": 0.10999999999999999,
+      "equivalence": [
+        {
+          "step": 0.08,
+          "maximum_trajectory_equivalence_error": 3.9831551566108906e-16,
+          "minimum_singular_I_plus_E": 1.0094897744340263
+        },
+        {
+          "step": 0.04,
+          "maximum_trajectory_equivalence_error": 3.6190793567630626e-16,
+          "minimum_singular_I_plus_E": 1.0043724432737442
+        },
+        {
+          "step": 0.02,
+          "maximum_trajectory_equivalence_error": 2.4605328117723654e-15,
+          "minimum_singular_I_plus_E": 1.002093110797377
+        },
+        {
+          "step": 0.01,
+          "maximum_trajectory_equivalence_error": 4.767133817711916e-15,
+          "minimum_singular_I_plus_E": 1.0010232776980241
+        }
+      ],
+      "methods": {
+        "ordinary_midpoint": [
+          {
+            "step": 0.08,
+            "maximum_state_error": 0.0002376262920087825,
+            "endpoint_state_error": 0.00020718797526570303,
+            "RMS_state_error": 0.0001633528559186581,
+            "observed_order": null,
+            "standard_symplectic_defect_spectral2": 0.01584959095694721,
+            "exponential_weighted_defect_spectral2": 3.9280077796630225e-05
+          },
+          {
+            "step": 0.04,
+            "maximum_state_error": 5.9466970697460735e-05,
+            "endpoint_state_error": 5.184898511572381e-05,
+            "RMS_state_error": 4.0899534658717516e-05,
+            "observed_order": 1.9985339805607507,
+            "standard_symplectic_defect_spectral2": 0.007965172734054934,
+            "exponential_weighted_defect_spectral2": 4.958554732804863e-06
+          },
+          {
+            "step": 0.02,
+            "maximum_state_error": 1.4868522048022935e-05,
+            "endpoint_state_error": 1.2965504125063111e-05,
+            "RMS_state_error": 1.0231236562677022e-05,
+            "observed_order": 1.99982733676132,
+            "standard_symplectic_defect_spectral2": 0.003991645044657837,
+            "exponential_weighted_defect_spectral2": 6.225913435908769e-07
+          },
+          {
+            "step": 0.01,
+            "maximum_state_error": 3.717297516863692e-06,
+            "endpoint_state_error": 3.2415797790782206e-06,
+            "RMS_state_error": 2.558522198244573e-06,
+            "observed_order": 1.9999351834251444,
+            "standard_symplectic_defect_spectral2": 0.0019979555366575977,
+            "exponential_weighted_defect_spectral2": 7.798875876350239e-08
+          }
+        ],
+        "weighted_midpoint": [
+          {
+            "step": 0.08,
+            "maximum_state_error": 0.0002466969673424394,
+            "endpoint_state_error": 0.00019677034817221984,
+            "RMS_state_error": 0.00016152568974608472,
+            "observed_order": null,
+            "standard_symplectic_defect_spectral2": 0.015872679944714974,
+            "exponential_weighted_defect_spectral2": 1.1631328813672391e-16
+          },
+          {
+            "step": 0.04,
+            "maximum_state_error": 6.17218933879404e-05,
+            "endpoint_state_error": 4.9234865323163564e-05,
+            "RMS_state_error": 4.04678304596209e-05,
+            "observed_order": 1.9988857566482017,
+            "standard_symplectic_defect_spectral2": 0.007968085162939233,
+            "exponential_weighted_defect_spectral2": 2.221241727165367e-16
+          },
+          {
+            "step": 0.02,
+            "maximum_state_error": 1.543345242692059e-05,
+            "endpoint_state_error": 1.2311367770538418e-05,
+            "RMS_state_error": 1.012567794414437e-05,
+            "observed_order": 1.9997214933774676,
+            "standard_symplectic_defect_spectral2": 0.003992010656008738,
+            "exponential_weighted_defect_spectral2": 2.2269669875486244e-16
+          },
+          {
+            "step": 0.01,
+            "maximum_state_error": 3.858695169158416e-06,
+            "endpoint_state_error": 3.078007799188628e-06,
+            "RMS_state_error": 2.5323791179126497e-06,
+            "observed_order": 1.9998758426328538,
+            "standard_symplectic_defect_spectral2": 0.0019980013326669215,
+            "exponential_weighted_defect_spectral2": 1.1122236045648822e-18
+          }
+        ],
+        "conservative_midpoint": [
+          {
+            "step": 0.08,
+            "maximum_state_error": 0.00035691768988407364,
+            "endpoint_state_error": 0.0003309046162394744,
+            "RMS_state_error": 0.000237077951517094,
+            "observed_order": null,
+            "standard_symplectic_defect_spectral2": 3.782626419347622e-18,
+            "exponential_weighted_defect_spectral2": 0.015872679944714866
+          },
+          {
+            "step": 0.04,
+            "maximum_state_error": 8.931432014674613e-05,
+            "endpoint_state_error": 8.281462628606553e-05,
+            "RMS_state_error": 5.932337605148155e-05,
+            "observed_order": 1.9986279948746382,
+            "standard_symplectic_defect_spectral2": 2.2205135548536623e-16,
+            "exponential_weighted_defect_spectral2": 0.007968085162939342
+          },
+          {
+            "step": 0.02,
+            "maximum_state_error": 2.233289643199311e-05,
+            "endpoint_state_error": 2.0709203876341452e-05,
+            "RMS_state_error": 1.4834677859301966e-05,
+            "observed_order": 1.9997211358595783,
+            "standard_symplectic_defect_spectral2": 1.1102502034950915e-16,
+            "exponential_weighted_defect_spectral2": 0.0039920106560085164
+          },
+          {
+            "step": 0.01,
+            "maximum_state_error": 5.583648283391888e-06,
+            "endpoint_state_error": 5.177647953507744e-06,
+            "RMS_state_error": 3.7089682358038356e-06,
+            "observed_order": 1.99989039800659,
+            "standard_symplectic_defect_spectral2": 2.22602108476845e-16,
+            "exponential_weighted_defect_spectral2": 0.001998001332667143
+          }
+        ],
+        "conservative_central4": [
+          {
+            "step": 0.08,
+            "maximum_state_error": 3.2931970145780443e-07,
+            "endpoint_state_error": 2.9179730779467845e-07,
+            "RMS_state_error": 2.162133228920506e-07,
+            "observed_order": null,
+            "standard_symplectic_defect_spectral2": 2.2213595236939884e-16,
+            "exponential_weighted_defect_spectral2": 0.01587267994471507
+          },
+          {
+            "step": 0.04,
+            "maximum_state_error": 2.061361474387719e-08,
+            "endpoint_state_error": 1.8256908736234837e-08,
+            "RMS_state_error": 1.3532942119192987e-08,
+            "observed_order": 3.9978194043322635,
+            "standard_symplectic_defect_spectral2": 6.6056432214133115e-18,
+            "exponential_weighted_defect_spectral2": 0.007968085162939342
+          },
+          {
+            "step": 0.02,
+            "maximum_state_error": 1.2887045485533843e-09,
+            "endpoint_state_error": 1.1413627991570402e-09,
+            "RMS_state_error": 8.462113384117729e-10,
+            "observed_order": 3.99960406284114,
+            "standard_symplectic_defect_spectral2": 2.2229071274659297e-16,
+            "exponential_weighted_defect_spectral2": 0.0039920106560087385
+          },
+          {
+            "step": 0.01,
+            "maximum_state_error": 8.055446458073549e-11,
+            "endpoint_state_error": 7.134063615313689e-11,
+            "RMS_state_error": 5.289782685028813e-11,
+            "observed_order": 3.9998131858874397,
+            "standard_symplectic_defect_spectral2": 2.2280269692839435e-16,
+            "exponential_weighted_defect_spectral2": 0.001998001332666922
+          }
+        ]
+      },
+      "general_drag_algebra_only": {
+        "C": [
+          [
+            0.23000000000000004,
+            0.036000000000000004
+          ],
+          [
+            0.036000000000000004,
+            0.288
+          ]
+        ],
+        "commutator_MC_spectral2": 0.0002400000000000041,
+        "equivalence": [
+          {
+            "step": 0.08,
+            "maximum_trajectory_equivalence_error": 1.7179894178292947e-16
+          },
+          {
+            "step": 0.04,
+            "maximum_trajectory_equivalence_error": 7.204116746897488e-16
+          },
+          {
+            "step": 0.02,
+            "maximum_trajectory_equivalence_error": 7.297909709372427e-16
+          },
+          {
+            "step": 0.01,
+            "maximum_trajectory_equivalence_error": 2.133792378997333e-15
+          }
+        ]
+      }
+    },
+    {
+      "n": 4,
+      "M": [
+        [
+          1.12,
+          0.12,
+          0.12,
+          0.12
+        ],
+        [
+          0.12,
+          1.3199999999999998,
+          0.12,
+          0.12
+        ],
+        [
+          0.12,
+          0.12,
+          1.52,
+          0.12
+        ],
+        [
+          0.12,
+          0.12,
+          0.12,
+          1.7200000000000002
+        ]
+      ],
+      "K": [
+        [
+          1.05,
+          0.05,
+          0.05,
+          0.05
+        ],
+        [
+          0.05,
+          2.05,
+          0.05,
+          0.05
+        ],
+        [
+          0.05,
+          0.05,
+          3.05,
+          0.05
+        ],
+        [
+          0.05,
+          0.05,
+          0.05,
+          4.05
+        ]
+      ],
+      "C_proportional": [
+        [
+          0.22400000000000003,
+          0.024,
+          0.024,
+          0.024
+        ],
+        [
+          0.024,
+          0.26399999999999996,
+          0.024,
+          0.024
+        ],
+        [
+          0.024,
+          0.024,
+          0.30400000000000005,
+          0.024
+        ],
+        [
+          0.024,
+          0.024,
+          0.024,
+          0.3440000000000001
+        ]
+      ],
+      "Ks": [
+        [
+          0.05,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.1,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.15000000000000002,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.2
+        ]
+      ],
+      "initial_state": [
+        0.1,
+        0.06,
+        0.04,
+        0.025,
+        0.0,
+        0.02,
+        -0.01,
+        0.005
+      ],
+      "commutator_MK_spectral2": 0.4919349550499537,
+      "equivalence": [
+        {
+          "step": 0.08,
+          "maximum_trajectory_equivalence_error": 5.869469629645792e-16,
+          "minimum_singular_I_plus_E": 1.0094699295703082
+        },
+        {
+          "step": 0.04,
+          "maximum_trajectory_equivalence_error": 3.198766118781555e-16,
+          "minimum_singular_I_plus_E": 1.0043674798150237
+        },
+        {
+          "step": 0.02,
+          "maximum_trajectory_equivalence_error": 2.167585400844494e-15,
+          "minimum_singular_I_plus_E": 1.0020918697915495
+        },
+        {
+          "step": 0.01,
+          "maximum_trajectory_equivalence_error": 5.395928687344485e-15,
+          "minimum_singular_I_plus_E": 1.00102296743772
+        }
+      ],
+      "methods": {
+        "ordinary_midpoint": [
+          {
+            "step": 0.08,
+            "maximum_state_error": 0.00038844298522032033,
+            "endpoint_state_error": 0.00038844298522032033,
+            "RMS_state_error": 0.00024913831340983735,
+            "observed_order": null,
+            "standard_symplectic_defect_spectral2": 0.0158499025392571,
+            "exponential_weighted_defect_spectral2": 6.069312404101785e-05
+          },
+          {
+            "step": 0.04,
+            "maximum_state_error": 9.725169915810928e-05,
+            "endpoint_state_error": 9.725169915810928e-05,
+            "RMS_state_error": 6.226815062365822e-05,
+            "observed_order": 1.997907496818853,
+            "standard_symplectic_defect_spectral2": 0.007965212096944238,
+            "exponential_weighted_defect_spectral2": 7.669400849503685e-06
+          },
+          {
+            "step": 0.02,
+            "maximum_state_error": 2.432173119327591e-05,
+            "endpoint_state_error": 2.432173119327591e-05,
+            "RMS_state_error": 1.556164634413485e-05,
+            "observed_order": 1.9994775349018816,
+            "standard_symplectic_defect_spectral2": 0.003991649987971646,
+            "exponential_weighted_defect_spectral2": 9.632078996556275e-07
+          },
+          {
+            "step": 0.01,
+            "maximum_state_error": 6.080983149373624e-06,
+            "endpoint_state_error": 6.080983149373624e-06,
+            "RMS_state_error": 3.8895319203063874e-06,
+            "observed_order": 1.999869424951627,
+            "standard_symplectic_defect_spectral2": 0.001997956155910469,
+            "exponential_weighted_defect_spectral2": 1.2066371952236714e-07
+          }
+        ],
+        "weighted_midpoint": [
+          {
+            "step": 0.08,
+            "maximum_state_error": 0.00035627556821847257,
+            "endpoint_state_error": 0.00035627556821847257,
+            "RMS_state_error": 0.00024374563338473525,
+            "observed_order": null,
+            "standard_symplectic_defect_spectral2": 0.015872679944714974,
+            "exponential_weighted_defect_spectral2": 2.360123113749838e-16
+          },
+          {
+            "step": 0.04,
+            "maximum_state_error": 8.924549240490052e-05,
+            "endpoint_state_error": 8.924549240490052e-05,
+            "RMS_state_error": 6.098133057996022e-05,
+            "observed_order": 1.9971423445882295,
+            "standard_symplectic_defect_spectral2": 0.00796808516293956,
+            "exponential_weighted_defect_spectral2": 3.331969393595054e-16
+          },
+          {
+            "step": 0.02,
+            "maximum_state_error": 2.2322429497074845e-05,
+            "endpoint_state_error": 2.2322429497074845e-05,
+            "RMS_state_error": 1.5246727461250753e-05,
+            "observed_order": 1.9992852498841602,
+            "standard_symplectic_defect_spectral2": 0.003992010656008627,
+            "exponential_weighted_defect_spectral2": 1.1340634034362053e-16
+          },
+          {
+            "step": 0.01,
+            "maximum_state_error": 5.5812986950362245e-06,
+            "endpoint_state_error": 5.5812986950362245e-06,
+            "RMS_state_error": 3.8115955400489636e-06,
+            "observed_order": 1.9998212912672735,
+            "standard_symplectic_defect_spectral2": 0.0019980013326670325,
+            "exponential_weighted_defect_spectral2": 2.224566274066163e-16
+          }
+        ],
+        "conservative_midpoint": [
+          {
+            "step": 0.08,
+            "maximum_state_error": 0.0006141814193915084,
+            "endpoint_state_error": 0.0006141814193915084,
+            "RMS_state_error": 0.0003595881021153911,
+            "observed_order": null,
+            "standard_symplectic_defect_spectral2": 3.331204761871937e-16,
+            "exponential_weighted_defect_spectral2": 0.015872679944715053
+          },
+          {
+            "step": 0.04,
+            "maximum_state_error": 0.000153846795827649,
+            "endpoint_state_error": 0.000153846795827649,
+            "RMS_state_error": 8.979129702939463e-05,
+            "observed_order": 1.9971704707157565,
+            "standard_symplectic_defect_spectral2": 1.1323650727375748e-16,
+            "exponential_weighted_defect_spectral2": 0.007968085162939344
+          },
+          {
+            "step": 0.02,
+            "maximum_state_error": 3.848056212827753e-05,
+            "endpoint_state_error": 3.848056212827753e-05,
+            "RMS_state_error": 2.242782115557962e-05,
+            "observed_order": 1.9992926175044632,
+            "standard_symplectic_defect_spectral2": 4.447377915325134e-16,
+            "exponential_weighted_defect_spectral2": 0.003992010656008959
+          },
+          {
+            "step": 0.01,
+            "maximum_state_error": 9.621319840773195e-06,
+            "endpoint_state_error": 9.621319840773195e-06,
+            "RMS_state_error": 5.6040375761071175e-06,
+            "observed_order": 1.9998231545020153,
+            "standard_symplectic_defect_spectral2": 2.223065231626288e-16,
+            "exponential_weighted_defect_spectral2": 0.0019980013326671435
+          }
+        ],
+        "conservative_central4": [
+          {
+            "step": 0.08,
+            "maximum_state_error": 8.004188888191906e-07,
+            "endpoint_state_error": 8.004188888191906e-07,
+            "RMS_state_error": 4.1734555277261705e-07,
+            "observed_order": null,
+            "standard_symplectic_defect_spectral2": 2.227603454882269e-16,
+            "exponential_weighted_defect_spectral2": 0.015872679944715085
+          },
+          {
+            "step": 0.04,
+            "maximum_state_error": 5.010371380935772e-08,
+            "endpoint_state_error": 5.010371380935772e-08,
+            "RMS_state_error": 2.6006699703353074e-08,
+            "observed_order": 3.9977657647574865,
+            "standard_symplectic_defect_spectral2": 3.331824901244083e-16,
+            "exponential_weighted_defect_spectral2": 0.007968085162939353
+          },
+          {
+            "step": 0.02,
+            "maximum_state_error": 3.132693949898194e-09,
+            "endpoint_state_error": 3.132693949898194e-09,
+            "RMS_state_error": 1.6224397742646866e-09,
+            "observed_order": 3.999441806563162,
+            "standard_symplectic_defect_spectral2": 2.220734117243842e-16,
+            "exponential_weighted_defect_spectral2": 0.003992010656008516
+          },
+          {
+            "step": 0.01,
+            "maximum_state_error": 1.958118964090621e-10,
+            "endpoint_state_error": 1.958118964090621e-10,
+            "RMS_state_error": 1.0130054628704795e-10,
+            "observed_order": 3.9998635091772727,
+            "standard_symplectic_defect_spectral2": 2.240833916135688e-16,
+            "exponential_weighted_defect_spectral2": 0.001998001332667143
+          }
+        ]
+      },
+      "general_drag_algebra_only": {
+        "C": [
+          [
+            0.22500000000000003,
+            0.026000000000000002,
+            0.027,
+            0.028
+          ],
+          [
+            0.026000000000000002,
+            0.26799999999999996,
+            0.03,
+            0.032
+          ],
+          [
+            0.027,
+            0.03,
+            0.31300000000000006,
+            0.036000000000000004
+          ],
+          [
+            0.028,
+            0.032,
+            0.036000000000000004,
+            0.3600000000000001
+          ]
+        ],
+        "commutator_MC_spectral2": 0.0023664319132398466,
+        "equivalence": [
+          {
+            "step": 0.08,
+            "maximum_trajectory_equivalence_error": 1.2238077625933781e-15
+          },
+          {
+            "step": 0.04,
+            "maximum_trajectory_equivalence_error": 1.3061419525960576e-15
+          },
+          {
+            "step": 0.02,
+            "maximum_trajectory_equivalence_error": 1.4555239682725265e-15
+          },
+          {
+            "step": 0.01,
+            "maximum_trajectory_equivalence_error": 4.692598227181877e-15
+          }
+        ]
+      }
+    }
+  ],
+  "status": "all assertions passed",
+  "provenance": {
+    "baseline_file": "../new_baseline.json",
+    "baseline_sha256": "2bac37b2f4444efc6a0ba742139fbf0b35e268e9f4f3597ba13a0793bc2049ac",
+    "script_sha256": "91868f920d3f068d9e00cac22149402bda777d6ca72e4d31dfec28678bc48eb0",
+    "common_sha256": "c31934c80b01c72a877ce7aa858663461a1dcb39d8e76c3c686305e7518d83c8",
+    "environment": {
+      "python": "3.12.14",
+      "numpy": "2.3.5",
+      "scipy": "1.17.0"
+    },
+    "scope": "Synthetic numerical verification on the declared model; no interval, hardware or full-network certificate."
+  }
+}

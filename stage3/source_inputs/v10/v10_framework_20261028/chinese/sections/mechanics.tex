@@ -1,0 +1,280 @@
+\subsection{变分力学与保守项、受迫项的分离}
+\label{mech:variational}
+残差补偿构造在降维、辨识、离散和驱动中始终使用同一个力学对象。
+首先给出一般变分模型，再将其具体化为动能已知的两模态磁驱动梁。
+控制目标保留耦合磁势；学习项表示保守势能残差和有效阻尼率。
+下文的参数选值用于确定这一对象及其物理输入尺度。
+
+力学建模从中心线为 $r(s,t)$、截面标架为 $D(s,t)\in SO(3)$ 的杆出发，
+其中 $s\in[0,L]$ 为参考弧长。满足本质边界条件及所施加杆约束的构形映射
+$(r(s,q),D(s,q))$ 同时确定平动动能和转动动能 \citep{simo,antman}。
+空间降维后，记
+\begin{equation}
+ T=\tfrac12\dot q^{\mathsf T}M(q)\dot q,\qquad V=V(q),
+ \label{mech:general-energy}
+\end{equation}
+其中 $M(q)=M(q)^{\mathsf T}\succ0$。弹性和给定静磁场对 $V$ 作出贡献；
+磁场的调制则向系统做功。对于永久磁偶极子，相互作用势 $-m\cdot B$ 给出
+$\tau=m\times B$ 和 $F=\nabla(m\cdot B)$，其中空间求导时保持取向不变
+\citep{abbott}。
+
+令 $c_{\rm geo}(q,\dot q)$ 为 $M$ 的导数产生的惯性项，
+$\mathcal D_N(q,\dot q)$ 为瑞利耗散势，$B_u(q)u$ 表示广义控制力。
+变分方程及其勒让德变换为
+\begin{align}
+ M\ddot q+c_{\rm geo}+\nabla V
+ &=Q_{\rm drv}-\partial_{\dot q}\mathcal D_N+B_u u,
+ \label{mech:general-lagrange}\\
+ p&=M(q)\dot q,\qquad
+ H=\tfrac12p^{\mathsf T}M(q)^{-1}p+V,\nonumber\\
+ \dot q&=H_p,\qquad v=H_p,\nonumber\\
+ \dot p&=-H_q-\partial_v\mathcal D_N(q,v)+Q_{\rm drv}+B_u u.
+ \label{mech:general-hamiltonian}
+\end{align}
+特别地，$(H_q)_i$ 包含 $p^{\mathsf T}(\partial_{q_i}M^{-1})p/2$。
+几何惯性并非额外的耗散力。在相应模型明确后，流体作用、移动边界做功和接触损失
+可保留在 $Q_{\rm drv}$ 中。补充材料~\ref{sm:general} 的推导保留了这些区别，
+其中也包括运动流体可以向杆提供机械能这一事实。
+下文的解析持续性结果仅限于光滑、无接触的邻域。
+
+\subsection{以文献为依据的物理基准}
+\label{mech:benchmark}
+为获得可复现的实例，将上述表述具体化为平面内的均匀圆截面悬臂梁，
+并在远端附加刚性磁芯。该模型根部固定，无横向重力、外部流动、接触或流体附加质量。
+这是以远程操控（包括微重力场景）为动机的无重力力学基准，
+并非针对特定患者的导管模型。Euler--Bernoulli 运动学忽略剪切变形和分布式转动惯量。
+端部转角近似为 $\vartheta=w_s(L,t)$；保留其三角函数形式的磁势能，
+并不消除这一小斜率近似。
+
+以 $\zeta_j^{\mathrm{d}}$ 表示模态阻尼比。
+表~\ref{mech:parameters} 区分了实测材料参考值、标称磁性规格和设计选值。
+Sylgard 184 参考材料采用约 $10$ wt\% 的固化剂，
+在 $80\,^{\circ}\mathrm C$ 下固化 $2$ h \citep{cho2021pdms}。
+文献报告的 $E$ 和密度是该制备条件下的近似参考值，并非本文圆柱试件的实测值。
+固化剂质量分数为 $10$ wt\% 时，基料与固化剂的质量比约为 $9{:}1$，而非 $10{:}1$。
+
+\begin{table*}[t]
+\centering\small
+\caption{修订后力学基准的输入参数。标为设计选值或情景的数值均非实验估计。}
+\label{mech:parameters}
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{p{0.27\textwidth}p{0.22\textwidth}p{0.44\textwidth}}
+\toprule
+物理量 & 数值 & 依据与解释\\
+\midrule
+梁长 $L$、半径 $r$ & $80$ mm、$0.6$ mm & 均匀实心梁的指定几何尺寸。\\
+杨氏模量 $E$ & 约 $2.1$ MPa & Sylgard 184 材料参考值，制备条件见正文 \citep{cho2021pdms}。\\
+质量密度 $\rho$ & 约 $1028\,\mathrm{kg\,m^{-3}}$ & 同一材料参考文献 \citep{cho2021pdms}；不声称已对同批试件进行标定。\\
+裸磁芯边长 $a_m$ & $0.250$ mm & 指定的立方磁芯设计；不计涂层和胶黏剂。\\
+剩余磁通密度 $B_r$ & 标称值 $1.425$ T & N50 牌号范围 $1.40$--$1.45$ T 的中点 \citep{smN50}。\\
+磁芯密度 $\rho_m$ & 标称值 $7500\,\mathrm{kg\,m^{-3}}$ & 取制造商声明的规格下限；并非单个磁芯的密度实测值 \citep{smN50}。\\
+轴向偏置场 $B_0$ & $30$ mT & 设计选值；已发表的 OctoMag 实验提供了 $40$ mT 矢量磁场能力的参照 \citep{lussi2021cvs}。\\
+第一模态阻尼比 $\zeta_1^{\mathrm{d}}$ & $0.025$ & 有效阻尼情景，相对于包含端部惯量的偏置场下频率定义。\\
+有效中心线净空 $c$ & $4$ mm & 设计比较值，已从通道半宽中扣除杆半径。\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+对于均匀磁化的硬磁芯，采用工程近似 $\mu\simeq B_ra_m^3/\mu_0$，
+其中 $\mu_0\simeq4\pi10^{-7}\,\mathrm{H\,m^{-1}}$ \citep{kjMoment}。
+标称磁偶极矩及惯性参数为
+\begin{align}
+ \mu&=1.77184214\times10^{-5}\,\mathrm{A\,m^2},\nonumber\\
+ m_t=\rho_ma_m^3&=1.171875\times10^{-7}\,\mathrm{kg},\nonumber\\
+ J_t=m_ta_m^2/6&=1.220703125\times10^{-15}\,\mathrm{kg\,m^2}.
+ \label{mech:core-properties}
+\end{align}
+将磁芯质心理想化为位于梁端点。偏心安装会引入惯性耦合，并改变载荷力臂。
+该磁偶极矩估计不表征实际装置的磁化历史、涂层或制造公差。
+这些假设定义了一个自洽的数值对象，没有混用不同复合材料机器人的材料参数。
+
+\subsection{边界惯量、有限元与储存能量}
+\label{mech:finite-elements}
+令 $A_c=\pi r^2$、$I=\pi r^4/4$，并采用有效阻尼模型 $C=\alpha M_f$。
+对应连续梁的内部方程和固支边界条件为
+\begin{align}
+ \rho A_cw_{tt}+\alpha\rho A_cw_t+EIw_{ssss}&=0,\nonumber\\
+ w(0,t)=w_s(0,t)&=0.
+ \label{mech:beam}
+\end{align}
+以 $F$ 表示横向端力，$\tau_B=\mu B_y\cos\vartheta$ 表示主动端部磁力矩，
+自然端部平衡条件为
+\begin{align}
+ -EIw_{sss}(L)&=F-m_t[w_{tt}(L)+\alpha w_t(L)],\nonumber\\
+ EIw_{ss}(L)&=\tau_B-\mu B_0\sin\vartheta\nonumber\\
+ &\quad-J_t(\ddot\vartheta+\alpha\dot\vartheta).
+ \label{mech:endpoint-balance}
+\end{align}
+因此，端部转动仍是自由的。端部阻尼项属于所声明的 $C=\alpha M_f$ 近似，
+并非对磁芯损耗的独立测量。
+
+令 $q$ 汇集不受约束的 Hermite 位移和斜率坐标，
+$e_w,e_\vartheta$ 分别选取其端部值。由弱形式得到
+\begin{align}
+ M_f&=M_{\rm beam}+m_te_we_w^{\mathsf T}
+                         +J_te_\vartheta e_\vartheta^{\mathsf T},\nonumber\\
+ M_f\ddot q+\alpha M_f\dot q+K_{\rm beam}q
+ &=e_wF+e_\vartheta(\tau_B-\mu B_0\sin\vartheta),\nonumber\\
+ \vartheta&=e_\vartheta^{\mathsf T}q.
+ \label{mech:fe-plant}
+\end{align}
+取 $p=M_f\dot q$ 和 $E_0=\mu B_0$，标称物理哈密顿量为
+\begin{align}
+ H_0(q,p)&=\tfrac12p^{\mathsf T}M_f^{-1}p
+             +\tfrac12q^{\mathsf T}K_{\rm beam}q\nonumber\\
+ &\quad+E_0[1-\cos\vartheta].
+ \label{mech:fe-energy}
+\end{align}
+这里 $E_0=5.31552642\times10^{-7}\,\mathrm J$。
+偏置场储存能量，而 $F$ 和 $B_y$ 通过不同的物理端口做功。其功率平衡为
+\begin{equation}
+ \dot H_0=-\alpha\dot q^{\mathsf T}M_f\dot q
+              +F\dot w(L)+\tau_B\dot\vartheta.
+ \label{mech:physical-power}
+\end{equation}
+
+计算采用 $32$ 个一致质量三次 Hermite 单元和 $64$ 个自由节点坐标。
+补充材料~\ref{sm:fe-check} 给出的独立端部特征方程以及 $16/32/64$ 单元比较，
+验证了前两阶频率的相对误差分别为 $9.02\times10^{-9}$ 和 $3.29\times10^{-7}$，
+对应 $32$ 个单元的离散。
+该检验针对线性离散精度；后续限制到两模态仍是另一项模型降阶。
+
+\subsection{质量归一化与正则缩放}
+\label{mech:canonical}
+将静磁场项线性化，得到
+\begin{align}
+ K_b&=K_{\rm beam}+E_0e_\vartheta e_\vartheta^{\mathsf T},\nonumber\\
+ K_b\Phi_n&=M_f\Phi_n\Omega_n^2,\qquad
+ \Phi_n^{\mathsf T}M_f\Phi_n=I_n,
+ \label{mech:modal-bias}
+\end{align}
+其中 $\Omega_n=\diag(\omega_1,\ldots,\omega_n)$。
+令 $q=\Phi_na$，则模态动量为 $\pi=\dot a$。
+只有经过该归一化，模态质量矩阵才是 $I_n$。
+设 $\omega_0=\omega_1$、$\tau=\omega_0t$、
+$\nu_j=\omega_j/\omega_0$ 和 $\mathsf N=\diag(\nu_j)$。
+平衡正则缩放为
+\begin{align}
+ a_j&=S_jX_j,\qquad S_j=\sqrt{\frac{E_0}{\omega_0\omega_j}},\nonumber\\
+ \pi_j&=\sqrt{\frac{E_0\omega_j}{\omega_0}}Y_j,
+ \qquad D_s=\diag(S_j).
+ \label{mech:scaling}
+\end{align}
+位置与动量尺度的乘积为 $E_0/\omega_0$。
+结合能量 $H_0/E_0$ 和时间 $\tau$，即可得到正则无量纲方程，
+而不是将 $M_f$ 替换为单位质量。对于 Hermite 插值行向量 $N_w(s)$，定义
+\begin{equation}
+ \ell(s)^{\mathsf T}=N_w(s)\Phi_nD_s,\qquad
+ d=D_s\Phi_n^{\mathsf T}e_\vartheta.
+ \label{mech:shape-maps}
+\end{equation}
+于是 $w(s)=\ell(s)^{\mathsf T}X$、$\vartheta=d^{\mathsf T}X$，且
+\begin{align}
+ h_0(X,Y)&=h_2(X,Y)+g(d^{\mathsf T}X),\nonumber\\
+ h_2&=\tfrac12(X^{\mathsf T}\mathsf NX+Y^{\mathsf T}\mathsf NY),\nonumber\\
+ g(s)&=1-\cos s-\tfrac12s^2.
+ \label{mech:nominal-energy}
+\end{align}
+减去二次项是为避免重复计入偏置刚度。对于两模态实例，
+\begin{align}
+ \omega_0&=7.84000916\,\mathrm{rad\,s^{-1}},\nonumber\\
+ \nu&=(1,6.04585730)^{\mathsf T},\nonumber\\
+ d&=(0.30722439,0.45042632)^{\mathsf T},\nonumber\\
+ \ell(L)&=(0.0189673443,0.00775347614)^{\mathsf T}\,\mathrm m.
+ \label{mech:reduced-values}
+\end{align}
+导出的系数保留了比此处显示值更多的位数。
+额外位数用于标识该数值基准，并不意味着具有相应的测量精度。
+在 $(X,Y,\tau)$ 中，有效质量矩阵为 $\mathsf N^{-1}$。
+表~\ref{mech:dimension-table} 集中列出残差控制器及其离散所用的坐标层级。
+$32$ 单元模型具有 $64$ 个构形坐标和 $128$ 维相空间。
+将其质量归一化模态族限制为 $n=2$ 时，质量矩阵为 $I_2$；
+随后作平衡缩放，得到 $M_{\rm eff}=\mathsf N^{-1}$。
+各质量矩阵均对应其所声明的坐标。
+对于一般的 $n$ 模态模型，相流 Jacobian $D\Phi$ 的尺寸为 $2n\times2n$，
+联合端点变换的尺寸为 $4n\times4n$；在受控两模态系统中，
+这两个尺寸分别为 $4\times4$ 和 $8\times8$。
+补充材料~\ref{ss:projection} 给出生成函数使用的端点投影。
+
+\begin{table*}[t]
+\centering\small
+\caption{同一力学基准的坐标层级。质量归一化和平衡缩放是两个独立的变换步骤。}
+\label{mech:dimension-table}
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{p{.22\textwidth}p{.24\textwidth}p{.22\textwidth}p{.23\textwidth}}
+\toprule
+层级 & 坐标与时间 & 动能质量矩阵 & 相空间状态与切映射尺寸\\
+\midrule
+完整 $32$ 单元梁 & $q,p\in\mathbb R^{64}$，物理时间 $t$ & $M_f\in\mathbb R^{64\times64}$，包含 $m_t,J_t$ & $128$；$D\Phi\in\mathbb R^{128\times128}$\\
+质量归一化的 $n$ 个模态 & $a,\pi\in\mathbb R^n$，物理时间 $t$ & $I_n$；$I_2$ 对应 $n=2$ & $2n$；$D\Phi\in\mathbb R^{2n\times2n}$\\
+平衡缩放的两模态控制器 & $X,Y\in\mathbb R^2$，$\tau=\omega_0t$ & $M_{\rm eff}=\mathsf N^{-1}$ & $4$；$D\Psi_\Delta\in\mathbb R^{4\times4}$\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+阻尼情景取 $\alpha=2\zeta_1^{\mathrm{d}}\omega_0=0.3920004581\,\mathrm{s^{-1}}$ 和
+$\gamma=\alpha/\omega_0=0.05$；这并不使每个模态具有相同的阻尼比。
+其他阻尼比作为明确声明的情景进行研究，不用不同条件下测得的材料损耗因子替代模态阻尼。
+
+\subsection{复坐标、耗散与物理输入}
+\label{mech:complex}
+令 $x=(X,Y)$ 且 $J=\left(\begin{smallmatrix}0&I\\-I&0\end{smallmatrix}\right)$。
+可逆的复坐标图为
+\begin{equation}
+ \zeta=(X+\mathrm iY)/\sqrt2,\qquad
+ \chi=(X-\mathrm iY)/\sqrt2.
+ \label{mech:complex-chart}
+\end{equation}
+在实相空间上，$\chi=\bar\zeta$。将 $\zeta,\chi$ 视为相互独立的复变量，
+得到整函数延拓
+\begin{equation}
+ h_0^{\mathbb C}(\zeta,\chi)
+ =\sum_j\nu_j\zeta_j\chi_j
+       +g\!\left(d^{\mathsf T}(\zeta+\chi)/\sqrt2\right).
+ \label{mech:complex-energy}
+\end{equation}
+采用约定 $\{\zeta_j,\bar\zeta_k\}=-\mathrm i\delta_{jk}$，则
+\begin{align}
+ \partial_{\bar\zeta}&=(\partial_X+\mathrm i\partial_Y)/\sqrt2,\nonumber\\
+ \zeta'&=-\mathrm i\partial_\chi h^{\mathbb C},\qquad
+ \chi'=\mathrm i\partial_\zeta h^{\mathbb C}.
+ \label{mech:wirtinger}
+\end{align}
+关于两个独立复变量的解析延拓，才是解析 KAM 理论使用的对象；
+实值能量不必仅关于 $\zeta$ 一个变量全纯。
+
+复哈密顿神经表示提供实值能量读出 $h_\eta$ 和无量纲耗散读出
+$\mathcal D_\eta(X,v)$，后者由物理瑞利耗散势除以 $E_0\omega_0$ 得到。
+其动力学显式定义为
+\begin{align}
+ X'&=v=\partial_Yh_\eta,\nonumber\\
+ Y'&=-\partial_Xh_\eta-\partial_v\mathcal D_\eta(X,v)+U.
+ \label{mech:decoder}
+\end{align}
+先对速度求导，再代入 $v=\partial_Yh_\eta$。
+例如，取 $\mathcal D_\eta=\widehat\gamma v^{\mathsf T}\mathsf N^{-1}v/2$、
+$\widehat\gamma\ge0$，得到
+\begin{equation}
+ h_\eta'=-v^{\mathsf T}\partial_v\mathcal D_\eta+v^{\mathsf T}U,
+ \label{mech:power}
+\end{equation}
+当参数随时间变化时，还需加上 $\partial_\tau h_\eta$。
+因此，$h_\eta+\mathrm i\mathcal D_\eta$ 是一对经解码的读出，
+不同于解析延拓 $h_\eta^{\mathbb C}$。
+复记号下的非保守项为 $\mathrm i[-\partial_v\mathcal D_\eta+U]/\sqrt2$。
+
+对于动能形式固定的两模态模型，令
+$b_j=e_w^{\mathsf T}\phi_j$、$t_j=e_\vartheta^{\mathsf T}\phi_j$。
+物理输入换算为
+\begin{align}
+ A_{\rm mag}&=\begin{pmatrix}b_1&t_1\\b_2&t_2\end{pmatrix},
+ &\Lambda&=\omega_0^2D_s\mathsf N=E_0D_s^{-1},\nonumber\\
+ \Lambda U&=A_{\rm mag}\binom{F}{\tau_B}.
+ \label{mech:modal-ports}
+\end{align}
+仅有均匀横向磁场时，$U=(B_y/B_0)d\cos\vartheta$，只提供一个输入方向。
+要实现一般的二维向量 $U$，必须具备独立调节磁场及其梯度的能力。
+第~\ref{sec:application} 节将这一接口用于学习得到的残差补偿律，
+并考察同一控制律在包含更多模态的受控对象上的作用。
+针对一般目标哈密顿量（包括学习得到的动量项）的更强实现另见
+补充材料~\ref{sm:exact-lift}；跟踪扩展在补充材料第~\ref{sec:supp-tracking} 节使用同一接口。

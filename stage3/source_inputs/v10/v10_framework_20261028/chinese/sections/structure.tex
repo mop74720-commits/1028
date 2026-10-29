@@ -1,0 +1,225 @@
+\subsection{力学模型的相容 Birkhoff 表示}
+\label{struct:birkhoff-section}
+
+第一个子问题是从定义导管的同一组力学方程出发，得到可计算的差分格式。式 \eqref{mech:general-hamiltonian} 中的一般模型将保守能量、耗散和外加力分开。对于 $z=(q,p)\in\R^{2n}$，Birkhoff 表示采用一形式 $\mathcal R(z,t)^{\mathsf T}\dd z$ 和标量 $\mathcal B$：
+\begin{equation}\label{struct:birkhoff}
+\begin{aligned}
+ \mathcal K_{ij}&=\partial_{z_i}\mathcal R_j-
+                  \partial_{z_j}\mathcal R_i,\\
+ \mathcal K\dot z&=\nabla_z\mathcal B+\partial_t\mathcal R=:b.
+\end{aligned}
+\end{equation}
+其中，$\mathcal K$ 必须非奇异且反对称，其矩阵元与 $b$ 还须满足
+\begin{equation}\label{struct:compatibility}
+\begin{aligned}
+ \partial_k\mathcal K_{ij}+\partial_i\mathcal K_{jk}
+                +\partial_j\mathcal K_{ki}&=0,\\
+ \partial_t\mathcal K_{ij}&=\partial_i b_j-\partial_j b_i.
+\end{aligned}
+\end{equation}
+这些条件将一形式、标量和向量场联系起来；不能通过彼此独立地指定它们来表示任意耗散力 \citep{su2007}。Birkhoff 矩阵的尺寸为 $2n\times2n$，质量矩阵的尺寸则为 $n\times n$。表~\ref{mech:dimension-table} 列出了有限元、模态和平衡坐标下的维度。补充材料~\ref{ss:birkhoff} 给出相容性论证，并区分形式上的局部存在性构造与本文采用的显式表示。
+
+对于比例动量阻尼 $\dot p=-H_q-\alpha(t)p$，令 $a(t)=\exp\!\int_{t_0}^{t}\alpha(s)\dd s$。一种可构造的相容选择为
+\begin{equation}\label{struct:weighted-hamiltonian}
+\begin{aligned}
+ \mathcal R&=(a p,0),\qquad \mathcal B=aH,
+       \qquad\mathcal K=-aJ,\\
+ \Pi&=a p,\qquad
+ \widetilde H(q,\Pi,t)=a(t)H(q,\Pi/a(t),t).
+\end{aligned}
+\end{equation}
+它恢复原方程，并使 $Z=(q,\Pi)$ 成为正则变量。只要保留 $M=M(q)$ 情形下 $H_q$ 中的全部质量导数，这一构造就允许质量随位置变化。$\widetilde H$ 的时间依赖性及向物理动量的变换承载了阻尼；仅凭这一表示，还不能得到经典 KAM 理论所需的自治保守系统。
+
+\subsection{端点投影与生成函数构造}
+\label{struct:endpoint-section}
+
+端点构造及其时间展开分别承担原框架中定理 A 和定理 B 的作用 \citep{feng,fengqin}。这里给出当前实现所需的局部论证，不要求所生成的梯度本身可逆。记 $\lambda_Z=\Pi^{\mathsf T}\dd q$。若端点变换 $\alpha:(Z_+,Z_-)\mapsto(\widehat w,w)$ 局部可逆，并满足
+\[
+ \dd(\widehat w^{\mathsf T}\dd w)
+      =\dd\lambda_{Z_+}-\dd\lambda_{Z_-}.
+\]
+则称其相容。
+
+\begin{proposition}[端点投影：定理 A 的作用]
+\label{struct:endpoint-proposition}
+设 $Z_+=\Phi_Z(Z_-)$ 是固定时间端点之间的辛映射图像。假设相容变换 $\alpha$ 的下方导数分块为 $C_\alpha,D_\alpha$，并满足
+\[
+ \det\bigl(C_\alpha D\Phi_Z+D_\alpha\bigr)\ne0.
+\]
+则在充分小的单连通邻域内，该图像可以写成 $\widehat w=\nabla_w\varphi(w)$。这里不要求 $\partial_w\widehat w$ 可逆。
+\end{proposition}
+
+\begin{proof}
+上述投影条件使 $w$ 成为图像上的局部坐标。辛性与相容性使 $\widehat w^{\mathsf T}\dd w$ 在该图像上闭合，再由局部 Poincar\'e 引理得到标量 $\varphi$。这些步骤使用的是到 $w$ 的投影，不是其梯度的逆。
+\end{proof}
+
+在中央端点约定下，令 $T_0=\diag(I_n,-I_n)$、$\mathsf E=\left(\begin{smallmatrix}0&I_n\\I_n&0\end{smallmatrix}\right)$，并选择
+\begin{equation}\label{struct:endpoint-variables}
+\begin{aligned}
+ \widehat w&=(\widehat Q,\widehat P)=\mathsf E(Z_+-Z_-),\\
+ w&=T_0\bar Z=(Q,P)=(\bar q,-\bar\Pi).
+\end{aligned}
+\end{equation}
+其完整导数的尺寸为 $4n\times4n$，其中 $C_\alpha=D_\alpha=T_0/2$，故
+\begin{equation}\label{struct:endpoint-projection}
+ D_{Z_-}w=\tfrac12T_0(D\Phi_Z+I_{2n}).
+\end{equation}
+零步长时该矩阵为 $T_0$，因此在固定紧邻域内，步长充分小时仍可逆。相较之下，$\widehat w=f(w)$ 在零步长时恒为零，且 $f_w=0$。补充材料~\ref{ss:projection} 验证相容性、端点变量的联合逆变换以及它们与 Newton 矩阵的联系。
+
+定理 B 的作用是将端点生成函数的时间展开转化为差分格式。对于含时哈密顿量，采用完整的时间中点 $t_m=t_k+\Delta_t/2$，并取
+\begin{equation}\label{struct:lifted-generator}
+\begin{aligned}
+ \varphi_{\Delta_t}(Q,P)&=-\Delta_t\widetilde H(Q,-P,t_m),\\
+ \widehat Q&=-\Delta_t\widetilde H_q(Q,-P,t_m),\\
+ \widehat P&=\Delta_t\widetilde H_\Pi(Q,-P,t_m).
+\end{aligned}
+\end{equation}
+代入式 \eqref{struct:endpoint-variables} 即得到正则时间中点方程。对于常数 $\alpha$ 和常质量，令 $r=\exp(\alpha\Delta_t/2)$，消去含绝对时间的指数项，得到
+\begin{equation}\label{struct:weighted-midpoint}
+\begin{aligned}
+ q_+-q_-&=\tfrac{\Delta_t}{2}M^{-1}(r p_++r^{-1}p_-),\\
+ r p_+-r^{-1}p_-&=-\Delta_t\nabla V\bigl((q_++q_-)/2\bigr).
+\end{aligned}
+\end{equation}
+精确隐式映射满足
+\begin{equation}\label{struct:weighted-structure}
+\begin{aligned}
+ (D\Phi)^{\mathsf T}J D\Phi&=e^{-\alpha\Delta_t}J,\\
+ (D\Phi)^{\mathsf T}\mathcal K(t_+)D\Phi&=\mathcal K(t_-).
+\end{aligned}
+\end{equation}
+这是 $Z$ 中的正则辛性经 $T_t(q,p)=(q,e^{\alpha t}p)$ 拉回所得的关系。完整的时间中点求值给出二阶一致性；若将显式时间依赖冻结在 $t_k$，可能只剩一阶。变质量时，同一构造仍适用于完整的 $\widetilde H$，但不能原样复用式 \eqref{struct:weighted-midpoint} 中的两条常质量更新式。
+
+\subsection{普通中点格式与非交换矩阵}
+\label{struct:matrix-section}
+
+利用端点平均，也可对一般物理向量场作普通中点离散：
+\begin{equation}\label{struct:mechanical-midpoint}
+\begin{aligned}
+ q_+-q_-&=\Delta_t M(\bar q)^{-1}\bar p,\\
+ p_+-p_-&=\Delta_t[-H_q(\bar q,\bar p)-C_m\bar v]\\
+           &\quad+\Delta_t(F_m+U_m),\\
+ \bar v&=M(\bar q)^{-1}\bar p.
+\end{aligned}
+\end{equation}
+所有状态相关量均在同一中点求值，所有显式时间参数均取 $t_m$。这恢复了原矩阵更新的完整向量形式。存在一般阻尼时，它与式 \eqref{struct:weighted-midpoint} 不同；二阶精度并不意味着具有式 \eqref{struct:weighted-structure} 中的指数结构因子。
+
+对于常矩阵 $M,C,K$，设 $M\succ0$、$K=K^{\mathsf T}$、$V(q)=q^{\mathsf T}Kq/2$，消去位置中点得到
+\begin{equation}\label{struct:matrix-elimination}
+\begin{aligned}
+ E_{\Delta_t}&=\tfrac{\Delta_t^2}{4}KM^{-1}
+                         +\tfrac{\Delta_t}{2}CM^{-1},\\
+ (I_n+E_{\Delta_t})p_+
+    &=(I_n-E_{\Delta_t})p_--\Delta_tKq_-\\
+    &\quad+\Delta_t(F_m+U_m),\\
+ q_+&=q_-+\tfrac{\Delta_t}{2}M^{-1}(p_++p_-).
+\end{aligned}
+\end{equation}
+矩阵次序 $KM^{-1}$ 来自将 $\bar q=q_-+\Delta_tM^{-1}(p_++p_-)/4$ 代入动量方程，推导不假设矩阵可交换。实现时求解系数矩阵为 $I_n+E_{\Delta_t}$ 的线性方程组，步长充分小时可保证其可逆。若反馈依赖未知中点，问题仍然是隐式的。对于 $M=M(q)$，还必须保留惯性向量 $-(\bar p^{\mathsf T}\partial_{q_i}M^{-1}\bar p)/2$，此时适宜直接求解 $2n$ 维残差方程。补充材料~\ref{ss:matrix} 给出完整消元过程。
+
+在导管的平衡坐标中，应作如下代换：
+\begin{equation}\label{struct:effective-matrices}
+\begin{aligned}
+ q&=X,\qquad p=Y,\\
+ M_{\rm eff}&=\mathsf N^{-1},\qquad
+ C_{\rm eff}=\gamma\mathsf N^{-1}.
+\end{aligned}
+\end{equation}
+于是 $M_{\rm eff}^{-1}Y=\mathsf N Y$、$C_{\rm eff}M_{\rm eff}^{-1}Y=\gamma Y$。磁力仍为非线性，因此实际检验求解完整残差方程，不以常矩阵 $K$ 替代余弦势。第~\ref{sec:analysis} 节先以矩阵指数为参考检验非交换线性代数，再将同一离散方法用于该耦合磁模型。
+
+\subsection{中央生成函数与自治高阶扩展}
+\label{struct:schemes}
+
+对于自治哈密顿量 $h$，采用状态 $x=(X,Y)$ 和无量纲时间 $\tau$，令 $f=J\nabla h$，并以 $\Delta$ 表示步长。中央约定为
+\begin{equation}\label{struct:central-map}
+ x_+-x_-=J\nabla S_\Delta(m),\qquad m=(x_++x_-)/2.
+\end{equation}
+通过 $\varphi_\Delta(Q,P)=-S_\Delta(Q,-P)$，它与前述端点记号等价。选择 $S_\Delta=\Delta h$ 得到
+\begin{equation}\label{struct:midpoint}
+ x_+-x_-=\Delta J\nabla h(m).
+\end{equation}
+当隐式方程存在唯一局部分支时，其 Jacobian 为
+\begin{equation}\label{struct:cayley}
+ D\Psi_\Delta=(I-C_\Delta)^{-1}(I+C_\Delta),\qquad
+ C_\Delta=\tfrac12J S_\Delta''(m).
+\end{equation}
+$S_\Delta''$ 的对称性给出辛性。取 $\lambda=Y^{\mathsf T}\dd X$，对应的单值原函数为
+\begin{equation}\label{struct:exact-symplectic}
+ \Psi_\Delta^*\lambda-\lambda
+ =\dd\bigl[\bar Y^{\mathsf T}(X_+-X_-)-S_\Delta(m)\bigr].
+\end{equation}
+因此该映射是\emph{精确辛}的。这一更强性质提供离散 KAM 所需的周期生成函数；它针对精确隐式映射，而不是采用有限容差的求解器输出。
+
+保留中央时间展开中的下一个非零项，得到四阶扩展 \citep{feng}：
+\begin{equation}\label{struct:central4}
+ S_\Delta^{[4]}(x)=\Delta h(x)
+       +\frac{\Delta^3}{24}f(x)^{\mathsf T}h''(x)f(x).
+\end{equation}
+补充材料~\ref{ss:central4} 推导其局部 $O(\Delta^5)$ 缺陷及谐振子相位公式。仅采用中点生成函数仍为二阶。若要得到四阶受控方法，式 \eqref{struct:central4} 必须使用实际自治闭环哈密顿量的全部导数。在一次 Central4 步之后另加控制增量，并不能建立该阶数或结构结论。
+
+新参数下的主要闭环计算对实际向量场采用普通隐式中点法，
+\begin{equation}\label{struct:general-midpoint}
+ x_+-x_-=\Delta f_{\rm cl}(m,\tau_m).
+\end{equation}
+阻尼和反馈均在这一相同的未知中点求值。若同时积分参考轨迹，则将其纳入增广状态。式 \eqref{struct:midpoint} 是保守情形的特例；第~\ref{sec:analysis} 节将明确受控向量场何时具有该形式，并量化非精确隐式求解的影响。独立的线性检验和新参数非线性检验还针对保守目标 $h_0$ 验证 Central4，采用补充材料~\ref{ss:central4-magnetic-section} 中的显式导数。这些四阶检验并不赋予一般阻尼反馈闭环四阶精度或精确辛性。
+
+\subsection{CHNN 模型类与四个哈密顿量}
+\label{struct:objects-section}
+
+式~\eqref{mech:complex-chart} 中的复变量用于组织哈密顿解码器；可训练对象仍是定义在真实物理状态空间上的实值能量。一般 CHNN 可通过复值隐藏层和实值读出来表示该能量，并使用独立的非负耗散分支。对应的力方程和功率方程为式~\eqref{mech:decoder}--\eqref{mech:power}。能量读出与耗散读出的作用不同：将二者的数值组合成一个复输出，并不会使耗散动力学成为哈密顿动力学。第~\ref{sec:kam} 节的 KAM 分析还要求能量在指定复邻域上具有解析性。
+
+为明确辨识、力实现和误差估计，当前实现固定已知动能，并学习势能残差。令 $\mathsf N=\diag(\nu_1,\nu_2)$、$\vartheta=d^{\mathsf T}X$，定义
+\begin{equation}\label{struct:objects}
+\begin{aligned}
+ g(s)&=1-\cos s-s^2/2,\\
+ V_0(X)&=\tfrac12X^{\mathsf T}\mathsf N X+g(d^{\mathsf T}X),\\
+ h_0(X,Y)&=\tfrac12Y^{\mathsf T}\mathsf N Y+V_0(X),\\
+ h_*&=h_0+R_*,\qquad \widehat h=h_0+\widehat R,\\
+ \delta R&=R_*-\widehat R,\qquad h_c=h_0+\delta R.
+\end{aligned}
+\end{equation}
+四个能量分别对应标称模型、所声明模型类内的真实保守模型、学习模型，以及补偿闭环的保守部分。它们具有相同的二次动能，但势能不同。实际含阻尼和驱动的受控对象为
+\begin{equation}\label{struct:plant}
+ X'=\mathsf N Y,\qquad
+ Y'=-\nabla(V_0+R_*)(X)-\gamma Y+U.
+\end{equation}
+未知质量、接触力或输入增益不由 $R_*(X)$ 表示；若包含这些效应，需要相应的模型和观测缺陷描述。
+
+有限解析读出使一般 CHNN 架构可以直接核查：采用冻结的实解析特征，写成 $\widehat R(X)=\sum_{j=1}^{m}\widehat\beta_jF_j(X)$。最小实验取 $m=1$、$F_1=g(d^{\mathsf T}X)$，并设置人工真值系数 $\beta_*=0.2$。该系数是实验扰动，并非实测材料属性。架构中仍可保留这些特征的复值实现，但本次实验检验的是这一受限读出，并未训练不受限制的隐藏层。补充材料~\ref{ss:full-features} 给出完整的 $35$ 系数四次读出，并说明学习含动量项时增加的控制要求。
+
+\subsection{能量与阻尼的联合积分辨识}
+\label{struct:identification-section}
+
+状态观测按互不重叠的整条轨迹划分为训练集和验证集。对每个观测窗口 $[a_\ell,b_\ell]$，令 $c_\ell=(c_{\ell X},c_{\ell Y})$ 为与端点匹配的重构曲线，$U_\ell^{\rm data}$ 为已知输入。记 $\mathcal V_F=[\nabla F_1,\ldots,\nabla F_m]$。对动量方程积分，得到
+\begin{equation}\label{struct:integral-design}
+\begin{aligned}
+ y_\ell={}&c_{\ell Y}(b_\ell)-c_{\ell Y}(a_\ell)\\
+   &+\int_{a_\ell}^{b_\ell}
+      [\nabla V_0(c_{\ell X})-U_\ell^{\rm data}]\dd\tau,\\
+ D_\ell={}&-\int_{a_\ell}^{b_\ell}
+          [\mathcal V_F(c_{\ell X}),c_{\ell Y}]\dd\tau,\\
+ \widehat\theta={}&(\widehat\beta_1,\ldots,\widehat\beta_m,
+                      \widehat\gamma)^{\mathsf T}.
+\end{aligned}
+\end{equation}
+堆叠后的设计矩阵有 $nL_I$ 行、$m+1$ 列；此处 $n=2$，$L_I$ 表示窗口数。使用 QR 或 SVD 求解来拟合 $D\theta\simeq y$，并通过奇异值诊断激励程度。施加 $\widehat\gamma\ge0$ 可得到满足被动性的物理阻尼估计。复算程序采用无约束线性求解，因此在零阻尼情景中出现的舍入量级负值作为数值拟合结果报告，不解释为物理负阻尼。
+
+上述辨识不需要加速度标签。不过，端点噪声、插值、求积和未建模动力学仍会影响积分方程。它们进入需要独立界定的观测缺陷，不能由较小训练损失反推。第~\ref{sec:kam} 节将该缺陷及 Gram 下界转化为系数、力和解析能量的误差界。补偿控制器与补充材料~\ref{sec:supp-tracking} 中的跟踪扩展使用同一组冻结辨识结果和物理输入映射 \eqref{mech:modal-ports}。
+
+\subsection{面向标称动力学的残差补偿}
+\label{struct:route-a-section}
+
+主要控制器在复现实验中记为路线 A。它抵消估计阻尼和势能残差，同时保留完整耦合的标称磁能量：
+\begin{equation}\label{struct:route-a-control}
+ U_A=\widehat\gamma Y+\nabla\widehat R(X).
+\end{equation}
+将其代入式 \eqref{struct:plant}，并令 $\delta\gamma=\gamma-\widehat\gamma$，得到
+\begin{equation}\label{struct:route-a-closed}
+ x'=J\nabla h_c(x)+\binom{0}{-\delta\gamma Y}.
+\end{equation}
+因此，非零保守学习误差将闭环哈密顿量变为 $h_c$，但不破坏 Hamiltonian 结构。非零阻尼误差则留下非保守项，其功率为 $h_c'=-\delta\gamma Y^{\mathsf T}\mathsf N Y$。由此，经典流或映射 KAM 只有在阻尼被精确抵消且指令广义力被精确实现时，才涉及这一物理闭环；另一种允许情形是将所有剩余力独立证明为自治势能梯度，并纳入 $h_c$。一般力误差即使很小，也不足以满足这一结构前提。
+
+在精确补偿极限下，闭环为 $h_0$。路线 A 实验中的标称参考，是 $h_0$ 从同一初始状态出发的流。真值参数对照使用 $U=\gamma Y+\nabla R_*$，仅用于分离积分误差与辨识误差；学习控制器只使用拟合量。
+
+
+下一节将这一反馈代入同一隐式方程，并证明相应结构和有限时间收敛性。跟踪学习得到的保守参考属于另一控制目标，保留在补充材料~\ref{sec:supp-tracking} 中。

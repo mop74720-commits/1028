@@ -1,0 +1,35 @@
+[
+  {
+    "version": 2,
+    "path": "stage2/sources/library/推理草稿5月1025(2).docx",
+    "bytes": 194893,
+    "sha256": "8c62b874caaa6362b0f1c5612ddd6514aa7141454b17ef4cf5688408fe307338",
+    "document_xml_sha256": "723a8b32c36d24e0b11286f69c308253e203e07dca7b413be0661c126163b2af",
+    "math_count": 570,
+    "paragraph_count": 1222,
+    "text_sha256": "e7d0831086714ea00d13240376be6d46d8e5b4e756da196699df00d23bb7bba9",
+    "math_xml_sha256": "e7c902dc972c97cee57e0c241a8b42c7eb8eeb5fbf3342e6cdc4b16aeeab5833"
+  },
+  {
+    "version": 3,
+    "path": "stage2/sources/library/推理草稿5月1025(3).docx",
+    "bytes": 194893,
+    "sha256": "8c62b874caaa6362b0f1c5612ddd6514aa7141454b17ef4cf5688408fe307338",
+    "document_xml_sha256": "723a8b32c36d24e0b11286f69c308253e203e07dca7b413be0661c126163b2af",
+    "math_count": 570,
+    "paragraph_count": 1222,
+    "text_sha256": "e7d0831086714ea00d13240376be6d46d8e5b4e756da196699df00d23bb7bba9",
+    "math_xml_sha256": "e7c902dc972c97cee57e0c241a8b42c7eb8eeb5fbf3342e6cdc4b16aeeab5833"
+  },
+  {
+    "version": 4,
+    "path": "stage2/sources/library/推理草稿5月1025(4).docx",
+    "bytes": 194893,
+    "sha256": "8c62b874caaa6362b0f1c5612ddd6514aa7141454b17ef4cf5688408fe307338",
+    "document_xml_sha256": "723a8b32c36d24e0b11286f69c308253e203e07dca7b413be0661c126163b2af",
+    "math_count": 570,
+    "paragraph_count": 1222,
+    "text_sha256": "e7d0831086714ea00d13240376be6d46d8e5b4e756da196699df00d23bb7bba9",
+    "math_xml_sha256": "e7c902dc972c97cee57e0c241a8b42c7eb8eeb5fbf3342e6cdc4b16aeeab5833"
+  }
+]

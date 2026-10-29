@@ -1,0 +1,167 @@
+{
+  "reviewer": "audit_mechanics",
+  "reviewed_at_utc": "2026-10-28T09:44:13.381017+00:00",
+  "edition": "direction-one framework Chinese edition",
+  "status": "passed",
+  "status_code": "pending_root_final_title_render_confirmation",
+  "scope": {
+    "mode": "read-only visual review of rendered PNG pages",
+    "actual_images_opened": 13,
+    "main_pages": [
+      3,
+      4,
+      5,
+      16,
+      17,
+      18
+    ],
+    "supplement_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "source_edits_by_reviewer": false,
+    "latex_compilation_by_reviewer": false
+  },
+  "pages": [
+    {
+      "document": "main",
+      "page": 3,
+      "image": "qa/chinese_render/ZH/page_03.png",
+      "actually_opened": true,
+      "content_and_formula_layout": "pass"
+    },
+    {
+      "document": "main",
+      "page": 4,
+      "image": "qa/chinese_render/ZH/page_04.png",
+      "actually_opened": true,
+      "content_and_formula_layout": "pass"
+    },
+    {
+      "document": "main",
+      "page": 5,
+      "image": "qa/chinese_render/ZH/page_05.png",
+      "actually_opened": true,
+      "content_and_formula_layout": "pass"
+    },
+    {
+      "document": "main",
+      "page": 16,
+      "image": "qa/chinese_render/ZH/page_16.png",
+      "actually_opened": true,
+      "content_and_formula_layout": "pass"
+    },
+    {
+      "document": "main",
+      "page": 17,
+      "image": "qa/chinese_render/ZH/page_17.png",
+      "actually_opened": true,
+      "content_and_formula_layout": "pass"
+    },
+    {
+      "document": "main",
+      "page": 18,
+      "image": "qa/chinese_render/ZH/page_18.png",
+      "actually_opened": true,
+      "content_and_formula_layout": "pass"
+    },
+    {
+      "document": "supplement",
+      "page": 1,
+      "image": "qa/chinese_render/ZH_Supplement/page_01.png",
+      "actually_opened": true,
+      "content_and_formula_layout": "pass"
+    },
+    {
+      "document": "supplement",
+      "page": 2,
+      "image": "qa/chinese_render/ZH_Supplement/page_02.png",
+      "actually_opened": true,
+      "content_and_formula_layout": "pass"
+    },
+    {
+      "document": "supplement",
+      "page": 3,
+      "image": "qa/chinese_render/ZH_Supplement/page_03.png",
+      "actually_opened": true,
+      "content_and_formula_layout": "pass"
+    },
+    {
+      "document": "supplement",
+      "page": 4,
+      "image": "qa/chinese_render/ZH_Supplement/page_04.png",
+      "actually_opened": true,
+      "content_and_formula_layout": "pass"
+    },
+    {
+      "document": "supplement",
+      "page": 5,
+      "image": "qa/chinese_render/ZH_Supplement/page_05.png",
+      "actually_opened": true,
+      "content_and_formula_layout": "pass"
+    },
+    {
+      "document": "supplement",
+      "page": 6,
+      "image": "qa/chinese_render/ZH_Supplement/page_06.png",
+      "actually_opened": true,
+      "content_and_formula_layout": "pass"
+    },
+    {
+      "document": "supplement",
+      "page": 7,
+      "image": "qa/chinese_render/ZH_Supplement/page_07.png",
+      "actually_opened": true,
+      "content_and_formula_layout": "pass"
+    }
+  ],
+  "checks": {
+    "chinese_text_and_glyphs": "pass",
+    "formula_symbols_superscripts_subscripts": "pass",
+    "long_formula_clipping": "none observed",
+    "table_clipping_and_overlap": "none observed",
+    "column_overlap_and_margin_overflow": "none observed",
+    "completed_versus_planned_validation": "pass: main Table 8 separates completed two-mode tests from planned 4/8/64-mode and independent-FE/COMSOL work",
+    "learned_controller_versus_stronger_exact_feedback": "pass: Supplement S1.5–S1.7 preserves the distinction and conditional scope",
+    "energy_cap_and_governor_scope": "pass: reported run exceeds the selected initial energy cap and does not implement the governor"
+  },
+  "title_layout_notes": [
+    {
+      "id": "supplement_title_line_break",
+      "document": "supplement",
+      "page": 1,
+      "severity": "minor typography; no content loss",
+      "observed": "The first title line ends with Birkhoff 离散 and the next line begins 化与, splitting 离散化.",
+      "recommendation": "Insert the explicit title break after 磁性导管模型的, preserving Birkhoff 离散化与复哈密顿残差控制 on the second line.",
+      "owner": "root",
+      "disposition": "accepted by root; title source amended and final compilation underway",
+      "verification": "Final rendered title to be inspected and confirmed by root."
+    },
+    {
+      "id": "s2_heading_line_break",
+      "document": "supplement",
+      "page": 7,
+      "severity": "minor typography; no content loss",
+      "observed": "The S2 heading leaves only 条件 on its second line.",
+      "recommendation": "Break after 学习误差, giving 与 KAM 的联系条件 as the second line; protect PDF bookmarks with texorpdfstring.",
+      "owner": "root",
+      "disposition": "accepted by root; title source amended and final compilation underway",
+      "verification": "Final rendered heading to be inspected and confirmed by root; page position may change after the final build."
+    }
+  ],
+  "conclusion": "All 13 assigned pages were actually viewed. Formula, table and body-text layout passed. Only the two nonblocking title line breaks await final root confirmation after the title-only rebuild.",
+  "final_root_confirmation": {
+    "at_utc": "2026-10-28T09:46:46.470319+00:00",
+    "pages": [
+      1,
+      7
+    ],
+    "document": "ZH_Supplement",
+    "title_wrapping_corrected_and_viewed": true
+  }
+}

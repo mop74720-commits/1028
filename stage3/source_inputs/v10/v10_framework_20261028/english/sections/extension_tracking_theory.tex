@@ -1,0 +1,112 @@
+The principal manuscript studies residual compensation and the resulting discrete map. This extension retains the alternative task of tracking a learned conservative reference. Both tasks use the same frozen identification and physical input ports, but their target trajectories and mathematical guarantees differ.
+
+\subsection{A learned conservative reference and tracking feedback}
+\label{struct:route-b-section}
+
+Route~B instead generates a reference by $X_r'=\mathsf N Y_r$, $Y_r'=-\nabla\widehat V(X_r)$, where $\widehat V=V_0+\widehat R$. With $e_X=X-X_r$ and $e_Y=Y-Y_r$, use
+\begin{equation}\label{struct:route-b-control}
+\begin{aligned}
+ U_B={}&\widehat\gamma Y+\nabla\widehat V(X)
+                     -\nabla\widehat V(X_r)\\
+       &-\kappa_p\mathsf N^{-1}e_X-\kappa_de_Y,
+       \qquad\kappa_p,\kappa_d>0.
+\end{aligned}
+\end{equation}
+The error satisfies the exact equations
+\begin{equation}\label{struct:route-b-error}
+\begin{gathered}
+\begin{aligned}
+ e_X'&=\mathsf N e_Y,\\
+ e_Y'&=-\kappa_p\mathsf N^{-1}e_X-\kappa_de_Y
+           \\&\quad-\nabla\delta R(X)-\delta\gamma Y,
+\end{aligned}\\
+\begin{aligned}
+ &e_X''+\kappa_de_X'+\kappa_pe_X\\
+ &\qquad=-\mathsf N[\nabla\delta R(X)+\delta\gamma Y].
+\end{aligned}
+\end{gathered}
+\end{equation}
+The homogeneous dynamics are exponentially stable. On a declared domain where the force error and velocity are bounded, convolution with this stable system gives a finite tracking bound; the critically damped formula is in Supplement~\ref{ss:tracking}. Nonzero residual forcing gives a nonzero error envelope. Exact cancellation gives asymptotic tracking and preserves a zero initial tracking error.
+
+For the synthetic truth-only comparator, define $V_*=V_0+R_*$ and replace only the plant compensation terms:
+\begin{equation}\label{struct:route-b-oracle}
+\begin{aligned}
+ U_B^{\rm or}={}&\gamma Y+\nabla V_*(X)
+                         -\nabla\widehat V(X_r)\\
+              &-\kappa_p\mathsf N^{-1}e_X-\kappa_de_Y.
+\end{aligned}
+\end{equation}
+This oracle retains the same learned reference $(X_r,Y_r)$ as \eqref{struct:route-b-control}; it does not replace that reference by the true conservative flow. Substitution gives the homogeneous error equation $e_X''+\kappa_de_X'+\kappa_pe_X=0$. Its midpoint update is the Cayley transform of the constant error-system matrix, providing the numerical oracle check in Supplement~\ref{num:route-b}. The implemented learned feedback remains \eqref{struct:route-b-control} and does not read $R_*$ or $\gamma$.
+
+KAM analysis in this route concerns $\widehat h$ and hence the existence of selected quasiperiodic references. The feedback system itself includes damping and a time-dependent reference. Its tracking guarantee comes from \eqref{struct:route-b-error}, not from symplecticity of that closed loop. The magnetic port map in Section~\ref{sec:application} applies to this two-mode generalized input under the same invertibility and actuation conditions. The reference, tracking and plant-compensation errors remain separate quantities.
+
+\subsection{Tracking with a bounded model and actuation error}
+\label{ss:tracking}
+
+Let an additive realized-input error be $r_U$ in the momentum equation. Then the Route~B position error satisfies
+\[
+\begin{gathered}
+ e_X''+\kappa_de_X'+\kappa_pe_X=q(\tau),\\
+ q=-\mathsf N[\nabla\delta R(X)+\delta\gamma Y-r_U].
+\end{gathered}
+\]
+For $\kappa_p=\omega_c^2$, $\kappa_d=2\omega_c$, direct solution gives
+\begin{equation}\label{ss:tracking-convolution}
+\begin{aligned}
+ e_X(\tau)={}&e^{-\omega_c\tau}
+       [(1+\omega_c\tau)e_X(0)+\tau e_X'(0)]\\
+ &+\int_0^\tau(\tau-s)e^{-\omega_c(\tau-s)}q(s)\dd s.
+\end{aligned}
+\end{equation}
+If the plant and reference stay in the asserted domain and $\norm{q(s)}_2\le Q$, then
+\begin{equation}\label{ss:tracking-bound}
+\begin{aligned}
+ \norm{e_X(\tau)}_2\le{}&e^{-\omega_c\tau}
+  [(1+\omega_c\tau)\norm{e_X(0)}_2+\tau\norm{e_X'(0)}_2]\\
+ &+\frac{Q}{\omega_c^2}
+       [1-(1+\omega_c\tau)e^{-\omega_c\tau}].
+\end{aligned}
+\end{equation}
+The velocity error follows by differentiating the convolution and using $e_Y=\mathsf N^{-1}e_X'$. In particular, if $\norm Y\le Y_{\max}$, $\norm{r_U}\le r_{\max}$, and \eqref{kam:analytic-error} holds, one can take
+\[
+\begin{aligned}
+ Q={}&\norm{\mathsf N}_2\bigl[b_I B_{\nabla F}(K)+b_I Y_{\max}\\
+     &\qquad+\sup_K\norm{\nabla R_{\rm out}}_2+r_{\max}\bigr].
+\end{aligned}
+\]
+The two-mode tip displacement error is at most
+$\norm{\ell(L)}_2\norm{e_X}_2$.
+These inequalities apply for as long as their domain and actuation assumptions hold. A bootstrap using a sufficiently large reference tube can establish self-consistency when its margin exceeds the right-hand side; otherwise domain exit must be checked separately. They are not a global result in the presence of arbitrary saturation or unmodeled modes.
+
+
+\subsection{Reference persistence and its relation to the compensation budget}
+\label{kam:budgets-section}
+
+For Route~A, choose the nominal chart $\mathcal T_A=\mathcal T_1$. For Route~B in the single-feature model, choose $\mathcal T_B=\mathcal T_{\kappa_*}$ with $\kappa_*=1+\beta_*$. A broader true residual requires a corresponding normal form, or inclusion of its additional terms in the perturbation budget. For the single-feature plant, the energies relevant to the two claims satisfy
+\begin{equation}\label{kam:route-budgets}
+\begin{aligned}
+ h_c\circ\mathcal T_A
+   &=H_{\rm NF}^{1}+R_6^{1}+\delta R\circ\mathcal T_A,\\
+ \widehat h\circ\mathcal T_B
+   &=H_{\rm NF}^{\kappa_*}+R_6^{\kappa_*}
+                                      -\delta R\circ\mathcal T_B,\\
+ \epsilon_A&=\norm{R_6^{1}}_{\mathcal D_A}+b_R^A,\\
+ \epsilon_B&=\norm{R_6^{\kappa_*}}_{\mathcal D_B}+b_R^B.
+\end{aligned}
+\end{equation}
+Here $b_R^s$ bounds $\delta R\circ\mathcal T_s$ on the declared complex action--angle domain $\mathcal D_s$. A common coefficient bound can be reused, but a common analytic function bound is valid only if both chart images lie inside the same controlled physical complex neighborhood. The two normal forms generally have different frequencies, remainders and admissible action ranges.
+
+For the synthetic plant $\kappa_*=1.2$. For an unknown plant, \eqref{kam:integral-bound} gives a parameter interval about $\widehat\beta$; the twist and remainder estimates must hold uniformly over the asserted interval, including exclusion of $\kappa_*=0$. Alternatively, the frozen learned Hamiltonian can be put directly into normal form and certified on its own. Neither procedure identifies a physical invariant torus from a training loss alone.
+
+\begin{proposition}[Conditional persistence for the continuous models]
+\label{kam:flow-theorem}
+For either route, let $\mathcal T_s$ be analytic and canonical on a complex neighborhood $\mathcal D_s$ of $\mathcal I_s\times\T^2$, with $\mathcal I_s\Subset(0,\infty)^2$. Assume that its real image lies in the modeled working domain, that the integrable frequency map $\omega_s=\nabla_IH_{\rm NF}^s$ is nondegenerate there, and that all the domain and norm bounds in \eqref{kam:route-budgets} are valid. Select an interior frequency set satisfying
+\begin{equation}\label{kam:flow-divisors}
+ |k\cdot\omega|\ge\gamma_D|k|_1^{-\tau_D},
+ \quad k\in\mathbb Z^2\setminus\{0\},\quad\tau_D>1.
+\end{equation}
+If $\epsilon_s$ is below the analytic KAM threshold for these domains, twist bounds and Diophantine parameters, the corresponding Hamiltonian has a Cantor family of invariant Lagrangian tori carrying quasiperiodic flow. A positive-measure family follows for the interior domains and sufficiently small exclusion parameter in the classical theorem. For Route~A this is a statement about the actual closed loop only under the conservative realization premise following \eqref{struct:route-a-closed}; for Route~B it is a statement about the learned reference.
+\end{proposition}
+
+The proposition follows by substituting \eqref{kam:route-budgets} into the analytic near-integrable Hamiltonian theorem \citep{poschel}. Its threshold depends on the chosen complex widths, frequency-domain margins, twist and inverse-twist bounds, and $\gamma_D,\tau_D$. No fixed numerical threshold is asserted here. The resulting tori describe selected bounded motions; they do not imply attraction of arbitrary initial conditions or clearance of the entire flexible beam.
+

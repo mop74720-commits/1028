@@ -1,0 +1,131 @@
+\subsection{Putting the feedback into the same implicit equations}
+\label{ctrl:placement}
+
+The second subproblem supplies an identified residual and its compensation. The third asks what difference scheme results after that feedback is applied, which structure it preserves, and how its numerical trajectories approach the actual closed-loop dynamics. These questions concern the same plant and the same unknown midpoint used in Section~\ref{sec:derivation}. Substitution of \eqref{struct:route-a-control} into the plant gives the controlled update
+\begin{equation}\label{ctrl:midpoint}
+\begin{aligned}
+ X_+-X_-&=\Delta\mathsf N\bar Y,\\
+ Y_+-Y_-&=-\Delta\nabla(V_0+R_*)(\bar X)
+               -\Delta\gamma\bar Y\\
+        &\quad+\Delta U_A(\bar X,\bar Y)\\
+        &=-\Delta\nabla(V_0+\delta R)(\bar X)
+               -\Delta\delta\gamma\bar Y.
+\end{aligned}
+\end{equation}
+Thus its continuous target is
+$f_c(x)=J\nabla h_c(x)+(0,-\delta\gamma Y)^{\mathsf T}$, including the fixed identification errors. The continuous generalized force $U_A\in\R^2$ is distinguished from its discrete phase-space contribution
+\begin{equation}\label{ctrl:control-increment}
+ \mathcal U_k=\Delta\binom{0}{U_A(\bar X,\bar Y)}\in\R^4.
+\end{equation}
+This placement is not generally equivalent to adding a vector after an uncontrolled step or modifying a generating function without deriving its force. The simulated plant contains $R_*$; the feedback evaluates only $\widehat R$ and $\widehat\gamma$. The magnetic input map in Section~\ref{sec:application} must realize this same force for the closed-loop identity to hold.
+
+The Birkhoff construction also has a closed-loop version. For constant residual damping, substitute $\delta\gamma$ and $V_0+\delta R$ into \eqref{struct:weighted-midpoint} and set $r_c=e^{\delta\gamma\Delta/2}$:
+\begin{equation}\label{ctrl:weighted-midpoint}
+\begin{aligned}
+ X_+-X_-&=\tfrac{\Delta}{2}\mathsf N
+                  (r_cY_++r_c^{-1}Y_-),\\
+ r_cY_+-r_c^{-1}Y_-&=-\Delta\nabla(V_0+\delta R)(\bar X).
+\end{aligned}
+\end{equation}
+When $\delta\gamma=0$, this is exactly \eqref{ctrl:midpoint}. Otherwise its exact map preserves the conformal factor $e^{-\delta\gamma\Delta}$, whereas ordinary midpoint generally does not preserve that exact exponential factor. Equation~\eqref{ctrl:weighted-midpoint} describes a mathematical closed-loop discretization and the specified synthetic comparisons. Implementing its weight requires the residual damping to be specified or independently identified; it does not authorize a learned controller to use unknown plant parameters.
+
+\subsection{The exact structure of the controlled map}
+\label{ctrl:structure}
+
+\begin{proposition}[Structure after compensation]
+\label{ctrl:structure-proposition}
+Suppose the generalized input is realized exactly, the residual energy is twice continuously differentiable, and the implicit branch is locally unique. If $\delta\gamma=0$, the map defined by \eqref{ctrl:midpoint} is exact symplectic, with central generator $S_\Delta^c=\Delta h_c$. If $\delta\gamma$ is constant and nonzero, the exact map of \eqref{ctrl:weighted-midpoint} instead satisfies
+\[
+ (D\Phi_c)^{\mathsf T}JD\Phi_c=e^{-\delta\gamma\Delta}J.
+\]
+The latter conclusion is a statement about the weighted scheme, not the ordinary controlled midpoint rule.
+\end{proposition}
+
+\begin{proof}
+For zero residual damping, \eqref{ctrl:midpoint} is
+$x_+-x_-=\Delta J\nabla h_c(\bar x)$. Its tangent is \eqref{struct:cayley} with $C_\Delta=\Delta J\nabla^2h_c/2$. Since $J\nabla^2h_c$ is a Hamiltonian matrix, the Cayley transform preserves $J$. More strongly, \eqref{struct:exact-symplectic} gives
+\begin{equation}\label{ctrl:exact-primitive}
+ \Psi_c^*\lambda-\lambda
+ =\dd[\bar Y^{\mathsf T}(X_+-X_-)-\Delta h_c(\bar x)].
+\end{equation}
+This single-valued primitive proves exact symplecticity. For nonzero constant residual damping, the canonical lift with
+$\Pi=e^{\delta\gamma\tau}Y$ gives \eqref{ctrl:weighted-midpoint}; pulling its symplectic form back to the two time endpoints gives the stated factor. Supplement~\ref{ss:exact-symplectic} supplies the algebra and the periodic action--angle form of the primitive.
+\end{proof}
+
+Conservative learning error changes the Hamiltonian from $h_0$ to $h_c=h_0+\delta R$ and is compatible with this exact structure. A damping error is structurally different even if its magnitude is small. If the realized generalized force also has an error $r_U$, then
+\begin{equation}\label{ctrl:power}
+ h_c'=-(\delta\gamma)Y^{\mathsf T}\mathsf N Y
+                         +(\mathsf N Y)^{\mathsf T}r_U.
+\end{equation}
+An additional error can be included in an autonomous potential only when it has the corresponding gradient structure; on a simply connected position domain, independence of momentum and time and a symmetric position Jacobian are sufficient. Generic input errors, finite Newton residuals and floating-point roundoff have no such guarantee. The KAM result in Section~\ref{sec:kam} therefore concerns the exact conservative implicit map, while the following finite-time convergence result permits a dissipative actual closed loop.
+
+\subsection{Convergence with an algebraic solve residual}
+\label{ctrl:convergence-section}
+
+Let $x_c(\tau)$ solve $x'=f_c(x,\tau)$, where $f_c$ includes the fixed feedback, plant parameters and identification errors. This notation also permits a smooth explicit time dependence. Suppose that $f_c$ is twice continuously differentiable on a neighborhood containing the exact and numerical trajectories, with bounded derivatives and a state Lipschitz constant $L_c$. The trajectories and step images have a positive margin from that neighborhood's boundary. For sufficiently small $\Delta$, with $\Delta L_c/2<1$, the local midpoint equation has a unique branch.
+
+A computed step $\widetilde x_k\mapsto\widetilde x_{k+1}$ is allowed to leave the increment residual
+\begin{equation}\label{ctrl:solve-residual}
+\begin{aligned}
+ r_k={}&\widetilde x_{k+1}-\widetilde x_k\\
+       &-\Delta f_c((\widetilde x_{k+1}+\widetilde x_k)/2,\tau_m),\\
+ &\norm{r_k}\le\eta_k.
+\end{aligned}
+\end{equation}
+Here one fixed vector norm is used consistently. This is the residual of the full increment equation, not the size of a Newton correction. If an implementation reports the infinity norm while trajectory errors use the Euclidean norm, the residual conversion is at most $\sqrt{2n}$; it is $2$ in the two-mode experiment.
+
+\begin{proposition}[Finite-time convergence including the solve residual]
+\label{ctrl:convergence}
+Under the preceding smoothness, domain and small-step assumptions, let
+$e_k=\norm{\widetilde x_k-x_c(\tau_k)}$ and $k\Delta\le T$. There are constants independent of $\Delta$ and of the residual sequence such that
+\begin{equation}\label{ctrl:error-recurrence}
+\begin{aligned}
+ (1-\Delta L_c/2)e_{k+1}
+ &\le(1+\Delta L_c/2)e_k\\
+ &\quad+C\Delta^3+\eta_k.
+\end{aligned}
+\end{equation}
+If every $\eta_k\le\eta_\Delta$, then
+\begin{equation}\label{ctrl:global-error}
+ \max_{k\Delta\le T}e_k
+ \le C_T\bigl(e_0+\Delta^2+\eta_\Delta/\Delta\bigr).
+\end{equation}
+More generally, the last term can be replaced by
+$\sum_{k\Delta<T}\eta_k$. In particular, per-step residuals
+$O(\Delta^3)$ retain second-order convergence.
+\end{proposition}
+
+\begin{proof}
+Taylor expansion of the exact solution about the temporal midpoint shows that its substitution into the midpoint increment equation leaves a defect bounded by $C\Delta^3$. Subtract that equation from \eqref{ctrl:solve-residual}. The Lipschitz estimate at the two endpoint averages gives
+\[
+ e_{k+1}\le e_k+\tfrac{\Delta L_c}{2}(e_{k+1}+e_k)
+                              +C\Delta^3+\eta_k,
+\]
+which proves \eqref{ctrl:error-recurrence}. Choose the step range so that $\Delta L_c/2$ stays below a fixed number less than one. The amplification ratio
+$(1+\Delta L_c/2)/(1-\Delta L_c/2)$ is then bounded by $1+C_L\Delta$. Iteration over at most $T/\Delta$ steps gives a bounded exponential factor, while the local defects sum to $O(\Delta^2)$ and the algebraic residuals to at most $T\eta_\Delta/\Delta$. This proves \eqref{ctrl:global-error} and its variable-residual version. The domain margin justifies the local equations throughout the comparison; alternatively it can close a small-error continuation argument.
+\end{proof}
+
+This result makes the solver tolerance part of the accuracy statement. A fixed absolute tolerance need not sustain a second-order asymptotic rate under indefinite step refinement. The autonomous Central4 method has an analogous estimate
+$C_T(e_0+\Delta^4+\eta_\Delta/\Delta)$ when its fifth-order local defect, higher derivative bounds and stable implicit branch hold; a per-step $O(\Delta^5)$ residual preserves fourth order. Supplement~\ref{ss:inexact-solve} records this extension. The residual-budget tests below deliberately perturb increment equations to examine the accumulation term. They are distinguished from the small residuals actually left by Newton iteration.
+
+\subsection{Separating discretization error from compensation error}
+\label{ctrl:error-separation}
+
+The exact trajectory in Proposition~\ref{ctrl:convergence} is that of the same actual closed loop, not the nominal trajectory $x_0$ generated by $h_0$. Consequently,
+\begin{equation}\label{ctrl:target-error-split}
+ \norm{\widetilde x_k-x_0(\tau_k)}
+ \le e_k+\norm{x_c(\tau_k)-x_0(\tau_k)}.
+\end{equation}
+For the same initial state and a common working domain, write
+$f_c=f_0+\delta f$, $f_0=J\nabla h_0$, and suppose
+$\norm{\delta f}\le\rho_f$ and $f_0$ is $L_0$-Lipschitz there. Gronwall's inequality gives
+\[
+ \norm{x_c(\tau)-x_0(\tau)}
+ \le \rho_f\frac{e^{L_0\tau}-1}{L_0},
+\]
+with the continuous interpretation $\rho_f\tau$ when $L_0=0$. For exact actuation one may bound
+$\rho_f$ by $\sup\norm{\nabla\delta R}+|\delta\gamma|\sup\norm Y$.
+Reducing $\Delta$ controls the first term in \eqref{ctrl:target-error-split}; it does not eliminate fixed conservative or damping errors in the second. Independent convergence comparisons therefore use both a reference for $f_c$ and the nominal target, answering different questions.
+
+These results apply to continuous feedback evaluated within the same implicit step. A hardware zero-order hold, a delay or activation of saturation changes the realized field or map. Their errors require the corresponding sampled-control analysis rather than being relabeled as Hamiltonian perturbations. The experiments that follow report the implemented equations, solve residuals and comparison trajectories separately, so that numerical order, compensation quality and geometric structure can each be assessed.
+

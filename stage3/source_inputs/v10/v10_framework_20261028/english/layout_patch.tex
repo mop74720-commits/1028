@@ -1,0 +1,60 @@
+\makeatletter
+\def\@maketitle{%
+\if@Royal
+\vspace*{-20pt}
+\fi
+\if@Crown
+\vspace*{-20pt}
+\fi
+\vspace*{-34pt}%
+\null%
+\begin{center}
+\if@PCfour
+\begin{rm}
+\else
+\begin{sf}
+\fi
+\begin{minipage}[t]{\textwidth-57.625mm}
+  \vskip 12.5pt%
+    {\raggedright\titlesize\textbf{\@title} \par}%
+    \vskip 1.5em%
+    \vskip 12.5mm%
+    \end{minipage}\hspace{15mm}\begin{minipage}[t]{42.625mm}
+\hbox{}\scriptsize\journalname\\
+\hbox{}Direction I framework integration\\
+\hbox{}28 October 2026\\
+\hbox{}\versionlanguage\\[4pt]
+\hbox{}{\fboxsep 2pt\fbox{Research draft}}
+\end{minipage}
+{\par\large%
+\if@Royal
+      \vspace*{6mm}
+      \fi
+      \if@Crown
+      \vspace*{6mm}
+      \fi%
+      \lineskip .5em%
+      {\raggedright\textbf{\@author}
+      \par}}
+     \vskip 40pt%
+    {\noindent\usebox\absbox\par}
+    {\vspace{20pt}%
+      %
+      {\noindent\normalsize\@keywords}\par}
+      \if@PCfour
+      \end{rm}
+      \else
+      \end{sf}
+      \fi
+      \end{center}
+      \if@Royal
+      \vspace*{-4.5mm}
+      \fi
+      \if@Crown
+      \vspace*{-4.5mm}
+      \fi
+      \vspace{22pt}
+        \par%
+  }
+ 
+\makeatother

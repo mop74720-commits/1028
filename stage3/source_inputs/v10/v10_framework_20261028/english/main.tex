@@ -1,0 +1,30 @@
+\documentclass[doublespace,Afour,sageh,times]{sagej}
+\input{preamble}
+\externaldocument{supplement_xr}[v10_Integrated_EN_Supplement.pdf]
+\hypersetup{pdftitle={Birkhoff discretization and complex Hamiltonian residual control of a magnetic catheter model},pdfauthor={Anonymous authors},pdfsubject={V10 and Direction I framework integration, 28 October 2026}}
+\begin{document}
+\title{Birkhoff discretization and complex Hamiltonian residual control of a magnetic catheter model}
+\author{Anonymous authors}
+\begin{abstract}
+A magnetic catheter model requires a consistent connection between mechanical reduction, learned compensation and numerical dynamics. We develop that connection through three linked subproblems: the matrix implementation of a Birkhoff difference scheme, conservative-residual identification and magnetic realization, and the structure and convergence of the controlled discretization. A planar beam with a tip magnet supplies a common parameter-traceable model, retaining the full coupled cosine potential and endpoint inertia. A compatible time-dependent canonical representation yields a weighted midpoint map, while endpoint projection and noncommuting-matrix elimination make its relation to the ordinary midpoint scheme explicit. Integral state observations identify an analytic potential residual and proportional damping without acceleration labels. The resulting compensation is evaluated inside the same implicit update and realized through magnetic force and torque. We establish finite-time convergence with an explicit accumulated solver-residual term and distinguish it from error relative to the nominal target. When the nonconservative residual is removed, the exactly defined implicit map is exact symplectic. The closed-loop Hamiltonian's quartic normal form and learning-error budget then provide a conditional route to discrete KAM persistence. Linear matrix tests and nonlinear magnetic-control experiments evaluate the three subproblems separately. Full-modal implementation, actuator calibration and a finite-amplitude KAM certificate retain their stated additional requirements.
+\end{abstract}
+\keywords{Birkhoff systems, magnetic catheter control, residual learning, geometric integration, numerical convergence, discrete KAM}
+\maketitle
+\raggedbottom
+\section{Background and research question}\label{sec:background}
+\input{sections/background}
+\section{Mechanical reduction and Birkhoff generating-function construction}\label{sec:derivation}
+\input{sections/mechanics}
+\input{sections/structure}
+\section{Controlled discretization: convergence and numerical verification}\label{sec:analysis}
+\input{sections/controlled_analysis}
+\input{sections/analysis}
+\section{Discrete KAM persistence for the compensation dynamics}\label{sec:kam}
+\input{sections/kam}
+\section{Magnetic realization and whole-beam validation}\label{sec:application}
+\input{sections/application}
+\section{Conclusion}\label{sec:conclusion}
+\input{sections/conclusion}
+\input{sections/endmatter}
+\input{sections/references}
+\end{document}

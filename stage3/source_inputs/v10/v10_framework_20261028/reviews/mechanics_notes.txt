@@ -1,0 +1,147 @@
+English mechanics/application integration notes
+==============================================
+Project: v10_framework_20261028
+Revision purpose: Direction I and its three linked subproblems organize the
+article. The audited physical baseline is retained as their common object.
+This note supersedes the mechanics note copied from v10_integrated_20261028.
+
+Owned files and placement:
+  english/sections/mechanics.tex -- first part of Section 2.
+  english/sections/application.tex -- Section 5.
+  english/sections/supp_mechanics.tex -- Supplement S1.
+  reviews/framework_mechanics_map.tsv -- 18 source-to-destination entries.
+  The six main sections and root-managed cross-reference architecture remain.
+  Labels use mech:, app:, and sm: prefixes; transferred app: labels are retained
+  in Supplement S1 so existing external references continue to resolve.
+
+Current narrative:
+  The main application follows U_A = gammahat Y + grad Rhat throughout.
+  It connects the same coupled nominal magnetic energy to the physical ports,
+  realized-input reconstruction, the actual physical closed loop, modal
+  enrichment and a separate conditional clearance argument.
+  Route B is referenced only as the related tracking extension in Supplement S4.
+  It is not a parallel organizing objective of the main application.
+
+Retained physical basis:
+  All pre-existing labeled mechanics equations and the complete parameter table
+  are unchanged from the audited baseline. The 32-element beam includes terminal
+  translation mass and rotary inertia, with centre of mass at the beam endpoint.
+  Coating, adhesive and offset mounting masses are not included.
+  C = alpha Mf is a declared effective damping model. The corresponding endpoint
+  damping terms are not independent measurements of metal-core dissipation.
+  General rod/M(q) mechanics is retained: c_geo is inertia, D_N is dissipation,
+  and B_u is a physical generalized input map. A momentum readout G1 produces
+  physical damping -M grad_p G1, not automatically -grad_p G1.
+  The Rayleigh readout gamma v^T N^-1 v / 2 produces -gamma Y only when v = NY.
+
+Dimensions and coordinate levels:
+  New Table mech:dimension-table distinguishes the 64-by-64 full FE mass Mf,
+  mass-normalized modal I_n (I2 for two modes), and balanced Meff = N^-1.
+  The full FE phase space has dimension 128. Two-mode phase states and residuals
+  have dimension 4; the joint endpoint transformation has dimension 8.
+  For general n, phase-flow and endpoint-transformation Jacobians have sizes
+  2n-by-2n and 4n-by-4n, respectively. They are not mechanical mass matrices.
+  The controller's continuous generalized input U is a two-vector; F and tau_B
+  are dimensional physical ports. The step-scaled four-dimensional increment
+  is defined by the theory owner in ctrl:midpoint and is referenced here.
+
+Physical interface and new closure:
+  tau_B is the active transverse-field magnetic torque, with units N m.
+  mu is the magnetic dipole moment, with units A m^2.
+  T = E0(theta - sin(theta)) + tau_B is the total modal moment relative to the
+  biased linear stiffness. The known bias remainder must be removed before
+  using T to calculate the transverse field.
+  app:physical-closed-loop completes the chain:
+    a_ddot = -Lambda grad V0 + (alphahat - alpha) a_dot - Lambda grad deltaR,
+    alphahat = omega0 gammahat.
+  The true residual is evaluated by the synthetic plant or labeled truth-only
+  comparator, not by the learned control law.
+  app:input-reconstruction defines U_rec and e_port for the learned group.
+  Calibration, angle estimation, saturation and current limits must appear in
+  the applied ports and therefore in e_port when such effects are introduced.
+
+Same-controller enrichment:
+  app:enriched-plant defines a physical full residual R_N in joules and the
+  N-by-2 physical input map for N = 2, 4, 8, 64.
+  A matched synthetic hierarchy uses restrictions of one declared full potential
+  and satisfies R_N(Ds X, 0) = E0 R*(X). This continuation is not identified from
+  two-mode data alone.
+  The projected actual low dynamics contain e_mag^(N) - e_R^(N) + e_port.
+  e_mag^(N) is the full-angle versus two-mode nominal magnetic difference;
+  e_R^(N) is the low projection of the full residual minus grad R*(X).
+  For the explicit proposed synthetic full-angle extension E0 beta* g(theta_N),
+  e_R^(N) = -beta* e_mag^(N), so the combined angle term is (1+beta*) e_mag^(N).
+  A low-coordinate-only potential is recorded as a different isolating model.
+  The theory agent independently checked this new projection and sign relation.
+  The actual full endpoint angle must be used in the ideal port inverse;
+  substituting an estimated two-mode angle contributes implementation error.
+
+Validation protocol and evidence status:
+  app:validation-stages restores the fixed-controller 4/8/64-mode and independent
+  FE/COMSOL protocol. Only the two-mode controlled-response stage is complete.
+  Higher-mode trajectories, independent FE driven comparisons, noise and
+  saturation tests, hardware allocation and finite-amplitude certification
+  are not reported as completed results.
+  Linear 16/32/64-element frequency convergence is distinct from changing the
+  number of retained modes in a controlled-response test.
+  The proposed tests keep the fitted law, low initial state, nominal reference
+  and port convention fixed, introduce declared high-mode initial conditions,
+  and record the full centreline, slopes, modal response and magnetic demands.
+  The two-mode truth-only comparator remains separate from full-state exact
+  feedback; it does not silently cancel high-mode defects.
+
+Stronger exact-feedback result moved to Supplement S1:
+  sm:exact-lift and sm:lift contain the conditional complete finite-dimensional
+  realization and its proof. The retained labels are app:full-modal,
+  app:velocity-inversion, app:full-feedback, app:conditional-lift and
+  app:response-coefficients. Their equations were transferred unchanged.
+  This construction assumes the nominal full plant, known damping, exact target
+  derivatives, an invertible velocity map and feasible full-angle actuation.
+  It does not establish unchanged learned-controller performance, a new torus
+  certificate, an infinite-dimensional limit or arbitrary low-state attraction.
+  General momentum-dependent target energies use the stated velocity inversion.
+
+Energy and clearance:
+  The Cauchy-Schwarz displacement bound holds for any clamped H2 shape, including
+  all retained modes. The static tip-force shape is only its equality case.
+  A complete nominal energy has nonnegative bending, bias and kinetic terms.
+  A full residual contributes -a_dot^T grad R_N to the nominal-energy derivative;
+  that power needs a bound, or an augmented-energy lower bound must be proved.
+  The reported compensation initial nominal energy is 12.656720734508879 nJ,
+  above the selected 0.95 Ec cap of 9.518731216065792 nJ. No work governor is
+  implemented in the reported runs, so sampled displacement maxima are not
+  consequences of that energy-cap theorem.
+  The tracking initial state and its distinct energy belong to Supplement S4.
+  Sensing/execution and sample-and-hold results remain conditional algebraic
+  bounds without invented hardware tolerances.
+
+Numerical sources:
+  Physical values, eigenvalues, modal maps and sensitivities use
+  reproduction/new_baseline.json; its SHA256 remains
+  2bac37b2f4444efc6a0ba742139fbf0b35e268e9f4f3597ba13a0793bc2049ac.
+  The principal learned field demand and reconstruction diagnostics use the
+  audited compensation records in reproduction/experiments/.
+  No parameter record was modified and no new numerical experiment was run by
+  this mechanics revision. No historical full-model result is relabeled as new.
+  The extra-digit statement remains: exported digits identify a numerical
+  benchmark and do not imply corresponding measurement precision.
+
+Citation keys and macros:
+  Retained keys: simo, antman, abbott.
+  Parameter-reference keys: cho2021pdms, smN50, kjMoment, lussi2021cvs,
+  fischer2017adhesion. The last is used only for the dependence of material loss
+  on preparation/frequency, not to supply this benchmark's modal damping.
+  No additional bibliography entries or custom macros are required.
+  Existing amsmath/amssymb/amsthm, booktabs, table* and theorem environments suffice.
+
+Current layout and translation status:
+  The root editor froze the English master in
+  provenance/english_master_freeze.json on 2026-10-28 after a successful
+  23-page main / 25-page supplement build with zero compiler warnings.
+  All three owned English source hashes still match that freeze.
+  The three corresponding Chinese sections have now been translated in full.
+  reviews/translation_mechanics_notes.txt records the current edition's exact
+  source checks, Chinese hashes, terminology and semantic review; it replaces
+  the earlier integrated-edition record.
+  This agent has run no LaTeX compilation. Chinese compilation and subsequent
+  visual QA remain under the root editor's control.

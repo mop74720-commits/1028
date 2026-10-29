@@ -1,0 +1,224 @@
+\subsection{A compatible Birkhoff representation of the mechanical model}
+\label{struct:birkhoff-section}
+
+The first subproblem is to obtain a computable difference scheme from the same mechanical equations that define the catheter. The general model in \eqref{mech:general-hamiltonian} separates the conservative energy, dissipation and applied force. For $z=(q,p)\in\R^{2n}$, a Birkhoff representation uses a one-form $\mathcal R(z,t)^{\mathsf T}\dd z$ and a scalar $\mathcal B$:
+\begin{equation}\label{struct:birkhoff}
+\begin{aligned}
+ \mathcal K_{ij}&=\partial_{z_i}\mathcal R_j-
+                  \partial_{z_j}\mathcal R_i,\\
+ \mathcal K\dot z&=\nabla_z\mathcal B+\partial_t\mathcal R=:b.
+\end{aligned}
+\end{equation}
+Here $\mathcal K$ must be nonsingular and skew-symmetric. Its entries and $b$ also satisfy
+\begin{equation}\label{struct:compatibility}
+\begin{aligned}
+ \partial_k\mathcal K_{ij}+\partial_i\mathcal K_{jk}
+                +\partial_j\mathcal K_{ki}&=0,\\
+ \partial_t\mathcal K_{ij}&=\partial_i b_j-\partial_j b_i.
+\end{aligned}
+\end{equation}
+These conditions connect the one-form, scalar and vector field; an arbitrary dissipative force cannot be represented by assigning them independently \citep{su2007}. The Birkhoff matrix is $2n\times2n$, whereas the mass matrix is $n\times n$. Table~\ref{mech:dimension-table} records the dimensions in the finite-element, modal and balanced coordinates. Supplement~\ref{ss:birkhoff} gives the compatibility argument and distinguishes a formal local existence construction from the explicit representation used here.
+
+For proportional momentum damping $\dot p=-H_q-\alpha(t)p$, set $a(t)=\exp\!\int_{t_0}^{t}\alpha(s)\dd s$. A constructive compatible choice is
+\begin{equation}\label{struct:weighted-hamiltonian}
+\begin{aligned}
+ \mathcal R&=(a p,0),\qquad \mathcal B=aH,
+       \qquad\mathcal K=-aJ,\\
+ \Pi&=a p,\qquad
+ \widetilde H(q,\Pi,t)=a(t)H(q,\Pi/a(t),t).
+\end{aligned}
+\end{equation}
+It yields the original equations and makes $Z=(q,\Pi)$ canonical. The construction permits $M=M(q)$ if every mass derivative in $H_q$ is retained. The time dependence of $\widetilde H$ and the return to physical momentum carry the damping; this representation alone does not supply the autonomous conservative system required by classical KAM theory.
+
+\subsection{Endpoint projection and generating-function construction}
+\label{struct:endpoint-section}
+
+The endpoint construction and its time expansion play the roles of Theorems A and B in the original framework \citep{feng,fengqin}. We state the local argument needed for the present realization, rather than imposing an inverse on the generated gradient itself. Write $\lambda_Z=\Pi^{\mathsf T}\dd q$. An endpoint transformation $\alpha:(Z_+,Z_-)\mapsto(\widehat w,w)$ is compatible when it is locally invertible and
+\[
+ \dd(\widehat w^{\mathsf T}\dd w)
+      =\dd\lambda_{Z_+}-\dd\lambda_{Z_-}.
+\]
+
+\begin{proposition}[Endpoint projection: the role of Theorem A]
+\label{struct:endpoint-proposition}
+Let $Z_+=\Phi_Z(Z_-)$ be a symplectic graph between fixed time endpoints. Suppose that the compatible transformation $\alpha$ has lower derivative blocks $C_\alpha,D_\alpha$ and
+\[
+ \det\bigl(C_\alpha D\Phi_Z+D_\alpha\bigr)\ne0.
+\]
+Then, on a sufficiently small simply connected neighborhood, the graph can be written as $\widehat w=\nabla_w\varphi(w)$. Invertibility of $\partial_w\widehat w$ is not required.
+\end{proposition}
+
+\begin{proof}
+The stated projection condition makes $w$ a local coordinate on the graph. Symplecticity and compatibility make $\widehat w^{\mathsf T}\dd w$ closed on that graph. The local Poincar\'e lemma then gives the scalar $\varphi$. These steps use the projection onto $w$, not an inverse of its gradient.
+\end{proof}
+
+For the central endpoint convention, let $T_0=\diag(I_n,-I_n)$ and $\mathsf E=\left(\begin{smallmatrix}0&I_n\\I_n&0\end{smallmatrix}\right)$. Choose
+\begin{equation}\label{struct:endpoint-variables}
+\begin{aligned}
+ \widehat w&=(\widehat Q,\widehat P)=\mathsf E(Z_+-Z_-),\\
+ w&=T_0\bar Z=(Q,P)=(\bar q,-\bar\Pi).
+\end{aligned}
+\end{equation}
+Its full derivative is $4n\times4n$, with $C_\alpha=D_\alpha=T_0/2$. Hence
+\begin{equation}\label{struct:endpoint-projection}
+ D_{Z_-}w=\tfrac12T_0(D\Phi_Z+I_{2n}).
+\end{equation}
+At zero step this is $T_0$, so it stays invertible for sufficiently small steps on a fixed compact neighborhood. By contrast, $\widehat w=f(w)$ is identically zero at zero step and $f_w=0$. Supplement~\ref{ss:projection} verifies compatibility, the joint inverse of the endpoint variables and their connection to the Newton matrix.
+
+The role of Theorem B is to turn the time expansion of the endpoint generator into a difference scheme. For the time-dependent Hamiltonian, take the complete temporal midpoint $t_m=t_k+\Delta_t/2$ and use
+\begin{equation}\label{struct:lifted-generator}
+\begin{aligned}
+ \varphi_{\Delta_t}(Q,P)&=-\Delta_t\widetilde H(Q,-P,t_m),\\
+ \widehat Q&=-\Delta_t\widetilde H_q(Q,-P,t_m),\\
+ \widehat P&=\Delta_t\widetilde H_\Pi(Q,-P,t_m).
+\end{aligned}
+\end{equation}
+Substitution of \eqref{struct:endpoint-variables} gives the canonical time-midpoint equations. For constant $\alpha$ and mass, set $r=\exp(\alpha\Delta_t/2)$ and eliminate the absolute-time exponentials:
+\begin{equation}\label{struct:weighted-midpoint}
+\begin{aligned}
+ q_+-q_-&=\tfrac{\Delta_t}{2}M^{-1}(r p_++r^{-1}p_-),\\
+ r p_+-r^{-1}p_-&=-\Delta_t\nabla V\bigl((q_++q_-)/2\bigr).
+\end{aligned}
+\end{equation}
+The exact implicit map obeys
+\begin{equation}\label{struct:weighted-structure}
+\begin{aligned}
+ (D\Phi)^{\mathsf T}J D\Phi&=e^{-\alpha\Delta_t}J,\\
+ (D\Phi)^{\mathsf T}\mathcal K(t_+)D\Phi&=\mathcal K(t_-).
+\end{aligned}
+\end{equation}
+This is the pullback of canonical symplecticity in $Z$ through $T_t(q,p)=(q,e^{\alpha t}p)$. Full time-midpoint evaluation gives second-order consistency; freezing explicit time dependence at $t_k$ may leave only first order. For variable mass the same construction applies to the complete $\widetilde H$, but the two constant-mass updates in \eqref{struct:weighted-midpoint} cannot be reused unchanged.
+
+\subsection{The ordinary midpoint scheme and noncommuting matrices}
+\label{struct:matrix-section}
+
+The endpoint averages also give an ordinary midpoint discretization of the general physical field:
+\begin{equation}\label{struct:mechanical-midpoint}
+\begin{aligned}
+ q_+-q_-&=\Delta_t M(\bar q)^{-1}\bar p,\\
+ p_+-p_-&=\Delta_t[-H_q(\bar q,\bar p)-C_m\bar v]\\
+           &\quad+\Delta_t(F_m+U_m),\\
+ \bar v&=M(\bar q)^{-1}\bar p.
+\end{aligned}
+\end{equation}
+Every state-dependent quantity is evaluated at the same midpoint and every explicit time argument at $t_m$. This restores the complete vector form of the original matrix update. With general damping it is distinct from \eqref{struct:weighted-midpoint}; second-order accuracy does not imply the exponential structure factor in \eqref{struct:weighted-structure}.
+
+For constant $M,C,K$, with $M\succ0$, $K=K^{\mathsf T}$ and $V(q)=q^{\mathsf T}Kq/2$, elimination of the position midpoint gives
+\begin{equation}\label{struct:matrix-elimination}
+\begin{aligned}
+ E_{\Delta_t}&=\tfrac{\Delta_t^2}{4}KM^{-1}
+                         +\tfrac{\Delta_t}{2}CM^{-1},\\
+ (I_n+E_{\Delta_t})p_+
+    &=(I_n-E_{\Delta_t})p_--\Delta_tKq_-\\
+    &\quad+\Delta_t(F_m+U_m),\\
+ q_+&=q_-+\tfrac{\Delta_t}{2}M^{-1}(p_++p_-).
+\end{aligned}
+\end{equation}
+The order $KM^{-1}$ follows from substituting $\bar q=q_-+\Delta_tM^{-1}(p_++p_-)/4$ into the momentum equation. No commutation is assumed. Implementation solves the linear system with $I_n+E_{\Delta_t}$, whose invertibility holds for sufficiently small steps. A feedback depending on the unknown midpoint still gives an implicit problem. For $M=M(q)$, the inertial vector $-(\bar p^{\mathsf T}\partial_{q_i}M^{-1}\bar p)/2$ must also be retained; direct solution of the $2n$-dimensional residual is then appropriate. Supplement~\ref{ss:matrix} gives the full elimination.
+
+For the catheter's balanced coordinates, the substitution is
+\begin{equation}\label{struct:effective-matrices}
+\begin{aligned}
+ q&=X,\qquad p=Y,\\
+ M_{\rm eff}&=\mathsf N^{-1},\qquad
+ C_{\rm eff}=\gamma\mathsf N^{-1}.
+\end{aligned}
+\end{equation}
+Thus $M_{\rm eff}^{-1}Y=\mathsf N Y$ and $C_{\rm eff}M_{\rm eff}^{-1}Y=\gamma Y$. The magnetic force remains nonlinear, so the actual test solves the full residual rather than treating $K$ as a constant replacement for the cosine potential. Section~\ref{sec:analysis} first checks the noncommuting linear algebra against a matrix-exponential reference and then tests the same discretization on that coupled magnetic model.
+
+\subsection{Central generators and the autonomous higher-order extension}
+\label{struct:schemes}
+
+For an autonomous Hamiltonian $h$ in $x=(X,Y)$ and dimensionless time $\tau$, write $f=J\nabla h$ and use $\Delta$ for the time step. The central convention is
+\begin{equation}\label{struct:central-map}
+ x_+-x_-=J\nabla S_\Delta(m),\qquad m=(x_++x_-)/2.
+\end{equation}
+It is equivalent to the endpoint notation above through $\varphi_\Delta(Q,P)=-S_\Delta(Q,-P)$. The choice $S_\Delta=\Delta h$ gives
+\begin{equation}\label{struct:midpoint}
+ x_+-x_-=\Delta J\nabla h(m).
+\end{equation}
+Whenever the implicit equation has a unique local branch, its Jacobian is
+\begin{equation}\label{struct:cayley}
+ D\Psi_\Delta=(I-C_\Delta)^{-1}(I+C_\Delta),\qquad
+ C_\Delta=\tfrac12J S_\Delta''(m).
+\end{equation}
+Symmetry of $S_\Delta''$ yields symplecticity. With $\lambda=Y^{\mathsf T}\dd X$, the single-valued primitive is
+\begin{equation}\label{struct:exact-symplectic}
+ \Psi_\Delta^*\lambda-\lambda
+ =\dd\bigl[\bar Y^{\mathsf T}(X_+-X_-)-S_\Delta(m)\bigr].
+\end{equation}
+The map is therefore \emph{exact symplectic}. This stronger property supplies the periodic generating function needed by discrete KAM; it concerns the exact implicit map rather than finite-tolerance solver output.
+
+Retaining the next nonzero term of the central time expansion gives the fourth-order extension \citep{feng}:
+\begin{equation}\label{struct:central4}
+ S_\Delta^{[4]}(x)=\Delta h(x)
+       +\frac{\Delta^3}{24}f(x)^{\mathsf T}h''(x)f(x).
+\end{equation}
+Supplement~\ref{ss:central4} derives its local $O(\Delta^5)$ defect and harmonic phase formula. The midpoint generator alone remains second order. To obtain a fourth-order controlled method, \eqref{struct:central4} must use all derivatives of the actual autonomous closed-loop Hamiltonian. Adding a separate control increment after a Central4 step does not establish that order or structure.
+
+The principal new-parameter closed-loop calculations use ordinary implicit midpoint on the actual field,
+\begin{equation}\label{struct:general-midpoint}
+ x_+-x_-=\Delta f_{\rm cl}(m,\tau_m).
+\end{equation}
+Damping and feedback are evaluated at this same unknown midpoint. A simultaneously integrated reference belongs to the augmented state. Equation~\eqref{struct:midpoint} is the conservative specialization; Section~\ref{sec:analysis} will identify precisely when the controlled field has that form and quantify the effect of an inexact implicit solve. Separate linear and new-parameter nonlinear tests also evaluate Central4 for the conservative target $h_0$, using the explicit derivatives in Supplement~\ref{ss:central4-magnetic-section}. Those fourth-order checks do not assign fourth order or exact symplecticity to a general damped feedback loop.
+
+\subsection{The CHNN model class and the four Hamiltonians}
+\label{struct:objects-section}
+
+The complex variables in \eqref{mech:complex-chart} organize the Hamiltonian decoder; the trainable object remains a real energy on the real physical state space. A general CHNN may represent that energy by complex hidden layers followed by a real readout, and may use a separate nonnegative dissipation branch. The force and power equations are then those in \eqref{mech:decoder}--\eqref{mech:power}. The energy and dissipation readouts have different roles: combining their values into one complex output does not make the dissipative dynamics Hamiltonian. Analyticity of the energy on a specified complex neighborhood is an additional requirement for the KAM analysis in Section~\ref{sec:kam}.
+
+To make the identification, force realization and error estimates explicit, the present implementation fixes the known kinetic energy and learns a potential residual. With $\mathsf N=\diag(\nu_1,\nu_2)$ and $\vartheta=d^{\mathsf T}X$, define
+\begin{equation}\label{struct:objects}
+\begin{aligned}
+ g(s)&=1-\cos s-s^2/2,\\
+ V_0(X)&=\tfrac12X^{\mathsf T}\mathsf N X+g(d^{\mathsf T}X),\\
+ h_0(X,Y)&=\tfrac12Y^{\mathsf T}\mathsf N Y+V_0(X),\\
+ h_*&=h_0+R_*,\qquad \widehat h=h_0+\widehat R,\\
+ \delta R&=R_*-\widehat R,\qquad h_c=h_0+\delta R.
+\end{aligned}
+\end{equation}
+The four energies are, respectively, the nominal model, the true conservative model within the declared model class, the learned model and the conservative part of the compensation closed loop. They have the same quadratic kinetic energy but different potentials. The actual damped, actuated plant is
+\begin{equation}\label{struct:plant}
+ X'=\mathsf N Y,\qquad
+ Y'=-\nabla(V_0+R_*)(X)-\gamma Y+U.
+\end{equation}
+An unknown mass, contact force or input gain is not represented by $R_*(X)$; including such effects requires a corresponding model and observation defect.
+
+A finite analytic readout makes the general CHNN architecture directly auditable: $\widehat R(X)=\sum_{j=1}^{m}\widehat\beta_jF_j(X)$ with frozen real analytic features. The minimal experiment takes $m=1$, $F_1=g(d^{\mathsf T}X)$ and an artificial true coefficient $\beta_*=0.2$. This coefficient is an experimental perturbation, not a measured material property. The architecture can retain a complex implementation of these features, but the experiment tests this constrained readout rather than unrestricted hidden-layer training. Supplement~\ref{ss:full-features} gives the full $35$-coefficient quartic readout and explains the additional control requirements when momentum-dependent terms are learned.
+
+\subsection{Joint integral identification of energy and damping}
+\label{struct:identification-section}
+
+State observations are divided into disjoint training and validation trajectories. For each observation window $[a_\ell,b_\ell]$, let $c_\ell=(c_{\ell X},c_{\ell Y})$ be an endpoint-matching reconstruction and let $U_\ell^{\rm data}$ be the known input. Set $\mathcal V_F=[\nabla F_1,\ldots,\nabla F_m]$. Integrating the momentum equation gives
+\begin{equation}\label{struct:integral-design}
+\begin{aligned}
+ y_\ell={}&c_{\ell Y}(b_\ell)-c_{\ell Y}(a_\ell)\\
+   &+\int_{a_\ell}^{b_\ell}
+      [\nabla V_0(c_{\ell X})-U_\ell^{\rm data}]\dd\tau,\\
+ D_\ell={}&-\int_{a_\ell}^{b_\ell}
+          [\mathcal V_F(c_{\ell X}),c_{\ell Y}]\dd\tau,\\
+ \widehat\theta={}&(\widehat\beta_1,\ldots,\widehat\beta_m,
+                      \widehat\gamma)^{\mathsf T}.
+\end{aligned}
+\end{equation}
+The stacked design has $nL_I$ rows and $m+1$ columns; here $n=2$, and $L_I$ denotes the number of windows. A QR or SVD solve fits $D\theta\simeq y$ and diagnoses excitation through its singular values. Enforcing $\widehat\gamma\ge0$ gives a passive physical damping estimate. The reproduced calculation uses the unconstrained linear solve, so a negative value at roundoff scale in the zero-damping scenario is reported as a numerical fit result rather than physical negative damping.
+
+No acceleration labels are required. Nevertheless, endpoint noise, interpolation, quadrature and unmodeled dynamics still affect the integrated equation. They enter an independently bounded observation defect, not an inferred consequence of a small training loss. Section~\ref{sec:kam} converts that defect and the Gram lower bound into coefficient, force and analytic energy bounds. The compensation controller and the tracking extension in Supplement~\ref{sec:supp-tracking} use this same frozen fit and the physical input map \eqref{mech:modal-ports}.
+
+\subsection{Residual compensation toward the nominal dynamics}
+\label{struct:route-a-section}
+
+The principal controller, denoted Route~A in the reproduced experiments, cancels the estimated damping and potential residual while retaining the complete coupled nominal magnetic energy:
+\begin{equation}\label{struct:route-a-control}
+ U_A=\widehat\gamma Y+\nabla\widehat R(X).
+\end{equation}
+Substitution into \eqref{struct:plant}, with $\delta\gamma=\gamma-\widehat\gamma$, yields
+\begin{equation}\label{struct:route-a-closed}
+ x'=J\nabla h_c(x)+\binom{0}{-\delta\gamma Y}.
+\end{equation}
+Thus a nonzero conservative learning error changes the closed-loop Hamiltonian to $h_c$; it does not destroy Hamiltonian structure. A nonzero damping error leaves a nonconservative term, with power $h_c'=-\delta\gamma Y^{\mathsf T}\mathsf N Y$. Classical flow or map KAM therefore concerns this physical closed loop only when damping is canceled exactly and the commanded generalized force is realized exactly, or when any remaining force is independently shown to be an autonomous potential gradient and included in $h_c$. A small generic force error is insufficient for this structural premise.
+
+In the exact-compensation limit the closed loop is $h_0$. The nominal reference in the Route~A experiments is the flow of $h_0$ from the same initial state. The oracle uses $U=\gamma Y+\nabla R_*$ solely to separate integration error from identification error; the learned controller uses only the fitted quantities.
+
+
+The next section inserts this feedback into the same implicit equations and proves the resulting structure and finite-time convergence. Tracking a learned conservative reference is a distinct objective retained in Supplement~\ref{sec:supp-tracking}.

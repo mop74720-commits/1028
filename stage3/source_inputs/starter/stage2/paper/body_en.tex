@@ -1,0 +1,193 @@
+{\LARGE\bfseries\sffamily\color{inkblue}\raggedright A shared framework for three-dimensional\\ magnetic intravascular robots in microgravity\par}
+\vspace{.5em}
+{\large Physics, learning, Birkhoff discretization and conditional KAM analysis\par}
+{\small Expandable manuscript source; evidence frozen at the second-stage review, 29 October 2026.}
+
+\section{Scope, model hierarchy and status of claims}
+\textbf{Purpose.} This source organizes the 1025 research program without substituting a planar beam for its final target. It is a writing framework, with derived identities, conditional mathematical statements, numerical observations and open proof obligations explicitly separated. No new experiment is introduced here. The Chinese and English texts call the same equation and notation sources; framework tags do not replace the original manuscript numbers.
+
+\begin{tabularx}{\textwidth}{@{}P{.22\textwidth}XX@{}}
+\toprule
+Layer & Object and retained physics & Current evidential boundary\\
+\midrule
+Full target & Three-dimensional Cosserat rod, magnetic field/circuit, pulsatile flow, deformable vessel, contact/friction and microgravity boundaries. & Equations and energy interfaces; coupled FSI, physiology and hardware calibration remain open.\\
+Validation & Spatial rods with 16/32/64 segments; 64 segments retain orientation, extension, shear, bending and twist. & Finite simulations with prescribed flow and rigid lumen contact; no continuum or clinical certificate.\\
+Analysis and learning & 12-configuration-DoF, 24-phase-dimensional three-dimensional Kirchhoff strain Ritz family; variable mass and magnetic ports. & Differentiable geometric model and trained networks; ROM error and a general Birkhoff chart are not yet certified.\\
+\bottomrule
+\end{tabularx}
+
+The old two-mode v10 benchmark is retained for regression and its own frozen certificate. The new 8/16-DoF mathematical tests exercise algorithms with declared coordinate constructions. Neither replaces the 12-DoF geometric ROM or the 64-segment spatial validation layer.
+
+\subsection{Shared notation and claim register}
+\input{shared_notation}
+
+\textbf{Status labels.} \emph{Derived} means an identity or argument under the stated model assumptions; \emph{conditional} identifies a theorem whose hypotheses must still be checked for the robot; \emph{observed} means a finite recorded computation; \emph{open} means no completed proof or validation. The machine-readable \path{claims.tsv} records the route, assumptions, evidence and next obligation for each claim.
+
+\PaperPage
+\section{Spatial rod and magnetic energy interface}
+Use material coordinate $s\in[0,L]$, with all line forces and inertias measured per unit reference length. The spatial rod formulation retains both bending directions and torsion; shear and extension are constrained only in the separate Kirchhoff analysis layer \citep{gazzola2018}.
+\EqKinematics
+\EqRodBalance
+Equation~\eqref{eq:rod-balance} assumes reference cross-sectional inertia $\Inertia$ independent of deformation and time. Otherwise its complete angular-momentum derivative is required. A constitutive energy gives consistent forces and moments:
+\EqConstitutive
+For an isotropic circular section, $C_\nu=\diag(k_sGA,k_sGA,EA)$ and $C_\kappa=\diag(EI,EI,GJ_t)$, with $J_t=2I$. The Kirchhoff constraint is $\nu=e_3$; the force is then a constraint reaction. A clamped moving base prescribes both position and orientation, while free-tip conditions follow from boundary virtual work. The executed baseline uses a fixed base and a distributed distal magnetic segment.
+
+\subsection{One magnetic potential, one force and torque convention}
+For fixed hard-magnetic material moments and an external field varying slowly over a cross-section,
+\EqMagneticEnergy
+Varying position at fixed orientation yields the force; $\delta\mu=\delta\vartheta\times\mu$ yields the torque. The same moment must not be counted again as a separate tip dipole. Maxwell surface stress is a more general total-force description, not a replacement by an unexplained line integral. Induced magnetization, hysteresis and demagnetizing effects require a different free energy. The material example of \citet{tong2025} supplies selected geometric and magnetic scales, not space-station physiological data.
+\EqMagneticPort
+The local source-free field has three field and five symmetric trace-free gradient components. These eight components are not eight arbitrary modal forces. A coil map and current/slew constraints further restrict $u$; the 12-coil Biot--Savart interface in the existing results is an engineering model, not measured hardware calibration.
+\Status{Derived; claims P02--P03}{The geometric mass and magnetic virtual work are derived from their energies. Their parameters and external-field assumptions define the scope.}
+
+\PaperPage
+\section{Flow, contact, microgravity and reduction}
+\subsection{Full multiphysics target and the executed closure}
+The full target includes incompressible flow in a moving fluid domain, velocity continuity and reciprocal traction on rod and vessel surfaces:
+\EqFluid
+Here the time derivative is taken in ALE coordinates. In a resolved FSI model the interface traction already supplies fluid loads; an additional Morison drag must not be counted a second time. The current simulations use a prescribed curved-lumen pulsatile profile and relative-velocity drag. This is a one-way closure, not a solved incompressible field. Added mass is disabled in those runs. The straight-tube analysis of \citet{womersley1955} supplies a reference for pulsatile phase effects, not a proof for the curved geometry.
+
+For signed wall gap $g$, a representative active-contact penalty and regularized tangential force are
+\EqContact
+The last quotient is zero at zero tangential speed. Contact-point velocity includes translational and rotational contributions, and the tangential force produces a corresponding moment. The exponent is Hertz-like, but the adopted line-penalty coefficient is not claimed to follow from a thin-vessel Hertz solution. Contact opening is nonanalytic; a classical analytic KAM theorem does not cover it automatically.
+
+Microgravity enters through residual/platform accelerations and through physiological boundary data: inlet pulse, outlet impedance, compliance and wall properties. Setting a gravity constant to zero does not determine those data. Prescribed flow and a moving wall can do positive mechanical work; fluid load cannot generally be replaced by $-C\dot q$ with a claim of monotonically decreasing robot energy.
+
+\subsection{Geometric ROM and the variable-mass Hamiltonian}
+For an embedding $(\bm r(q,s),\Rot(q,s))$, let $J_x$ and $J_\Omega$ map generalized velocity to translation and body angular velocity. Then
+\EqMass
+For the fixed-base embedding, the Legendre transform gives
+\EqHamiltonian
+The mass-derivative term follows from $\partial_iM^{-1}=-M^{-1}(\partial_iM)M^{-1}$ and cannot be discarded. Moving bases introduce affine velocity terms and explicit time power, which must be retained in that extension. All layers must share a consistent power balance:
+\EqPower
+Here magnetic potential is excluded from $E_{\rm mech}$ and its mechanical power is included on the right. Including it in the energy instead requires the corresponding explicit-field power convention.
+
+\PaperPage
+\section{Route A: compatible Birkhoff representation and generating graphs}
+\subsection{A conditional local construction, not a free numerical oracle}
+Fix the actual even-dimensional smooth field $\dot z=f(z,t)$, including the declared control and dissipation. To distinguish orientation from a Pfaff coefficient, the latter is written $\Pfaff$, not $R$:
+\EqBirkhoff
+The action variation yields the last equality. Invertibility and skew symmetry alone are insufficient: the spatial two-form is closed and obeys the transport compatibility equation
+\EqCompatibility
+One local construction solves a one-form transport problem:
+\EqTransport
+Indeed $\nabla(\Pfaff\T f)=(D\Pfaff)\T f+(Df)\T\Pfaff$, which gives~\eqref{eq:birkhoff}. A smooth local diffeomorphic flow preserves the initial nondegeneracy. This is a conditional existence argument; computing transport, charts and their derivatives has a cost. A gauge change $\Pfaff\mapsto\Pfaff+\nabla\sigma$, $\Birk\mapsto\Birk-\sigma_t$ does not remove a representation residual.
+
+\subsection{What the manuscript's Theorems A/B may legitimately inherit}
+The relevant statements are in Chapter 15 of \citet{fengqin2010}: Theorems 3.5, 4.1, 4.4 and 4.5. They require an endpoint transformation $\alpha:(z_+,z_-)\mapsto(\widehat w,w)$ adapted to the endpoint forms. With its four derivative blocks,
+\EqEndpoint
+Here $\mathbb J$ is the constant skew matrix for the $(\widehat w,w)$ ordering. The evolving projection requires $\det(C_\alpha F+D_\alpha)\ne0$; reconstruction uses a locally invertible endpoint branch. At the initial diagonal,
+\EqInitialGenerating
+The initial generating gradient is not always zero; it depends on $\alpha$. Locally $\widehat w=\nabla_w\varphi$, without requiring $N^{-1}$. Fixing $w$ and the initial endpoint gives
+\EqGeneratingTime
+Analytic coefficient recursion must preserve the gradient property and use the theorem for truncation and reconstruction. For the truncated gradient $G_h(w)=\sum_{j=0}^{m}h^jf_j(w)$, endpoint reconstruction additionally requires $\TruncatedTransversality$, where $N_h=D_wG_h$. A time-dependent chart changes the field to $\partial_t\chi_t+D\chi_t f$; omission of its time derivative changes the dynamics.
+\Status{Conditional A01--A03; application open}{A general, controlled chart integrator has not yet been connected to the geometric 12-DoF ROM. Neither 64-segment simulations nor a known linear conjugacy prove that missing connection.}
+
+\PaperPage
+\section{Route A: original (36), order and implementable control}
+The correct nonlinear midpoint equations retain every mass derivative and solve all unknown midpoint quantities simultaneously:
+\EqMidpoint
+For constant $M,K_s,C$, $V=q^TK_sq/2$ and $Q_{\rm nc}=F-CM^{-1}p$, elimination yields the matrix version of \Original{36}:
+\EqOriginalThirtySix
+The inverse acts from the left. The matrix factors need not commute. This is a rewrite of the same midpoint method, not another algorithm with a different order. State-dependent coefficients remain implicit; in practice a linear/Newton solve is preferable to forming an inverse.
+
+On a smooth stable branch midpoint is second order. For an autonomous canonical Hamiltonian, the central generating correction is
+\EqCentral
+The identity $J\nabla(f^TH''f)=D^2f[f,f]-2(Df)^2f$ gives the cubic increment and fourth order. The plus sign is a preprocessing correction, distinct from the minus sign in midpoint's backward modified Hamiltonian. Sufficient smoothness, symmetric derivatives and a locally unique implicit branch are required; a finite Newton residual adds an implementation error. The damped one-DoF oscillator supplies an explicit warning:
+\EqDampingCounterexample
+Thus ordinary damped midpoint is neither canonical symplectic nor automatically exact for the selected exponential weight. A block-weighted chart requires compatible equal-damping blocks and potentials; arbitrary cross-block coupling invalidates that special construction.
+
+\subsection{Magnetic realizability is a separate control condition}
+An intended momentum force $U$ enters a step as $hU$. It must be allocated through the actual magnetic port:
+\EqAllocation
+One integrable feedback family has a consistent closed-loop potential:
+\EqPotentialControl
+The physical force differentiates the magnetic potential at fixed input. Substituting feedback into the original potential and differentiating everything generally adds a nonphysical chain-rule term. Equation~\eqref{eq:potential-control} is the separately constructed potential that avoids this error.
+
+\PaperPage
+\section{Route A: separate structure, representation and convergence}
+A local sufficient condition for an added field $g$ to retain the same closed form, and the derivative required by sampled feedback, are
+\EqControlDerivative
+Potential feedback must be differentiated and discretized consistently. A fixed-current substep may be symplectic although the resulting state-feedback map is not. Collocated damping with $y=G_m^T\dot q$, $u=-K_y y$ has nonpositive control power; this is a passivity statement, not ordinary symplecticity.
+
+\subsection{Conditional estimates with explicit residual definitions}
+An approximate one-form represents its own field, which can differ from the intended one:
+\EqRepresentationError
+Assume a common compact domain, a smooth Lipschitz field, stable implicit branches, bounded chart inverses, $hL_f/2<1$, a state-increment residual $\|r_k\|\le\eta_h$, and uniform bounds $\|\Kform_a^{-1}\|\le\kappa_B$, $\|e_B\|\le\varepsilon_B$. Then discrete stability and Gronwall give
+\EqConvergence
+The first line is midpoint's estimate. The second has $p=2$, or $p=4$ only after proving the appropriate fifth-order local defect and stage stability. A stage residual must be converted to a state residual. Contact switching, clipping and zero-order hold can change the order.
+
+If an approximate chart has the following defect and the internal ideal map exactly preserves $K_0$, then its pulled-back structure defect is
+\EqChartError
+Implementation and tangent errors must be added if the internal map is only solved approximately. This identity is independent of the trajectory-error bound.
+
+\subsection{Existing evidence and its exact scope}
+The 8/16-DoF algorithm tests use a declared known canonical point lift; they are not arbitrary rod mass metrics. At $n=16$, $T=2$, $h=0.025$, conservative midpoint and Central4 have observed orders 1.9992 and 3.9994. For block-weighted damping, legal weighted midpoint and nonautonomous chart Gauss4 have orders 1.9992 and 3.9998. General ODE Gauss4 is not thereby structure preserving for a dissipative field.
+
+The one-form/Moser test at one $16$-DoF state and $t=0.1$ has chart mismatch $6.68\times10^{-16}$ but field error $0.109619$. The tiny structural residual does not certify a small representation error. The exact-flow information used in a separate diagnostic was not used for state propagation; known-conjugacy costs and auxiliary-chart costs remain in the record.
+\Status{Derived conditional A06--A07; observed A08}{See \path{../notes/route_a.md}. No uniform robot-domain bounds or new KAM certificate follow from these finite tests.}
+
+\PaperPage
+\section{Route B: mechanical learning, normal forms and conditional KAM}
+The 12-DoF Kirchhoff Ritz model retains three-dimensional bending and torsion, with a geometric $M(q)$. Canonical scaling fixes $h_2$, with $\nu_j=\omega_j/\omega_0$; statistical normalization is a different operation:
+\EqLearningNormalization
+The complete complex network uses trainable complex hidden layers, conjugate inputs, a real output, split real/imaginary $\tanh$, a cubic zero-bias gate and momentum-even symmetrization. Small empirical gradient error is not a complex-domain bound of the kind required to connect learning to KAM \citep{chen2022}. Negative sampled $h_{PP}$ in the unrestricted model disproves a global positive-mass claim on those sampled domains.
+
+A separately trained mechanical architecture restricts momentum dependence to a positive quadratic form without reducing the state dimension:
+\EqMechanicalNetwork
+Subtracting the mass-network output at $Q=0$ gives $C(0)=I$; a cubic potential gate fixes the residual 0/1/2 jet. For every nonzero $v$, $v^Th_{PP}v=\|L^TD_\nu v\|^2>0$. This proves pointwise momentum invertibility, not a useful uniform conditioning or approximation bound.
+
+\begin{tabularx}{\textwidth}{@{}Xrr@{}}
+\toprule
+New confirmation data, seed 1025 & Unrestricted $\nabla_z h$ error & SPD $\nabla_z h$ error\\
+\midrule
+Main test / OOD & 1.950\% / 4.693\% & 6.856\% / 13.608\%\\
+Stress test / OOD & 6.043\% / 9.463\% & 98.883\% / 119.752\%\\
+\bottomrule
+\end{tabularx}
+The SPD model has 13,440 real parameters versus 7,104, so this is not an equal-capacity representation comparison. Stress samples reach a condition number near $10^{12}$. This adverse result is retained. Existing feedforward uses known geometric $M$, with limited learned $h_Q$ compensation; it does not invert the failed learned mass. Its damping coefficient is $\alpha_s=2\,\mathrm{s}^{-1}$, appearing as $\alpha_s/\omega_0$ after time scaling.
+
+\subsection{Continuous and discrete KAM are different open obligations}
+The circular isotropic rod with axial bias has four 1:1 bending-frequency pairs. A nonresonant homological division cannot be reused unchanged. A resonant normal form or a physically justified symmetry-breaking model must be analyzed first. An a-posteriori theorem also needs a specified torus, analytic domain, Diophantine frequency, nondegeneracy and explicit constants \citep{haroluque2019}; stability near an already nondegenerate torus does not classify an arbitrary working domain \citep{bounemoura2016}.
+\EqKAMDivisors
+The second line is the selected small-twist discrete condition associated with \citet{shang1999}, not a universal substitute for all its hypotheses. It is required for all nonzero integer $k$, together with frequency-domain margins, twist and smallness thresholds. Continuous nonresonance does not imply it for a fixed step.
+
+\textbf{Exact map first.} Discrete KAM concerns a specified ideal analytic exact-symplectic map, with a uniform analytic implicit branch and compatible chart. Solver or chart errors may enter a generating-perturbation budget only after proving that the perturbed map remains in that class. An arbitrary small nonsymplectic implementation residual, a sampled structure defect or an RMSE cannot be added to a Hamiltonian KAM budget. The old v10 certificate remains restricted to its original frozen two-mode conservative Hamiltonian.
+
+\PaperPage
+\section{Metriplectic candidate and completion obligations}
+Mechanical Rayleigh loss and external power ports suffice for the mechanical experiments already run. A thermal state becomes necessary when thermal effects themselves are a modeled objective. The metriplectic framework distinguishes reversible flow, symmetric irreversible exchange and degeneracy \citep{coquinot2020}; it is not another name for Birkhoff geometry.
+
+\subsection{A derived finite-dimensional candidate}
+For an autonomous mechanical energy and an internal reservoir, take
+\EqThermalState
+\EqMetriplecticMatrices
+The symmetric factorization proves positive semidefiniteness, and direct multiplication proves both degeneracy identities:
+\EqDegeneracy
+The resulting closed-system balance is
+\EqThermalBalance
+Thus mechanical energy lost to $-Cv$ enters the reservoir. External magnetic, fluid, wall and base powers must still be added in an open system. In entropy coordinates $e=U(S)$ the operator transforms covariantly; apparent changes in factors of temperature do not signal incompatible models. The odd-dimensional Poisson matrix is singular and cannot be inverted as a full-state Birkhoff two-form.
+
+The candidate was algebraically checked at 32 states of the actual 12-DoF ROM. That is not a temperature simulation: heat capacity, conduction, blood heat transfer and coil/hysteresis losses were not identified. Prescribed moving fluid cannot be assigned the robot-only heat source $v^TCv$ without its own power accounting.
+
+\subsection{Claim ledger and expansion sequence}
+\begin{tabularx}{\textwidth}{@{}P{.15\textwidth}P{.2\textwidth}X@{}}
+\toprule
+Route & Established within scope & Required before stronger publication claims\\
+\midrule
+A & Conditional identities and legal special-case integrators; finite 8/16-DoF data. & General chart on the geometric ROM; uniform representation, chart and solve bounds; actual magnetic allocation and event treatment.\\
+B & Real-energy complex learning; fixed jet; SPD construction and its adverse fit. & Accurate, well-conditioned mechanical class; resonant normal form; independent same-domain bounds and a new torus certificate.\\
+Physical & Spatial 64-segment tests and shared energy/magnetic interfaces. & Calibrated coils and physiology, fluid/wall coupling, truncation and spatial/time-error control.\\
+Thermal & Candidate positive operator and degeneracy proof. & Reservoir parameters and measured thermal objective before full thermal deployment.\\
+\bottomrule
+\end{tabularx}
+
+\Next{First validate model and actuator domains, then identify ROM and learning error on those domains. For Route A, measure representation and chart errors separately before long-time integration. For Route B, freeze a conservative analytic candidate and a specific theorem before computing constants. Contact and blood flow remain in the final target; a smooth contact-free neighborhood is only a conditional analysis branch.}
+
+\textbf{Source responsibility.} The physical, learning, Birkhoff and synthesis reports, \path{../notes/route_a.md}, and \path{../notes/learning_spd.md} supply the evidence. \path{claims.tsv} links individual statements to those records. DOI metadata are verified in \path{reference_verification.tsv}; a citation is not a claim that its theorem has been applied to the new robot.
+
+\PaperPage
+\small
+\bibliographystyle{plainnat}
+\bibliography{references}
+

@@ -1,0 +1,33 @@
+\documentclass[doublespace,Afour,sageh]{sagej}
+\input{preamble}
+\externaldocument{main_xr}[v10_Integrated_ZH.pdf]
+\runninghead{补充材料：力学、证明与复现}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\theequation}{S\arabic{equation}}
+\renewcommand{\thetheorem}{S\arabic{theorem}}
+\renewcommand{\theassumption}{S\arabic{assumption}}
+\renewcommand{\theremark}{S\arabic{remark}}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\hypersetup{pdftitle={补充材料：磁性导管模型的Birkhoff离散化与复哈密顿残差控制},pdfauthor={匿名作者}}
+\begin{document}
+\title{补充材料：磁性导管模型的\\Birkhoff 离散化与复哈密顿残差控制}
+\author{匿名作者}
+\begin{abstract}
+本补充材料为以三个子问题组织的正文提供力学推导、端点与矩阵推导、受控映射恒等式、学习误差界和复现协议。全部内容采用同一组修订后的梁和端部磁体参数。详细公式区分矩阵实现、残差补偿和有限时间受控收敛，并明确离散 KAM 所需的附加假设。最后单列一节，保留学习参考跟踪作为相关扩展；该扩展不替代正文分析的补偿目标。可复现项目同时附有来源记录和研究框架到论文章节的对照表。
+\end{abstract}
+\keywords{补充推导，参数溯源，数值验证，可复现性}
+\maketitle
+\raggedbottom
+\section{力学推导与参数溯源}\label{sec:supp-mechanics}
+\input{sections/supp_mechanics}
+\section{几何恒等式及学习误差\texorpdfstring{\\}{ }与 KAM 的联系条件}\label{sec:supp-structure}
+\input{sections/supp_structure}
+\section{数值协议与结果来源}\label{sec:supp-experiments}
+\input{sections/supp_experiments}
+\section{相关扩展：跟踪学习得到的保守参考}\label{sec:supp-tracking}
+\input{sections/extension_tracking_theory}
+\input{sections/extension_tracking_results}
+\clearpage
+\input{sections/references}
+\end{document}

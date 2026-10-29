@@ -1,0 +1,448 @@
+{
+  "reviewer": "birkhoff_discrete",
+  "status": "complete_with_required_fix",
+  "started_utc": "2026-10-29T03:03:50.734197+00:00",
+  "method": "All individual page images viewed with view_image detail=original; no contact-sheet or text-only substitute.",
+  "scope": {
+    "first_page": 84,
+    "last_page": 110,
+    "count": 27
+  },
+  "pages": [
+    {
+      "page": 84,
+      "path": "stage2/report/render_verified/page-84.png",
+      "sha256": "fdba880f2a74bcce583cca6591864932cde9e40475e77d80b23976a4e2729f54",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 85,
+      "path": "stage2/report/render_verified/page-85.png",
+      "sha256": "52e0061d4a9e222aa99465881bfb384a5a8ce5d6a6c9cb1785036da7c86ece0d",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 86,
+      "path": "stage2/report/render_verified/page-86.png",
+      "sha256": "f0672d65ee0e67ccef3f46bcd33370655d99dc7f15aeb068c07ad3457cf0a59c",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 87,
+      "path": "stage2/report/render_verified/page-87.png",
+      "sha256": "70af9d26c2954f98789cc935a49e1e1a1d7759dcdcea86482e058595bfb43fb7",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 88,
+      "path": "stage2/report/render_verified/page-88.png",
+      "sha256": "c0b75470109aba9c1e0a7318fc52256912d3421d69adaa420b5d7cd9e0529373",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 89,
+      "path": "stage2/report/render_verified/page-89.png",
+      "sha256": "a52b77fe69a911841ae08923d8d3da8f0be12712b48abd5c9ba94aafaa5f1d0d",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 90,
+      "path": "stage2/report/render_verified/page-90.png",
+      "sha256": "5619f92c2999ba7f4b3bc322c25c8b06f66b2ab1c03fee8c058755dfb053466c",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 91,
+      "path": "stage2/report/render_verified/page-91.png",
+      "sha256": "5021eea8a38587c05c0f8da61e9907ec8cb65c72962dfbbfbf227abc7daef22b",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 92,
+      "path": "stage2/report/render_verified/page-92.png",
+      "sha256": "f5af130896c1255f5be0d25ca18eb1df5fc6e6d22c6f48d18a66bd4fe8e6792d",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 93,
+      "path": "stage2/report/render_verified/page-93.png",
+      "sha256": "0c3772e8e8a1d9f9803dc9eca43bee60cd97a20afcb690c62dea5861c83b4034",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 94,
+      "path": "stage2/report/render_verified/page-94.png",
+      "sha256": "60483f00c32fe69441dbde41062671ce53567a53819812b04572c791283eb16d",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 95,
+      "path": "stage2/report/render_verified/page-95.png",
+      "sha256": "ba7b07c637e003a8b67283b814937734e263c22e7e45ecc53054c3b8e3125338",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "status": "needs_fix",
+      "issues": [
+        {
+          "page": 95,
+          "severity": "must_fix",
+          "location": "Section 8.7.4.3 Hessian table, final-column header (repeated on next page)",
+          "description": "The inline Frobenius relative-error ratio is wider than its cell; denominator right norm and subscript are clipped.",
+          "source_fix": "Equivalent stacked fraction replaces the single-line slash ratio in notes/learning_spd.md. Rebuild and actual reinspection pending.",
+          "source_sha256": "66027c545ae2a11749d543795cbdbfaad1cb8191423d31893f585d01855ace1a"
+        }
+      ]
+    },
+    {
+      "page": 96,
+      "path": "stage2/report/render_verified/page-96.png",
+      "sha256": "3acb718b84d45bbf12f5a13d57f80a14e388f62499b6e8c0e380ea532926bebb",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "status": "needs_fix",
+      "issues": [
+        {
+          "page": 96,
+          "severity": "must_fix",
+          "location": "Section 8.7.4.3 Hessian table, final-column header (repeated on next page)",
+          "description": "The inline Frobenius relative-error ratio is wider than its cell; denominator right norm and subscript are clipped.",
+          "source_fix": "Equivalent stacked fraction replaces the single-line slash ratio in notes/learning_spd.md. Rebuild and actual reinspection pending.",
+          "source_sha256": "66027c545ae2a11749d543795cbdbfaad1cb8191423d31893f585d01855ace1a"
+        }
+      ]
+    },
+    {
+      "page": 97,
+      "path": "stage2/report/render_verified/page-97.png",
+      "sha256": "36f73c98c9f292c39828f07b9fe5756c4fb673a845d41d74118571c626d036ce",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 98,
+      "path": "stage2/report/render_verified/page-98.png",
+      "sha256": "06b5569a72223ab4643b6f24bccca32040df28ecc583b8ac42644aa9f5ad0df6",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 99,
+      "path": "stage2/report/render_verified/page-99.png",
+      "sha256": "549f0ae7bcd907f605cc9f315278e0b6f7b61ad3d271e76418b4fb32c6b02d34",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 100,
+      "path": "stage2/report/render_verified/page-100.png",
+      "sha256": "5b5b144aa940cd5356b4ea1b6f034f61ed615eb3124a270b30581f3a740ecf55",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 101,
+      "path": "stage2/report/render_verified/page-101.png",
+      "sha256": "9f89f650e8b161545143f2b5cbb9035c07a0810641650ddfef22160845b83a89",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 102,
+      "path": "stage2/report/render_verified/page-102.png",
+      "sha256": "0689219aa5e135ec670639eee6c5ab0576089932782743f9f82a3d0af855b59c",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 103,
+      "path": "stage2/report/render_verified/page-103.png",
+      "sha256": "17316719be1059f6f43d73bdf649ee4d401db32a80e2b022b9e0cc388e256033",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 104,
+      "path": "stage2/report/render_verified/page-104.png",
+      "sha256": "8ac500551b261d6401a8c6c971711792ef9565b78ca534cbef43ddb316b72469",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 105,
+      "path": "stage2/report/render_verified/page-105.png",
+      "sha256": "ed1aba91e83750ccce06b08ae59561501e241db678f4e809779eb9b480c17eac",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 106,
+      "path": "stage2/report/render_verified/page-106.png",
+      "sha256": "405048aaa68e889132269f2820511fe698a95d5f1b0cb599f8e28edbf30ca270",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 107,
+      "path": "stage2/report/render_verified/page-107.png",
+      "sha256": "14a4b64eecc7ebc2d016ad4e3b8d0591616f864943e6a0d5c8eda9853ffecba7",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 108,
+      "path": "stage2/report/render_verified/page-108.png",
+      "sha256": "7e9841bd9de926d13527687addb95aeb94adada476c3f1601ae19ba5854c0451",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 109,
+      "path": "stage2/report/render_verified/page-109.png",
+      "sha256": "4c131ab28cd5b0263354f80b973e7a4f8469427a24bab5dd0c6eff472c219714",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "page": 110,
+      "path": "stage2/report/render_verified/page-110.png",
+      "sha256": "98387e301b7e5178ff38094dd2743517e10678835e64f0c394e679a973c68832",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "actual_view_image": true,
+      "detail": "original",
+      "status": "pass",
+      "issues": []
+    }
+  ],
+  "issues": [
+    {
+      "page": 95,
+      "severity": "must_fix",
+      "location": "Section 8.7.4.3 Hessian table, final-column header (repeated on next page)",
+      "description": "The inline Frobenius relative-error ratio is wider than its cell; denominator right norm and subscript are clipped.",
+      "source_fix": "Equivalent stacked fraction replaces the single-line slash ratio in notes/learning_spd.md. Rebuild and actual reinspection pending.",
+      "source_sha256": "66027c545ae2a11749d543795cbdbfaad1cb8191423d31893f585d01855ace1a"
+    },
+    {
+      "page": 96,
+      "severity": "must_fix",
+      "location": "Section 8.7.4.3 Hessian table, final-column header (repeated on next page)",
+      "description": "The inline Frobenius relative-error ratio is wider than its cell; denominator right norm and subscript are clipped.",
+      "source_fix": "Equivalent stacked fraction replaces the single-line slash ratio in notes/learning_spd.md. Rebuild and actual reinspection pending.",
+      "source_sha256": "66027c545ae2a11749d543795cbdbfaad1cb8191423d31893f585d01855ace1a"
+    }
+  ],
+  "completed_utc": "2026-10-29T03:07:03.885944+00:00",
+  "images_changed_during_review": [],
+  "summary": {
+    "actual_pages_viewed": 27,
+    "issue_groups": 1,
+    "affected_pages": [
+      95,
+      96
+    ],
+    "passed_pages": [
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110
+    ],
+    "previous_issues_resolved": [
+      "L5 nonzero integer domain and label, page 84",
+      "All four energy-range powers of ten, pages 87–88",
+      "All SPD inline and display math restored, pages 89–99"
+    ],
+    "required_next_action": "Rebuild the equivalent stacked-fraction table header and actually recheck its cells and any changed page boundaries."
+  },
+  "source_fix": {
+    "path": "stage2/notes/learning_spd.md",
+    "operation": "Replace one relative Frobenius error slash ratio in a table heading with an equivalent stacked fraction.",
+    "sha256": "66027c545ae2a11749d543795cbdbfaad1cb8191423d31893f585d01855ace1a"
+  }
+}

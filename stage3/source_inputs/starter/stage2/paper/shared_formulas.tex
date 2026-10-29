@@ -1,0 +1,148 @@
+% Every displayed model equation is defined here once and called in both texts.
+% Tags are framework identifiers, not replacement numbers for manuscript 1025.
+\newcommand{\EqKinematics}{\begin{equation}\label{eq:kinematics}
+\nu=\Rot\T\bm r_s,\quad \kappa=(\Rot\T\Rot_s)^\vee,
+\quad \Omega=(\Rot\T\Rot_t)^\vee,\quad \Rot\in\SO(3).\tag{P1}
+\end{equation}}
+\newcommand{\EqRodBalance}{\begin{equation}\label{eq:rod-balance}\begin{aligned}
+\mu_r\bm r_{tt}&=\bm n_s+\bm f_m+\bm f_f+\bm f_c+\bm f_g,\\
+\Inertia\dot\Omega+\Omega\times(\Inertia\Omega)
+ &=\Rot\T(\bm m_s+\bm r_s\times\bm n+\ell_m+\ell_f+\ell_c).
+\end{aligned}\tag{P2}\end{equation}}
+\newcommand{\EqConstitutive}{\begin{equation}\label{eq:constitutive}\begin{aligned}
+W&=\tfrac12(\nu-\nu_0)\T C_\nu(\nu-\nu_0)
+ +\tfrac12(\kappa-\kappa_0)\T C_\kappa(\kappa-\kappa_0),\\
+\bm n&=\Rot W_\nu,\qquad \bm m=\Rot W_\kappa.
+\end{aligned}\tag{P3}\end{equation}}
+\newcommand{\EqMagneticEnergy}{\begin{equation}\label{eq:magnetic-energy}\begin{aligned}
+V_m&=-\int_0^L\mu(s)\T B(\bm r(s),u,t)\,\dd s,\qquad \mu=\Rot\mu_b,\\
+\bm f_m&=(\nabla B)\T\mu,\qquad \ell_m=\mu\times B.
+\end{aligned}\tag{P4}\end{equation}}
+\newcommand{\EqMagneticPort}{\begin{equation}\label{eq:magnetic-port}\begin{aligned}
+B(x)&=b+G(x-x_0),\quad G=G\T,\quad \tr G=0,\\
+V_m(q,u)&=-\phi(q)\T u,\quad Q_m=\Gmag(q)u,
+\quad \Gmag=(D_q\phi)\T,\quad P_m=\dot q\T\Gmag u.
+\end{aligned}\tag{P5}\end{equation}}
+\newcommand{\EqFluid}{\begin{equation}\label{eq:fluid}\begin{aligned}
+\rho_f\big[\partial_t^{\mathrm{ALE}}u_f+((u_f-w_{\mathrm{ALE}})\cdot\nabla)u_f\big]
+ &=\nabla\cdot\sigma_f+\rho_f g_{\mathrm{eff}},\\
+\nabla\cdot u_f&=0,\qquad \sigma_f=-p_fI+2\eta D(u_f).
+\end{aligned}\tag{P6}\end{equation}}
+\newcommand{\EqContact}{\begin{equation}\label{eq:contact}\begin{aligned}
+\delta&=[-g]_+,\qquad V_c=\int_0^L\frac{k_c}{r_c+1}\delta^{r_c+1}\,\dd s,
+\quad r_c=\tfrac32,\\
+\bm f_{c,e}&=-k_c\delta^{r_c}\bm n_c,\qquad
+\bm f_\tau=-\mu_f\lambda_n\tanh\!\left(\frac{|v_\tau|}{v_\epsilon}\right)\frac{v_\tau}{|v_\tau|}.
+\end{aligned}\tag{P7}\end{equation}}
+\newcommand{\EqMass}{\begin{equation}\label{eq:mass}
+M(q)=\int_0^L\left[\mu_rJ_x\T J_x+J_\Omega\T\Inertia J_\Omega\right]\dd s+M_{\mathrm{tip}}(q),
+\quad T=\tfrac12\dot q\T M(q)\dot q.\tag{P8}\end{equation}}
+\newcommand{\EqHamiltonian}{\begin{equation}\label{eq:hamiltonian}\begin{aligned}
+p&=M(q)\dot q,\qquad H(q,p)=\tfrac12p\T M(q)^{-1}p+V(q),\\
+\dot q&=H_p=v,\qquad
+\dot p_i=\tfrac12v\T(\partial_i M)v-\partial_iV+Q_{\mathrm{nc},i}.
+\end{aligned}\tag{P9}\end{equation}}
+\newcommand{\EqPower}{\begin{equation}\label{eq:power}
+\dot E_{\mathrm{mech}}=P_m+P_f+P_{c,d}+P_g+P_b-P_{\mathrm{loss}}.\tag{P10}\end{equation}}
+\newcommand{\EqBirkhoff}{\begin{equation}\label{eq:birkhoff}\begin{aligned}
+\theta&=a_i\dd z_i-\Birk\,\dd t,\qquad
+\Kform_{ij}=\partial_i a_j-\partial_j a_i,\\
+\Kform f&=\nabla\Birk+\partial_t\Pfaff,\qquad \det\Kform\ne0.
+\end{aligned}\tag{A1}\end{equation}}
+\newcommand{\EqCompatibility}{\begin{equation}\label{eq:compatibility}\begin{aligned}
+\dd_z\Omega_t&=0,\qquad \Omega_t=\tfrac12\Kform_{ij}\dd z_i\wedge\dd z_j,\\
+\partial_t\Kform+(f\cdot\nabla)\Kform+(Df)\T\Kform+\Kform Df&=0.
+\end{aligned}\tag{A2}\end{equation}}
+\newcommand{\EqTransport}{\begin{equation}\label{eq:transport}\begin{aligned}
+\partial_t\Pfaff+(D\Pfaff)f+(Df)\T\Pfaff&=0,\qquad \Birk=\Pfaff\T f,\\
+D\Phi_{t,t_0}\T\Kform(\Phi_{t,t_0}(z),t)D\Phi_{t,t_0}&=\Kform(z,t_0).
+\end{aligned}\tag{A3}\end{equation}}
+\newcommand{\EqEndpoint}{\begin{equation}\label{eq:endpoint}\begin{aligned}
+D\alpha\T\mathbb J D\alpha&=\diag(\Kform(z_+,t_+),-\Kform(z_-,t_-)),\\
+N&=(A_\alpha F+B_\alpha)(C_\alpha F+D_\alpha)^{-1}=N\T,
+\quad F=D\Phi.
+\end{aligned}\tag{A4}\end{equation}}
+\newcommand{\EqInitialGenerating}{\begin{equation}\label{eq:initial-generating}\begin{aligned}
+F(t_0)&=I,\qquad \det(C_\alpha+D_\alpha)\ne0,\\
+w&=\alpha_2(z,z;t_0,t_0),\qquad f_0(w)=\alpha_1(z,z;t_0,t_0).
+\end{aligned}\tag{A5}\end{equation}}
+\newcommand{\EqGeneratingTime}{\begin{equation}\label{eq:generating-time}
+\partial_t\nabla_w\varphi=(A_\alpha-NC_\alpha)f
+ +\partial_t\alpha_1-N\partial_t\alpha_2,\qquad N=D_w^2\varphi.\tag{A6}\end{equation}}
+\newcommand{\EqMidpoint}{\begin{equation}\label{eq:midpoint}\begin{aligned}
+q_+-q_-&=hM(\overline q,\overline t)^{-1}\overline p,\\
+p_{+,i}-p_{-,i}&=h\left[\tfrac12\overline v\T(\partial_iM)\overline v-\partial_i V+Q_{\mathrm{nc},i}\right]_{\overline z,\overline t}.
+\end{aligned}\tag{A7}\end{equation}}
+\newcommand{\EqOriginalThirtySix}{\begin{equation}\label{eq:original36}\begin{aligned}
+E_h&=\tfrac h2CM^{-1}+\tfrac{h^2}{4}K_sM^{-1},\\
+p_+&=(I+E_h)^{-1}\big[(I-E_h)p_--hK_sq_-+hF_{1/2}\big],\\
+q_+&=q_-+\tfrac h2M^{-1}(p_++p_-).
+\end{aligned}\tag{A8}\end{equation}}
+\newcommand{\EqCentral}{\begin{equation}\label{eq:central}\begin{aligned}
+f&=J\nabla H,\quad J=\begin{pmatrix}0&I\\-I&0\end{pmatrix},\qquad
+S_h=hH+\tfrac{h^3}{24}f\T H''f,\\
+z_+-z_-&=J\nabla S_h\!\left(\frac{z_++z_-}{2}\right).
+\end{aligned}\tag{A9}\end{equation}}
+\newcommand{\EqDampingCounterexample}{\begin{equation}\label{eq:damping-counterexample}
+\det D\Psi_h=\frac{1-hc/(2m)+h^2k/(4m)}{1+hc/(2m)+h^2k/(4m)}
+\ne 1,\quad \det D\Psi_h\not\equiv e^{-ch/m}.\tag{A10}\end{equation}}
+\newcommand{\EqAllocation}{\begin{equation}\label{eq:allocation}\begin{aligned}
+u_*&\in\arg\min_{u\in\mathcal U}\big\|W(\Gmag u-U)\big\|^2+\lambda\|u\|^2,\\
+r_u&=\Gmag u_*-U,\qquad \rank\Gmag\le\dim u.
+\end{aligned}\tag{C1}\end{equation}}
+\newcommand{\EqPotentialControl}{\begin{equation}\label{eq:potential-control}\begin{aligned}
+u_a(q)&=u_{0a}-k_a\big[\phi_a(q)-\phi_{a,\mathrm{ref}}\big],\\
+V_{\mathrm{cl}}&=-u_0\T\phi+\tfrac12\sum_a k_a(\phi_a-\phi_{a,\mathrm{ref}})^2,
+\qquad \Gmag u=-\nabla_qV_{\mathrm{cl}}.
+\end{aligned}\tag{C2}\end{equation}}
+\newcommand{\EqControlDerivative}{\begin{equation}\label{eq:control-derivative}\begin{aligned}
+\Kform g&=\nabla W_c\quad\Longrightarrow\quad \mathcal L_g\Omega_t=0,\\
+D_z\Psi_h(z,u(z))&=\partial_z\Psi_h+\partial_u\Psi_h\,D_zu.
+\end{aligned}\tag{C3}\end{equation}}
+\newcommand{\EqRepresentationError}{\begin{equation}\label{eq:representation-error}\begin{aligned}
+e_B&=\Kform_a f-\partial_t\Pfaff_a-\nabla\Birk_a,\\
+f_a-f&=-\Kform_a^{-1}e_B,\qquad
+\|f_a-f\|\le\|\Kform_a^{-1}\|\,\|e_B\|.
+\end{aligned}\tag{E1}\end{equation}}
+\newcommand{\EqConvergence}{\begin{equation}\label{eq:convergence}\begin{aligned}
+\left(1-\tfrac{hL_f}{2}\right)e_{k+1}
+ &\le\left(1+\tfrac{hL_f}{2}\right)e_k+C h^3+\|r_k\|,\\
+\max_{kh\le T}\|z_k-z(t_k)\|
+ &\le C_T(e_0+h^p+\eta_h/h)
+ +\kappa_B\varepsilon_B\frac{e^{L_fT}-1}{L_f}.
+\end{aligned}\tag{E2}\end{equation}}
+\newcommand{\EqChartError}{\begin{equation}\label{eq:chart-error}\begin{aligned}
+D\widetilde\chi_t\T K_0D\widetilde\chi_t&=\Kform_t+E_t,\\
+D\widetilde\Psi\T\Kform_+D\widetilde\Psi-\Kform_-
+ &=E_--D\widetilde\Psi\T E_+D\widetilde\Psi.
+\end{aligned}\tag{E3}\end{equation}}
+\newcommand{\EqLearningNormalization}{\begin{equation}\label{eq:learning-normalization}\begin{aligned}
+x&=Dz,\quad D=\diag(\Dnu,\Dnu)/a,\quad \Dnu=\diag(\sqrt{\nu_j}),\\
+\xi&=(x_Q+ix_P)/\sqrt2,\quad \nabla_z h=D\nabla_xh,
+\quad h_2=\tfrac12\sum_j\nu_j(Q_j^2+P_j^2).
+\end{aligned}\tag{B1}\end{equation}}
+\newcommand{\EqMechanicalNetwork}{\begin{equation}\label{eq:mechanical-network}\begin{aligned}
+h_\theta&=\tfrac{a^2}{2}x_P\T C_\theta(x_Q)x_P
+ +\tfrac{a^2}{2}\|x_Q\|^2+V_{\theta,\mathrm{res}}(x_Q),\\
+C_\theta&=L_\theta L_\theta\T,\quad (L_\theta)_{ii}=e^{r_{ii}},\quad C_\theta(0)=I,\\
+(h_\theta)_{PP}&=\Dnu L_\theta L_\theta\T\Dnu\succ0.
+\end{aligned}\tag{B2}\end{equation}}
+\newcommand{\EqKAMDivisors}{\begin{equation}\label{eq:kam-divisors}\begin{aligned}
+|k\cdot\omega|&\ge\gamma|k|^{-\tau},\qquad k\in\mathbb Z^n\setminus\{0\},\\
+|e^{ihk\cdot\omega}-1|&\ge h\gamma_D|k|^{-\tau_D},\qquad \tau_D>n+1.
+\end{aligned}\tag{B3}\end{equation}}
+\newcommand{\EqThermalState}{\begin{equation}\label{eq:thermal-state}
+x_e=(q,p,e),\quad E=H+e,\quad S=S(e),\quad T_s=1/S'(e)>0,\quad v=H_p.\tag{M1}\end{equation}}
+\newcommand{\EqMetriplecticMatrices}{\begin{equation}\label{eq:metriplectic-matrices}
+\Jtherm=\begin{pmatrix}0&I&0\\-I&0&0\\0&0&0\end{pmatrix},\qquad
+\Mtherm=T_s\begin{pmatrix}0&0&0\\0&C&-Cv\\0&-v\T C&v\T Cv\end{pmatrix},\quad C=C\T\succeq0.
+\tag{M2}\end{equation}}
+\newcommand{\EqDegeneracy}{\begin{equation}\label{eq:degeneracy}\begin{aligned}
+(\alpha,\beta,\eta)\T\Mtherm(\alpha,\beta,\eta)
+ &=T_s(\beta-\eta v)\T C(\beta-\eta v)\ge0,\\
+\Jtherm\nabla S&=0,\qquad \Mtherm\nabla E=0.
+\end{aligned}\tag{M3}\end{equation}}
+\newcommand{\EqThermalBalance}{\begin{equation}\label{eq:thermal-balance}
+\dot x_e=\Jtherm\nabla E+\Mtherm\nabla S,
+\quad \dot e=v\T Cv,\quad \dot E=0,\quad \dot S=v\T Cv/T_s\ge0.\tag{M4}\end{equation}}
+

@@ -1,0 +1,297 @@
+{
+  "reviewer": "root",
+  "render": "render_delivery",
+  "pages": [
+    {
+      "page": 1,
+      "sha256": "187875fada908c2842be4d1da5d4c3102ca45b3aa5593c03f1f76c1cc31d2fe8",
+      "size": [
+        1547,
+        2002
+      ],
+      "review": "SHA-identical to already inspected render_verified",
+      "status": "pass"
+    },
+    {
+      "page": 2,
+      "sha256": "b9af701b427bd246a7335d83524c5c807f641ca271931b96ccc320ffe496bf8f",
+      "size": [
+        1547,
+        2002
+      ],
+      "review": "SHA-identical to already inspected render_verified",
+      "status": "pass"
+    },
+    {
+      "page": 3,
+      "sha256": "788e17017df38b840c75737b782108a8af7c8be4c197136201fadf385cd9cbc8",
+      "size": [
+        1547,
+        2002
+      ],
+      "review": "SHA-identical to already inspected render_verified",
+      "status": "pass"
+    },
+    {
+      "page": 4,
+      "sha256": "ef4924efcceaaff0e2b9362ab0cff04244820ee12b7c1dbe2fb68b3d830cb255",
+      "size": [
+        1547,
+        2002
+      ],
+      "review": "SHA-identical to already inspected render_verified",
+      "status": "pass"
+    },
+    {
+      "page": 5,
+      "sha256": "478618deb2ab91757c0f406afe2d8c2255c5f34e616b2e79bdbf0a068b38e502",
+      "size": [
+        1547,
+        2002
+      ],
+      "review": "SHA-identical to already inspected render_verified",
+      "status": "pass"
+    },
+    {
+      "page": 6,
+      "sha256": "fb4d98745507e7e0e8bba0c82c65820a82c7cca474bf33827eea04ef0a932b0e",
+      "size": [
+        1547,
+        2002
+      ],
+      "review": "SHA-identical to already inspected render_verified",
+      "status": "pass"
+    },
+    {
+      "page": 7,
+      "sha256": "49a1823fc49f61dfdf9e406a5516be557a2f84aae51b143a7c12ad3631c5dc27",
+      "size": [
+        1547,
+        2002
+      ],
+      "review": "SHA-identical to already inspected render_verified",
+      "status": "pass"
+    },
+    {
+      "page": 8,
+      "sha256": "b48f3c01b8d5814335af6bd1f02a89b298a70243ad34c795e39c634541e38e1c",
+      "size": [
+        1547,
+        2002
+      ],
+      "review": "SHA-identical to already inspected render_verified",
+      "status": "pass"
+    },
+    {
+      "page": 9,
+      "sha256": "8d9d5a615de6aa097e604ff4917e8df5ea95d9ee926f1e684d9f01255a691e1c",
+      "size": [
+        1547,
+        2002
+      ],
+      "review": "SHA-identical to already inspected render_verified",
+      "status": "pass"
+    },
+    {
+      "page": 10,
+      "sha256": "a5c8a416f3cb51a71d2b0c0ce3b32b4c346b831925954b4827fb9b72de8ec3ac",
+      "size": [
+        1547,
+        2002
+      ],
+      "review": "SHA-identical to already inspected render_verified",
+      "status": "pass"
+    },
+    {
+      "page": 11,
+      "sha256": "c92d36d1342a181cfefdebf922faa60b03042f0e22cf1d551a6c97b6f42570ee",
+      "size": [
+        1547,
+        2002
+      ],
+      "review": "SHA-identical to already inspected render_verified",
+      "status": "pass"
+    },
+    {
+      "page": 12,
+      "sha256": "a6919af7e02cd96a10913d7fcee61972d00fafaa8fa41e15adce4a0c3978b669",
+      "size": [
+        1547,
+        2002
+      ],
+      "review": "SHA-identical to already inspected render_verified",
+      "status": "pass"
+    },
+    {
+      "page": 13,
+      "sha256": "632094a09642bce6eebc945283240e7d0dca9df43792b3f5372ac1665b4ca7df",
+      "size": [
+        1547,
+        2002
+      ],
+      "review": "SHA-identical to already inspected render_verified",
+      "status": "pass"
+    },
+    {
+      "page": 14,
+      "sha256": "762240ec5aac8ebdbdbec60142474ef3116e5ad3f3cc0d07d54fd056f8b896f2",
+      "size": [
+        1547,
+        2002
+      ],
+      "review": "SHA-identical to already inspected render_verified",
+      "status": "pass"
+    },
+    {
+      "page": 15,
+      "sha256": "b6a5b5c91dacd129bc13a4b0a5c9a753a8efe25c80da94946c3a4fc4d0e51e4d",
+      "size": [
+        1547,
+        2002
+      ],
+      "review": "SHA-identical to already inspected render_verified",
+      "status": "pass"
+    },
+    {
+      "page": 16,
+      "sha256": "07db973ae190fb19c673b4d4c68de42a915d59aa41e9efd385a9f74d5f976089",
+      "size": [
+        1547,
+        2002
+      ],
+      "review": "actual original-resolution view",
+      "status": "pass"
+    },
+    {
+      "page": 17,
+      "sha256": "c25e4103d2f9237a118203c4e0f9acca3514bd59d5689ee7dbd8bfb40f159a47",
+      "size": [
+        1547,
+        2002
+      ],
+      "review": "SHA-identical to already inspected render_verified",
+      "status": "pass"
+    },
+    {
+      "page": 18,
+      "sha256": "025190a318d3437841a1c9ef5f5cea13fedda24a8d6451df68a39dae5e070e31",
+      "size": [
+        1547,
+        2002
+      ],
+      "review": "actual original-resolution view",
+      "status": "pass"
+    },
+    {
+      "page": 19,
+      "sha256": "dec6630bfb230828ca26c4a9cfce3dbac0a4ebf26b45492b5925bfd7ef83a5a0",
+      "size": [
+        1547,
+        2002
+      ],
+      "review": "SHA-identical to already inspected render_verified",
+      "status": "pass"
+    },
+    {
+      "page": 20,
+      "sha256": "cf2b9a7d698a0da09aaf6846c8a5475ab422002f8414955a113f0a68fe9fb14d",
+      "size": [
+        1547,
+        2002
+      ],
+      "review": "actual original-resolution view",
+      "status": "pass"
+    },
+    {
+      "page": 21,
+      "sha256": "c301562393819b62263e21868fd149be2c45c9e8c9d3280f87d4b4ed874ff87f",
+      "size": [
+        1547,
+        2002
+      ],
+      "review": "SHA-identical to already inspected render_verified",
+      "status": "pass"
+    },
+    {
+      "page": 22,
+      "sha256": "efb1495ae7c6bd2c63ae143640e9c2ac2fc5e5fab71abc7a7fef9f06dc53eae9",
+      "size": [
+        1547,
+        2002
+      ],
+      "review": "SHA-identical to already inspected render_verified",
+      "status": "pass"
+    },
+    {
+      "page": 23,
+      "sha256": "f48fa4d9feb77b225f9a2a95546d24660563878902b0c1735f1b0f8435fc818c",
+      "size": [
+        1547,
+        2002
+      ],
+      "review": "SHA-identical to already inspected render_verified",
+      "status": "pass"
+    },
+    {
+      "page": 24,
+      "sha256": "856d1cd26e29429c10c362233122b73489fe08fe174737d96babd5cd92604cbd",
+      "size": [
+        1547,
+        2002
+      ],
+      "review": "SHA-identical to already inspected render_verified",
+      "status": "pass"
+    },
+    {
+      "page": 25,
+      "sha256": "9440d984efe258fb4b4c047883caa1c4200e519532d92c207268bba3af6b9d2f",
+      "size": [
+        1547,
+        2002
+      ],
+      "review": "SHA-identical to already inspected render_verified",
+      "status": "pass"
+    },
+    {
+      "page": 26,
+      "sha256": "98e1ea8c47abcfa8f5ca42e7ca016268f3060ea7b1e8ef216428b0092e53f14a",
+      "size": [
+        1547,
+        2002
+      ],
+      "review": "SHA-identical to already inspected render_verified",
+      "status": "pass"
+    },
+    {
+      "page": 27,
+      "sha256": "95d0532b6370d61e81b06b56ceeda5d5a688d9919a3afee01c786f9ac8141285",
+      "size": [
+        1547,
+        2002
+      ],
+      "review": "SHA-identical to already inspected render_verified",
+      "status": "pass"
+    },
+    {
+      "page": 28,
+      "sha256": "f5a1094e4677969aff6826c14a9493f14262d6fa7d4d6c5e93585d83d5e2fecf",
+      "size": [
+        1547,
+        2002
+      ],
+      "review": "SHA-identical to already inspected render_verified",
+      "status": "pass"
+    },
+    {
+      "page": 29,
+      "sha256": "e000b969e2f1f0201579a460348613fe550f1427a8a4970adce5c587292cfb75",
+      "size": [
+        1547,
+        2002
+      ],
+      "review": "SHA-identical to already inspected render_verified",
+      "status": "pass"
+    }
+  ],
+  "issues": []
+}

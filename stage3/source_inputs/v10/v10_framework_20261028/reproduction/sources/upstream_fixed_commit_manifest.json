@@ -1,0 +1,125 @@
+{
+  "commit": "82519542dd057e8fbd6d6879ef33217761e8cbbb",
+  "files": [
+    {
+      "path": "sections/complex_theorem_note.tex",
+      "bytes": 2190,
+      "sha256": "e22b1fd021638620a55a4ff503ceca8997ddb0dd4e476c5012ad975a8211e2c3"
+    },
+    {
+      "path": "sections/core_analysis.tex",
+      "bytes": 11848,
+      "sha256": "949fadec9d2556ef8605446cc05906c853680a117dda16c08fa6d8ee5afd5460"
+    },
+    {
+      "path": "sections/core_application.tex",
+      "bytes": 15371,
+      "sha256": "0cd7873ffb174b8488cdedae9feeee8ffed7d3bec938916bd1115b3dbc3e41e5"
+    },
+    {
+      "path": "sections/core_background.tex",
+      "bytes": 15233,
+      "sha256": "fff8eb2116769341e00a30d388556b09975198241041c39729f53e49d20f62de"
+    },
+    {
+      "path": "sections/core_derivation.tex",
+      "bytes": 9192,
+      "sha256": "e4b154b42cbe36a4b3521c4d672218bfd8fc7d57d7a45082657fa5a7fdc9996d"
+    },
+    {
+      "path": "sections/core_kam.tex",
+      "bytes": 10933,
+      "sha256": "a1e400bcfdcb125c8412b9de73c99ea8e4776cba7f43b6620def7f63c87970b9"
+    },
+    {
+      "path": "sections/full_fe_kam_control.tex",
+      "bytes": 10649,
+      "sha256": "2f61d51421a91b0649645525680e3a5c2555038eb11703cf8e6dbb6600d136a6"
+    },
+    {
+      "path": "sections/integral_comsol_to_kam.tex",
+      "bytes": 8961,
+      "sha256": "716d23c040bfbaa3506f3d8d3d39b2ec04bc27f50c2fd9576a152fa7fe7483f0"
+    },
+    {
+      "path": "sections/kam_control_experiment.tex",
+      "bytes": 4575,
+      "sha256": "844ce0990646146340b2c0adca9d97e980d67c2b6665cc349d8ea70268bfed8e"
+    },
+    {
+      "path": "sections/measure_numerical.tex",
+      "bytes": 6671,
+      "sha256": "e922f8334064013bd9838bd874061d342ba16f1f06c8fc78452d235cc5478a28"
+    },
+    {
+      "path": "sections/measure_persistence.tex",
+      "bytes": 3051,
+      "sha256": "042f950a8aabc2aec37a1df26081719db1c194138843c2a6af5a1d0f10a9ea28"
+    },
+    {
+      "path": "sections/measure_proof.tex",
+      "bytes": 17549,
+      "sha256": "3e67ad0131d14b930c663d945f5e09ffc2e7f45fd594a70b103445d85f66a9d3"
+    },
+    {
+      "path": "sections/operational_tolerances.tex",
+      "bytes": 14177,
+      "sha256": "d1ed126d5cad6f358a772584fe619a55b8b1f107ffba02d569375df6e6eb1a4d"
+    },
+    {
+      "path": "sections/physical_and_safety_mechanics.tex",
+      "bytes": 11023,
+      "sha256": "6cd33c57547dd6f1fa8ad407fb4fd7f773937c8c39a63d3c5871a70588108047"
+    },
+    {
+      "path": "sections/references.tex",
+      "bytes": 6439,
+      "sha256": "60947d7111ecbb7973cdc6f9fb78fc533b4b96e4ab170e2f3e6d54695aef23e4"
+    },
+    {
+      "path": "sections/robustness_and_adaptation.tex",
+      "bytes": 9261,
+      "sha256": "1396dd94fd0fcb944dd3d8ade0395c78636e7cd32e0ce8d246b6adde56cdebec"
+    },
+    {
+      "path": "sections/s_path.tex",
+      "bytes": 7459,
+      "sha256": "3196a9ea868a5f2e949af52293f0c43f2be227d25aef41518814bd3f1e4dec34"
+    },
+    {
+      "path": "sections/stability_boundary.tex",
+      "bytes": 8716,
+      "sha256": "f020dc45d36457e2332b6809578822598545744d13406ecd43da7cbff6950aac"
+    },
+    {
+      "path": "sections/theorem_bridge.tex",
+      "bytes": 12559,
+      "sha256": "c82002743354d590969ee9a85371e0994d121b4f18f7769958c36e8ba7ee0e16"
+    },
+    {
+      "path": "sections/unified_experiments.tex",
+      "bytes": 21649,
+      "sha256": "d5f6ece62ac598e6db86b116d88a5af3dc65dc3468f7aa1964212c76e2dc0c57"
+    },
+    {
+      "path": "sections/unified_integrator_check.tex",
+      "bytes": 2622,
+      "sha256": "f7813b09974524d3f5f4fe5a9740f95f40b4ab4e456f0719250816cae650cc7e"
+    },
+    {
+      "path": "sections/unified_kam.tex",
+      "bytes": 27373,
+      "sha256": "59dd7be0d9b13837f46a2cf89f0b39b66ab2fbe12a41ca268c9d293396f11b9e"
+    },
+    {
+      "path": "sections/unified_model.tex",
+      "bytes": 8853,
+      "sha256": "ac919b25386d9c73dd6a218183a56a93f9b44a2358beb8c7a446f4e9272e6195"
+    },
+    {
+      "path": "sections/unified_safety.tex",
+      "bytes": 23151,
+      "sha256": "2eb5e2da275b08711707d61b6aac1e88abe952ff3cebdf3c912adcd657449a33"
+    }
+  ]
+}

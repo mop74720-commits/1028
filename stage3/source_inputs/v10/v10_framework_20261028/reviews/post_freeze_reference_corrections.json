@@ -1,0 +1,131 @@
+{
+  "scope": "Four approved post-freeze cross-reference wording corrections only; no equations, numerical values or figures changed. Root owns final compile and freeze-hash update.",
+  "corrections": [
+    {
+      "id": "REF01",
+      "review_page": "EN 14",
+      "issue": "An equation label was introduced as a Supplementary Section.",
+      "before": "Supplementary\nSection~\\ref{ss:central4-magnetic-jacobian}",
+      "after": "Supplementary equation~\\eqref{ss:central4-magnetic-jacobian}",
+      "english_file": "english/sections/analysis.tex",
+      "chinese_file": "chinese/sections/analysis.tex",
+      "status": "corrected in text, authoring template and Chinese translation source"
+    },
+    {
+      "id": "REF02",
+      "review_page": "EN Supplement 20",
+      "issue": "Oracle numerical check still pointed to old main Section 3 after its move to S4.",
+      "before": "providing the numerical oracle check in Section~\\ref{sec:analysis}",
+      "after": "providing the numerical oracle check in Supplement~\\ref{num:route-b}",
+      "english_file": "english/sections/extension_tracking_theory.tex",
+      "chinese_file": "chinese/sections/extension_tracking_theory.tex",
+      "status": "corrected by theory agent; reported complete"
+    },
+    {
+      "id": "REF03",
+      "review_page": "EN Supplement 22, right column",
+      "issue": "Two tracking laws still pointed to main Section 2 after their move.",
+      "before": "and oracle commands are the distinct laws in\nSection~\\ref{sec:derivation};",
+      "after": "and oracle commands are the distinct laws in\n\\eqref{struct:route-b-control} and \\eqref{struct:route-b-oracle};",
+      "english_file": "english/sections/extension_tracking_results.tex",
+      "chinese_file": "chinese/sections/extension_tracking_results.tex",
+      "status": "corrected in text, authoring template and hashed translation-reuse block"
+    },
+    {
+      "id": "REF04",
+      "review_page": "EN Supplement 22, left column",
+      "issue": "The referenced oracle-control equation was described as the position-error equation.",
+      "before": "Gains $\\kappa_p=1$ and $\\kappa_d=2$ produce the\ncritical-damping oracle position-error equation in\n\\eqref{struct:route-b-oracle}.",
+      "after": "Gains $\\kappa_p=1$ and $\\kappa_d=2$ make the\nposition-error dynamics of the oracle law in\n\\eqref{struct:route-b-oracle} critically damped.",
+      "english_file": "english/sections/extension_tracking_results.tex",
+      "chinese_file": "chinese/sections/extension_tracking_results.tex",
+      "status": "corrected in text, authoring template and Chinese translation source"
+    }
+  ],
+  "edits_by_numerical_agent": [
+    {
+      "path": "english/sections/analysis.tex",
+      "before": "Supplementary\nSection~\\ref{ss:central4-magnetic-jacobian}",
+      "after": "Supplementary equation~\\eqref{ss:central4-magnetic-jacobian}",
+      "before_sha256": "de243b68ed41dc0ce08b2c79afeeac9a08ff702c3c385a7ec6c3ccac99cd569d",
+      "after_sha256": "1b9ab871927851e073488f246f2ec8abb6b0959fa6de44c544a8438d1cfc1264"
+    },
+    {
+      "path": "reproduction/framework_experiments/authoring/analysis.tex.in",
+      "before": "Supplementary\nSection~\\ref{ss:central4-magnetic-jacobian}",
+      "after": "Supplementary equation~\\eqref{ss:central4-magnetic-jacobian}",
+      "before_sha256": "47bdf98b47027ae3a546ee5a04db332c721be0e22af2196d1a941226870091c3",
+      "after_sha256": "e9dfca6d6a1c781c425433c0797ab267b9e1d9ba8baaddfaf1cf9f7fdaa32019"
+    },
+    {
+      "path": "english/sections/extension_tracking_results.tex",
+      "before": "Gains $\\kappa_p=1$ and $\\kappa_d=2$ produce the\ncritical-damping oracle position-error equation in\n\\eqref{struct:route-b-oracle}.",
+      "after": "Gains $\\kappa_p=1$ and $\\kappa_d=2$ make the\nposition-error dynamics of the oracle law in\n\\eqref{struct:route-b-oracle} critically damped.",
+      "before_sha256": "ffdcba71ee5c59bb8047aab0587157d152d630be661a6d17f4256e865b318539",
+      "after_sha256": "6523c8eddcbdd25d5fd628c18dbd8ad046f1876ad6d317687d1af55d253875fe"
+    },
+    {
+      "path": "english/sections/extension_tracking_results.tex",
+      "before": "and oracle commands are the distinct laws in\nSection~\\ref{sec:derivation};",
+      "after": "and oracle commands are the distinct laws in\n\\eqref{struct:route-b-control} and \\eqref{struct:route-b-oracle};",
+      "before_sha256": "6523c8eddcbdd25d5fd628c18dbd8ad046f1876ad6d317687d1af55d253875fe",
+      "after_sha256": "64d9e9ea981777647ca7ea72e7e2b9a9aef5214126d9a389b69285d2676b6850"
+    },
+    {
+      "path": "reproduction/framework_experiments/authoring/extension_tracking_results.tex.in",
+      "before": "Gains $\\kappa_p=1$ and $\\kappa_d=2$ produce the\ncritical-damping oracle position-error equation in\n\\eqref{struct:route-b-oracle}.",
+      "after": "Gains $\\kappa_p=1$ and $\\kappa_d=2$ make the\nposition-error dynamics of the oracle law in\n\\eqref{struct:route-b-oracle} critically damped.",
+      "before_sha256": "4caaa738f44125741c4e2f228ae4e2eef170937f83764311a7b49ebf3bbec512",
+      "after_sha256": "48e1bdad8117b0fbf3aebe97ef1a8d58b773d74d3eb5cd06820d7f12ee42e7f3"
+    },
+    {
+      "path": "reproduction/framework_experiments/authoring/extension_tracking_results.tex.in",
+      "before": "and oracle commands are the distinct laws in\nSection~\\ref{sec:derivation};",
+      "after": "and oracle commands are the distinct laws in\n\\eqref{struct:route-b-control} and \\eqref{struct:route-b-oracle};",
+      "before_sha256": "48e1bdad8117b0fbf3aebe97ef1a8d58b773d74d3eb5cd06820d7f12ee42e7f3",
+      "after_sha256": "ffd52695933d9b62abf3ebe24a565a1383a191c239f32a32f9e0268c0b9598d4"
+    },
+    {
+      "path": "chinese/sections/analysis.tex",
+      "before": "其全部导数见补充材料第~\\ref{ss:central4-magnetic-jacobian}~节",
+      "after": "其全部导数见补充材料式~\\eqref{ss:central4-magnetic-jacobian}",
+      "before_sha256": "279db066d2758625069e33117032e84f63cb76fc1c08949acca4ea8ece90bf1c",
+      "after_sha256": "0336dd0a3070ffdfbe5db1543251dfd03e71258a9ffb7797646f271d0ed6f5b6"
+    },
+    {
+      "path": "chinese/sections/extension_tracking_results.tex",
+      "before": "增益 $\\kappa_p=1$ 和 $\\kappa_d=2$ 给出式~\\eqref{struct:route-b-oracle} 中临界阻尼的真值参数对照位置误差方程。",
+      "after": "增益 $\\kappa_p=1$ 和 $\\kappa_d=2$ 使式~\\eqref{struct:route-b-oracle} 所定义的真值参数对照控制律对应的位置误差动力学达到临界阻尼。",
+      "before_sha256": "bf3c7252b41ea9e1af9e2f4034d61005f0fc845cf6334517288c5c20ac037acb",
+      "after_sha256": "914617ff9ffce9d7fcc47923e9f186c969ba5312ddfe4ec2b48d53e2c7124f60"
+    },
+    {
+      "path": "chinese/sections/extension_tracking_results.tex",
+      "before": "学习指令与真值参数对照指令分别对应第~\\ref{sec:derivation}~节中的不同控制律；",
+      "after": "学习指令与真值参数对照指令分别对应式~\\eqref{struct:route-b-control} 和式~\\eqref{struct:route-b-oracle} 中的不同控制律；",
+      "before_sha256": "914617ff9ffce9d7fcc47923e9f186c969ba5312ddfe4ec2b48d53e2c7124f60",
+      "after_sha256": "9d68dfbda2fe826cdd0337750c82e8ce6ea39899d7a42e16105caa494c1b80fd"
+    },
+    {
+      "path": "reviews/framework_translation_overrides.py",
+      "before": "其全部导数见补充材料第~\\ref{ss:central4-magnetic-jacobian}~节",
+      "after": "其全部导数见补充材料式~\\eqref{ss:central4-magnetic-jacobian}",
+      "before_sha256": "6b6e2386984ddf5ee7bf90bd686dda32425d480a71acbef442578714c61febad",
+      "after_sha256": "edf3997d68d0959175403072804d0ba82917b45232e80191dab178c543407c9d"
+    },
+    {
+      "path": "reviews/framework_translation_overrides.py",
+      "before": "增益 $\\kappa_p=1$ 和 $\\kappa_d=2$ 给出式~\\eqref{struct:route-b-oracle} 中临界阻尼的真值参数对照位置误差方程。",
+      "after": "增益 $\\kappa_p=1$ 和 $\\kappa_d=2$ 使式~\\eqref{struct:route-b-oracle} 所定义的真值参数对照控制律对应的位置误差动力学达到临界阻尼。",
+      "before_sha256": "edf3997d68d0959175403072804d0ba82917b45232e80191dab178c543407c9d",
+      "after_sha256": "83d53e8fb563f3cf75c25027b0656014d7c392cd130412cf077e0d7236675bac"
+    }
+  ],
+  "english_figure_hashes_unchanged": {
+    "english/figures/framework_closed_loop_checks.pdf": "a23520015861627aa3071bcf9343283451bb5eb1f2a20ac2941e838c72e20a42",
+    "english/figures/framework_matrix_checks.pdf": "5b9f05e0a294c7e1b02505959ccc1c74a9fd870a7c802fb3b42558f08902d52e",
+    "english/figures/new_baseline_results.pdf": "e93496ad3c8b98432b8f1881cde91164fcd26b2cf1afc1e5d72a6c585801eb9c",
+    "english/figures/new_baseline_verification.pdf": "b277e562bfbd215eab3ce76a14ca645595309e52b90d8f85c3c399c4ebca0c19"
+  },
+  "final_build_status": "pending root recompile and freeze record update"
+}

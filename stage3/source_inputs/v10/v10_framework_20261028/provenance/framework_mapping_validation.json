@@ -1,0 +1,8 @@
+{
+  "source": "provenance/source_direction_one_framework.pdf",
+  "component_count": 46,
+  "label_count": 298,
+  "all_destinations_resolved": true,
+  "mapping": "reviews/framework_integration_map.tsv",
+  "purpose": "Source-framework to integrated-v10 mapping; status distinguishes results from protocols."
+}

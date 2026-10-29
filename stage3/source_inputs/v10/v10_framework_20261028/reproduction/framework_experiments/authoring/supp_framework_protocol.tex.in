@@ -1,0 +1,180 @@
+\subsection{P1 framework matrix verification}
+\label{sx:framework-matrix}
+The additional experiments are stored separately in
+\texttt{reproduction/framework\_experiments}. From the package root,
+their complete entry point is
+\begin{verbatim}
+cd reproduction/framework_experiments
+python run_all.py
+\end{verbatim}
+The optional argument \texttt{--experiment} selects
+\texttt{matrix}, \texttt{closed}, \texttt{defect} or \texttt{weighted}.
+All parameter paths are resolved relative to the scripts. Existing FE,
+training and restoration records are read and not overwritten.
+The new JSON files contain the baseline and source-code hashes and the
+numerical-library versions. The accompanying authoring script renders
+the current three numerical inputs, including the supplementary tracking
+extension; the older two-route authoring templates are archival files.
+
+For the dimensionless matrix family in \eqref{num:matrix-data}, the
+initial states, ordered as $(q,p)$, are
+\begin{align*}
+ n=1:&\quad (0.1,0),\\
+ n=2:&\quad (0.1,0.06,0,0.02),\\
+ n=4:&\quad (0.1,0.06,0.04,0.025,0,0.02,-0.01,0.005).
+\end{align*}
+Each dimension uses $T=4$ and the four steps
+$0.08,0.04,0.02,0.01$. SciPy's matrix exponential evaluates
+$\exp(tA)x_0$ independently at all $401$ points of the finest grid.
+Every coarser method is compared at its own subset of those times.
+The ordinary map and its eliminated form are advanced independently;
+their maximum trajectory discrepancy is saved for every dimension and
+step. A minimum singular value of $I+E_\Delta$ is also recorded.
+
+The weighted map is
+$S_{1/2}\operatorname{Mid}_\Delta(A_0)S_{1/2}$, where
+$S_{1/2}=\operatorname{diag}(I_n,e^{-0.2\Delta/2}I_n)$.
+The conservative checks use $K+K_s$ with
+$K_s=0.05\operatorname{diag}(1,\ldots,n)$, corresponding to the declared
+input $U=0.2p-K_sq$. For a linear conservative field $Ax$, Central4 uses
+increment matrix $G_\Delta=\Delta A-\Delta^3A^3/12$ and update
+$(I-G_\Delta/2)^{-1}(I+G_\Delta/2)$, evaluated by linear solves.
+The extra $C_g$ family checks elimination only; nonproportional damping
+occurs for $n=2,4$, while the scalar member is a comparison case.
+
+\begin{table*}[t]
+\centering
+\caption{P1 matrix full-grid maximum errors at $\Delta=0.01$. Each column uses its own declared damped or conservative target. All preceding step errors and observed orders are retained in the JSON.}
+\label{sx:framework-matrix-errors}
+\begin{tabular}{rcccc}
+\toprule
+$n$ & Ordinary midpoint & Weighted midpoint & Conservative midpoint & Conservative Central4\\
+\midrule
+@@MATRIX_FINE_ROWS@@
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{P3 fixed-error closed field and conservative Central4}
+\label{sx:framework-closed}
+The added magnetic tests read the same \texttt{new\_baseline.json} and
+use initial state $(0.09,0.08,0.015,-0.01)$ over $\tau\in[0,20]$.
+The fixed-error experiment sets $\delta\beta=0.02$,
+$\delta\gamma=0.01$ on the plant with $\beta_*=0.2$ and
+$\gamma_*=0.05$, hence the declared controller coefficients are
+$0.18$ and $0.04$. They are intentionally manufactured errors and are
+not presented as a new identification result. No coefficient is refitted
+when the step changes. The midpoint right-hand side calls the existing
+physical port reconstruction inside every solve. The independent
+reference implements the reduced field \eqref{num:fixed-error-field}
+directly, so the reference does not reuse the midpoint algorithm.
+
+Independent DOP853 references use a coarse setting
+$\mathrm{rtol}=10^{-11}$, $\mathrm{atol}=10^{-13}$,
+maximum step $0.05$, and a fine setting
+$\mathrm{rtol}=2\times10^{-13}$, $\mathrm{atol}=2\times10^{-15}$,
+maximum step $0.025$. Dense outputs are evaluated at the same saved
+times. Both success flags are checked. These are floating-point
+refinement checks, not rigorous solution enclosures. The midpoint steps
+are $0.04,0.02,0.01,0.005,0.0025$. The complete actual, nominal-reference
+and closed-reference trajectories are stored in
+\texttt{closed\_loop\_convergence\_traces.npz}.
+
+The nonlinear Central4 test instead fixes the conservative $h_0$
+($\kappa=1$, zero residual drag) and uses the first four of those steps.
+It implements the complete increment and analytic Jacobian in
+\eqref{ss:central4-magnetic}--\eqref{ss:central4-magnetic-jacobian}.
+Complex-step checks with perturbation $10^{-25}i$ are made at the main
+initial state and $(-0.07,0.04,0.03,-0.02)$, using $\Delta=0.04$.
+The maximum derivative discrepancy is $@@C4_JAC@@$.
+This test does not assert that the imperfectly compensated physical loop
+is Hamiltonian, or that appending a feedback kick preserves fourth order.
+
+All implicit framework solves use an increment predictor, residual
+infinity tolerance $2\times10^{-14}$ and at most $12$ Newton corrections;
+failure stops the run. For midpoint the predictor is explicit Euler;
+for Central4 it is the complete increment evaluated at the previous
+state. Every run records the maximum actual residual, maximum correction
+count, failed-step count, and minimum sampled singular value of the
+Newton matrix. The standard and exponential-weighted defects evaluate
+the ideal implicit tangent at computed midpoints, not the derivative
+of the finite floating-point iteration. The general norm statement in
+\eqref{ctrl:global-error} applies with consistent norms; for the magnetic
+four-state model an infinity residual bounds the Euclidean residual
+by at most twice that value.
+
+\subsection{Manufactured algebraic-defect budget}
+\label{sx:framework-defect}
+This independent one-degree-of-freedom test uses
+\begin{equation}
+ A=\begin{pmatrix}0&1\\-1&0\end{pmatrix},\quad
+ x_0=(0.1,0.02)^{\mathsf T},\quad T=4,
+ \label{sx:defect-model}
+\end{equation}
+and steps $0.08,0.04,0.02,0.01$. It deliberately solves
+\begin{equation}
+ \begin{aligned}
+ x_{k+1}-x_k-\Delta A\frac{x_k+x_{k+1}}2
+   &=\eta_\Delta(1,0)^{\mathsf T},\\
+ \eta_\Delta&=0.01\Delta^q,
+ \end{aligned}
+ \label{sx:defect-injection}
+\end{equation}
+for $q=1,2,3$. The update is the ordinary midpoint matrix plus
+$(I-\Delta A/2)^{-1}\eta_\Delta(1,0)^{\mathsf T}$.
+Thus the residual is introduced intentionally into the algebraic equation;
+it is not attributed to a Newton solver. The JSON contains every actual
+residual vector and infinity norm, its maximum Euclidean norm, and the
+maximum discrepancy from the prescribed residual. The latter is
+$@@DEFECT_TARGET_DISCREPANCY@@$ across the entire test.
+
+Two errors are kept separate: the total maximum error against
+$\exp(tA)x_0$, and the added maximum error against an independently
+advanced unperturbed midpoint trajectory at the same step. The added
+error isolates the $\eta_\Delta/\Delta$ term. The total error also
+contains the ordinary $O(\Delta^2)$ integration term.
+
+\begin{table*}[t]
+\centering
+\caption{Manufactured defect diagnostic at $\Delta=0.01$. Final observed orders compare steps $0.02$ and $0.01$. ``Added'' means relative to unperturbed midpoint, while ``total'' means relative to the continuous oscillator.}
+\label{sx:defect-table}
+\begin{tabular}{rccccc}
+\toprule
+$q$ & Actual residual, max. $\infty$ norm & Total error & Total order & Added order & Added error$/ (\eta_\Delta/\Delta)$\\
+\midrule
+@@DEFECT_ROWS@@
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{Nonlinear exponential-weighted comparison}
+\label{sx:framework-weighted}
+The weighted experiment uses two explicitly known fields: the
+uncompensated synthetic plant $(\delta\beta,\delta\gamma)=(0.2,0.05)$,
+and the fixed-error diagnostic $(0.02,0.01)$. It uses the same initial
+state as the principal magnetic experiment, $T=4$, and steps
+$0.04,0.02,0.01,0.005$. For each field, ordinary midpoint and the weighted
+map are compared with independent DOP853 references at the settings above.
+The weighted implementation is
+$S_{1/2}\operatorname{Mid}_{h_\kappa}S_{1/2}$, with
+$S_{1/2}=\operatorname{diag}(I_2,e^{-\delta\gamma\Delta/2}I_2)$
+and $\kappa=1+\delta\beta$. Its numerical solutions are also substituted
+back into \eqref{ctrl:weighted-midpoint}. The weighted ideal tangent is
+$S_{1/2}D\operatorname{Mid}_{h_\kappa}S_{1/2}$, so the target factor is
+$e^{-\delta\gamma\Delta}$. The two models and all errors are recorded
+separately; no unknown true error is supplied to the deployed learned
+controller.
+
+\begin{table*}[t]
+\centering
+\caption{Nonlinear weighted-map diagnostic. Defects are maximum exponential-weighted spectral-norm defects at $\Delta=0.04$; orders use the last step halving. Both methods approximate the same field within each row pair.}
+\label{num:nonlinear-weighted}
+\begin{tabular}{lcccc}
+\toprule
+Field $(\delta\beta,\delta\gamma)$ & Ordinary defect & Weighted defect & Ordinary order & Weighted order\\
+\midrule
+@@NONLINEAR_WEIGHT_ROWS@@
+\bottomrule
+\end{tabular}
+\end{table*}
+

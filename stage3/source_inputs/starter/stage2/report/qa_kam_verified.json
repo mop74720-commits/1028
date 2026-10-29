@@ -1,0 +1,535 @@
+{
+  "reviewed_utc": "2026-10-29T03:06:37.543360+00:00",
+  "reviewer": "kam_sources",
+  "candidate": "stage2/report/render_verified",
+  "total_candidate_pages": 110,
+  "assigned_pages": [
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83
+  ],
+  "actually_viewed_verified_pages": [
+    57,
+    58,
+    59,
+    60,
+    64,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    75,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83
+  ],
+  "verified_visual_view_count": 21,
+  "sha_identical_prior_visual_evidence_reused_pages": [
+    61,
+    62,
+    63,
+    65,
+    74,
+    76
+  ],
+  "total_pages_covered": 27,
+  "method": "All 21 changed pages were actually viewed at original size using view_image(detail=original). Six unchanged pages are byte-identical by SHA-256 to the initial candidate pages previously inspected at original size. No contact sheet or text-extraction substitute.",
+  "status": "PASS",
+  "findings": [],
+  "resolved_findings": [
+    {
+      "id": "KQA01",
+      "verified_pages": [
+        57,
+        58
+      ],
+      "status": "resolved_in_verified_render"
+    },
+    {
+      "id": "KQA02",
+      "verified_pages": [
+        64
+      ],
+      "status": "resolved_in_verified_render",
+      "gamma_numerator": "0.55558524",
+      "gamma_denominator": "11.417287283"
+    },
+    {
+      "id": "KQA03",
+      "verified_pages": [
+        80,
+        81,
+        82,
+        83
+      ],
+      "status": "resolved_in_verified_render"
+    }
+  ],
+  "scope_limit": "This QA record covers pages 57-83 only. The separate L5 repair on page 84 is not claimed as visually inspected by this reviewer.",
+  "pages": [
+    {
+      "page": 57,
+      "path": "stage2/report/render_verified/page-57.png",
+      "sha256": "58d4ee10cd60f16e49b4bd542dbf721e3c5b6b3fb44fe3c8b9e92438ff7713b8",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "original-size visual inspection of verified render",
+      "actually_viewed_verified_render": true,
+      "prior_visual_evidence": null,
+      "prior_sha256": "7dc566d9bdef5b5dd40f78c1a43be5ac2c4020146b309f0b691ff9412d387d83",
+      "identical_to_prior": false,
+      "conclusion": "PASS",
+      "notes": "PASS: Newton matrix, C_h, H_p, K_y y, K_u and split closed-loop potential display without ambiguous raw subscripts or clipped content."
+    },
+    {
+      "page": 58,
+      "path": "stage2/report/render_verified/page-58.png",
+      "sha256": "19813771c8add6a42b2822690b8a46f3e157d9f1681f4dce3d847ddfb37ad7bb",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "original-size visual inspection of verified render",
+      "actually_viewed_verified_render": true,
+      "prior_visual_evidence": null,
+      "prior_sha256": "900c2e012343cc97ec2fc2607893ef01c542946ffb542b66afac6f7a55bfeeb0",
+      "identical_to_prior": false,
+      "conclusion": "PASS",
+      "notes": "PASS: partial derivatives, magnetic reference/control indices, control-power and error formulas are complete and correctly delimited."
+    },
+    {
+      "page": 59,
+      "path": "stage2/report/render_verified/page-59.png",
+      "sha256": "c815a131e8f5585a8c914b6c27714e2ed3e6b270de680f81a329d9f393d7a3e0",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "original-size visual inspection of verified render",
+      "actually_viewed_verified_render": true,
+      "prior_visual_evidence": null,
+      "prior_sha256": "b3e0fbfaaba349d0dc087e6057b598ac6809f4320ebb8434b2be20b9e733744b",
+      "identical_to_prior": false,
+      "conclusion": "PASS",
+      "notes": "PASS: no missing glyphs, red placeholders, broken math delimiters, clipped formula/table content, overlapping elements or omitted captions observed."
+    },
+    {
+      "page": 60,
+      "path": "stage2/report/render_verified/page-60.png",
+      "sha256": "b13f98e00183a17843accd922cc2fb852f9fe045f59becd2403b5e4e304128d3",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "original-size visual inspection of verified render",
+      "actually_viewed_verified_render": true,
+      "prior_visual_evidence": null,
+      "prior_sha256": "721d0e063da73ff95884f182ceb7babddc1621056cd5f18746ba958dddefa512",
+      "identical_to_prior": false,
+      "conclusion": "PASS",
+      "notes": "PASS: no missing glyphs, red placeholders, broken math delimiters, clipped formula/table content, overlapping elements or omitted captions observed."
+    },
+    {
+      "page": 61,
+      "path": "stage2/report/render_verified/page-61.png",
+      "sha256": "4de85bcc440c4976eadfa33fc2ccf56df4590b8d76e21c9eeaa8bd8c891ae12c",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "SHA-256-identical image; reuse prior original-size visual inspection",
+      "actually_viewed_verified_render": false,
+      "prior_visual_evidence": "stage2/report/qa_kam.json",
+      "prior_sha256": "4de85bcc440c4976eadfa33fc2ccf56df4590b8d76e21c9eeaa8bd8c891ae12c",
+      "identical_to_prior": true,
+      "conclusion": "PASS",
+      "notes": "PASS: current PNG is byte-identical to the previously inspected original-size page, which had no reported finding."
+    },
+    {
+      "page": 62,
+      "path": "stage2/report/render_verified/page-62.png",
+      "sha256": "377d3b8f459ac98a4669ccdb6d85f1d4ad292cffbca0d97d710ccd0da8a20a1c",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "SHA-256-identical image; reuse prior original-size visual inspection",
+      "actually_viewed_verified_render": false,
+      "prior_visual_evidence": "stage2/report/qa_kam.json",
+      "prior_sha256": "377d3b8f459ac98a4669ccdb6d85f1d4ad292cffbca0d97d710ccd0da8a20a1c",
+      "identical_to_prior": true,
+      "conclusion": "PASS",
+      "notes": "PASS: current PNG is byte-identical to the previously inspected original-size page, which had no reported finding."
+    },
+    {
+      "page": 63,
+      "path": "stage2/report/render_verified/page-63.png",
+      "sha256": "4f0e97f9b4f4739f044b32a70e6c4a191da7e352461681e6fedfd1bc7ffbee6d",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "SHA-256-identical image; reuse prior original-size visual inspection",
+      "actually_viewed_verified_render": false,
+      "prior_visual_evidence": "stage2/report/qa_kam.json",
+      "prior_sha256": "4f0e97f9b4f4739f044b32a70e6c4a191da7e352461681e6fedfd1bc7ffbee6d",
+      "identical_to_prior": true,
+      "conclusion": "PASS",
+      "notes": "PASS: current PNG is byte-identical to the previously inspected original-size page, which had no reported finding."
+    },
+    {
+      "page": 64,
+      "path": "stage2/report/render_verified/page-64.png",
+      "sha256": "a78cef4dd9857ac07d1cd87bfec8fed2f69f65a608171ab024665c60f432e7c2",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "original-size visual inspection of verified render",
+      "actually_viewed_verified_render": true,
+      "prior_visual_evidence": null,
+      "prior_sha256": "0548e0f8335634a46e49e22cb8b23b69dad7fe18f4aa34fc42ddfa96cf0a8adf",
+      "identical_to_prior": false,
+      "conclusion": "PASS",
+      "notes": "PASS: gamma is a fully visible stacked quotient 0.55558524 / 11.417287283 within the final table cell; all precision retained."
+    },
+    {
+      "page": 65,
+      "path": "stage2/report/render_verified/page-65.png",
+      "sha256": "bb620b15a949b548559ef76d0cbc25346bf9216c3e41b421bf6eccddb9a12737",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "SHA-256-identical image; reuse prior original-size visual inspection",
+      "actually_viewed_verified_render": false,
+      "prior_visual_evidence": "stage2/report/qa_kam.json",
+      "prior_sha256": "bb620b15a949b548559ef76d0cbc25346bf9216c3e41b421bf6eccddb9a12737",
+      "identical_to_prior": true,
+      "conclusion": "PASS",
+      "notes": "PASS: current PNG is byte-identical to the previously inspected original-size page, which had no reported finding."
+    },
+    {
+      "page": 66,
+      "path": "stage2/report/render_verified/page-66.png",
+      "sha256": "de9388b2e39e861a318110418ef09b00c72244c120a12b4c296f8f8fc4c3cfad",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "original-size visual inspection of verified render",
+      "actually_viewed_verified_render": true,
+      "prior_visual_evidence": null,
+      "prior_sha256": "d3822c25164497a88c2b9f79efeedb9997c90a5e780af838b24ab5041ba564f2",
+      "identical_to_prior": false,
+      "conclusion": "PASS",
+      "notes": "PASS: table and scientific-notation line wraps remain readable, with no loss of numbers or boundary overlap."
+    },
+    {
+      "page": 67,
+      "path": "stage2/report/render_verified/page-67.png",
+      "sha256": "e5a176313d3795d4c47fce537171d0dd7234dd11fb4b7c1b140303e39b07354b",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "original-size visual inspection of verified render",
+      "actually_viewed_verified_render": true,
+      "prior_visual_evidence": null,
+      "prior_sha256": "4b2d57791d349f1805050cecdc5928ec21b2d98b818dff1af7597400aedf9698",
+      "identical_to_prior": false,
+      "conclusion": "PASS",
+      "notes": "PASS: mathematical expressions and table values complete; no column clipping."
+    },
+    {
+      "page": 68,
+      "path": "stage2/report/render_verified/page-68.png",
+      "sha256": "f23d15870747dd856889da86d2225f38f4c1b65c7f15bbd44c6fa5949adf90ea",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "original-size visual inspection of verified render",
+      "actually_viewed_verified_render": true,
+      "prior_visual_evidence": null,
+      "prior_sha256": "92d61e0bfb9e33b996e5b9951872a376ab1708f363f34d7ddafecb1bee242a81",
+      "identical_to_prior": false,
+      "conclusion": "PASS",
+      "notes": "PASS: no missing glyphs, red placeholders, broken math delimiters, clipped formula/table content, overlapping elements or omitted captions observed."
+    },
+    {
+      "page": 69,
+      "path": "stage2/report/render_verified/page-69.png",
+      "sha256": "f1064eb4225d5b41c1c1459f8797493e0315e005e89da9f5bcfb81aec0100420",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "original-size visual inspection of verified render",
+      "actually_viewed_verified_render": true,
+      "prior_visual_evidence": null,
+      "prior_sha256": "3ef0ec148515e7f140e9edce5b29677c8efb7572732e01b8a184d55c0cd27637",
+      "identical_to_prior": false,
+      "conclusion": "PASS",
+      "notes": "PASS: no missing glyphs, red placeholders, broken math delimiters, clipped formula/table content, overlapping elements or omitted captions observed."
+    },
+    {
+      "page": 70,
+      "path": "stage2/report/render_verified/page-70.png",
+      "sha256": "71b315b675aaa36e19f0e8e6d7b344dee105dd19d260229d81529395e8a01e81",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "original-size visual inspection of verified render",
+      "actually_viewed_verified_render": true,
+      "prior_visual_evidence": null,
+      "prior_sha256": "ed91f77482c314bb74680d2584c2bbbf4bbfc1d099c5d54fa173aaeed2704628",
+      "identical_to_prior": false,
+      "conclusion": "PASS",
+      "notes": "PASS: no missing glyphs, red placeholders, broken math delimiters, clipped formula/table content, overlapping elements or omitted captions observed."
+    },
+    {
+      "page": 71,
+      "path": "stage2/report/render_verified/page-71.png",
+      "sha256": "bc93d29e4d3f08d59d227b876d55461b6101d8c9fbb15abdfb63183b7aa1d4c1",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "original-size visual inspection of verified render",
+      "actually_viewed_verified_render": true,
+      "prior_visual_evidence": null,
+      "prior_sha256": "f35209dd264172b551c71b2b733f059adfa960bf322e942e21098dac31902d42",
+      "identical_to_prior": false,
+      "conclusion": "PASS",
+      "notes": "PASS: table scientific notation is fully readable and bottom border remains clear of footer."
+    },
+    {
+      "page": 72,
+      "path": "stage2/report/render_verified/page-72.png",
+      "sha256": "aead08340bc9da9d3e50a80f322a5462c007719fdc1f7c4cef6f4b3071704010",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "original-size visual inspection of verified render",
+      "actually_viewed_verified_render": true,
+      "prior_visual_evidence": null,
+      "prior_sha256": "c14f7f07074900d83119ffd8fc15b9282030fd8e9b7fc2179138ee3e140403db",
+      "identical_to_prior": false,
+      "conclusion": "PASS",
+      "notes": "PASS: no missing glyphs, red placeholders, broken math delimiters, clipped formula/table content, overlapping elements or omitted captions observed."
+    },
+    {
+      "page": 73,
+      "path": "stage2/report/render_verified/page-73.png",
+      "sha256": "94f34c5c4b5bfc9b88378944cbae3b5a0363f7b22c4c9c77c71c35c3c4978b79",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "original-size visual inspection of verified render",
+      "actually_viewed_verified_render": true,
+      "prior_visual_evidence": null,
+      "prior_sha256": "69029ff31a57b6c68fbaf8c08356b13f4f9c3fc50144ae3f828fd6f0e5e75b71",
+      "identical_to_prior": false,
+      "conclusion": "PASS",
+      "notes": "PASS: no missing glyphs, red placeholders, broken math delimiters, clipped formula/table content, overlapping elements or omitted captions observed."
+    },
+    {
+      "page": 74,
+      "path": "stage2/report/render_verified/page-74.png",
+      "sha256": "fab3249c988abe340a743bbf7e5090316b05727032c4945b67ac73c6a8e1cd70",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "SHA-256-identical image; reuse prior original-size visual inspection",
+      "actually_viewed_verified_render": false,
+      "prior_visual_evidence": "stage2/report/qa_kam.json",
+      "prior_sha256": "fab3249c988abe340a743bbf7e5090316b05727032c4945b67ac73c6a8e1cd70",
+      "identical_to_prior": true,
+      "conclusion": "PASS",
+      "notes": "PASS: current PNG is byte-identical to the previously inspected original-size page, which had no reported finding."
+    },
+    {
+      "page": 75,
+      "path": "stage2/report/render_verified/page-75.png",
+      "sha256": "4716a03643eeb380fa11d96009c328dee90dccfd68f03abbedd4fa5472b7bdd0",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "original-size visual inspection of verified render",
+      "actually_viewed_verified_render": true,
+      "prior_visual_evidence": null,
+      "prior_sha256": "4a00c83a85a4e89062b26ae4c883571e9e631336dca6a71c852f8197761c61b5",
+      "identical_to_prior": false,
+      "conclusion": "PASS",
+      "notes": "PASS: no missing glyphs, red placeholders, broken math delimiters, clipped formula/table content, overlapping elements or omitted captions observed."
+    },
+    {
+      "page": 76,
+      "path": "stage2/report/render_verified/page-76.png",
+      "sha256": "c6a4fb770ea26870196ed6aa4197f4ec8cf93aa5c5121930d318dac08079f3ce",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "SHA-256-identical image; reuse prior original-size visual inspection",
+      "actually_viewed_verified_render": false,
+      "prior_visual_evidence": "stage2/report/qa_kam.json",
+      "prior_sha256": "c6a4fb770ea26870196ed6aa4197f4ec8cf93aa5c5121930d318dac08079f3ce",
+      "identical_to_prior": true,
+      "conclusion": "PASS",
+      "notes": "PASS: current PNG is byte-identical to the previously inspected original-size page, which had no reported finding."
+    },
+    {
+      "page": 77,
+      "path": "stage2/report/render_verified/page-77.png",
+      "sha256": "7a45f0da9eeeb8f4311027446e1c42b0fd9ffed064857345361837884056919f",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "original-size visual inspection of verified render",
+      "actually_viewed_verified_render": true,
+      "prior_visual_evidence": null,
+      "prior_sha256": "ac3ccb1c75dfdaf41b59a9a2025bc73a21adf726e0b0124692b6efd6a104ce78",
+      "identical_to_prior": false,
+      "conclusion": "PASS",
+      "notes": "PASS: no missing glyphs, red placeholders, broken math delimiters, clipped formula/table content, overlapping elements or omitted captions observed."
+    },
+    {
+      "page": 78,
+      "path": "stage2/report/render_verified/page-78.png",
+      "sha256": "1daacf1d6901d1aa7eddbc557046c39381144e0d3f60d30133735bc10b18ce5d",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "original-size visual inspection of verified render",
+      "actually_viewed_verified_render": true,
+      "prior_visual_evidence": null,
+      "prior_sha256": "0f0137bc411c88e6b2f753440552cf4bd43b9c01a6b2032c3ceb5e0860af5295",
+      "identical_to_prior": false,
+      "conclusion": "PASS",
+      "notes": "PASS: no missing glyphs, red placeholders, broken math delimiters, clipped formula/table content, overlapping elements or omitted captions observed."
+    },
+    {
+      "page": 79,
+      "path": "stage2/report/render_verified/page-79.png",
+      "sha256": "cb0a845cfc9f7d659be30b4a1e863c5c8124685064a120602d8c31b82cdef77a",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "original-size visual inspection of verified render",
+      "actually_viewed_verified_render": true,
+      "prior_visual_evidence": null,
+      "prior_sha256": "0ee9da4581e09abded9084ed85cc02c10ec63b88c642cacfb347d74a1aeb425c",
+      "identical_to_prior": false,
+      "conclusion": "PASS",
+      "notes": "PASS: Figure 7-1 and complete caption fit the page."
+    },
+    {
+      "page": 80,
+      "path": "stage2/report/render_verified/page-80.png",
+      "sha256": "e72c19f3843a6081af495d41af70bf2706693b4f5c7c27238db9f26bf148427f",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "original-size visual inspection of verified render",
+      "actually_viewed_verified_render": true,
+      "prior_visual_evidence": null,
+      "prior_sha256": "e318eec8056e7222c6f8e674e2c2be24dba1645c5a28ded17d35695608c17166",
+      "identical_to_prior": false,
+      "conclusion": "PASS",
+      "notes": "PASS: Figure 7-2 and caption, chapter 8 transition, generalized eigenproblem and L1-L2 render completely."
+    },
+    {
+      "page": 81,
+      "path": "stage2/report/render_verified/page-81.png",
+      "sha256": "e7de964cb3fb64735ff3cd9407466d80aca4a55cddef22d32e6927008b3d353d",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "original-size visual inspection of verified render",
+      "actually_viewed_verified_render": true,
+      "prior_visual_evidence": null,
+      "prior_sha256": "a9f0b5b5940c5a51ae31bd86f4f2ab7365fe7077a0e80f4614e5168f891aea6d",
+      "identical_to_prior": false,
+      "conclusion": "PASS",
+      "notes": "PASS: normalization and complex input/conjugate formulas and all model-comparison table cells are complete."
+    },
+    {
+      "page": 82,
+      "path": "stage2/report/render_verified/page-82.png",
+      "sha256": "b190ea146b0f82e26d323b713e76e3c2d8f2360d30f140de8c3aa28ba5d91475",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "original-size visual inspection of verified render",
+      "actually_viewed_verified_render": true,
+      "prior_visual_evidence": null,
+      "prior_sha256": "42d3eeff1b0184a8676bf7f5e060740e85ba8592dbb07a2b501782801710fc48",
+      "identical_to_prior": false,
+      "conclusion": "PASS",
+      "notes": "PASS: split-tanh activation, cubic gate, canonical gradient and H_PP/H_P/H_Q notation are complete; page continuation is legible."
+    },
+    {
+      "page": 83,
+      "path": "stage2/report/render_verified/page-83.png",
+      "sha256": "aad55d2c39648c19725dda51898202aeb3401c9258959999e66f16054d2ff4c7",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "review_method": "original-size visual inspection of verified render",
+      "actually_viewed_verified_render": true,
+      "prior_visual_evidence": null,
+      "prior_sha256": "73eaac71ab6e52911598961ccdea87f3ad473df8b83cecc0dd2a25751df4f395",
+      "identical_to_prior": false,
+      "conclusion": "PASS",
+      "notes": "PASS: L3 and L4, alpha_s / omega_0, reference momentum and magnetic-allocation comparison render completely."
+    }
+  ]
+}

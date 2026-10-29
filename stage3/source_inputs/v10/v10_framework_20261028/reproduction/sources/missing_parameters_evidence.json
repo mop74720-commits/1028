@@ -1,0 +1,301 @@
+{
+  "scope": "Evidence supplementation for ten rows of the existing 201-item checklist. Read only from the downloaded v10 TeX and supplement PDF text. No workbook or manuscript edited; no numerical results rerun or certified; no claim that these old model parameters validate a new physical baseline.",
+  "source_root": "/workspace/scratch/41c3ec762399/audit_parameter_sources/upstream_v10/",
+  "classification_rule": "Numbers explicitly assigned by the manuscript remain author-selected simulation/identification settings. Source recovery does not turn them into external literature measurements. Observed numerical residuals and iteration counts are not preset solver tolerances or limits.",
+  "records": [
+    {
+      "id": "N030",
+      "xlsx_row": 36,
+      "status": "部分已补；Newton预设参数仍未核",
+      "experiment": "GC17完整学习Hamiltonian的中点/Central4精度试验；所有外驱和阻尼端口关闭",
+      "sources": [{"file":"sections/unified_integrator_check.tex","section":"S9.1","lines":"3-13,28-44"}],
+      "verified_values": {
+        "initial_state_X1_X2_Y1_Y2": [0.1,0.06,0,0.02],
+        "final_dimensionless_time": 10,
+        "step_sizes_dimensionless": [0.08,0.04,0.02,0.01],
+        "reference_solver": "DOP853",
+        "reference_rtol": 3e-14,
+        "reference_atol": 3e-16,
+        "less_strict_reference_rtol": 2e-13,
+        "less_strict_reference_atol": 2e-15,
+        "reference_component_difference_observed": 8.32e-14,
+        "largest_implicit_step_residual_observed_inf_norm": 2e-15,
+        "largest_newton_evaluations_observed_per_step": 3
+      },
+      "still_unverified": ["Newton预设残差或增量停止阈值", "预设最大迭代数", "初始迭代猜测与失败处理"],
+      "suggested_checklist_text": "S9.1给出DOP853参考rtol=3e-14、atol=3e-16；较松参考2e-13/2e-15用于细化比较。最大实测隐式残差2e-15、最多3次Newton求值是观测结果，不能填成预设tol/maxiter。"
+    },
+    {
+      "id": "N038",
+      "xlsx_row": 44,
+      "status": "核心数值已补；原始拟合配置尚未核",
+      "experiment": "S5.1两个模态Python Galerkin保守轨迹导数标签的匹配实/复特征比较",
+      "sources": [{"file":"sections/unified_experiments.tex","section":"S5.1","lines":"31-64"}],
+      "verified_values": {
+        "training_seeds": [17,43,91],
+        "training_trajectories_per_seed": 12,
+        "training_duration_s": 4,
+        "samples_per_training_trajectory": 129,
+        "initial_modal_radius1_uniform_interval": [0.03,0.20],
+        "initial_modal_radius2_uniform_interval": [0.03,0.16],
+        "initial_phases": "independent uniform phases; exact phase interval not separately printed",
+        "state_noise": "none",
+        "vector_field_component_noise_distribution": "independent uniform[-1e-6,1e-6]",
+        "quadratic_regularizer_coefficient": 1e-14,
+        "regularizer_coordinates": "common real feature coordinates for all matched implementations",
+        "objective": "derivative mean-square error plus quadratic regularizer",
+        "heldout_trajectories": 8,
+        "heldout_duration_s": 16,
+        "heldout_output_times": 1601,
+        "reference_solver": "DOP853",
+        "reference_rtol": 2e-10,
+        "reference_atol": 2e-12,
+        "reference_refinement_factor": 100
+      },
+      "do_not_mix": "该配置不同于S9.1积分器对比的3e-14/3e-16；也不同于S5.1后段200s延拓的2e-11/2e-13，及S5.5 COMSOL积分匹配的scaled atol。",
+      "still_unverified": ["独立测试集随机种子的具体整数", "实际保存的129/1601个时间点数组", "正则项及MSE归一化在代码中的完整表达式"],
+      "suggested_checklist_text": "已找到正则1e-14、模态半径U[.03,.20]/U[.03,.16]与独立均匀相位、导数标签独立U[-1e-6,1e-6]；保守参考DOP853为rtol2e-10/atol2e-12。均为本试验作者数值方案。"
+    },
+    {
+      "id": "N057",
+      "xlsx_row": 63,
+      "status": "辨识系数与试验范围已补；逐条输入和训练初态仍未核",
+      "experiment": "Python保守拟合后的非负单参数Rayleigh辨识与驱动测试",
+      "sources": [
+        {"file":"sections/unified_experiments.tex","section":"S5.3","lines":"182-219"},
+        {"file":"sections/unified_safety.tex","section":"S7.4","lines":"390-392,432-439"},
+        {"file":"sections/unified_experiments.tex","section":"S5.5末段","lines":"428-431"}
+      ],
+      "verified_values": {
+        "damped_unforced_training_trajectories_per_seed": 8,
+        "damped_training_duration_s": 5,
+        "fit_method": "nonnegative least squares using the previously fitted conservative gradient",
+        "reported_fitted_dimensional_alpha_s_inv_in_section_order": [0.555585710,0.555587102,0.555584024],
+        "reported_generator_alpha_s_inv": 0.555585237,
+        "gamma_gc17_explicit": 0.0486617964,
+        "independent_driven_test_trajectories": 6,
+        "field_amplitude_range_mT": [4,8],
+        "frequency_ratio_range_to_biased_first_frequency": [0.65,1.20],
+        "decoder": "Y'=-h_X-gamma*diag(nu^-1)*h_Y+u*d*cos(d^T*X)",
+        "different_full_fe_comsol_integral_conservative_fit_gamma": 0.0486617702
+      },
+      "derived_values_not_raw_exports": {
+        "omega0_rad_s_used": 11.417287282852458,
+        "gamma_from_rounded_reported_alpha_list": [0.04866179647020271,0.04866191839058236,0.04866164879939805]
+      },
+      "do_not_mix": ".0486617702属于另一完整FE COMSOL保守积分拟合的拖曳再辨识，耗散训练仍来自Python；不是此GC17原始导数拟合的.0486617964，也不能以物理gamma=alpha/omega0替代学习值。",
+      "still_unverified": ["各damped训练轨迹的初态、输出时刻和额外噪声具体随机实现", "六条驱动试验各自的完整振幅、频率、相位、ramp、时长", "除已交叉定位GC17外另外两项系数与seed的原始导出逐一映射"],
+      "suggested_checklist_text": "S5.3给出8条/seed、每条5s无外驱耗散训练，非负最小二乘，三项alpha_hat=.555585710/.555587102/.555584024 s^-1；GC17 gamma_hat=.0486617964。6条驱动测试4-8mT、r=.65-1.20；逐条时序仍需原始档案。"
+    },
+    {
+      "id": "N066",
+      "xlsx_row": 72,
+      "status": "失配物理设定及遗漏特征已补；这是设计情景，不是新测量",
+      "experiment": "32单元64DOF full-FE训练、固定四个名义静磁场模态预测的模型失配试验",
+      "sources": [
+        {"file":"sections/robustness_and_adaptation.tex","section":"S5.7","lines":"3-58,103-110"},
+        {"file":"sections/unified_model.tex","section":"S1参数表","lines":"24-31"}
+      ],
+      "verified_values": {
+        "parameter_order": ["E/E_ref","mu/mu_ref","alpha/alpha_ref","G_T_m","c2_kg_m2"],
+        "soft_positive_gradient": [0.85,1.20,1.40,0.5,0.02],
+        "stiff_negative_gradient": [1.20,0.85,0.70,-0.4,0.012],
+        "G_ref_T_m": 0.5,
+        "c2_ref_kg_m2": 0.02,
+        "gradient_field": "Bx=B0-G*(x-L), By=By(t)+G*y",
+        "extra_potential": "-mu*G*w(L)*sin(theta)",
+        "quadratic_drag_density": "-c2*abs(w_t)*w_t",
+        "training_trajectories_per_setting": 6,
+        "training_duration_s": 3,
+        "independent_tests_per_setting": 3,
+        "test_duration_s": 4,
+        "sampling_interval_s": 0.001,
+        "weak_fit_window_s": 0.032,
+        "weak_test_function": "sin(pi*s)^4 on each normalized window",
+        "initial_modes": "first four excited; all remaining initial coordinates statically condensed with zero initial velocity"
+      },
+      "derived_old_baseline_SI_values": {
+        "reference_E_Pa": 5000000,
+        "reference_mu_A_m2": 0.00002,
+        "soft_E_Pa": 4250000,
+        "soft_mu_A_m2": 0.000024,
+        "soft_alpha_s_inv_using_reference_json": 0.7778193315511042,
+        "stiff_E_Pa": 6000000,
+        "stiff_mu_A_m2": 0.000017,
+        "stiff_alpha_s_inv_using_reference_json": 0.3889096657755521
+      },
+      "do_not_mix": ".753909 s^-1和c2=.020832是soft clean expanded拟合输出，不是其全模型生成参数。若重新选材料基准，以上SI派生值必须重算。",
+      "still_unverified": ["六条训练与三条测试的逐个初态", "multisine频率、振幅、相位完整配置", "此节Python求解器完整设置"],
+      "suggested_checklist_text": "S5.7已明确soft/+G=(E/Eref,.mu/muref,alpha/alpharef,G,c2)=(.85,1.20,1.40,.5T/m,.02kg/m²)，并有stiff/-G=(1.20,.85,.70,-.4,.012)。旧Eref=5MPa给soft E=4.25MPa；这些是作者失配测试参数。"
+    },
+    {
+      "id": "N070",
+      "xlsx_row": 76,
+      "status": "噪声分布及归一化已补；floor实现顺序和种子未核",
+      "experiment": "S5.7失配试验的观测模态状态噪声",
+      "sources": [{"file":"sections/robustness_and_adaptation.tex","section":"S5.7","lines":"70-97"}],
+      "verified_values": {
+        "distribution": "independent Gaussian noise",
+        "applied_to": "observed modal positions and velocities",
+        "relative_levels": [0.001,0.005],
+        "normalization": "each coordinate's training standard deviation",
+        "dimensionless_floor_X": 0.0001,
+        "dimensionless_floor_Y": 0.00001,
+        "independent_training_noise_seeds": 3,
+        "future_reference_label_noise": "none",
+        "reconstructed_tip_noise_RMS_um_at_005_nominal_soft_stiff": [3.80,5.72,3.33]
+      },
+      "still_unverified": ["具体三个随机种子整数", "floor作用于归一化标准差还是作用于已乘噪声率后的标准差，文字不足以确定精确max表达式，需核代码", "独立性在时间/坐标维度的实现与原始样本"],
+      "suggested_checklist_text": "S5.7明确0.1%/0.5%为每个模态位置/速度坐标训练标准差的独立高斯噪声，X/Y无量纲floor为1e-4/1e-5，3个独立训练噪声种子；未来参考标签无噪声。这是仿真噪声方案，不是传感器规格。"
+    },
+    {
+      "id": "N076",
+      "xlsx_row": 82,
+      "status": "时窗量级已补；精确T与17个时间戳未核",
+      "experiment": "独立两模态COMSOL ODE短轨迹积分学习认证，非64DOF full-FE训练集",
+      "sources": [{"file":"sections/integral_comsol_to_kam.tex","section":"S4.5","lines":"4-18,74-100"}],
+      "verified_values": {
+        "initial_conditions": 64,
+        "observations_per_orbit": 17,
+        "dimensionless_observation_interval": "[0,T], T approximately0.04",
+        "fitted_curve_degree": 8,
+        "endpoint_matching": "constant and linear polynomial coefficients corrected exactly; coefficients frozen as dyadic rationals",
+        "raw_observation_kind": "positions and velocities only",
+        "interval_Gram_arithmetic_precision_bits": 256
+      },
+      "derived_scale_only": {"T_physical_s_if_T_exactly_004_and_old_omega0":0.0035034591850969465},
+      "still_unverified": ["精确T数值/二进有理值", "17个实际观测时间戳及是否等间隔", "64个原始初态与状态文件", "该短轨迹COMSOL预设求解器配置（不能从其它COMSOL试验借用）"],
+      "suggested_checklist_text": "S4.5已给每轨无量纲[0,T]、T≈.04和17次观测，共64初态；相当于旧时间尺度约3.503ms。精确T和时间数组仍需原始导出；不得从17点自行断言等间隔。"
+    },
+    {
+      "id": "N094",
+      "xlsx_row": 100,
+      "status": "精确构造已补；本轮未重做其认证计算",
+      "experiment": "旧固定学习Hamiltonian的finite-amplitude invariant torus精确频率",
+      "sources": [
+        {"file":"sections/unified_kam.tex","section":"S4.3","lines":"209-274","equations":"S68-S71"},
+        {"file":"sections/integral_comsol_to_kam.tex","section":"S4.5","lines":"183-189"}
+      ],
+      "verified_values": {
+        "angle_period": 1,
+        "frequency_units": "cycles per unit dimensionless time",
+        "formula": "varpi=w1/(2*pi)*(1,zeta_frequency_ratio)",
+        "phi": "(1+sqrt(5))/2",
+        "target_three_primary_fits_low_noise_fit": {
+          "w1_exact": "49999589341/50000000000",
+          "zeta_exact": "(1876278*phi+592877)/(304979*phi+96369)",
+          "continued_fraction": "[6;6,1,1,2,1,23,1,13,6,3] followed by infinitely many1s"
+        },
+        "different_full_fe_comsol_qv_fitted_model": {
+          "w1_exact": "99999143141/100000000000",
+          "zeta_exact": "(974993*phi+427310)/(158480*phi+69457)",
+          "continued_fraction": "[6;6,1,1,2,1,20,1,1,4,1,1,3,2] followed by infinitely many1s"
+        },
+        "partial_quotient_upper_bound": 23,
+        "all_integer_diophantine_claim": "abs(k dot varpi)>=(9/1750)*|k|_1^-1 for nonzero integer k",
+        "weaker_exponent_used_in_theorem": 3
+      },
+      "do_not_mix": "此zeta是频率比，不是阻尼比。.9999996888354415余弦系数的独立两模态短轨迹拟合，在S4.5明确交叉引用S68-S69。full-FE COMSOL积分拟合则使用S70的另一频率。",
+      "still_unverified": ["本轮只定位原文精确定义及其证明说明，未重新执行Arb/Fourier认证程序"],
+      "suggested_checklist_text": "S68-S69已给黄金比的Möbius变换精确频率及无限连分数尾；不是有限小数估计。S70是另一full-FE COMSOL拟合的频率，须分别引用。"
+    },
+    {
+      "id": "N154",
+      "xlsx_row": 160,
+      "status": "启动函数与主要扫描/时序协议已补",
+      "experiment": "S5.9强迫稳态及启动越界轮廓；不是保守KAM破坏阈值",
+      "sources": [{"file":"sections/stability_boundary.tex","section":"S5.9","lines":"22-42,60-68,102-107,135-145"}],
+      "verified_values": {
+        "field_protocol": "By(t)=A*(1-exp(-(t/0.25s)^2))*sin(r*omega0*t)",
+        "phase_at_start": "zero from the written sine formula",
+        "ramp_scale_s": 0.25,
+        "omega0_rad_s": 11.417287283,
+        "amplitudes_mT": [1,2,4,6,10,15,20],
+        "frequency_ratio_grids": ["0.70:0.02:1.30","0.94:0.005:1.06"],
+        "distinct_frequency_ratios": 49,
+        "independent_initial_low_states": [[0,0,0,0],[0.18,0.04,0,0],[-0.18,-0.04,0,0]],
+        "discarded_forcing_periods": 128,
+        "measured_forcing_periods": 64,
+        "total_forcing_periods": 192,
+        "two_mode_grid_solver": "fixed-step DOP853",
+        "two_mode_steps_per_forcing_period": 256,
+        "extra_period_fundamental_matrix_steps": 512,
+        "continuation": "frequency changed at zero-field phase; inherits previous endpoint; ramp only at first frequency",
+        "startup_crossing_table": "eight modes, zero initial state, same0.25s ramp,192 forcing periods",
+        "startup_crossings_mT_at_r_08_09_10_11_12": [8.6513,5.1882,1.9169,5.7662,10.4455]
+      },
+      "qualification": "ramp scale0.25s is not a finite cutoff at0.25s: the exponential ramp approaches1 asymptotically. The reported crossings are protocol-dependent numerical contours; no new physical validity or safe-field guarantee is inferred.",
+      "still_unverified": ["启动轮廓root-finding及各高模态配置的完整代码设置未逐项核实"],
+      "suggested_checklist_text": "S5.9给出A[1-exp(-(t/.25s)^2)]sin(r*omega0*t)，初始相位0；启动表为8模态零初态192周期，独立2模态扫描另用三初态、先弃128再测64周期。"
+    },
+    {
+      "id": "N162",
+      "xlsx_row": 168,
+      "status": "kappa及核心协议已补；该例Bmax和W初始上界独立数值及Python容差仍未核",
+      "experiment": "产生5.14478mm/3.14362mm峰值的10mT正弦安全过滤试验",
+      "sources": [{"file":"sections/unified_safety.tex","section":"S7.2-S7.3","lines":"134-166,215-260,312-324"}],
+      "verified_values": {
+        "kappa_s_inv": 5,
+        "energy_cap_fraction_Ec": 0.95,
+        "energy_cap_nJ": 22.66365,
+        "request_amplitude_mT": 10,
+        "request_frequency_rad_s": 9.444949,
+        "request_ramp_scale_s": 0.25,
+        "request_phase": "zero from referenced sine protocol",
+        "duration_s": 8,
+        "saved_times": 2001,
+        "plant": "32 elements, all64 unconstrained FE DOFs, full static-field modal basis",
+        "initial_physical_state": "rest at straight equilibrium",
+        "initial_physical_energy": 0,
+        "alpha_s_inv": 0.55558524,
+        "sensor_error_delta_a": 0,
+        "comsol_online_governor_solver": "generalized-alpha",
+        "comsol_online_spectral_radius_infinity": 0,
+        "comsol_online_rtol": 1e-5,
+        "comsol_online_max_internal_step_s": 0.002,
+        "comsol_online_output_step_s": 0.004
+      },
+      "still_unverified": ["本10mT请求试验的Bmax独立参数值（文字明确的20mT是后续2mm跟踪协议，不得直接借来）", "bar(E0)=W(0)的独立赋值；E(0)=0已明确但逻辑上bar(E0)可更大", "Python full-FE该试验的基础rtol/atol（只给tenfold refinement，不能倒推）", "是否任何离散采样/保持实现用于Python控制器；正文定理为连续理想即时输入"],
+      "qualification": "只要Bmax至少10mT，幅值剪裁本身不会改变此10mT请求；可在后续复现实例明确自行选定，但不能写成已核原始配置。COMSOL在线rtol1e-5不同于独立8s开环held-out的1e-7或refined1e-8。",
+      "suggested_checklist_text": "S7.3已给kappa=5s^-1、Emax=.95Ec=22.66365nJ、10mT/9.444949rad/s/.25s ramp、零物理初态、8s/2001输出。Bmax/W0独立赋值和Python原始容差仍需配置；后续20mT为另一跟踪例。"
+    },
+    {
+      "id": "N189",
+      "xlsx_row": 195,
+      "status": "基座运动、质量与能量公式已补；未声明制动过程",
+      "experiment": "S7.6移动基座S形端点路径；材料总长保持80mm",
+      "sources": [{"file":"sections/s_path.tex","section":"S7.6","lines":"3-66,109-137"}],
+      "verified_values": {
+        "base_initial_speed_m_s": 0,
+        "base_speed_first_second": "vb*(10*xi^3-15*xi^4+6*xi^5), xi=t/(1s)",
+        "vb_m_s": 0.004,
+        "base_speed_after_first_second": "constant vb; manuscript does not prescribe braking",
+        "maximum_base_acceleration_m_s2": 0.0075,
+        "bending_start_s": 2,
+        "bending_end_s": 14,
+        "bending_stroke_duration_s": 12,
+        "sigma": "(t-2s)/(12s)",
+        "lateral_reference": "8*A/(3*sqrt(3))*(0.5*sin(2*pi*sigma)-0.25*sin(4*pi*sigma)) within stroke, otherwise0",
+        "lateral_A_m": 0.0015,
+        "axial_advance_during_stroke_m": 0.048,
+        "total_simulation_duration_s": 16,
+        "rod_mass_formula": "mb=rho*Ac*L",
+        "base_energy_formula": "Kb=0.5*mb*bdot^2",
+        "base_power_formula": "Pb=mb*bddot*bdot",
+        "initial_base_kinetic_energy_J": 0,
+        "base_peak_kinetic_energy_nJ_reported": 0.796205,
+        "base_peak_inertial_force_uN_reported": 0.746442,
+        "base_peak_power_nW_reported": 1.90256,
+        "axial_loading_scope": "no axial fluid load, guide friction, imposed axial prestress; acceleration ends while beam straight before bending",
+        "comsol_replay_solver": "generalized-alpha with piecewise-cubic saved-field interpolation",
+        "comsol_replay_rtol": 1e-8,
+        "comsol_replay_max_step_s": 0.002,
+        "comsol_replay_output_step_s": 0.004
+      },
+      "derived_old_baseline_rod_mass_kg": 0.00009952565526572464,
+      "do_not_mix": "原式mb只计声明梁质量。该运动没有文中制动阶段，不能凭48mm/12s补写减速曲线或额外刹车功。COMSOL是既有控制场的机械重放，控制器不在该重放中在线重算。",
+      "still_unverified": ["此S形Python运行基础rtol/atol和maxstep具体值（文字只给细化比较）", "若提出实际器件版本，磁体/夹具/载台质量和真实轴向摩擦等需另立参数与功预算"],
+      "suggested_checklist_text": "S7.6给0-1s五次多项式速度ramp至4mm/s，此后恒速；弯曲2-14s，48mm轴向行程，无制动。mb=rho*Ac*L，初始动能0，峰值动能.796205nJ；基座功由mb*bddot*bdot独立记账。"
+    }
+  ]
+}

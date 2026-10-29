@@ -1,0 +1,90 @@
+% Literature-informed numerical benchmark. This does not update old numerical certificates.
+\subsection{Parameter provenance and the revised numerical benchmark}
+We distinguish material reference values, manufacturer specifications,
+declared design choices, and quantities derived from the assembled model.
+The benchmark is a planar, clamped--free, homogeneous solid circular
+Euler--Bernoulli beam with design length $L=80$ mm and radius $r=0.6$ mm.
+It is an idealized numerical model rather than an identified clinical device.
+Gravity, external flow, contact, fluid added mass, and shear deformation
+are excluded from this benchmark.
+
+The material reference point is Sylgard 184 with approximately $10$ wt\%
+curing agent, cured at $80\,^{\circ}\mathrm C$ for $2$ h.
+Cho et al. report approximately $E=2.1$ MPa and
+$\rho=1028\,\mathrm{kg\,m^{-3}}$ near this formulation
+\cite{cho2021pdms}. These are approximate literature measurements, not
+measurements of the present cylindrical specimen. The curing-agent fraction
+corresponds to approximately $9{:}1$ base to curing agent by mass; it is not
+identified with a $10{:}1$ formulation.
+
+The magnetic component is a declared uncoated cubic-core design of edge
+$a=0.250$ mm. N50 material specifications give
+$B_r\in[1.40,1.45]$ T and density at least
+$7500\,\mathrm{kg\,m^{-3}}$ \cite{smN50}.
+We select $B_r=1.425$ T and $\rho_m=7500\,\mathrm{kg\,m^{-3}}$
+as nominal modeling points. Using the engineering approximation
+$\mu\simeq B_ra^3/\mu_0$ \cite{kjMoment}, with
+$\mu_0\simeq4\pi10^{-7}\,\mathrm{H\,m^{-1}}$, gives
+\[
+ \mu=1.77184214\,10^{-5}\,\mathrm{A\,m^2},\qquad
+ m_t=1.171875\,10^{-7}\,\mathrm{kg},\qquad
+ J_t=1.220703125\,10^{-15}\,\mathrm{kg\,m^2}.
+\]
+These estimates describe the bare designed core. Product exterior dimensions,
+coatings, adhesive mass, magnetization history, and specimen tolerances are
+not identified with these nominal inputs. The core center of mass is
+idealized at the beam endpoint. Its translational mass and transverse rotary
+inertia are included in $M_{\rm total}$; an offset installation requires the
+corresponding inertial coupling terms.
+
+We retain the design bias $B_0=30$ mT. Published magnetic navigation
+experiments report fields of up to $40$ mT in arbitrary directions for their
+OctoMag system \cite{lussi2021cvs}. The combination of this bias with a
+$20$ mT transverse component has magnitude $36.056$ mT. This is an
+order-of-magnitude feasibility comparison, not a calibration of the present
+field--gradient ports or their simultaneous reachable set. The minimal
+closed-loop examples use algebraic ideal ports and report commanded fields;
+they do not implement actuator saturation.
+
+The linearized biased stiffness is
+$K_b=K_{\rm beam}+\mu B_0s_Ls_L^{\mathsf T}$.
+Consistent cubic-Hermite elements and mass-normalized eigenvectors give
+\[
+ K_b\Phi=M_{\rm total}\Phi\Omega^2,
+ \qquad \Phi^{\mathsf T}M_{\rm total}\Phi=I.
+\]
+With $32$ elements, the first two frequencies are approximately
+$(7.84000916,47.39957662)$ rad/s. The balanced two-mode coordinates use
+\[
+ \nu=(1,6.04585730),\quad
+ d=(0.30722439,0.45042632)^{\mathsf T},\quad
+ \ell=(0.0189673443,0.00775347614)^{\mathsf T}\,\mathrm m,
+\]
+and $E_0=\mu B_0=5.31552642\,10^{-7}$ J.
+Mesh refinements and an independent continuous-beam endpoint characteristic
+equation are supplied with the reproducibility files. This frequency check
+does not establish nonlinear two-mode truncation accuracy.
+
+No measured damping coefficient is asserted for this specimen and setup.
+We declare the effective model $C=\alpha M_{\rm total}$ and the scenario
+$\zeta_1=0.025$, referenced to the biased first frequency, so that
+\[
+ \alpha=2\zeta_1\omega_1=0.3920004581\,\mathrm{s^{-1}},
+ \qquad \gamma=\alpha/\omega_1=0.05.
+\]
+The choices $\zeta_1\in\{0,0.01,0.025,0.05,0.1\}$ are sensitivity
+scenarios rather than measured confidence limits. Material loss factors from
+other Sylgard preparation and frequency conditions \cite{fischer2017adhesion}
+are not substituted for modal damping ratios. Similarly, the synthetic
+residual coefficient $\beta=0.2$ is an imposed algorithmic stress test.
+
+For the nominal nonnegative physical energy, the clamped-beam inequality
+$\|w\|_\infty^2\leq2L^3E/(3EI)$ gives
+$E_c=3EIc^2/(2L^3)=10.0197171$ nJ at $c=4$ mm.
+The conditional $0.95E_c$ budget is $9.5187312$ nJ.
+This budget has not been imposed on the minimal control examples, whose
+initial nominal energy already exceeds it; those runs therefore do not
+establish the associated energy-based clearance guarantee.
+Previously reported learned coefficients, COMSOL errors, interval KAM
+certificates, and operational error budgets are not transferred to this
+revised physical baseline without regeneration and verification.

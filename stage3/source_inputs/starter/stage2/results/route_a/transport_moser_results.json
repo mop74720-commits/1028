@@ -1,0 +1,206 @@
+{
+  "cases": [
+    {
+      "n_coordinates": 8,
+      "phase_dimension": 16,
+      "field": "Same generic nonproportional nonlinear magnetic-potential model as run_extended.py",
+      "R1_exterior_derivative_identity_spectral2": 8.26156591462791e-17,
+      "K1_closure_max_component": 2.869859254937225e-17,
+      "rows": [
+        {
+          "time_from_fixed_expansion_origin": 0.2,
+          "representation_residual_2": 0.15484927816294933,
+          "representation_residual_formula_discrepancy_2": 5.998090691144192e-17,
+          "field_fa_minus_f_2": 0.14981107264231902,
+          "inverse_Ka_spectral2": 0.9842533151450619,
+          "bound_inverse_K_times_residual": 0.15241091537970272,
+          "Moser_numerical_chart_congruence_spectral2": 2.95778795658054e-16,
+          "Moser_inverse_composition_error_2": 1.578908104800492e-16,
+          "Moser_tolerance_refinement_difference_2": 1.7872914144976384e-16,
+          "chart_transformed_fa_field_norm_2": 0.25084740926300664,
+          "single_point_construction_and_Jacobian_seconds": 0.5359123130001535,
+          "one_auxiliary_map_work": {
+            "auxiliary_nfev": 74,
+            "minimum_sampled_Klambda_singular_value": 1.0
+          },
+          "inverse_auxiliary_map_work": {
+            "auxiliary_nfev": 74,
+            "minimum_sampled_Klambda_singular_value": 1.0
+          },
+          "Jacobian_protocol": "16 additional complex-step auxiliary solves plus one time-sensitivity auxiliary solve; floating-point diagnostic"
+        },
+        {
+          "time_from_fixed_expansion_origin": 0.1,
+          "representation_residual_2": 0.07742463908147466,
+          "representation_residual_formula_discrepancy_2": 4.704835489254141e-17,
+          "field_fa_minus_f_2": 0.07613589898938043,
+          "inverse_Ka_spectral2": 0.9920641787179842,
+          "bound_inverse_K_times_residual": 0.0768102109828995,
+          "Moser_numerical_chart_congruence_spectral2": 2.4738263795363284e-16,
+          "Moser_inverse_composition_error_2": 9.842549508915208e-17,
+          "Moser_tolerance_refinement_difference_2": 6.270251530468499e-17,
+          "chart_transformed_fa_field_norm_2": 0.18222121334704727,
+          "single_point_construction_and_Jacobian_seconds": 0.5262713500001155,
+          "one_auxiliary_map_work": {
+            "auxiliary_nfev": 74,
+            "minimum_sampled_Klambda_singular_value": 1.0
+          },
+          "inverse_auxiliary_map_work": {
+            "auxiliary_nfev": 74,
+            "minimum_sampled_Klambda_singular_value": 1.0
+          },
+          "Jacobian_protocol": "16 additional complex-step auxiliary solves plus one time-sensitivity auxiliary solve; floating-point diagnostic"
+        },
+        {
+          "time_from_fixed_expansion_origin": 0.05,
+          "representation_residual_2": 0.038712319540737346,
+          "representation_residual_formula_discrepancy_2": 5.430340018027599e-17,
+          "field_fa_minus_f_2": 0.038386336001646114,
+          "inverse_Ka_spectral2": 0.9960162829951373,
+          "bound_inverse_K_times_residual": 0.03855810061508523,
+          "Moser_numerical_chart_congruence_spectral2": 2.4045314006860893e-16,
+          "Moser_inverse_composition_error_2": 4.124302784003477e-17,
+          "Moser_tolerance_refinement_difference_2": 6.419062889589373e-17,
+          "chart_transformed_fa_field_norm_2": 0.15200464193817703,
+          "single_point_construction_and_Jacobian_seconds": 0.49316328800023257,
+          "one_auxiliary_map_work": {
+            "auxiliary_nfev": 74,
+            "minimum_sampled_Klambda_singular_value": 1.0
+          },
+          "inverse_auxiliary_map_work": {
+            "auxiliary_nfev": 74,
+            "minimum_sampled_Klambda_singular_value": 1.0
+          },
+          "Jacobian_protocol": "16 additional complex-step auxiliary solves plus one time-sensitivity auxiliary solve; floating-point diagnostic"
+        },
+        {
+          "time_from_fixed_expansion_origin": 0.025,
+          "representation_residual_2": 0.019356159770368652,
+          "representation_residual_formula_discrepancy_2": 5.0742991411916835e-17,
+          "field_fa_minus_f_2": 0.01927417922738132,
+          "inverse_Ka_spectral2": 0.9980041662494687,
+          "bound_inverse_K_times_residual": 0.019317528093418274,
+          "Moser_numerical_chart_congruence_spectral2": 4.445818979660271e-16,
+          "Moser_inverse_composition_error_2": 4.417588370888724e-17,
+          "Moser_tolerance_refinement_difference_2": 5.56803001126317e-17,
+          "chart_transformed_fa_field_norm_2": 0.13804236014945767,
+          "single_point_construction_and_Jacobian_seconds": 0.5959706130001905,
+          "one_auxiliary_map_work": {
+            "auxiliary_nfev": 74,
+            "minimum_sampled_Klambda_singular_value": 1.0
+          },
+          "inverse_auxiliary_map_work": {
+            "auxiliary_nfev": 74,
+            "minimum_sampled_Klambda_singular_value": 1.0
+          },
+          "Jacobian_protocol": "16 additional complex-step auxiliary solves plus one time-sensitivity auxiliary solve; floating-point diagnostic"
+        }
+      ],
+      "exact_statement": "For exact arithmetic and exact auxiliary solves, Ka=dRa is closed and the Moser pullback is symplectic for Ka. Ra=R0+tR1 represents fa, not f, except at t=0.",
+      "limitation": "First transport truncation leaves O(t) representation residual on this fixed-origin domain. This run computes charts at points, not a completed generic Birkhoff time integrator or a uniform domain-error bound. No full true-flow oracle is used."
+    },
+    {
+      "n_coordinates": 16,
+      "phase_dimension": 32,
+      "field": "Same generic nonproportional nonlinear magnetic-potential model as run_extended.py",
+      "R1_exterior_derivative_identity_spectral2": 1.227317783742339e-16,
+      "K1_closure_max_component": 4.3047888824058375e-17,
+      "rows": [
+        {
+          "time_from_fixed_expansion_origin": 0.2,
+          "representation_residual_2": 0.22284446196503416,
+          "representation_residual_formula_discrepancy_2": 8.65631387160445e-17,
+          "field_fa_minus_f_2": 0.21577016628817075,
+          "inverse_Ka_spectral2": 0.9842595979704816,
+          "bound_inverse_K_times_residual": 0.2193368005436528,
+          "Moser_numerical_chart_congruence_spectral2": 1.116951333850288e-15,
+          "Moser_inverse_composition_error_2": 1.6750639354153482e-16,
+          "Moser_tolerance_refinement_difference_2": 2.41040747718262e-16,
+          "chart_transformed_fa_field_norm_2": 0.3479479400632507,
+          "single_point_construction_and_Jacobian_seconds": 1.1298104459997376,
+          "one_auxiliary_map_work": {
+            "auxiliary_nfev": 74,
+            "minimum_sampled_Klambda_singular_value": 1.0
+          },
+          "inverse_auxiliary_map_work": {
+            "auxiliary_nfev": 74,
+            "minimum_sampled_Klambda_singular_value": 1.0
+          },
+          "Jacobian_protocol": "32 additional complex-step auxiliary solves plus one time-sensitivity auxiliary solve; floating-point diagnostic"
+        },
+        {
+          "time_from_fixed_expansion_origin": 0.1,
+          "representation_residual_2": 0.11142223098251708,
+          "representation_residual_formula_discrepancy_2": 1.2953390603336343e-16,
+          "field_fa_minus_f_2": 0.10961902736508064,
+          "inverse_Ka_spectral2": 0.9920673851274099,
+          "bound_inverse_K_times_residual": 0.11053836133588799,
+          "Moser_numerical_chart_congruence_spectral2": 6.680372723420284e-16,
+          "Moser_inverse_composition_error_2": 1.1157994375121876e-16,
+          "Moser_tolerance_refinement_difference_2": 1.0456319159290341e-16,
+          "chart_transformed_fa_field_norm_2": 0.24496946972266845,
+          "single_point_construction_and_Jacobian_seconds": 1.302746328000012,
+          "one_auxiliary_map_work": {
+            "auxiliary_nfev": 74,
+            "minimum_sampled_Klambda_singular_value": 1.0
+          },
+          "inverse_auxiliary_map_work": {
+            "auxiliary_nfev": 74,
+            "minimum_sampled_Klambda_singular_value": 1.0
+          },
+          "Jacobian_protocol": "32 additional complex-step auxiliary solves plus one time-sensitivity auxiliary solve; floating-point diagnostic"
+        },
+        {
+          "time_from_fixed_expansion_origin": 0.05,
+          "representation_residual_2": 0.05571111549125853,
+          "representation_residual_formula_discrepancy_2": 9.361839738967116e-17,
+          "field_fa_minus_f_2": 0.05525584752507654,
+          "inverse_Ka_spectral2": 0.9960179028562736,
+          "bound_inverse_K_times_residual": 0.05548926841738698,
+          "Moser_numerical_chart_congruence_spectral2": 8.885212426492817e-16,
+          "Moser_inverse_composition_error_2": 6.887201757200158e-17,
+          "Moser_tolerance_refinement_difference_2": 7.348555645927656e-17,
+          "chart_transformed_fa_field_norm_2": 0.20364405969516572,
+          "single_point_construction_and_Jacobian_seconds": 1.1337064410004132,
+          "one_auxiliary_map_work": {
+            "auxiliary_nfev": 74,
+            "minimum_sampled_Klambda_singular_value": 1.0
+          },
+          "inverse_auxiliary_map_work": {
+            "auxiliary_nfev": 74,
+            "minimum_sampled_Klambda_singular_value": 1.0
+          },
+          "Jacobian_protocol": "32 additional complex-step auxiliary solves plus one time-sensitivity auxiliary solve; floating-point diagnostic"
+        },
+        {
+          "time_from_fixed_expansion_origin": 0.025,
+          "representation_residual_2": 0.02785555774562929,
+          "representation_residual_formula_discrepancy_2": 1.259436990291127e-16,
+          "field_fa_minus_f_2": 0.02774117339433926,
+          "inverse_Ka_spectral2": 0.9980049803964803,
+          "bound_inverse_K_times_residual": 0.027799985361859784,
+          "Moser_numerical_chart_congruence_spectral2": 8.882084009844862e-16,
+          "Moser_inverse_composition_error_2": 5.266678753966617e-17,
+          "Moser_tolerance_refinement_difference_2": 6.49552027440406e-17,
+          "chart_transformed_fa_field_norm_2": 0.18553946329545656,
+          "single_point_construction_and_Jacobian_seconds": 1.213393138000356,
+          "one_auxiliary_map_work": {
+            "auxiliary_nfev": 74,
+            "minimum_sampled_Klambda_singular_value": 1.0
+          },
+          "inverse_auxiliary_map_work": {
+            "auxiliary_nfev": 74,
+            "minimum_sampled_Klambda_singular_value": 1.0
+          },
+          "Jacobian_protocol": "32 additional complex-step auxiliary solves plus one time-sensitivity auxiliary solve; floating-point diagnostic"
+        }
+      ],
+      "exact_statement": "For exact arithmetic and exact auxiliary solves, Ka=dRa is closed and the Moser pullback is symplectic for Ka. Ra=R0+tR1 represents fa, not f, except at t=0.",
+      "limitation": "First transport truncation leaves O(t) representation residual on this fixed-origin domain. This run computes charts at points, not a completed generic Birkhoff time integrator or a uniform domain-error bound. No full true-flow oracle is used."
+    }
+  ],
+  "elapsed_seconds": 6.980524825999964,
+  "source_sha256": "61b3e6495f230759a941bab733e228fcfeb8bb30657f156f4d17a7169a1f9aa7",
+  "status": "all stated residual, closure and numerical-chart checks passed",
+  "purpose": "Make the general transport/Moser construction concrete and expose approximation error and actual derivative cost; do not relabel existence as an exact cheap physical solver."
+}

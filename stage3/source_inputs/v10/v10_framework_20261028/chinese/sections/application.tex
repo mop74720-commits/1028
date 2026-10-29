@@ -1,0 +1,248 @@
+应用目标是通过学习得到的残差补偿和阻尼补偿，恢复耦合的标称磁驱动运动。
+物理输入映射必须实现式~\eqref{struct:route-a-control} 中的反馈，
+保留其估计误差，并采用与式~\eqref{ctrl:midpoint} 相同的中点约定。
+首先将这条链在两模态对象上闭合，再明确同一拟合控制器作用于更多梁模态时出现的附加项。
+全梁净空论证则是关于物理能量的另一项条件。
+对学习参考轨迹的跟踪保留为补充材料第~\ref{sec:supp-tracking} 节中的扩展。
+
+\subsection{学习残差补偿的磁驱动实现}
+\label{app:ports}
+采用 $U=U_A=\widehat\gamma Y+\nabla\widehat R(X)$（见式~\eqref{struct:route-a-control}），求解
+\begin{equation}
+ \binom{F}{\tau_B}=A_{\rm mag}^{-1}\Lambda U.
+ \label{app:port-inverse}
+\end{equation}
+连续输入 $U\in\mathbb R^2$ 无量纲；$F$ 和 $\tau_B$ 的单位分别为 N 和 N\,m。
+式~\eqref{ctrl:midpoint} 中的四维离散增量还包含时间步长。
+这些换算明确区分了物理力、连续广义输入和相空间增量。
+
+这里 $\tau_B$ 是主动磁力矩。在两模态物理变量中，
+第~\ref{sec:analysis} 节使用的合成受控对象为
+\begin{align}
+ \ddot a+\alpha\dot a+\Omega_2^2a
+ &=\boldsymbol t E_0(\vartheta-\sin\vartheta)
+       -\Lambda\nabla R_*(X)\nonumber\\
+ &\quad+A_{\rm mag}\binom{F}{\tau_B},
+ \qquad a=D_sX.
+ \label{app:residual-plant}
+\end{align}
+由于 $\ddot a=\Lambda Y'$ 且
+$\Lambda\nabla V_0=\Omega_2^2a+\boldsymbol tE_0(\sin\vartheta-\vartheta)$，
+代入后恢复式~\eqref{struct:plant}。模态总力矩是另一种等价的端口约定：
+\begin{align}
+ T&=E_0(\vartheta-\sin\vartheta)+\tau_B,\nonumber\\
+ A_{\rm mag}\binom{F}{T}
+ &=\Lambda U+\boldsymbol tE_0(\vartheta-\sin\vartheta).
+ \label{app:total-port}
+\end{align}
+偏置场余项是已知的，而真实残差力 $-\Lambda\nabla R_*$ 仍保留在受控对象中。
+控制器不会通过这一约定变换读取 $R_*$。
+
+将学习控制律代入物理受控对象，得到
+\begin{align}
+ \ddot a&=-\Lambda\nabla V_0
+       +(\widehat\alpha-\alpha)\dot a\nonumber\\
+       &\quad-\Lambda\nabla\delta R,\nonumber\\
+ \widehat\alpha&=\omega_0\widehat\gamma,\qquad
+ \delta R=R_*-\widehat R.
+ \label{app:physical-closed-loop}
+\end{align}
+因此，物理闭环与式~\eqref{struct:route-a-closed} 保留了相同的势能误差和阻尼误差。
+补偿目标保留完整耦合的标称磁势。
+真值参数对照仅利用已知合成参数，区分数值误差与辨识误差。
+
+令平面内的磁偶极矩为 $m=\mu(\cos\vartheta,\sin\vartheta,0)^{\mathsf T}$。
+可提供所需力和磁力矩的局部磁场为
+\begin{align}
+ B(r)&=(B_0,B_y,0)^{\mathsf T}+G(r-r_{\rm tip}),\nonumber\\
+ B_y&=\frac{\tau_B}{\mu\cos\vartheta},\nonumber\\
+ G&=\frac{F}{\mu}
+ \begin{pmatrix}
+ -\sin\vartheta&\cos\vartheta&0\\
+ \cos\vartheta&\sin\vartheta&0\\
+ 0&0&0
+ \end{pmatrix}.
+ \label{app:field-gradient}
+\end{align}
+直接相乘可得 $Gm=(0,F,0)^{\mathsf T}$ 和 $\|G\|_2=|F|/\mu$。
+对称性与零迹分别满足局部无源区域的旋度和散度条件 \citep{abbott}。
+主动磁力矩为 $\mu B_y\cos\vartheta$；轴向偏置磁力矩
+$-\mu B_0\sin\vartheta$ 仍保留在储能模型中。
+
+各补偿消融组均通过同一接口。
+对于学习组，由磁场和梯度重构实际施加的横向力和主动磁力矩，并形成
+\begin{align}
+ U_{\rm rec}&=\Lambda^{-1}A_{\rm mag}
+                    \binom{F_{\rm app}}{\tau_{B,\rm app}},\nonumber\\
+ e_{\rm port}&=U_{\rm rec}-U_A(X,Y).
+ \label{app:input-reconstruction}
+\end{align}
+理想精确换算给出 $e_{\rm port}=0$。
+标定误差、角度估计误差、电流限制和饱和均可能使该量非零；
+输入重构检验必须在实际施加到受控对象的输入中保留这些影响。
+本文报告的测试验证局部代数换算，未实现饱和。
+
+该接口要求 $A_{\rm mag}$ 的秩为二，角度定义域中的 $|\cos\vartheta|$
+具有远离零的正下界，且联合磁场--梯度指令可行。
+标称矩阵的列归一化给出条件数 $3.8186$，这是一项几何诊断。
+物理驱动能力核算则需要按可用力和力矩缩放各列，并使用已辨识的线圈电流分配关系。
+单一均匀磁场只提供一个模态输入方向。
+
+偏置场和横向场按矢量模长合成：$30$ mT 偏置场叠加 $6$ mT 横向分量
+需要 $30.594$ mT 的总场，而叠加 $20$ mT 横向分量则需要 $36.056$ mT。
+已发表的 OctoMag 装置任意方向 $40$ mT 磁场能力 \citep{lussi2021cvs}
+为这一场强尺度提供依据，但不能据此确定本文设计中可同时满足的梯度、工作空间或带宽限制。
+学习残差补偿测试所需横向场峰值约为 $0.54449$ mT。
+第~\ref{sec:analysis} 节报告了其输入重构与采样运行域检查。
+
+\subsection{同一控制器作用于增加保留模态的受控对象}
+\label{app:full-model}
+固定 $32$ 单元梁的质量归一化特征基。
+保留 $N\in\{2,4,8,64\}$ 个模态时，改变受控对象，而拟合后的两模态反馈保持不变。
+记 $a^{(N)}=(a_1,\ldots,a_N)^{\mathsf T}$，
+以 $\boldsymbol b_N,\boldsymbol t_N$ 汇集对应的端部系数。定义
+\begin{align}
+ \vartheta_N&=\boldsymbol t_N^{\mathsf T}a^{(N)},\nonumber\\
+ A_{\rm mag}^{(N)}&=[\boldsymbol b_N\ \boldsymbol t_N]
+                         \in\mathbb R^{N\times2},\nonumber\\
+ X&=D_s^{-1}a_{1:2},\nonumber\\
+ Y&=\omega_0^{-1}\mathsf N^{-1}D_s^{-1}\dot a_{1:2}.
+ \label{app:enriched-coordinates}
+\end{align}
+这里 $D_s,\mathsf N$ 和 $A_{\rm mag}$ 仍表示固定的低模态映射。
+$A_{\rm mag}^{(N)}$ 的前两行为 $A_{\rm mag}$；
+两个物理端口无法独立指定全部 $N$ 个模态力。
+
+此时必须将完整保守残差明确为物理势能 $\mathcal R_N(a^{(N)})$，以焦耳计。
+模态扩展后的受控对象为
+\begin{align}
+ &\ddot a^{(N)}+\alpha\dot a^{(N)}+\Omega_N^2a^{(N)}\nonumber\\
+ &\quad=\boldsymbol t_NE_0(\vartheta_N-\sin\vartheta_N)
+       -\nabla_a\mathcal R_N\nonumber\\
+ &\qquad+A_{\rm mag}^{(N)}\binom{F_{\rm app}}{\tau_{B,\rm app}}.
+ \label{app:enriched-plant}
+\end{align}
+对于模型类匹配的合成层级，将同一个已声明的完整势能限制到各模态子空间，
+使其满足 $\mathcal R_N(D_sX,0)=E_0R_*(X)$。
+该条件并不意味着已经从两模态数据中辨识出完整势能。
+补充材料~\ref{sm:enriched} 给出显式延拓与低模态投影。
+
+令 $\vartheta_2=d^{\mathsf T}X$，定义两个附加项
+\begin{align}
+ e_{\rm mag}^{(N)}
+ &=d[\vartheta_N-\sin\vartheta_N\nonumber\\
+ &\qquad-\vartheta_2+\sin\vartheta_2],\nonumber\\
+ e_R^{(N)}
+ &=\Lambda^{-1}\nabla_{a_{1:2}}\mathcal R_N(a^{(N)})\nonumber\\
+ &\quad-\nabla R_*(X).
+ \label{app:enriched-defects}
+\end{align}
+在学习控制律保持不变时，精确低模态方程变为
+\begin{align}
+ X'&=\mathsf N Y,\nonumber\\
+ Y'&=-\nabla(V_0+\delta R)(X)-\delta\gamma Y\nonumber\\
+   &\quad+e_{\rm mag}^{(N)}-e_R^{(N)}+e_{\rm port}.
+ \label{app:enriched-closed-loop}
+\end{align}
+磁场换算使用实际完整端角 $\vartheta=\vartheta_N$；
+将其替换为两模态估计也可能产生 $e_{\rm port}$。
+即使端口反演精确，高模态造成的端角差和残差差异也不会消失。
+因此，仅有很小的两模态训练损失，既不能给出截断误差界，
+也不能提供完整受控对象的 KAM 分析所需的哈密顿结构。
+
+\subsection{分阶段完整模型验证方案}
+\label{app:staged-validation}
+后续验证阶段保持拟合系数、低模态初始状态、参考 $h_0$ 轨迹和端口约定不变。
+在每一阶段，无控制、仅阻尼补偿、学习补偿和真值参数对照组均采用同一受控对象、
+状态信息和执行器约束。
+真值参数对照保留其两模态补偿律，与下述更强的全状态反馈有别。
+即使高模态初始坐标为零，也仍可能产生响应，因为同一对端口作用于每个保留模态。
+表~\ref{app:validation-stages} 区分了已完成的数值核查与拟开展的模态扩展。
+$16/32/64$ 个单元的网格收敛检验针对线性空间离散；
+改变保留模态数则检验受迫响应下的降阶模型与控制器。
+
+\begin{table*}[t]
+\centering\small
+\caption{同一拟合残差控制器的分阶段验证。
+高模态和独立有限元阶段属于明确的验证方案，并非本次新报告的仿真结果。}
+\label{app:validation-stages}
+\begin{tabular}{p{.15\textwidth}p{.45\textwidth}p{.30\textwidth}}
+\toprule
+阶段 & 固定对象与受控变化 & 状态及所需输出\\
+\midrule
+两模态 & 固定动能的残差类、一次联合拟合、共同的中点格式和磁接口 & 已完成：相对于独立参考解的误差、步长收敛、输入重构和采样指令需求。\\
+$4$ 和 $8$ 个模态 & 同一 $32$ 单元基，固定学习控制律；将已声明的完整残差作一致限制；先取零高模态初始条件，再取指定的非零条件 & 计划开展：低模态状态误差、高模态响应及式~\eqref{app:enriched-closed-loop} 中的三类差项。\\
+全部 $64$ 个模态 & 同一有限元质量、偏置刚度、端部磁芯惯量和物理端口；换算采用完整端角 & 计划开展：全中心线位移和斜率、输入峰值、初始化和启动瞬态。\\
+独立有限元模型 & 在 COMSOL 或独立指定的求解器中重建相同几何、材料假设、端质量/转动惯量及边界载荷 & 计划开展：先验证线性模态，再在相同输入定义下比较受迫响应和降阶误差。\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+每次模态扩展运行应记录完整重构中心线、最大采样斜率、最小 $|\cos\vartheta_N|$、
+状态 RMS 误差、端部误差、主频与组合频率、力/磁场/梯度峰值和饱和比例。
+比较时间步长，并检查每个 Hermite 单元内的空间极值；
+仅绘制端部轨迹不能界定梁其余部分的运动。
+传感噪声、阻尼失配和限幅在另行声明的测试中引入，各控制器采用相同约束。
+限幅后的指令必须实际施加到受控对象，并计入 $e_{\rm port}$，不能仍使用未限幅的广义力。
+
+补充材料~\ref{sm:exact-lift} 保留了一项条件性不变环面构造，
+其中更强的精确反馈使用已知阻尼和目标加速度。
+当其全状态假设能够验证时，该定理具有作用，
+但不能替代式~\eqref{app:enriched-closed-loop} 中保持不变的学习控制器。
+本文不声称已经获得新的 $4/8/64$ 模态受迫轨迹、COMSOL 对比或有限幅度环面证书。
+
+\subsection{由物理能量推得全梁净空}
+\label{app:clearance}
+令 $E(t)=H_0(q,M_f\dot q)$ 为式~\eqref{mech:fe-plant} 的物理能量。
+对于任意满足固支条件的位移，
+\begin{equation}
+ w(s)=\int_0^s(s-\xi)w_{ss}(\xi)\dd\xi.
+ \label{app:clamped-identity}
+\end{equation}
+由 Cauchy--Schwarz 不等式及动能、偏置场能量的非负性，得到
+\begin{equation}
+ \|w\|_\infty^2\le\frac{2L^3E_{\rm bend}}{3EI}
+                    \le\frac{2L^3E}{3EI},\qquad
+ E_c=\frac{3EIc^2}{2L^3}.
+ \label{app:energy-bound}
+\end{equation}
+因此，$E<E_c$ 可保证整个中心线及其杆半径管状包络在所声明的直通道内满足净空要求。
+该结果适用于任意容许位移形状，包括所有保留模态，并不限于静态端载荷形状。
+对于本基准，$E_c=10.0197171$ nJ，所选能量上限为
+$E_{\max}=0.95E_c=9.5187312$ nJ。
+
+输入功约束器能够强制满足这一充分条件，而不必假设所要求的轨迹始终位于环面上。
+令 $u=(F,B_y)^{\mathsf T}$，定义物理功率系数
+\begin{equation}
+ a_P=\binom{\dot w(L)}{\mu\cos\vartheta\,\dot\vartheta},\qquad
+ W(0)\ge E(0),\quad \dot W=a_P^{\mathsf T}u.
+ \label{app:work-observer}
+\end{equation}
+由式~\eqref{mech:physical-power}，有 $E(t)\le W(t)$。
+给定期望指令 $u_{\rm req}$，在经尺度调整的正定度量 $R_u$ 下，选择最近的容许输入：
+\begin{align}
+ u=\mathop{\arg\min}_{\widetilde u\in\mathcal U(q)}
+       &\ \tfrac12(\widetilde u-u_{\rm req})^{\mathsf T}
+                 R_u(\widetilde u-u_{\rm req}),\nonumber\\
+ \text{subject to }&\quad
+ a_P^{\mathsf T}\widetilde u\le\kappa(E_{\max}-W),
+ \qquad \kappa>0.
+ \label{app:work-governor}
+\end{align}
+这里 $\mathcal U(q)$ 是包含零主动输入的非空闭凸联合端口可行集；
+$R_u$ 考虑了力和磁场的不同单位。
+若 $W(0)<E_{\max}$，则零输入可行，且
+$E_{\max}-W(t)\ge[E_{\max}-W(0)]e^{-\kappa t}>0$。
+结合式~\eqref{app:energy-bound}，即可证明满足该功率恒等式的解具有所需净空。
+补充材料~\ref{sm:work} 将此论证扩展到给定的传感和执行误差界。
+对于包含残差 $\mathcal R_N$ 的模态扩展受控对象，标称能量的导数还含有
+$-\dot a^{(N)\mathsf T}\nabla_a\mathcal R_N$。
+必须界定这一功率并将其纳入收支，或另行证明增广能量相对于弯曲能的下界。
+标称净空定理不会自动包含该残差。
+启用约束器可能改变所要求的哈密顿运动，因此净空证明与环面保持是不同的结论。
+
+本文报告的残差补偿测试未使用该约束器。
+其标称参考初始状态的能量为 $12.6567$ nJ，已经高于 $9.5187$ nJ 的上限。
+因此，第~\ref{sec:analysis} 节中观测到的位移和斜率最大值属于数值运行域诊断，
+并非上述能量上限保证的推论。
+该约束器为未来从容许能量集合内部初始化的全状态实验提供了精确条件。

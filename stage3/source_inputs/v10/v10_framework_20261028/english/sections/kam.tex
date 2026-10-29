@@ -1,0 +1,184 @@
+\subsection{From nonzero integral loss to a controlled perturbation}
+\label{kam:learning-section}
+
+The long-time question concerns the exact implicit map of the compensated catheter. By Proposition~\ref{ctrl:structure-proposition}, this map is exact symplectic when residual damping is zero and the generalized input is realized conservatively. Its Hamiltonian is $h_c=h_0+\delta R$, so the connection to discrete KAM requires a bound on $\delta R$ over a neighborhood, rather than agreement along finitely many trajectories. The nonzero-loss viewpoint of \citet{chen2022} motivates this connection. For the finite readout used here, it can be made deterministic and explicit, without assuming that a training residual vanishes or treating a real-domain prediction error as an analytic norm.
+
+Let $D,y$ be the stacked quantities in \eqref{struct:integral-design}, $\theta_*=(\beta_*^{\mathsf T},\gamma)^{\mathsf T}$ and $e=y-D\theta_*$. Define
+\begin{equation}\label{kam:gram}
+ G_I=\frac{D^{\mathsf T}D}{nL_I},\qquad
+ r_I=\frac{\norm{D\widehat\theta-y}_2}{\sqrt{nL_I}}.
+\end{equation}
+The defect $e$ includes observation reconstruction, input calibration, quadrature and model-class error. Suppose independent estimates give
+$\norm e_2/\sqrt{nL_I}\le\epsilon_I$ and
+$\lambda_{\min}(G_I)\ge\underline\lambda>0$ for the matrices actually used. Then
+\begin{equation}\label{kam:integral-bound}
+ \norm{\widehat\theta-\theta_*}_2
+ \le b_I:=\frac{r_I+\epsilon_I}{\sqrt{\underline\lambda}}.
+\end{equation}
+Indeed, $D(\widehat\theta-\theta_*)=(D\widehat\theta-y)+e$, and the least singular value of $D/\sqrt{nL_I}$ bounds its left-hand side below. This argument applies to any fitted coefficients, including a constrained damping estimate. More observations help only insofar as they improve the defect or the excitation represented by $G_I$.
+
+Let $\mathcal U\subset\C^{2n}$ be a specified complex neighborhood of the real working domain $K$, and define
+\begin{equation}\label{kam:feature-bounds}
+\begin{aligned}
+ B_F(\mathcal U)&=\left(\sum_j\norm{F_j}_{\mathcal U}^{2}\right)^{1/2},\\
+ B_{\nabla F}(K)&=\left(\sum_j\sup_K\norm{\nabla F_j}_2^2\right)^{1/2}.
+\end{aligned}
+\end{equation}
+If $R_*=\sum_j\beta_{*,j}F_j+R_{\rm out}$, Cauchy--Schwarz yields
+\begin{equation}\label{kam:analytic-error}
+\begin{aligned}
+ \norm{\delta R}_{\mathcal U}
+    &\le b_I B_F(\mathcal U)+\norm{R_{\rm out}}_{\mathcal U},\\
+ \sup_K\norm{\nabla\delta R}_2
+    &\le b_I B_{\nabla F}(K)+\sup_K\norm{\nabla R_{\rm out}}_2,\\
+ |\delta\gamma|&\le b_I.
+\end{aligned}
+\end{equation}
+The first line is an energy perturbation budget for KAM, whereas the second and third enter the tracking equation. Bounds on derivatives over a smaller complex domain also follow from Cauchy estimates, with explicit dependence on the lost domain width. An independently controlled $R_{\rm out}$ must enter both the observation defect and these function bounds. For the synthetic single-feature plant it is zero. The numerical truth-based defect reported in Section~\ref{sec:analysis} is a diagnostic of that experiment; a rigorous or experimental certificate additionally needs validated uncertainty bounds.
+
+\subsection{Real analyticity and the correct complex extension}
+\label{kam:analyticity}
+
+The use of complex state coordinates does not by itself supply the analyticity hypothesis. The energy is real on $(X,Y)\in\R^{2n}$, and its extension is holomorphic in the $2n$ independent complex variables $(X,Y)$, or equivalently in independent $(\zeta,\chi)$. On the physical slice $\chi=\bar\zeta$, but this conjugacy is not imposed while taking derivatives in the extended domain. For example,
+\begin{equation}\label{kam:complex-energy}
+\begin{aligned}
+ h_0^{\C}(\zeta,\chi)
+  ={}&\sum_j\nu_j\zeta_j\chi_j
+      +1-\cos\!\left(\frac{d^{\mathsf T}(\zeta+\chi)}{\sqrt2}\right)\\
+     &-\frac{[d^{\mathsf T}(\zeta+\chi)]^2}{4}.
+\end{aligned}
+\end{equation}
+This is the extension of the physical real energy, not a holomorphic function of $\zeta$ alone. Its physical Hamilton equations are obtained by restricting
+$\zeta'=-\mathrm i h_\chi^{\C}$ and
+$\chi'=\mathrm i h_\zeta^{\C}$ to the real slice.
+
+For a neural readout, every operation must possess a holomorphic continuation on the chosen domain. Polynomial and cosine features meet this requirement. Meromorphic activations require a domain avoiding their poles; piecewise-linear activations do not satisfy this analytic version of KAM. A real part taken at the output is continued by conjugate-symmetric coefficients in the independent variables, not by applying the nonholomorphic real-part operation inside the complex domain. Supplement~\ref{ss:analytic-extension} makes this construction explicit. Both the true residual and the learned residual need the stated regularity. A finitely differentiable KAM theorem is a separate alternative with different differentiability and norm hypotheses; it is not invoked for the present benchmark.
+
+\subsection{A genuine local action--angle model and its twist}
+\label{kam:normalform-section}
+
+The balanced variables already diagonalize the positive quadratic energy, $h_2=\tfrac12\sum_j\nu_j(X_j^2+Y_j^2)$. The polar coordinates
+$X_j=\sqrt{2I_j}\cos\phi_j$,
+$Y_j=-\sqrt{2I_j}\sin\phi_j$
+are canonical and give $h_2=\nu\cdot I$. Their radius $I_j$ is not an exact action of the coupled cosine Hamiltonian. A near-identity canonical normal-form transformation is needed before separating an integrable part from a remainder.
+
+To calculate the nominal twist, use $\kappa=1$ in the scalar family $h_\kappa=h_2+\kappa g(d^{\mathsf T}X)$. For this family, the quartic term is $h_{4,\kappa}=-\kappa(d^{\mathsf T}X)^4/24$. Assume
+$k\cdot\nu\ne0$ for $0<|k|_1\le4$. The quartic homological equation
+\begin{equation}\label{kam:homological}
+ \{h_2,W_{4,\kappa}\}
+    =-(h_{4,\kappa}-\langle h_{4,\kappa}\rangle)
+\end{equation}
+has a polynomial solution; the bracket convention is
+$\{f,g\}=\nabla f^{\mathsf T}J\nabla g$.
+Its local Hamiltonian flow, followed by the polar parametrization on positive actions, defines a canonical chart $\mathcal T_\kappa$. Direct angle averaging gives
+\begin{equation}\label{kam:magnetic-twist}
+\begin{aligned}
+ h_\kappa\circ\mathcal T_\kappa
+       &=H_{\rm NF}^{\kappa}(I)+R_6^\kappa(I,\phi),\\
+ H_{\rm NF}^{\kappa}(I)
+       &=\nu\cdot I+\tfrac12I^{\mathsf T}A_\kappa I,\\
+ A_\kappa&=-\frac{\kappa}{8}
+ \begin{pmatrix}
+ d_1^4&2d_1^2d_2^2\\
+ 2d_1^2d_2^2&d_2^4
+ \end{pmatrix},\\
+ \det A_\kappa&=-\frac{3\kappa^2d_1^4d_2^4}{64}.
+\end{aligned}
+\end{equation}
+The off-diagonal terms are essential. The twist is indefinite and nonsingular when $\kappa d_1d_2\ne0$; Kolmogorov nondegeneracy requires invertibility, not positive definiteness. For the new baseline, direct floating-point evaluation gives
+$\det A_1\simeq-1.719\times10^{-5}$ and
+$\sigma_{\min}(A_1)\simeq2.065\times10^{-3}$. These are reproducible algebraic checks, not interval bounds for a torus. The finite nonresonance check through degree four is also distinct from the all-integer small-divisor condition below.
+
+The remainder is sixth order in Cartesian amplitude because the energy and quartic transformation are even. It includes both the original cosine tail and Poisson-bracket terms generated by the transformation. In particular, $W_{4,\kappa}=\kappa W_{4,1}$ produces terms proportional to $\kappa^2$, so the complete remainder cannot be obtained by multiplying a nominal tail estimate by $\kappa$. Supplement~\ref{ss:normalform} gives this construction and its extension when cubic terms are present.
+
+\subsection{The controlled normal form and its perturbation budget}
+\label{kam:closed-budget-section}
+
+The nominal chart $\mathcal T_1$ is built from the same coupled cosine energy that the compensation controller seeks to recover. Applying it to the actual conservative closed loop gives
+\begin{equation}\label{kam:closed-budget}
+\begin{aligned}
+ h_c\circ\mathcal T_1
+    &=H_{\rm NF}^{1}(I)+P_c(I,\phi),\\
+ P_c&=R_6^{1}+\delta R\circ\mathcal T_1,\\
+ \epsilon_c&=\norm{R_6^{1}}_{\mathcal D_c}+b_R^c,\\
+ \norm{\delta R\circ\mathcal T_1}_{\mathcal D_c}&\le b_R^c.
+\end{aligned}
+\end{equation}
+Choose a positive action domain $\mathcal I_c\Subset(0,\infty)^2$, its complex action neighborhood and a complex angular strip, collectively denoted $\mathcal D_c$. The chart and its inverse must be analytic with controlled derivatives on the domains being used; their real image must remain in the mechanical working domain. The function bound from \eqref{kam:analytic-error} can be transferred to $b_R^c$ only if the chart image lies inside that same controlled physical complex neighborhood.
+
+Two errors enter \eqref{kam:closed-budget}: the nominal normal-form remainder and the conservative identification error. Even exact identification leaves $R_6^1$, while a small data loss alone bounds neither term. The singular value of $A_1$ computed above establishes an algebraic nondegeneracy check; a finite-amplitude KAM application also needs domain margins, the complete remainder and inverse-chart bounds. The matrix need not be positive definite, but its smallest singular value and inverse norm cannot be omitted from the smallness test.
+
+A learned conservative reference has a different comparison energy: $\widehat h-h_*=-\delta R$, whereas the compensation loop has $h_c-h_0=\delta R$. Supplement~\ref{sec:supp-tracking} retains this distinction and the separate reference-tracking analysis. The principal discrete theorem below concerns $h_c$ and the nominal normal form, without replacing its target by $\widehat h$.
+
+\subsection{Persistence for the actual controlled numerical map}
+\label{kam:map-section}
+
+Let $\Psi_\Delta^c$ be the exactly solved map of \eqref{ctrl:midpoint} with $\delta\gamma=0$, or the Central4 map generated from the entire $h_c$. Its analyticity requires a unique implicit branch on a suitable complex neighborhood. One sufficient local condition, together with margins ensuring that the endpoints and images stay inside that neighborhood, is
+\begin{equation}\label{kam:implicit-branch}
+ \tfrac12\sup\norm{J S_\Delta''}<1.
+\end{equation}
+For midpoint this is $\Delta\sup\norm{J\nabla^2h_c}/2<1$. It is the same inverse condition that appears in the endpoint projection and Newton matrix in Supplement~\ref{ss:projection}. The exactness proved in \eqref{ctrl:exact-primitive} persists under the analytic canonical normal-form chart, including on the periodic action--angle annulus.
+
+The numerical map to analyze is
+$\mathcal T_1^{-1}\circ\Psi_\Delta^c\circ\mathcal T_1$.
+It is generally different from applying midpoint after a nonlinear coordinate change. Let
+$\mathcal R_\Delta(I,\phi)=(I,\phi+\Delta\omega_0(I))$,
+where $\omega_0=\nabla_I H_{\rm NF}^{1}$. On common, suitably reduced analytic domains, local consistency and the flow perturbation estimate give
+\begin{equation}\label{kam:map-closeness}
+\begin{aligned}
+ &\norm{\mathcal T_1^{-1}\Psi_\Delta^c\mathcal T_1
+            -\mathcal R_\Delta}\\
+ &\qquad\le C_1\Delta\epsilon_c+C_2\Delta^{p+1}.
+\end{aligned}
+\end{equation}
+Here periodic angular lifts are used to compare the maps, and $p=2$ for midpoint or $p=4$ for Central4. The constants require analytic derivative and chart bounds on those domains.
+
+Exact symplecticity and an invertible mixed endpoint projection supply a single-valued periodic generating perturbation $G_\Delta$ relative to $\Delta H_{\rm NF}^{1}$. The domain-reduced estimate is
+\begin{equation}\label{kam:map-generator-budget}
+ \norm{G_\Delta/\Delta}
+       \le C_3\epsilon_c+C_4\Delta^p.
+\end{equation}
+The normalization by $\Delta$ matters: the per-step generator error is $O(\Delta\epsilon_c+\Delta^{p+1})$, while the smallness quantity in the map theorem is $O(\epsilon_c+\Delta^p)$ \citep[Section~4]{shang}. A smaller step reduces only the discretization part of this budget.
+
+The nonresonance condition is also discrete. The angle increment per step is $\Delta\omega$, and the admissible frequencies satisfy
+\begin{equation}\label{kam:map-divisors}
+ \left|e^{\mathrm i\Delta k\cdot\omega}-1\right|
+       \ge\Delta\gamma_D|k|_1^{-\tau_D},
+       \qquad k\in\mathbb Z^2\setminus\{0\}.
+\end{equation}
+This includes resonances with integer multiples of $2\pi$, so a continuous nonresonance condition or a finite integer scan is insufficient for a chosen step and frequency.
+
+\begin{proposition}[Conditional discrete persistence for the compensated catheter]
+\label{kam:map-theorem}
+Assume the conservative realization in Proposition~\ref{ctrl:structure-proposition}, real analyticity of the true and learned residuals, the domain and chart bounds in \eqref{kam:closed-budget}, and a unique analytic branch of the exact implicit map. Suppose the nominal frequency map satisfies uniform twist bounds
+\[
+ \iota\norm v_\infty\le\norm{D_I\omega_0(I)v}_\infty
+                \le\Theta\norm v_\infty,
+ \qquad0<\iota\le\Theta.
+\]
+Choose $0<\Delta\le1$, $\tau_D>3$, and
+$0<\gamma_D\le\min(1,\rho_I\Theta/2)$,
+where $\rho_I$ is the complex action radius. Retain the frequencies satisfying \eqref{kam:map-divisors} at distance at least $2\gamma_D$ from the frequency-domain boundary. If the constants and the reduced analytic domain satisfy the smallness inequality
+\begin{equation}\label{kam:map-smallness}
+ C_3\epsilon_c+C_4\Delta^p
+       \le\delta_0\gamma_D^2\iota^2\Theta^{-3},
+\end{equation}
+with the $\delta_0$ of the analytic map theorem, then $\Psi_\Delta^c$ has the corresponding Cantor family of invariant quasiperiodic tori. A positive-measure family additionally uses the frequency-domain geometry and measure hypotheses of that theorem.
+\end{proposition}
+
+\begin{proof}
+The quartic normal form supplies the integrable frequency map and \eqref{kam:closed-budget} bounds its Hamiltonian perturbation. The implicit branch and exact symplecticity give a periodic mixed generating function after conjugation; the consistency estimate gives \eqref{kam:map-generator-budget}. Its smallness and the stated discrete divisors and frequency margins are the analytic hypotheses of \citet[Theorem~2 and Remark~2]{shang}, with the nearly integrable application in that paper's Section~4. Applying the theorem and conjugating the invariant tori back by $\mathcal T_1$ proves the claim. Supplement~\ref{ss:map-kam} records the mixed generating equations and the constants that must be bounded.
+\end{proof}
+
+For this affine frequency map, one can take
+$\iota=\norm{A_1^{-1}}_\infty^{-1}$ and
+$\Theta=\norm{A_1}_\infty$ on the declared domain. Equation~\eqref{kam:map-smallness} states a verification condition; the theorem-dependent constant, complex remainder and chart bounds have not been numerically certified for the present benchmark. No measured training error is substituted for them.
+
+\subsection{Continuous comparison and the scope of the conclusion}
+\label{kam:scope}
+
+The continuous Hamiltonian $h_c$ has its own conditional KAM conclusion. It uses the continuous divisors $|k\cdot\omega|\ge\gamma_D|k|_1^{-\tau_D}$ with a permissible exponent $\tau_D>1$ in two degrees of freedom, together with its own analytic smallness conditions \citep{poschel}. Proposition~\ref{kam:flow-theorem} in Supplement~\ref{sec:supp-tracking} states that comparison and its extension to a learned reference. It does not replace the discrete divisor test or identify the continuous tori with those of a chosen numerical map. At a fixed nonzero $\epsilon_c$, letting $\Delta\to0$ does not remove the modeling perturbation or prove convergence of numerical tori to a specified torus of the near-integrable flow.
+
+The present calculations supply the revised physical and modal inputs, the frozen coefficient fit, finite-data diagnostics, the quartic twist and the algebraic structure of the ideal implicit maps. They do not supply an independently certified observation-defect bound, a complete complex normal-form remainder or a numerical evaluation of the KAM threshold. Proposition~\ref{kam:map-theorem} is therefore a conditional result for the benchmark. The learned compensation run retains a nonzero damping error and is not itself declared an exact symplectic map. Its finite-time numerical convergence is instead covered by Proposition~\ref{ctrl:convergence} under that proposition's hypotheses.
+
+A finite-amplitude torus could also be certified by an a posteriori theorem using an approximate embedding, its complex-strip invariance defect, a Diophantine frequency and validated torsion and domain bounds \citep{haro2019aposteriori}. Those quantities require a new calculation for the present parameters; no earlier torus certificate transfers automatically. Invariant tori describe selected bounded discrete motions, not attraction of arbitrary initial states. They also do not establish clearance of the full flexible beam, whose spatial and actuation conditions are treated separately in Section~\ref{sec:application}.

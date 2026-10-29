@@ -1,0 +1,818 @@
+\subsection{General rod reduction and force accounting}
+\label{sm:general}
+For a spatial rod, define reference strains and body angular velocity by
+\begin{equation}
+ \Gamma=D^{\mathsf T}r_s,\qquad
+ D_s=D\widehat\kappa,\qquad
+ D_t=D\widehat\omega_b.
+ \label{sm:rod-kinematics}
+\end{equation}
+The hat map satisfies $\widehat a b=a\times b$.
+The spatial balance laws are
+\begin{align}
+ \rho A_c r_{tt}&=n_s+f_{\rm mag}+f_{\rm h}+f_{\rm c}+\rho A_c g,\\
+ \partial_t(D\mathcal J_b\omega_b)&=m_s+r_s\times n+\tau_{\rm ext}.
+ \label{sm:rod-balances}
+\end{align}
+Here $\mathcal J_b$ is the rotational inertia per unit reference
+length. For constant body inertia, the second left-hand side equals
+$D(\mathcal J_b\dot\omega_b+\omega_b\times\mathcal J_b\omega_b)$.
+A stored-energy density determines the unconstrained force and moment
+components through its strain derivatives \citep{simo,antman}.
+In an unshearable specialization, the eliminated shear strains have
+constraint reactions; setting those strains to zero in an unconstrained
+shear law does not set the transverse internal forces to zero.
+
+A body-fixed moment density $m_b(s)$ in a static applied field has
+potential
+\begin{equation}
+ V_{\rm mag}=-\int_0^L (Dm_b)\cdot B_0(r)\dd s.
+ \label{sm:distributed-magnetism}
+\end{equation}
+The point-dipole benchmark replaces this distribution by a distal
+localized core. The permanent-dipole formulas are the leading terms of
+a localized magnetic stress resultant \citep{abbott}. In a surrounding
+vacuum region, the Maxwell stress is
+\begin{equation}
+ T_M=\mu_0^{-1}\left(BB^{\mathsf T}-\tfrac12|B|^2I\right).
+ \label{sm:maxwell-stress}
+\end{equation}
+Its surface force and moment use the total field. Equivalently, for a
+complete localized steady current $j(\xi)$, including bound currents,
+and externally generated $B_{\rm ext}$,
+\begin{align}
+ m_d&=\tfrac12\int \xi\times j(\xi)\dd V,\nonumber\\
+ F&=\nabla_r[m_d\cdot B_{\rm ext}(r)]+R_F,\nonumber\\
+ \tau&=m_d\times B_{\rm ext}(r)+R_\tau.
+ \label{sm:dipole-expansion}
+\end{align}
+Current closure gives $\int j\dd V=0$ and
+$\int\xi_i j_j\dd V=\epsilon_{ijk}(m_d)_k$.
+Taylor expansion then yields, with
+$J_2=\int|\xi|^2|j(\xi)|\dd V$,
+\begin{equation}
+ |R_F|\le\tfrac12J_2\sup\|D^2B_{\rm ext}\|,\qquad
+ |R_\tau|\le J_2\sup\|DB_{\rm ext}\|.
+ \label{sm:dipole-remainders}
+\end{equation}
+The suprema cover the core and the Taylor segments. The self-field of
+the complete isolated element has no net self-force or self-torque.
+Thus one uses either the stress resultant or its dipole approximation,
+without counting both as separate loads. The approximation
+$\mu\simeq B_ra_m^3/\mu_0$ also assumes an effectively uniform,
+body-fixed magnetization; a grade specification is not a measured
+moment of an assembled tip.
+
+Fluid and contact terms require their own constitutive choices. For
+example, a local added-mass and drag closure may be written as
+\begin{align}
+ f_{\rm h}&=m_f a_f+m_a(a_f-r_{tt})
+                  -c_1v_r-c_2|v_r|v_r,\nonumber\\
+ v_r&=r_t-v_f,\qquad c_1,c_2\ge0.
+ \label{sm:fluid-example}
+\end{align}
+This is a reduced closure to be calibrated, not a resolved fluid
+interaction. In still fluid the drag power is nonpositive. In moving
+fluid it is dissipative relative to $v_f$ and may supply energy to the
+rod. A consistently defined added mass may be incorporated into the
+kinetic metric once; it must then be removed from the external inertial
+load. For a stationary wall, penetration $\delta>0$ and
+$n_c=\nabla\delta$ give one nonadhesive penalty example:
+\begin{align}
+ V_c&=\frac{k_c}{p_c+1}[\delta]_+^{p_c+1},\nonumber\\
+ f_c&=-k_c[\delta]_+^{p_c}n_c
+       -c_c{\bf1}_{\{\delta>0\}}[\dot\delta]_+n_c.
+ \label{sm:contact-example}
+\end{align}
+The second term dissipates energy during compression. Such switching
+contact laws are excluded from the analytic neighbourhood used for the
+persistence results. Reduced gravity alone does not remove fluid
+forcing or select a blood-flow law. Neither
+\eqref{sm:fluid-example} nor \eqref{sm:contact-example} is activated in
+the revised numerical benchmark.
+
+For a configuration map satisfying the constraints, define
+\begin{equation}
+ r_i=\partial_{q_i}r,\qquad
+ \psi_i=\operatorname{vee}(D^{\mathsf T}\partial_{q_i}D).
+ \label{sm:configuration-derivatives}
+\end{equation}
+Then $\omega_b=\sum_i\psi_i\dot q_i$, and
+\begin{align}
+ M_{ij}(q)&=\int_0^L
+     [\rho A_c\,r_i\cdot r_j+\psi_i^{\mathsf T}\mathcal J_b\psi_j]\dd s,
+       \nonumber\\
+ Q_i&=\int_0^L[f\cdot r_i+\tau\cdot D\psi_i]\dd s+Q_i^\partial.
+ \label{sm:galerkin-metric}
+\end{align}
+Concentrated tip masses and their moments of inertia add their
+corresponding kinetic terms. A centreline interpolation by itself does
+not specify rotational inertia.
+
+Variation of $T-V$ gives
+\begin{align}
+ (c_{\rm geo})_i&=\sum_{j,k}\Gamma_{ijk}\dot q_j\dot q_k,\nonumber\\
+ \Gamma_{ijk}&=\tfrac12
+   (\partial_{q_j}M_{ik}+\partial_{q_k}M_{ij}
+                         -\partial_{q_i}M_{jk}).
+ \label{sm:christoffel}
+\end{align}
+Writing $p=M(q)\dot q$ gives
+\begin{align}
+ \dot p_i&=-\tfrac12p^{\mathsf T}(\partial_{q_i}M^{-1})p
+       -\partial_{q_i}V\nonumber\\
+ &\quad-\partial_{v_i}\mathcal D_N+(Q_{\rm drv}+B_u u)_i.
+ \label{sm:variable-mass-momentum}
+\end{align}
+If the dissipation is stored as a momentum readout
+$G_1(q,p)=\mathcal D_N(q,M^{-1}p)$, its physical force is
+\begin{equation}
+ -\partial_v\mathcal D_N=-M(q)\nabla_pG_1,
+ \label{sm:rayleigh-momentum}
+\end{equation}
+not generally $-\nabla_pG_1$. The Christoffel term already follows from
+$H_q$ and is not placed in $G_1$.
+The energy identity is
+\begin{equation}
+ \dot H=-v^{\mathsf T}\partial_v\mathcal D_N
+              +v^{\mathsf T}(Q_{\rm drv}+B_u u).
+ \label{sm:general-power}
+\end{equation}
+Explicit time dependence adds $\partial_tH$; a time-dependent mass
+also generates the corresponding inertial terms before the Legendre
+transform. A quadratic positive semidefinite Rayleigh potential, or a
+differentiable convex velocity potential minimized at zero, ensures
+$v^{\mathsf T}\partial_v\mathcal D_N\ge0$. Nonnegativity of the potential
+alone would not ensure that inequality.
+
+\subsection{Weak form, endpoint inertia and consistent Hermite matrices}
+\label{sm:weak-form}
+For an admissible test displacement $\eta$ with
+$\eta(0)=\eta_s(0)=0$, the benchmark weak form is
+\begin{align}
+ &\int_0^L\!\rho A_c w_{tt}\eta\dd s
+       +m_tw_{tt}(L)\eta(L)+J_t\ddot\vartheta\eta_s(L)\nonumber\\
+ &+\alpha\left[
+       \int_0^L\!\rho A_c w_t\eta\dd s
+       +m_tw_t(L)\eta(L)+J_t\dot\vartheta\eta_s(L)\right]\nonumber\\
+ &+\int_0^L\!EIw_{ss}\eta_{ss}\dd s
+       =F\eta(L)+[\tau_B-\mu B_0\sin\vartheta]\eta_s(L).
+ \label{sm:beam-weak}
+\end{align}
+Two spatial integrations by parts give the interior and endpoint
+equations in \eqref{mech:beam}--\eqref{mech:endpoint-balance}.
+The $J_t$ term is a tip rigid-body inertia, distinct from the
+distributed rotary inertia omitted by the Euler--Bernoulli model.
+
+For an element of length $\ell_e$ and local coordinate
+$\xi\in[0,1]$, the displacement row is
+\begin{equation}
+ N_e(\xi)^{\mathsf T}=
+ \begin{pmatrix}
+ 1-3\xi^2+2\xi^3\\
+ \ell_e(\xi-2\xi^2+\xi^3)\\
+ 3\xi^2-2\xi^3\\
+ \ell_e(-\xi^2+\xi^3)
+ \end{pmatrix}.
+ \label{sm:hermite-shape}
+\end{equation}
+The local order is $(w_i,\vartheta_i,w_{i+1},\vartheta_{i+1})$.
+Integrating the bending and kinetic energies yields
+\begin{align}
+ K_e&=\frac{EI}{\ell_e^3}
+ \begin{pmatrix}
+ 12&6\ell_e&-12&6\ell_e\\
+ 6\ell_e&4\ell_e^2&-6\ell_e&2\ell_e^2\\
+ -12&-6\ell_e&12&-6\ell_e\\
+ 6\ell_e&2\ell_e^2&-6\ell_e&4\ell_e^2
+ \end{pmatrix},\nonumber\\
+ M_e&=\frac{\rho A_c\ell_e}{420}
+ \begin{pmatrix}
+ 156&22\ell_e&54&-13\ell_e\\
+ 22\ell_e&4\ell_e^2&13\ell_e&-3\ell_e^2\\
+ 54&13\ell_e&156&-22\ell_e\\
+ -13\ell_e&-3\ell_e^2&-22\ell_e&4\ell_e^2
+ \end{pmatrix}.
+ \label{sm:element-matrices}
+\end{align}
+After assembly and elimination of the two clamped degrees of freedom,
+add $m_t$ to the terminal displacement mass entry and $J_t$ to the
+terminal rotation entry. Add $\mu B_0$ to the terminal rotation
+stiffness entry only when forming the biased linear eigenproblem.
+The nonlinear physical energy still uses $K_{\rm beam}$ and the cosine
+potential.
+
+For an axial centre-of-mass offset $e$ from the endpoint, the rigid-body
+kinetic contribution would instead contain the block
+\begin{equation}
+ \begin{pmatrix}m_t&m_te\\m_te&J_{\rm cm}+m_te^2\end{pmatrix}
+ \label{sm:offset-tip}
+\end{equation}
+in endpoint translation and rotation coordinates. The benchmark sets
+$e=0$. Coating, adhesive and mounting masses are not represented by
+this ideal bare-core inertia.
+
+The nodal displacement entries have units of length and the slope
+entries are dimensionless. Consequently, the $(w,w)$, $(w,\vartheta)$
+and $(\vartheta,\vartheta)$ blocks of $M_f$ have units kg, kg\,m and
+kg\,m$^2$, respectively. The corresponding stiffness units are
+N/m, N and N\,m; the generalized force entries are N and N\,m.
+These mixed units explain why neither a scalar mass replacement nor
+an unscaled Euclidean actuator condition number is physically neutral.
+
+\subsection{Linear frequency verification and parameter sensitivity}
+\label{sm:fe-check}
+An independent continuous-beam check is available because the biased
+linearized endpoint problem has constant coefficients. Put
+\begin{align}
+ \lambda&=kL,\qquad
+ \omega^2=\frac{EI}{\rho A_cL^4}\lambda^4,\nonumber\\
+ w(s)&=A[\cosh(ks)-\cos(ks)]\nonumber\\
+ &\quad+B[\sinh(ks)-\sin(ks)].
+ \label{sm:characteristic-shape}
+\end{align}
+The undamped endpoint conditions for this eigenproblem are
+\begin{align}
+ EIw_{sss}(L)+m_t\omega^2w(L)&=0,\nonumber\\
+ EIw_{ss}(L)+(\mu B_0-J_t\omega^2)w_s(L)&=0.
+ \label{sm:characteristic-bc}
+\end{align}
+Define $\eta_t=m_t/(\rho A_cL)$,
+$\iota_t=J_t/(\rho A_cL^3)$,
+$\kappa_t=\mu B_0L/(EI)$ and
+\begin{align*}
+ f&=\cosh\lambda-\cos\lambda,&
+ g_\lambda&=\sinh\lambda-\sin\lambda,\\
+ c_+&=\cosh\lambda+\cos\lambda,&
+ s_+&=\sinh\lambda+\sin\lambda.
+\end{align*}
+Writing $h_\lambda=\kappa_t/\lambda-\iota_t\lambda^3$, the positive
+roots satisfy
+\begin{equation}
+ \det\begin{pmatrix}
+ g_\lambda+\eta_t\lambda f&
+ c_++\eta_t\lambda g_\lambda\\
+ c_++h_\lambda s_+&
+ s_++h_\lambda f
+ \end{pmatrix}=0.
+ \label{sm:characteristic-determinant}
+\end{equation}
+For zero tip inertia and zero bias this reduces to
+$1+\cosh\lambda\cos\lambda=0$. The damped frequencies are not used in
+mass normalization; $\omega_j$ throughout the paper denotes the
+undamped frequency of the biased stiffness.
+
+\begin{table*}[t]
+\centering\small
+\caption{Angular frequencies in rad/s for the revised beam, including
+magnetic-core translational and rotational inertia. The final row solves
+the independent continuous-beam endpoint problem.}
+\label{sm:frequency-table}
+\begin{tabular}{lrrrr}
+\toprule
+Discretization & $\omega_1$ & $\omega_2$ & $\omega_3$ & $\omega_4$\\
+\midrule
+$16$ Hermite elements & $7.840010222$ & $47.399809441$ & $131.211581398$ & $256.375395140$\\
+$32$ Hermite elements & $7.840009162$ & $47.399576624$ & $131.206681073$ & $256.339221935$\\
+$64$ Hermite elements & $7.840009096$ & $47.399561992$ & $131.206371332$ & $256.336917925$\\
+Continuous endpoint equation & $7.840009091$ & $47.399561016$ & $131.206350623$ & $256.336763590$\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+The eigenvectors are mass-normalized and oriented so that each tip
+displacement coefficient is positive. The $32$-element maximum
+mass-orthonormality defect is $5.14\times10^{-15}$; the first two
+relative frequency errors against \eqref{sm:characteristic-determinant}
+are $9.02\times10^{-9}$ and $3.29\times10^{-7}$.
+At fixed bias, omitting tip inertia gives
+$(\omega_1,\omega_2)=(7.859186509,47.517207103)$ rad/s.
+Including it lowers the frequencies by approximately $0.2440\%$ and
+$0.2476\%$. The linear verification does not bound errors caused by
+neglecting nonlinear high-mode response.
+
+Table~\ref{sm:sensitivity-table} varies parameters one at a time.
+The $B_r$ endpoints come from the N50 grade interval \citep{smN50}.
+The inertia and modulus perturbations are declared design studies,
+not measured confidence intervals. Inertia perturbations scale $m_t$
+and $J_t$ together at fixed core dimension and fixed magnetic moment.
+For reported damping-ratio changes in the machine-readable record,
+the nominal $\alpha$ is held fixed.
+
+\begin{table*}[t]
+\centering\small
+\caption{Design sensitivity of the first two biased frequencies.
+Percentages are relative to the nominal $32$-element model.}
+\label{sm:sensitivity-table}
+\begin{tabular}{lrrl}
+\toprule
+Change & $\Delta\omega_1/\omega_1$ & $\Delta\omega_2/\omega_2$ & Interpretation\\
+\midrule
+$B_r=1.40$ T & $-0.082935\%$ & $-0.029460\%$ & Grade-range endpoint\\
+$B_r=1.45$ T & $+0.082656\%$ & $+0.029413\%$ & Grade-range endpoint\\
+$m_t,J_t$ reduced by $10\%$ & $+0.024384\%$ & $+0.024646\%$ & Chosen design perturbation\\
+$m_t,J_t$ increased by $10\%$ & $-0.024367\%$ & $-0.024608\%$ & Chosen design perturbation\\
+$E$ reduced by $20\%$ & $-9.526743\%$ & $-10.186350\%$ & Chosen design perturbation\\
+$E$ increased by $20\%$ & $+8.668840\%$ & $+9.235817\%$ & Chosen design perturbation\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+The combined $B_r$ and $\pm10\%$ inertia corners change $\omega_1$ by
+between $-0.10729\%$ and $+0.10705\%$. The tested modulus changes
+therefore dominate those magnetic-core perturbations in this frequency
+comparison. They do not establish a bound on all possible fabrication
+variation.
+
+The material and density reference is a particular Sylgard preparation
+\citep{cho2021pdms}. Mechanical loss depends on preparation and
+measurement conditions; loss-factor measurements for other samples
+\citep{fischer2017adhesion} are not converted into the present modal
+damping ratios without a constitutive and frequency correspondence.
+The scenarios $\zeta_1^{\mathrm{d}}\in\{0,0.01,0.025,0.05,0.1\}$ instead define
+explicit effective damping models. Likewise, the core dimensions are
+design inputs and the remanent-field midpoint is nominal; the
+available specifications do not calibrate a coated, bonded specimen.
+
+\subsection{Canonical units, complex derivatives and input conversion}
+\label{sm:scaling}
+After mass normalization, $a_j$ has units
+$\sqrt{\mathrm{kg}}\,\mathrm m$ and
+$\pi_j=\dot a_j$ has units $\sqrt{\mathrm{kg}}\,\mathrm{m\,s^{-1}}$.
+Let $P_s=\operatorname{diag}(\sqrt{E_0\omega_j/\omega_0})$.
+The scales in \eqref{mech:scaling} satisfy
+\begin{align}
+ D_sP_s&=(E_0/\omega_0)I,\nonumber\\
+ \sum_j\dd a_j\wedge\dd\pi_j
+ &=\frac{E_0}{\omega_0}\sum_j\dd X_j\wedge\dd Y_j.
+ \label{sm:scaled-form}
+\end{align}
+With $h=H/E_0$ and $\tau=\omega_0t$, the chain rule gives
+$X'=h_Y$, $Y'=-h_X$. The physical quadratic kinetic energy becomes
+$E_0Y^{\mathsf T}\mathsf NY/2$, while the Lagrangian kinetic energy
+in dimensionless position and velocity is
+$v^{\mathsf T}\mathsf N^{-1}v/2$.
+The three distinct masses are therefore the nodal $M_f$, the
+mass-normalized modal identity and the balanced
+$M_{\rm eff}=\mathsf N^{-1}$.
+
+The physical Rayleigh potential
+$\mathcal D_{\rm phys}=\alpha\dot a^{\mathsf T}\dot a/2$
+transforms as
+\begin{equation}
+ \mathcal D(X,v)=
+ \frac{\mathcal D_{\rm phys}(D_sX,\omega_0D_sv)}{E_0\omega_0}
+ =\tfrac12\gamma v^{\mathsf T}\mathsf N^{-1}v.
+ \label{sm:rayleigh-scale}
+\end{equation}
+For the fixed kinetic energy, $v=\mathsf NY$ and its force is
+$-\partial_v\mathcal D=-\gamma Y$. If learned momentum terms change
+$h_Y$, the force remains $-\gamma\mathsf N^{-1}h_Y$, rather than
+automatically $-\gamma Y$. The realization in
+\eqref{app:full-feedback} handles a general target through its actual
+velocity map.
+
+For $\zeta=(X+\mathrm iY)/\sqrt2$ and
+$\chi=(X-\mathrm iY)/\sqrt2$, the inverse chart gives
+\begin{equation}
+ \partial_\chi h^{\mathbb C}
+     =(\partial_Xh+\mathrm i\partial_Yh)/\sqrt2.
+ \label{sm:complex-chain-rule}
+\end{equation}
+Substituting the canonical equations into $\zeta'$ proves
+\eqref{mech:wirtinger} with no additional factor of two.
+For a force $Q$ acting in the $Y$ equation, the extra term in
+$\zeta'$ is $\mathrm iQ/\sqrt2$. A proposed complex readout
+$h+\mathrm i\mathcal D$ must therefore be used with the decoder
+\eqref{mech:decoder}; differentiating that sum as though it were one
+conservative Hamiltonian generally produces another vector field.
+
+For two modes, $b_j$ has units $\mathrm{kg}^{-1/2}$ and
+$t_j$ has units $\mathrm{kg}^{-1/2}\mathrm m^{-1}$.
+Both $b_jF$ and $t_j\tau_B$ consequently have the units of modal
+acceleration. From $X'=\mathsf NY$,
+\begin{equation}
+ \ddot a=\omega_0^2D_s\mathsf NY'=\Lambda Y',\qquad
+ \Lambda=E_0D_s^{-1}.
+ \label{sm:force-scale}
+\end{equation}
+Moreover, $d=D_s\boldsymbol t$ gives
+\begin{equation}
+ \Lambda\nabla V_0
+ =\Omega_2^2a+\boldsymbol t E_0(\sin\vartheta-\vartheta).
+ \label{sm:scaled-potential-force}
+\end{equation}
+Equations \eqref{sm:force-scale}--\eqref{sm:scaled-potential-force}
+prove \eqref{app:residual-plant}. If a program stores the total modal
+moment $T$, it must first remove
+$E_0(\vartheta-\sin\vartheta)$ before dividing by
+$\mu\cos\vartheta$ to obtain $B_y$.
+This subtraction changes a port convention; it does not compensate the
+unknown residual $-\Lambda\nabla R_*$.
+For the learned input, $\Lambda\widehat\gamma Y=
+\omega_0\widehat\gamma\dot a=\widehat\alpha\dot a$.
+The physical potential forces combine as
+$-\Lambda\nabla R_*+\Lambda\nabla\widehat R
+=-\Lambda\nabla\delta R$, which completes
+\eqref{app:physical-closed-loop}. No true residual derivative is used
+by the fitted controller; it is evaluated only by the synthetic plant
+or its explicitly labeled truth-only comparator.
+
+
+The numerical conversion uses
+\begin{align}
+ A_{\rm mag}&\simeq
+ \begin{pmatrix}
+ 203.96232682&3303.68875398\\
+ 205.00706618&11909.57162007
+ \end{pmatrix},\nonumber\\
+ D_s&=\operatorname{diag}(S_1,S_2),\nonumber\\
+ S_1&\simeq9.29943515\times10^{-5},\nonumber\\
+ S_2&\simeq3.78205312\times10^{-5}.
+ \label{sm:numerical-ports}
+\end{align}
+Its determinant is nonzero. Rescaling the columns by actual available
+force and torque is needed to assess a device's effective authority;
+column normalization alone verifies only geometric separation of the
+two generalized directions.
+
+\subsection{Residual compensation under modal enrichment}
+\label{sm:enriched}
+The full retained-mode potential corresponding to
+\eqref{app:enriched-plant} is
+\begin{align}
+ V_N&=\tfrac12a^{(N)\mathsf T}\Omega_N^2a^{(N)}
+       +E_0g(\vartheta_N)\nonumber\\
+ &\quad+\mathcal R_N(a^{(N)}).
+ \label{sm:enriched-potential}
+\end{align}
+Its kinetic energy is $\dot a^{(N)\mathsf T}\dot a^{(N)}/2$.
+The quadratic magnetic bias is already in $\Omega_N^2$, so the same
+subtraction in $g$ avoids double counting. All potentials
+$\mathcal R_N$ in a comparison are restrictions of one specified
+full potential. The compatibility condition in the main text ensures
+that setting the high coordinates to zero recovers the original
+synthetic residual, without asserting that its continuation was
+identified experimentally.
+
+For the first two modal equations,
+\begin{align}
+ \Lambda^{-1}\Omega_2^2a_{1:2}&=\mathsf N X,\nonumber\\
+ \Lambda^{-1}E_0\boldsymbol t_{1:2}&=d,\nonumber\\
+ \Lambda^{-1}\nabla_{a_{1:2}}\mathcal R_N
+ &=\nabla R_*(X)+e_R^{(N)}.
+ \label{sm:enriched-projection}
+\end{align}
+Dividing their acceleration equation by $\Lambda$ and inserting
+$U_{\rm rec}=\widehat\gamma Y+\nabla\widehat R+e_{\rm port}$
+proves \eqref{app:enriched-closed-loop}. In particular,
+$\vartheta_N-\vartheta_2=\sum_{j=3}^Nt_ja_j$.
+If both angles lie in $[-\vartheta_{\max},\vartheta_{\max}]$, the
+mean-value theorem and $1-\cos s\le s^2/2$ give
+\begin{equation}
+ \|e_{\rm mag}^{(N)}\|
+ \le\tfrac12\|d\|\vartheta_{\max}^2
+                   |\vartheta_N-\vartheta_2|.
+ \label{sm:angle-defect-bound}
+\end{equation}
+A bound on high-mode motion is still needed to use this inequality.
+Sampling small angles on a two-mode trajectory does not supply it.
+
+For the declared residual $R_*(X)=\beta_*g(\vartheta_2)$, one concrete
+synthetic extension for the planned modal comparison is
+\begin{equation}
+ \mathcal R_N^{\rm ang}(a^{(N)})=E_0\beta_*g(\vartheta_N).
+ \label{sm:angle-residual-extension}
+\end{equation}
+It preserves the low-dimensional restriction and gives
+$e_R^{(N)}=-\beta_*e_{\rm mag}^{(N)}$. Thus the combined magnetic
+and residual difference is $(1+\beta_*)e_{\rm mag}^{(N)}$, even with
+perfect coefficient identification. As an isolating comparison, the
+alternative
+$\mathcal R_N^{\rm low}=E_0R_*(D_s^{-1}a_{1:2})$ gives
+$e_R^{(N)}=0$ and no residual force in the higher coordinates.
+These are different declared synthetic potentials, not equivalent
+consequences of the same two-mode observations. Neither higher-mode
+comparison has been executed in the present numerical record.
+
+Let $H_{0,N}$ omit $\mathcal R_N$ from the full retained energy.
+For the applied physical ports,
+\begin{align}
+ \dot H_{0,N}
+ &=-\alpha\|\dot a^{(N)}\|^2
+       -\dot a^{(N)\mathsf T}\nabla_a\mathcal R_N\nonumber\\
+ &\quad+F_{\rm app}\dot w(L)+\tau_{B,\rm app}\dot\vartheta_N.
+ \label{sm:enriched-power}
+\end{align}
+The power contributed by the residual must be included in a
+nominal-energy work bound. Alternatively, the augmented energy may be used after a
+suitable lower bound by bending energy has been established. Its
+nonnegative decomposition cannot be assumed from the two-mode
+residual ansatz.
+
+\subsection{A stronger exact realization of a conservative target}
+\label{sm:exact-lift}
+This construction uses known damping and exact target derivatives.
+It is retained as a conditional full-model result separate from the
+unchanged fitted feedback in \eqref{app:enriched-closed-loop}.
+For the nominal finite-element plant \eqref{mech:fe-plant}, retain all
+$N_f=64$ modes and define
+\begin{align}
+ \ddot a_j+\alpha\dot a_j+\omega_j^2a_j&=b_jF+t_jT,
+       \qquad j=1,\ldots,N_f,\nonumber\\
+ T&=E_0(\vartheta-\sin\vartheta)+\tau_B,\nonumber\\
+ \vartheta&=\sum_{j=1}^{N_f}t_ja_j.
+ \label{app:full-modal}
+\end{align}
+The symbol $T$ is a total modal moment, whereas $U$ remains the
+dimensionless generalized input. Equation~\eqref{app:full-modal}
+specifies the full plant for the following result; an arbitrary
+unmodelled force on omitted modes is not included in its hypotheses.
+
+Consider a real analytic target Hamiltonian $h_{\rm tar}(X,Y)$, which may
+contain momentum-dependent terms. With physical low-mode velocity
+$v_{1:2}=\dot a_{1:2}$, infer $Y$ from
+\begin{equation}
+ (h_{\rm tar})_Y(X,Y)=\omega_0^{-1}D_s^{-1}v_{1:2},
+ \qquad X=D_s^{-1}a_{1:2}.
+ \label{app:velocity-inversion}
+\end{equation}
+On a domain with positive definite $(h_{\rm tar})_{YY}$ and convex
+$Y$-fibres this relation is injective in $Y$ and locally invertible.
+The acceleration and port requests that reproduce the canonical target
+are
+\begin{align}
+ a^{\rm des}_{1:2,tt}
+ &=D_s\omega_0^2\bigl[
+     (h_{\rm tar})_{YX}(h_{\rm tar})_Y
+       -(h_{\rm tar})_{YY}(h_{\rm tar})_X\bigr],\nonumber\\
+ \binom{F}{T}
+ &=A_{\rm mag}^{-1}
+   \bigl[a^{\rm des}_{1:2,tt}+\alpha v_{1:2}
+                        +\Omega_2^2a_{1:2}\bigr],\nonumber\\
+ B_y&=\frac{T-E_0(\vartheta-\sin\vartheta)}{\mu\cos\vartheta}.
+ \label{app:full-feedback}
+\end{align}
+The actual full tip angle enters the last line. Substitution first
+enforces the desired low acceleration; differentiating
+\eqref{app:velocity-inversion} then recovers both canonical equations.
+
+\begin{proposition}[Conditional finite-element lift]
+\label{app:conditional-lift}
+Suppose $h_{\rm tar}$ has an analytic invariant embedded two-torus
+carrying a quasiperiodic flow, and the
+velocity map in \eqref{app:velocity-inversion} satisfies the stated
+positivity and fibre conditions on a neighbourhood of it. Assume
+$\alpha>0$, $A_{\rm mag}$ is invertible and the exact feedback
+\eqref{app:full-feedback} is available. If the resulting response graph
+lies inside the allowed angle and actuator domain, it is an invariant
+two-torus of \eqref{app:full-modal}. For each fixed low-mode orbit on
+this torus, higher-mode deviations decay exponentially while the
+closed-loop trajectory remains in that domain.
+\end{proposition}
+
+
+The feedback in \eqref{app:full-feedback} cancels the nominal full-angle
+remainder to impose a chosen low acceleration. It does not contain an
+arbitrary unknown full residual $\mathcal R_N$, and it is not obtained
+merely by applying the learned two-mode law to more modes. The result
+concerns a finite-dimensional plant; no infinite-dimensional beam
+limit or attraction of arbitrary low-mode initial conditions is
+asserted. The proof and its domain requirements follow below.
+
+\subsection{Proof and scope of the finite-element lift}
+\label{sm:lift}
+The proof uses the nominal full modal plant
+\eqref{app:full-modal}, known parameters and exact feedback.
+Let $\iota(\phi)=(X(\phi),Y(\phi))$ be the target torus, with
+$\phi\in(\mathbb R/2\pi\mathbb Z)^2$ and physical frequency $\Omega$.
+Its physical low-mode image is
+\begin{equation}
+ a_{1:2}=D_sX(\phi),\qquad
+ v_{1:2}=\omega_0D_s(h_{\rm tar})_Y(\iota(\phi)).
+ \label{sm:physical-embedding}
+\end{equation}
+If two points in this image have the same position, they have the same
+$X$. For distinct $Y_1,Y_2$ in the same convex fibre, write
+$\Delta Y=Y_1-Y_2$, $Y_s=Y_2+s\Delta Y$ and $h=h_{\rm tar}$. Then
+\begin{align}
+ &\Delta Y^{\mathsf T}[h_Y(X,Y_1)-h_Y(X,Y_2)]\nonumber\\
+ &\quad=\int_0^1
+ \Delta Y^{\mathsf T}h_{YY}(X,Y_s)\Delta Y\dd s>0.
+ \label{sm:velocity-injectivity}
+\end{align}
+Thus equality of the physical velocity also implies $Y_1=Y_2$.
+The differential of the velocity map is invertible in the $Y$
+directions, so it preserves the embedded low torus locally and
+globally on the stated domain.
+
+The requested $F,T$ in \eqref{app:full-feedback} depend only on the low
+physical state. The full tip angle enters solely in conversion from
+$T$ to $B_y$, which cancels the same nonlinear bias remainder in every
+modal equation. Each higher mode then has prescribed quasiperiodic
+forcing. For a real temporal frequency $\sigma$,
+\begin{equation}
+ D_j(\sigma)=\omega_j^2-\sigma^2+\mathrm i\alpha\sigma
+ \label{sm:stable-resolvent}
+\end{equation}
+cannot vanish: at $\sigma=0$ its real part is positive, and at nonzero
+$\sigma$ its imaginary part is nonzero. Its modulus tends to infinity
+as $|\sigma|\to\infty$, so its reciprocal is bounded on the real
+axis. Using the Fourier convention $e^{\mathrm i k\cdot\phi}$,
+the unique bounded higher-mode response therefore has coefficients
+\begin{equation}
+ a^*_{j,k}=
+ \frac{b_jF_k+t_jT_k}
+ {\omega_j^2-(k\cdot\Omega)^2+\mathrm i\alpha(k\cdot\Omega)},
+ \qquad j\ge3.
+ \label{app:response-coefficients}
+\end{equation}
+Consequently the exponentially decaying Fourier coefficients of
+$F,T$ remain exponentially decaying after multiplication by
+$D_j(k\cdot\Omega)^{-1}$. This establishes an analytic response
+for each of the finitely many higher modes.
+
+Differences from that response satisfy
+$\ddot z_j+\alpha\dot z_j+\omega_j^2z_j=0$ and decay exponentially.
+The low motion remains neutral along its target torus; no attraction
+of general low initial conditions follows. With $\alpha=0$, the
+resolvent may have resonances and this particular lifting argument
+does not apply. That distinction includes the zero-damping sensitivity
+scenario.
+
+The result requires the complete response graph and any considered
+startup transient to remain in the angle, sensing and actuator domain.
+It does not supply those bounds merely from the two-mode fit.
+In particular, the reduced synthetic potential residual is not a
+specified full-space model of omitted-mode forces. Extending the
+theorem to such forces requires an explicit full model and its
+corresponding estimates. Similarly, a governor that changes $F,T$
+breaks exact target realization even when it preserves clearance.
+
+\subsection{Whole-centreline energy bound and initialization}
+\label{sm:clearance}
+For $w\in H^2(0,L)$ with $w(0)=w_s(0)=0$,
+\begin{align}
+ |w(s)|^2
+ &\le\left(\int_0^s(s-\xi)^2\dd\xi\right)
+                \left(\int_0^s|w_{ss}|^2\dd\xi\right)\nonumber\\
+ &\le\frac{2s^3}{3EI}E_{\rm bend},\qquad
+ E_{\rm bend}=\frac{EI}{2}\int_0^L|w_{ss}|^2\dd s.
+ \label{sm:clearance-proof}
+\end{align}
+Since the kinetic energy includes a positive tip mass and inertia,
+and $E_0(1-\cos\vartheta)\ge0$, the nominal total energy satisfies
+$E\ge E_{\rm bend}$. Taking the supremum proves
+\eqref{app:energy-bound}. This also holds for conforming $C^1$
+Hermite displacement fields. The related slope estimate is
+\begin{equation}
+ \|w_s\|_\infty^2
+ \le L\int_0^L|w_{ss}|^2\dd s
+ \le\frac{2LE}{EI}.
+ \label{sm:slope-energy}
+\end{equation}
+These inequalities require a bound on the relevant total physical
+energy, not just on one modal amplitude or the tip displacement.
+
+The constant in \eqref{sm:clearance-proof} is sharp for the bending
+energy at the tip: equality is attained by a curvature proportional
+to $L-s$, the static tip-force shape. That equality case explains
+the familiar expression $E_c=3EIc^2/(2L^3)$ but does not restrict the
+inequality to static shapes.
+For the revised beam $E_c=10.0197171$ nJ.
+An energy cap $E_{\max}=0.95E_c=9.5187312$ nJ would imply
+$\|w\|_\infty\le\sqrt{0.95}\,c<c$.
+
+An initialization bound can use the full-state quadratic form
+\begin{equation}
+ Q(q,v)=\tfrac12v^{\mathsf T}M_fv+
+        \tfrac12q^{\mathsf T}K_bq.
+ \label{sm:initial-quadratic}
+\end{equation}
+Since $1-\cos\vartheta\le\vartheta^2/2$, $E(q,v)\le Q(q,v)$.
+If estimates $(\widehat q,\widehat v)$ satisfy
+$Q(q-\widehat q,v-\widehat v)\le\mathcal E_{\rm init}$, then
+\begin{equation}
+ E(q,v)\le
+ \left[\sqrt{Q(\widehat q,\widehat v)}
+                  +\sqrt{\mathcal E_{\rm init}}\right]^2.
+ \label{sm:initial-upper-bound}
+\end{equation}
+This follows from the triangle inequality for $\sqrt Q$.
+Tip-only measurements do not by themselves bound energy in unobserved
+bending or velocity components.
+
+For the stored nominal two-mode initial state
+$(X,Y)=(0.09,0.08,0.015,-0.01)$,
+direct substitution into $E_0h_0$ gives $12.6567207$ nJ.
+This exceeds $E_{\max}$, so the work-governor initialization condition
+has not been verified for the reported compensation runs. Their
+sampled centreline values can be below the comparison clearance
+without satisfying this sufficient energy condition. The tracking
+initialization belongs to the separate extension in
+Supplementary Section~\ref{sec:supp-tracking}.
+
+For a plant augmented by $R_*$, the nominal-energy derivative gains
+the power of its additional generalized force. Alternatively, one
+could use the augmented energy only after proving a suitable lower
+bound by bending energy. The synthetic residual alone is therefore
+not silently incorporated into the nominal clearance theorem.
+
+\subsection{Input-work governor and bounded implementation errors}
+\label{sm:work}
+For the nominal power identity and exact port measurements,
+\begin{equation}
+ E(t)-W(t)=E(0)-W(0)
+             -\int_0^t\alpha\dot q^{\mathsf T}M_f\dot q\dd s\le0.
+ \label{sm:work-ledger}
+\end{equation}
+The constraint in \eqref{app:work-governor} implies
+$\dot W\le\kappa(E_{\max}-W)$.
+With $W(0)<E_{\max}$, comparison gives
+$E_{\max}-W(t)\ge[E_{\max}-W(0)]e^{-\kappa t}$.
+The governor has a feasible zero active input whenever the prescribed
+bias itself is feasible. For a nonempty closed convex admissible port set containing zero and a
+positive definite scaled cost, its quadratic projection is unique.
+
+The same construction can accommodate deterministic error envelopes,
+provided they are supplied independently. Let the applied ports obey
+\begin{align}
+ F&=(1+g_F)u_F+e_F,\nonumber\\
+ B_y&=(1+g_B)u_B+e_B,\nonumber\\
+ |g_i|&\le\eta_i,\qquad |e_i|\le\epsilon_i.
+ \label{sm:port-errors}
+\end{align}
+For errors bounded by
+$|v_w-\widehat v_w|\le\delta_v$,
+$|\vartheta-\widehat\vartheta|\le\delta_\vartheta$ and
+$|\dot\vartheta-\widehat{\dot\vartheta}|\le\delta_\omega$, define
+\begin{align}
+ \widehat a_F&=\widehat v_w,\qquad &&\Delta_F=\delta_v,\nonumber\\
+ \widehat a_B&=\mu\cos\widehat\vartheta\,\widehat{\dot\vartheta},
+ &&\Delta_B=\mu(\delta_\omega+
+                   |\widehat{\dot\vartheta}|\delta_\vartheta).
+ \label{sm:power-estimation}
+\end{align}
+The cosine is one-Lipschitz, so $|a_i-\widehat a_i|\le\Delta_i$.
+A convex positively homogeneous upper bound on the non-additive port
+power is
+\begin{equation}
+ P^+(u)=\sum_{i\in\{F,B\}}
+ \left[\widehat a_i u_i+
+   \{\Delta_i+\eta_i(|\widehat a_i|+\Delta_i)\}|u_i|\right].
+ \label{sm:power-envelope}
+\end{equation}
+It contains no division by a measured velocity and satisfies
+$P^+(0)=0$.
+
+For $\alpha>0$, define inverse-mass coefficients
+$m_F=e_w^{\mathsf T}M_f^{-1}e_w$ and
+$m_\vartheta=e_\vartheta^{\mathsf T}M_f^{-1}e_\vartheta$.
+The additive generalized force
+$r_e=e_we_F+\mu e_\vartheta e_B\cos\vartheta$ obeys
+\begin{align}
+ r_e^{\mathsf T}v-\alpha v^{\mathsf T}M_fv
+ &\le\frac{r_e^{\mathsf T}M_f^{-1}r_e}{4\alpha}\le p_e,\nonumber\\
+ p_e&=\frac{(\epsilon_F\sqrt{m_F}
+                  +\mu\epsilon_B\sqrt{m_\vartheta})^2}{4\alpha}.
+ \label{sm:additive-power}
+\end{align}
+Completion of the square proves the first inequality, and the triangle
+inequality in the $M_f^{-1}$ norm proves the second.
+Thus $\dot E\le P^+(u)+p_e$.
+
+On a chosen horizon $[0,T_H]$, reserve $R_H=T_Hp_e$ and put
+$C_H=E_{\max}-R_H$. If $W(0)\ge E(0)$ and
+$W(0)<C_H$, integrate $\dot W=P^+(u)$ and impose
+\begin{equation}
+ P^+(u)\le\kappa(C_H-W),\qquad u\in\mathcal U(q).
+ \label{sm:robust-governor}
+\end{equation}
+Then, throughout $0\le t\le T_H$,
+\begin{equation}
+ E(t)\le W(t)+tp_e<C_H+R_H=E_{\max}.
+ \label{sm:robust-energy}
+\end{equation}
+The command set must reserve the stated gain and additive errors when
+enforcing actual actuator limits. If additive errors vanish, the
+reserve is zero and the exact-power argument extends to all time for
+$\alpha\ge0$. A nonzero constant additive-error allowance gives the
+stated finite-horizon condition, not an all-time conclusion.
+
+For sample-and-hold execution, a bound at one sampling instant is
+insufficient. If $P_k^+(u_k)$ bounds power throughout the hold interval
+of length $h_k$, the rule
+\begin{equation}
+ h_kP_k^+(u_k)\le C_H-W_k,\qquad
+ W_{k+1}=W_k+h_kP_k^+(u_k)
+ \label{sm:discrete-work}
+\end{equation}
+also bounds the energy within that interval. The error envelope must
+cover sensor age, hold age and command latency. For example, a known
+command slew bound $|\dot u_i|\le S_i$ and delay $d_i$ may be included
+by increasing $\epsilon_i$ by $(1+\eta_i)S_id_i$.
+These are conditional implementation bounds; no numerical sensor,
+latency or coil-current envelope has been calibrated for the revised
+benchmark. The reported runs test the ideal physical input conversion,
+while this work argument states what an energy-certified implementation
+would additionally have to satisfy.

@@ -1,0 +1,1318 @@
+{
+  "revision": "V10 + Direction I framework integration",
+  "created_at_utc": "2026-10-28T09:49:08.437797+00:00",
+  "included_files": 262,
+  "excludes": "Compiler logs, temporary builds, render PNGs, caches and this manifest itself.",
+  "files": [
+    {
+      "path": "README.txt",
+      "bytes": 6062,
+      "sha256": "bafa7baebd04cc03adf5e2ed0d8659c4d493adf8d0a6c94893924adbe154bce5"
+    },
+    {
+      "path": "V10_整合修订说明.txt",
+      "bytes": 3789,
+      "sha256": "8835adeb0f96f62b8225fa6524c811c9c18f29c6be05c4c823f61fc3a04d35e8"
+    },
+    {
+      "path": "V10_方案融合对照说明.txt",
+      "bytes": 3789,
+      "sha256": "8835adeb0f96f62b8225fa6524c811c9c18f29c6be05c4c823f61fc3a04d35e8"
+    },
+    {
+      "path": "build_pdfs.py",
+      "bytes": 7042,
+      "sha256": "22ec660cc2f65e75ad72c920a0e8276641cd889829eb15e82c85c9f45daec20f"
+    },
+    {
+      "path": "chinese/figures/framework_closed_loop_checks.pdf",
+      "bytes": 38533,
+      "sha256": "07896cdebbd8bd45ddb3071ae759984f5e888229a920254bed73d413b6838e50"
+    },
+    {
+      "path": "chinese/figures/framework_matrix_checks.pdf",
+      "bytes": 41046,
+      "sha256": "cdaa8148d6fc9bae9a9ebb32782c8ac6af08accee1137f5f2f4fd87b3b4aef14"
+    },
+    {
+      "path": "chinese/figures/new_baseline_results.pdf",
+      "bytes": 38073,
+      "sha256": "e9fbb34553ec5c96c1577b4ae00676fc0a612cfb535528eedeb2d7b0b4d06446"
+    },
+    {
+      "path": "chinese/figures/new_baseline_verification.pdf",
+      "bytes": 53922,
+      "sha256": "31fe9c1a5e225f4afcf71db8e151f408639f1c1c76e20c95cdecde12de8ef451"
+    },
+    {
+      "path": "chinese/layout_patch.tex",
+      "bytes": 1108,
+      "sha256": "b677aed38d0401c3969c89d701ff9c7ec9835be76fc624b0948af526a86a4d79"
+    },
+    {
+      "path": "chinese/main.tex",
+      "bytes": 2518,
+      "sha256": "11af6bc91e33eff2d313a2bf20bba98674b572e3c54b80fb22bd49f3f553cb6b"
+    },
+    {
+      "path": "chinese/main_xr.aux",
+      "bytes": 15207,
+      "sha256": "29176d3b64e6d3fd426c6d00ab70acbac9ad6d574377dc77521634fc4db6a382"
+    },
+    {
+      "path": "chinese/preamble.tex",
+      "bytes": 2731,
+      "sha256": "be7f621312d125d191437751ab301bf623ec72534170a2090640a3e349b79c1b"
+    },
+    {
+      "path": "chinese/sagej.cls",
+      "bytes": 15958,
+      "sha256": "3d355246afa097b6dc8b637ff49d74fccaf8886f9331b3a97bb1b0a3b22b9e23"
+    },
+    {
+      "path": "chinese/sections/analysis.tex",
+      "bytes": 16696,
+      "sha256": "0336dd0a3070ffdfbe5db1543251dfd03e71258a9ffb7797646f271d0ed6f5b6"
+    },
+    {
+      "path": "chinese/sections/application.tex",
+      "bytes": 13436,
+      "sha256": "05c880ebefe1d36fa607ca57edc33433d5a2e48ee00325b4a1d0d7c31518106e"
+    },
+    {
+      "path": "chinese/sections/background.tex",
+      "bytes": 8162,
+      "sha256": "f54d47216075a06bbaeff0eec97d14cf9f64a04a6067f5b69d59d24d90b20e7e"
+    },
+    {
+      "path": "chinese/sections/conclusion.tex",
+      "bytes": 2254,
+      "sha256": "588ddbfc17fd3cf77a5e0c36c5a819dbee952b273b84777eb09277fa036fa7d1"
+    },
+    {
+      "path": "chinese/sections/controlled_analysis.tex",
+      "bytes": 9417,
+      "sha256": "c01d6b13854f5bcd3299fdce93a3aa6e1768c403799cf33da7d70eb48a1fb524"
+    },
+    {
+      "path": "chinese/sections/endmatter.tex",
+      "bytes": 1690,
+      "sha256": "7839610f9ca0241a8fd857bc622c0a46cd9fc33caa6ee69ef081216f2b73d68e"
+    },
+    {
+      "path": "chinese/sections/extension_tracking_results.tex",
+      "bytes": 8211,
+      "sha256": "9d68dfbda2fe826cdd0337750c82e8ce6ea39899d7a42e16105caa494c1b80fd"
+    },
+    {
+      "path": "chinese/sections/extension_tracking_theory.tex",
+      "bytes": 7572,
+      "sha256": "44a776b9fcb85f33d874dd4b0c2a0b763f71634d91587b4883f3a757733a00c9"
+    },
+    {
+      "path": "chinese/sections/kam.tex",
+      "bytes": 14770,
+      "sha256": "4946980d19f4f65c64fbe5830f011b9e2fd1238821ab177d564acddbe047d167"
+    },
+    {
+      "path": "chinese/sections/mechanics.tex",
+      "bytes": 14246,
+      "sha256": "7fabad5d8ac896a0c10347754cf816e8a5b18cf92f618c5cb54cb47bd5b8e506"
+    },
+    {
+      "path": "chinese/sections/references.tex",
+      "bytes": 6351,
+      "sha256": "6ef6fac832bd75d9d2b479daf95ef8ee63f48ce4073cc13580efd6668fc276c5"
+    },
+    {
+      "path": "chinese/sections/structure.tex",
+      "bytes": 15770,
+      "sha256": "1f0995895898d9d47d2fa1eca4b2f2727b5991969b7426f618ca3c495d49bb03"
+    },
+    {
+      "path": "chinese/sections/supp_experiments.tex",
+      "bytes": 30352,
+      "sha256": "5fde3cdf1cfbbc9016070d3c65b2c2bf9008284d63abe60fbe54a159462aa0b0"
+    },
+    {
+      "path": "chinese/sections/supp_mechanics.tex",
+      "bytes": 32284,
+      "sha256": "2e8ca8cae60b87377b050dcfde86d0dabcadb0fe4839ccccac6f00c64b3647c4"
+    },
+    {
+      "path": "chinese/sections/supp_structure.tex",
+      "bytes": 28268,
+      "sha256": "74b59dc4661044c1a035bc7572ab726b234abcab811ed6455c31e1a7111274dd"
+    },
+    {
+      "path": "chinese/supplement.tex",
+      "bytes": 1979,
+      "sha256": "11031aad93932d0b2939501c55e15c4c5afc4a3d0e6e94fce2793bd7975999c9"
+    },
+    {
+      "path": "chinese/supplement_xr.aux",
+      "bytes": 17306,
+      "sha256": "d0430346e30bf9151a176f29841f4f979b20c9a2f6734b181d9c0138f1abd911"
+    },
+    {
+      "path": "english/figures/framework_closed_loop_checks.pdf",
+      "bytes": 21042,
+      "sha256": "a23520015861627aa3071bcf9343283451bb5eb1f2a20ac2941e838c72e20a42"
+    },
+    {
+      "path": "english/figures/framework_matrix_checks.pdf",
+      "bytes": 23078,
+      "sha256": "5b9f05e0a294c7e1b02505959ccc1c74a9fd870a7c802fb3b42558f08902d52e"
+    },
+    {
+      "path": "english/figures/new_baseline_results.pdf",
+      "bytes": 22173,
+      "sha256": "e93496ad3c8b98432b8f1881cde91164fcd26b2cf1afc1e5d72a6c585801eb9c"
+    },
+    {
+      "path": "english/figures/new_baseline_verification.pdf",
+      "bytes": 23249,
+      "sha256": "b277e562bfbd215eab3ce76a14ca645595309e52b90d8f85c3c399c4ebca0c19"
+    },
+    {
+      "path": "english/layout_patch.tex",
+      "bytes": 1106,
+      "sha256": "746f4a0f1ec080293b07fb4d6116cdaab5fbd04c8478c3934717808df7ca65d5"
+    },
+    {
+      "path": "english/main.tex",
+      "bytes": 3052,
+      "sha256": "180174ae55a768c980273c4fc1742cea5b482786f62f579bb79446547379b73a"
+    },
+    {
+      "path": "english/main_xr.aux",
+      "bytes": 17398,
+      "sha256": "c26fecd84e60b63bb25ba3c70eba850b211bf12d0f1d7ccdbc55a45603223f6e"
+    },
+    {
+      "path": "english/preamble.tex",
+      "bytes": 1440,
+      "sha256": "8cf9d58048b1feff8899754a71e289b11988029593e47699c0f9d78e68ad0f08"
+    },
+    {
+      "path": "english/sagej.cls",
+      "bytes": 15958,
+      "sha256": "3d355246afa097b6dc8b637ff49d74fccaf8886f9331b3a97bb1b0a3b22b9e23"
+    },
+    {
+      "path": "english/sections/analysis.tex",
+      "bytes": 18361,
+      "sha256": "1b9ab871927851e073488f246f2ec8abb6b0959fa6de44c544a8438d1cfc1264"
+    },
+    {
+      "path": "english/sections/application.tex",
+      "bytes": 14463,
+      "sha256": "4f3a54346949646fb699c36e5052b8d8959ad37f55c2e26aef6a0f184a7d3a1f"
+    },
+    {
+      "path": "english/sections/background.tex",
+      "bytes": 10302,
+      "sha256": "35d909d92e07299eae059aecde65db2507f4aa0819257c28420036427649c600"
+    },
+    {
+      "path": "english/sections/conclusion.tex",
+      "bytes": 2939,
+      "sha256": "3686c5c15e2d71dd44d79908d993bf58c3ed4262589883bf7c187e496b1aca77"
+    },
+    {
+      "path": "english/sections/controlled_analysis.tex",
+      "bytes": 10629,
+      "sha256": "c5ee1c63bd9b80802486f3be7b7a210b3b857f6ace6a2003b761174166c9caa6"
+    },
+    {
+      "path": "english/sections/endmatter.tex",
+      "bytes": 2068,
+      "sha256": "37ad93207906f0f3d50e3f8748be315629c7441d7848436447a359474ee197a9"
+    },
+    {
+      "path": "english/sections/extension_tracking_results.tex",
+      "bytes": 8922,
+      "sha256": "64d9e9ea981777647ca7ea72e7e2b9a9aef5214126d9a389b69285d2676b6850"
+    },
+    {
+      "path": "english/sections/extension_tracking_theory.tex",
+      "bytes": 8322,
+      "sha256": "119d66eb1278c5f15959d31891bff28af592c41dacaa07a572336d32d5a55144"
+    },
+    {
+      "path": "english/sections/kam.tex",
+      "bytes": 16871,
+      "sha256": "dd8624e6e0db34a2382d73d47b9545bbd989ca4025ccd063d3eb16ed189664af"
+    },
+    {
+      "path": "english/sections/mechanics.tex",
+      "bytes": 15712,
+      "sha256": "b0535fab18350cd5f35e126ee57a1ce8a40f37f81bc05132b12b3c1eefb96f9b"
+    },
+    {
+      "path": "english/sections/references.tex",
+      "bytes": 6351,
+      "sha256": "6ef6fac832bd75d9d2b479daf95ef8ee63f48ce4073cc13580efd6668fc276c5"
+    },
+    {
+      "path": "english/sections/structure.tex",
+      "bytes": 17757,
+      "sha256": "66d0a28086b69815af268c9148d119beace1d393d9a5d44bebb6b96a7a82267e"
+    },
+    {
+      "path": "english/sections/supp_experiments.tex",
+      "bytes": 33618,
+      "sha256": "ce1006086e0d03f0c4a628365dc610333fb1540b36af86b6614aedde041501a1"
+    },
+    {
+      "path": "english/sections/supp_mechanics.tex",
+      "bytes": 34618,
+      "sha256": "be44f8c35ebf88198f0569f566fc5fccbe38fca64663f89160cdb75fc27d594b"
+    },
+    {
+      "path": "english/sections/supp_structure.tex",
+      "bytes": 31217,
+      "sha256": "aee5940db1be366ab88b9cdd4daa0c167044b844ee1e7c11bf7f392a3861b594"
+    },
+    {
+      "path": "english/supplement.tex",
+      "bytes": 2240,
+      "sha256": "4698cf4d2a0ac05d0c7a52ca4a9d536df976f301fd50d03137686dd026c2a386"
+    },
+    {
+      "path": "english/supplement_xr.aux",
+      "bytes": 19555,
+      "sha256": "6642cb1e790c888a153dd9d28bd30804bd62d27577b65724edcf56f5fda8345f"
+    },
+    {
+      "path": "fonts/NotoSansCJKsc-Regular.otf",
+      "bytes": 16437364,
+      "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b"
+    },
+    {
+      "path": "fonts/NotoSerifCJKsc-Regular.otf",
+      "bytes": 24543080,
+      "sha256": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+    },
+    {
+      "path": "fonts/OFL.txt",
+      "bytes": 4301,
+      "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+    },
+    {
+      "path": "fonts/OFL_Serif.txt",
+      "bytes": 4301,
+      "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+    },
+    {
+      "path": "output/v10_Integrated_EN.pdf",
+      "bytes": 560966,
+      "sha256": "f3edf6bfbd321290b09616ebb2f971ba6726a1240ce32f386e14ee89d360d367"
+    },
+    {
+      "path": "output/v10_Integrated_EN_Supplement.pdf",
+      "bytes": 564906,
+      "sha256": "8e4a7ca8d514db801e73d55980069df0ff05272576f252106d78be399369ed05"
+    },
+    {
+      "path": "output/v10_Integrated_ZH.pdf",
+      "bytes": 564502,
+      "sha256": "35005860a32c4f9e2a80f96996882ab8b65915935f6e11bdfc813e973e09f3eb"
+    },
+    {
+      "path": "output/v10_Integrated_ZH_Supplement.pdf",
+      "bytes": 592420,
+      "sha256": "357bcb89dcfbdbc1ade1af1cc3c9fd5c4db9c8c21f223afb7d92f04a12d6e20d"
+    },
+    {
+      "path": "provenance/document_quality_checks.json",
+      "bytes": 3549,
+      "sha256": "3f716a3bfec889137030c0cd6b54ba2f4779b9b2435f12d901f3a00bb5e5965e"
+    },
+    {
+      "path": "provenance/english_master_freeze.json",
+      "bytes": 4228,
+      "sha256": "b9508ff5ec45019fad185ca344f00cf211065cfeabcf451da89f4839266d36e5"
+    },
+    {
+      "path": "provenance/english_master_freeze_initial.json",
+      "bytes": 3697,
+      "sha256": "17ed425135aba5632340cf1295f3107da631d4dad3e6f59e3d2848c1d4bd83ed"
+    },
+    {
+      "path": "provenance/final_source_comparison.json",
+      "bytes": 1959,
+      "sha256": "41a2a7f31cace83af40ad1fbeca0e4d78237df200791bd99a467673168e2aac2"
+    },
+    {
+      "path": "provenance/framework_mapping_validation.json",
+      "bytes": 307,
+      "sha256": "66260c4a8cebed52776f313f217811c5fb52625d4fbb17aa817fc22362102bd2"
+    },
+    {
+      "path": "provenance/inline_math_validation.json",
+      "bytes": 1629,
+      "sha256": "44975e57bf8a02a996357337fcb414f11e94d2c36b80fc4772027d638ce63e63"
+    },
+    {
+      "path": "provenance/integration_environment.json",
+      "bytes": 283,
+      "sha256": "4a8dec307a9fd5bebafe1d071153a0269a17f8309fa42e16637b934ae5129b18"
+    },
+    {
+      "path": "provenance/integration_patch.diff",
+      "bytes": 529232,
+      "sha256": "732a571c3a5f9c7bf588f91e8d638ff088e214faa37679966461cafd6739bf00"
+    },
+    {
+      "path": "provenance/manuscript_validation.json",
+      "bytes": 24267,
+      "sha256": "0489a60937fe359464d5d16881229f1132c1c754707e9898e7874b9b5e852e0f"
+    },
+    {
+      "path": "provenance/previous_english_master_freeze.json",
+      "bytes": 3088,
+      "sha256": "df3925f8190438c02efc0e8987af9af3c93fa3c5484f409b17c3e98939ad7be0"
+    },
+    {
+      "path": "provenance/previous_parameter_integration_patch.diff",
+      "bytes": 205109,
+      "sha256": "7d41d1119e410de55e065f0a42418e968279f95a3fba7c65c5533eb9bec24d70"
+    },
+    {
+      "path": "provenance/reference_catalog.tex",
+      "bytes": 8191,
+      "sha256": "aa6eb0f3fc743334fc2e398da64b67d907aaff37fe29e26eafeb906099ccd27e"
+    },
+    {
+      "path": "provenance/remote_head.json",
+      "bytes": 227,
+      "sha256": "4e5f3f3805091a65d31a52c334bbf30e343a677b0a45b0fb387f0392001d181c"
+    },
+    {
+      "path": "provenance/review_checks/mechanics_chinese_visual_review.json",
+      "bytes": 5516,
+      "sha256": "d41b0d38716cfbf8e09a47b08403092d9185a159e3fece753f1cfbbd551bea95"
+    },
+    {
+      "path": "provenance/review_checks/numerical_chinese_visual_review.json",
+      "bytes": 7333,
+      "sha256": "7970ebe0bc215272ebac47227c62ca47171bab4d648cd861ab77822f102ffeb9"
+    },
+    {
+      "path": "provenance/review_checks/numerical_english_visual_review.json",
+      "bytes": 8697,
+      "sha256": "3ea00292e64484475d392e777e11a561ab3eaa8d8c2c33b171f1691beb19494a"
+    },
+    {
+      "path": "provenance/review_checks/theory_chinese_visual_review.json",
+      "bytes": 6883,
+      "sha256": "7e7d3aadd3c85b7e43001d516c6efa20642dc783a34f56d2d90f8f620ebcaf10"
+    },
+    {
+      "path": "provenance/selected_framework.json",
+      "bytes": 469,
+      "sha256": "8c6803893dcf1af272b304ada1a25d30a241c32515ea5adcb35b6b630b2be930"
+    },
+    {
+      "path": "provenance/source_direction_one_framework.pdf",
+      "bytes": 489048,
+      "sha256": "54c62c29b2999300e2411bacc4867b3bc6a297db89e4893b78ae9bf8d3c73044"
+    },
+    {
+      "path": "provenance/tex_dependency_source.json",
+      "bytes": 329,
+      "sha256": "f71c3d5294a13c7acdd525f9222bb278699c217be7a13bac7319272e8134e8d7"
+    },
+    {
+      "path": "provenance/translation_terms.tsv",
+      "bytes": 1450,
+      "sha256": "e2994c3fec9546089227bec5ebe7a94ca0b6e917bbe7fd8178e1e6ef396306b1"
+    },
+    {
+      "path": "provenance/upstream_commit.txt",
+      "bytes": 104,
+      "sha256": "d2d9db4226d5aadaedbad4422f2b59240bea28fe776485ab5872b79a0c063423"
+    },
+    {
+      "path": "provenance/upstream_compare.json",
+      "bytes": 385,
+      "sha256": "e376de626e5cebc3da96588884609978b90f3d331c457c734f9e32bf2cdafe99"
+    },
+    {
+      "path": "provenance/数学论文_数值来源逐项校对.xlsx",
+      "bytes": 71626,
+      "sha256": "8beec1565f6d8ad85713ea5b0854797e47cbdba1fc51221f619dd32f8a155964"
+    },
+    {
+      "path": "reproduction/MANIFEST.json",
+      "bytes": 3625,
+      "sha256": "83385675e46109f591a8676bef98b418781ecf6636865eb09b2179339966fdae"
+    },
+    {
+      "path": "reproduction/experiments/README.md",
+      "bytes": 4380,
+      "sha256": "9ee1d6644df749305c1d471c80a7c2a3c296fab0993ead84c1ede25f1c87fa67"
+    },
+    {
+      "path": "reproduction/experiments/baseline_config.py",
+      "bytes": 5065,
+      "sha256": "7bdb257115686fe5c9f025d7fc7677e351a71f28453e8116f36aa34dd0dff206"
+    },
+    {
+      "path": "reproduction/experiments/control_audit_summary.json",
+      "bytes": 36881,
+      "sha256": "65cf8e206bc38fee0543d476813aaefb66455e28504e41cb587825102bfd1e5e"
+    },
+    {
+      "path": "reproduction/experiments/damping_sensitivity.py",
+      "bytes": 8046,
+      "sha256": "e5997e633d4a6a91f02f7f33cc780b48eda0529fec627e2db7341c306098a5b1"
+    },
+    {
+      "path": "reproduction/experiments/damping_sensitivity_results.json",
+      "bytes": 175491,
+      "sha256": "76a4ad091b38f51271ac08687bcae08030fbf60875f464158b6e26b036d01263"
+    },
+    {
+      "path": "reproduction/experiments/minimal_control_loop.py",
+      "bytes": 17349,
+      "sha256": "58caffc15104072873bf5bf524173f597d75a1baff11f19130a6e7f700507373"
+    },
+    {
+      "path": "reproduction/experiments/minimal_control_loop.svg",
+      "bytes": 57086,
+      "sha256": "61c2ebd1545cec58485a4d72d0a467f8086223817808f535034c8a9ecb44cec4"
+    },
+    {
+      "path": "reproduction/experiments/minimal_control_results.json",
+      "bytes": 28202,
+      "sha256": "dcf128d5ad062a80d525d9cde96d1e7d0eae657da7a2287a23455ed2df4b605d"
+    },
+    {
+      "path": "reproduction/experiments/route_b_shared_data.py",
+      "bytes": 18534,
+      "sha256": "5d4c0795c832944f995603322ed711a30d7109e255643d81e9522a14d27cae48"
+    },
+    {
+      "path": "reproduction/experiments/route_b_shared_results.json",
+      "bytes": 39585,
+      "sha256": "63c5453ee02288311878ed335008ca4aabe3be228be79fe31fc6537766075099"
+    },
+    {
+      "path": "reproduction/experiments/run_all.py",
+      "bytes": 581,
+      "sha256": "5bcee17bd60caebd8f451c9a0d8d1de180021aceb3ecc67e34487711ada5473d"
+    },
+    {
+      "path": "reproduction/experiments/summarize_results.py",
+      "bytes": 9808,
+      "sha256": "542ce33c4b1e360f5aa4a1317f4ca786753e545be7722610ce35a2a35517a5cc"
+    },
+    {
+      "path": "reproduction/framework_experiments/README.md",
+      "bytes": 5889,
+      "sha256": "833a9941c9a48cc22f06398430567643ac403970ccb4669b1c41c950cce54653"
+    },
+    {
+      "path": "reproduction/framework_experiments/algebraic_defect_results.json",
+      "bytes": 321433,
+      "sha256": "5a4a0e444bc37690ec9f7a9702662363da5ff942898336f73b16dc9cda39c0b6"
+    },
+    {
+      "path": "reproduction/framework_experiments/authoring/analysis.tex.in",
+      "bytes": 16999,
+      "sha256": "e9dfca6d6a1c781c425433c0797ab267b9e1d9ba8baaddfaf1cf9f7fdaa32019"
+    },
+    {
+      "path": "reproduction/framework_experiments/authoring/extension_tracking_results.tex.in",
+      "bytes": 7865,
+      "sha256": "ffd52695933d9b62abf3ebe24a565a1383a191c239f32a32f9e0268c0b9598d4"
+    },
+    {
+      "path": "reproduction/framework_experiments/authoring/supp_experiments_base.tex.in",
+      "bytes": 21468,
+      "sha256": "cdfec93d2f586abe445171ccc1c34d6b11d56cba25b53949f5b983912d713765"
+    },
+    {
+      "path": "reproduction/framework_experiments/authoring/supp_framework_protocol.tex.in",
+      "bytes": 8713,
+      "sha256": "6630362baab225e1d65dbe3c76744334e5610459e864fcebc26f4bcdccae2d73"
+    },
+    {
+      "path": "reproduction/framework_experiments/build_manuscript_assets.py",
+      "bytes": 15237,
+      "sha256": "9538a6a3d6ae2a3782be3765a158d32f5ef60c1e267b82e8483f089cfbf54b73"
+    },
+    {
+      "path": "reproduction/framework_experiments/closed_loop_convergence_results.json",
+      "bytes": 10049,
+      "sha256": "ada764a388281ff78d277bdce52e30c45297f3e57f89a3678672fbdb1180801c"
+    },
+    {
+      "path": "reproduction/framework_experiments/closed_loop_convergence_traces.npz",
+      "bytes": 1456744,
+      "sha256": "47093665c2eb1142713596f8211888feed1e6ca85542547c45e3ec43891e931c"
+    },
+    {
+      "path": "reproduction/framework_experiments/figure_data_en.json",
+      "bytes": 360560,
+      "sha256": "3adb350ca5afcf822c63ebfb94876f1bf569de0895fd197735ab7d22a7f733dc"
+    },
+    {
+      "path": "reproduction/framework_experiments/figure_data_zh.json",
+      "bytes": 362807,
+      "sha256": "d5f52cc415f2a685f746189ff0e2129959d9a4bdc81c086061ecf876a6a92ff4"
+    },
+    {
+      "path": "reproduction/framework_experiments/framework_common.py",
+      "bytes": 8089,
+      "sha256": "c31934c80b01c72a877ce7aa858663461a1dcb39d8e76c3c686305e7518d83c8"
+    },
+    {
+      "path": "reproduction/framework_experiments/framework_values.py",
+      "bytes": 18542,
+      "sha256": "a3f3a9e8478d081d3b656c63de5528f7ccc6a2bd0c563136c6057f5cf5404743"
+    },
+    {
+      "path": "reproduction/framework_experiments/matrix_structure_results.json",
+      "bytes": 29702,
+      "sha256": "cd508e1bc1ca024a29f250d2266b43e2a227849a2f15de46b680aeb696298b8a"
+    },
+    {
+      "path": "reproduction/framework_experiments/nonlinear_weighted_results.json",
+      "bytes": 15681,
+      "sha256": "5292a208e4659970b21c78ee7f0cb5d01992a36bbc2e8b04c093f1533e294882"
+    },
+    {
+      "path": "reproduction/framework_experiments/run_all.py",
+      "bytes": 18100,
+      "sha256": "91868f920d3f068d9e00cac22149402bda777d6ca72e4d31dfec28678bc48eb0"
+    },
+    {
+      "path": "reproduction/framework_experiments/supplement_figures.py",
+      "bytes": 7220,
+      "sha256": "c6215e36ee911478216d1670db387fc219e2aea1b1c4bb86b667e007def5d1c7"
+    },
+    {
+      "path": "reproduction/new_baseline.json",
+      "bytes": 73189,
+      "sha256": "2bac37b2f4444efc6a0ba742139fbf0b35e268e9f4f3597ba13a0793bc2049ac"
+    },
+    {
+      "path": "reproduction/parameter_section.tex",
+      "bytes": 4738,
+      "sha256": "383627c3b4753b01ee4e08e2cceb862a14c2a6f4fbba7197c4263916e739e133"
+    },
+    {
+      "path": "reproduction/parameter_sources.bib",
+      "bytes": 1591,
+      "sha256": "a6beab897dcb6a8fadc6b610d0302dd5aacf8927b0a74f0d4079c2cc5b1bc50e"
+    },
+    {
+      "path": "reproduction/reproduce_baseline.py",
+      "bytes": 19364,
+      "sha256": "b469c746c90b65497005198a5d0102a73110398751cae1985183be631d00e5ec"
+    },
+    {
+      "path": "reproduction/run_all.py",
+      "bytes": 429,
+      "sha256": "596c35dd464b762a837e6c2bb288d9db851e56d32de2ca8f6f062bed13911005"
+    },
+    {
+      "path": "reproduction/source_annotation_update.json",
+      "bytes": 2079,
+      "sha256": "00ff93b55b5fb7a3b33dfbe0d0a185f4b5c5febdc692253b4ad732f8f8349d6e"
+    },
+    {
+      "path": "reproduction/sources/damping_sources.json",
+      "bytes": 10682,
+      "sha256": "de534dad2a6df02785f17fcea1d9c6b26c27865dc097cf3886d788e24ac11e36"
+    },
+    {
+      "path": "reproduction/sources/material_magnet_sources.json",
+      "bytes": 12750,
+      "sha256": "a940e79dd5cb8f9d671518b3e8704681b86e6720f55c794acb1a87bf988d5f48"
+    },
+    {
+      "path": "reproduction/sources/missing_parameters_evidence.json",
+      "bytes": 19880,
+      "sha256": "32fc67e1958d4af72b2a336583ee7291dafb53fbeedd9f307a74f18f13836c47"
+    },
+    {
+      "path": "reproduction/sources/original_reference_model_spec.json",
+      "bytes": 2503,
+      "sha256": "fd18c090c9f58dac7a5813a5445b7f14c5409ec767c5cb9a4ec38dd2e883ae8c"
+    },
+    {
+      "path": "reproduction/sources/tong_francescon_field_sources.json",
+      "bytes": 30256,
+      "sha256": "b66305d92a0132b46d5943c5dd7377248aa0673fca98c04638d5be7850308771"
+    },
+    {
+      "path": "reproduction/sources/upstream_fixed_commit_manifest.json",
+      "bytes": 4043,
+      "sha256": "760447f2b640e93c38dfa28b662e5598bc0856469bb6d2322e80c6a7ba331844"
+    },
+    {
+      "path": "reproduction/参数依据与复算说明.txt",
+      "bytes": 8590,
+      "sha256": "870fc5748f952d4680b030730c99a90935ad3b813ca7a1a16219728033e4b2d0"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 46,
+      "sha256": "815360a00e0e1d7a128cade3de11b66d3fe997cbd6e2c69f8081eb9bc8b88197"
+    },
+    {
+      "path": "reviews/analysis_notes.txt",
+      "bytes": 3081,
+      "sha256": "a796630aefbb23ec13d477648b4b3d502d00629ee42e94df1c1c71d04ff61d27"
+    },
+    {
+      "path": "reviews/analysis_numeric_provenance.json",
+      "bytes": 24819,
+      "sha256": "4d44684469f5f4bb2582fa2537747a24c98ca338f90636d328619e25505a80f3"
+    },
+    {
+      "path": "reviews/analysis_source.tex.in",
+      "bytes": 19353,
+      "sha256": "ccc8dc019fa6ce6211250108fc0b1c89e600c27a2979e873654eeb81b62ce87a"
+    },
+    {
+      "path": "reviews/analysis_translation_checks.json",
+      "bytes": 5344,
+      "sha256": "5874560c00efa7000ec77ac9577c2c8b8cc7c3222dba619128602cd0876fe861"
+    },
+    {
+      "path": "reviews/analysis_translation_notes.txt",
+      "bytes": 1064,
+      "sha256": "bda8b7ece2957569c5dd382ddbeca7b4835c6ecdd68e3fd4829f04f28d2c3571"
+    },
+    {
+      "path": "reviews/build_analysis_assets.py",
+      "bytes": 315,
+      "sha256": "0cc3816194438438117b62a13cdc470bcdb228329725b62ce672fc7d0ea44166"
+    },
+    {
+      "path": "reviews/build_chinese_figures.py",
+      "bytes": 483,
+      "sha256": "3ae52461f2943757dd2da4273c2623df26dcc8e1812589ac1d2c8a853d989315"
+    },
+    {
+      "path": "reviews/build_framework_map.py",
+      "bytes": 3232,
+      "sha256": "e4755c241c246bde11e805f6b455a83763552d771577bd1b9a3a4fccb9dab522"
+    },
+    {
+      "path": "reviews/check_analysis_translation.py",
+      "bytes": 5675,
+      "sha256": "69452e5f2060f3987ef349e55c272e1efd406d5528c59f70e3f420c453215b58"
+    },
+    {
+      "path": "reviews/chinese_figure_provenance.json",
+      "bytes": 3461,
+      "sha256": "85ab7af128882194adbc3cb3ec523eec8b229eb0956f88f623e2b14e4bed2396"
+    },
+    {
+      "path": "reviews/framework_figure_equivalence.json",
+      "bytes": 1104,
+      "sha256": "9a0d6bfc463958fa42bad1eb55d5f56f319fd48ac000b728daf757d4eaacde37"
+    },
+    {
+      "path": "reviews/framework_integration_map.tsv",
+      "bytes": 20763,
+      "sha256": "c02efae20a137f6c668d5b182877621f3f0a61e72f9117b196e561c3f45b74cb"
+    },
+    {
+      "path": "reviews/framework_mechanics_map.tsv",
+      "bytes": 6321,
+      "sha256": "61251190eef8b12469c4cb5c864d458185d92a5b211120d5007864d0d4c90375"
+    },
+    {
+      "path": "reviews/framework_numeric_provenance.json",
+      "bytes": 37789,
+      "sha256": "c948b8f95e0c5ad8c4f42bb5c4ac3b0eba7fa19c1fa48d8d85a9a7ac082530a1"
+    },
+    {
+      "path": "reviews/framework_numerics_handoff.json",
+      "bytes": 587,
+      "sha256": "75dd21d6cfbcbd15e816212d75de8e9709a5ff53c4c61cf61ec1641699fabb47"
+    },
+    {
+      "path": "reviews/framework_numerics_map.tsv",
+      "bytes": 4721,
+      "sha256": "853f21369a70dc6aca905f538ac85ef4e5ce9c6853dfc46fc743d3795ca08024"
+    },
+    {
+      "path": "reviews/framework_theory_map.tsv",
+      "bytes": 4751,
+      "sha256": "b7adf548e57b31f97288778f13a4bc59802f81ee14848a43e2842838d875877c"
+    },
+    {
+      "path": "reviews/framework_translation_generation.json",
+      "bytes": 963,
+      "sha256": "355d28b3c77dd91e2c7d009a031b1a0f30ba7a0ea84e12701e298855fa2e5c52"
+    },
+    {
+      "path": "reviews/framework_translation_overrides.py",
+      "bytes": 30633,
+      "sha256": "658f12f2eb5e157ff17a885af1e75e3ca07d21e6fdcb61f88fbab8a0267c2803"
+    },
+    {
+      "path": "reviews/framework_translation_pending.json",
+      "bytes": 38988,
+      "sha256": "c425eac555716d01b22b16dac4c14208c039cbf03d8d49097bc90d240b096841"
+    },
+    {
+      "path": "reviews/historical/two_route_20261028/README.txt",
+      "bytes": 1056,
+      "sha256": "f2b9b40c9eb88e92785f8febd227f66ddaeb6a35c4001c851e0e9cb7fe4c32f7"
+    },
+    {
+      "path": "reviews/historical/two_route_20261028/analysis_notes.txt",
+      "bytes": 4826,
+      "sha256": "f637e4ca216d2f04cb96388d10062b244f900b6b3b8ee41eecbefb09819cfe55"
+    },
+    {
+      "path": "reviews/historical/two_route_20261028/analysis_numeric_provenance.json",
+      "bytes": 24819,
+      "sha256": "4d44684469f5f4bb2582fa2537747a24c98ca338f90636d328619e25505a80f3"
+    },
+    {
+      "path": "reviews/historical/two_route_20261028/analysis_source.tex.in",
+      "bytes": 19353,
+      "sha256": "ccc8dc019fa6ce6211250108fc0b1c89e600c27a2979e873654eeb81b62ce87a"
+    },
+    {
+      "path": "reviews/historical/two_route_20261028/analysis_translation_checks.json",
+      "bytes": 4498,
+      "sha256": "504f7bbf27eb7f5a01f5b1f8ea8c6b408b08470d2ff875d95977bf3cb0644908"
+    },
+    {
+      "path": "reviews/historical/two_route_20261028/analysis_translation_notes.txt",
+      "bytes": 2997,
+      "sha256": "783d26ff719844988334191a8cb20d99d61f4a5434f468d079a5872c98c2a795"
+    },
+    {
+      "path": "reviews/historical/two_route_20261028/build_analysis_assets.py",
+      "bytes": 24280,
+      "sha256": "4febb8a2cbe25c2c8a3c9d283b2d42fb8a9dc54d9bef8317647f6d00151e8ad6"
+    },
+    {
+      "path": "reviews/historical/two_route_20261028/build_chinese_figures.py",
+      "bytes": 7669,
+      "sha256": "58c957818160d6b84e377e4ae8de3b39d1018b6cdb42467cf11a005b23cac6c7"
+    },
+    {
+      "path": "reviews/historical/two_route_20261028/check_analysis_translation.py",
+      "bytes": 7254,
+      "sha256": "6521ad8b9a38a9fc61a81d858ca76faf51bc50322b25cc2dda847922e6f31a5d"
+    },
+    {
+      "path": "reviews/historical/two_route_20261028/chinese_figure_provenance.json",
+      "bytes": 3461,
+      "sha256": "85ab7af128882194adbc3cb3ec523eec8b229eb0956f88f623e2b14e4bed2396"
+    },
+    {
+      "path": "reviews/historical/two_route_20261028/structure_formula_checks.json",
+      "bytes": 809,
+      "sha256": "5cf6342def2e580396297424833dbfa7654f66a36186dd15676a4e0769863c8b"
+    },
+    {
+      "path": "reviews/historical/two_route_20261028/structure_formula_checks.py",
+      "bytes": 3974,
+      "sha256": "cb95f0959e9953e4c0accfb21dbc3b6701bcdba3e524147eea147ecf6a6f488e"
+    },
+    {
+      "path": "reviews/historical/two_route_20261028/structure_notes.txt",
+      "bytes": 7163,
+      "sha256": "59c63f3ab4dc935ef5ec3f3d0b25b2f6d0d2fca8c29fb181a1aeb4cb74b1ceb1"
+    },
+    {
+      "path": "reviews/historical/two_route_20261028/supp_experiments_source.tex.in",
+      "bytes": 23714,
+      "sha256": "43366aa796bdbd99ec83de4e229d58595f282a15ea45bdb929e1d5be127beb1c"
+    },
+    {
+      "path": "reviews/historical/two_route_20261028/translation_structure_notes.txt",
+      "bytes": 3815,
+      "sha256": "49837fbf66141457643cfa7f80c7e0962c059058b683f0f4cf89e313f41b9faa"
+    },
+    {
+      "path": "reviews/legacy_migration.tsv",
+      "bytes": 11931,
+      "sha256": "2ad01f3d85dec72c909bae0bac71fffacb1a0e631575844ec32557641b438b57"
+    },
+    {
+      "path": "reviews/mechanics_notes.txt",
+      "bytes": 9048,
+      "sha256": "8a045bcc114a05fdf770677ab89535a967d4b27ffa397f69e110f9827f7fa9fa"
+    },
+    {
+      "path": "reviews/numeric_translation_reuse.json",
+      "bytes": 30139,
+      "sha256": "7fe2ba33be481f067e6cd4893f0fa98e09bd4223cc6fc43aa86d83a5571a03c3"
+    },
+    {
+      "path": "reviews/post_freeze_reference_corrections.json",
+      "bytes": 8897,
+      "sha256": "4365c946640720c6cfb34112a684b5e211870cef568ffb26ce6fedf2a5b30ed7"
+    },
+    {
+      "path": "reviews/structure_formula_checks.json",
+      "bytes": 14011,
+      "sha256": "aed8312a4e2f49db584c9c85f291e2aff4c39071f04adb47544d409e465ae68a"
+    },
+    {
+      "path": "reviews/structure_formula_checks.py",
+      "bytes": 17889,
+      "sha256": "e41d2850948940b1a9e8566d89789d39119c69f7dc827a430e23d94d61123507"
+    },
+    {
+      "path": "reviews/structure_notes.txt",
+      "bytes": 9920,
+      "sha256": "80e9632bfed73e480cee346999d3980e014d7533644a785de7a1389823a63c06"
+    },
+    {
+      "path": "reviews/supp_experiments_source.tex.in",
+      "bytes": 23714,
+      "sha256": "43366aa796bdbd99ec83de4e229d58595f282a15ea45bdb929e1d5be127beb1c"
+    },
+    {
+      "path": "reviews/translate_framework_numerics.py",
+      "bytes": 2748,
+      "sha256": "fb1d3f7b1a693f278cae21eecf80c5b5ae071dd2b4d779f4b715e374b0965136"
+    },
+    {
+      "path": "reviews/translation_mechanics_notes.txt",
+      "bytes": 5466,
+      "sha256": "a3e52fd688c0d09618980857b20a8c9e5db400eaf81c04d32525036f4b406886"
+    },
+    {
+      "path": "reviews/translation_structure_notes.txt",
+      "bytes": 5838,
+      "sha256": "95ba2933ae5a5c3e4552894a46241af9bba1d4aa0f32e15228a4c290dc1c9ac6"
+    },
+    {
+      "path": "reviews/validate_manuscripts.py",
+      "bytes": 5643,
+      "sha256": "ea734cc00b45e46ca52701c941307fc55269eb969d8804cd2188fafb2a029854"
+    },
+    {
+      "path": "texmf/source/latex/ctex/ctex-zhconv-make.lua",
+      "bytes": 4099,
+      "sha256": "13436ed5b8fa45f6ee1708cbaed03d4e3c2ebd3bcc02a9de4a6668f2e445e78e"
+    },
+    {
+      "path": "texmf/source/latex/ctex/ctex.dtx",
+      "bytes": 457152,
+      "sha256": "f580a06cc1ca6f8db0e68a9f844b9ed28e64feaaaf4b7a300bb55327978fe88d"
+    },
+    {
+      "path": "texmf/source/latex/ctex/ctex.ins",
+      "bytes": 17657,
+      "sha256": "96ff80dae0e3e806cdbabab1a13bcb18463d14938bbdfa8744dd7ef8fa12cd49"
+    },
+    {
+      "path": "texmf/source/latex/ctex/ctexpunct.spa",
+      "bytes": 9752,
+      "sha256": "4bb757e8fedf3bb861a8fd22ba4855c06cf7fdd86a0f822fcc328e745598a724"
+    },
+    {
+      "path": "texmf/source/xelatex/xecjk/xeCJK.dtx",
+      "bytes": 518377,
+      "sha256": "fe88920c919261ee30286a13264e4b4198e7d3bf9edd2e5066fe5bbec46df54f"
+    },
+    {
+      "path": "texmf/source/xelatex/xecjk/xeCJK.ins",
+      "bytes": 7936,
+      "sha256": "1028d9de2c2f8e036dd4fd1ef83093535ed84648920a710fee0e04c4d9d68a9e"
+    },
+    {
+      "path": "texmf/tex/generic/ctex/ctex-spa-macro.tex",
+      "bytes": 2870,
+      "sha256": "f07f09b9d914284533e153abf0b44301cee8478195a65b45257f91f00d06b565"
+    },
+    {
+      "path": "texmf/tex/generic/ctex/ctex-spa-make.tex",
+      "bytes": 2885,
+      "sha256": "7215e19384cd6ed923a12c07e3c4cd7e92a3915ac7d5619c60b33f2a0862a262"
+    },
+    {
+      "path": "texmf/tex/generic/ctex/ctxdocstrip.tex",
+      "bytes": 2894,
+      "sha256": "424e0e0d75ed144d5dfdf0b67a97325074b7897fcd191bf3e07d3abc2af7aba6"
+    },
+    {
+      "path": "texmf/tex/generic/ctex/zhmap/ctex-zhmap-adobe.tex",
+      "bytes": 4230,
+      "sha256": "8480c84ca52fca3dac77869e708cf827b26281a1a0967212c28ecbf8afb627b2"
+    },
+    {
+      "path": "texmf/tex/generic/ctex/zhmap/ctex-zhmap-fandol.tex",
+      "bytes": 4159,
+      "sha256": "2d28637708399a47aed32bed4f384f6b02d106b0c900e00848a30ed6b9433fcf"
+    },
+    {
+      "path": "texmf/tex/generic/ctex/zhmap/ctex-zhmap-founder.tex",
+      "bytes": 5516,
+      "sha256": "a683ef305f69f3c6283fd27d849681986bf16711eba0a7ebc32e2065ab52d722"
+    },
+    {
+      "path": "texmf/tex/generic/ctex/zhmap/ctex-zhmap-mac.tex",
+      "bytes": 4608,
+      "sha256": "fef8faf8034cf90a44f3dc6f96b27f1cf21c39dc5a6de6f8f2106e3ea38fd79a"
+    },
+    {
+      "path": "texmf/tex/generic/ctex/zhmap/ctex-zhmap-ubuntu.tex",
+      "bytes": 4113,
+      "sha256": "f4b6fd62da43310c1793098ffb05b50cdd2aed72d2444548f88c54b3e258a39d"
+    },
+    {
+      "path": "texmf/tex/generic/ctex/zhmap/ctex-zhmap-windows.tex",
+      "bytes": 5818,
+      "sha256": "84c93a6974c42fbf6a63156ccb5d96301cc2d31b358feac088806409e7711959"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/config/ctex-name-gbk.cfg",
+      "bytes": 1730,
+      "sha256": "38dc197ebda4b6b4a7f76f8587359e42beac46bc9ecf1f8c56bc5e459a860299"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/config/ctex-name-utf8.cfg",
+      "bytes": 1770,
+      "sha256": "778bb83f395cf149e33db9980ff12946927c778faeaecd69fba0ebf50326f587"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/config/ctex.cfg",
+      "bytes": 1230,
+      "sha256": "4a8ec7a1657410266fafa163ce656c923b714c53818e99dbeafbc08ac99709b8"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/config/ctexbackend.cfg",
+      "bytes": 1904,
+      "sha256": "ac452bc753fc440c29e73a0319f17148524412b3e67478e2012dbc50af0e605f"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/config/ctexopts.cfg",
+      "bytes": 1291,
+      "sha256": "57def444aad796d361c44f4b3be4f8221042df015de9fdc97010fb7f842b39ef"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/ctex-c5size.clo",
+      "bytes": 2616,
+      "sha256": "bbcb9f53fee79765958176b580622721feb7b8691454f5ba0b68baae52d300e8"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/ctex-cs4size.clo",
+      "bytes": 2637,
+      "sha256": "fd540d05bd7689c022b2410b4563fb5891c1eeffd5a017b3c9a7a9f9aa538a51"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/ctex.sty",
+      "bytes": 32650,
+      "sha256": "dd868cf1e82815ff9544e222c5eebe528dfc7799b69f7fe1762646ebe23dcd6b"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/ctexart.cls",
+      "bytes": 55219,
+      "sha256": "822d4a8c15e964c068c28be77c026ab891c4ab5b224503546c2994ac077efd93"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/ctexbeamer.cls",
+      "bytes": 39382,
+      "sha256": "6f731df93444ca969bd155f58eac78cccf6d92e2e381b9f72fcedb9666b5069b"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/ctexbook.cls",
+      "bytes": 58747,
+      "sha256": "1d75b5d67fa79f771326658235498a64c94c0de2bd4538c16f7ba49169ecb65b"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/ctexcap.sty",
+      "bytes": 1838,
+      "sha256": "30ef22fbaa8ee3864e752ab089433e06dbdfed2c16256b1113063afaded21491"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/ctexheading.sty",
+      "bytes": 8606,
+      "sha256": "c5f40e1dfa9e63e30d04620035cc4a6c0f025e4bf729196b54725d1e2618fa23"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/ctexhook.sty",
+      "bytes": 6505,
+      "sha256": "40e83f5ed34900870bb14fbe09dc24440bb98bc01813e28c59575c69134ffae6"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/ctexpatch.sty",
+      "bytes": 8448,
+      "sha256": "9f7980ed971ea9ee22583726d4760ebcba5a6e4cc2edc1576f2b71b613d64c29"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/ctexrep.cls",
+      "bytes": 58604,
+      "sha256": "aa28de78a0bee0ac97c9ab4f5da7ea2c83276d207a2ff2e6d5224297343515da"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/ctexsize.sty",
+      "bytes": 10396,
+      "sha256": "a6032914268ff42c0d721bbb4070ad5598f7f8aa36046f8315a14b3932770fad"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/ctexspa.def",
+      "bytes": 10881,
+      "sha256": "87b85009ae75ed01e10f018c29a38c488df9eb988bcf09401e4b614fb7326294"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/ctxdoc.cls",
+      "bytes": 30714,
+      "sha256": "f0d71fe9ae4f0491bb64f88520958145a9a7709a38a51c9988d826f10cc25a81"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/dictionary/translator-theorem-dictionary-ChineseGBK.dict",
+      "bytes": 4320,
+      "sha256": "4bdeca75d75051f5531e08e1e357ce07c63fbb2f22d45fd2d048c1ab99ac2ced"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/dictionary/translator-theorem-dictionary-ChineseUTF8.dict",
+      "bytes": 4520,
+      "sha256": "5dabaa80bfaa77148829cf23f5e4d109ea7bac7960dbb2d456fba3596c1aa1d6"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/engine/ctex-engine-aptex.def",
+      "bytes": 10160,
+      "sha256": "14fd2307f8f81d8cd4e601186dd0a5fcedf54642d86c7a0745be8ab080bfdd72"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/engine/ctex-engine-luatex.def",
+      "bytes": 46544,
+      "sha256": "bf13ba55952bcf8785777dab84c8a9f00b65029aee8049b533f50bcfeb4049ff"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/engine/ctex-engine-pdftex.def",
+      "bytes": 20297,
+      "sha256": "ef2c0374bf6748a86790c903d1bf809269146a2a1720519cd5fe7d61c2cdc106"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/engine/ctex-engine-uptex.def",
+      "bytes": 10155,
+      "sha256": "2530bcc8a42d5063db0eafd48df2300456f0066e643b0d721e4eca99cc311fea"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/engine/ctex-engine-xetex.def",
+      "bytes": 4760,
+      "sha256": "23ca571bb8631b994e041e09b9a8dadf3ba5b75240e1774f6f61b97589287d0e"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/fd/c19rm.fd",
+      "bytes": 1839,
+      "sha256": "15dbc27abc9cc59f7088cb38f3bb2219527eabdf4d41e41d5ad206379fbe2025"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/fd/c19sf.fd",
+      "bytes": 1833,
+      "sha256": "f607aefc069d2a85b7af531d12de2952e67143be1c3f9623fa2918a87c4e10c0"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/fd/c19tt.fd",
+      "bytes": 1824,
+      "sha256": "ce1ed4e7e671e526cb872d1ea5a20efc80e83aeb845bc22a6e6a9021539877b9"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/fd/c70rm.fd",
+      "bytes": 1820,
+      "sha256": "b131d54e23a2d6a2c0fb207f1b336d04da293d8dfbd56846d615fcc3b41eb64b"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/fd/c70sf.fd",
+      "bytes": 1814,
+      "sha256": "f08707e8fb2a4b86c5e17d9de561db307e6f90760ccdfb0e9238e95e0cb9494d"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/fd/c70tt.fd",
+      "bytes": 1805,
+      "sha256": "1838b28607b682895568973b39944dc1e720e5dab716c744621c3ba8aaff5790"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/fd/jt2zhrm.fd",
+      "bytes": 1365,
+      "sha256": "60da18a1863ea71ccabece1877639c92a3fd433b04772b68d3ce0f30c012eed7"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/fd/jt2zhsf.fd",
+      "bytes": 1305,
+      "sha256": "2fbda08a2c6e8c3e5997149d37fa8eecfd7bc5c7eeacafbbb281054cf1256157"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/fd/jt2zhtt.fd",
+      "bytes": 1196,
+      "sha256": "4e8e13172ec5472ea88aed1f8aae2b1d0224b889d577bc3e05f104b9052ed8f3"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/fd/jy2zhrm.fd",
+      "bytes": 1365,
+      "sha256": "254208299993bcefe804bd2b28f79178d98b4c12daba33850fd061e7c2388405"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/fd/jy2zhsf.fd",
+      "bytes": 1305,
+      "sha256": "9423fcde946caf95e6fcb18d967554027204b80af0ae1e80714b2c5dd49b88e8"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/fd/jy2zhtt.fd",
+      "bytes": 1196,
+      "sha256": "7b7c8cc5e84f3782d4fa43a8189ff6417c491607a3ae3a55a4cc7403f7f5f5ed"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/fontset/ctex-fontset-adobe.def",
+      "bytes": 4143,
+      "sha256": "f150471619d50e26ab4cead5a40608ea65b9c7d4ce5a593ced7671b33da63108"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/fontset/ctex-fontset-fandol.def",
+      "bytes": 4554,
+      "sha256": "b40e53afbc885efc048c7a54cb3cea41f236eebe3c5164b12b60cacfa1193897"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/fontset/ctex-fontset-founder.def",
+      "bytes": 4431,
+      "sha256": "329b6479fb33e4fc2f99de5cdbf0ea37331ea406bab5dff227a9fb4b89bd5faa"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/fontset/ctex-fontset-mac.def",
+      "bytes": 1427,
+      "sha256": "8b76f3297eab28b12e1f035642a8f72414b12a4274d73a2f969df78949f087f1"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/fontset/ctex-fontset-macnew.def",
+      "bytes": 5350,
+      "sha256": "1e158c46ab8e2e6b25de021b2c0185b8a5320b6341ef22c813dfd5c0db274b7f"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/fontset/ctex-fontset-macold.def",
+      "bytes": 2068,
+      "sha256": "722acd8b61e0a783288f96be56dcfb50794b88b8596978b8b7beed1cf36bda8c"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/fontset/ctex-fontset-ubuntu.def",
+      "bytes": 3984,
+      "sha256": "c37bb5d74fb723fc04fc840d4e7d74e2018b21d998abb861eaa795b346f20678"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/fontset/ctex-fontset-windows.def",
+      "bytes": 4952,
+      "sha256": "2b96fb8a96e08299b552cf32b6e8a173f66143dfc7142d294ea280329d924b7d"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/heading/ctex-heading-article.def",
+      "bytes": 24735,
+      "sha256": "1c4d48dee90c9b50179287e6b5c50d150fbd6a4bbb71a9f693dd2841bc71aec6"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/heading/ctex-heading-beamer.def",
+      "bytes": 9077,
+      "sha256": "64f95fe9222915613d639231866c25acbc4229cfe838c6605150d0a4d66e3f75"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/heading/ctex-heading-book.def",
+      "bytes": 28253,
+      "sha256": "6763abf46497a8b827d548c0b8d5fd58dc6a036782d07592738924c86088af20"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/heading/ctex-heading-report.def",
+      "bytes": 28118,
+      "sha256": "04942ad3f262c1fe911a5545213895a1f21f37b860d82026bd9d8289e511fea9"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/scheme/ctex-scheme-chinese-article.def",
+      "bytes": 4622,
+      "sha256": "cb6461f507b40cbc30f910403081fec6932ce412abcf6e4865e0c88e35596fc4"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/scheme/ctex-scheme-chinese-beamer.def",
+      "bytes": 2785,
+      "sha256": "bef8408806f6f508c78fcbfaebd017459dad13985e11d8f8805a835ba7d771f6"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/scheme/ctex-scheme-chinese-book.def",
+      "bytes": 5190,
+      "sha256": "88f02b637c6861f82036dafaec946870373d9955a7b4d58c45ae4ec299c5f98a"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/scheme/ctex-scheme-chinese-report.def",
+      "bytes": 5200,
+      "sha256": "e714dd8d4e0996ea205e6df90ac0da4c9751e55d10ca1a0afc35f6b3fc7af8e2"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/scheme/ctex-scheme-chinese.def",
+      "bytes": 2309,
+      "sha256": "06dff6fd73d34cfa6d65d6c20f2ef043844f4076b9ea7cff91554f582587f4b9"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/scheme/ctex-scheme-plain-article.def",
+      "bytes": 4089,
+      "sha256": "096c5920e40dbbbc3986d7212bdffb76c490dc9532f0b6c380346c0fb747172f"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/scheme/ctex-scheme-plain-beamer.def",
+      "bytes": 2414,
+      "sha256": "c8f37202a337aba58589513d4d95609af4ea662593be00238adb043c17b4b5ed"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/scheme/ctex-scheme-plain-book.def",
+      "bytes": 4802,
+      "sha256": "97e21f0ed3fc14703dadf956dcde4df130bacf427c34542bbff82f1c7d2b9d75"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/scheme/ctex-scheme-plain-report.def",
+      "bytes": 4812,
+      "sha256": "d17e99bf07e99ea134038fe3967fbdef9b9c23fc24da0eec2c105a6cca7409d2"
+    },
+    {
+      "path": "texmf/tex/latex/ctex/scheme/ctex-scheme-plain.def",
+      "bytes": 1277,
+      "sha256": "8d49bcc2f5f63ce60f5c292cb840bb1a8f6c49e348db8892d67cf36529e5eabf"
+    },
+    {
+      "path": "texmf/tex/luatex/ctex/ctex-zhconv-index.lua",
+      "bytes": 966719,
+      "sha256": "c3cc5956530d21f71b148af587c42adbd90df5df28974937455612b0b1fbab7c"
+    },
+    {
+      "path": "texmf/tex/luatex/ctex/ctex-zhconv.lua",
+      "bytes": 6180,
+      "sha256": "b1f73e869c96c73781c9a0beee2d002c3fd05f96df3f88696c0048cadb4d0178"
+    },
+    {
+      "path": "texmf/tex/xelatex/xecjk/xeCJK-listings.sty",
+      "bytes": 13930,
+      "sha256": "1f5a7af47fb1137dabe3a2f700e0664fce3f49eb604c5132f45f52e8138ecac9"
+    },
+    {
+      "path": "texmf/tex/xelatex/xecjk/xeCJK.cfg",
+      "bytes": 408,
+      "sha256": "d4fd750245a9702da242938637ece678b37862da73d1cf7d15df931828482a5c"
+    },
+    {
+      "path": "texmf/tex/xelatex/xecjk/xeCJK.sty",
+      "bytes": 183137,
+      "sha256": "c61660692befbcec0b52dfb3e2e69b360cbd3e187e07565d722a296df8e893ef"
+    },
+    {
+      "path": "texmf/tex/xelatex/xecjk/xeCJKfntef.sty",
+      "bytes": 39577,
+      "sha256": "3388a7a7d4c88c533d22cc6dbcb0e7b18b6bd1411376bfa5be6c3e5d6df9a35d"
+    },
+    {
+      "path": "texmf/tex/xelatex/xecjk/xunicode-addon.sty",
+      "bytes": 26486,
+      "sha256": "35a1503066b259f4c603aac031777cc86e1b14ae9aa793199ed2502ae079a026"
+    },
+    {
+      "path": "texmf/tex/xelatex/xecjk/xunicode-extra.def",
+      "bytes": 61684,
+      "sha256": "2563fa4faadcdb8c39de05fb9f98431685f617dd08a5cad81da2b60d1c59646c"
+    }
+  ]
+}

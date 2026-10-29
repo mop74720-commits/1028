@@ -1,0 +1,189 @@
+{
+  "scope": "Current P1/P2/P3 and S4 translation equivalence; no compilation, experiment run or figure write.",
+  "mode": "three sections and four figures",
+  "sections": {
+    "analysis.tex": {
+      "english_sha256": "1b9ab871927851e073488f246f2ec8abb6b0959fa6de44c544a8438d1cfc1264",
+      "chinese_sha256": "0336dd0a3070ffdfbe5db1543251dfd03e71258a9ffb7797646f271d0ed6f5b6",
+      "comparisons": {
+        "display_math": {
+          "identical": true,
+          "english_count": 7,
+          "chinese_count": 7
+        },
+        "inline_math": {
+          "identical": true,
+          "english_count": 188,
+          "chinese_count": 188
+        },
+        "references": {
+          "identical": true,
+          "english_count": 36,
+          "chinese_count": 36
+        },
+        "environment_order": {
+          "identical": true,
+          "english_count": 44,
+          "chinese_count": 44
+        },
+        "verbatim": {
+          "identical": true,
+          "english_count": 0,
+          "chinese_count": 0
+        },
+        "numeric_tokens_in_order": {
+          "identical": true,
+          "english_count": 388,
+          "chinese_count": 388
+        },
+        "code_identifiers": {
+          "identical": true,
+          "english_count": 0,
+          "chinese_count": 0
+        },
+        "figure_paths": {
+          "identical": true,
+          "english_count": 2,
+          "chinese_count": 2
+        },
+        "paragraph_math": {
+          "identical": true,
+          "english_count": 25,
+          "chinese_count": 25
+        }
+      }
+    },
+    "supp_experiments.tex": {
+      "english_sha256": "ce1006086e0d03f0c4a628365dc610333fb1540b36af86b6614aedde041501a1",
+      "chinese_sha256": "5fde3cdf1cfbbc9016070d3c65b2c2bf9008284d63abe60fbe54a159462aa0b0",
+      "comparisons": {
+        "display_math": {
+          "identical": true,
+          "english_count": 7,
+          "chinese_count": 7
+        },
+        "inline_math": {
+          "identical": true,
+          "english_count": 405,
+          "chinese_count": 405
+        },
+        "references": {
+          "identical": true,
+          "english_count": 47,
+          "chinese_count": 47
+        },
+        "environment_order": {
+          "identical": true,
+          "english_count": 78,
+          "chinese_count": 78
+        },
+        "verbatim": {
+          "identical": true,
+          "english_count": 3,
+          "chinese_count": 3
+        },
+        "numeric_tokens_in_order": {
+          "identical": true,
+          "english_count": 701,
+          "chinese_count": 701
+        },
+        "code_identifiers": {
+          "identical": true,
+          "english_count": 13,
+          "chinese_count": 13
+        },
+        "figure_paths": {
+          "identical": true,
+          "english_count": 0,
+          "chinese_count": 0
+        },
+        "paragraph_math": {
+          "identical": true,
+          "english_count": 47,
+          "chinese_count": 47
+        }
+      }
+    },
+    "extension_tracking_results.tex": {
+      "english_sha256": "64d9e9ea981777647ca7ea72e7e2b9a9aef5214126d9a389b69285d2676b6850",
+      "chinese_sha256": "9d68dfbda2fe826cdd0337750c82e8ce6ea39899d7a42e16105caa494c1b80fd",
+      "comparisons": {
+        "display_math": {
+          "identical": true,
+          "english_count": 1,
+          "chinese_count": 1
+        },
+        "inline_math": {
+          "identical": true,
+          "english_count": 109,
+          "chinese_count": 109
+        },
+        "references": {
+          "identical": true,
+          "english_count": 16,
+          "chinese_count": 16
+        },
+        "environment_order": {
+          "identical": true,
+          "english_count": 18,
+          "chinese_count": 18
+        },
+        "verbatim": {
+          "identical": true,
+          "english_count": 0,
+          "chinese_count": 0
+        },
+        "numeric_tokens_in_order": {
+          "identical": true,
+          "english_count": 207,
+          "chinese_count": 207
+        },
+        "code_identifiers": {
+          "identical": true,
+          "english_count": 0,
+          "chinese_count": 0
+        },
+        "figure_paths": {
+          "identical": true,
+          "english_count": 2,
+          "chinese_count": 2
+        },
+        "paragraph_math": {
+          "identical": true,
+          "english_count": 13,
+          "chinese_count": 13
+        }
+      }
+    }
+  },
+  "figures": {
+    "numerical_data_artists_scales_ticks_styles_identical": true,
+    "figure_names": [
+      "framework_matrix_checks.pdf",
+      "framework_closed_loop_checks.pdf",
+      "new_baseline_results.pdf",
+      "new_baseline_verification.pdf"
+    ],
+    "panel_count": 11,
+    "compared": [
+      "figure size",
+      "data arrays",
+      "axis scales and limits",
+      "tick values",
+      "line colors and widths",
+      "markers",
+      "bar geometry",
+      "hatches"
+    ],
+    "intentionally_excluded": [
+      "translated labels",
+      "CJK font encoding",
+      "automatic text-width layout adjustments"
+    ]
+  },
+  "renderer_files": {
+    "build_manuscript_assets.py": "9538a6a3d6ae2a3782be3765a158d32f5ef60c1e267b82e8483f089cfbf54b73",
+    "supplement_figures.py": "c6215e36ee911478216d1670db387fc219e2aea1b1c4bb86b667e007def5d1c7"
+  },
+  "layout_review": "Separate root PDF review; this program does not compile LaTeX."
+}

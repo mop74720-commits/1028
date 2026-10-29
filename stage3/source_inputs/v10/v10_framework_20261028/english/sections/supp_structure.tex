@@ -1,0 +1,445 @@
+\subsection{Compatibility of the Birkhoff representation}
+\label{ss:birkhoff}
+
+Let $\alpha_t=\mathcal R(z,t)^{\mathsf T}\dd z$ and let the coefficient matrix of $\dd\alpha_t$ be $\mathcal K_{ij}=\partial_i\mathcal R_j-\partial_j\mathcal R_i$. With this convention, the canonical one-form $p^{\mathsf T}\dd q$ has $\mathcal K=-J$. If $b=\mathcal K\dot z$, the representation \eqref{struct:birkhoff} implies
+\begin{equation}\label{ss:birkhoff-compatibility}
+\begin{aligned}
+ \partial_k\mathcal K_{ij}+\partial_i\mathcal K_{jk}
+                       +\partial_j\mathcal K_{ki}&=0,\\
+ \partial_t\mathcal K_{ij}&=\partial_i b_j-\partial_j b_i.
+\end{aligned}
+\end{equation}
+These identities, together with $\det\mathcal K\ne0$, explain why a dissipative force cannot be inserted into a fixed canonical two-form by freely assigning a scalar Birkhoff function \citep{su2007,fengqin}.
+
+For a sufficiently smooth local flow $\Phi_{t,t_0}$ of a general vector field $v(z,t)$, a local existence construction is available. Choose an initial one-form $\alpha_0$ with nondegenerate $\dd\alpha_0$ and transport it by the inverse flow:
+\[
+ \alpha_t=(\Phi_{t,t_0}^{-1})^*\alpha_0,
+ \qquad\mathcal B=\alpha_t(v).
+\]
+The transport equation $\partial_t\alpha_t+\mathcal L_v\alpha_t=0$ and Cartan's identity give $\mathcal K v=\dd\mathcal B+\partial_t\alpha_t$. This is a local, flow-dependent representation, not a computable Hamiltonian reduction supplied by the mechanical coefficients alone. It neither establishes a global analytic chart nor an autonomous integrable reference.
+
+The proportional-damping choice in \eqref{struct:weighted-hamiltonian} is constructive. Indeed,
+\[
+ -aJ\binom{\dot q}{\dot p}
+ =\binom{aH_q+\dot a\,p}{aH_p},
+\]
+so $\dot q=H_p$ and $\dot p=-H_q-\alpha p$. The substitution $\Pi=ap$ gives
+$\dot q=\widetilde H_\Pi$ and $\dot\Pi=-\widetilde H_q$ even for $M(q)$. For constant mass, applying the time-midpoint rule to
+$\widetilde H=e^{-\alpha t}\Pi^{\mathsf T}M^{-1}\Pi/2+e^{\alpha t}V(q)$
+and using $e^{-\alpha t_m}\bar\Pi=(r p_++r^{-1}p_-)/2$ proves \eqref{struct:weighted-midpoint}. The coordinate map $T_t(q,p)=(q,e^{\alpha t}p)$ satisfies $DT_t^{\mathsf T}JDT_t=e^{\alpha t}J$. Symplecticity in $(q,\Pi)$ therefore pulls back to
+\[
+ D\Phi^{\mathsf T}\mathcal K(t_+)D\Phi=\mathcal K(t_-),
+ \qquad D\Phi^{\mathsf T}JD\Phi=e^{-\alpha\Delta_t}J.
+\]
+Explicit time dependence must be evaluated at $t_m$ for the stated second-order method. For variable mass the complete $\widetilde H_q$ is retained, rather than reusing the constant-mass update.
+
+\subsection{Endpoint projection, dimensions and the implicit branch}
+\label{ss:projection}
+
+Write $Z=(q,\Pi)\in\R^{2n}$ and introduce
+\[
+ T_0=\diag(I_n,-I_n),\qquad
+ \mathsf E=\begin{pmatrix}0&I_n\\I_n&0\end{pmatrix}.
+\]
+The endpoint transformation is
+$\widehat w=\mathsf E(Z_+-Z_-)$,
+$w=T_0(Z_++Z_-)/2$; thus
+\begin{equation}\label{ss:endpoint-matrix}
+ D\alpha=\begin{pmatrix}
+ \mathsf E&-\mathsf E\\T_0/2&T_0/2
+ \end{pmatrix}\in\R^{4n\times4n}.
+\end{equation}
+The compatibility identity can be checked without assuming a generating function in advance:
+\[
+ \widehat w^{\mathsf T}\dd w
+ = (\Pi_+-\Pi_-)^{\mathsf T}\dd\bar q
+       -(q_+-q_-)^{\mathsf T}\dd\bar\Pi.
+\]
+Taking its exterior derivative gives
+$\dd\lambda_{Z_+}-\dd\lambda_{Z_-}$, with
+$\lambda_Z=\Pi^{\mathsf T}\dd q$.
+Thus it is closed on a symplectic graph between fixed time endpoints. Once the projection onto $w$ is locally invertible, the Poincar\'e lemma supplies the scalar generator in Proposition~\ref{struct:endpoint-proposition}. This verifies both compatibility and the particular projection used by the construction.
+
+On a flow or discrete graph $Z_+=\Phi(Z_-)$,
+\begin{equation}\label{ss:endpoint-projection}
+ D_{Z_-}w=\tfrac12T_0(D\Phi+I_{2n}).
+\end{equation}
+At zero step this is $T_0$, so it is locally invertible for sufficiently small steps. The phase-flow Jacobian $D\Phi$ is $2n\times2n$ and is unrelated to the size of the mechanical mass matrix. The original endpoint variables are recovered jointly from
+$q_\pm=Q\pm\widehat P/2$ and
+$\Pi_\pm=-P\pm\widehat Q/2$.
+Invertibility of the graph function $\widehat w=f(w)$ is not required: at zero step it is identically zero and $f_w=0$.
+
+In the endpoint convention, the time-midpoint generator is
+$\varphi_{\Delta_t}(Q,P)=-\Delta_t\widetilde H(Q,-P,t_m)$.
+Because $P=-\bar\Pi$, its two derivatives give
+$\Pi_+-\Pi_-=-\Delta_t\widetilde H_q$ and
+$q_+-q_-=\Delta_t\widetilde H_\Pi$ with the correct physical signs. The autonomous convention $S_\Delta$ uses
+$\varphi_\Delta(Q,P)=-S_\Delta(Q,-P)$.
+The generator therefore changes together with the lifted momentum; the physical $p$ and lifted $\Pi$ cannot be interchanged in only part of the derivation.
+
+For the central method, let
+$\mathcal F(x_+;x_-)=x_+-x_--J\nabla S_\Delta((x_++x_-)/2)$.
+Its Newton matrix and exact map derivative are
+\begin{equation}\label{ss:newton-matrix}
+\begin{aligned}
+ \partial_{x_+}\mathcal F&=I_{2n}-C_\Delta,\qquad
+ C_\Delta=\tfrac12J S_\Delta''(m),\\
+ D\Psi_\Delta&=(I_{2n}-C_\Delta)^{-1}(I_{2n}+C_\Delta).
+\end{aligned}
+\end{equation}
+Invertibility of $I-C_\Delta$ gives a locally unique branch by the implicit function theorem, and analyticity of the data gives analyticity of that branch. Equation~\eqref{ss:endpoint-projection} then becomes
+$D_{x_-}w=T_0(I-C_\Delta)^{-1}$.
+The endpoint projection and implicit solve therefore share the same local nondegeneracy condition. Implementations solve the Newton linear system; no explicit matrix inverse is needed.
+
+\subsection{Noncommuting-matrix elimination in ordinary midpoint}
+\label{ss:matrix}
+
+For constant matrices, the physical equations are
+$\dot q=M^{-1}p$ and
+$\dot p=-Kq-CM^{-1}p+F+U$, with $M$ positive definite and $K$ symmetric. Ordinary midpoint gives
+\[
+ \bar q=q_-+\frac{\Delta_t}{4}M^{-1}(p_++p_-).
+\]
+Substitution into the momentum equation yields
+\begin{equation}\label{ss:matrix-elimination}
+\begin{aligned}
+ E_{\Delta_t}&=\tfrac{\Delta_t^2}{4}KM^{-1}
+                            +\tfrac{\Delta_t}{2}CM^{-1},\\
+ (I_n+E_{\Delta_t})p_+
+   &=(I_n-E_{\Delta_t})p_--\Delta_tKq_-\\
+   &\quad+\Delta_t(F_m+U_m),\\
+ q_+&=q_-+\tfrac{\Delta_t}{2}M^{-1}(p_++p_-).
+\end{aligned}
+\end{equation}
+The order $KM^{-1}$ follows from substitution and cannot be interchanged with $M^{-1}K$. A state-dependent input still makes the update implicit. If $M=M(q)$, the momentum equation also contains the vector
+\[
+ (b_M)_i=-\tfrac12\bar p^{\mathsf T}
+       [\partial_{q_i}M^{-1}(\bar q)]\bar p.
+\]
+It is then preferable to solve the full $2n$-dimensional midpoint residual. This inertial contribution is not a scalar denominator correction.
+
+In balanced coordinates the effective kinetic mass is $M_{\rm eff}=\mathsf N^{-1}$, so $M_{\rm eff}^{-1}Y=\mathsf N Y$ and proportional damping corresponds to $C_{\rm eff}=\gamma\mathsf N^{-1}$. The mass in mass-normalized physical modal coordinates is instead $I_n$, while the assembled finite-element mass acts on all unconstrained beam degrees of freedom. These three matrices describe different coordinate systems.
+
+\subsection{Exact symplecticity of the central map}
+\label{ss:exact-symplectic}
+
+Since $S_\Delta''$ is symmetric, $C_\Delta^{\mathsf T}J+JC_\Delta=0$. Expanding the two products gives
+\[
+ (I-C_\Delta)^{\mathsf T}J(I-C_\Delta)
+ =(I+C_\Delta)^{\mathsf T}J(I+C_\Delta).
+\]
+The factors $I\pm C_\Delta$ commute, so \eqref{ss:newton-matrix} gives $D\Psi_\Delta^{\mathsf T}JD\Psi_\Delta=J$. To check the stronger exact property, set $\delta X=X_+-X_-$ and $\delta Y=Y_+-Y_-$. The central relation says $\delta X=S_{\bar Y}$ and $\delta Y=-S_{\bar X}$. Therefore
+\begin{equation}\label{ss:primitive}
+\begin{aligned}
+ Y_+^{\mathsf T}\dd X_+-Y_-^{\mathsf T}\dd X_-
+ &=\bar Y^{\mathsf T}\dd(\delta X)+\delta Y^{\mathsf T}\dd\bar X\\
+ &=\dd(\bar Y^{\mathsf T}\delta X-S_\Delta).
+\end{aligned}
+\end{equation}
+The primitive is single valued wherever the branch and $S_\Delta$ are single valued. In the polar chart used for normal form,
+\[
+ \sum_jY_j\dd X_j
+   =\sum_j I_j\dd\phi_j
+      -\dd\sum_j I_j\sin\phi_j\cos\phi_j.
+\]
+The difference is the differential of a periodic function. Subsequent normal-form transformations are Hamiltonian flows of single-valued generators. Consequently, the conjugated central map is exact symplectic also on the action--angle annulus, which is the global one-form condition needed for a periodic mixed generating function.
+
+\subsection{Derivation of the fourth-order central generating function}
+\label{ss:central4}
+
+Consider an autonomous smooth vector field $f=J\nabla h$, and let $x_0$ be the exact state at the temporal midpoint of a step. Taylor expansion gives
+\begin{equation}\label{ss:central-taylor}
+\begin{aligned}
+ m&=x_0+\tfrac{\Delta^2}{8}f'f(x_0)+O(\Delta^4),\\
+ x_+-x_-&=\Delta f(x_0)\\
+   &\quad+\tfrac{\Delta^3}{24}
+         \{f''[f,f]+(f')^2f\}(x_0)+O(\Delta^5).
+\end{aligned}
+\end{equation}
+Here $m$ is the average of endpoint states, not the temporal midpoint. Eliminating $x_0$ yields
+\begin{equation}\label{ss:central-correction}
+\begin{aligned}
+ x_+-x_-={}&\Delta f(m)\\
+ &+\tfrac{\Delta^3}{24}\{f''[f,f]-2(f')^2f\}(m)+O(\Delta^5).
+\end{aligned}
+\end{equation}
+For $A=h''$ and $Q=f^{\mathsf T}Af$, differentiation gives
+\[
+\begin{aligned}
+ \nabla Q&=h^{(3)}[f,f]-2AJA f,\\
+ J\nabla Q&=f''[f,f]-2(f')^2f.
+\end{aligned}
+\]
+This proves \eqref{struct:central4}. On a fixed finite interval with bounded derivatives and a stable implicit branch, the local fifth-order defect gives fourth-order global convergence. Since $S_{-\Delta}^{[4]}=-S_\Delta^{[4]}$, the method is also symmetric under reversal of endpoints and step sign. These are properties of this autonomous Hamiltonian method; they do not assert fourth order for a midpoint discretization of a general time-dependent feedback law.
+
+For $h=\nu(X^2+Y^2)/2$, the central coefficient is
+$a=\nu\Delta+(\nu\Delta)^3/12$.
+Its angle advance in the positive-frequency convention is
+\begin{equation}\label{ss:harmonic-phase}
+ 2\arctan(a/2)=\nu\Delta-\frac{(\nu\Delta)^5}{120}+O(\Delta^7).
+\end{equation}
+Midpoint instead has angle $2\arctan(\nu\Delta/2)$ and a cubic local phase defect. This test distinguishes the two schemes without conflating exact symplecticity with exact energy or phase conservation for nonlinear systems.
+
+\subsection{Explicit Central4 derivatives for the magnetic potential}
+\label{ss:central4-magnetic-section}
+
+For $h_\kappa=Y^{\mathsf T}\mathsf N Y/2+V_\kappa(X)$, set
+$V_\kappa=X^{\mathsf T}\mathsf N X/2+\kappa g(d^{\mathsf T}X)$,
+$u=\nabla V_\kappa$, $A=\nabla^2V_\kappa$, $v=\mathsf N Y$,
+$s=d^{\mathsf T}X$ and $b=d^{\mathsf T}v$. Then
+$f^{\mathsf T}h_\kappa''f=v^{\mathsf T}Av+u^{\mathsf T}\mathsf N u$.
+Differentiation gives the directly implementable central increment
+\begin{equation}\label{ss:central4-magnetic}
+\begin{aligned}
+ J\nabla S_\Delta^{[4]}
+ &=\Delta\binom{v}{-u}+\frac{\Delta^3}{24}\binom{Q}{P},\\
+ Q&=2\mathsf N A v,\\
+ P&=\kappa\sin(s)b^2d-2A\mathsf N u.
+\end{aligned}
+\end{equation}
+The correction Jacobian has blocks
+\begin{equation}\label{ss:central4-magnetic-jacobian}
+\begin{aligned}
+ Q_X&=-2\kappa\sin(s)b(\mathsf N d)d^{\mathsf T},\\
+ Q_Y&=2\mathsf N A\mathsf N,\\
+ P_X&=\kappa[\cos(s)b^2\\
+    &\quad+2\sin(s)d^{\mathsf T}\mathsf N u]dd^{\mathsf T}-2A\mathsf N A,\\
+ P_Y&=2\kappa\sin(s)b\,d(\mathsf N d)^{\mathsf T}.
+\end{aligned}
+\end{equation}
+These formulas follow from
+$A=\mathsf N+\kappa(\cos s-1)dd^{\mathsf T}$ and its derivative; they retain every cross-mode term. They apply to the specified autonomous conservative Hamiltonian. For a broader learned residual the complete derivatives of that residual must replace the single-feature formulas. A damping force is not included by adding it after this central update.
+
+\subsection{Implicit solvability and accumulation of algebraic residuals}
+\label{ss:inexact-solve}
+
+For the ordinary controlled midpoint equation, fix $x_k$ and define
+$\mathcal F_k(z)=z-x_k-\Delta f_c((z+x_k)/2,\tau_m)$.
+On a convex local neighborhood where $f_c$ has Lipschitz constant $L_c$, let $a=\Delta L_c/2<1$. The fixed-point map is a contraction when the step is small enough to map that neighborhood into itself. If $z_*$ is its exact root, subtraction of $\mathcal F_k(z_*)=0$ from $\mathcal F_k(z)=r$ yields
+\[
+ (1-a)\norm{z-z_*}\le\norm r.
+\]
+The same subtraction for two different inputs gives the stability factor
+$q_\Delta=(1+a)/(1-a)$ for the exact one-step map. For the exact and computed trajectories in Proposition~\ref{ctrl:convergence}, iteration gives the explicit weighted sum
+\begin{equation}\label{ss:residual-sum}
+\begin{aligned}
+ e_N\le{}&q_\Delta^N e_0\\
+ &+\frac{1}{1-a}\sum_{j=0}^{N-1}
+       q_\Delta^{N-1-j}(C\Delta^3+\eta_j).
+\end{aligned}
+\end{equation}
+With $N\Delta\le T$ and $a$ bounded away from one,
+$q_\Delta^N\le e^{C_LT}$, giving the uniform bound in
+\eqref{ctrl:global-error}. For constant $L_c=0$, the same formula holds with $q_\Delta=1$. The result permits fixed nonzero $\delta R$ and $\delta\gamma$: these change $f_c$ and its constants, not the order of the midpoint approximation to that same field.
+
+For a central generator satisfying $S_\Delta''=O(\Delta)$ on the neighborhood, the implicit derivative is $I-JS_\Delta''/2$. A uniform inverse bound and a one-step stability factor $1+O(\Delta)$ give the same residual accumulation argument. The autonomous Central4 construction has a local defect $O(\Delta^5)$ under bounded derivatives of sufficient order, so
+\[
+ \max_{k\Delta\le T}e_k
+       \le C_T\bigl(e_0+\Delta^4+\eta_\Delta/\Delta\bigr).
+\]
+In particular, $O(\Delta^5)$ per-step residuals retain fourth order. Neither this estimate nor a small reported residual makes the inexact computed step an exact symplectic map.
+
+The weighted method has the corresponding second-order finite-time result through its canonical lift. On a fixed interval, $T_\tau(X,Y)=(X,e^{\delta\gamma\tau}Y)$ and its inverse have bounded norms. Complete time-midpoint discretization of the lifted Hamiltonian obeys the preceding local and global argument, and transforming back changes only constants depending on those bounds. Residuals in the physical weighted equations must first be converted to the lifted increment equation; the conversion is bounded on that interval. This does not give a time-uniform error bound as $T$ tends to infinity.
+
+The residual $r_k$ in \eqref{ctrl:solve-residual} is an algebraic increment defect. Observation and quadrature defects in the identification equation are different quantities and enter the coefficient bound in \eqref{kam:integral-bound}. A bounded but nonconservative actuation error affects the realized vector field, while a zero-order hold changes the feedback map. These quantities are not added to an analytic Hamiltonian norm unless their conservative representation has first been justified.
+
+\subsection{Analytic extension of a complex energy readout}
+\label{ss:analytic-extension}
+
+For a real energy $h(X,Y)$, use
+$\zeta=(X+\mathrm iY)/\sqrt2$ and
+$\chi=(X-\mathrm iY)/\sqrt2$ as independent complex variables after continuation. The physical slice is $\chi=\bar\zeta$. If a frozen network expression $F(\zeta,\chi)$ is holomorphic on a domain invariant under $(\zeta,\chi)\mapsto(\bar\chi,\bar\zeta)$, define
+\begin{equation}\label{ss:conjugate-extension}
+ F^\sharp(\zeta,\chi)=\overline{F(\bar\chi,\bar\zeta)},
+ \qquad h^{\C}=\tfrac12(F+F^\sharp).
+\end{equation}
+Conjugating the frozen coefficients makes $F^\sharp$ holomorphic. Restriction to the physical slice gives $h=\Rea F$, while differentiation off that slice is holomorphic differentiation. This construction explicitly separates a real-valued readout from a nonholomorphic operation on extended variables. A real-valued holomorphic function of $\zeta$ alone would be constant on a connected open complex domain, so that is not the required energy representation.
+
+For a general physical force $f$ in the momentum equation, the normalized complex dynamics and power identity are
+\begin{equation}\label{ss:complex-force}
+ \zeta'=-\mathrm i h_\chi^{\C}+\frac{\mathrm i}{\sqrt2}f,
+ \qquad h'=h_Y^{\mathsf T}f
+\end{equation}
+for an autonomous energy. If a residual symbol is defined by $\zeta'=-\mathrm i h_\chi^{\C}+\mathcal P/2$, its normalization is $\mathcal P=\sqrt2\,\mathrm i f$. A scalar real potential that generates this arbitrary force through a second energy branch need not exist: the corresponding derivatives must satisfy the mixed-derivative compatibility conditions. Directly decoding the force or a specified Rayleigh dissipation avoids imposing an unwarranted gradient representation.
+
+On a complex polydisc, Cauchy's formula bounds each first derivative on a smaller polydisc by the energy sup norm divided by the lost width. Thus a force norm can be inferred from an analytic energy bound after explicit domain reduction. The reverse implication from a finite sample of real gradients to a complex sup norm does not follow. The finite-feature estimate \eqref{kam:analytic-error} supplies the needed extension through known basis functions.
+
+\subsection{From linear canonical normalization to quartic normal form}
+\label{ss:normalform}
+
+At a quiescent stable equilibrium with $M_*\succ0$ and potential Hessian $K_*\succ0$, diagonalize
+$E^{\mathsf T}M_*^{-1/2}K_*M_*^{-1/2}E=\Omega^2$ with $E$ orthogonal. The transformation
+\[
+ q-q_*=A Q,\qquad p=A^{-\mathsf T}P,
+ \qquad A=M_*^{-1/2}E\Omega^{-1/2}
+\]
+is canonical and gives $H_2=\tfrac12\sum_j\omega_j(Q_j^2+P_j^2)$. This is the general source of the balanced quadratic form; physical mass and stiffness modes alone are not nonlinear action variables.
+
+For $H=H_2+H_3+H_4+\cdots$, solve
+$\{H_2,W_3\}=-H_3$ when the required cubic divisors are nonzero. Since the pullback by the time-one flow of $W_3$ is
+$H\circ\Phi_{W_3}^1=H+\{H,W_3\}+\tfrac12\{\{H,W_3\},W_3\}+\cdots$,
+the quartic term after removing $H_3$ is
+\begin{equation}\label{ss:cubic-correction}
+ Z_4=\left\langle H_4+\tfrac12\{H_3,W_3\}\right\rangle.
+\end{equation}
+The nonaveraged quartic part is removed by a second homological equation. This formula fixes both the sign and the contribution of cubic terms; simply averaging the original $H_4$ would in general be insufficient. The generic remainder starts at degree five. In the present even magnetic model, $H_3=0$ and the remainder starts at degree six.
+
+To compute its quartic term, expand
+\begin{equation}\label{ss:quartic-polynomial}
+\begin{aligned}
+ h_{4,\kappa}=-\frac{\kappa}{24}\bigl(&d_1^4X_1^4
+    +4d_1^3d_2X_1^3X_2+6d_1^2d_2^2X_1^2X_2^2\\
+    &+4d_1d_2^3X_1X_2^3+d_2^4X_2^4\bigr).
+\end{aligned}
+\end{equation}
+Independent angle averages give
+$\langle X_j^4\rangle=3I_j^2/2$,
+$\langle X_1^2X_2^2\rangle=I_1I_2$, and zero for the odd cross terms. Hence
+\[
+ Z_{4,\kappa}=-\frac{\kappa}{16}
+       (d_1^4I_1^2+d_2^4I_2^2)
+       -\frac{\kappa}{4}d_1^2d_2^2I_1I_2,
+\]
+whose action Hessian is exactly $A_\kappa$ in \eqref{kam:magnetic-twist}. In the convention $(\phi,I)$,
+$\{h_2,W\}=-\nu\cdot\partial_\phi W$.
+If $h_{4,\kappa}-Z_{4,\kappa}=\sum_{k\ne0}P_{4,k}(I)e^{\mathrm i k\cdot\phi}$, a solution is
+\begin{equation}\label{ss:quartic-generator}
+ W_{4,\kappa}=
+ \sum_{k\ne0}\frac{P_{4,k}(I)}{\mathrm i k\cdot\nu}
+                 e^{\mathrm i k\cdot\phi}.
+\end{equation}
+Only finitely many divisors, with $|k|_1\le4$, occur. Written back in Cartesian coordinates this is a quartic polynomial, so its local flow is regular at the equilibrium. The polar chart is used only on an action annulus bounded away from zero, where branches of $\sqrt{I_j}$ have an analytic continuation.
+
+For $|X_j|\le r$, set $z=\norm{d}_1r$. The original cosine tail obeys
+\begin{equation}\label{ss:cosine-tail}
+ |h_{\ge6,\kappa}|\le|\kappa|\,\frac{z^6\cosh z}{720}.
+\end{equation}
+The full transformed remainder also contains
+$\{h_{4,\kappa},W_{4,\kappa}\}$ and
+$\tfrac12\{\{h_2,W_{4,\kappa}\},W_{4,\kappa}\}$,
+both of degree six, and higher Lie terms. A rigorous finite-amplitude bound must control the local flow of $W_{4,\kappa}$, its image and inverse, these brackets and the tail on a domain with margin. The notation $R_6=O(r^6)$ states an order of vanishing, not a numerical sup-norm certificate. For the new baseline, evaluation of the retained finite divisors gives $\min_{0<|k|_1\le4}|k\cdot\nu|=1$; this does not bound the infinite family of divisors at nonlinear frequencies.
+
+\subsection{The integral-error inequality and implementation uncertainty}
+\label{ss:integral-error}
+
+For exact window integrals and endpoint-matching curves, the physical defect is
+\begin{equation}\label{ss:physical-defect}
+\begin{aligned}
+ e_\ell={}&\int_{a_\ell}^{b_\ell}
+ [\dot c_{\ell Y}+\nabla V_0(c_{\ell X})]\dd\tau\\
+ &+\int_{a_\ell}^{b_\ell}
+ [\textstyle\sum_j\beta_{*,j}\nabla F_j(c_{\ell X})
+  +\gamma c_{\ell Y}-U_\ell^{\rm data}]\dd\tau.
+\end{aligned}
+\end{equation}
+This is exactly $y_\ell-D_\ell\theta_*$. If the true potential has a class residual $R_{\rm out}$, the identity remains the algebraic definition of $e_\ell$, and the omitted force contributes to its bound. Reconstructed trajectories need not solve the model; their deviation from the true trajectories is part of the observation uncertainty. When numerical quadrature is used, define $e=y-D\theta_*$ for the exported matrices and include their integration errors and coefficient-dependent design uncertainty in $\epsilon_I$.
+
+For completeness, let $\widetilde D,\widetilde y$ denote ideal matrices and suppose
+$\norm{D-\widetilde D}_2/\sqrt{nL_I}\le\epsilon_D$,
+$\norm{y-\widetilde y}_2/\sqrt{nL_I}\le\epsilon_y$,
+and $\norm{\widetilde y-\widetilde D\theta_*}_2/\sqrt{nL_I}\le\epsilon_{\rm obs}$. An a priori bound $\norm{\theta_*}_2\le B_\theta$ gives
+\[
+ \epsilon_I\le\epsilon_{\rm obs}+\epsilon_y+\epsilon_D B_\theta.
+\]
+The Gram lower bound can be certified directly for the exported matrix, or transferred with singular-value perturbation estimates. If $\sigma_{\min}(\widetilde D/\sqrt{nL_I})\ge s_0$, then $\lambda_{\min}(D^{\mathsf T}D/(nL_I))\ge(s_0-\epsilon_D)^2$ when $s_0>\epsilon_D$. This prevents a quadrature-dependent excitation claim from being treated as exact.
+
+The estimate \eqref{kam:integral-bound} follows from
+\[
+ \sqrt{\underline\lambda}\norm{\widehat\theta-\theta_*}_2
+ \le\frac{\norm{D(\widehat\theta-\theta_*)}_2}{\sqrt{nL_I}}
+ \le r_I+\epsilon_I.
+\]
+It does not require least-squares optimality. If the reported residual is recomputed from the frozen exported coefficients, their storage rounding is already represented; time-stepping roundoff remains a separate dynamical implementation error. If observations are first corrected using $\widehat\gamma$, the corrected defect retains
+$-\delta\gamma\int c_{\ell Y}\dd\tau$.
+Joint identification avoids losing this term by treating the estimated damping as known truth.
+
+\subsection{A finite CHNN readout beyond the single-feature benchmark}
+\label{ss:full-features}
+
+Let $m_4(x)$ contain the $\binom{7}{4}=35$ homogeneous quartic monomials in $x=(X_1,X_2,Y_1,Y_2)$, in a declared fixed order. Let $v_4$ be the coefficient vector of $-(d^{\mathsf T}X)^4/24$ in this basis and let $U_F\in\R^{35\times34}$ have orthonormal columns spanning $v_4^\perp$. Define
+\begin{equation}\label{ss:full-readout}
+\begin{aligned}
+ F(x)&=\binom{g(d^{\mathsf T}X)/\norm{v_4}_2}{U_F^{\mathsf T}m_4(x)},\\
+ h_\eta(x)&=h_2(x)+\eta^{\mathsf T}F(x),\\
+ \eta&=(a\norm{v_4}_2,c),\qquad c\in\R^{34}.
+\end{aligned}
+\end{equation}
+The quartic Taylor coefficients span all $35$ directions, while the first feature retains the full cosine tail. The nominal energy has $a=1,c=0$; the minimal learned model has $a=1+\widehat\beta,c=0$. Thus the present experiment is a restricted member of this analytic readout. The $35$-coefficient model was not retrained on the new baseline, and no performance or certification result from an earlier parameter set is assigned to it.
+
+If the broader state equation is modeled as
+$x'=L_2x+V_F(x)\eta-\gamma Q(x)+u^{\rm data}$,
+where $L_2x=J\nabla h_2$,
+$V_F=[J\nabla F_1,\ldots,J\nabla F_{35}]$,
+$Q=(0,Y)^{\mathsf T}$ and $u^{\rm data}=(0,U^{\rm data})^{\mathsf T}$, its integrated design is
+\begin{equation}\label{ss:full-design}
+\begin{aligned}
+ D_\ell^{35}&=\int_{a_\ell}^{b_\ell}[V_F(c_\ell),-Q(c_\ell)]\dd\tau,\\
+ y_\ell^{35}&=c_\ell(b_\ell)-c_\ell(a_\ell)
+       -\int_{a_\ell}^{b_\ell}(L_2c_\ell+u^{\rm data})\dd\tau.
+\end{aligned}
+\end{equation}
+Each window has four scalar equations and $36$ unknown coefficients including damping. The normalizing count is $4L_I$, and the defect and Gram analysis must be repeated in this dimension. Window-length normalization is also possible, but must be applied to both $D_\ell$ and $y_\ell$ and propagated consistently to the norms. A certified coefficient bound then gives
+$\norm{\widehat h-h_*}_{\mathcal U}\le b_{35}(\sum_{j=1}^{35}\norm{F_j}_{\mathcal U}^2)^{1/2}$
+plus a declared class-error budget.
+
+The column $Q$ assumes the stated linear momentum damping. If the general energy changes $h_Y$ and the velocity-based Rayleigh law of \eqref{mech:decoder} is retained, its force is $-\gamma\mathsf N^{-1}h_Y$ rather than $-\gamma Y$. The damping regressor must then be changed, and joint identification need not remain linear in the energy and damping coefficients.
+
+Momentum-dependent learned terms change $h_Y$. They do not fit the direct pure-potential feedback laws \eqref{struct:route-a-control} and \eqref{struct:route-b-control}. To use such a model as a reference, a target momentum $\widetilde Y$ can instead be recovered from
+$\widehat h_Y(X,\widetilde Y)=\omega_0^{-1}D_s^{-1}\dot a$,
+provided $\widehat h_{YY}$ is locally invertible on the selected domain. The reference acceleration is
+\begin{equation}\label{ss:general-reference-acceleration}
+ \ddot a^{\rm ref}=\omega_0^2D_s
+    (\widehat h_{YX}\widehat h_Y-\widehat h_{YY}\widehat h_X).
+\end{equation}
+The physical fixed-kinetic plant still requires an independently appropriate physical force estimate for compensation. A momentum term in a learned reference is not an estimate of an unknown physical potential. Complex and real implementations of the same finite readout should therefore be compared with matched features, data and error budgets.
+
+\subsection{The map-KAM hypothesis in the central discretization}
+\label{ss:map-kam}
+
+For the principal compensation problem take $\mathcal T=\mathcal T_1$, $H=h_c\circ\mathcal T_1=H_{\rm NF}^{1}+P_c$ and $\norm{P_c}\le\epsilon_c$. The following argument also applies to a separately verified reference chart in Supplement~\ref{sec:supp-tracking}; write $H=H_{\rm NF}+P$ and $\norm P\le\epsilon$ for either declared case. The exact numerical map to analyze is $\widehat\Psi_\Delta=\mathcal T^{-1}\Psi_\Delta\mathcal T$. It is exact symplectic by Proposition~\ref{ctrl:structure-proposition} and Supplement~\ref{ss:exact-symplectic}. Analytic local error estimates on a smaller domain give
+$\norm{\widehat\Psi_\Delta-\Phi_H^\Delta}\le C\Delta^{p+1}$.
+Cauchy bounds on $\nabla P$ and a short-time flow estimate give
+$\norm{\Phi_H^\Delta-\Phi_{H_{\rm NF}}^\Delta}\le C'\Delta\epsilon$.
+Adding them proves the form of \eqref{kam:map-closeness}. The chart derivative and inverse-derivative bounds are part of these constants.
+
+For a sufficiently small map perturbation the mixed endpoint projection $(I_-,\phi_-)\mapsto(I_+,\phi_-)$ is invertible. Exactness then supplies a periodic mixed generating perturbation $G_\Delta$, fixed up to a constant, such that
+\begin{equation}\label{ss:mixed-map}
+\begin{aligned}
+ I_+&=I_--\partial_\phi G_\Delta(I_+,\phi_-),\\
+ \phi_+&=\phi_-+\Delta\omega(I_+)
+                   +\partial_I G_\Delta(I_+,\phi_-).
+\end{aligned}
+\end{equation}
+Its domain-reduced bound is
+$\norm{G_\Delta}\le C_3\Delta\epsilon+C_4\Delta^{p+1}$,
+the joint perturbation form used in the nearly integrable application of \citet[Section~4]{shang}. Constants are uniform only on a declared family of domains with the required analytic and inverse bounds.
+
+For clarity, one sufficient theorem route is recorded explicitly. On an action complex neighborhood of radius $\rho_I$, suppose
+\begin{equation}\label{ss:twist-bounds}
+ \iota\norm v_\infty\le\norm{D_I\omega(I)v}_\infty
+                   \le\Theta\norm v_\infty,
+ \qquad0<\iota\le\Theta.
+\end{equation}
+For the affine frequency map these bounds follow from $A$ and $A^{-1}$, for example $\iota=\norm{A^{-1}}_\infty^{-1}$ and $\Theta=\norm A_\infty$. Choose $\tau_D>n+1$, $0<\Delta\le1$ and
+$0<\gamma_D\le\min(1,\rho_I\Theta/2)$.
+The retained frequencies have distance at least $2\gamma_D$ from the frequency-domain boundary and satisfy \eqref{kam:map-divisors}. The analytic version of \citet[Theorem~2 and Remark~2]{shang} requires, on its stated smaller complex action--angle domain,
+\begin{equation}\label{ss:map-threshold}
+ \norm{G_\Delta/\Delta}
+       \le\delta_0\gamma_D^2\iota^2\Theta^{-3},
+\end{equation}
+where $\delta_0>0$ depends on the theorem's dimension, exponent and complex widths. A bounded frequency domain with the specified boundary regularity permits its positive-measure conclusion. For two modes we use the sufficient exponent $\tau_D>3$ from this theorem. The lower-order continuous condition $\tau_D>1$ in \eqref{kam:flow-divisors} belongs to a different theorem.
+
+Thus a verified inequality
+$C_3\epsilon+C_4\Delta^p\le\delta_0\gamma_D^2\iota^2\Theta^{-3}$,
+together with the domain and nonresonance conditions, provides the proposed discrete conclusion. The formula records what must be checked; it is not a numerical evaluation of $\delta_0$, of the chart constants or of the complete remainder for the new baseline. It also shows why a small-step limit at fixed nonzero modeling perturbation does not remove that perturbation. The flow and discrete-map tori need not be identical.
+
+\subsection{Finite-amplitude certification and scope of the hypotheses}
+\label{ss:certificate-scope}
+
+An alternative to the local normal-form budget is an a posteriori certificate for a proposed torus. Given a periodic analytic embedding $K:\T^2\to\R^4$ and a fixed frequency $\omega$, its flow defect is
+\[
+ E(\phi)=J\nabla h(K(\phi))-D K(\phi)\omega.
+\]
+An applicable a posteriori theorem additionally requires a complex-strip extension, domain margins, nondegeneracy/torsion inverse bounds and a Diophantine constant; the defect must meet that theorem's quantitative inequality \citep{haro2019aposteriori}. A numerical Fourier representation and a small sampled defect alone do not verify these premises. No previously computed embedding, remainder, correction radius or amplitude certificate is assigned to the new material and magnet model.
+
+The principal chain connects a compatible generating construction, the actual compensated implicit equations, finite-time convergence with algebraic residuals, and conditional persistence of their exact conservative map. The hypotheses change at each step: finite-time convergence permits residual damping, whereas the classical map-KAM theorem does not. Reference tracking in Supplement~\ref{sec:supp-tracking} and full-beam actuation and clearance in Section~\ref{sec:application} require their own control and mechanical estimates. Neither follows from a numerical invariant-torus diagnostic alone.

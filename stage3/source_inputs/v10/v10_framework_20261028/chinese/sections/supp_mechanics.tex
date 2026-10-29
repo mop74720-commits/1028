@@ -1,0 +1,705 @@
+\subsection{一般杆降维与力项归属}
+\label{sm:general}
+对于空间杆，定义参考应变和随体角速度为
+\begin{equation}
+ \Gamma=D^{\mathsf T}r_s,\qquad
+ D_s=D\widehat\kappa,\qquad
+ D_t=D\widehat\omega_b.
+ \label{sm:rod-kinematics}
+\end{equation}
+帽映射满足 $\widehat a b=a\times b$。空间平衡定律为
+\begin{align}
+ \rho A_c r_{tt}&=n_s+f_{\rm mag}+f_{\rm h}+f_{\rm c}+\rho A_c g,\\
+ \partial_t(D\mathcal J_b\omega_b)&=m_s+r_s\times n+\tau_{\rm ext}.
+ \label{sm:rod-balances}
+\end{align}
+这里 $\mathcal J_b$ 为单位参考长度的转动惯量。
+当随体惯量为常量时，第二式左端等于
+$D(\mathcal J_b\dot\omega_b+\omega_b\times\mathcal J_b\omega_b)$。
+储能密度通过对应变的导数确定不受约束的内力和内力矩分量 \citep{simo,antman}。
+在不可剪切的特例中，被消去的剪切应变对应约束反力；
+在无约束的剪切本构律中令这些应变为零，并不意味着横向内力为零。
+
+随体固定的磁偶极矩密度 $m_b(s)$ 在静态外加场中的势能为
+\begin{equation}
+ V_{\rm mag}=-\int_0^L (Dm_b)\cdot B_0(r)\dd s.
+ \label{sm:distributed-magnetism}
+\end{equation}
+点偶极子基准用远端局域磁芯替代该分布。
+永久磁偶极子公式是局域磁应力合力、合力矩的主导项 \citep{abbott}。
+在包围磁芯的真空区域，Maxwell 应力为
+\begin{equation}
+ T_M=\mu_0^{-1}\left(BB^{\mathsf T}-\tfrac12|B|^2I\right).
+ \label{sm:maxwell-stress}
+\end{equation}
+其表面合力和合力矩采用总磁场计算。等价地，对于完整的局域稳恒电流
+$j(\xi)$（包括束缚电流）以及由外部产生的 $B_{\rm ext}$，
+\begin{align}
+ m_d&=\tfrac12\int \xi\times j(\xi)\dd V,\nonumber\\
+ F&=\nabla_r[m_d\cdot B_{\rm ext}(r)]+R_F,\nonumber\\
+ \tau&=m_d\times B_{\rm ext}(r)+R_\tau.
+ \label{sm:dipole-expansion}
+\end{align}
+电流闭合给出 $\int j\dd V=0$ 和
+$\int\xi_i j_j\dd V=\epsilon_{ijk}(m_d)_k$。
+令 $J_2=\int|\xi|^2|j(\xi)|\dd V$，由 Taylor 展开得到
+\begin{equation}
+ |R_F|\le\tfrac12J_2\sup\|D^2B_{\rm ext}\|,\qquad
+ |R_\tau|\le J_2\sup\|DB_{\rm ext}\|.
+ \label{sm:dipole-remainders}
+\end{equation}
+上述上确界覆盖磁芯及 Taylor 展开的线段。
+完整孤立元件的自场不产生净自力或净自力矩。
+因此，应采用应力合量或其偶极近似之一，不能将两者作为独立载荷重复计入。
+近似 $\mu\simeq B_ra_m^3/\mu_0$ 还假设磁化近似均匀且随体固定；
+牌号规格并非已装配端部磁偶极矩的实测值。
+
+流体项和接触项需要各自的本构选择。例如，局部附加质量与阻力闭合模型可写为
+\begin{align}
+ f_{\rm h}&=m_f a_f+m_a(a_f-r_{tt})
+                  -c_1v_r-c_2|v_r|v_r,\nonumber\\
+ v_r&=r_t-v_f,\qquad c_1,c_2\ge0.
+ \label{sm:fluid-example}
+\end{align}
+这是待标定的降阶闭合模型，并非对流体相互作用的直接解析。
+静止流体中的阻力功率非正；在运动流体中，阻力相对于 $v_f$ 耗散，
+但可能向杆输入能量。一致定义的附加质量可计入一次动能度量，
+此后必须从外部惯性载荷中去除。对于静止壁面，
+以穿透量 $\delta>0$ 和 $n_c=\nabla\delta$ 给出一个无黏附罚函数模型示例：
+\begin{align}
+ V_c&=\frac{k_c}{p_c+1}[\delta]_+^{p_c+1},\nonumber\\
+ f_c&=-k_c[\delta]_+^{p_c}n_c
+       -c_c{\bf1}_{\{\delta>0\}}[\dot\delta]_+n_c.
+ \label{sm:contact-example}
+\end{align}
+第二项在压缩期间耗散能量。这类切换接触律不属于持续性结果所用的解析邻域。
+减弱重力本身不能消除流体作用，也不能据此选定血流模型。
+修订后的数值基准既未启用式~\eqref{sm:fluid-example}，
+也未启用式~\eqref{sm:contact-example}。
+
+对于满足约束的构形映射，定义
+\begin{equation}
+ r_i=\partial_{q_i}r,\qquad
+ \psi_i=\operatorname{vee}(D^{\mathsf T}\partial_{q_i}D).
+ \label{sm:configuration-derivatives}
+\end{equation}
+于是 $\omega_b=\sum_i\psi_i\dot q_i$，且
+\begin{align}
+ M_{ij}(q)&=\int_0^L
+     [\rho A_c\,r_i\cdot r_j+\psi_i^{\mathsf T}\mathcal J_b\psi_j]\dd s,
+       \nonumber\\
+ Q_i&=\int_0^L[f\cdot r_i+\tau\cdot D\psi_i]\dd s+Q_i^\partial.
+ \label{sm:galerkin-metric}
+\end{align}
+集中端质量及其转动惯量通过相应的动能项加入。
+仅给出中心线插值，并不足以确定转动惯量。
+
+对 $T-V$ 作变分，得到
+\begin{align}
+ (c_{\rm geo})_i&=\sum_{j,k}\Gamma_{ijk}\dot q_j\dot q_k,\nonumber\\
+ \Gamma_{ijk}&=\tfrac12
+   (\partial_{q_j}M_{ik}+\partial_{q_k}M_{ij}
+                         -\partial_{q_i}M_{jk}).
+ \label{sm:christoffel}
+\end{align}
+令 $p=M(q)\dot q$，得到
+\begin{align}
+ \dot p_i&=-\tfrac12p^{\mathsf T}(\partial_{q_i}M^{-1})p
+       -\partial_{q_i}V\nonumber\\
+ &\quad-\partial_{v_i}\mathcal D_N+(Q_{\rm drv}+B_u u)_i.
+ \label{sm:variable-mass-momentum}
+\end{align}
+若耗散存储为动量读出 $G_1(q,p)=\mathcal D_N(q,M^{-1}p)$，其物理力为
+\begin{equation}
+ -\partial_v\mathcal D_N=-M(q)\nabla_pG_1,
+ \label{sm:rayleigh-momentum}
+\end{equation}
+一般并非 $-\nabla_pG_1$。Christoffel 项已经由 $H_q$ 产生，不应再放入 $G_1$。
+能量恒等式为
+\begin{equation}
+ \dot H=-v^{\mathsf T}\partial_v\mathcal D_N
+              +v^{\mathsf T}(Q_{\rm drv}+B_u u).
+ \label{sm:general-power}
+\end{equation}
+存在显式时间依赖时需加上 $\partial_tH$；
+时变质量还会在勒让德变换之前产生相应的惯性项。
+二次半正定瑞利势，或在零速度处取得最小值的可微凸速度势，能够保证
+$v^{\mathsf T}\partial_v\mathcal D_N\ge0$。
+仅有势函数非负，并不能保证这一不等式。
+
+\subsection{弱形式、端部惯量与一致 Hermite 矩阵}
+\label{sm:weak-form}
+对于容许试验位移 $\eta$，要求 $\eta(0)=\eta_s(0)=0$，基准模型的弱形式为
+\begin{align}
+ &\int_0^L\!\rho A_c w_{tt}\eta\dd s
+       +m_tw_{tt}(L)\eta(L)+J_t\ddot\vartheta\eta_s(L)\nonumber\\
+ &+\alpha\left[
+       \int_0^L\!\rho A_c w_t\eta\dd s
+       +m_tw_t(L)\eta(L)+J_t\dot\vartheta\eta_s(L)\right]\nonumber\\
+ &+\int_0^L\!EIw_{ss}\eta_{ss}\dd s
+       =F\eta(L)+[\tau_B-\mu B_0\sin\vartheta]\eta_s(L).
+ \label{sm:beam-weak}
+\end{align}
+对空间变量分部积分两次，即得到式~\eqref{mech:beam}--\eqref{mech:endpoint-balance}
+中的内部方程和端部方程。$J_t$ 项是端部刚体惯量，
+不同于 Euler--Bernoulli 模型所忽略的分布式转动惯量。
+
+对于长度为 $\ell_e$、局部坐标为 $\xi\in[0,1]$ 的单元，位移插值行向量为
+\begin{equation}
+ N_e(\xi)^{\mathsf T}=
+ \begin{pmatrix}
+ 1-3\xi^2+2\xi^3\\
+ \ell_e(\xi-2\xi^2+\xi^3)\\
+ 3\xi^2-2\xi^3\\
+ \ell_e(-\xi^2+\xi^3)
+ \end{pmatrix}.
+ \label{sm:hermite-shape}
+\end{equation}
+局部自由度顺序为 $(w_i,\vartheta_i,w_{i+1},\vartheta_{i+1})$。
+对弯曲能和动能积分可得
+\begin{align}
+ K_e&=\frac{EI}{\ell_e^3}
+ \begin{pmatrix}
+ 12&6\ell_e&-12&6\ell_e\\
+ 6\ell_e&4\ell_e^2&-6\ell_e&2\ell_e^2\\
+ -12&-6\ell_e&12&-6\ell_e\\
+ 6\ell_e&2\ell_e^2&-6\ell_e&4\ell_e^2
+ \end{pmatrix},\nonumber\\
+ M_e&=\frac{\rho A_c\ell_e}{420}
+ \begin{pmatrix}
+ 156&22\ell_e&54&-13\ell_e\\
+ 22\ell_e&4\ell_e^2&13\ell_e&-3\ell_e^2\\
+ 54&13\ell_e&156&-22\ell_e\\
+ -13\ell_e&-3\ell_e^2&-22\ell_e&4\ell_e^2
+ \end{pmatrix}.
+ \label{sm:element-matrices}
+\end{align}
+组装并消去两个固支自由度后，在末端位移对应的质量条目上加 $m_t$，
+在末端转角对应的条目上加 $J_t$。
+仅在构造包含偏置场的线性特征值问题时，才在末端转角刚度条目上加 $\mu B_0$。
+非线性物理能量仍采用 $K_{\rm beam}$ 和余弦势能。
+
+若质心沿轴向相对端点偏移 $e$，则刚体动能在端部平动和转动坐标中应包含矩阵块
+\begin{equation}
+ \begin{pmatrix}m_t&m_te\\m_te&J_{\rm cm}+m_te^2\end{pmatrix}
+ \label{sm:offset-tip}
+\end{equation}
+本基准取 $e=0$。该理想裸磁芯惯量不包含涂层、胶黏剂和安装件质量。
+
+节点位移分量的单位为长度，斜率分量无量纲。
+因此，$(w,w)$、$(w,\vartheta)$ 和 $(\vartheta,\vartheta)$ 这三个子块在 $M_f$ 中的
+单位分别为 kg、kg\,m 和 kg\,m$^2$。
+对应的刚度单位为 N/m、N 和 N\,m；广义力分量的单位为 N 和 N\,m。
+这些混合单位说明，将质量矩阵替换为标量或使用未经尺度调整的执行器欧氏条件数，
+都不是在物理意义上无影响的处理。
+
+\subsection{线性频率验证与参数敏感性}
+\label{sm:fe-check}
+由于包含偏置场的线性化端部问题具有常系数，可作独立的连续梁检验。令
+\begin{align}
+ \lambda&=kL,\qquad
+ \omega^2=\frac{EI}{\rho A_cL^4}\lambda^4,\nonumber\\
+ w(s)&=A[\cosh(ks)-\cos(ks)]\nonumber\\
+ &\quad+B[\sinh(ks)-\sin(ks)].
+ \label{sm:characteristic-shape}
+\end{align}
+该特征值问题的无阻尼端部条件为
+\begin{align}
+ EIw_{sss}(L)+m_t\omega^2w(L)&=0,\nonumber\\
+ EIw_{ss}(L)+(\mu B_0-J_t\omega^2)w_s(L)&=0.
+ \label{sm:characteristic-bc}
+\end{align}
+定义 $\eta_t=m_t/(\rho A_cL)$、$\iota_t=J_t/(\rho A_cL^3)$、
+$\kappa_t=\mu B_0L/(EI)$，以及
+\begin{align*}
+ f&=\cosh\lambda-\cos\lambda,&
+ g_\lambda&=\sinh\lambda-\sin\lambda,\\
+ c_+&=\cosh\lambda+\cos\lambda,&
+ s_+&=\sinh\lambda+\sin\lambda.
+\end{align*}
+记 $h_\lambda=\kappa_t/\lambda-\iota_t\lambda^3$，则正根满足
+\begin{equation}
+ \det\begin{pmatrix}
+ g_\lambda+\eta_t\lambda f&
+ c_++\eta_t\lambda g_\lambda\\
+ c_++h_\lambda s_+&
+ s_++h_\lambda f
+ \end{pmatrix}=0.
+ \label{sm:characteristic-determinant}
+\end{equation}
+当端部惯量和偏置场均为零时，该式化为 $1+\cosh\lambda\cos\lambda=0$。
+质量归一化不采用有阻尼频率；全文中的 $\omega_j$ 均指偏置刚度下的无阻尼频率。
+
+\begin{table*}[t]
+\centering\small
+\caption{修订后梁的角频率，单位为 rad/s，已包含磁芯的平动与转动惯量。
+最后一行为独立连续梁端部问题的求解结果。}
+\label{sm:frequency-table}
+\begin{tabular}{lrrrr}
+\toprule
+离散方法 & $\omega_1$ & $\omega_2$ & $\omega_3$ & $\omega_4$\\
+\midrule
+$16$ 个 Hermite 单元 & $7.840010222$ & $47.399809441$ & $131.211581398$ & $256.375395140$\\
+$32$ 个 Hermite 单元 & $7.840009162$ & $47.399576624$ & $131.206681073$ & $256.339221935$\\
+$64$ 个 Hermite 单元 & $7.840009096$ & $47.399561992$ & $131.206371332$ & $256.336917925$\\
+连续梁端部方程 & $7.840009091$ & $47.399561016$ & $131.206350623$ & $256.336763590$\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+特征向量作质量归一化，并统一取向，使每个端位移系数均为正。
+$32$ 单元模型的最大质量正交归一性偏差为 $5.14\times10^{-15}$；
+相对于式~\eqref{sm:characteristic-determinant}，前两阶频率的相对误差为
+$9.02\times10^{-9}$ 和 $3.29\times10^{-7}$。
+固定偏置场而忽略端部惯量时，得到
+$(\omega_1,\omega_2)=(7.859186509,47.517207103)$ rad/s。
+计入端部惯量后，频率分别降低约 $0.2440\%$ 和 $0.2476\%$。
+该线性验证并不能界定忽略非线性高模态响应所造成的误差。
+
+表~\ref{sm:sensitivity-table} 每次改变一个参数。
+$B_r$ 的两个端点来自 N50 牌号区间 \citep{smN50}。
+惯量和模量扰动属于明确声明的设计研究，并非实测置信区间。
+惯量扰动在固定磁芯尺寸和固定磁偶极矩的条件下，同时缩放 $m_t$ 和 $J_t$。
+机器可读记录中报告阻尼比变化时，标称 $\alpha$ 保持不变。
+
+\begin{table*}[t]
+\centering\small
+\caption{偏置场下前两阶频率的设计敏感性。
+百分比相对于标称 $32$ 单元模型计算。}
+\label{sm:sensitivity-table}
+\begin{tabular}{lrrl}
+\toprule
+变化 & $\Delta\omega_1/\omega_1$ & $\Delta\omega_2/\omega_2$ & 解释\\
+\midrule
+$B_r=1.40$ T & $-0.082935\%$ & $-0.029460\%$ & 牌号范围端点\\
+$B_r=1.45$ T & $+0.082656\%$ & $+0.029413\%$ & 牌号范围端点\\
+$m_t,J_t$ 降低 $10\%$ & $+0.024384\%$ & $+0.024646\%$ & 指定设计扰动\\
+$m_t,J_t$ 增加 $10\%$ & $-0.024367\%$ & $-0.024608\%$ & 指定设计扰动\\
+$E$ 降低 $20\%$ & $-9.526743\%$ & $-10.186350\%$ & 指定设计扰动\\
+$E$ 增加 $20\%$ & $+8.668840\%$ & $+9.235817\%$ & 指定设计扰动\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+联合采用 $B_r$ 与 $\pm10\%$ 惯量扰动的角点组合时，
+$\omega_1$ 的变化范围为 $-0.10729\%$ 至 $+0.10705\%$。
+因此，在该频率比较中，所测试的模量变化影响大于这些磁芯参数扰动。
+这些结果并未给出所有可能制造变异的界。
+
+材料和密度参考值对应特定的 Sylgard 制备条件 \citep{cho2021pdms}。
+机械损耗依赖制备和测量条件；若无本构关系和频率上的对应，
+不能将其他样品的损耗因子测量值 \citep{fischer2017adhesion} 转换为本文模态阻尼比。
+情景 $\zeta_1^{\mathrm{d}}\in\{0,0.01,0.025,0.05,0.1\}$ 则定义了明确的有效阻尼模型。
+同样，磁芯尺寸是设计输入，剩余磁通密度范围的中点是标称值；
+现有规格并未对涂覆和黏接后的试件进行标定。
+
+\subsection{正则单位、复导数与输入换算}
+\label{sm:scaling}
+质量归一化后，$a_j$ 的单位为 $\sqrt{\mathrm{kg}}\,\mathrm m$，
+$\pi_j=\dot a_j$ 的单位为 $\sqrt{\mathrm{kg}}\,\mathrm{m\,s^{-1}}$。
+令 $P_s=\operatorname{diag}(\sqrt{E_0\omega_j/\omega_0})$。
+式~\eqref{mech:scaling} 中的尺度满足
+\begin{align}
+ D_sP_s&=(E_0/\omega_0)I,\nonumber\\
+ \sum_j\dd a_j\wedge\dd\pi_j
+ &=\frac{E_0}{\omega_0}\sum_j\dd X_j\wedge\dd Y_j.
+ \label{sm:scaled-form}
+\end{align}
+取 $h=H/E_0$ 和 $\tau=\omega_0t$，由链式法则得到 $X'=h_Y$、$Y'=-h_X$。
+物理二次动能变为 $E_0Y^{\mathsf T}\mathsf NY/2$，
+而以无量纲位置和速度表示的拉格朗日动能为 $v^{\mathsf T}\mathsf N^{-1}v/2$。
+因此，三种不同的质量矩阵分别是节点质量矩阵 $M_f$、
+质量归一化后的模态单位矩阵，以及平衡缩放后的 $M_{\rm eff}=\mathsf N^{-1}$。
+
+物理瑞利势 $\mathcal D_{\rm phys}=\alpha\dot a^{\mathsf T}\dot a/2$ 变换为
+\begin{equation}
+ \mathcal D(X,v)=
+ \frac{\mathcal D_{\rm phys}(D_sX,\omega_0D_sv)}{E_0\omega_0}
+ =\tfrac12\gamma v^{\mathsf T}\mathsf N^{-1}v.
+ \label{sm:rayleigh-scale}
+\end{equation}
+对于固定的动能形式，$v=\mathsf NY$，其耗散力为 $-\partial_v\mathcal D=-\gamma Y$。
+若学习得到的动量项改变了 $h_Y$，则该力仍为 $-\gamma\mathsf N^{-1}h_Y$，
+不会自动等于 $-\gamma Y$。
+式~\eqref{app:full-feedback} 中的实现通过实际速度映射处理一般目标。
+
+对于 $\zeta=(X+\mathrm iY)/\sqrt2$ 和 $\chi=(X-\mathrm iY)/\sqrt2$，由逆坐标图得到
+\begin{equation}
+ \partial_\chi h^{\mathbb C}
+     =(\partial_Xh+\mathrm i\partial_Yh)/\sqrt2.
+ \label{sm:complex-chain-rule}
+\end{equation}
+将正则方程代入 $\zeta'$ 即证明式~\eqref{mech:wirtinger}，没有额外的二倍因子。
+若力 $Q$ 作用在 $Y$ 方程中，则 $\zeta'$ 中增加的项为 $\mathrm iQ/\sqrt2$。
+因此，所提出的复读出 $h+\mathrm i\mathcal D$ 必须配合解码器~\eqref{mech:decoder} 使用；
+若将该和式视为单一保守哈密顿量直接求导，通常会得到另一个向量场。
+
+对于两模态，$b_j$ 的单位为 $\mathrm{kg}^{-1/2}$，
+$t_j$ 的单位为 $\mathrm{kg}^{-1/2}\mathrm m^{-1}$。
+因此，$b_jF$ 和 $t_j\tau_B$ 均具有模态加速度的单位。由 $X'=\mathsf NY$，
+\begin{equation}
+ \ddot a=\omega_0^2D_s\mathsf NY'=\Lambda Y',\qquad
+ \Lambda=E_0D_s^{-1}.
+ \label{sm:force-scale}
+\end{equation}
+此外，由 $d=D_s\boldsymbol t$ 得到
+\begin{equation}
+ \Lambda\nabla V_0
+ =\Omega_2^2a+\boldsymbol t E_0(\sin\vartheta-\vartheta).
+ \label{sm:scaled-potential-force}
+\end{equation}
+式~\eqref{sm:force-scale}--\eqref{sm:scaled-potential-force} 证明了式~\eqref{app:residual-plant}。
+若程序存储的是模态总力矩 $T$，则必须先减去 $E_0(\vartheta-\sin\vartheta)$，
+再除以 $\mu\cos\vartheta$，才能得到 $B_y$。
+该减法改变的是端口约定，并不补偿未知残差 $-\Lambda\nabla R_*$。
+对于学习输入，$\Lambda\widehat\gamma Y=
+\omega_0\widehat\gamma\dot a=\widehat\alpha\dot a$。
+物理势能产生的力合并为
+$-\Lambda\nabla R_*+\Lambda\nabla\widehat R
+=-\Lambda\nabla\delta R$，从而补完式~\eqref{app:physical-closed-loop}。
+拟合控制器不使用真实残差的导数；该导数仅由合成受控对象或明确标注的真值参数对照求值。
+
+
+
+数值换算采用
+\begin{align}
+ A_{\rm mag}&\simeq
+ \begin{pmatrix}
+ 203.96232682&3303.68875398\\
+ 205.00706618&11909.57162007
+ \end{pmatrix},\nonumber\\
+ D_s&=\operatorname{diag}(S_1,S_2),\nonumber\\
+ S_1&\simeq9.29943515\times10^{-5},\nonumber\\
+ S_2&\simeq3.78205312\times10^{-5}.
+ \label{sm:numerical-ports}
+\end{align}
+其行列式非零。评估装置的有效驱动能力，需要按实际可用的力和力矩对各列重新缩放；
+仅作列归一化，只能验证两个广义方向在几何上的分离。
+
+\subsection{模态扩展下的残差补偿}
+\label{sm:enriched}
+与式~\eqref{app:enriched-plant} 对应的完整保留模态势能为
+\begin{align}
+ V_N&=\tfrac12a^{(N)\mathsf T}\Omega_N^2a^{(N)}
+       +E_0g(\vartheta_N)\nonumber\\
+ &\quad+\mathcal R_N(a^{(N)}).
+ \label{sm:enriched-potential}
+\end{align}
+其动能为 $\dot a^{(N)\mathsf T}\dot a^{(N)}/2$。
+二次磁偏置项已经包含在 $\Omega_N^2$ 中，
+因此 $g$ 中的同一减法避免了重复计入。
+同一次比较中的全部势能 $\mathcal R_N$，均为同一个指定完整势能在相应子空间上的限制。
+正文中的相容条件保证高模态坐标置零时可恢复原合成残差，
+但并不声称已经通过实验辨识其延拓。
+
+对于前两个模态方程，
+\begin{align}
+ \Lambda^{-1}\Omega_2^2a_{1:2}&=\mathsf N X,\nonumber\\
+ \Lambda^{-1}E_0\boldsymbol t_{1:2}&=d,\nonumber\\
+ \Lambda^{-1}\nabla_{a_{1:2}}\mathcal R_N
+ &=\nabla R_*(X)+e_R^{(N)}.
+ \label{sm:enriched-projection}
+\end{align}
+将其加速度方程左乘 $\Lambda$ 的逆矩阵，并代入
+$U_{\rm rec}=\widehat\gamma Y+\nabla\widehat R+e_{\rm port}$，
+即可证明式~\eqref{app:enriched-closed-loop}。
+特别地，$\vartheta_N-\vartheta_2=\sum_{j=3}^Nt_ja_j$。
+若两个角度均位于 $[-\vartheta_{\max},\vartheta_{\max}]$ 内，
+则由中值定理及 $1-\cos s\le s^2/2$ 得到
+\begin{equation}
+ \|e_{\rm mag}^{(N)}\|
+ \le\tfrac12\|d\|\vartheta_{\max}^2
+                   |\vartheta_N-\vartheta_2|.
+ \label{sm:angle-defect-bound}
+\end{equation}
+使用这一不等式仍需高模态运动的界。
+两模态轨迹上的小角度采样不能提供该界。
+
+对于声明的残差 $R_*(X)=\beta_*g(\vartheta_2)$，
+为拟开展的模态比较给出的一个具体合成延拓是
+\begin{equation}
+ \mathcal R_N^{\rm ang}(a^{(N)})=E_0\beta_*g(\vartheta_N).
+ \label{sm:angle-residual-extension}
+\end{equation}
+它保持低维限制，并给出 $e_R^{(N)}=-\beta_*e_{\rm mag}^{(N)}$。
+因此，即使系数辨识完全准确，磁项与残差的合并差项仍为
+$(1+\beta_*)e_{\rm mag}^{(N)}$。
+作为分离影响的对比，另一种选择
+$\mathcal R_N^{\rm low}=E_0R_*(D_s^{-1}a_{1:2})$ 给出
+$e_R^{(N)}=0$，且在高模态坐标方向没有残差力。
+这是两种不同的合成势能设定，并非同一两模态观测的等价推论。
+当前数值记录尚未执行其中任何一种高模态比较。
+
+令 $H_{0,N}$ 表示从完整保留模态能量中去掉 $\mathcal R_N$ 后的能量。
+对于实际施加的物理端口，
+\begin{align}
+ \dot H_{0,N}
+ &=-\alpha\|\dot a^{(N)}\|^2
+       -\dot a^{(N)\mathsf T}\nabla_a\mathcal R_N\nonumber\\
+ &\quad+F_{\rm app}\dot w(L)+\tau_{B,\rm app}\dot\vartheta_N.
+ \label{sm:enriched-power}
+\end{align}
+残差贡献的功率必须纳入标称能量的输入功界。
+另一种做法是在建立增广能量相对于弯曲能的适当下界后使用该能量。
+不能仅凭两模态残差形式就假定其具有非负分解。
+
+\subsection{保守目标的一种更强精确实现}
+\label{sm:exact-lift}
+这一构造使用已知阻尼和精确目标导数。
+将其保留为完整模型的一项条件性结果，与式~\eqref{app:enriched-closed-loop}
+中保持不变的拟合反馈分开陈述。
+对于标称有限元受控对象~\eqref{mech:fe-plant}，保留全部 $N_f=64$ 个模态，并定义
+\begin{align}
+ \ddot a_j+\alpha\dot a_j+\omega_j^2a_j&=b_jF+t_jT,
+       \qquad j=1,\ldots,N_f,\nonumber\\
+ T&=E_0(\vartheta-\sin\vartheta)+\tau_B,\nonumber\\
+ \vartheta&=\sum_{j=1}^{N_f}t_ja_j.
+ \label{app:full-modal}
+\end{align}
+符号 $T$ 表示模态总力矩，而 $U$ 仍为无量纲广义输入。
+式~\eqref{app:full-modal} 明确了下述结果使用的完整受控对象；
+其假设不包含作用于被截去模态的任意未建模力。
+
+考虑实解析目标哈密顿量 $h_{\rm tar}(X,Y)$，其中可以包含依赖动量的项。
+给定物理低模态速度 $v_{1:2}=\dot a_{1:2}$，由下式反演 $Y$：
+\begin{equation}
+ (h_{\rm tar})_Y(X,Y)=\omega_0^{-1}D_s^{-1}v_{1:2},
+ \qquad X=D_s^{-1}a_{1:2}.
+ \label{app:velocity-inversion}
+\end{equation}
+在 $(h_{\rm tar})_{YY}$ 正定且 $Y$ 纤维为凸集的定义域内，
+该关系对 $Y$ 单射且局部可逆。重现正则目标所需的加速度和端口指令为
+\begin{align}
+ a^{\rm des}_{1:2,tt}
+ &=D_s\omega_0^2\bigl[
+     (h_{\rm tar})_{YX}(h_{\rm tar})_Y
+       -(h_{\rm tar})_{YY}(h_{\rm tar})_X\bigr],\nonumber\\
+ \binom{F}{T}
+ &=A_{\rm mag}^{-1}
+   \bigl[a^{\rm des}_{1:2,tt}+\alpha v_{1:2}
+                        +\Omega_2^2a_{1:2}\bigr],\nonumber\\
+ B_y&=\frac{T-E_0(\vartheta-\sin\vartheta)}{\mu\cos\vartheta}.
+ \label{app:full-feedback}
+\end{align}
+最后一行使用实际的完整端角。代入后先使低模态加速度等于目标值，
+再对式~\eqref{app:velocity-inversion} 求导，即恢复两个正则方程。
+
+\begin{proposition}[条件性有限元提升]
+\label{app:conditional-lift}
+设 $h_{\rm tar}$ 具有承载拟周期流的解析嵌入不变二维环面，
+且式~\eqref{app:velocity-inversion} 中的速度映射在该环面的某邻域
+满足上述正定性和纤维条件。
+假设 $\alpha>0$、$A_{\rm mag}$ 可逆，并可获得精确反馈~\eqref{app:full-feedback}。
+若所得响应图位于允许的角度和执行器定义域内，则它是式~\eqref{app:full-modal} 的不变二维环面。
+对于该环面上每条固定的低模态轨道，只要闭环轨迹保持在该定义域内，
+高模态偏差就指数衰减。
+\end{proposition}
+
+
+式~\eqref{app:full-feedback} 中的反馈抵消由完整端角产生的标称余项，
+以施加选定的低模态加速度。
+它不包含任意未知完整残差 $\mathcal R_N$，
+也并非仅将学习得到的两模态控制律用于更多模态就能得到。
+该结果针对有限维受控对象，不声称给出无限维梁极限，
+也不声称能吸引任意低模态初始条件。下文给出证明及其定义域要求。
+
+\subsection{有限元提升的证明与适用范围}
+\label{sm:lift}
+证明采用标称完整模态受控对象~\eqref{app:full-modal}、已知参数和精确反馈。
+令 $\iota(\phi)=(X(\phi),Y(\phi))$ 为目标环面，其中
+$\phi\in(\mathbb R/2\pi\mathbb Z)^2$，物理频率为 $\Omega$。
+其在物理低模态空间中的像为
+\begin{equation}
+ a_{1:2}=D_sX(\phi),\qquad
+ v_{1:2}=\omega_0D_s(h_{\rm tar})_Y(\iota(\phi)).
+ \label{sm:physical-embedding}
+\end{equation}
+若该像中的两点具有相同的位置，则它们具有相同的 $X$。
+对于同一凸纤维中不同的 $Y_1,Y_2$，记
+$\Delta Y=Y_1-Y_2$、$Y_s=Y_2+s\Delta Y$ 和 $h=h_{\rm tar}$。于是
+\begin{align}
+ &\Delta Y^{\mathsf T}[h_Y(X,Y_1)-h_Y(X,Y_2)]\nonumber\\
+ &\quad=\int_0^1
+ \Delta Y^{\mathsf T}h_{YY}(X,Y_s)\Delta Y\dd s>0.
+ \label{sm:velocity-injectivity}
+\end{align}
+因此，物理速度相同也意味着 $Y_1=Y_2$。
+速度映射的微分在 $Y$ 方向可逆，故在所述定义域上，
+该映射局部和全局均保持低模态环面的嵌入。
+
+式~\eqref{app:full-feedback} 中所需的 $F,T$ 仅依赖低模态物理状态。
+完整端角只出现在由 $T$ 到 $B_y$ 的换算中，
+该换算在每个模态方程中抵消同一个偏置场非线性余项。
+于是，每个高模态均受到给定的拟周期激励。对于实时间频率 $\sigma$，
+\begin{equation}
+ D_j(\sigma)=\omega_j^2-\sigma^2+\mathrm i\alpha\sigma
+ \label{sm:stable-resolvent}
+\end{equation}
+不可能为零：在 $\sigma=0$ 时其实部为正，而在非零 $\sigma$ 时其虚部非零。
+当 $|\sigma|\to\infty$ 时，其模长趋于无穷，因此其倒数在实轴上有界。
+采用傅里叶约定 $e^{\mathrm i k\cdot\phi}$，唯一的有界高模态响应具有如下系数：
+\begin{equation}
+ a^*_{j,k}=
+ \frac{b_jF_k+t_jT_k}
+ {\omega_j^2-(k\cdot\Omega)^2+\mathrm i\alpha(k\cdot\Omega)},
+ \qquad j\ge3.
+ \label{app:response-coefficients}
+\end{equation}
+因此，$F,T$ 的指数衰减傅里叶系数在乘以 $D_j(k\cdot\Omega)^{-1}$ 后仍指数衰减。
+这就为有限多个高模态中的每一个建立了解析响应。
+
+相对于该响应的偏差满足 $\ddot z_j+\alpha\dot z_j+\omega_j^2z_j=0$，并指数衰减。
+低模态运动沿目标环面仍保持中性，不能由此推出对一般低模态初始条件的吸引性。
+当 $\alpha=0$ 时，预解算子可能出现共振，因而这一特定提升论证不再适用。
+零阻尼敏感性情景也属于这种情况。
+
+该结果要求完整响应图及所考虑的任何启动瞬态，始终位于角度、传感和执行器定义域内。
+仅凭两模态拟合并不能获得这些界。
+特别地，降阶合成势能残差并非被截去模态所受力的一个已明确的全空间模型。
+将定理扩展到这类力，需要显式的完整模型及相应估计。
+同样，改变 $F,T$ 的约束器即使能够保持净空，也会破坏目标的精确实现。
+
+\subsection{全中心线能量界与初始化}
+\label{sm:clearance}
+对于 $w\in H^2(0,L)$，若 $w(0)=w_s(0)=0$，
+\begin{align}
+ |w(s)|^2
+ &\le\left(\int_0^s(s-\xi)^2\dd\xi\right)
+                \left(\int_0^s|w_{ss}|^2\dd\xi\right)\nonumber\\
+ &\le\frac{2s^3}{3EI}E_{\rm bend},\qquad
+ E_{\rm bend}=\frac{EI}{2}\int_0^L|w_{ss}|^2\dd s.
+ \label{sm:clearance-proof}
+\end{align}
+由于动能包含正的端质量和端转动惯量，且 $E_0(1-\cos\vartheta)\ge0$，
+标称总能量满足 $E\ge E_{\rm bend}$。
+取上确界即证明式~\eqref{app:energy-bound}。
+该结论也适用于协调的 $C^1$ Hermite 位移场。相关斜率估计为
+\begin{equation}
+ \|w_s\|_\infty^2
+ \le L\int_0^L|w_{ss}|^2\dd s
+ \le\frac{2LE}{EI}.
+ \label{sm:slope-energy}
+\end{equation}
+这些不等式要求对相应总物理能量给出界，而不能只界定某个模态振幅或端位移。
+
+式~\eqref{sm:clearance-proof} 在端部位移与弯曲能的关系上具有最优常数：
+当曲率正比于 $L-s$ 时取等号，即静态端力对应的形状。
+这一等号情形解释了常见表达式 $E_c=3EIc^2/(2L^3)$，
+但并未将不等式限制为静态形状。
+对于修订后的梁，$E_c=10.0197171$ nJ。
+能量上限 $E_{\max}=0.95E_c=9.5187312$ nJ 将保证
+$\|w\|_\infty\le\sqrt{0.95}\,c<c$。
+
+可利用全状态二次型构造初始化界：
+\begin{equation}
+ Q(q,v)=\tfrac12v^{\mathsf T}M_fv+
+        \tfrac12q^{\mathsf T}K_bq.
+ \label{sm:initial-quadratic}
+\end{equation}
+由于 $1-\cos\vartheta\le\vartheta^2/2$，有 $E(q,v)\le Q(q,v)$。
+若估计值 $(\widehat q,\widehat v)$ 满足
+$Q(q-\widehat q,v-\widehat v)\le\mathcal E_{\rm init}$，则
+\begin{equation}
+ E(q,v)\le
+ \left[\sqrt{Q(\widehat q,\widehat v)}
+                  +\sqrt{\mathcal E_{\rm init}}\right]^2.
+ \label{sm:initial-upper-bound}
+\end{equation}
+这由 $\sqrt Q$ 的三角不等式得到。
+仅测量端部，并不足以界定未观测弯曲或速度分量中的能量。
+
+对于已保存的标称两模态初始状态 $(X,Y)=(0.09,0.08,0.015,-0.01)$，
+直接代入 $E_0h_0$ 得到 $12.6567207$ nJ。
+这一能量超过 $E_{\max}$，因此本文报告的补偿运行并未验证输入功约束器的初始化条件。
+其采样中心线位移即使小于用于比较的净空，也可能不满足这一充分能量条件。
+跟踪初始化属于补充材料第~\ref{sec:supp-tracking} 节中的独立扩展。
+
+对于增加了 $R_*$ 的受控对象，标称能量导数中会增加其附加广义力的功率。
+另一种做法是使用增广能量，但必须先证明其相对于弯曲能的适当下界。
+因此，不能仅凭合成残差就将其默认纳入标称净空定理。
+
+\subsection{输入功约束器与有界实施误差}
+\label{sm:work}
+对于标称功率恒等式和精确的端口测量，
+\begin{equation}
+ E(t)-W(t)=E(0)-W(0)
+             -\int_0^t\alpha\dot q^{\mathsf T}M_f\dot q\dd s\le0.
+ \label{sm:work-ledger}
+\end{equation}
+式~\eqref{app:work-governor} 中的约束给出 $\dot W\le\kappa(E_{\max}-W)$。
+若 $W(0)<E_{\max}$，则由比较原理得到
+$E_{\max}-W(t)\ge[E_{\max}-W(0)]e^{-\kappa t}$。
+只要给定偏置场本身可行，约束器就具有可行的零主动输入。
+对于包含零输入的非空闭凸容许端口集，以及经尺度调整的正定代价函数，
+该二次投影解唯一。
+
+同一构造可以容纳确定性误差包络，但这些包络必须独立提供。
+设实际施加的端口满足
+\begin{align}
+ F&=(1+g_F)u_F+e_F,\nonumber\\
+ B_y&=(1+g_B)u_B+e_B,\nonumber\\
+ |g_i|&\le\eta_i,\qquad |e_i|\le\epsilon_i.
+ \label{sm:port-errors}
+\end{align}
+若误差满足 $|v_w-\widehat v_w|\le\delta_v$、
+$|\vartheta-\widehat\vartheta|\le\delta_\vartheta$ 和
+$|\dot\vartheta-\widehat{\dot\vartheta}|\le\delta_\omega$，定义
+\begin{align}
+ \widehat a_F&=\widehat v_w,\qquad &&\Delta_F=\delta_v,\nonumber\\
+ \widehat a_B&=\mu\cos\widehat\vartheta\,\widehat{\dot\vartheta},
+ &&\Delta_B=\mu(\delta_\omega+
+                   |\widehat{\dot\vartheta}|\delta_\vartheta).
+ \label{sm:power-estimation}
+\end{align}
+余弦函数的 Lipschitz 常数为一，故 $|a_i-\widehat a_i|\le\Delta_i$。
+不含加性误差部分的端口功率具有如下凸正齐次上界：
+\begin{equation}
+ P^+(u)=\sum_{i\in\{F,B\}}
+ \left[\widehat a_i u_i+
+   \{\Delta_i+\eta_i(|\widehat a_i|+\Delta_i)\}|u_i|\right].
+ \label{sm:power-envelope}
+\end{equation}
+该式不含以测量速度为除数的运算，且满足 $P^+(0)=0$。
+
+对于 $\alpha>0$，定义逆质量系数 $m_F=e_w^{\mathsf T}M_f^{-1}e_w$ 和
+$m_\vartheta=e_\vartheta^{\mathsf T}M_f^{-1}e_\vartheta$。
+加性广义力 $r_e=e_we_F+\mu e_\vartheta e_B\cos\vartheta$ 满足
+\begin{align}
+ r_e^{\mathsf T}v-\alpha v^{\mathsf T}M_fv
+ &\le\frac{r_e^{\mathsf T}M_f^{-1}r_e}{4\alpha}\le p_e,\nonumber\\
+ p_e&=\frac{(\epsilon_F\sqrt{m_F}
+                  +\mu\epsilon_B\sqrt{m_\vartheta})^2}{4\alpha}.
+ \label{sm:additive-power}
+\end{align}
+配方可证明第一个不等式，$M_f^{-1}$ 范数中的三角不等式可证明第二个不等式。
+因此，$\dot E\le P^+(u)+p_e$。
+
+在选定时域 $[0,T_H]$ 内，预留 $R_H=T_Hp_e$，并令 $C_H=E_{\max}-R_H$。
+若 $W(0)\ge E(0)$ 且 $W(0)<C_H$，则积分 $\dot W=P^+(u)$，并施加
+\begin{equation}
+ P^+(u)\le\kappa(C_H-W),\qquad u\in\mathcal U(q).
+ \label{sm:robust-governor}
+\end{equation}
+于是，在整个 $0\le t\le T_H$ 内，
+\begin{equation}
+ E(t)\le W(t)+tp_e<C_H+R_H=E_{\max}.
+ \label{sm:robust-energy}
+\end{equation}
+执行实际执行器限制时，指令集合必须为上述增益误差和加性误差保留裕量。
+若加性误差为零，预留量也为零，精确功率论证可在 $\alpha\ge0$ 时扩展到所有时间。
+非零常数加性误差容限给出的是上述有限时域条件，而非全时间结论。
+
+对于采样保持执行，仅在某个采样时刻给出界是不够的。
+若 $P_k^+(u_k)$ 在长度为 $h_k$ 的整个保持区间内都是功率上界，则规则
+\begin{equation}
+ h_kP_k^+(u_k)\le C_H-W_k,\qquad
+ W_{k+1}=W_k+h_kP_k^+(u_k)
+ \label{sm:discrete-work}
+\end{equation}
+也能界定该区间内部的能量。
+误差包络必须覆盖传感数据龄期、保持龄期和指令延迟。
+例如，已知的指令变化率界 $|\dot u_i|\le S_i$ 和延迟 $d_i$，
+可以通过将 $\epsilon_i$ 增大 $(1+\eta_i)S_id_i$ 纳入考虑。
+这些都是有条件的实施误差界；修订基准尚未标定具体的传感、延迟或线圈电流误差包络。
+本文报告的运行测试的是理想物理输入换算，
+而上述输入功论证说明了经过能量认证的实现还必须额外满足哪些条件。

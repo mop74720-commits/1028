@@ -1,0 +1,1690 @@
+{
+  "parameters": {
+    "n_coordinates": 8,
+    "phase_dimension": 16,
+    "family": "generic_nonproportional",
+    "M0": [
+      [
+        1.0175,
+        0.0175,
+        0.0175,
+        0.0175,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0175,
+        1.0625,
+        0.0175,
+        0.0175,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0175,
+        0.0175,
+        1.1075000000000002,
+        0.0175,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0175,
+        0.0175,
+        0.0175,
+        1.1525,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.1975,
+        0.0175,
+        0.0175,
+        0.0175
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0175,
+        1.2425000000000002,
+        0.0175,
+        0.0175
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0175,
+        0.0175,
+        1.2875,
+        0.0175
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0175,
+        0.0175,
+        0.0175,
+        1.3325
+      ]
+    ],
+    "C0": [
+      [
+        0.08906678129298488,
+        0.010005570839064646,
+        0.010944360385144427,
+        0.011883149931224206,
+        0.011421939477303989,
+        0.012360729023383766,
+        0.013299518569463547,
+        0.014238308115543325
+      ],
+      [
+        0.010005570839064646,
+        0.09465931420711339,
+        0.012113057575162112,
+        0.013166800943210842,
+        0.012820544311259579,
+        0.013874287679308307,
+        0.014928031047357041,
+        0.015981774415405773
+      ],
+      [
+        0.010944360385144427,
+        0.012113057575162112,
+        0.10048175476517981,
+        0.014450451955197481,
+        0.01421914914521517,
+        0.015387846335232854,
+        0.01655654352525054,
+        0.017725240715268223
+      ],
+      [
+        0.011883149931224206,
+        0.013166800943210842,
+        0.014450451955197481,
+        0.10653410296718412,
+        0.015617753979170756,
+        0.01690140499115739,
+        0.018185056003144028,
+        0.019468707015130666
+      ],
+      [
+        0.011421939477303989,
+        0.012820544311259579,
+        0.01421914914521517,
+        0.015617753979170756,
+        0.26849135881312636,
+        0.02208996364708194,
+        0.02348856848103753,
+        0.024887173314993124
+      ],
+      [
+        0.012360729023383766,
+        0.013874287679308307,
+        0.015387846335232854,
+        0.01690140499115739,
+        0.02208996364708194,
+        0.2808535223030065,
+        0.025117080958931025,
+        0.026630639614855567
+      ],
+      [
+        0.013299518569463547,
+        0.014928031047357041,
+        0.01655654352525054,
+        0.018185056003144028,
+        0.02348856848103753,
+        0.025117080958931025,
+        0.2934455934368245,
+        0.02837410591471802
+      ],
+      [
+        0.014238308115543325,
+        0.015981774415405773,
+        0.017725240715268223,
+        0.019468707015130666,
+        0.024887173314993124,
+        0.026630639614855567,
+        0.02837410591471802,
+        0.30626757221458045
+      ]
+    ],
+    "Ks": [
+      [
+        1.0295770288858321,
+        0.03044360385144429,
+        0.031310178817056396,
+        0.032176753782668495,
+        0.010543328748280604,
+        0.011409903713892706,
+        0.012276478679504812,
+        0.013143053645116915
+      ],
+      [
+        0.03044360385144429,
+        1.1414162900373355,
+        0.03238897622322656,
+        0.0333616624091177,
+        0.01183434859500884,
+        0.012807034780899975,
+        0.013779720966791113,
+        0.014752407152682251
+      ],
+      [
+        0.031310178817056396,
+        0.03238897622322656,
+        1.2534677736293967,
+        0.03454657103556691,
+        0.01312536844173708,
+        0.014204165847907247,
+        0.01528296325407742,
+        0.01636176066024759
+      ],
+      [
+        0.032176753782668495,
+        0.0333616624091177,
+        0.03454657103556691,
+        1.3657314796620161,
+        0.014416388288465313,
+        0.015601296914914515,
+        0.01678620554136372,
+        0.017971114167812923
+      ],
+      [
+        0.010543328748280604,
+        0.01183434859500884,
+        0.01312536844173708,
+        0.014416388288465313,
+        1.4782074081351935,
+        0.03949842798192178,
+        0.04078944782865003,
+        0.042080467675378264
+      ],
+      [
+        0.011409903713892706,
+        0.012807034780899975,
+        0.014204165847907247,
+        0.015601296914914515,
+        0.03949842798192178,
+        1.590895559048929,
+        0.042292690115936324,
+        0.043689821182943595
+      ],
+      [
+        0.012276478679504812,
+        0.013779720966791113,
+        0.01528296325407742,
+        0.01678620554136372,
+        0.04078944782865003,
+        0.042292690115936324,
+        1.7037959324032228,
+        0.04529917469050894
+      ],
+      [
+        0.013143053645116915,
+        0.014752407152682251,
+        0.01636176066024759,
+        0.017971114167812923,
+        0.042080467675378264,
+        0.043689821182943595,
+        0.04529917469050894,
+        1.8169085281980744
+      ]
+    ],
+    "point_cubic_a": 0.15,
+    "point_lower_coupling_b": 0.07,
+    "quartic_coefficient": 0.16,
+    "magnetic_port_d": [
+      [
+        0.7434657730733111,
+        0.6847773239540274,
+        0.5179775922701529,
+        0.26940058806110906,
+        -0.021708845421099077,
+        -0.30939092954553404,
+        -0.5482269887842736,
+        -0.7005100609121687
+      ],
+      [
+        0.160976607231023,
+        0.5219928873506721,
+        0.7552071035084881,
+        0.8035202819589016,
+        0.6551036716362469,
+        0.3462948349577525,
+        -0.04729905477299047,
+        -0.42931248628310065
+      ]
+    ],
+    "phase": [
+      0.35,
+      -0.45
+    ],
+    "current_bias": [
+      0.18,
+      0.14
+    ],
+    "current_gain": [
+      0.12,
+      0.09
+    ],
+    "port_target": [
+      0.8,
+      0.85
+    ],
+    "C_best_scalar_M": 0.1696506362233064,
+    "C_nonproportional_residual_Frobenius": 0.25609386101707127,
+    "minimum_C0_eigenvalue": 0.08100975498847493,
+    "units": "All parameters dimensionless mathematical test values; two cosine potential ports, no hardware calibration.",
+    "point_chart": "Q_i=q_i+a*q_i^3+b*q_(i-1)^2 (predecessor term absent for i=0); P=DQ^(-T)*p",
+    "mass_damping": "M(q)=DQ.T*M0*DQ; C(q)=DQ.T*C0*DQ; complete geometric inertia retained"
+  },
+  "T": 2.0,
+  "initial_state": [
+    0.12,
+    0.09178106247413861,
+    0.020396057148028925,
+    -0.060581532551982856,
+    -0.11306668088023897,
+    -0.11237480247489556,
+    -0.058831298560884024,
+    0.022381484330708985,
+    0.003993336665873126,
+    0.03365883939231586,
+    0.03785200350749658,
+    0.013399526006236187,
+    -0.021193445636339736,
+    -0.039747640145338575,
+    -0.028221613022815676,
+    0.004661968194019711
+  ],
+  "steps": [
+    0.2,
+    0.1,
+    0.05,
+    0.025
+  ],
+  "algebraic_derivative_checks": {
+    "physical_Jacobian_vs_complex_step": 6.661338147750939e-16,
+    "point_chart_canonical": 2.0778766473663232e-18,
+    "field_conjugacy": 7.384300342650183e-17,
+    "energy_gradient_geometric_inertia": 1.3297605942800922e-16,
+    "closed_magnetic_gradient_identity": 3.6768363343963194e-17,
+    "central4_Jacobian_vs_complex_step": null
+  },
+  "reference": {
+    "method": "Independent DOP853 in original variable-mass coordinates",
+    "settings": [
+      {
+        "rtol": 1e-11,
+        "atol": 1e-13,
+        "max_step": 0.05
+      },
+      {
+        "rtol": 2e-13,
+        "atol": 2e-15,
+        "max_step": 0.025
+      }
+    ],
+    "maximum_refinement_difference": 2.5028759599055835e-16,
+    "wall_seconds": 0.15078670100001546,
+    "interval_enclosure": false
+  },
+  "methods": {
+    "ordinary_midpoint_eq36": {
+      "rows": [
+        {
+          "h": 0.2,
+          "endpoint_error": 0.003021935642460985,
+          "maximum_grid_error": 0.003021935642460985,
+          "RMS_grid_error": 0.001692109132586645,
+          "endpoint_order": null,
+          "maximum_grid_order": null,
+          "diagnostics": {
+            "max_increment_residual_inf": 9.367506770274758e-16,
+            "max_Newton_corrections": 2.0,
+            "max_canonical_symplectic_defect_spectral2": 0.05558432116757079,
+            "max_sampled_transport_K_defect_spectral2": 0.0013463666590057637,
+            "max_closed_H_drift_abs": 0.018615296743856785,
+            "minimum_Newton_singular_value": 0.9522493829710329,
+            "total_Newton_corrections": 20,
+            "failed_steps": 0,
+            "maximum_accumulated_midpoint_power_quadrature_residual": 3.099914580277104e-06,
+            "power_residual_scope": "Nonquadratic H: diagnostic includes quadrature defect; it is not an asserted exact balance.",
+            "structure_scope": "Three independently transported-K step samples",
+            "transported_K_samples": [
+              {
+                "index": 0,
+                "time": 0.0,
+                "transport_K_defect_spectral2": 0.0008012474047191784
+              },
+              {
+                "index": 5,
+                "time": 1.0,
+                "transport_K_defect_spectral2": 0.0010626585163303784
+              },
+              {
+                "index": 9,
+                "time": 1.8,
+                "transport_K_defect_spectral2": 0.0013463666590057637
+              }
+            ],
+            "inverse_flow_diagnostic_nfev": 1558
+          },
+          "diagnostic_trajectory_wall_seconds": 0.18752741799971773,
+          "required_preparation_operations": {
+            "expm": 0,
+            "sqrtm": 0,
+            "Sylvester": 0,
+            "scalar_exponentials": 0
+          },
+          "chart_checks": null,
+          "cost": {
+            "repetitions": 3,
+            "cold_total_seconds": [
+              0.006035893999978725,
+              0.006205930999840348,
+              0.006480802999703883
+            ],
+            "setup_seconds": [
+              2.5439999262744095e-06,
+              2.593999852251727e-06,
+              3.083999672526261e-06
+            ],
+            "cold_advance_seconds": [
+              0.006033350000052451,
+              0.006203336999988096,
+              0.006477719000031357
+            ],
+            "cached_advance_seconds": [
+              0.00637585599997692,
+              0.005603653999969538,
+              0.006210588000158168
+            ],
+            "median_cold_seconds": 0.006205930999840348,
+            "median_setup_seconds": 2.593999852251727e-06,
+            "median_cached_seconds": 0.006210588000158168,
+            "scope": "Single-thread same-process wall time; one dispatch warmup; cold includes ALL required chart/matrix preparation; reference and diagnostic tangents/K excluded consistently."
+          },
+          "residual_coordinate": "Original phase increment",
+          "Newton_unknown_dimension": 16
+        },
+        {
+          "h": 0.1,
+          "endpoint_error": 0.000760279761249768,
+          "maximum_grid_error": 0.000760279761249768,
+          "RMS_grid_error": 0.00041836479056202763,
+          "endpoint_order": 1.9908706440932926,
+          "maximum_grid_order": 1.9908706440932926,
+          "diagnostics": {
+            "max_increment_residual_inf": 1.5612511283791264e-17,
+            "max_Newton_corrections": 2.0,
+            "max_canonical_symplectic_defect_spectral2": 0.028478133009772654,
+            "max_sampled_transport_K_defect_spectral2": 0.00017509219030192164,
+            "max_closed_H_drift_abs": 0.018765618363759645,
+            "minimum_Newton_singular_value": 0.9735700336805467,
+            "total_Newton_corrections": 40,
+            "failed_steps": 0,
+            "maximum_accumulated_midpoint_power_quadrature_residual": 7.76779858784745e-07,
+            "power_residual_scope": "Nonquadratic H: diagnostic includes quadrature defect; it is not an asserted exact balance.",
+            "structure_scope": "Three independently transported-K step samples",
+            "transported_K_samples": [
+              {
+                "index": 0,
+                "time": 0.0,
+                "transport_K_defect_spectral2": 0.00010114063316924693
+              },
+              {
+                "index": 10,
+                "time": 1.0,
+                "transport_K_defect_spectral2": 0.0001341796038250452
+              },
+              {
+                "index": 19,
+                "time": 1.9000000000000001,
+                "transport_K_defect_spectral2": 0.00017509219030192164
+              }
+            ],
+            "inverse_flow_diagnostic_nfev": 1534
+          },
+          "diagnostic_trajectory_wall_seconds": 0.18940927699986787,
+          "required_preparation_operations": {
+            "expm": 0,
+            "sqrtm": 0,
+            "Sylvester": 0,
+            "scalar_exponentials": 0
+          },
+          "chart_checks": null,
+          "cost": {
+            "repetitions": 3,
+            "cold_total_seconds": [
+              0.011805227999957424,
+              0.013050771000052919,
+              0.012030026000047656
+            ],
+            "setup_seconds": [
+              3.094000021519605e-06,
+              3.4949998735100962e-06,
+              3.205000211892184e-06
+            ],
+            "cold_advance_seconds": [
+              0.011802133999935904,
+              0.013047276000179409,
+              0.012026820999835763
+            ],
+            "cached_advance_seconds": [
+              0.012316928000018379,
+              0.011327279999932216,
+              0.01137261900021258
+            ],
+            "median_cold_seconds": 0.012030026000047656,
+            "median_setup_seconds": 3.205000211892184e-06,
+            "median_cached_seconds": 0.01137261900021258,
+            "scope": "Single-thread same-process wall time; one dispatch warmup; cold includes ALL required chart/matrix preparation; reference and diagnostic tangents/K excluded consistently."
+          },
+          "residual_coordinate": "Original phase increment",
+          "Newton_unknown_dimension": 16
+        },
+        {
+          "h": 0.05,
+          "endpoint_error": 0.0001903718334760341,
+          "maximum_grid_error": 0.0001903718334760341,
+          "RMS_grid_error": 0.00010383985455408112,
+          "endpoint_order": 1.9977103468051127,
+          "maximum_grid_order": 1.9977103468051127,
+          "diagnostics": {
+            "max_increment_residual_inf": 1.431146867680866e-17,
+            "max_Newton_corrections": 2.0,
+            "max_canonical_symplectic_defect_spectral2": 0.0143790804359353,
+            "max_sampled_transport_K_defect_spectral2": 2.2269882045171443e-05,
+            "max_closed_H_drift_abs": 0.018803436694848602,
+            "minimum_Newton_singular_value": 0.9861386492436632,
+            "total_Newton_corrections": 80,
+            "failed_steps": 0,
+            "maximum_accumulated_midpoint_power_quadrature_residual": 1.9538972100852893e-07,
+            "power_residual_scope": "Nonquadratic H: diagnostic includes quadrature defect; it is not an asserted exact balance.",
+            "structure_scope": "Three independently transported-K step samples",
+            "transported_K_samples": [
+              {
+                "index": 0,
+                "time": 0.0,
+                "transport_K_defect_spectral2": 1.2673117308019466e-05
+              },
+              {
+                "index": 20,
+                "time": 1.0,
+                "transport_K_defect_spectral2": 1.6817540270112744e-05
+              },
+              {
+                "index": 39,
+                "time": 1.9500000000000002,
+                "transport_K_defect_spectral2": 2.2269882045171443e-05
+              }
+            ],
+            "inverse_flow_diagnostic_nfev": 1522
+          },
+          "diagnostic_trajectory_wall_seconds": 0.21129168600009507,
+          "required_preparation_operations": {
+            "expm": 0,
+            "sqrtm": 0,
+            "Sylvester": 0,
+            "scalar_exponentials": 0
+          },
+          "chart_checks": null,
+          "cost": {
+            "repetitions": 3,
+            "cold_total_seconds": [
+              0.027335027000390255,
+              0.026077947000430868,
+              0.030415127000196662
+            ],
+            "setup_seconds": [
+              2.7040000531997066e-06,
+              3.6050000744580757e-06,
+              3.775000095629366e-06
+            ],
+            "cold_advance_seconds": [
+              0.027332323000337055,
+              0.02607434200035641,
+              0.030411352000101033
+            ],
+            "cached_advance_seconds": [
+              0.02870358899963321,
+              0.02630857299982381,
+              0.02547344799995699
+            ],
+            "median_cold_seconds": 0.027335027000390255,
+            "median_setup_seconds": 3.6050000744580757e-06,
+            "median_cached_seconds": 0.02630857299982381,
+            "scope": "Single-thread same-process wall time; one dispatch warmup; cold includes ALL required chart/matrix preparation; reference and diagnostic tangents/K excluded consistently."
+          },
+          "residual_coordinate": "Original phase increment",
+          "Newton_unknown_dimension": 16
+        },
+        {
+          "h": 0.025,
+          "endpoint_error": 4.761186051430788e-05,
+          "maximum_grid_error": 4.761186051430788e-05,
+          "RMS_grid_error": 2.5855729144459097e-05,
+          "endpoint_order": 1.9994271291734236,
+          "maximum_grid_order": 1.9994271291734236,
+          "diagnostics": {
+            "max_increment_residual_inf": 1.474514954580286e-17,
+            "max_Newton_corrections": 2.0,
+            "max_canonical_symplectic_defect_spectral2": 0.00722027352985602,
+            "max_sampled_transport_K_defect_spectral2": 2.8062325973348223e-06,
+            "max_closed_H_drift_abs": 0.018812906265168933,
+            "minimum_Newton_singular_value": 0.9929069689955337,
+            "total_Newton_corrections": 160,
+            "failed_steps": 0,
+            "maximum_accumulated_midpoint_power_quadrature_residual": 4.88617790243014e-08,
+            "power_residual_scope": "Nonquadratic H: diagnostic includes quadrature defect; it is not an asserted exact balance.",
+            "structure_scope": "Three independently transported-K step samples",
+            "transported_K_samples": [
+              {
+                "index": 0,
+                "time": 0.0,
+                "transport_K_defect_spectral2": 1.5850318133425812e-06
+              },
+              {
+                "index": 40,
+                "time": 1.0,
+                "transport_K_defect_spectral2": 2.1037251494482735e-06
+              },
+              {
+                "index": 79,
+                "time": 1.975,
+                "transport_K_defect_spectral2": 2.8062325973348223e-06
+              }
+            ],
+            "inverse_flow_diagnostic_nfev": 1534
+          },
+          "diagnostic_trajectory_wall_seconds": 0.2789195010000185,
+          "required_preparation_operations": {
+            "expm": 0,
+            "sqrtm": 0,
+            "Sylvester": 0,
+            "scalar_exponentials": 0
+          },
+          "chart_checks": null,
+          "cost": {
+            "repetitions": 3,
+            "cold_total_seconds": [
+              0.046308221999879606,
+              0.04990718299995933,
+              0.04810426199992435
+            ],
+            "setup_seconds": [
+              3.3549999898241367e-06,
+              3.885999831254594e-06,
+              4.106000233150553e-06
+            ],
+            "cold_advance_seconds": [
+              0.04630486699988978,
+              0.04990329700012808,
+              0.048100155999691196
+            ],
+            "cached_advance_seconds": [
+              0.046384487000068475,
+              0.046093318999737676,
+              0.048982032000367326
+            ],
+            "median_cold_seconds": 0.04810426199992435,
+            "median_setup_seconds": 3.885999831254594e-06,
+            "median_cached_seconds": 0.046384487000068475,
+            "scope": "Single-thread same-process wall time; one dispatch warmup; cold includes ALL required chart/matrix preparation; reference and diagnostic tangents/K excluded consistently."
+          },
+          "residual_coordinate": "Original phase increment",
+          "Newton_unknown_dimension": 16
+        }
+      ],
+      "steps": [
+        0.2,
+        0.1,
+        0.05,
+        0.025
+      ],
+      "representative_tangent_check": {
+        "h": 0.1,
+        "time": 0.4,
+        "difference_step": 1e-05,
+        "finite_difference_vs_ideal_tangent_spectral2": 1.2945673547889348e-11,
+        "scope": "One representative point/step; actual feedback dependence included; diagnostic, not a full-domain derivative certificate."
+      }
+    },
+    "canonical_chart_midpoint": {
+      "rows": [
+        {
+          "h": 0.2,
+          "endpoint_error": 0.0030224963803747533,
+          "maximum_grid_error": 0.0030224963803747533,
+          "RMS_grid_error": 0.0016934106266390016,
+          "endpoint_order": null,
+          "maximum_grid_order": null,
+          "diagnostics": {
+            "max_increment_residual_inf": 1.5612511283791264e-17,
+            "max_Newton_corrections": 2.0,
+            "max_inverse_coordinate_residual_inf": 1.3149203947904198e-15,
+            "max_inverse_Newton_corrections": 16.0,
+            "max_inverse_coordinate_total_residual_inf": 1.3149203947904198e-15,
+            "max_canonical_symplectic_defect_spectral2": 0.05558601746706518,
+            "max_sampled_transport_K_defect_spectral2": 0.0013423412240292326,
+            "max_closed_H_drift_abs": 0.01861647054991858,
+            "minimum_Newton_singular_value": 0.9523009017024261,
+            "total_Newton_corrections": 20,
+            "failed_steps": 0,
+            "maximum_accumulated_midpoint_power_quadrature_residual": 3.3852698587350037e-07,
+            "power_residual_scope": "Nonquadratic H: diagnostic includes quadrature defect; it is not an asserted exact balance.",
+            "structure_scope": "Three independently transported-K step samples",
+            "transported_K_samples": [
+              {
+                "index": 0,
+                "time": 0.0,
+                "transport_K_defect_spectral2": 0.0008011079524156203
+              },
+              {
+                "index": 5,
+                "time": 1.0,
+                "transport_K_defect_spectral2": 0.0010669405399794287
+              },
+              {
+                "index": 9,
+                "time": 1.8,
+                "transport_K_defect_spectral2": 0.0013423412240292326
+              }
+            ],
+            "inverse_flow_diagnostic_nfev": 1558
+          },
+          "diagnostic_trajectory_wall_seconds": 0.18285404100015512,
+          "required_preparation_operations": {
+            "expm": 0,
+            "sqrtm": 0,
+            "Sylvester": 0,
+            "scalar_exponentials": 0
+          },
+          "chart_checks": null,
+          "cost": {
+            "repetitions": 3,
+            "cold_total_seconds": [
+              0.004060234999997192,
+              0.003686042000026646,
+              0.003784849999647122
+            ],
+            "setup_seconds": [
+              2.4840001060510986e-06,
+              2.2730000637238845e-06,
+              2.2629997147305403e-06
+            ],
+            "cold_advance_seconds": [
+              0.004057750999891141,
+              0.003683768999962922,
+              0.0037825869999323913
+            ],
+            "cached_advance_seconds": [
+              0.004079232000094635,
+              0.0036018050000166113,
+              0.0041635190000306466
+            ],
+            "median_cold_seconds": 0.003784849999647122,
+            "median_setup_seconds": 2.2730000637238845e-06,
+            "median_cached_seconds": 0.004079232000094635,
+            "scope": "Single-thread same-process wall time; one dispatch warmup; cold includes ALL required chart/matrix preparation; reference and diagnostic tangents/K excluded consistently."
+          },
+          "residual_coordinate": "Canonical inner increment plus inverse point-coordinate residual",
+          "Newton_unknown_dimension": 16
+        },
+        {
+          "h": 0.1,
+          "endpoint_error": 0.0007603771170986496,
+          "maximum_grid_error": 0.0007603771170986496,
+          "RMS_grid_error": 0.00041870513750146915,
+          "endpoint_order": 1.9909535906848375,
+          "maximum_grid_order": 1.9909535906848375,
+          "diagnostics": {
+            "max_increment_residual_inf": 1.5829351718288365e-17,
+            "max_Newton_corrections": 2.0,
+            "max_inverse_coordinate_residual_inf": 2.418204525511669e-15,
+            "max_inverse_Newton_corrections": 16.0,
+            "max_inverse_coordinate_total_residual_inf": 2.418204525511669e-15,
+            "max_canonical_symplectic_defect_spectral2": 0.028478528961204484,
+            "max_sampled_transport_K_defect_spectral2": 0.00017441314908366701,
+            "max_closed_H_drift_abs": 0.018765914281655444,
+            "minimum_Newton_singular_value": 0.9736112618412266,
+            "total_Newton_corrections": 40,
+            "failed_steps": 0,
+            "maximum_accumulated_midpoint_power_quadrature_residual": 8.908312289548757e-08,
+            "power_residual_scope": "Nonquadratic H: diagnostic includes quadrature defect; it is not an asserted exact balance.",
+            "structure_scope": "Three independently transported-K step samples",
+            "transported_K_samples": [
+              {
+                "index": 0,
+                "time": 0.0,
+                "transport_K_defect_spectral2": 0.00010113684151311276
+              },
+              {
+                "index": 10,
+                "time": 1.0,
+                "transport_K_defect_spectral2": 0.00013471666284865406
+              },
+              {
+                "index": 19,
+                "time": 1.9000000000000001,
+                "transport_K_defect_spectral2": 0.00017441314908366701
+              }
+            ],
+            "inverse_flow_diagnostic_nfev": 1534
+          },
+          "diagnostic_trajectory_wall_seconds": 0.2337539669997568,
+          "required_preparation_operations": {
+            "expm": 0,
+            "sqrtm": 0,
+            "Sylvester": 0,
+            "scalar_exponentials": 0
+          },
+          "chart_checks": null,
+          "cost": {
+            "repetitions": 3,
+            "cold_total_seconds": [
+              0.012182615999790869,
+              0.007774036999762757,
+              0.008199367000088387
+            ],
+            "setup_seconds": [
+              2.9650000215042382e-06,
+              2.7139999474457e-06,
+              2.6439997782290448e-06
+            ],
+            "cold_advance_seconds": [
+              0.012179650999769365,
+              0.007771322999815311,
+              0.008196723000310158
+            ],
+            "cached_advance_seconds": [
+              0.008076222999989113,
+              0.008082402000127331,
+              0.007772535999720276
+            ],
+            "median_cold_seconds": 0.008199367000088387,
+            "median_setup_seconds": 2.7139999474457e-06,
+            "median_cached_seconds": 0.008076222999989113,
+            "scope": "Single-thread same-process wall time; one dispatch warmup; cold includes ALL required chart/matrix preparation; reference and diagnostic tangents/K excluded consistently."
+          },
+          "residual_coordinate": "Canonical inner increment plus inverse point-coordinate residual",
+          "Newton_unknown_dimension": 16
+        },
+        {
+          "h": 0.05,
+          "endpoint_error": 0.00019039348722955964,
+          "maximum_grid_error": 0.00019039348722955964,
+          "RMS_grid_error": 0.00010392726528050803,
+          "endpoint_order": 1.9977309865929695,
+          "maximum_grid_order": 1.9977309865929695,
+          "diagnostics": {
+            "max_increment_residual_inf": 1.3877787807814457e-17,
+            "max_Newton_corrections": 2.0,
+            "max_inverse_coordinate_residual_inf": 2.7929047963226594e-15,
+            "max_inverse_Newton_corrections": 16.0,
+            "max_inverse_coordinate_total_residual_inf": 2.7929047963226594e-15,
+            "max_canonical_symplectic_defect_spectral2": 0.01437913614749061,
+            "max_sampled_transport_K_defect_spectral2": 2.21743530058946e-05,
+            "max_closed_H_drift_abs": 0.018803510823084096,
+            "minimum_Newton_singular_value": 0.9861625151700288,
+            "total_Newton_corrections": 80,
+            "failed_steps": 0,
+            "maximum_accumulated_midpoint_power_quadrature_residual": 2.2549579865215947e-08,
+            "power_residual_scope": "Nonquadratic H: diagnostic includes quadrature defect; it is not an asserted exact balance.",
+            "structure_scope": "Three independently transported-K step samples",
+            "transported_K_samples": [
+              {
+                "index": 0,
+                "time": 0.0,
+                "transport_K_defect_spectral2": 1.2674064278194312e-05
+              },
+              {
+                "index": 20,
+                "time": 1.0,
+                "transport_K_defect_spectral2": 1.6883964693430662e-05
+              },
+              {
+                "index": 39,
+                "time": 1.9500000000000002,
+                "transport_K_defect_spectral2": 2.21743530058946e-05
+              }
+            ],
+            "inverse_flow_diagnostic_nfev": 1522
+          },
+          "diagnostic_trajectory_wall_seconds": 0.2094344040001488,
+          "required_preparation_operations": {
+            "expm": 0,
+            "sqrtm": 0,
+            "Sylvester": 0,
+            "scalar_exponentials": 0
+          },
+          "chart_checks": null,
+          "cost": {
+            "repetitions": 3,
+            "cold_total_seconds": [
+              0.01858730599997216,
+              0.01748268499977712,
+              0.022519771999668592
+            ],
+            "setup_seconds": [
+              1.9629997041192837e-06,
+              3.014999947481556e-06,
+              3.183999979228247e-06
+            ],
+            "cold_advance_seconds": [
+              0.01858534300026804,
+              0.01747966999982964,
+              0.022516587999689364
+            ],
+            "cached_advance_seconds": [
+              0.022935791999771027,
+              0.014588663000267843,
+              0.017459580000377173
+            ],
+            "median_cold_seconds": 0.01858730599997216,
+            "median_setup_seconds": 3.014999947481556e-06,
+            "median_cached_seconds": 0.017459580000377173,
+            "scope": "Single-thread same-process wall time; one dispatch warmup; cold includes ALL required chart/matrix preparation; reference and diagnostic tangents/K excluded consistently."
+          },
+          "residual_coordinate": "Canonical inner increment plus inverse point-coordinate residual",
+          "Newton_unknown_dimension": 16
+        },
+        {
+          "h": 0.025,
+          "endpoint_error": 4.761710599343251e-05,
+          "maximum_grid_error": 4.761710599343251e-05,
+          "RMS_grid_error": 2.587789122726861e-05,
+          "endpoint_order": 1.999432283106239,
+          "maximum_grid_order": 1.999432283106239,
+          "diagnostics": {
+            "max_increment_residual_inf": 1.3877787807814457e-17,
+            "max_Newton_corrections": 2.0,
+            "max_inverse_coordinate_residual_inf": 2.8796409701214998e-15,
+            "max_inverse_Newton_corrections": 16.0,
+            "max_inverse_coordinate_total_residual_inf": 2.8796409701214998e-15,
+            "max_canonical_symplectic_defect_spectral2": 0.0072202808684098466,
+            "max_sampled_transport_K_defect_spectral2": 2.7936471905257513e-06,
+            "max_closed_H_drift_abs": 0.018812924806440007,
+            "minimum_Newton_singular_value": 0.9929196127499147,
+            "total_Newton_corrections": 160,
+            "failed_steps": 0,
+            "maximum_accumulated_midpoint_power_quadrature_residual": 5.654828303079233e-09,
+            "power_residual_scope": "Nonquadratic H: diagnostic includes quadrature defect; it is not an asserted exact balance.",
+            "structure_scope": "Three independently transported-K step samples",
+            "transported_K_samples": [
+              {
+                "index": 0,
+                "time": 0.0,
+                "transport_K_defect_spectral2": 1.5852569866067235e-06
+              },
+              {
+                "index": 40,
+                "time": 1.0,
+                "transport_K_defect_spectral2": 2.11195765704815e-06
+              },
+              {
+                "index": 79,
+                "time": 1.975,
+                "transport_K_defect_spectral2": 2.7936471905257513e-06
+              }
+            ],
+            "inverse_flow_diagnostic_nfev": 1534
+          },
+          "diagnostic_trajectory_wall_seconds": 0.27168563600025664,
+          "required_preparation_operations": {
+            "expm": 0,
+            "sqrtm": 0,
+            "Sylvester": 0,
+            "scalar_exponentials": 0
+          },
+          "chart_checks": null,
+          "cost": {
+            "repetitions": 3,
+            "cold_total_seconds": [
+              0.03581750900002589,
+              0.03326838699967993,
+              0.03283902200018929
+            ],
+            "setup_seconds": [
+              2.6140000954910647e-06,
+              3.114999799436191e-06,
+              3.50600021192804e-06
+            ],
+            "cold_advance_seconds": [
+              0.0358148949999304,
+              0.0332652719998805,
+              0.03283551599997736
+            ],
+            "cached_advance_seconds": [
+              0.03490178399988508,
+              0.03175644500015551,
+              0.031084874000043783
+            ],
+            "median_cold_seconds": 0.03326838699967993,
+            "median_setup_seconds": 3.114999799436191e-06,
+            "median_cached_seconds": 0.03175644500015551,
+            "scope": "Single-thread same-process wall time; one dispatch warmup; cold includes ALL required chart/matrix preparation; reference and diagnostic tangents/K excluded consistently."
+          },
+          "residual_coordinate": "Canonical inner increment plus inverse point-coordinate residual",
+          "Newton_unknown_dimension": 16
+        }
+      ],
+      "steps": [
+        0.2,
+        0.1,
+        0.05,
+        0.025
+      ],
+      "representative_tangent_check": {
+        "h": 0.1,
+        "time": 0.4,
+        "difference_step": 1e-05,
+        "finite_difference_vs_ideal_tangent_spectral2": 1.3045684176744463e-11,
+        "scope": "One representative point/step; actual feedback dependence included; diagnostic, not a full-domain derivative certificate."
+      }
+    },
+    "damping_split_midpoint": {
+      "rows": [
+        {
+          "h": 0.2,
+          "endpoint_error": 0.00262685517958143,
+          "maximum_grid_error": 0.00262685517958143,
+          "RMS_grid_error": 0.0015025503622342036,
+          "endpoint_order": null,
+          "maximum_grid_order": null,
+          "diagnostics": {
+            "max_increment_residual_inf": 1.5612511283791264e-17,
+            "max_Newton_corrections": 2.0,
+            "max_inverse_coordinate_residual_inf": 1.2750217548429532e-15,
+            "max_inverse_Newton_corrections": 16.0,
+            "max_inverse_coordinate_total_residual_inf": 1.2750217548429532e-15,
+            "max_canonical_symplectic_defect_spectral2": 0.0563372398964744,
+            "max_sampled_transport_K_defect_spectral2": 8.264510579028627e-05,
+            "max_closed_H_drift_abs": 0.018774178464806196,
+            "minimum_Newton_singular_value": 0.9432419812198081,
+            "total_Newton_corrections": 20,
+            "failed_steps": 0,
+            "maximum_accumulated_midpoint_power_quadrature_residual": 0.0002364511550524143,
+            "power_residual_scope": "Nonquadratic H: diagnostic includes quadrature defect; it is not an asserted exact balance.",
+            "structure_scope": "Three independently transported-K step samples",
+            "transported_K_samples": [
+              {
+                "index": 0,
+                "time": 0.0,
+                "transport_K_defect_spectral2": 1.9121252327711855e-05
+              },
+              {
+                "index": 5,
+                "time": 1.0,
+                "transport_K_defect_spectral2": 5.1128907863680895e-05
+              },
+              {
+                "index": 9,
+                "time": 1.8,
+                "transport_K_defect_spectral2": 8.264510579028627e-05
+              }
+            ],
+            "inverse_flow_diagnostic_nfev": 1558
+          },
+          "diagnostic_trajectory_wall_seconds": 0.18786593699996956,
+          "required_preparation_operations": {
+            "expm": 1,
+            "sqrtm": 0,
+            "Sylvester": 0,
+            "scalar_exponentials": 0
+          },
+          "chart_checks": null,
+          "cost": {
+            "repetitions": 3,
+            "cold_total_seconds": [
+              0.0041635190000306466,
+              0.0038118799998301256,
+              0.004206833999887749
+            ],
+            "setup_seconds": [
+              9.255899976778892e-05,
+              0.00014429700013351976,
+              9.624399990570964e-05
+            ],
+            "cold_advance_seconds": [
+              0.004070960000262858,
+              0.003667582999696606,
+              0.0041105899999820394
+            ],
+            "cached_advance_seconds": [
+              0.00456295100002535,
+              0.0035863120001522475,
+              0.0039015659999677155
+            ],
+            "median_cold_seconds": 0.0041635190000306466,
+            "median_setup_seconds": 9.624399990570964e-05,
+            "median_cached_seconds": 0.0039015659999677155,
+            "scope": "Single-thread same-process wall time; one dispatch warmup; cold includes ALL required chart/matrix preparation; reference and diagnostic tangents/K excluded consistently."
+          },
+          "residual_coordinate": "Canonical inner increment plus inverse point-coordinate residual",
+          "Newton_unknown_dimension": 16
+        },
+        {
+          "h": 0.1,
+          "endpoint_error": 0.000662090251431995,
+          "maximum_grid_error": 0.000662090251431995,
+          "RMS_grid_error": 0.00037221559674215,
+          "endpoint_order": 1.9882368723745498,
+          "maximum_grid_order": 1.9882368723745498,
+          "diagnostics": {
+            "max_increment_residual_inf": 1.3877787807814457e-17,
+            "max_Newton_corrections": 2.0,
+            "max_inverse_coordinate_residual_inf": 2.4077961846558082e-15,
+            "max_inverse_Newton_corrections": 16.0,
+            "max_inverse_coordinate_total_residual_inf": 2.4077961846558082e-15,
+            "max_canonical_symplectic_defect_spectral2": 0.02857615142041537,
+            "max_sampled_transport_K_defect_spectral2": 1.1384386930724655e-05,
+            "max_closed_H_drift_abs": 0.01880559564950976,
+            "minimum_Newton_singular_value": 0.9690824590158774,
+            "total_Newton_corrections": 40,
+            "failed_steps": 0,
+            "maximum_accumulated_midpoint_power_quadrature_residual": 5.967236432032747e-05,
+            "power_residual_scope": "Nonquadratic H: diagnostic includes quadrature defect; it is not an asserted exact balance.",
+            "structure_scope": "Three independently transported-K step samples",
+            "transported_K_samples": [
+              {
+                "index": 0,
+                "time": 0.0,
+                "transport_K_defect_spectral2": 2.294665058218728e-06
+              },
+              {
+                "index": 10,
+                "time": 1.0,
+                "transport_K_defect_spectral2": 6.566226218537958e-06
+              },
+              {
+                "index": 19,
+                "time": 1.9000000000000001,
+                "transport_K_defect_spectral2": 1.1384386930724655e-05
+              }
+            ],
+            "inverse_flow_diagnostic_nfev": 1534
+          },
+          "diagnostic_trajectory_wall_seconds": 0.21421657400014738,
+          "required_preparation_operations": {
+            "expm": 1,
+            "sqrtm": 0,
+            "Sylvester": 0,
+            "scalar_exponentials": 0
+          },
+          "chart_checks": null,
+          "cost": {
+            "repetitions": 3,
+            "cold_total_seconds": [
+              0.013184221999836154,
+              0.008424385999660444,
+              0.013918616000410111
+            ],
+            "setup_seconds": [
+              0.00013488300010067178,
+              0.000138868999783881,
+              0.0005788900002698938
+            ],
+            "cold_advance_seconds": [
+              0.013049338999735483,
+              0.008285516999876563,
+              0.013339726000140217
+            ],
+            "cached_advance_seconds": [
+              0.01248384900009114,
+              0.013727628000197,
+              0.0078817789999448
+            ],
+            "median_cold_seconds": 0.013184221999836154,
+            "median_setup_seconds": 0.000138868999783881,
+            "median_cached_seconds": 0.01248384900009114,
+            "scope": "Single-thread same-process wall time; one dispatch warmup; cold includes ALL required chart/matrix preparation; reference and diagnostic tangents/K excluded consistently."
+          },
+          "residual_coordinate": "Canonical inner increment plus inverse point-coordinate residual",
+          "Newton_unknown_dimension": 16
+        },
+        {
+          "h": 0.05,
+          "endpoint_error": 0.00016586205197570368,
+          "maximum_grid_error": 0.00016586205197570368,
+          "RMS_grid_error": 9.247015676669952e-05,
+          "endpoint_order": 1.997044042384783,
+          "maximum_grid_order": 1.997044042384783,
+          "diagnostics": {
+            "max_increment_residual_inf": 1.3877787807814457e-17,
+            "max_Newton_corrections": 2.0,
+            "max_inverse_coordinate_residual_inf": 2.7824964554667986e-15,
+            "max_inverse_Newton_corrections": 16.0,
+            "max_inverse_coordinate_total_residual_inf": 2.7824964554667986e-15,
+            "max_canonical_symplectic_defect_spectral2": 0.014391548441316734,
+            "max_sampled_transport_K_defect_spectral2": 1.4889348110846298e-06,
+            "max_closed_H_drift_abs": 0.018813447333961925,
+            "minimum_Newton_singular_value": 0.9839021942666932,
+            "total_Newton_corrections": 80,
+            "failed_steps": 0,
+            "maximum_accumulated_midpoint_power_quadrature_residual": 1.4953607031788895e-05,
+            "power_residual_scope": "Nonquadratic H: diagnostic includes quadrature defect; it is not an asserted exact balance.",
+            "structure_scope": "Three independently transported-K step samples",
+            "transported_K_samples": [
+              {
+                "index": 0,
+                "time": 0.0,
+                "transport_K_defect_spectral2": 2.790975853032156e-07
+              },
+              {
+                "index": 20,
+                "time": 1.0,
+                "transport_K_defect_spectral2": 8.286460666755883e-07
+              },
+              {
+                "index": 39,
+                "time": 1.9500000000000002,
+                "transport_K_defect_spectral2": 1.4889348110846298e-06
+              }
+            ],
+            "inverse_flow_diagnostic_nfev": 1522
+          },
+          "diagnostic_trajectory_wall_seconds": 0.25899064900022495,
+          "required_preparation_operations": {
+            "expm": 1,
+            "sqrtm": 0,
+            "Sylvester": 0,
+            "scalar_exponentials": 0
+          },
+          "chart_checks": null,
+          "cost": {
+            "repetitions": 3,
+            "cold_total_seconds": [
+              0.01611661099968842,
+              0.01843651899980614,
+              0.017265988999952242
+            ],
+            "setup_seconds": [
+              0.0001346219996776199,
+              0.00017297999966103816,
+              0.00012575900018418906
+            ],
+            "cold_advance_seconds": [
+              0.0159819890000108,
+              0.0182635390001451,
+              0.017140229999768053
+            ],
+            "cached_advance_seconds": [
+              0.018639494000126433,
+              0.016760199000145803,
+              0.015339522000431316
+            ],
+            "median_cold_seconds": 0.017265988999952242,
+            "median_setup_seconds": 0.0001346219996776199,
+            "median_cached_seconds": 0.016760199000145803,
+            "scope": "Single-thread same-process wall time; one dispatch warmup; cold includes ALL required chart/matrix preparation; reference and diagnostic tangents/K excluded consistently."
+          },
+          "residual_coordinate": "Canonical inner increment plus inverse point-coordinate residual",
+          "Newton_unknown_dimension": 16
+        },
+        {
+          "h": 0.025,
+          "endpoint_error": 4.148678566813838e-05,
+          "maximum_grid_error": 4.148678566813838e-05,
+          "RMS_grid_error": 2.30353173875998e-05,
+          "endpoint_order": 1.9992600570988261,
+          "maximum_grid_order": 1.9992600570988261,
+          "diagnostics": {
+            "max_increment_residual_inf": 1.750433565456122e-14,
+            "max_Newton_corrections": 2.0,
+            "max_inverse_coordinate_residual_inf": 2.8796409701214998e-15,
+            "max_inverse_Newton_corrections": 16.0,
+            "max_inverse_coordinate_total_residual_inf": 2.8796409701214998e-15,
+            "max_canonical_symplectic_defect_spectral2": 0.0072218446906061485,
+            "max_sampled_transport_K_defect_spectral2": 1.902104449341962e-07,
+            "max_closed_H_drift_abs": 0.018815409949019785,
+            "minimum_Newton_singular_value": 0.9917909541762163,
+            "total_Newton_corrections": 149,
+            "failed_steps": 0,
+            "maximum_accumulated_midpoint_power_quadrature_residual": 3.740630138073448e-06,
+            "power_residual_scope": "Nonquadratic H: diagnostic includes quadrature defect; it is not an asserted exact balance.",
+            "structure_scope": "Three independently transported-K step samples",
+            "transported_K_samples": [
+              {
+                "index": 0,
+                "time": 0.0,
+                "transport_K_defect_spectral2": 3.4352815360910376e-08
+              },
+              {
+                "index": 40,
+                "time": 1.0,
+                "transport_K_defect_spectral2": 1.0396856966500996e-07
+              },
+              {
+                "index": 79,
+                "time": 1.975,
+                "transport_K_defect_spectral2": 1.902104449341962e-07
+              }
+            ],
+            "inverse_flow_diagnostic_nfev": 1534
+          },
+          "diagnostic_trajectory_wall_seconds": 0.25161649999972724,
+          "required_preparation_operations": {
+            "expm": 1,
+            "sqrtm": 0,
+            "Sylvester": 0,
+            "scalar_exponentials": 0
+          },
+          "chart_checks": null,
+          "cost": {
+            "repetitions": 3,
+            "cold_total_seconds": [
+              0.030757753000216326,
+              0.031937366999954975,
+              0.03686126899992814
+            ],
+            "setup_seconds": [
+              0.000124145999961911,
+              0.0003359649999765679,
+              0.00013473199987856788
+            ],
+            "cold_advance_seconds": [
+              0.030633607000254415,
+              0.03160140199997841,
+              0.036726537000049575
+            ],
+            "cached_advance_seconds": [
+              0.03225546599969675,
+              0.028901702999974077,
+              0.03249342400022215
+            ],
+            "median_cold_seconds": 0.031937366999954975,
+            "median_setup_seconds": 0.00013473199987856788,
+            "median_cached_seconds": 0.03225546599969675,
+            "scope": "Single-thread same-process wall time; one dispatch warmup; cold includes ALL required chart/matrix preparation; reference and diagnostic tangents/K excluded consistently."
+          },
+          "residual_coordinate": "Canonical inner increment plus inverse point-coordinate residual",
+          "Newton_unknown_dimension": 16
+        }
+      ],
+      "steps": [
+        0.2,
+        0.1,
+        0.05,
+        0.025
+      ],
+      "representative_tangent_check": {
+        "h": 0.1,
+        "time": 0.4,
+        "difference_step": 1e-05,
+        "finite_difference_vs_ideal_tangent_spectral2": 1.2867723868286942e-11,
+        "scope": "One representative point/step; actual feedback dependence included; diagnostic, not a full-domain derivative certificate."
+      }
+    },
+    "gauss4_chart": {
+      "rows": [
+        {
+          "h": 0.2,
+          "endpoint_error": 2.8500274224072047e-06,
+          "maximum_grid_error": 2.8500274224072047e-06,
+          "RMS_grid_error": 1.5866420301107654e-06,
+          "endpoint_order": null,
+          "maximum_grid_order": null,
+          "diagnostics": {
+            "max_Newton_corrections": 2.0,
+            "max_stage_increment_residual_inf": 1.474514954580286e-17,
+            "max_inverse_coordinate_residual_inf": 1.0685896612017132e-15,
+            "max_inverse_Newton_corrections": 16.0,
+            "max_inverse_coordinate_total_residual_inf": 1.0685896612017132e-15,
+            "max_canonical_symplectic_defect_spectral2": 0.05633578307599768,
+            "max_sampled_transport_K_defect_spectral2": 2.061430832996922e-06,
+            "max_closed_H_drift_abs": 0.018815786863460887,
+            "minimum_Newton_singular_value": 0.893390691197335,
+            "total_Newton_corrections": 20,
+            "failed_steps": 0,
+            "maximum_accumulated_midpoint_power_quadrature_residual": 0.00024465114969328893,
+            "power_residual_scope": "Nonquadratic H: diagnostic includes quadrature defect; it is not an asserted exact balance.",
+            "structure_scope": "Three independently transported-K step samples",
+            "transported_K_samples": [
+              {
+                "index": 0,
+                "time": 0.0,
+                "transport_K_defect_spectral2": 1.243118565955635e-06
+              },
+              {
+                "index": 5,
+                "time": 1.0,
+                "transport_K_defect_spectral2": 1.6449469409601497e-06
+              },
+              {
+                "index": 9,
+                "time": 1.8,
+                "transport_K_defect_spectral2": 2.061430832996922e-06
+              }
+            ],
+            "inverse_flow_diagnostic_nfev": 1558
+          },
+          "diagnostic_trajectory_wall_seconds": 0.1975886260001971,
+          "required_preparation_operations": {
+            "expm": 0,
+            "sqrtm": 0,
+            "Sylvester": 0,
+            "scalar_exponentials": 0
+          },
+          "chart_checks": null,
+          "cost": {
+            "repetitions": 3,
+            "cold_total_seconds": [
+              0.009016184999836696,
+              0.00841579300004014,
+              0.00864396500037401
+            ],
+            "setup_seconds": [
+              3.1249996936821844e-06,
+              2.9839998205716256e-06,
+              2.5530002858431544e-06
+            ],
+            "cold_advance_seconds": [
+              0.009013060000143014,
+              0.008412809000219568,
+              0.008641412000088167
+            ],
+            "cached_advance_seconds": [
+              0.010579896999843186,
+              0.009177727999940544,
+              0.009228865999830305
+            ],
+            "median_cold_seconds": 0.00864396500037401,
+            "median_setup_seconds": 2.9839998205716256e-06,
+            "median_cached_seconds": 0.009228865999830305,
+            "scope": "Single-thread same-process wall time; one dispatch warmup; cold includes ALL required chart/matrix preparation; reference and diagnostic tangents/K excluded consistently."
+          },
+          "residual_coordinate": "Two canonical Gauss-stage increment equations; conversion to output-state error uses stage and field derivative bounds",
+          "Newton_unknown_dimension": 32
+        },
+        {
+          "h": 0.1,
+          "endpoint_error": 1.7856850148286495e-07,
+          "maximum_grid_error": 1.7856850148286495e-07,
+          "RMS_grid_error": 9.770808761002267e-08,
+          "endpoint_order": 3.9964262762565936,
+          "maximum_grid_order": 3.9964262762565936,
+          "diagnostics": {
+            "max_Newton_corrections": 2.0,
+            "max_stage_increment_residual_inf": 1.3769367590565906e-17,
+            "max_inverse_coordinate_residual_inf": 2.4077961846558082e-15,
+            "max_inverse_Newton_corrections": 16.0,
+            "max_inverse_coordinate_total_residual_inf": 2.4077961846558082e-15,
+            "max_canonical_symplectic_defect_spectral2": 0.028576069080919538,
+            "max_sampled_transport_K_defect_spectral2": 6.652287077258373e-08,
+            "max_closed_H_drift_abs": 0.0188160467383163,
+            "minimum_Newton_singular_value": 0.9440682193065228,
+            "total_Newton_corrections": 40,
+            "failed_steps": 0,
+            "maximum_accumulated_midpoint_power_quadrature_residual": 6.14317199754362e-05,
+            "power_residual_scope": "Nonquadratic H: diagnostic includes quadrature defect; it is not an asserted exact balance.",
+            "structure_scope": "Three independently transported-K step samples",
+            "transported_K_samples": [
+              {
+                "index": 0,
+                "time": 0.0,
+                "transport_K_defect_spectral2": 3.897882292219237e-08
+              },
+              {
+                "index": 10,
+                "time": 1.0,
+                "transport_K_defect_spectral2": 5.1605642608968796e-08
+              },
+              {
+                "index": 19,
+                "time": 1.9000000000000001,
+                "transport_K_defect_spectral2": 6.652287077258373e-08
+              }
+            ],
+            "inverse_flow_diagnostic_nfev": 1534
+          },
+          "diagnostic_trajectory_wall_seconds": 0.24731082199969023,
+          "required_preparation_operations": {
+            "expm": 0,
+            "sqrtm": 0,
+            "Sylvester": 0,
+            "scalar_exponentials": 0
+          },
+          "chart_checks": null,
+          "cost": {
+            "repetitions": 3,
+            "cold_total_seconds": [
+              0.016682627000136563,
+              0.016105003000120632,
+              0.015437280000242026
+            ],
+            "setup_seconds": [
+              2.3040001906338148e-06,
+              2.602999757073121e-06,
+              2.8940003176103346e-06
+            ],
+            "cold_advance_seconds": [
+              0.01668032299994593,
+              0.01610240000036356,
+              0.015434385999924416
+            ],
+            "cached_advance_seconds": [
+              0.015633804999652057,
+              0.016018212999824755,
+              0.015370708999853377
+            ],
+            "median_cold_seconds": 0.016105003000120632,
+            "median_setup_seconds": 2.602999757073121e-06,
+            "median_cached_seconds": 0.015633804999652057,
+            "scope": "Single-thread same-process wall time; one dispatch warmup; cold includes ALL required chart/matrix preparation; reference and diagnostic tangents/K excluded consistently."
+          },
+          "residual_coordinate": "Two canonical Gauss-stage increment equations; conversion to output-state error uses stage and field derivative bounds",
+          "Newton_unknown_dimension": 32
+        },
+        {
+          "h": 0.05,
+          "endpoint_error": 1.1167436862979029e-08,
+          "maximum_grid_error": 1.1167436862979029e-08,
+          "RMS_grid_error": 6.056516282058194e-09,
+          "endpoint_order": 3.999107616051993,
+          "maximum_grid_order": 3.999107616051993,
+          "diagnostics": {
+            "max_Newton_corrections": 2.0,
+            "max_stage_increment_residual_inf": 1.3877787807814457e-17,
+            "max_inverse_coordinate_residual_inf": 2.7547408798511697e-15,
+            "max_inverse_Newton_corrections": 16.0,
+            "max_inverse_coordinate_total_residual_inf": 2.7547408798511697e-15,
+            "max_canonical_symplectic_defect_spectral2": 0.014391541333785994,
+            "max_sampled_transport_K_defect_spectral2": 2.1107429268006864e-09,
+            "max_closed_H_drift_abs": 0.018816063036055458,
+            "minimum_Newton_singular_value": 0.9713743062577436,
+            "total_Newton_corrections": 80,
+            "failed_steps": 0,
+            "maximum_accumulated_midpoint_power_quadrature_residual": 1.5374768616798723e-05,
+            "power_residual_scope": "Nonquadratic H: diagnostic includes quadrature defect; it is not an asserted exact balance.",
+            "structure_scope": "Three independently transported-K step samples",
+            "transported_K_samples": [
+              {
+                "index": 0,
+                "time": 0.0,
+                "transport_K_defect_spectral2": 1.219066333747084e-09
+              },
+              {
+                "index": 20,
+                "time": 1.0,
+                "transport_K_defect_spectral2": 1.614461082619236e-09
+              },
+              {
+                "index": 39,
+                "time": 1.9500000000000002,
+                "transport_K_defect_spectral2": 2.1107429268006864e-09
+              }
+            ],
+            "inverse_flow_diagnostic_nfev": 1522
+          },
+          "diagnostic_trajectory_wall_seconds": 0.23060122400011096,
+          "required_preparation_operations": {
+            "expm": 0,
+            "sqrtm": 0,
+            "Sylvester": 0,
+            "scalar_exponentials": 0
+          },
+          "chart_checks": null,
+          "cost": {
+            "repetitions": 3,
+            "cold_total_seconds": [
+              0.03409398899975713,
+              0.031722853999781364,
+              0.032768636999662704
+            ],
+            "setup_seconds": [
+              2.623999989737058e-06,
+              3.3549999898241367e-06,
+              3.4360000427113846e-06
+            ],
+            "cold_advance_seconds": [
+              0.03409136499976739,
+              0.03171949899979154,
+              0.03276520099961999
+            ],
+            "cached_advance_seconds": [
+              0.033025033000285475,
+              0.03229388399995514,
+              0.03227868100020714
+            ],
+            "median_cold_seconds": 0.032768636999662704,
+            "median_setup_seconds": 3.3549999898241367e-06,
+            "median_cached_seconds": 0.03229388399995514,
+            "scope": "Single-thread same-process wall time; one dispatch warmup; cold includes ALL required chart/matrix preparation; reference and diagnostic tangents/K excluded consistently."
+          },
+          "residual_coordinate": "Two canonical Gauss-stage increment equations; conversion to output-state error uses stage and field derivative bounds",
+          "Newton_unknown_dimension": 32
+        },
+        {
+          "h": 0.025,
+          "endpoint_error": 6.980747685109298e-10,
+          "maximum_grid_error": 6.980747685109298e-10,
+          "RMS_grid_error": 3.768914710037061e-10,
+          "endpoint_order": 3.9997727208452956,
+          "maximum_grid_order": 3.9997727208452956,
+          "diagnostics": {
+            "max_Newton_corrections": 2.0,
+            "max_stage_increment_residual_inf": 1.978739437927257e-14,
+            "max_inverse_coordinate_residual_inf": 2.876171523169546e-15,
+            "max_inverse_Newton_corrections": 16.0,
+            "max_inverse_coordinate_total_residual_inf": 2.876171523169546e-15,
+            "max_canonical_symplectic_defect_spectral2": 0.007221843900090046,
+            "max_sampled_transport_K_defect_spectral2": 6.645096533877346e-11,
+            "max_closed_H_drift_abs": 0.01881606405553285,
+            "minimum_Newton_singular_value": 0.9855217503771655,
+            "total_Newton_corrections": 141,
+            "failed_steps": 0,
+            "maximum_accumulated_midpoint_power_quadrature_residual": 3.844745039786968e-06,
+            "power_residual_scope": "Nonquadratic H: diagnostic includes quadrature defect; it is not an asserted exact balance.",
+            "structure_scope": "Three independently transported-K step samples",
+            "transported_K_samples": [
+              {
+                "index": 0,
+                "time": 0.0,
+                "transport_K_defect_spectral2": 3.810270605477775e-11
+              },
+              {
+                "index": 40,
+                "time": 1.0,
+                "transport_K_defect_spectral2": 5.046958077505878e-11
+              },
+              {
+                "index": 79,
+                "time": 1.975,
+                "transport_K_defect_spectral2": 6.645096533877346e-11
+              }
+            ],
+            "inverse_flow_diagnostic_nfev": 1534
+          },
+          "diagnostic_trajectory_wall_seconds": 0.35881522699992274,
+          "required_preparation_operations": {
+            "expm": 0,
+            "sqrtm": 0,
+            "Sylvester": 0,
+            "scalar_exponentials": 0
+          },
+          "chart_checks": null,
+          "cost": {
+            "repetitions": 3,
+            "cold_total_seconds": [
+              0.06558141999994405,
+              0.06437656900016009,
+              0.06529259599983561
+            ],
+            "setup_seconds": [
+              3.2250000003841706e-06,
+              3.5660000321513508e-06,
+              3.0739997782802675e-06
+            ],
+            "cold_advance_seconds": [
+              0.06557819499994366,
+              0.06437300300012794,
+              0.06528952200005733
+            ],
+            "cached_advance_seconds": [
+              0.06557105499996396,
+              0.06448783599989838,
+              0.06534473500005333
+            ],
+            "median_cold_seconds": 0.06529259599983561,
+            "median_setup_seconds": 3.2250000003841706e-06,
+            "median_cached_seconds": 0.06534473500005333,
+            "scope": "Single-thread same-process wall time; one dispatch warmup; cold includes ALL required chart/matrix preparation; reference and diagnostic tangents/K excluded consistently."
+          },
+          "residual_coordinate": "Two canonical Gauss-stage increment equations; conversion to output-state error uses stage and field derivative bounds",
+          "Newton_unknown_dimension": 32
+        }
+      ],
+      "steps": [
+        0.2,
+        0.1,
+        0.05,
+        0.025
+      ],
+      "representative_tangent_check": {
+        "h": 0.1,
+        "time": 0.4,
+        "difference_step": 1e-05,
+        "finite_difference_vs_ideal_tangent_spectral2": 1.3063562284916587e-11,
+        "scope": "One representative point/step; actual feedback dependence included; diagnostic, not a full-domain derivative certificate."
+      }
+    }
+  },
+  "domain_and_input_diagnostics": {
+    "minimum_sampled_mass_eigenvalue": 1.0083219532670429,
+    "minimum_sampled_damping_eigenvalue": 0.08086903197000654,
+    "magnetic_input_count": 2,
+    "maximum_input_rank": 2,
+    "minimum_sampled_second_port_singular_value": 0.2447866832923246,
+    "maximum_abs_dimensionless_current": 0.17409401177149753,
+    "control_scope": "Two smooth cosine ports with i_a=i0_a-k_a(Phi_a-Phi_ref_a); exactly integrable closed potential, no arbitrary modal-force compensation or calibrated current limit.",
+    "transport_K_refinement_spectral2": 9.50507201002333e-16,
+    "transport_K_scope": "K at (z,t) is defined before discretization by exact inverse-flow pullback of K0 and approximated independently by DOP853; this costly diagnostic is NOT an algorithmic ingredient. Only three step samples per grid are claimed.",
+    "transport_K_refinement_nfev": [
+      254,
+      494
+    ]
+  },
+  "Newton_increment_tolerance_inf": 2e-14,
+  "interpretation": "Finite-dimensional synthetic method verification; no 3D rod/FSI/contact, learned-model or KAM claim."
+}

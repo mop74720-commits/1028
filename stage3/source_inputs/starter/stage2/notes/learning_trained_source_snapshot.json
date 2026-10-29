@@ -1,0 +1,7 @@
+{
+  "snapshot": "stage2/program/learning/run_learning_trained_source.py",
+  "source_before_patch": "stage2/program/learning/run_learning.py",
+  "sha256": "8b5c0eb4f8a0c8b7b4b9db2b2330f49809bca10d3d8aeafef1e3b0e9dcfbd6a2",
+  "created_utc": "2026-10-29T02:32:31.561082+00:00",
+  "scope": "Exact source used for already trained revised checkpoints; subsequent changes only protect data reuse."
+}

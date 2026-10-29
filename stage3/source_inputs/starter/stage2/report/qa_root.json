@@ -1,0 +1,330 @@
+{
+  "reviewer": "root",
+  "candidate": "render_release",
+  "pages": [
+    {
+      "page": 1,
+      "sha256": "187875fada908c2842be4d1da5d4c3102ca45b3aa5593c03f1f76c1cc31d2fe8",
+      "size": [
+        1547,
+        2002
+      ],
+      "visually_viewed": true,
+      "resolution": "original",
+      "finding": "no clipped table cells, missing formulas, overlapping text, or page-boundary overflow"
+    },
+    {
+      "page": 2,
+      "sha256": "b9af701b427bd246a7335d83524c5c807f641ca271931b96ccc320ffe496bf8f",
+      "size": [
+        1547,
+        2002
+      ],
+      "visually_viewed": true,
+      "resolution": "original",
+      "finding": "no clipped table cells, missing formulas, overlapping text, or page-boundary overflow"
+    },
+    {
+      "page": 3,
+      "sha256": "9f658e4e5656de771f629289f164864a01bdc536adb387ea35b6342ccad40b56",
+      "size": [
+        1547,
+        2002
+      ],
+      "visually_viewed": true,
+      "resolution": "original",
+      "finding": "no clipped table cells, missing formulas, overlapping text, or page-boundary overflow"
+    },
+    {
+      "page": 4,
+      "sha256": "6a57a0a3570cea231477c286e43cc2b2ea3e271bf760b7922d6604d5f4330637",
+      "size": [
+        1547,
+        2002
+      ],
+      "visually_viewed": true,
+      "resolution": "original",
+      "finding": "no clipped table cells, missing formulas, overlapping text, or page-boundary overflow"
+    },
+    {
+      "page": 5,
+      "sha256": "8949411d804d3a2fef2a7773890bc8851a7c1c5e398776e721f13f86baeb0352",
+      "size": [
+        1547,
+        2002
+      ],
+      "visually_viewed": true,
+      "resolution": "original",
+      "finding": "no clipped table cells, missing formulas, overlapping text, or page-boundary overflow"
+    },
+    {
+      "page": 6,
+      "sha256": "fb4d98745507e7e0e8bba0c82c65820a82c7cca474bf33827eea04ef0a932b0e",
+      "size": [
+        1547,
+        2002
+      ],
+      "visually_viewed": true,
+      "resolution": "original",
+      "finding": "no clipped table cells, missing formulas, overlapping text, or page-boundary overflow"
+    },
+    {
+      "page": 7,
+      "sha256": "1033eb897f0b548d851763b2ba54888acf697f1386bcac3111d1adf11ae9c467",
+      "size": [
+        1547,
+        2002
+      ],
+      "visually_viewed": true,
+      "resolution": "original",
+      "finding": "no clipped table cells, missing formulas, overlapping text, or page-boundary overflow"
+    },
+    {
+      "page": 8,
+      "sha256": "ef666a71fe786ed07b90c33cf8472886b2e8ebede42d05e18d010d6507a04e39",
+      "size": [
+        1547,
+        2002
+      ],
+      "visually_viewed": true,
+      "resolution": "original",
+      "finding": "no clipped table cells, missing formulas, overlapping text, or page-boundary overflow"
+    },
+    {
+      "page": 9,
+      "sha256": "98996863a9ecdead05c283927a4375ce25322e82c3a3fa6a9287230feab7c003",
+      "size": [
+        1547,
+        2002
+      ],
+      "visually_viewed": true,
+      "resolution": "original",
+      "finding": "no clipped table cells, missing formulas, overlapping text, or page-boundary overflow"
+    },
+    {
+      "page": 10,
+      "sha256": "819e266fc06db570aca623a8221637b870c2907f9fa24a333522882c35500cf6",
+      "size": [
+        1547,
+        2002
+      ],
+      "visually_viewed": true,
+      "resolution": "original",
+      "finding": "no clipped table cells, missing formulas, overlapping text, or page-boundary overflow"
+    },
+    {
+      "page": 11,
+      "sha256": "c92d36d1342a181cfefdebf922faa60b03042f0e22cf1d551a6c97b6f42570ee",
+      "size": [
+        1547,
+        2002
+      ],
+      "visually_viewed": true,
+      "resolution": "original",
+      "finding": "no clipped table cells, missing formulas, overlapping text, or page-boundary overflow"
+    },
+    {
+      "page": 12,
+      "sha256": "a6919af7e02cd96a10913d7fcee61972d00fafaa8fa41e15adce4a0c3978b669",
+      "size": [
+        1547,
+        2002
+      ],
+      "visually_viewed": true,
+      "resolution": "original",
+      "finding": "no clipped table cells, missing formulas, overlapping text, or page-boundary overflow"
+    },
+    {
+      "page": 13,
+      "sha256": "632094a09642bce6eebc945283240e7d0dca9df43792b3f5372ac1665b4ca7df",
+      "size": [
+        1547,
+        2002
+      ],
+      "visually_viewed": true,
+      "resolution": "original",
+      "finding": "no clipped table cells, missing formulas, overlapping text, or page-boundary overflow"
+    },
+    {
+      "page": 14,
+      "sha256": "762240ec5aac8ebdbdbec60142474ef3116e5ad3f3cc0d07d54fd056f8b896f2",
+      "size": [
+        1547,
+        2002
+      ],
+      "visually_viewed": true,
+      "resolution": "original",
+      "finding": "no clipped table cells, missing formulas, overlapping text, or page-boundary overflow"
+    },
+    {
+      "page": 15,
+      "sha256": "26d9a34cec1af728f376bfd50f487b8ab1991f93accf1720ebfada8dcbe0417d",
+      "size": [
+        1547,
+        2002
+      ],
+      "visually_viewed": true,
+      "resolution": "original",
+      "finding": "no clipped table cells, missing formulas, overlapping text, or page-boundary overflow"
+    },
+    {
+      "page": 16,
+      "sha256": "f0b83f97c5282100e5a3dfa9a3059601a1e928089d3d9c3126109d808e83b829",
+      "size": [
+        1547,
+        2002
+      ],
+      "visually_viewed": true,
+      "resolution": "original",
+      "finding": "no clipped table cells, missing formulas, overlapping text, or page-boundary overflow"
+    },
+    {
+      "page": 17,
+      "sha256": "c25e4103d2f9237a118203c4e0f9acca3514bd59d5689ee7dbd8bfb40f159a47",
+      "size": [
+        1547,
+        2002
+      ],
+      "visually_viewed": true,
+      "resolution": "original",
+      "finding": "no clipped table cells, missing formulas, overlapping text, or page-boundary overflow"
+    },
+    {
+      "page": 18,
+      "sha256": "65afc7f546e4aaae085416824c85aa9b8222bbfa93065178f117f83788b6f264",
+      "size": [
+        1547,
+        2002
+      ],
+      "visually_viewed": true,
+      "resolution": "original",
+      "finding": "no clipped table cells, missing formulas, overlapping text, or page-boundary overflow"
+    },
+    {
+      "page": 19,
+      "sha256": "ad0a45cc1024ae1bd42a4186db8b32c9366a679c788cae13de81599d7fc89a6a",
+      "size": [
+        1547,
+        2002
+      ],
+      "visually_viewed": true,
+      "resolution": "original",
+      "finding": "no clipped table cells, missing formulas, overlapping text, or page-boundary overflow"
+    },
+    {
+      "page": 20,
+      "sha256": "4e12537fa810cd4b4c7e0aa07b243b4b90bc3b96b2e0249537e7e889cac36f59",
+      "size": [
+        1547,
+        2002
+      ],
+      "visually_viewed": true,
+      "resolution": "original",
+      "finding": "no clipped table cells, missing formulas, overlapping text, or page-boundary overflow"
+    },
+    {
+      "page": 21,
+      "sha256": "7967cffa3c691f2aed62895b3c629315ee81eacc7a66a7bc5485334765586674",
+      "size": [
+        1547,
+        2002
+      ],
+      "visually_viewed": true,
+      "resolution": "original",
+      "finding": "no clipped table cells, missing formulas, overlapping text, or page-boundary overflow"
+    },
+    {
+      "page": 22,
+      "sha256": "088ea26e946d8e09a0fbf21afc70c84547d7db970c8d01bcc0d89e7dfb81e99b",
+      "size": [
+        1547,
+        2002
+      ],
+      "visually_viewed": true,
+      "resolution": "original",
+      "finding": "no clipped table cells, missing formulas, overlapping text, or page-boundary overflow"
+    },
+    {
+      "page": 23,
+      "sha256": "5220abe8f9fb47e975308c89e48ef0f7ced29464bab1e3411737f8fcce1c69e9",
+      "size": [
+        1547,
+        2002
+      ],
+      "visually_viewed": true,
+      "resolution": "original",
+      "finding": "no clipped table cells, missing formulas, overlapping text, or page-boundary overflow"
+    },
+    {
+      "page": 24,
+      "sha256": "20d3120d348caf99fbcafc210f62990698996a80cb3b2438115638404314673e",
+      "size": [
+        1547,
+        2002
+      ],
+      "visually_viewed": true,
+      "resolution": "original",
+      "finding": "no clipped table cells, missing formulas, overlapping text, or page-boundary overflow"
+    },
+    {
+      "page": 25,
+      "sha256": "dc2cffe88eefba994a5847ae3ecee83123b3959d88972fc56cd0279ea9eae00b",
+      "size": [
+        1547,
+        2002
+      ],
+      "visually_viewed": true,
+      "resolution": "original",
+      "finding": "no clipped table cells, missing formulas, overlapping text, or page-boundary overflow"
+    },
+    {
+      "page": 26,
+      "sha256": "98e1ea8c47abcfa8f5ca42e7ca016268f3060ea7b1e8ef216428b0092e53f14a",
+      "size": [
+        1547,
+        2002
+      ],
+      "visually_viewed": true,
+      "resolution": "original",
+      "finding": "no clipped table cells, missing formulas, overlapping text, or page-boundary overflow"
+    },
+    {
+      "page": 27,
+      "sha256": "95d0532b6370d61e81b06b56ceeda5d5a688d9919a3afee01c786f9ac8141285",
+      "size": [
+        1547,
+        2002
+      ],
+      "visually_viewed": true,
+      "resolution": "original",
+      "finding": "no clipped table cells, missing formulas, overlapping text, or page-boundary overflow"
+    },
+    {
+      "page": 28,
+      "sha256": "f5a1094e4677969aff6826c14a9493f14262d6fa7d4d6c5e93585d83d5e2fecf",
+      "size": [
+        1547,
+        2002
+      ],
+      "visually_viewed": true,
+      "resolution": "original",
+      "finding": "no clipped table cells, missing formulas, overlapping text, or page-boundary overflow"
+    },
+    {
+      "page": 29,
+      "sha256": "e000b969e2f1f0201579a460348613fe550f1427a8a4970adce5c587292cfb75",
+      "size": [
+        1547,
+        2002
+      ],
+      "visually_viewed": true,
+      "resolution": "original",
+      "finding": "no clipped table cells, missing formulas, overlapping text, or page-boundary overflow"
+    }
+  ],
+  "fixes": [
+    "Assembler cross-references: v10 local sections 8/9 to 4.8/4.9, route local 6/7 to 7.7.6/7.7.7",
+    "Figure 6-2 label: exact low-dimensional ROM, not true ROM"
+  ],
+  "status": "candidate inspected; final render after inline math corrections still requires validation"
+}
