@@ -1,0 +1,55 @@
+{
+  "status": "executed",
+  "records": [
+    {
+      "elements": 20,
+      "magnetized_quadrature_cells": 1,
+      "rank_rcond_1e_8": 5,
+      "singular_values": [
+        2.0321149540853836,
+        2.032002876388263,
+        0.33629896685429467,
+        0.33626469548217386,
+        0.0005274754367747966,
+        1.188843679946976e-16,
+        1.6467433243201013e-17,
+        1.59873138805022e-19
+      ],
+      "initial_state_rule": "initial_state(.01) in each quadrature-specific linear modal scaling; these are rank diagnostics, not trajectory convergence comparisons"
+    },
+    {
+      "elements": 40,
+      "magnetized_quadrature_cells": 2,
+      "rank_rcond_1e_8": 6,
+      "singular_values": [
+        2.0114075888615632,
+        2.0112936735980016,
+        0.3349888768761902,
+        0.3349551866866215,
+        0.0005246888185303335,
+        9.668323250702714e-06,
+        4.749079580473612e-17,
+        1.9183423670088128e-18
+      ],
+      "initial_state_rule": "initial_state(.01) in each quadrature-specific linear modal scaling; these are rank diagnostics, not trajectory convergence comparisons"
+    },
+    {
+      "elements": 80,
+      "magnetized_quadrature_cells": 4,
+      "rank_rcond_1e_8": 6,
+      "singular_values": [
+        2.0063922028823957,
+        2.0062778338719762,
+        0.33466703898414074,
+        0.33463349171841067,
+        0.0005240008339447775,
+        1.2041277494865879e-05,
+        7.527474153413053e-17,
+        4.9896090346198274e-18
+      ],
+      "initial_state_rule": "initial_state(.01) in each quadrature-specific linear modal scaling; these are rank diagnostics, not trajectory convergence comparisons"
+    }
+  ],
+  "elapsed_seconds": 9.369928913999956,
+  "conclusion": "Rank depends on the selected ROM geometry/quadrature. Any 12x8 magnetic input map has rank at most8; do not generalize rank5 from the delivered20-cell quadrature to all spatial resolutions."
+}

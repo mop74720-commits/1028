@@ -1,0 +1,10 @@
+test_collocated_power_and_full_force (test_control.ControlTests.test_collocated_power_and_full_force) ... ok
+test_field_bounds_preserve_bias_and_maxwell (test_control.ControlTests.test_field_bounds_preserve_bias_and_maxwell) ... ok
+test_projected_cancellation_does_not_invent_unreachable_force (test_control.ControlTests.test_projected_cancellation_does_not_invent_unreachable_force) ... ok
+test_full_coil_virtual_work_and_constraints (test_control_results.ControlEvidenceTests.test_full_coil_virtual_work_and_constraints) ... ok
+test_new_learning_labels_and_actuator_limits (test_control_results.ControlEvidenceTests.test_new_learning_labels_and_actuator_limits) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.370s
+
+OK

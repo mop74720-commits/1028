@@ -1,0 +1,27 @@
+references conservative
+conservative midpoint h=0.001
+{"step": 0.001, "maximum_state_error": 1.6863455603259473e-05, "observed_order": null, "seconds": 3.488583053999946, "max_increment_residual_inf": 3.632662789351229e-15}
+conservative midpoint h=0.0005
+{"step": 0.0005, "maximum_state_error": 4.494400002828123e-06, "observed_order": 1.9076997632482384, "seconds": 4.753148807999878, "max_increment_residual_inf": 5.803996809528554e-17}
+conservative midpoint h=0.00025
+{"step": 0.00025, "maximum_state_error": 1.1429500832410844e-06, "observed_order": 1.9753661332605454, "seconds": 8.666880808000087, "max_increment_residual_inf": 1.3484764520288461e-18}
+conservative central4 h=0.001
+{"step": 0.001, "maximum_state_error": 1.100401141588409e-06, "observed_order": null, "seconds": 11.673372517999951, "max_increment_residual_inf": 3.88473577104761e-15}
+conservative central4 h=0.0005
+{"step": 0.0005, "maximum_state_error": 7.497035537920935e-08, "observed_order": 3.8755654903203474, "seconds": 25.261787744000003, "max_increment_residual_inf": 6.015627991400041e-17}
+conservative central4 h=0.00025
+{"step": 0.00025, "maximum_state_error": 4.78611213693106e-09, "observed_order": 3.9693941366915015, "seconds": 47.483311404000005, "max_increment_residual_inf": 2.0405023699356095e-18}
+references damped
+damped midpoint h=0.001
+{"step": 0.001, "maximum_state_error": 1.6858114961268332e-05, "observed_order": null, "seconds": 2.9926012490000176, "max_increment_residual_inf": 3.641911965618773e-15}
+damped midpoint h=0.0005
+{"step": 0.0005, "maximum_state_error": 4.492917055824204e-06, "observed_order": 1.9077188927054491, "seconds": 5.645057170999962, "max_increment_residual_inf": 5.890574164649784e-17}
+damped midpoint h=0.00025
+{"step": 0.00025, "maximum_state_error": 1.1425681032420165e-06, "observed_order": 1.9753722680967682, "seconds": 10.867017728000064, "max_increment_residual_inf": 2.4263258774099433e-18}
+damped weighted_midpoint h=0.001
+{"step": 0.001, "maximum_state_error": 1.685600994324261e-05, "observed_order": null, "seconds": 2.6576234839999415, "max_increment_residual_inf": 3.632454419246205e-15}
+damped weighted_midpoint h=0.0005
+{"step": 0.0005, "maximum_state_error": 4.4925236891032995e-06, "observed_order": 1.907665054096667, "seconds": 4.897903916999894, "max_increment_residual_inf": 5.932819932894092e-17}
+damped weighted_midpoint h=0.00025
+{"step": 0.00025, "maximum_state_error": 1.142480008318948e-06, "observed_order": 1.9753571905827083, "seconds": 11.175964275999831, "max_increment_residual_inf": 2.3483988462625477e-18}
+all convergence, residual, reference and applicable structure assertions passed

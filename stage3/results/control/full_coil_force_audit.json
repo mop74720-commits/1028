@@ -1,0 +1,171 @@
+{
+  "status": "executed",
+  "constraint_stress": [
+    {
+      "momentum_scale": 1.0,
+      "radial_scale": 1.0,
+      "unbounded_limits": {
+        "total_center_field_T": 0.0004999961907631808,
+        "gradient_frobenius_T_per_m": 0.009942473931884096,
+        "affine_workspace_upper_bound_T": 0.0014741557072720033,
+        "divergence": 0.0,
+        "curl_defect": 0.0
+      },
+      "bounded_limits": {
+        "total_center_field_T": 0.0004999961907631808,
+        "gradient_frobenius_T_per_m": 0.009942473931884096,
+        "affine_workspace_upper_bound_T": 0.0014741557072720033,
+        "divergence": 0.0,
+        "curl_defect": 0.0
+      },
+      "desired_force_norm": 0.0007604379786630603,
+      "bounded_force_residual": 0.00026552961743085565
+    },
+    {
+      "momentum_scale": 10.0,
+      "radial_scale": 0.301735767229867,
+      "unbounded_limits": {
+        "total_center_field_T": 0.0005000596762257481,
+        "gradient_frobenius_T_per_m": 0.09942473931884094,
+        "affine_workspace_upper_bound_T": 0.010241654841313976,
+        "divergence": 0.0,
+        "curl_defect": 0.0
+      },
+      "bounded_limits": {
+        "total_center_field_T": 0.0004999951189343571,
+        "gradient_frobenius_T_per_m": 0.029999999999999995,
+        "affine_workspace_upper_bound_T": 0.0034393828101150167,
+        "divergence": 0.0,
+        "curl_defect": 0.0
+      },
+      "desired_force_norm": 0.007604379786630602,
+      "bounded_force_residual": 0.005639822556392102
+    },
+    {
+      "momentum_scale": 100.0,
+      "radial_scale": 0.030173576722986702,
+      "unbounded_limits": {
+        "total_center_field_T": 0.0005102685556438927,
+        "gradient_frobenius_T_per_m": 0.9942473931884095,
+        "affine_workspace_upper_bound_T": 0.09792622020652615,
+        "divergence": 0.0,
+        "curl_defect": 0.0
+      },
+      "bounded_limits": {
+        "total_center_field_T": 0.0004999951189343571,
+        "gradient_frobenius_T_per_m": 0.03,
+        "affine_workspace_upper_bound_T": 0.0034393828101150167,
+        "divergence": 0.0,
+        "curl_defect": 0.0
+      },
+      "desired_force_norm": 0.07604379786630605,
+      "bounded_force_residual": 0.07403285349385148
+    }
+  ],
+  "method": "centered finite differences of -sum_i mu_i (R_i e3) dot B_BiotSavart(r_i,I) / E0; full actual 20-cell 12-DOF geometry, currents fixed during differentiation",
+  "records": [
+    {
+      "time_s": 5.60836213802042e-05,
+      "steps": [
+        2e-06,
+        1e-06
+      ],
+      "independent_virtual_work": {
+        "total_vs_increment": "actual_local_input includes bias; both energies and G@actual_local_input here use total fields",
+        "origin_center_field_reconstruction_error_T": 0.0,
+        "origin_gradient_reconstruction_error_T_per_m": 4.775324877677077e-10,
+        "full_gradient_refinement_difference_T_per_m": 7.962620004199195e-10,
+        "distal_gradient_minus_origin_affine_T_per_m": 0.0043137632383367435,
+        "full_force_virtual_work_vs_energy_gradient_difference": 2.2958450117481854e-09,
+        "affine_virtual_work_vs_Gm_difference": 2.41715481557864e-18,
+        "field_torque_contribution_difference_norm": 0.006596975593779126,
+        "gradient_force_contribution_difference_norm": 0.10107342800707339,
+        "additive_difference_closure": 8.52431343829782e-18
+      },
+      "full_coil_generalized_force": [
+        -0.09059214245432656,
+        0.005505770506175622,
+        0.03301661222199215,
+        -0.0014557417493676894,
+        0.01852523456857824,
+        1.115363357229171e-05,
+        0.0014628628308699376,
+        0.010604430111804675,
+        0.0013664591680395688,
+        0.000460563254200963,
+        -1.6381340728344185e-06,
+        -0.00017096679627570666
+      ],
+      "affine_generalized_force": [
+        -0.000518028590094248,
+        -0.0011190646743871248,
+        0.0010997911468177603,
+        0.0012121346005551801,
+        0.0012533165599648846,
+        0.001247158323830761,
+        0.0024152794406271097,
+        0.0026413974708196703,
+        6.346924837506348e-06,
+        -7.327622896416295e-06,
+        -3.92311430416566e-06,
+        3.978764097920887e-06
+      ],
+      "finite_difference_refinement_difference": 1.187990514796716e-09,
+      "full_minus_affine_norm": 0.09772051343114826,
+      "full_minus_affine_relative": 0.9876629337058201
+    },
+    {
+      "time_s": 0.0008973379420832672,
+      "steps": [
+        2e-06,
+        1e-06
+      ],
+      "independent_virtual_work": {
+        "total_vs_increment": "actual_local_input includes bias; both energies and G@actual_local_input here use total fields",
+        "origin_center_field_reconstruction_error_T": 1.21217487951527e-19,
+        "origin_gradient_reconstruction_error_T_per_m": 4.758572408169336e-10,
+        "full_gradient_refinement_difference_T_per_m": 7.954182042829748e-10,
+        "distal_gradient_minus_origin_affine_T_per_m": 0.004313703255291759,
+        "full_force_virtual_work_vs_energy_gradient_difference": 3.0379984787814756e-09,
+        "affine_virtual_work_vs_Gm_difference": 5.705541501874438e-18,
+        "field_torque_contribution_difference_norm": 0.006582051847122086,
+        "gradient_force_contribution_difference_norm": 0.10082642593583611,
+        "additive_difference_closure": 9.777225544332374e-18
+      },
+      "full_coil_generalized_force": [
+        -0.08652997957048214,
+        0.003107443413696842,
+        0.0324373479743123,
+        -0.003603817300135148,
+        0.018814489133323065,
+        -0.003350009658564801,
+        -0.006697492060947496,
+        0.012658653680830412,
+        0.0013299630841068222,
+        0.0004125976782454188,
+        -2.4537094578391816e-05,
+        -0.0001697148532819881
+      ],
+      "affine_generalized_force": [
+        0.0032787937023175734,
+        -0.004084221041086128,
+        0.0006219073409699598,
+        -0.000671088958434989,
+        0.0015996880449113782,
+        -0.0019303776739156599,
+        -0.005735320787500775,
+        0.004718951115965136,
+        -3.529856614339011e-05,
+        -4.6368776234598314e-05,
+        -3.2791634475225286e-05,
+        1.3445724494394484e-05
+      ],
+      "finite_difference_refinement_difference": 1.4390135079995449e-09,
+      "full_minus_affine_norm": 0.09748126250717792,
+      "full_minus_affine_relative": 1.0199476617021581
+    }
+  ],
+  "elapsed_seconds": 4.049691948999907,
+  "source_sha256": "89bbca3c9914f167f90b8e4fd58289b238afcbe5936c22e248c14d9b4ed55648",
+  "limitation": "Pointwise force audit only; full coil-force trajectories and bounds over continuous space remain unrun."
+}

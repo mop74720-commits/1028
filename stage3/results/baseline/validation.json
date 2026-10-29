@@ -1,0 +1,109 @@
+{
+  "run_directory": "/workspace/1028-cloud/runs/validation-f1j023jo",
+  "checks": [
+    {
+      "name": "v10_full",
+      "exit_code": 0,
+      "seconds": 249.19,
+      "command": [
+        "/workspace/1028-cloud/venvs/main/bin/python",
+        "reproduction/run_all.py"
+      ],
+      "cwd": "/workspace/1028-cloud/runs/validation-f1j023jo/v10"
+    },
+    {
+      "name": "starter_integrity",
+      "exit_code": 0,
+      "seconds": 0.05,
+      "command": [
+        "/workspace/1028-cloud/venvs/main/bin/python",
+        "verify_starter.py"
+      ],
+      "cwd": "/workspace/1028-cloud/runs/validation-f1j023jo/starter"
+    },
+    {
+      "name": "birkhoff_general",
+      "exit_code": 0,
+      "seconds": 5.58,
+      "command": [
+        "/workspace/1028-cloud/venvs/main/bin/python",
+        "verify_general_birkhoff.py"
+      ],
+      "cwd": "/workspace/1028-cloud/runs/validation-f1j023jo/birkhoff"
+    },
+    {
+      "name": "birkhoff_v10",
+      "exit_code": 0,
+      "seconds": 2.85,
+      "command": [
+        "/workspace/1028-cloud/venvs/main/bin/python",
+        "verify_v10_special_case.py"
+      ],
+      "cwd": "/workspace/1028-cloud/runs/validation-f1j023jo/birkhoff"
+    },
+    {
+      "name": "route_a_transport",
+      "exit_code": 0,
+      "seconds": 12.34,
+      "command": [
+        "/workspace/1028-cloud/venvs/route_a/bin/python",
+        "stage2/program/route_a/transport_moser_check.py"
+      ],
+      "cwd": "/workspace/1028-cloud/runs/validation-f1j023jo/starter"
+    },
+    {
+      "name": "learning_rom",
+      "exit_code": 0,
+      "seconds": 5.3,
+      "command": [
+        "/workspace/1028-cloud/venvs/learning/bin/python",
+        "stage2/program/learning/validate_rod_rom.py"
+      ],
+      "cwd": "/workspace/1028-cloud/runs/validation-f1j023jo/starter"
+    },
+    {
+      "name": "metriplectic",
+      "exit_code": 0,
+      "seconds": 4.97,
+      "command": [
+        "/workspace/1028-cloud/venvs/learning/bin/python",
+        "stage2/program/metriplectic_candidate.py"
+      ],
+      "cwd": "/workspace/1028-cloud/runs/validation-f1j023jo/starter"
+    },
+    {
+      "name": "rod_operators",
+      "exit_code": 0,
+      "seconds": 38.76,
+      "command": [
+        "/workspace/1028-cloud/venvs/rod/bin/python",
+        "stage2/program/rod3d/verify_operators.py"
+      ],
+      "cwd": "/workspace/1028-cloud/runs/validation-f1j023jo/starter"
+    },
+    {
+      "name": "rod_simulation",
+      "exit_code": 0,
+      "seconds": 10.92,
+      "command": [
+        "/workspace/1028-cloud/venvs/rod/bin/python",
+        "stage2/program/rod3d/model.py",
+        "--config",
+        "stage2/program/rod3d/config_position_feedback.json",
+        "--name",
+        "onboarding_smoke",
+        "--elements",
+        "16",
+        "--dt",
+        "1e-5",
+        "--duration",
+        ".002",
+        "--sample-dt",
+        ".0002",
+        "--mode",
+        "feedback"
+      ],
+      "cwd": "/workspace/1028-cloud/runs/validation-f1j023jo/starter"
+    }
+  ]
+}

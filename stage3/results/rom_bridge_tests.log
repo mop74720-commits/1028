@@ -1,0 +1,11 @@
+test_differentiable_tensor_api (__main__.ROMBridgeTests.test_differentiable_tensor_api) ... ok
+test_field_jacobian_and_form_compatibility (__main__.ROMBridgeTests.test_field_jacobian_and_form_compatibility) ... ok
+test_full_geometry_hamiltonian (__main__.ROMBridgeTests.test_full_geometry_hamiltonian) ... ok
+test_geometric_inertia_is_not_frozen (__main__.ROMBridgeTests.test_geometric_inertia_is_not_frozen) ... ok
+test_hamiltonian_directional_derivative (__main__.ROMBridgeTests.test_hamiltonian_directional_derivative) ... ok
+test_magnetic_force_and_virtual_power (__main__.ROMBridgeTests.test_magnetic_force_and_virtual_power) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 4.800s
+
+OK

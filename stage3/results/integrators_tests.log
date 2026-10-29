@@ -1,0 +1,10 @@
+test_nonseparable_central_sign_and_order (test_integrators.IntegratorChecks.test_nonseparable_central_sign_and_order) ... ok
+test_true_rom_central_gradient_direction (test_integrators.IntegratorChecks.test_true_rom_central_gradient_direction) ... ok
+test_true_rom_central_ideal_tangent_is_hamiltonian (test_integrators.IntegratorChecks.test_true_rom_central_ideal_tangent_is_hamiltonian) ... ok
+test_true_rom_midpoint_residual_and_symplecticity (test_integrators.IntegratorChecks.test_true_rom_midpoint_residual_and_symplecticity) ... ok
+test_true_rom_weighted_is_conformal (test_integrators.IntegratorChecks.test_true_rom_weighted_is_conformal) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 7.681s
+
+OK

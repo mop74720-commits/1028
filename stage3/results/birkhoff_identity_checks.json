@@ -1,0 +1,50 @@
+{
+  "dimension": 24,
+  "time": 0.003,
+  "diagnostics": {
+    "chart": {
+      "transformed_field_identity_error": 0.0,
+      "matching_error": 0.0,
+      "representation_residual_doubling_ratio": 2.0,
+      "transport_compatibility_doubling_ratio": 2.0000000000028786,
+      "at_t": {
+        "time": 0.003,
+        "representation_residual_2": 1.2170564643293398,
+        "original_field_error_2": 1.2160302895239634,
+        "inverse_K_residual_bound": 1.216691456892272,
+        "original_transport_compatibility_2": 0.00792070478179538,
+        "chart_matching_2": 0.0,
+        "K_min_singular": 1.0003,
+        "K_condition": 1.0005998200539838,
+        "chart_condition": 1.0009,
+        "chart_inverse_error": 0.0,
+        "closure": "exact: K depends on t only, all spatial derivatives vanish",
+        "interpretation": "structure and original-field errors are independent; fixed expansion origin"
+      },
+      "at_2t": {
+        "time": 0.006,
+        "representation_residual_2": 2.4341129286586796,
+        "original_field_error_2": 2.4300117009854962,
+        "inverse_K_residual_bound": 2.432653336656686,
+        "original_transport_compatibility_2": 0.015841409563613563,
+        "chart_matching_2": 0.0,
+        "K_min_singular": 1.0006,
+        "K_condition": 1.0011992804317411,
+        "chart_condition": 1.0018,
+        "chart_inverse_error": 0.0,
+        "closure": "exact: K depends on t only, all spatial derivatives vanish",
+        "interpretation": "structure and original-field errors are independent; fixed expansion origin"
+      }
+    },
+    "direct_gauge": {
+      "scalar_error": 0.0,
+      "gradient_error": 2.519488034843043e-16,
+      "PDE_representation_sign_identity_error": 3.698006204380379e-16,
+      "oneform_exterior_derivative_error": 5.892310268386261e-16,
+      "representation_gauge_invariance_error": 2.677578137283465e-16,
+      "nonzero_representation_residual": 1.2170564643293398
+    },
+    "first_transport_coefficient_identity_error": 3.0685365627758566e-16
+  },
+  "scope": "direct AD identities and sampled diagnostics; no physical exact flow used"
+}

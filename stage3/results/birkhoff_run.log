@@ -1,0 +1,47 @@
+diagnostic {"time": 0.0005, "representation_residual_2": 0.08921925906898646, "original_field_error_2": 0.08920656671109316, "inverse_K_residual_bound": 0.08921479832907, "original_transport_compatibility_2": 0.0005295725648490981, "chart_matching_2": 0.0, "K_min_singular": 1.00005, "K_condition": 1.00009999500025, "chart_condition": 1.00015, "chart_inverse_error": 0.0, "closure": "exact: K depends on t only, all spatial derivatives vanish", "interpretation": "structure and original-field errors are independent; fixed expansion origin"}
+diagnostic {"time": 0.001, "representation_residual_2": 0.17843851813797293, "original_field_error_2": 0.1783877559553143, "inverse_K_residual_bound": 0.17842067607036588, "original_transport_compatibility_2": 0.001059145129698062, "chart_matching_2": 0.0, "K_min_singular": 1.0001, "K_condition": 1.0001999800019998, "chart_condition": 1.0003, "chart_inverse_error": 0.0, "closure": "exact: K depends on t only, all spatial derivatives vanish", "interpretation": "structure and original-field errors are independent; fixed expansion origin"}
+diagnostic {"time": 0.002, "representation_residual_2": 0.3568770362759458, "original_field_error_2": 0.3566740455117068, "inverse_K_residual_bound": 0.3568056751409176, "original_transport_compatibility_2": 0.0021182902593965608, "chart_matching_2": 0.0, "K_min_singular": 1.0002, "K_condition": 1.0003999200159968, "chart_condition": 1.0006, "chart_inverse_error": 0.0, "closure": "exact: K depends on t only, all spatial derivatives vanish", "interpretation": "structure and original-field errors are independent; fixed expansion origin", "oneform_exterior_derivative_error_2": 6.460847373522962e-16, "oneform_transport_PDE_residual_2": 0.35687703627594575, "PDE_vs_representation_residual_identity": 1.0357872271656358e-16}
+diagnostic {"time": 0.004, "representation_residual_2": 0.7137540725518914, "original_field_error_2": 0.7129425728277489, "inverse_K_residual_bound": 0.7134686850778602, "original_transport_compatibility_2": 0.004236580518794165, "chart_matching_2": 0.0, "K_min_singular": 1.0004, "K_condition": 1.000799680127949, "chart_condition": 1.0012, "chart_inverse_error": 0.0, "closure": "exact: K depends on t only, all spatial derivatives vanish", "interpretation": "structure and original-field errors are independent; fixed expansion origin"}
+reference {'field': 'original', 'rtol': 2e-10, 'atol': 2e-12, 'nfev': 122, 'seconds': 8.936859982999977}
+reference {'field': 'original', 'rtol': 5e-12, 'atol': 5e-14, 'nfev': 122, 'seconds': 9.282047101999979}
+Traceback (most recent call last):
+  File "/workspace/1028/stage3/program/run_birkhoff.py", line 101, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "/workspace/1028/stage3/program/run_birkhoff.py", line 63, in main
+    sol=solve_ivp(field,(0,T),z0,method='DOP853',rtol=rtol,atol=atol,max_step=T/8,dense_output=True)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/scipy/integrate/_ivp/ivp.py", line 657, in solve_ivp
+    message = solver.step()
+              ^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/scipy/integrate/_ivp/base.py", line 201, in step
+    success, message = self._step_impl()
+                       ^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/scipy/integrate/_ivp/rk.py", line 144, in _step_impl
+    y_new, f_new = rk_step(self.fun, t, y, self.f, h, self.A,
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/scipy/integrate/_ivp/rk.py", line 64, in rk_step
+    K[s] = fun(t + c * h, y + dy)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/scipy/integrate/_ivp/base.py", line 158, in fun
+    return self.fun_single(t, y)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/scipy/integrate/_ivp/base.py", line 24, in fun_wrapped
+    return np.asarray(fun(t, y), dtype=dtype)
+                      ^^^^^^^^^
+  File "/workspace/1028/stage3/program/birkhoff_rom.py", line 84, in approximate_field
+    g = self.gauge_gradient(z, t)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028/stage3/program/birkhoff_rom.py", line 80, in gauge_gradient
+    scalar = self.gauge_hamiltonian(x, t)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028/stage3/program/birkhoff_rom.py", line 75, in gauge_hamiltonian
+    dv = torch.autograd.grad(v, z, create_graph=True)[0]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/autograd/__init__.py", line 496, in grad
+    result = _engine_run_backward(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/autograd/graph.py", line 825, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

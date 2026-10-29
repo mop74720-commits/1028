@@ -1,0 +1,9 @@
+test_chart_field_and_error_separation (__main__.BirkhoffROMTests.test_chart_field_and_error_separation) ... ok
+test_direct_potential_gauge_and_representation_identity (__main__.BirkhoffROMTests.test_direct_potential_gauge_and_representation_identity) ... ok
+test_first_transport_coefficient_directly (__main__.BirkhoffROMTests.test_first_transport_coefficient_directly) ... ok
+test_nondegeneracy_domain_rejected (__main__.BirkhoffROMTests.test_nondegeneracy_domain_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 12.705s
+
+OK

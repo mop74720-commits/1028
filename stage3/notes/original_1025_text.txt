@@ -1,0 +1,1221 @@
+变系数非线性波动方程（二阶拟线性双曲型PDE）
+①Kirohhoff弹性杆理论(几何精确) 
+② Maxwell磁场张量理论(电磁力) 
+③ 修正Morison方程(流圈耦合) 
+④ 接触力学
+推导过程如下：
+(1)几何与运动学描述(① Kirohhoff 假设)
+r(s, t) : 杆的中心线位置矢量
+s:Lagrange 弧长坐标.
+t：时间
+t:变形后的切向量(单位向量)
+v：拉伸应变
+(v)
+⇒∂r∂s=vt,v=|∂r∂s|=1
+v=1+ε, t取成ds
+u : Darboux矢量轴,描述杆的局部变形
+{d1, d2, d3} ：局部标架
+(vi)
+∂di∂s=u×di
+k: 曲率矢量 ≈∂t∂s×t=1v∂∂s1v∂r∂s×∂r∂s
+动力学平衡与本构关系
+(i)
+ ρA∂2r∂t2=∂n∂s+fext 
+(牛顿第二定律. Euler-Cauchy 应力原理)
+平动方程 fext =fmag  +fhydro  +fcont+fgravity=fmag  +fhydro  +fcont
+(fgravity=0：微重力 )
+ n(s, t): 内力矢量
+n:杆件横截面上的内力矢量
+m:杆件横截面上的力矩矢量
+ρ,A,I: 杆的材料密度,横截面积,截面惯性矩
+
+
+
+
+fmag=σm⋅ndl(Maxwell磁场张量理论)磁力(4)(②证明公式含义)
+Im:磁偶极矩
+σm:Maxwell应力张量
+(修正Morison方程计算得到的流体作用力)③
+
+fhydro=−ρfACm(∂2r∂t2−Vf)−12ρfCdVrVr(5)
+（惯性项+阻尼项）
+Vf:流体速度
+ρf:流体密度
+V:杆件体积
+Cm:附加质量系数
+Cd:拖曳系数
+Vr:杆件与流体的相对速度
+
+fcont=−kp(d−d0)n nwall−μfFnormaltfric, d≤d00,  &d>d0(6)
+(④接触力）
+d:杆表面到障碍物的距离
+d0:接触判定阈值
+kp:接触刚度
+n:指数(Hertz模型常取n=1.5)
+
+fgravity(微重力环境下的残余重力)(7)
+
+(ii)
+∂m∂s+∂r∂s×n+Imag+Icont =J ∂w∂t+w×(Jw) (转动方程)
+w×(Jw):(非线性旋转效应)描述大变形时需要考虑这一项
+w: 杆件截面的角速度矢量
+J = ρI
+g: 材料密度. kg/m3
+I：几何惯性致密, m4
+(iii)
+力—应变关系
+n= Ks(r −r0 )
+r:剪切/拉伸应变矢量Ks: 剪切/拉伸刚度矩阵
+力矩—曲率关系
+(iv)
+m=Kb(u−u0)
+u = (k1,k2, z)T : 曲率与扭率矢量 Kb=diagEI1,EI2,EI3,: 弯曲与扭转刚度矩阵
+
+将(i),(ii),(iii),(iv),(v),(vi)这6个方程整理成以下方程组：
+Part1(四场耦合PDE建立)
+ρA∂2r∂t2−∂n∂s=fmag  (B)+fhydro (∂r∂t,∂2r∂t2) +fcont(r)+fgravity(r)J∂w∂t+w×Jw−∂m∂s−∂r∂s×n=ImagB+Icontr (1)
+m=Kb(u−u0)n= Ks(r−r0 )(2)
+∂r∂s=(1+ε)d3∂di∂s=u×di(3)
+
+ 强非线性,强拟合,混合-PDE代数方程组. 
+ 四场耦合非线性偏微分方程组.
+注：①-③页内容为大致推导过程需要清晰每个变量的含义,核对公式是否正确？
+
+
+将内力矢量n写成两部分
+n = EA(v − 1)t + ∇s ⋅ m+ Ksr
+r:小剪切假设,忽略
+三个分别为拉伸力，弯曲力矩，剪切力
+≈ EA(v − 1)t + ∇s ⋅ m
+=EA|∂r∂s|−11v∂r∂s−∂∂s(EI∂2r∂s2)
+=EA|∂r∂s|−1∂r∂s−1∂r∂s−∂∂s(EI∂2r∂s2):=ktan(s,t,r)∂r∂s−∂∂s(EI∂2r∂s2)
+⇒∂n∂s=∂∂s[ktan(s,t,r)∂r∂s]−∂2∂s2(EI∂2r∂s2)(8)
+将(5),(8)代入方程(1)得
+ρA∂2r∂t2−∂∂s[ktan(s,t,r)∂r∂s]+∂2∂s2(EI∂2r∂s2)+ρfACm∂2r∂t2−ρfACmVf=fmag  (B)−12ρfCdVrVr +fcont(r)+fgravity(r)
+⇒(ρA+ρfACm)I∂2r∂t2−ρfACm=∂∂s[ktan(s,t,r)∂r∂s]−∂2∂s2(EI∂2r∂s2)−12ρfDCd∂r∂t−Vf(∂r∂t−Vf) +fcont(r)+fgravity(r)+fmag  (B)
+⇒(ρA+ρfACmI)∂2r∂t2+(12ρfDCd∂r∂t−VfI)∂r∂t=∂∂s[ktan(s,t,r)∂γ∂s]−∂2∂s2(EI∂2r∂s2)+ρfACmVf+fcont(r)+fgravity(r)+fmag  (B)
+⇒M(s,t)∂2r∂t2+C(s,t,∂r∂t)∂r∂t=∂∂s[ktan(s,t,r)∂γ∂s]−∂2∂s2(EI∂2r∂s2)+F(9)
+M(s,t):=ρA+ρfACmI
+C(s,t,∂r∂t):=12ρfDCd∂r∂t−VfI
+F:=ρfACmVf+fcont(r)+fgravity(r)+fmag  (B)(9)
+记为L(s,t,r(s,t))=F
+变系数非线性波动方程
+近似解:
+ r(s,t)≈N(s)qkt:=r(s,t),
+ r(s,t)=k=1NNksqkt
+s与t分离,s∈[0, L]
+N(S) : 已知的插值函数矩阵
+qkt:未知的节点位移向量
+残差R(s,t) = L(s,t,r(s,t))−F≠0
+
+
+
+
+Galerkin 空间,离散化,Part 2.
+要求： 0LNTs⋅Rs,tds≡0 (残差在整体域上的加权积分为0)
+⇔0LNTs[Mr+Cγ−∂∂s(ktan∂γ∂s)+∂2∂s2(EI∂2γ∂s2)−F]ds=0(10)
+0LNTsMrds=0LNTsMN(s)qktds=(0LNTsMN(s)ds)qkt
+0LNTsCγds=0LNTsCN(s)qktds=(0LNTsCN(s)ds)qkt
+0LNTs∂∂s(ktan∂γ∂s)ds=NTsktan∂γ∂s0L−0LdNTsds(ktan∂γ∂s)ds=NTsktan∂γ∂s0L−(0LdNTsdsktandNsdsds)qkt
+0LNTs∂2∂s2(EI∂2γ∂s2)ds =NTs∂∂s(EI∂2γ∂s2)0L−0LdNTsds∂∂s(EI∂2γ∂s2)ds=NTs∂∂s(EI∂2γ∂s2)0L−dNTsdsEI∂2γ∂s20L+0Ld2NTsds2EI∂2γ∂s2ds=NTs∂∂s(EI∂2γ∂s2)0L−dNTsdsEI∂2γ∂s20L+(0Ld2NTsds2EId2Nsds2ds)qkt
+ Mglobal:=0LNTsMN(s)ds
+Cglobal:=0LNTsCN(s)ds
+ Kten:=0LdNTsdsktandNsdsds
+Kbent:=0Ld2NTsds2EId2Nsds2ds
+Fglobal:=0LNTsFds
+ ⇒ Mglobalqkt+Cglobalqkt + (Kten+Kbent)qkt =Fglobal
+简记成 Mqt+Cqt + Kqt =F
+ Mtqt+Ct,qtqt + K(t,qt)qt =Ft
+几何非线性N(s)
+ Mt,qqt+Ct,q,qqt + K(t,q)qt =Ft,q
+大形变 N(s, q)
+
+
+
+
+
+
+
+
+现在分析ODEs:
+M(t)q(t)+C(t,q(t))q(t)+K(t,q(t))q(t)=F(t)
+更一般的形式为：
+M(t,q(t))q(t)+C(t,q(t),q(t))q(t)+K(t,q(t))q(t)=F(t,q(t))
+简记为：
+M(q)q+C(q,q)q+K(q)q=F(q)
+这几项依赖于什么，需要再次看之前的推导，特别是 K(q) 这个矩阵
+定义：
+广义坐标(广义位移):q∈ℝn（节点位移矢量）
+广义动量:p∈ℝn
+p=∂L∂q=M(q)q ⇒ q=M−1(q)p
+H(q,p)=T(q,p)+V(q), （能量=动能+势能）
+T(q,p)=12qTM(q)q=12M−1(q)pTM(q)q=12pTM−1(q)Tp=12pTM−1(q)p
+(因为M−1(q)对称）
+(动能依赖于动量p和几何构型q)
+M−1(q)为黎曼度规
+V(q)=Ustretch(q)+Ubend(q)=K(q)q dq=(Ktan+Kbend)q dq
+
+M−1(q)不是常矩阵，无法提到积分因子，所以不能写成12qTKq的形式
+哈密顿正则方程
+ Q ：广义非保守力。
+q=∂H∂pp=−∂H∂q+Q(q,q)
+⟹p=−∂(T(q,p)+V(q))∂q+Q(q,q)=−12pT∂M−1(q)∂qp−dV(q)dq+Q(q,q)=−12pT∂M−1(q)∂qp−K(q)q+Q(q,q)
+  12pT∂M−1(q)∂q p：几何惯性力（由于质量矩阵 M(q) 随位形 q 变化而产生）。
+  K(q)q：保守恢复力（源于弹性势能 V(q) 的梯度，K(q) 为刚度矩阵）。
+  Q(q,q)：非保守广义力。
+Q(q,q)=Fmag+Fcont−c(q,q) q=Fmag+Fcont−C(q,q)M−1(q)p
+⟹q=∂H∂pp=−∂H∂q+Fmag+Fcont−C∂H∂p 
+ilton结构的构造part3
+⟺q=∇pHp=−∇qH+Fmag+Fcont−C∇pH 
+H(q,p)=12pTM−1(q)p+Ustretch(q)+Ubend(q)
+dHdt=∂H∂qq+∂H∂pp=∂H∂q∂H∂p+∂H∂p−∂H∂q+Fext−C∂H∂p=∂H∂pFext−C∂H∂p(12)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+设计复值哈密顿神经网络CHNN  Part 4
+
+Fmag=(m⋅∇)B(s,t)
+m：磁偶极矩
+B：磁场强度
+∇：∂∂xi+∂∂yj+∂∂zk磁场强度的梯度算子
+
+推导：一个磁偶极矩为m的物体，在外磁场 B 中，具有势能：U=−m⋅B，在势场中受到的力等于势能的负梯度：（以下过程理解即可，无需写出来）
+F=−∇U=F=−∇(−m⋅B)=∇(m⋅B)
+
+假设m是常矢量，即 ∇m=0。
+
+利用矢量分析中的恒等式：
+
+  ∇(A⋅B)=(A⋅∇)B+(B⋅∇)A+A×(∇×B)+B×(∇×A)
+已知(B⋅∇)m=0,B×(∇×m)=0
+
+⟹∇(m⋅B)=(m⋅∇)B+(B⋅∇)m+m×(∇×B)+B×(∇×m)=(m⋅∇)B+m×(∇×B)
+
+     ⇒F=∇(m⋅v)B=(m⋅∇)B+(m⋅v)B
+在静磁学条件（无电流或电流影响可忽略）下：∇×B=0。
+
+⇒F=∇(m⋅B)≈(m⋅∇)B
+注：m⋅∇=(mxi+myj+mzk)⋅∂∂xi+∂∂yj+∂∂zk=mx∂∂x+my∂∂y+mz∂∂z
+F=(m⋅∇)B=mx∂∂x+my∂∂y+mz∂∂z(Bxi+Byj+Bzk)
+F=mx∂Bx∂x+my∂Bx∂y+mz∂Bx∂zi+mx∂By∂x+my∂By∂y+mz∂By∂zj+mx∂Bz∂x+my∂Bz∂y+mz∂Bz∂zk
+
+F 源于磁场的不均匀性。若磁场B不依赖于空间变量，则梯度F =0
+
+ F的方向取决于 m的方向和磁场 B 的空间变化率（梯度）
+
+m⋅∇的物理意义：沿着 m的方向去探测磁场的变化。
+
+
+
+
+
+
+
+引入泊松括号
+
+f(q,p,t),g(q,p,t) 光滑函数
+
+q=(q1⋯qN), p=(p1⋯pN)：广义坐标，广义动量
+
+
+f,g=i=1N∂f∂qi∂g∂pi−∂f∂pi∂g∂qi (14)
+注：N：系统的自由度
+qi：第i个广义坐标
+pi：第i个广义动量。
+
+f(q,p,t)是t的一元函数，也是q,p,t的三元函数。
+全导数：
+dfdt=∂f∂qdqdt+∂f∂pdpdt+∂f∂t
+若考虑 Hamiltonian系统：
+dq=∂H∂pdtdp=−∂H∂qdt
+则
+dfdt=∂f∂q⋅∂H∂p−∂f∂p⋅∂H∂q+∂f∂t=f,H+∂f∂t
+
+f,g满足以下性质
+1.  反对称性：f,g=−g,f
+2.  线性性： af+bg, h=af,h+bg,h
+3.  莱布尼兹法则： fg, h=fg,h+gf,h
+4.  雅可比恒等式： f,g,h+g,h,f+h,f,g=0
+
+基本泊松括号的计算
+    qi,qj=k=1N∂qi∂qk∂qj∂pk−∂qi∂pk∂qj∂qk=0
+    pi,pj=0
+   qi,pj=k=1N∂qi∂qk∂pj∂pk−∂qi∂pk∂pj∂qk=1 ,i=j0 ,i≠j=δij
+    qi,H=k=1N∂qi∂qk∂H∂pk−∂qi∂pk∂H∂qk=∂qi∂qi∂H∂pi−0=∂H∂pi
+    pi,H=k=1N∂pi∂qk∂H∂pk−∂pi∂pk∂H∂qk=0−∂pi∂pi∂H∂qi=−∂H∂qi
+
+{qi,H}:=∂H∂pi{pi,H}:=−∂H∂qi⟹qi={qi,H}pi={pi,H}⟹q={q,H}p={p,H}
+令z=(q,p)T，则
+
+dHdt=∂H∂qq+∂H∂pp=∂H∂q∂H∂p+∂H∂p−∂H∂q+Fext−C∂H∂p=∂H∂pFext−C∂H∂p
+z={z,H}=0I−I0∂H∂p∂H∂q:=J∇H
+显然
+∇z=∂H∂p∂H∂q=I
+方程(12)可进一步写成
+z={z,H}+0Fmag+Fcont−0C(q,q)∇pH
+⇒z={z,H}+0Fmag+Fcont+000−C(q,q)∇qH∇pH
+:={z,H}+Fext−D∇H={z,H}+0∇qG2−D∇H={z,H}+00I0∇G2−D∇H
+
+
+引入耗散泊松括号
+[f,H]=(∇f)TD(∇H)
+⇒[z,H]=(∇z)TD(∇H)=ID(∇H)=D∇H⑮
+⇒z={z,H}−[z,H]+Fext=J∇H−D∇H+Fext =(J−D)∇H+Fext:metriplectic dynamics
+
+注：Coquinot, B. and Morrison, P.J. A general metriplectic framework with application to dissipative extended magnetohydrodynamics. J. Plasma Phys. 1-32, 2020.（可用结论，使用时再分析）
+方程 (1.3) ：
+dfdt=[[f,ℱ]]={f,ℋ}+T(f,S)
+
+f光滑函数
+ℋ：哈密顿函数
+T：拉格朗日乘子
+S： S=Ωσ 总的熵。它是驱动不可逆过程的势函数。它与泊松括号满足对称的退化条件，是泊松括号的卡西米尔不变量（Casimir of the Poisson bracket）
+
+
+
+
+{f,S}=0, ∀f(H,S)=0, ∀f ,退化性要求
+ 
+
+
+dHdt={H,H}+Τ(H,S)=0+0=0 dSdt={S,H}+Τ(S,S)=0+Τ(S,S)≥0 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+构造复值生成函数（哈密顿量）：
+ℋ(q,p)=H(q,p)+i(G1(q,p)+G2(q,p)):=H(q,p)+iG(q,p)(16)
+H(q,p)是经典的实哈密顿量（能量）。
+ G(q,p) 是一个实函数，与系统的耗散有关。
+耗散力被纳入虚部G中
+−C∇pH=pdiss,  G1(q,p)=12pTC(q,q)p⇒pdiss=−∇pG1
+Fmag(q)+Fcont(q)=pext
+Fcont(q)可忽略
+G2(q)=Fmag(q) dq=(m⋅∇)B(s,t) dq⇒pext=−∇qG2
+
+
+引入复坐标变换，将实相空间((q,p)∈ℝ2N) 映射到复空间：这是一个正则变换，保持辛结构。相应的，偏导数算符变为
+
+定义复坐标ξ=12(q+ip)ξ=12(q−ip)(17)
+Wirtinger 导数：∂∂ξ=12∂∂q−i∂∂p∂∂ξ=12∂∂q+i∂∂p(18)
+(q,p)→(ξ,ξ)正则变换，保持辛结构
+
+
+在ℝN×ℝN 实的相空间中，标准的辛形式为  ω=dq∧dp， {q,p}=1。
+
+由(17)有q=12(ξ+ξ)p=−i2(ξ−ξ)⇒dq=12(dξ+dξ)dp=−i2(dξ−dξ)
+⟹ω=dq∧dp=12(dξ+dξ)∧−i2(dξ−dξ)=−i2(dξ+dξ)∧(dξ−dξ)=−i2(dξ∧dξ−dξ∧dξ+dξ∧dξ−dξ∧dξ)=−i2(−dξ∧dξ−dξ∧dξ)=idξ∧dξ
+idξ∧dξ是一个实值2-形式
+
+
+{ξ,ξ}=∂ξ∂q∂ξ∂p−∂ξ∂p∂ξ∂q=12−i2−i212=−i2−i2=−i
+
+∂ℋ∂ξ=12∂∂q+i∂∂p(H+iG)=12(∂H∂q+i∂G∂q+i∂H∂p−∂G∂p)=12∂H∂q−∂G∂p+i∂G∂q+∂H∂p
+
+
+ξ=12(q+ip)=12∂H∂p+i−∂H∂q−c∂H∂p+Fext:=12∂H∂p−i∂H∂q−ic∂H∂p+Fext=12∂H∂p−i∂H∂q−i∇pG1+∇qG2(19)
+∂H∂ξ=12∂∂q+i∂∂pH=12∂H∂q+i∂H∂pH⇒−2i∂H∂ξ=12∂H∂p−i∂H∂q(20)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+∂∂ξ=12∂∂q−i∂∂p∂∂ξ=12∂∂q+i∂∂p
+
+
+
+
+
+
+
+
+
+、
+
+
+
+ξ=12(q+ip)=12∂H∂p+i−∂H∂q−c∂H∂p+Fext:=12∂H∂p−i∂H∂q−ic∂H∂p+Fext=12∂H∂p−i∂H∂q−i∇pG1+∇qG2(19)
+
+
+
+由前文（公式(18)）定义的 Wirtinger 导数关系出发：
+
+∂∂q=∂∂ξ+∂∂ξ∂∂p=1i∂∂ξ−∂∂ξ=i∂∂ξ−∂∂ξ
+代入(19)得
+ξ=12∂H∂p−i∂H∂q+∂∂ξ−∂∂ξG1+(∂∂ξ+∂∂ξ)G2
+用(20)的条件，有
+=−2i∂H∂ξ+12∂G1∂ξ−∂G1∂ξ+12(∂G2∂ξ+∂G2∂ξ) 
+
+
+推导结果（图中红色框内公式修正后）：
+
+ξ=−2i∂H∂ξ+12∂(G1+G2)∂ξ−∂(G1−G2)∂ξ=−2i∂H∂ξ+12Pξ,ξ (21)
+(12∂(G1+G2)∂ξ−∂(G1−G2)∂ξ≜Pξ,ξ)
+耗散哈密顿系统
+
+
+
+dHdt=∂H∂ξξ+∂H∂ξξ=∂H∂ξ[−2i∂H∂ξ+12∂(G1+G2)∂ξ−∂(G1−G2)∂ξ]+∂H∂ξ[2i∂H∂ξ+12∂(G1+G2)∂ξ−∂(G1−G2)∂ξ]=12[∂H∂ξ∂(G1+G2)∂ξ−∂(G1−G2)∂ξ+∂H∂ξ∂(G1+G2)∂ξ−∂(G1−G2)∂ξ]=22Re[∂H∂ξ∂(G1+G2)∂ξ−∂(G1−G2)∂ξ]
+∶=22Re[∂H∂ξPξ,ξ]≤0, 耗散=0, 增益≥0, 保守哈密顿系统
+
+
+
+进行正则变换 ξ,ξ→(I,θ)
+ξ=I eiθξ=I e−iθ  (22)
+验证辛形式不变
+dξ∧dξ=(dI2Ieiθ+I ieiθdθ)∧(dI2Ie−iθ+I (−i)e−iθdθ)=dI2Ieiθ∧dI2Ie−iθ+dI2Ieiθ∧I (−i)e−iθdθ+I ieiθdθ∧dI2Ie−iθ+I ieiθdθ∧I (−i)e−iθdθ)=dI2Ieiθ∧I (−i)e−iθdθ+I ieiθdθ∧dI2Ie−iθ=−i2dI∧ dθ+i2dθ∧dI=−idI∧ dθ
+
+⇒ω=dq∧dp=dξ∧dξ=dI∧dθ
+
+变换是正则的。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ξ=I eiθξ=I e−iθ  (22)
+
+
+
+由22有
+I=ξ 2=ξξθ=12i lnξξ  
+∂∂ξ=∂∂I∂I∂ξ+∂∂θ∂θ∂ξ=ξ∂∂I+12iξξ1ξ∂∂θ=I e−iθ∂∂I+12iI eiθ∂∂θ=e−iθ2I(2I ∂∂I−i∂∂θ)
+∂∂ξ=eiθ2I(2I ∂∂I+i∂∂θ)
+⇒P(ξ,ξ)=2[∂(G1+G2)∂ξ−∂(G1−G2)∂ξ]=2{e−iθ2I(2I ∂(G1+G2)∂I−i∂(G1+G2)∂θ)−eiθ2I(2I ∂(G1−G2)∂I+i∂(G1−G2)∂θ)}∶=P(I,θ)
+
+
+I=ξξ =ξξ+ξξ=(−2 i∂H∂ξ+12P(ξ,ξ))ξ+ξ(2 i∂H∂ξ+12P(ξ,ξ))=(−2 i∂H∂Iξ+12P(ξ,ξ))ξ+ξ(2 i∂H∂Iξ+12P(ξ,ξ))=12P(ξ,ξ)ξ+12P(ξ,ξ)ξReP(ξ,ξ)ξ=ReP(ξ,ξ)Ie−iθ=IRee−iθP(ξ,ξ)∶=IRee−iθP(I,θ)
+
+e−iθP(ξ,ξ)=2{e−2iθ2I(2I ∂(G1+G2)∂I−i∂(G1+G2)∂θ)−12I(2I ∂(G1−G2)∂I+i∂(G1−G2)∂θ)}
+⇒Ree−iθP(ξ,ξ)=2{cos(2θ)2I2I∂(G1+G2)∂I−sin(2θ)12I∂(G1+G2)∂θ−2I2I∂(G1−G2)∂I}⇒c=22Icos(2θ)∂(G1+G2)∂I−2sin(2θ)∂(G1+G2)∂θ−22I∂(G1−G2)∂I∶=εf(I,θ)
+未检查
+θ=?
+
+ξ=Ieiθ⇒ξ=I2Ieiθ+iIθeiθ=二十一−2i∂H∂I∂I∂ξ+12P(ξ,ξ)
+
+=−2iH'(I)Ieiθ+12P(I,θ)⇒左页. I2I+i2θ=−2iH'(I)I+12e−iθP(I,θ)
+I2I+iIθ=−2iH(I)I+12p(I,θ)e−iθ⇒
+实部:II= Re12e−iθp(I,θ)Iθ=−2H(I)I+Im12e−iθp(I,θ)
+⇒I=I Ree−iθp(I,θ)∶=εf(I,θ)θ=−2H(I)+12IIme−iθp(I,θ)∶=ω(I)+εg(I,θ)
+Part 4提取近可积结构与本征频率
+
+其中ε为小参数，表示扰动强度；(ω(I)=−2H(I))为未扰动系统的本征频率；f,g为扰动项。
+
+2. 可积条件与非退化条件
+注：当ε=0时，系统退化为可积系统：    
+I=0θ=ω(I)=−2H'(I)    
+要求频率映射是非退化的，即：    
+ω'(I)=−2H''(I)≠0
+ Part 5验证KAM定理三大条件   
+
+∀⟨k,ω(I)⟩≥γ k τ,  
+k∈ℤN{0}, γ>0,τ>N−1，
+
+ k =k1+⋯+kN
+
+
+注：A Lecture on the Classical KAM Theorem” —— J. Pöschel, 2009. Page 6, Theorem.
+必须要求扰动是实解析的（但如果哈密顿量 H 和扰动 P 是 C^r 光滑的，且光滑度 r 足够大，定理也可以适用。）
+1.  Moser, J. (1962). On invariant curves of area−preserving mappings of an annulus.
+2.  Pöschel, J. (1982). Invariant tori in Hamiltonian systems.
+3.  Kuksin, S. B. (1998). Nearly integrable infinite−dimensional Hamiltonian systems.
+4.  Betti, M. & Belle, P. (2004). KAM tori for dissipative PDEs.
+(结论可以直接拿来使用)
+
+
+
+
+
+
+
+
+回到设计CHNN主线Part 4
+
+ Complex−Valued HNN: 复值哈密顿神经网络
+
+用复变量统一描述机器人状态（位置q，动量p，相位α）.通过学习复值哈密顿量，实现能量守恒的精准动力学建模与控制，适用于涉及波动、相位或复杂耦合的机器人系统。
+
+回顾
+
+
+方程(15)：
+z={z,H}−[z,H]+Fext=J∇H−D∇H+Fext
+其中D=D(z)是耗散度量矩阵（对称正定张量）。
+dHdt=(∇H)Tz=(∇H)T(J∇H−D∇H+Fext)=(∇H)TJ∇H−(∇H)TD∇H+(∇H)TFext(26)
+JT=−J反对称，(∇H)TJ∇H=0
+ ∀x≠0,(x)TJxT=xTJTx=xT(−J)x=−xTJx⇒xTJx=0,∀x≠0
+不考虑外力Fext时，若(D(z))正定，则dHdt=−(∇H)TD∇H<0，系统能量衰减（耗散）
+ξ=−2i∂H∂ξ+12∂(G1+G2)∂ξ−∂(G1−G2)∂ξ=−2i∂H∂ξ+12Pξ,ξ (21)
+
+方程(21)：
+ξ=−2i∂H∂ξ+12∂(G1+G2)∂ξ−∂(G1−G2)∂ξ 
+定义泊松括号：
+
+    为统一形式，定义复数空间中的泊松括号：
+{f,g}ℭ=−i∂f∂ξ∂g∂ξ−∂f∂ξ∂g∂ξ
+据此，有{ξ,H}ℭ=−i∂H∂ξ。?
+ξ=−2i∂H∂ξ+12∂(G1+G2)∂ξ−∂(G1−G2)∂ξ=−2i∂H∂ξ+12Pξ,ξ (21)
+
+(21)⇒ξ=2{ξ,H}ℭ+R(ξ,ξ)(系数可调整)(24)
+
+参考：      “KAM Theory Meets Statistical Learning Theory: Hamiltonian Neural Networks with Non-zero Training Loss” — Y. Chen, T. Matsubara, T. Yaguchi. The 36th AAAI Conference on Artificial Intelligence (AAAI-22).
+
+引入参数λ，用一个神经网络Hλ(ξ,ξ)来拟合或近似真实的复值哈密顿量函数。
+损失函数：需要设计并控制多个损失函数来训练网络：   
+1.能量损失 (Lenorgy)：保证能量演化符合物理规律。 
+2.雅可比损失 (Lacobi)：保证辛结构或某种守恒律。◦  
+3.辛结构损失 (Lsymplectic)：保证学习到的动力学具有辛几何结构。
+回顾方程(17):
+(q,p)→(ξ,ξ)正则变换，保持辛结构
+ξ=12(q+ip)ξ=12(q−ip)
+ξ=−2i∂H∂ξ+12∂(G1+G2)∂ξ−∂(G1−G2)∂ξ=−2i∂H∂ξ+12Pξ,ξ (21)
+
+回顾方程(21):
+ξ∶=−2i∂H∂ξ+12Pξ,ξ∶=−2i(∂H∂ξ+i22Pξ,ξ )∶=−2i(∂H∂ξ+i∂Pξ,ξ∂ξ )
+ξ∶=−2i∂(H+iP)∂ξ∶=−i∂H∂ξ(25)
+H=2(H+iP)H=Hξ,ξ
+
+H:保守.iP:耗散+驱动,值小
+其中：
+i22Pξ,ξ=i∂Pξ,ξ∂ξ⇔∂Pξ,ξ∂ξ=122Pξ,ξ⟺Pξ,ξ=122Pξ,ξdξ
+Pξ,ξ复变量且实值
+从现在起考虑复值生成函数Hξ,ξ=2(Hξ,ξ+iPξ,ξ)
+（注:与方程16雷同，但经过转化得到的形式）
+根据您提供的图片，已提取文字公式内容如下。对手写字符进行了必要的辨识和修正，并对可能的歧义处进行了说明。
+
+引入参数 λ，考虑拟合 Hamiltonian(Hλ(z,z))。
+
+
+引入参数 λ，考虑拟合Hamiltonian Hλ(ξ,ξ)
+
+(i)损失函数
+
+(a) 能量损失函数：
+Lenergy26dHλ(ξ,ξ)dt2=2dHλ(ξ,ξ)+iPλ(ξ,ξ)dt2=2dPλ(ξ,ξ)dt2 (能量−耗散行为约束)
+(b)哈密顿损失函数：
+Lhamilton=ξ+i∂Hλ(ξ,ξ)∂ξ2 (动力学约束)
+
+(c)轨迹损失函数：
+Ltrajectory=ξt+Δt−Integrate(ξt,ξpredict,Δt)2 (单步积分残差约束)
+其中
+ξpredict=−i∂Hλ(ξ,ξ)∂ξ|ξ=ξt,ξt=12(qt+ipt)∈ℂN (可直接观测的量)Integrate: RK4(可能更优)或 Euler 积分器等尝试,步长(∆t)小，可调节 
+
+也可增加其它损失函数进去，待定
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+物理机理与数据融合训练 Part 4
+
+(ii) 复值激活函数
+
+•幅角保持激活函数modReLU(z)
+
+ modReLU(z)=ReLU(z+b)eiθz=(z+b)zz,z+b>00,其它不解析 
+
+•完全复数激活函数zReLU(z)
+
+    zReLU(z)=z,θz∈[0,π2]0,其它在 x, y 正半轴不解析。
+  
+•Split激活函数CReLU(z)
+
+CReLU(z)=ReLU(Re(z))+i ReLU(Im(z))  在第一、三象限解析
+
+小结：复激活函数分三类（以此为例）：
+1.  Split激活函数（分离实部与虚部的激活函数）CReLU(z)
+2.  完全复数激活函数zReLU(z)
+3.  幅角保持激活函数modReLU(z)
+
+刘维尔定理：在复平面上处处解析且有界的函数必是常数。
+
+因此，在设计复值神经网络时，①“处处解析”与②“有界”不能同时成立（否则只能是常数函数，没有实用价值）。
+
+注：解析函数类由定义域上每一点都可导的复变函数组成。
+
+(iii) 解析条件与柯西-黎曼方程组推导
+f'(z)=limh→0f(z+h)−f(z)h
+f(z)∶=u(z)+iv(z)
+
+令 h 为实数，则 f'(z)=∂f∂x=∂u∂x+i∂v∂x (式a)
+取h 为纯虚数 ik，则f'(z)=limk→0f(z+ik)−f(z)ik=limk→0f(x+iy+ik)−f(x+iy)ik=limk→0f(x+i(y+k))−f(x+iy)ik=−ilimk→0f(x+i(y+k))−f(x+iy)k=−i∂f∂y=−i(∂u∂y+i∂v∂y)(式b)
+   
+
+联立式a与式b：
+    要使 f'(z)存在且唯一，两式必须相等：
+∂u∂x+i∂v∂x=∂v∂y−i∂u∂y
+    分别令实部与虚部相等，即得 柯西-黎曼方程组：
+    ∂u∂x=∂v∂y∂u∂y=−∂v∂x(27)
+此即复变函数 f(z) 解析的必要条件。
+∂f∂x=−i∂f∂y(28)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+有(a)知
+f'(z)=∂u∂x+i∂v∂x
+
+f'(z)2=∂u∂x2+∂v∂x2=(27)∂u∂x(∂v∂y)+∂v∂x(−∂u∂y)=∂u∂x∂v∂y−∂u∂y∂v∂x=∂u∂x∂u∂y∂v∂x∂v∂y
+u,v是关于x,y的雅可比行列式
+
+Δu=∂2u∂x2+∂2u∂y2=(27)∂∂x(∂u∂x)+∂∂y(∂u∂y)=∂∂x(∂v∂y)+∂∂y(−∂v∂x)=∂2v∂y∂x−∂2v∂x∂y=0
+(u,v有各阶连续偏导数)
+
+Δu=0:u是调和函数,
+Δv=0:v是调和函数,−v(x,y+k)+v(x,y+k)
+ u,v为共轭调和函数
+若u,v为一对共轭调和函数，令
+f(z)=u+iv，u=u(x,y)v=v(x,y),则
+
+limh+ik→0f(z+h+ik)−f(z)h+ik=limh+ik→0[u(x+h,y+k)+iv(x+h,y+k)]−[u(x,y)+iv(x,y)]h+ik
+
+=limh+ik→0[u(x+h,y+k)−u(x,y+k)+u(x,y+k)−u(x,y)]+i[v(x+h,y+k)−v(x,y+k)+v(x,y+k)−v(x,y)]h+ik
+=limh+ik→01h+ik{[u(x+h,y+k)−u(x,y+k)+u(x,y+k)−u(x,y)]+i[v(x+h,y+k)−v(x,y+k)+v(x,y+k)−v(x,y)]}
+
+=limh+ik→0(∂u∂xh+∂u∂yk)+ε1+i(∂v∂xh+∂v∂yk+ε2)h+ik
+
+=limh+ik→0(∂u∂x+i∂v∂x)h+(∂u∂y+i∂v∂y)k+(ε1+iε2)h+ik
+
+=(27)limh+ik→0(∂u∂x+i∂v∂x)h+(−∂v∂x+i∂u∂x)k+(ε1+iε2)h+ik
+=limh+ik→0(∂u∂x+i∂v∂x)h+i(∂u∂x+∂v∂x)k+(ε1+iε2)h+ik
+=limh+ik→0(∂u∂x+i∂u∂x)(h+ik)+(ε1+iε2)h+ik,ε1=o(h+ik)ε2=o(h+ik)
+=∂u∂x+i∂u∂x
+⇒f'(z) 解析
+
+Thm.u(x,y),v(x,y)满足(Cauchy−Riemann方程)，有连续一阶偏导数
+⇔f(z)=u(x,y)+iv(x,y) 解析,f'(z) 连续.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+f(x,y),x,y实变量.f(x,y)∈ℂ
+z=x+iyz=x−iy ⇒x=12(z+z)y=12i(z−z)=−i2(z−z) 
+  
+f(x,y)=f(12(z+z),−i2(z−z))是z,z的函数
+
+  
+∂f∂z=∂f∂x∂x∂z+∂f∂y∂y∂z=12∂f∂x−i2∂f∂y=12∂f∂x−i∂f∂y
+  
+  
+∂f∂z=∂f∂x∂x∂z+∂f∂y∂y∂z=12∂f∂x+i2∂f∂y=12∂f∂x+i∂f∂y
+  
+f解析⇒(28)成立⇒∂f∂z=0
+
+
+
+哈密顿方程是 Birkhoff 方程的退化形式
+
+Birkhoff方程一般形式：
+  
+∂Fj∂zi−∂Fi∂zjzj−∂B∂zi+∂Fi∂t=0, i=1,2,⋯,2n (★)
+
+B=B(z,t):Birkhoff函数    z=(z1,⋯,zn,p1,⋯,pn)
+
+当取
+
+
+zi=qi,i=1,2,⋯,npi−n,i=n+1,n+2,⋯,2nFi=pi,i=1,2,⋯,n0,i=n+1,n+2,⋯,2nB=H
+
+时，Birkhoff方程退化为哈密顿方程
+
+
+
+Fi=Fi(z,t)
+n=1:Fi(q,p,t)三元函数
+
+e.g.n=1
+zi=q1p1,Fi=p1, i=10, i=2⇒z1=q1≜q,z2=p1≜p,F1=p1≜p,F2=0
+∂F2∂z1−∂F1∂z2z2−∂B∂z1−∂F1∂t=0∂F1∂z2−∂F2∂z1z1−∂B∂z2−∂F2∂t=0
+代入设定值:
+0−∂p∂pp−∂H∂q−∂p∂t=0∂p∂p−0q−∂H∂p−0=0
+
+最终得到经典的哈密顿正则方程：
+  q=∂H∂pp=−∂H∂q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+dHdt=∂H∂qq+∂H∂pp=∂H∂q∂H∂p+∂H∂p−∂H∂q+Fext−C∂H∂p=∂H∂pFext−C∂H∂p(12)
+
+
+
+回顾方程(12)q=∂H∂q=M−1(q)p , (a)p=−∂H∂q+Fext−C∂H∂p=−∂H∂q+Fext−CM−1p, (b)
+z=(q,p)T,则
+(★)⇒∂F2∂q−∂F1∂pp−∂B∂q+∂F1∂tF2=0−∂F1∂pp=∂B∂q+∂F1∂t,(c)∂F1∂p−∂F2∂qq−∂B∂p+∂F2∂tF2=0∂F1∂pq=∂B∂p,(d)
+
+F1(q,p),假设F1里全含t∂F1∂p=1,则(c),(d)⇒p=−∂B∂q−∂F1∂t,(e)q=∂B∂p,(f)
+(e),(f)与(a),(b)对照，可取∂B∂p=∂H∂p=M−1(q)p∂B∂q+∂F1∂t=∂H∂q+(CM−1p−Fext)
+B=H=12pTMq+K(q)qdqF1=[CM−1q−Fext(q)]dt+p
+即有(12)可以转化为
+(∂F2∂q−∂F1∂p)p=∂B∂q+∂F1∂t(∂F1∂p−∂F2∂q)q=∂B∂q
+其中B=12pTMq+K(q)qdqF1=[CM−1q−Fext(q)]dt+pF2=0
+构造生成函数ω，可得Birkhoff保辛格式
+需要用到两个定理
+记p=zz∈ℝ4n，z=zt0，z=z(t)
+α(t1t0):zz↦ww=α1(z,z,t,t0)α2(z,z,t,t0)
+α−1(t2t0):ww↦zz=α1(w,w,t,t0)α2(w,w,t,t0)
+α，α−1的Jacobi矩阵为
+α?=AαBαCαDα，?
+α?−1=AαBαCαDα。?
+
+则有
+Theorem (A)
+
+对上述映射α，映射z↦z=g(t;α,t0)是Birkhoff系统的相流，
+M(t;z,t0)=gz(t;z,t0)是其Jacobi矩阵。
+若其行列式满足
+Cα(z,z,t0,t0)+Dα(z,z,t0,t0)≠0
+则当t−t0足够小时，在z的某邻域内存在梯度映射：
+w→w=f(w,t,t0)
+此映射的雅可比矩阵fw(w,t,t0)=N(w,t,t0)对称，且存在生成函数ϕ(w,t,t0)，使得：
+f(w,t,t0)=ϕw(w,t,t0)
+∂∂tϕw(w,t,t0)=Aϕw(w,t,t0); w, ϕww(w,t,t0), t, t0
+A(w,w,∂w∂w,t,t0)=Az(w,w,t,t0);z(w,w,t,t0), ∂w∂w, t, t0
+A(z,z,∂w∂w,t,t0)=ddtw(z,z,t,t0)−∂w∂wddtw(z,z,t,t0)=Aα−∂w∂wCαK−1D(z,t)+∂α1∂t−∂w∂w∂α2∂t
+
+α1[g(t,z,t0),z,t,t0]=fα2[g(t;α,t0),z,t,t0], t, t0=ϕwα2(g(t;α,t0),z,t,t0), t, t0
+α1关于(z,t0) 唯一且
+N=σα(M)=(AαM+Bα)(CαM+Dα)−1
+M=σα−1(N)=(AαN+Bα)(CαN+Dα)−1
+
+Theorem (B)
+
+ 解析性与级数展开：
+假设A,α解析，则当t−t0足够小时，生成函数ϕw(w,t,t0)可对t展开成收敛级数
+ϕw(w,t,t0)=k=0+∞(t−t0)kϕw(k)(w,t0)
+ϕw(0)(w,t0)=f(w,t0,t0)
+ϕw(1)(w,t0)=Aϕw(0), w, ϕww(0), t0, t0
+ϕw(k)(w,t0)=1(k+1)!DtkAϕw(0), w, ϕww(0), t0, t0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+构造
+q(t)=q(t+δ)p(t)=p(t+δ)Q=p−pP=q−qQ=12(q+q)P=−12(p+p)(30)“左大右小”
+
+变量定义：  
+z=qp, z=qp, w=QP, w=QP
+变换α：
+α:qpqp=zz↦ww=QPQP 
+α的Jacobi矩阵α∗（分块矩阵）：
+α∗=∂Q∂q∂Q∂p∂Q∂q∂Q∂p∂P∂q∂P∂p∂P∂q∂P∂p∂Q∂q∂Q∂p∂Q∂q∂Q∂p∂P∂q∂P∂p∂P∂q∂P∂p=0I0−II0−I012I012I00−12I0−12I 
+由(30)知(31)“左小右大”
+
+q=P+2Q2=Q+12Pp=Q−2P2=12Q−Pq=2Q−P2=Q−12Pp=−2P−Q2=−12Q−P
+变换α−1：
+α−1:QPQP=ww↦zz=qpqp
+
+α−1的Jacobi矩阵α∗−1（分块矩阵）：
+α∗−1=012II012I00−I0−12II0−12I00−I
+
+
+dwdt=0II0qp=pq=Page6−12pT∂M−1(q)∂qp−K(q)q+Fext−CM−1pM−1(q)p
+=(31)−1212Q−PT∂M−1(Q+12P)∂(Q+12P)12Q−p−KQ+12PQ+12P+Fext−CM−112Q−PM−1Q+12P12Q−P
+
+dwdt=12I00−12Iqp=12q12p=12[−12pT∂M−1(q)∂qp−K(q)q+Fext−CM−1p]12M−1(q)p|p=−12Q−Pq=Q−12P(32)
+dwdt=0II0qp=pq=−12pT∂M−1(q)∂qp−K(q)q+Fext−CM−1pM−1(q)p|p=12Q−Pq=Q+12P 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+由Theorem(B)知    
+ϕw(w,t,t0)=ϕw(0)(w,t0)+ϕw(1)(w,t0)(t−t0)+ϕw(2)(w,t0)(t−t0)2+⋯
+
+ϕw(0)(w,t0)=wt=t0=QPt=t0=QPδ=0=00
+ϕw(1)(w,t0)=A(ϕw(0),w,ϕww(0),t0,t0)=A(wt=t0,w,∂w∂wt=t0,t0,t0)=dwdtt=t0−∂w∂wt=t0dwdtt=t0
+
+dwdtt=t0=(32)dwdtδ=0=−12PT∂M−1∂QP−K(Q)Q+Fext−CM−1P−M−1(Q)P
+当δ=0时，由(30),(31)知q=q,p=p,Q=0,P=0,Q=q,P=−p⇒p=−P,q=Q
+dwdwt=t0=∂(wt=t0)∂w=∂(0)∂w=0
+⇒ϕw(1)(w,t0)=−12PT∂M−1∂QP−K(Q)Q+Fext−CM−1P−M−1(Q)P,C=C(Q,Q)M=M(Q)
+Thm(A),Thm(B)w=ϕw(0)(w,t0)+ϕw(1)(w,t0)(t−t0)+o(2)=ϕw(1)(w,t0)(t−t0),t−t0=δ(33)
+记p=pk+1,p=pkq=qk+1,q=qk
+P=−12(p+p)Q=12(q+q),w=ϕw(1)(w,t0)δ=QP=p−pq−q(34)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+由(33)(34)有
+
+p−pq−q=−12PT∂M−1∂QP−K(Q)Q+Fext−CM−1P−M−1(Q)PδP=−12(p+p)Q=12(q+q)=−12[−12(p+p)]T∂M−1∂12(q+q)[−12(p+p)]−K12(q+q)12(q+q)+Fext−CM−1[−12(p+p)]−M−112(q+q)[−12(p+p)]
+
+⇒q=q+12M−1{12(q+q)}(p+p)⋅δp=p+−18(p+p)∂M−1∂12(q+q)(p+p)−12K(q+q)(q+q)+Fext−12CM−1(p+p)δ
+简记为
+⇒q=q+12M−1(p+p)⋅δp=p+−18(p+p)∂M−1∂12(q+q)(p+p)−12K(q+q)+Fext−12CM−1(p+p)δ(35)
+
+将(35)第一个方程代入第二个方程，有
+
+p=p+−18(p+p)∂M−1∂12(q+q)(p+p)−12K(2q+12M−1(p+p)⋅δ)+Fext−12CM−1(p+p)δ
+移项得
+
+p(1+14KM−1δ2+12CM−1δ)=p(1−14KM−1δ2−12CM−1δ)−Kq⋅δ+(Δ+Fext)δ
+
+若 M ，K，Fext 为常矩阵，则Δ=0,记ε=14KM−1δ2+12CM−1δ,则
+p=11+ε[pk(1−ε)−Kqkδ+Fextδ]
+从而
+qk+1=qk+12M−1(pk+1+pk)⋅δpk+1=pk⋅1−ε1+ε−Kqk⋅δ1+ε+Fextδ1+ε
+
+若M，K，Fext不是常矩阵时,即M=M(Q)，K=K(Q,Q),则Δ≠0, Δ为二次型
+
+
+qk+1=qk+12M−1(pk+1+pk)⋅δ,其中 M−1 依赖于 qk+1+qkpk+1=pk⋅1−ε1+ε−Kqk⋅δ1+ε+(Δ+Fext)δ1+εK,Fextε, C依赖于qk+1+qkΔ 依赖于 pk+1=pk,qk+1+qk(36)
+
+Birkhoff 保辛格式，一阶精度
+这是一个隐式方法
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ϕw(2)(w,t0)=Thm(B)12Dtϕw(1)(w,t0)=(33)12Dt−12PT∂M−1∂QP−K(Q)Q+Fext+CM−1P−M−1(Q)P
+已知
+Q=−M−1PP=KQ−Fext−CM−1P
+在(30)中
+Q=12(q+q)P=−12(p+p)q(t)=q(t+δ)p(t)=p(t+δ)
+，显然可以看出来
+事实上q=M−1(q)pp=−K(q)q+Fext(q)−C(q,q)M−1(q)p
+q=M−1(q)pp=−K(q)q+Fext(q)−C(q,q)M−1(q)p
+
+⇒Q=12(q+q)=12(M−1(q)p+M−1(q)p)
+
+
+若 M 为常矩阵，则Q=M−112(p+p)=−M−1p
+P=−12(p+p)=−12−K(q)q+Fext(q)−C(q,q)M−1(q)p+−K(q)q+Fext(q)−C(q,q)M−1(q)p
+若Fext， M ，C为常矩阵，则
+P=−12K(q+q)−Fext+12CM−1p+p=KQ−Fext−CM−1P
+从而
+ϕw(2)(w,t0)=12Dt0−KQ+Fext+CM−1P−M−1P=12Dt0−KQ+Fext+CM−1P−M−1P=12Dt0−K−M−1p+Fext+CM−1KQ−Fext−CM−1P−M−1KQ−Fext−CM−1P=12DtKM−1p+Fext+CM−1KQ−CM−1Fext−CM−12P−M−1KQ+M−1Fext+M−1CM−1P
+
+用Theorem(B)的迭代公式，可以推出ϕw(w,t0)的形式(k≥2).从而分析生成函数ω=ϕw(w,t,t0)=k=0∞(t−t0)kϕw(k)(w,t0)的截取形式.ΓKϕw(w,t;t0)∶=k=0K(t−t0)kϕw(k)(w,t0)，即可得到K阶精度的Birkhoff保辛格式(计算机操作).
+对方程 (36) 的讨论
+对方程 (36)：令 N=1，即 q,p 都是一维变量，此时 (36)为平面上的映射。
+理论上，由生成函数法将 Birkhoff 系统转化为离散系统是保辛的。
+原始系统 （11）中的耗散项 K(q,q)q等，驱动项 Fext 在 Birkhoff 方程中已通过"伪保辛化"处理（耗散项不强）。优势：几何结构保持
+两种数值检验方式
+对方程 (36)取初始值 (q0,p0)∈ℝ2，生成 (qk,pk),k∈ℤ+ 轨道数据(36)中N=1时：
+①看是否有封闭的、类似环状的分布，验证环面结构；
+②看功率谱分析，对轨道做 FFT，看是否有离散的不可公度的频率峰，验证环面上运动的拟周期性。
+
+
+qk+1=qk+12M−1(pk+1+pk)⋅δ,其中 M−1 依赖于 qk+1+qkpk+1=pk⋅1−ε1+ε−Kqk⋅δ1+ε+(Δ+Fext)δ1+εK,Fextε, C依赖于qk+1+qkΔ 依赖于 pk+1=pk,qk+1+qk(36)辛差分格式
+收敛
+(36) 的本质
+（36）本质上是：zk+1=Φh(zk) （保辛离散迭代，离散动力学统）生成函数还保证了其是辛同胚的（Symplectomorphism）。
+KAM 定理的离散版本（从两篇中选定理引用）
+引用文献：
+"A note on KAM theorem for symplectic diffeomorphisms",J.D.E.5, 2000,Shang, Z. J.
+"KAM theorem for symplectic algorithms for Hamiltonian systems",Numersche Mathematik, 1999,Shang, Z. J.⭐
+"要求步长 δ 足够小"
+
+
+辨识未建模动力学效应 — Part 4
+在（36）方程右侧加入控制项 (uk,vk)∶=Uk得到
+zk+1=Φh(zk,uk), 用 Uk 调节模型的误差。 Uk 是动态的
+或
+zk+1=Φh(zk)+Uk, 看哪个更好？
+（控制项 Uk 用于抵消残差）
+量化指标，对比
+或在生成函数 ϕw(w,t,t0)（Theorem (B)）中加入一个控制项 Uk−−加入后也得考虑辛差分格式收敛。
+维度
+Uk 的形式可尝试（不要太大、有界、非常值、简单有代表性）
+……（其它与机器人、太空跳跃、微扰动……相关的陈述、自由发挥。）
+页码：25
+
+
+
+
+
+
+
+
+
+
+
+
+
+评估误差与 KAM 阈值关联 Part 5
+回顾 Theorem(A)，Theorem(B) 内容，看以下 pdf：
+Symplectic Geometric Algorithms for Hamiltonian Systems, Kang Feng, Mengzhao Qin, Springer.
+（看 Chapter 15: Structure Preserving Schemes for Birkhoff Systems）
+Theorem (A) 即为 Theorem 4.1
+Theorem (B) 即为 Theorem 4.4
+一些记号：P18 (⭐) 这个方程即为 P618. (2.1)
+Kij=∂Fj∂zi−∂Fi∂zj, K=(Kij)i,j=1,2,…,2n (∗1)
+由 (⭐)⇒Kij(z,t)dzjdt−∂B∂zi−∂Fi∂t=0,
+记Di(z,t)=−∂B∂zi−∂Fi∂t (∗2)
+则 B=B(z,t),;Fi=Fi(z,t) (2.3) (2.4)
+若 det(Kij)(Re)≠0，则(2.3)是正则的。
+
+(2.4) 是自伴随的
+⇔Kij+Kji=0 （反对称性）∂Kij∂zk+∂Kjk∂zi+∂Kki∂zj=0 （雅可比恒等式⇔即 dΩ=0） ∂Kij∂t=∂Di∂zj−∂Dj∂zi （时间相容性条件）(2.5)
+
+
+Re∗：ℝ×T∗M 上的星形区域，T∗M：M 的余切空间，M 是 2n 维流形
+（Ω是闭形式）：
+(2.5)Ω=i,j=12nKij(z,t),dzi∧dzj⇒dΩ=0⇔Ω 是恰当2形式⇒Ω=d(Fidzi)
+
+Di=(∗2)−∂Bj∂zi−∂Fi∂zj⇒−∂B∂zi=Di+∂Fi∂t⇒∂∂zj−∂B∂zi=∂∂zi∂B−∂zj=∂∂ziDj+∂Fj∂t
+
+
+
+
+
+
+
+
+
+⇒∂∂zjDi+∂Fi∂t=∂∂ziDj+∂Fj∂t  
+⇒∂Dj∂zj−∂Di∂zi=∂∂zi∂Fj∂t−∂∂zj∂Fi∂t=∗1∂∂t∂Fj∂zi−∂Fi∂zj=∂∂t(Kij)(∗)⇒(2.5) 第三个方程成立
+(2.4) 自伴随⇔(2.5)成立
+∗1,∗2⇒(2.5) 第三个方程成立
+∗1 ⇒Kij+Kji=∂Fj∂zi−∂Fi∂zj+∂Fi∂zj−∂Fj∂zi=0⇒(2.5) 第一个方程成立
+∂Kij∂zk+∂Kjk∂zi+∂Kki∂zj=∂∂zk∂Fj∂zi−∂Fi∂zj+∂∂zi∂Fk∂zj−∂Fj∂zk+∂∂zj∂Fi∂zk−∂Fk∂zi
+=∂2Fj∂zk∂zi−∂2Fi∂zk∂zj+∂2Fk∂zi∂zj−∂2Fj∂zi∂zk+∂2Fi∂zj∂zk−∂2Fk∂zj∂zi=0⇒(2.5) 第一个方程成立}
+总之：∗1,∗2成立⇒(2.5)成立⇔(2.4)是自伴的 （Theorem 2.2 内容）
+注：∗1,∗2成立 ⇒
+Kijdzidt+Di(z,t)=∂Fj∂zi−∂Fi∂zjdzidt−∂B∂zi+∂Fi∂t (2.8)
+（Birkhoff 系统）
+证明： ∗1,Ω=i,j=12nKijdzi∧dzj⇒dΩ=0
+Proof：
+Ω=i,j2n∂Fj∂zi−∂Fi∂zjdzi∧dzj
+=i,j∂Fj∂zi,dzi∧dzj−i,j∂Fi∂zj,dzi∧dzj
+=i,j∂Fj∂zi,dzi∧dzj−j,i∂Fj∂zi,dzj∧dzi
+=i,j∂Fj∂zi,dzi∧dzj+j,i∂Fj∂zi,dzi∧dzj
+=2i,j∂Fj∂zi,dzi∧dzj
+=2ij∂Fj∂zi,dzi∧dzj
+=2dkFk,dzk∶=2dα, α=kFk,dzk
+⇒dΩ=2d2α=0
+
+
+
+
+
+
+数学前提: dΩ=0是 Birkhoff 系统存在的数学前提！
+在哈密顿/Birkhoff力学中，dΩ=0 对应于泊松括号的Jacobi恒等式：
+{f,{g,h}}+{g,{h,f}}+{h,{f,g}}=0
+保证哈密顿流（相空间的演化）保持辛形式不变（刘维尔定理），也就是相空间体积守恒；
+保证泊松括号的代数结构是李代数，是量子力学对易关系的经典对应；
+保证变分原理（哈密顿原理，Birkhoff原理）的自洽性，不会出现矛盾的运动方程。
+自伴性条件            Ω=ijKijdzi∧dzj
+Kij+Kji=0 ↔ Ω是反对称2−形式
+∂Kij∂zk+∂Kjk∂zi+∂Kki∂zj=0 ⇔ dΩ=0的空间分量（Jacobi恒等式）
+{f,{g,h}}+{g,{h,f}}+{h,{f,g}}=0
+∂Kij∂t=∂Di∂zj−∂Dj∂zi ↔ dΩ=0的时间分量（时变系统的相容性）
+Kij=∂Fj∂zi−∂Fi∂zjDi=−∂B∂zi−∂Fi∂t
+• 定理引用: Theorem (A), (B) ⇒ Page 23
+• 系统优点: Birkhoff 系统的优点在于，其在表示非保守系统时仍能保持辛结构（并具有误差传播关系）。
+
+Theorem(A)的证明：
+(关键证明：∂ϕw∂t=ddtw(z,z,t,t0)−∂w∂wddtw(z,z,t,t0)=Aα−∂w∂w⋅CαK−1D(z,t)+∂α1∂t−∂w∂w∂α2∂t)
+
+
+已知：
+zi=g(t;z,t0)M=gz=∂z∂zw=f(w,t,t0)N=fN=∂w∂wCα(z,z,t0,t0)+Dα(z,z,t0,t0)≠0⇒Theorem 3.5(3.2)成立Cα(z,z,t,t0)M+Dα(z,z,t,t0)≠0,t−t0 足够小
+
+⇒∃梯度映射w=f(w,t,t0)，满足fw=N，∃!生成函数ϕ(w,t,t0)，s.t.
+
+f=ϕN, α(z,z,t,t0)=f(α2(z,z,t,t0),t,t0)=ϕN(α2(z,z,t,t0),t,t0)
+N=(AαM+Bα)(CαM+Dα)−1,M=(AαN+Bα)(CαN+Dα)−1.
+
+
+z=g(t;z,t0), (2.4) 重写成 K(z,t)dzdt=∇B+∂F∂t⇒
+dzdt=K−1(z,t)∇B+∂F∂t(z,t)z|t=t0=z    w=α1(z,z,t,t0)    （P19页下方）
+其中z⟼t
+
+⇒dwdt=∂w∂z⋅dzdt+∂w∂z⋅dzdt+∂w∂t
+=AαK−1∇B+∂F∂t+Bα⋅0+∂α1∂t
+=AαK−1∇B+∂F∂t+∂α1∂t
+⇒dwdt=∂w∂z⋅dzdt+∂w∂t=CαK−1∇B+∂F∂t+∂α2∂t,    w=f(w,t,t0)
+其中w⟼t
+dwdt=∂w∂wdwdt+∂w∂t⇒
+∂w∂t=−∂w∂wdwdt+dwdt=dwdt−∂w∂wdwdt
+=AαK−1∇B+∂F∂t+∂α1∂t−∂w∂wCαK−1∇B+∂F∂t+∂α2∂t=Aα−∂w∂wCαK−1∇B+∂F∂t+∂α1∂t−∂w∂w∂α2∂t    (4.5)
+∂w∂w=∂z∂w=fw=N 可逆，
+无法写成 w =?(w)⇒
+∂w∂t∶=Az,z,∂w∂w,t,t0∶=Aw,w,∂w∂w,t,t0=Aϕw,w,ϕww,t,t0.（证毕）
+
+Theorem (B) 证明:
+ϕw=w=f(w,t,t0), ϕw(0)=f(w,t0,t0)
+∂ϕw∂t=A(ϕw,w,ϕww,t,t0)=A(ϕw(0),w,ϕww(0),t0,t0)+k=1∞1k!(t−t0)kDtkA(ϕw(0),w,ϕww(0),t0,t0),
+ϕw=ϕw(0)(w,t0)+k=P∞(t−t0)k+1ϕw(k+1)(w,t0)⇒∂ϕw∂t=k=0∞(k+1)(t−t0)kϕw(k+1)(w,t0)
+
+⇒ϕw(0)(w,t0)=f(w,t0,t0)ϕw(k+1)(w,t0)=1(k+1)!DtkA(ϕw(0),w,ϕww(0),t0,t0)
+
+
+底部总结（绿色圈标注）
+Theorem (A), (B)⇒Page 23 (36)
+好处保持了用 Birkhoff 系统表示的非保守系统的辛结构（与误差相联系）
+说明此方法的优势，对减小误差的作用。
+qk+1=qk+12M−1(pk+1+pk)⋅δ,其中 M−1 依赖于 qk+1+qkpk+1=pk⋅1−ε1+ε−Kqk⋅δ1+ε+(Δ+Fext)δ1+εK,Fextε, C依赖于qk+1+qkΔ 依赖于 pk+1=pk,qk+1+qk(36)
+

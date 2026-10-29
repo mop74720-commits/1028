@@ -1,0 +1,8 @@
+test_common_rom_and_initial_state (__main__.NumericalEvidence.test_common_rom_and_initial_state) ... ok
+test_local_chart_converges_to_its_actual_field (__main__.NumericalEvidence.test_local_chart_converges_to_its_actual_field) ... ok
+test_long_window_is_not_reported_as_success (__main__.NumericalEvidence.test_long_window_is_not_reported_as_success) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+OK

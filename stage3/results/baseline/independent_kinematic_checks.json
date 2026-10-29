@@ -1,0 +1,11 @@
+{
+  "seed": 41025,
+  "samples": 12,
+  "finite_difference_step": 2e-06,
+  "mass_kinematic_energy_relative_max": 4.801198577488368e-10,
+  "mass_kinematic_energy_abs_max_J": 5.854883637323836e-19,
+  "dipole_virtual_work_relative_max": 7.974680191935871e-08,
+  "dipole_virtual_work_abs_max_W": 1.0991489291076436e-16,
+  "source": "Independent centered differences of centers and SO(3) frames, then translational/rotary kinetic energy and physical dipole virtual work.",
+  "limitation": "Finite samples and double precision; does not certify continuum accuracy or ROM truncation error."
+}

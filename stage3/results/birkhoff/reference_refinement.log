@@ -1,0 +1,2 @@
+original {'field': 'original', 'rtol': 5e-12, 'atol': 5e-14, 'nfev': 242, 'seconds': 15.467781940000123, 'max_step': 3.125e-05} refinement 9.644406854369048e-18
+represented {'field': 'represented', 'rtol': 5e-12, 'atol': 5e-14, 'nfev': 242, 'seconds': 102.53824791399984, 'max_step': 3.125e-05} refinement 1.2267994783296875e-17

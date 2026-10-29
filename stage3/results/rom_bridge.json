@@ -1,0 +1,133 @@
+{
+  "metadata": {
+    "model": "3D inextensible unshearable Kirchhoff strain Ritz; exact SO(3) frame updates and midpoint centerline embedding",
+    "q_dof": 12,
+    "phase_dimension": 24,
+    "quadrature_elements": 20,
+    "configuration": "four Legendre curvature coefficients in each of two bending axes and torsion by default; all are dynamical",
+    "mass": "configuration dependent; includes translational and rotary inertia from embedding Jacobians",
+    "E0_J": 3.6200000000000004e-07,
+    "omega0_rad_s": 4.457629408507532,
+    "omega_rad_s": [
+      4.457629408507532,
+      4.457629408507532,
+      27.694195720027146,
+      27.694195720027146,
+      79.78328659507957,
+      79.78328659507957,
+      356.9402366587693,
+      356.9402366587693,
+      370.43091613854864,
+      1118.611090690932,
+      1984.631631100378,
+      3899.8926690677044
+    ],
+    "nu": [
+      1.0,
+      1.0,
+      6.212763148765096,
+      6.212763148765096,
+      17.898142551467057,
+      17.898142551467057,
+      80.0740043525236,
+      80.0740043525236,
+      83.10042899294614,
+      250.94304352803,
+      445.22131591124275,
+      874.8804155017085
+    ],
+    "canonical_scaling_defect": 5.55251128130777e-21,
+    "mass0_condition": 1264760.7588499414,
+    "repeated_frequency_pairs": [
+      {
+        "i": 0,
+        "j": 1,
+        "relative_difference": 0.0
+      },
+      {
+        "i": 2,
+        "j": 3,
+        "relative_difference": 0.0
+      },
+      {
+        "i": 4,
+        "j": 5,
+        "relative_difference": 0.0
+      },
+      {
+        "i": 6,
+        "j": 7,
+        "relative_difference": 0.0
+      }
+    ],
+    "KAM_status": "Standard nonresonant elliptic KAM is not certified; circular isotropic rod with axial bias has paired bending frequencies.",
+    "relation_to_full_model": "Shares material, distal magnet and field interface with the Cosserat model; shear/stretch omitted in this analytical ROM; modal truncation and fluid/contact closure errors are not yet bounded.",
+    "time": "tau=omega0*t_seconds",
+    "coordinates": "z=(Q,P); q_physical=Sq Q; p_physical=Sp P",
+    "input": "SI increment above axial bias: Bx,By,Bz,Gxx,Gyy,Gxy,Gxz,Gyz",
+    "drag": "synthetic smooth gamma*P; not a blood/contact closure",
+    "derivatives": "double-precision automatic differentiation through full variable-mass SO(3) geometry"
+  },
+  "diagnostics": {
+    "Jacobian": {
+      "directional_relative_error": 1.8080071818701548e-10,
+      "proportional_drag_transport_identity_defect": 5.067215609872158e-13,
+      "field_seconds": 0.053403472999889345,
+      "Jacobian_seconds": 0.3481826069998988
+    },
+    "mass": {
+      "relative_variation_from_equilibrium": 0.13739446720363838,
+      "minimum_scaled_mass_eigenvalue": 0.0011419321593501514,
+      "scaled_mass_condition": 890.6692205659746
+    },
+    "kinetic_configuration_gradient_norm": 0.03038077130458884,
+    "Hamiltonian_directional_absolute_error": 1.1840996932965808e-10,
+    "magnetic": {
+      "map_shape": [
+        12,
+        8
+      ],
+      "force_identity_error": 5.672651864747104e-16,
+      "virtual_power_absolute_error": 9.013720325690144e-12,
+      "map_seconds": 0.0791070039999795,
+      "singular_values_unscaled_SI_columns": [
+        2032.892593491245,
+        2025.5787349017185,
+        33.999497101082326,
+        33.78066838887319,
+        0.42177453940791104,
+        8.766023233205275e-12,
+        9.767210486620999e-15,
+        1.3423658610736098e-15
+      ]
+    }
+  },
+  "source_sha256": "5aebcea066b73f717c2c26fd0b8f3454e205fbcc1bafd970762f3fb9371ee3c9",
+  "initial_state": [
+    0.07840532622729933,
+    0.04972879746165316,
+    -0.000937180697063255,
+    -0.021384631557208784,
+    -0.01872052002742141,
+    -0.016037367640069328,
+    -0.0027475982108141703,
+    0.0033791731085538795,
+    0.007771171468418697,
+    0.0049318927478499645,
+    0.002306515956174499,
+    -0.0001244209575466964,
+    0.008274565786517507,
+    0.026097094407082334,
+    0.009696874546784537,
+    0.001585273593022058,
+    -0.00455192243425047,
+    -0.006593031614911518,
+    -0.0017231216240685856,
+    0.0009748279530446061,
+    0.0028811059283296455,
+    0.0015105419279633724,
+    0.00016515069068221913,
+    -0.0006625275931029058
+  ],
+  "scope": "12/24-dimensional smooth Kirchhoff ROM bridge; no new fluid/contact closure or KAM certificate"
+}

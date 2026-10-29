@@ -1,0 +1,304 @@
+{
+  "state": "(Q,P,e), e>0; E=H_ROM+e, S=log(e), T=e; all nondimensional",
+  "dof": 12,
+  "samples": 32,
+  "seed": 7131025,
+  "max_energy_degeneration_relative": 6.36075923065167e-17,
+  "max_entropy_poisson_defect": 0.0,
+  "min_metric_eigenvalue_scaled": -1.5732277454345336e-16,
+  "max_absolute_total_energy_rate": 4.440892098500626e-16,
+  "min_entropy_rate": 0.0382983261891221,
+  "entropy_rate_identity_abs_max": 4.440892098500626e-16,
+  "limitation": "Finite floating-point checks supplement the exact factorization proof. No robot heat capacity, thermal conduction, physiological temperature history, or coupled fluid/coil entropy model was identified.",
+  "adoption": "Optional validated algebraic candidate. Mechanical Rayleigh and external power ports remain the current simulation model.",
+  "samples_detail": [
+    {
+      "energy_degeneration_relative": 2.6150458148078383e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": -4.833458376309094e-17,
+      "total_energy_rate": -5.551115123125783e-17,
+      "entropy_rate": 0.42836571342884844,
+      "predicted_entropy_rate": 0.4283657134288485
+    },
+    {
+      "energy_degeneration_relative": 3.364682056312299e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": -4.739281235343254e-17,
+      "total_energy_rate": 0.0,
+      "entropy_rate": 0.5352531776082589,
+      "predicted_entropy_rate": 0.5352531776082589
+    },
+    {
+      "energy_degeneration_relative": 1.7211122312329434e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": 0.0,
+      "total_energy_rate": 0.0,
+      "entropy_rate": 0.4165817729570065,
+      "predicted_entropy_rate": 0.41658177295700644
+    },
+    {
+      "energy_degeneration_relative": 3.2156944701431114e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": -1.5732277454345336e-16,
+      "total_energy_rate": 0.0,
+      "entropy_rate": 0.9240489311305402,
+      "predicted_entropy_rate": 0.9240489311305399
+    },
+    {
+      "energy_degeneration_relative": 1.16399068158806e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": 0.0,
+      "total_energy_rate": 1.1102230246251565e-16,
+      "entropy_rate": 0.30555456603877074,
+      "predicted_entropy_rate": 0.3055545660387707
+    },
+    {
+      "energy_degeneration_relative": 1.2490994146279412e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": 0.0,
+      "total_energy_rate": 0.0,
+      "entropy_rate": 0.677312684033851,
+      "predicted_entropy_rate": 0.6773126840338509
+    },
+    {
+      "energy_degeneration_relative": 1.7703071060214514e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": -1.2830705599546196e-17,
+      "total_energy_rate": -2.220446049250313e-16,
+      "entropy_rate": 1.1831643028215069,
+      "predicted_entropy_rate": 1.1831643028215069
+    },
+    {
+      "energy_degeneration_relative": 1.5937028110055716e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": 0.0,
+      "total_energy_rate": 0.0,
+      "entropy_rate": 0.2120978508364622,
+      "predicted_entropy_rate": 0.21209785083646218
+    },
+    {
+      "energy_degeneration_relative": 2.0582916379992458e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": -3.013091531632571e-17,
+      "total_energy_rate": 0.0,
+      "entropy_rate": 1.8883019091111908,
+      "predicted_entropy_rate": 1.8883019091111906
+    },
+    {
+      "energy_degeneration_relative": 1.6244547924835525e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": -1.592403937721007e-17,
+      "total_energy_rate": 0.0,
+      "entropy_rate": 0.9843870901680511,
+      "predicted_entropy_rate": 0.9843870901680511
+    },
+    {
+      "energy_degeneration_relative": 3.9875058487343785e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": 0.0,
+      "total_energy_rate": 4.440892098500626e-16,
+      "entropy_rate": 2.4749283248492957,
+      "predicted_entropy_rate": 2.4749283248492957
+    },
+    {
+      "energy_degeneration_relative": 1.9491684881859355e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": -2.6698025741285782e-17,
+      "total_energy_rate": -1.1102230246251565e-16,
+      "entropy_rate": 0.3907500519656,
+      "predicted_entropy_rate": 0.3907500519655999
+    },
+    {
+      "energy_degeneration_relative": 1.3875731893553609e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": 0.0,
+      "total_energy_rate": -5.551115123125783e-17,
+      "entropy_rate": 0.3299236148716549,
+      "predicted_entropy_rate": 0.32992361487165495
+    },
+    {
+      "energy_degeneration_relative": 1.611876300297823e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": 0.0,
+      "total_energy_rate": 2.7755575615628914e-17,
+      "entropy_rate": 0.23439899413680446,
+      "predicted_entropy_rate": 0.23439899413680446
+    },
+    {
+      "energy_degeneration_relative": 3.686725079143166e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": 0.0,
+      "total_energy_rate": 2.220446049250313e-16,
+      "entropy_rate": 1.886159871950657,
+      "predicted_entropy_rate": 1.8861598719506567
+    },
+    {
+      "energy_degeneration_relative": 6.779291316409237e-18,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": -1.1418777443047524e-17,
+      "total_energy_rate": 6.938893903907228e-18,
+      "entropy_rate": 0.0382983261891221,
+      "predicted_entropy_rate": 0.038298326189122094
+    },
+    {
+      "energy_degeneration_relative": 3.9199871022103686e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": 0.0,
+      "total_energy_rate": 0.0,
+      "entropy_rate": 1.3969073059338475,
+      "predicted_entropy_rate": 1.3969073059338475
+    },
+    {
+      "energy_degeneration_relative": 1.5707163666535157e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": -3.757224723388344e-18,
+      "total_energy_rate": 5.551115123125783e-17,
+      "entropy_rate": 0.3300452276334742,
+      "predicted_entropy_rate": 0.33004522763347416
+    },
+    {
+      "energy_degeneration_relative": 2.6645544569480465e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": -3.93993709555979e-17,
+      "total_energy_rate": -1.1102230246251565e-16,
+      "entropy_rate": 0.8854537447438734,
+      "predicted_entropy_rate": 0.8854537447438733
+    },
+    {
+      "energy_degeneration_relative": 1.5950321052177264e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": 0.0,
+      "total_energy_rate": 0.0,
+      "entropy_rate": 0.17211036422732096,
+      "predicted_entropy_rate": 0.17211036422732093
+    },
+    {
+      "energy_degeneration_relative": 2.9616305066316166e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": -9.690792827153195e-18,
+      "total_energy_rate": -1.1102230246251565e-16,
+      "entropy_rate": 0.6827541702227438,
+      "predicted_entropy_rate": 0.6827541702227438
+    },
+    {
+      "energy_degeneration_relative": 2.091646101569248e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": 0.0,
+      "total_energy_rate": -1.1102230246251565e-16,
+      "entropy_rate": 0.7484543264797129,
+      "predicted_entropy_rate": 0.7484543264797129
+    },
+    {
+      "energy_degeneration_relative": 2.26264291548026e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": 0.0,
+      "total_energy_rate": -1.1102230246251565e-16,
+      "entropy_rate": 0.47483554467121797,
+      "predicted_entropy_rate": 0.4748355446712178
+    },
+    {
+      "energy_degeneration_relative": 5.219579516085191e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": 0.0,
+      "total_energy_rate": -2.220446049250313e-16,
+      "entropy_rate": 1.6775572338111593,
+      "predicted_entropy_rate": 1.6775572338111593
+    },
+    {
+      "energy_degeneration_relative": 3.1853604815830524e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": -3.883221860924131e-18,
+      "total_energy_rate": 0.0,
+      "entropy_rate": 0.7836871702797114,
+      "predicted_entropy_rate": 0.7836871702797115
+    },
+    {
+      "energy_degeneration_relative": 3.1293093419851034e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": 0.0,
+      "total_energy_rate": -1.1102230246251565e-16,
+      "entropy_rate": 0.7954268062020914,
+      "predicted_entropy_rate": 0.7954268062020914
+    },
+    {
+      "energy_degeneration_relative": 3.798647408565676e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": 0.0,
+      "total_energy_rate": -2.220446049250313e-16,
+      "entropy_rate": 1.6450943205574928,
+      "predicted_entropy_rate": 1.6450943205574928
+    },
+    {
+      "energy_degeneration_relative": 9.370138243877177e-18,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": -4.7449945284024707e-17,
+      "total_energy_rate": 1.3877787807814457e-17,
+      "entropy_rate": 0.11401356627077737,
+      "predicted_entropy_rate": 0.11401356627077736
+    },
+    {
+      "energy_degeneration_relative": 2.270336838731392e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": 0.0,
+      "total_energy_rate": 1.1102230246251565e-16,
+      "entropy_rate": 0.5899995929796684,
+      "predicted_entropy_rate": 0.5899995929796684
+    },
+    {
+      "energy_degeneration_relative": 2.3515997159643008e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": -3.286534024696791e-17,
+      "total_energy_rate": -5.551115123125783e-17,
+      "entropy_rate": 0.28056051176002006,
+      "predicted_entropy_rate": 0.28056051176002006
+    },
+    {
+      "energy_degeneration_relative": 6.36075923065167e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": 0.0,
+      "total_energy_rate": 4.440892098500626e-16,
+      "entropy_rate": 2.3905401293421393,
+      "predicted_entropy_rate": 2.390540129342139
+    },
+    {
+      "energy_degeneration_relative": 2.6387488141859358e-17,
+      "entropy_poisson_defect": 0.0,
+      "symmetric_defect": 0.0,
+      "min_metric_eigenvalue_scaled": -3.442797527933136e-17,
+      "total_energy_rate": -4.440892098500626e-16,
+      "entropy_rate": 2.613308171670391,
+      "predicted_entropy_rate": 2.6133081716703916
+    }
+  ]
+}

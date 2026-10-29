@@ -1,0 +1,14 @@
+{
+  "state": "(Q,P,e), e>0; E=H_ROM+e, S=log(e), T=e; all nondimensional",
+  "dof": 12,
+  "samples": 32,
+  "seed": 7131025,
+  "max_energy_degeneration_relative": 6.36075923065167e-17,
+  "max_entropy_poisson_defect": 0.0,
+  "min_metric_eigenvalue_scaled": -1.5732277454345336e-16,
+  "max_absolute_total_energy_rate": 4.440892098500626e-16,
+  "min_entropy_rate": 0.0382983261891221,
+  "entropy_rate_identity_abs_max": 4.440892098500626e-16,
+  "limitation": "Finite floating-point checks supplement the exact factorization proof. No robot heat capacity, thermal conduction, physiological temperature history, or coupled fluid/coil entropy model was identified.",
+  "adoption": "Optional validated algebraic candidate. Mechanical Rayleigh and external power ports remain the current simulation model."
+}

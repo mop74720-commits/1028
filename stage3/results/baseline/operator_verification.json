@@ -1,0 +1,28 @@
+{
+  "magnetic_force_virtual_work_relative_error": 1.68191840536756e-08,
+  "magnetic_torque_virtual_work_relative_error": 1.6318873584208457e-09,
+  "contact_elastic_force_virtual_work_relative_error": 5.749896517347564e-11,
+  "material_spatial_torque_power_relative_error": 0.0,
+  "contact_dissipative_power_W": -2.163108018574313e-05,
+  "Coulomb_inequality_excess_N": 1.3552527156068805e-20,
+  "gradient_trace_T_per_m": 0.0,
+  "gradient_curl_defect_T_per_m": 0.0,
+  "exact_partial_element_magnetization": [
+    {
+      "elements": 16,
+      "moment_A_m2": 0.0007240000000000007,
+      "rotary_inertia_condition": 2.0
+    },
+    {
+      "elements": 32,
+      "moment_A_m2": 0.0007240000000000007,
+      "rotary_inertia_condition": 2.0
+    },
+    {
+      "elements": 64,
+      "moment_A_m2": 0.0007240000000000007,
+      "rotary_inertia_condition": 2.0
+    }
+  ],
+  "scope": "finite-difference and algebraic verification of implemented operators; not clinical or full-PDE validation"
+}

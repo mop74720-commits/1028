@@ -1,0 +1,344 @@
+{
+  "status": "completed",
+  "duration_tau": 0.0005,
+  "duration_seconds": 0.0001121672427604084,
+  "initial_state": [
+    0.009800665778412416,
+    0.006216099682706645,
+    -0.00011714758713290688,
+    -0.002673078944651098,
+    -0.0023400650034276762,
+    -0.002004670955008666,
+    -0.0003434497763517713,
+    0.00042239663856923494,
+    0.0009713964335523372,
+    0.0006164865934812456,
+    0.00028831449452181235,
+    -1.555261969333705e-05,
+    0.0010343207233146883,
+    0.003262136800885292,
+    0.0012121093183480672,
+    0.00019815919912775725,
+    -0.0005689903042813087,
+    -0.0008241289518639397,
+    -0.0002153902030085732,
+    0.00012185349413057576,
+    0.0003601382410412057,
+    0.00018881774099542155,
+    2.064383633527739e-05,
+    -8.281594913786322e-05
+  ],
+  "rates": [
+    0.1,
+    0.1181818181818182,
+    0.13636363636363635,
+    0.15454545454545454,
+    0.17272727272727273,
+    0.19090909090909092,
+    0.2090909090909091,
+    0.22727272727272727,
+    0.24545454545454545,
+    0.26363636363636367,
+    0.28181818181818186,
+    0.3
+  ],
+  "model": {
+    "model": "3D inextensible unshearable Kirchhoff strain Ritz; exact SO(3) frame updates and midpoint centerline embedding",
+    "q_dof": 12,
+    "phase_dimension": 24,
+    "quadrature_elements": 20,
+    "configuration": "four Legendre curvature coefficients in each of two bending axes and torsion by default; all are dynamical",
+    "mass": "configuration dependent; includes translational and rotary inertia from embedding Jacobians",
+    "E0_J": 3.6200000000000004e-07,
+    "omega0_rad_s": 4.457629408507532,
+    "omega_rad_s": [
+      4.457629408507532,
+      4.457629408507532,
+      27.694195720027146,
+      27.694195720027146,
+      79.78328659507957,
+      79.78328659507957,
+      356.9402366587693,
+      356.9402366587693,
+      370.43091613854864,
+      1118.611090690932,
+      1984.631631100378,
+      3899.8926690677044
+    ],
+    "nu": [
+      1.0,
+      1.0,
+      6.212763148765096,
+      6.212763148765096,
+      17.898142551467057,
+      17.898142551467057,
+      80.0740043525236,
+      80.0740043525236,
+      83.10042899294614,
+      250.94304352803,
+      445.22131591124275,
+      874.8804155017085
+    ],
+    "canonical_scaling_defect": 5.55251128130777e-21,
+    "mass0_condition": 1264760.7588499414,
+    "repeated_frequency_pairs": [
+      {
+        "i": 0,
+        "j": 1,
+        "relative_difference": 0.0
+      },
+      {
+        "i": 2,
+        "j": 3,
+        "relative_difference": 0.0
+      },
+      {
+        "i": 4,
+        "j": 5,
+        "relative_difference": 0.0
+      },
+      {
+        "i": 6,
+        "j": 7,
+        "relative_difference": 0.0
+      }
+    ],
+    "KAM_status": "Standard nonresonant elliptic KAM is not certified; circular isotropic rod with axial bias has paired bending frequencies.",
+    "relation_to_full_model": "Shares material, distal magnet and field interface with the Cosserat model; shear/stretch omitted in this analytical ROM; modal truncation and fluid/contact closure errors are not yet bounded.",
+    "time": "tau=omega0*t_seconds",
+    "coordinates": "z=(Q,P); q_physical=Sq Q; p_physical=Sp P",
+    "input": "SI increment above axial bias: Bx,By,Bz,Gxx,Gyy,Gxy,Gxz,Gyz",
+    "drag": "synthetic smooth gamma*P; not a blood/contact closure",
+    "derivatives": "double-precision automatic differentiation through full variable-mass SO(3) geometry"
+  },
+  "solver_tolerance": 2e-13,
+  "diagnostics": [
+    {
+      "time": 6.25e-05,
+      "representation_residual_2": 0.011152407383623334,
+      "original_field_error_2": 0.011152209040748028,
+      "inverse_K_residual_bound": 0.011152337681512825,
+      "original_transport_compatibility_2": 6.61965706065165e-05,
+      "chart_matching_2": 0.0,
+      "K_min_singular": 1.00000625,
+      "K_condition": 1.0000124999218754,
+      "chart_condition": 1.00001875,
+      "chart_inverse_error": 0.0,
+      "closure": "exact: K depends on t only, all spatial derivatives vanish",
+      "interpretation": "structure and original-field errors are independent; fixed expansion origin"
+    },
+    {
+      "time": 0.000125,
+      "representation_residual_2": 0.022304814767246658,
+      "original_field_error_2": 0.0223040214099088,
+      "inverse_K_residual_bound": 0.022304535960547153,
+      "original_transport_compatibility_2": 0.00013239314121207244,
+      "chart_matching_2": 0.0,
+      "K_min_singular": 1.0000125,
+      "K_condition": 1.000024999687504,
+      "chart_condition": 1.0000375,
+      "chart_inverse_error": 0.0,
+      "closure": "exact: K depends on t only, all spatial derivatives vanish",
+      "interpretation": "structure and original-field errors are independent; fixed expansion origin"
+    },
+    {
+      "time": 0.00025,
+      "representation_residual_2": 0.04460962953449323,
+      "original_field_error_2": 0.04460645621844262,
+      "inverse_K_residual_bound": 0.04460851432163519,
+      "original_transport_compatibility_2": 0.0002647862824255262,
+      "chart_matching_2": 0.0,
+      "K_min_singular": 1.000025,
+      "K_condition": 1.0000499987500313,
+      "chart_condition": 1.000075,
+      "chart_inverse_error": 0.0,
+      "closure": "exact: K depends on t only, all spatial derivatives vanish",
+      "interpretation": "structure and original-field errors are independent; fixed expansion origin",
+      "oneform_exterior_derivative_error_2": 2.3616220286867466e-16,
+      "oneform_transport_PDE_residual_2": 0.04460962953449323,
+      "PDE_vs_representation_residual_identity": 7.08742491609771e-17
+    },
+    {
+      "time": 0.0005,
+      "representation_residual_2": 0.08921925906898646,
+      "original_field_error_2": 0.08920656671109316,
+      "inverse_K_residual_bound": 0.08921479832907,
+      "original_transport_compatibility_2": 0.0005295725648490981,
+      "chart_matching_2": 0.0,
+      "K_min_singular": 1.00005,
+      "K_condition": 1.00009999500025,
+      "chart_condition": 1.00015,
+      "chart_inverse_error": 0.0,
+      "closure": "exact: K depends on t only, all spatial derivatives vanish",
+      "interpretation": "structure and original-field errors are independent; fixed expansion origin"
+    }
+  ],
+  "rows": [
+    {
+      "method": "original_midpoint",
+      "h": 0.000125,
+      "error_to_original_max": 3.587288018918161e-08,
+      "error_to_represented_max": 2.1874173962530014e-05,
+      "observed_order_to_integrated_field": null,
+      "seconds": 2.304603909999969,
+      "steps": 4,
+      "residual_inf": 4.1324756286473686e-14,
+      "max_solver_condition": 1.00161057163675,
+      "first_step": {
+        "increment_residual_inf": 4.1324756286473686e-14,
+        "nonlinear_corrections": 1,
+        "solver_matrix_condition": 1.00161057163675,
+        "solver_matrix_minimum_singular_value": 0.9999206256908489,
+        "first_step_Ka_defect_2": 1.1128791431870748e-07,
+        "first_step_implicit_min_singular": 0.9999207781383312
+      },
+      "structure_sampling": "first step; ideal implicit tangent",
+      "original_power_balance_residual_max": 5.697658546407514e-14
+    },
+    {
+      "method": "original_midpoint",
+      "h": 6.25e-05,
+      "error_to_original_max": 8.97799928751588e-09,
+      "error_to_represented_max": 2.1863558123499478e-05,
+      "observed_order_to_integrated_field": 1.998427695270745,
+      "seconds": 3.8843226779999895,
+      "steps": 8,
+      "residual_inf": 2.586875043331365e-15,
+      "max_solver_condition": 1.0004569260161338,
+      "first_step": {
+        "increment_residual_inf": 2.5850018299685123e-15,
+        "nonlinear_corrections": 1,
+        "solver_matrix_condition": 1.0004569260161338,
+        "solver_matrix_minimum_singular_value": 0.9999439916257079,
+        "first_step_Ka_defect_2": 1.3930427802567218e-08,
+        "first_step_implicit_min_singular": 0.9999440194307511
+      },
+      "structure_sampling": "first step; ideal implicit tangent",
+      "original_power_balance_residual_max": 1.4611043338151773e-14
+    },
+    {
+      "method": "original_midpoint",
+      "h": 3.125e-05,
+      "error_to_original_max": 2.245112243349582e-09,
+      "error_to_represented_max": 2.1860903457193176e-05,
+      "observed_order_to_integrated_field": 1.9996064081211344,
+      "seconds": 8.355190774999983,
+      "steps": 16,
+      "residual_inf": 1.6175025864062845e-16,
+      "max_solver_condition": 1.0001499510911382,
+      "first_step": {
+        "increment_residual_inf": 1.61478149306323e-16,
+        "nonlinear_corrections": 1,
+        "solver_matrix_condition": 1.0001499510911382,
+        "solver_matrix_minimum_singular_value": 0.9999644940183042,
+        "first_step_Ka_defect_2": 1.759200426401859e-09,
+        "first_step_implicit_min_singular": 0.9999644976947532
+      },
+      "structure_sampling": "first step; ideal implicit tangent",
+      "original_power_balance_residual_max": 4.183781798632035e-15
+    },
+    {
+      "method": "birkhoff_chart_midpoint",
+      "h": 0.000125,
+      "error_to_original_max": 2.1821790424232397e-05,
+      "error_to_represented_max": 1.595931621626738e-07,
+      "observed_order_to_integrated_field": null,
+      "seconds": 13.77794264499994,
+      "steps": 4,
+      "residual_inf": 4.02316475625478e-14,
+      "max_solver_condition": 1.0872285287467418,
+      "first_step": {
+        "increment_residual_inf": 4.02316475625478e-14,
+        "nonlinear_corrections": 1,
+        "solver_matrix_condition": 1.0120236033433814,
+        "solver_matrix_minimum_singular_value": 0.9955079063500366,
+        "first_step_Ka_defect_2": 5.551306932299765e-16,
+        "first_step_implicit_min_singular": 0.9955079067052569
+      },
+      "structure_sampling": "first step; ideal implicit tangent",
+      "original_power_balance_residual_max": 3.2454248083724146e-06
+    },
+    {
+      "method": "birkhoff_chart_midpoint",
+      "h": 6.25e-05,
+      "error_to_original_max": 2.185036695630555e-05,
+      "error_to_represented_max": 3.9931423382270874e-08,
+      "observed_order_to_integrated_field": 1.9988024361690373,
+      "seconds": 24.54376861700007,
+      "steps": 8,
+      "residual_inf": 2.5463390110910897e-15,
+      "max_solver_condition": 1.0458540304470105,
+      "first_step": {
+        "increment_residual_inf": 2.5463390110910897e-15,
+        "nonlinear_corrections": 1,
+        "solver_matrix_condition": 1.0030033056190044,
+        "solver_matrix_minimum_singular_value": 0.9988724958734038,
+        "first_step_Ka_defect_2": 6.66134714986318e-16,
+        "first_step_implicit_min_singular": 0.9988724960248536
+      },
+      "structure_sampling": "first step; ideal implicit tangent",
+      "original_power_balance_residual_max": 3.2509472110823425e-06
+    },
+    {
+      "method": "birkhoff_chart_midpoint",
+      "h": 3.125e-05,
+      "error_to_original_max": 2.1857599706947744e-05,
+      "error_to_represented_max": 9.984918015992914e-09,
+      "observed_order_to_integrated_field": 1.99970201154349,
+      "seconds": 54.17316272100015,
+      "steps": 16,
+      "residual_inf": 1.5970022715003623e-16,
+      "max_solver_condition": 1.0234381046219299,
+      "first_step": {
+        "increment_residual_inf": 1.5970022715003623e-16,
+        "nonlinear_corrections": 1,
+        "solver_matrix_condition": 1.0007575880841537,
+        "solver_matrix_minimum_singular_value": 0.9997135404088481,
+        "first_step_Ka_defect_2": 4.441744426880828e-16,
+        "first_step_implicit_min_singular": 0.9997135404873992
+      },
+      "structure_sampling": "first step; ideal implicit tangent",
+      "original_power_balance_residual_max": 3.2523320344327963e-06
+    }
+  ],
+  "references": [
+    {
+      "field": "original",
+      "rtol": 2e-10,
+      "atol": 2e-12,
+      "nfev": 122,
+      "seconds": 9.228279942999961,
+      "max_step": 6.25e-05
+    },
+    {
+      "field": "original",
+      "rtol": 5e-12,
+      "atol": 5e-14,
+      "nfev": 242,
+      "seconds": 15.467781940000123,
+      "max_step": 3.125e-05
+    },
+    {
+      "field": "represented",
+      "rtol": 2e-10,
+      "atol": 2e-12,
+      "nfev": 122,
+      "seconds": 51.47771551899996,
+      "max_step": 6.25e-05
+    },
+    {
+      "field": "represented",
+      "rtol": 5e-12,
+      "atol": 5e-14,
+      "nfev": 242,
+      "seconds": 102.53824791399984,
+      "max_step": 3.125e-05
+    }
+  ],
+  "scope": "First-order one-form from one fixed origin on the full nonlinear 12-DOF ROM; synthetic nonproportional canonical drag. No blood/contact closure or exact flow oracle.",
+  "original_reference_refinement_max": 9.644406854369048e-18,
+  "represented_reference_refinement_max": 1.2267994783296875e-17,
+  "represented_vs_original_reference_gap": 2.1860018505905156e-05,
+  "elapsed_seconds": 235.16595373100017,
+  "reference_refinement_note": "Initial stricter-tolerance run used identical step grids and gave zero difference. Recomputed stricter references with halved max_step, preserving actual integrator outputs. Fresh runner uses this protocol."
+}

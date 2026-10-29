@@ -1,0 +1,495 @@
+{
+  "model": {
+    "model": "3D inextensible unshearable Kirchhoff strain Ritz; exact SO(3) frame updates and midpoint centerline embedding",
+    "q_dof": 12,
+    "phase_dimension": 24,
+    "quadrature_elements": 20,
+    "configuration": "four Legendre curvature coefficients in each of two bending axes and torsion by default; all are dynamical",
+    "mass": "configuration dependent; includes translational and rotary inertia from embedding Jacobians",
+    "E0_J": 3.6200000000000004e-07,
+    "omega0_rad_s": 4.457629408507532,
+    "omega_rad_s": [
+      4.457629408507532,
+      4.457629408507532,
+      27.694195720027146,
+      27.694195720027146,
+      79.78328659507957,
+      79.78328659507957,
+      356.9402366587693,
+      356.9402366587693,
+      370.43091613854864,
+      1118.611090690932,
+      1984.631631100378,
+      3899.8926690677044
+    ],
+    "nu": [
+      1.0,
+      1.0,
+      6.212763148765096,
+      6.212763148765096,
+      17.898142551467057,
+      17.898142551467057,
+      80.0740043525236,
+      80.0740043525236,
+      83.10042899294614,
+      250.94304352803,
+      445.22131591124275,
+      874.8804155017085
+    ],
+    "canonical_scaling_defect": 5.55251128130777e-21,
+    "mass0_condition": 1264760.7588499414,
+    "repeated_frequency_pairs": [
+      {
+        "i": 0,
+        "j": 1,
+        "relative_difference": 0.0
+      },
+      {
+        "i": 2,
+        "j": 3,
+        "relative_difference": 0.0
+      },
+      {
+        "i": 4,
+        "j": 5,
+        "relative_difference": 0.0
+      },
+      {
+        "i": 6,
+        "j": 7,
+        "relative_difference": 0.0
+      }
+    ],
+    "KAM_status": "Standard nonresonant elliptic KAM is not certified; circular isotropic rod with axial bias has paired bending frequencies.",
+    "relation_to_full_model": "Shares material, distal magnet and field interface with the Cosserat model; shear/stretch omitted in this analytical ROM; modal truncation and fluid/contact closure errors are not yet bounded.",
+    "time": "tau=omega0*t_seconds",
+    "coordinates": "z=(Q,P); q_physical=Sq Q; p_physical=Sp P",
+    "input": "SI increment above axial bias: Bx,By,Bz,Gxx,Gyy,Gxy,Gxz,Gyz",
+    "drag": "synthetic smooth gamma*P; not a blood/contact closure",
+    "derivatives": "double-precision automatic differentiation through full variable-mass SO(3) geometry"
+  },
+  "initial_state": [
+    0.009800665778412416,
+    0.006216099682706645,
+    -0.00011714758713290688,
+    -0.002673078944651098,
+    -0.0023400650034276762,
+    -0.002004670955008666,
+    -0.0003434497763517713,
+    0.00042239663856923494,
+    0.0009713964335523372,
+    0.0006164865934812456,
+    0.00028831449452181235,
+    -1.555261969333705e-05,
+    0.0010343207233146883,
+    0.003262136800885292,
+    0.0012121093183480672,
+    0.00019815919912775725,
+    -0.0005689903042813087,
+    -0.0008241289518639397,
+    -0.0002153902030085732,
+    0.00012185349413057576,
+    0.0003601382410412057,
+    0.00018881774099542155,
+    2.064383633527739e-05,
+    -8.281594913786322e-05
+  ],
+  "duration_tau": 0.004,
+  "duration_seconds": 0.0008973379420832672,
+  "steps": [
+    0.001,
+    0.0005,
+    0.00025
+  ],
+  "tolerance_increment_inf": 2e-13,
+  "scope": "Same 12-coordinate three-dimensional variable-mass Kirchhoff ROM; smooth conservative and declared proportional-drag branches, not full blood/contact dynamics.",
+  "source_sha256": {
+    "rom_bridge.py": "c847efffca746df6621b3967f867ccb2f84fc8c3689169ab2f9c42cb8fc568fb",
+    "rom_integrators.py": "c43abfec3195ae1c2478ff582a2d62e50d3ad5b0f8880d22e0eaabc19457d7ca",
+    "run_integrators.py": "cac00a8f28b45f254537cbbbc76d42d3b6bccc96c67f6df0841e0128c4442675"
+  },
+  "error_norm": "maximum Euclidean full 24-dimensional state error on each method grid",
+  "reference_protocol": "Independent full-state DOP853, two tolerance/max-step settings; no reference flow used by an integrator.",
+  "branches": {
+    "conservative": {
+      "gamma": 0.0,
+      "reference": [
+        {
+          "rtol": 2e-11,
+          "atol": 2e-13,
+          "max_step": 0.001,
+          "nfev": 104,
+          "seconds": 6.41315075600005
+        },
+        {
+          "rtol": 5e-13,
+          "atol": 5e-15,
+          "max_step": 0.0005,
+          "nfev": 164,
+          "seconds": 10.047738392000156
+        }
+      ],
+      "reference_refinement_maximum": 1.1734488474610723e-12,
+      "methods": {
+        "midpoint": [
+          {
+            "step": 0.001,
+            "maximum_state_error": 1.6863455603259473e-05,
+            "endpoint_error": 1.6863455603259473e-05,
+            "observed_order": null,
+            "maximum_energy_drift": 1.6650717263311243e-11,
+            "maximum_midpoint_power_balance_residual": 1.6650717263311243e-11,
+            "power_balance_scope": "Energy difference minus midpoint quadrature of -gamma P.H_P; quadrature defect is included, not an exact discrete-energy identity.",
+            "seconds": 3.488583053999946,
+            "steps": 4,
+            "max_increment_residual_inf": 3.632662789351229e-15,
+            "total_nonlinear_corrections": 8,
+            "max_solver_matrix_condition": 1.0917485640730564,
+            "minimum_solver_matrix_singular_value": 0.9997882009401852,
+            "first_step_diagnostics": {
+              "increment_residual_inf": 3.632662789351229e-15,
+              "nonlinear_corrections": 2,
+              "solver_matrix_condition": 1.0917280770017475,
+              "solver_matrix_minimum_singular_value": 0.9998070335115968,
+              "ideal_implicit_matrix_condition": 1.0917272353497847,
+              "ideal_implicit_matrix_minimum_singular_value": 0.9998077923581362,
+              "seconds": 1.1311454059998596,
+              "standard_two_form_defect_spectral2": 4.462788925805447e-16,
+              "conformal_two_form_defect_spectral2": 4.462788925805447e-16
+            },
+            "structure_sampling": "first step only; ideal implicit tangent, not differentiated finite iteration"
+          },
+          {
+            "step": 0.0005,
+            "maximum_state_error": 4.494400002828123e-06,
+            "endpoint_error": 4.494400002828123e-06,
+            "observed_order": 1.9076997632482384,
+            "maximum_energy_drift": 4.171004850100218e-12,
+            "maximum_midpoint_power_balance_residual": 4.171004850100218e-12,
+            "power_balance_scope": "Energy difference minus midpoint quadrature of -gamma P.H_P; quadrature defect is included, not an exact discrete-energy identity.",
+            "seconds": 4.753148807999878,
+            "steps": 8,
+            "max_increment_residual_inf": 5.803996809528554e-17,
+            "total_nonlinear_corrections": 16,
+            "max_solver_matrix_condition": 1.0238304295342335,
+            "minimum_solver_matrix_singular_value": 0.99983522825487,
+            "first_step_diagnostics": {
+              "increment_residual_inf": 5.601418292280847e-17,
+              "nonlinear_corrections": 2,
+              "solver_matrix_condition": 1.0238186584952231,
+              "solver_matrix_minimum_singular_value": 0.9998467876508527,
+              "ideal_implicit_matrix_condition": 1.0238181072398753,
+              "ideal_implicit_matrix_minimum_singular_value": 0.999847321498638,
+              "seconds": 0.8326711069998964,
+              "standard_two_form_defect_spectral2": 6.677746135128315e-16,
+              "conformal_two_form_defect_spectral2": 6.677746135128315e-16
+            },
+            "structure_sampling": "first step only; ideal implicit tangent, not differentiated finite iteration"
+          },
+          {
+            "step": 0.00025,
+            "maximum_state_error": 1.1429500832410844e-06,
+            "endpoint_error": 1.1429500832410844e-06,
+            "observed_order": 1.9753661332605454,
+            "maximum_energy_drift": 1.0432965255602333e-12,
+            "maximum_midpoint_power_balance_residual": 1.0432965255602333e-12,
+            "power_balance_scope": "Energy difference minus midpoint quadrature of -gamma P.H_P; quadrature defect is included, not an exact discrete-energy identity.",
+            "seconds": 8.666880808000087,
+            "steps": 16,
+            "max_increment_residual_inf": 1.3484764520288461e-18,
+            "total_nonlinear_corrections": 32,
+            "max_solver_matrix_condition": 1.0061030607682724,
+            "minimum_solver_matrix_singular_value": 0.999879859901953,
+            "first_step_diagnostics": {
+              "increment_residual_inf": 1.264831948487484e-18,
+              "nonlinear_corrections": 2,
+              "solver_matrix_condition": 1.0060953825951557,
+              "solver_matrix_minimum_singular_value": 0.999887557953331,
+              "ideal_implicit_matrix_condition": 1.0060950687864794,
+              "ideal_implicit_matrix_minimum_singular_value": 0.9998878675876395,
+              "seconds": 0.864923195000074,
+              "standard_two_form_defect_spectral2": 5.551128786169565e-16,
+              "conformal_two_form_defect_spectral2": 5.551128786169565e-16
+            },
+            "structure_sampling": "first step only; ideal implicit tangent, not differentiated finite iteration"
+          }
+        ],
+        "central4": [
+          {
+            "step": 0.001,
+            "maximum_state_error": 1.100401141588409e-06,
+            "endpoint_error": 1.100401141588409e-06,
+            "observed_order": null,
+            "maximum_energy_drift": 2.2866127394327584e-13,
+            "maximum_midpoint_power_balance_residual": 2.2866127394327584e-13,
+            "power_balance_scope": "Energy difference minus midpoint quadrature of -gamma P.H_P; quadrature defect is included, not an exact discrete-energy identity.",
+            "seconds": 11.673372517999951,
+            "steps": 4,
+            "max_increment_residual_inf": 3.88473577104761e-15,
+            "total_nonlinear_corrections": 8,
+            "max_solver_matrix_condition": 1.1032301654969423,
+            "minimum_solver_matrix_singular_value": 0.9997880518596092,
+            "first_step_diagnostics": {
+              "increment_residual_inf": 3.88473577104761e-15,
+              "nonlinear_corrections": 2,
+              "solver_matrix_condition": 1.1032093257918147,
+              "solver_matrix_minimum_singular_value": 0.9998070113733268,
+              "ideal_implicit_matrix_condition": 1.1032084444418053,
+              "ideal_implicit_matrix_minimum_singular_value": 0.9998078066891904,
+              "increment_Hamiltonian_Jacobian_defect": 7.465490118766908e-17,
+              "seconds": 5.296412938000003,
+              "standard_two_form_defect_spectral2": 5.554156982231623e-16,
+              "conformal_two_form_defect_spectral2": 5.554156982231623e-16
+            },
+            "structure_sampling": "first step only; ideal implicit tangent, not differentiated finite iteration"
+          },
+          {
+            "step": 0.0005,
+            "maximum_state_error": 7.497035537920935e-08,
+            "endpoint_error": 7.497035537920935e-08,
+            "observed_order": 3.8755654903203474,
+            "maximum_energy_drift": 1.53350097377436e-14,
+            "maximum_midpoint_power_balance_residual": 1.53350097377436e-14,
+            "power_balance_scope": "Energy difference minus midpoint quadrature of -gamma P.H_P; quadrature defect is included, not an exact discrete-energy identity.",
+            "seconds": 25.261787744000003,
+            "steps": 8,
+            "max_increment_residual_inf": 6.015627991400041e-17,
+            "total_nonlinear_corrections": 16,
+            "max_solver_matrix_condition": 1.0245815335294377,
+            "minimum_solver_matrix_singular_value": 0.9998351812915239,
+            "first_step_diagnostics": {
+              "increment_residual_inf": 5.784451524270661e-17,
+              "nonlinear_corrections": 2,
+              "solver_matrix_condition": 1.0245697194353236,
+              "solver_matrix_minimum_singular_value": 0.9998467743691267,
+              "ideal_implicit_matrix_condition": 1.0245691500851968,
+              "ideal_implicit_matrix_minimum_singular_value": 0.9998473276971207,
+              "increment_Hamiltonian_Jacobian_defect": 5.226940355701682e-17,
+              "seconds": 5.460939918000122,
+              "standard_two_form_defect_spectral2": 5.551173202550018e-16,
+              "conformal_two_form_defect_spectral2": 5.551173202550018e-16
+            },
+            "structure_sampling": "first step only; ideal implicit tangent, not differentiated finite iteration"
+          },
+          {
+            "step": 0.00025,
+            "maximum_state_error": 4.78611213693106e-09,
+            "endpoint_error": 4.78611213693106e-09,
+            "observed_order": 3.9693941366915015,
+            "maximum_energy_drift": 1.9811626297827623e-15,
+            "maximum_midpoint_power_balance_residual": 1.9811626297827623e-15,
+            "power_balance_scope": "Energy difference minus midpoint quadrature of -gamma P.H_P; quadrature defect is included, not an exact discrete-energy identity.",
+            "seconds": 47.483311404000005,
+            "steps": 16,
+            "max_increment_residual_inf": 2.0405023699356095e-18,
+            "total_nonlinear_corrections": 32,
+            "max_solver_matrix_condition": 1.006150573632372,
+            "minimum_solver_matrix_singular_value": 0.999879845533518,
+            "first_step_diagnostics": {
+              "increment_residual_inf": 1.0418505251227894e-18,
+              "nonlinear_corrections": 2,
+              "solver_matrix_condition": 1.006142887959121,
+              "solver_matrix_minimum_singular_value": 0.9998875505833559,
+              "ideal_implicit_matrix_condition": 1.0061425715507935,
+              "ideal_implicit_matrix_minimum_singular_value": 0.9998878633234761,
+              "increment_Hamiltonian_Jacobian_defect": 2.0726021245387803e-17,
+              "seconds": 5.254858641000055,
+              "standard_two_form_defect_spectral2": 4.608231579718941e-16,
+              "conformal_two_form_defect_spectral2": 4.608231579718941e-16
+            },
+            "structure_sampling": "first step only; ideal implicit tangent, not differentiated finite iteration"
+          }
+        ]
+      }
+    },
+    "damped": {
+      "gamma": 0.2,
+      "reference": [
+        {
+          "rtol": 2e-11,
+          "atol": 2e-13,
+          "max_step": 0.001,
+          "nfev": 104,
+          "seconds": 8.069600378000132
+        },
+        {
+          "rtol": 5e-13,
+          "atol": 5e-15,
+          "max_step": 0.0005,
+          "nfev": 164,
+          "seconds": 12.145854199000041
+        }
+      ],
+      "reference_refinement_maximum": 1.1734128618993033e-12,
+      "methods": {
+        "midpoint": [
+          {
+            "step": 0.001,
+            "maximum_state_error": 1.6858114961268332e-05,
+            "endpoint_error": 1.6858114961268332e-05,
+            "observed_order": null,
+            "maximum_energy_drift": 5.931074429315177e-08,
+            "maximum_midpoint_power_balance_residual": 1.701657189717537e-11,
+            "power_balance_scope": "Energy difference minus midpoint quadrature of -gamma P.H_P; quadrature defect is included, not an exact discrete-energy identity.",
+            "seconds": 2.9926012490000176,
+            "steps": 4,
+            "max_increment_residual_inf": 3.641911965618773e-15,
+            "total_nonlinear_corrections": 8,
+            "max_solver_matrix_condition": 1.0918209578698523,
+            "minimum_solver_matrix_singular_value": 0.9998053170715455,
+            "first_step_diagnostics": {
+              "increment_residual_inf": 3.641911965618773e-15,
+              "nonlinear_corrections": 2,
+              "solver_matrix_condition": 1.0917999104264486,
+              "solver_matrix_minimum_singular_value": 0.9998246981213276,
+              "ideal_implicit_matrix_condition": 1.0917997388516563,
+              "ideal_implicit_matrix_minimum_singular_value": 0.9998248378771306,
+              "seconds": 0.9803109380000024,
+              "standard_two_form_defect_spectral2": 0.0001999803151771065,
+              "conformal_two_form_defect_spectral2": 3.211821152730386e-05
+            },
+            "structure_sampling": "first step only; ideal implicit tangent, not differentiated finite iteration"
+          },
+          {
+            "step": 0.0005,
+            "maximum_state_error": 4.492917055824204e-06,
+            "endpoint_error": 4.492917055824204e-06,
+            "observed_order": 1.9077188927054491,
+            "maximum_energy_drift": 6.07590039127491e-08,
+            "maximum_midpoint_power_balance_residual": 4.2642470391138775e-12,
+            "power_balance_scope": "Energy difference minus midpoint quadrature of -gamma P.H_P; quadrature defect is included, not an exact discrete-energy identity.",
+            "seconds": 5.645057170999962,
+            "steps": 8,
+            "max_increment_residual_inf": 5.890574164649784e-17,
+            "total_nonlinear_corrections": 16,
+            "max_solver_matrix_condition": 1.0238580251248963,
+            "minimum_solver_matrix_singular_value": 0.9998542087005302,
+            "first_step_diagnostics": {
+              "increment_residual_inf": 5.722395772972443e-17,
+              "nonlinear_corrections": 2,
+              "solver_matrix_condition": 1.0238517160212124,
+              "solver_matrix_minimum_singular_value": 0.9998604573331195,
+              "ideal_implicit_matrix_condition": 1.0238511115057944,
+              "ideal_implicit_matrix_minimum_singular_value": 0.9998610417596198,
+              "seconds": 0.9640821339999093,
+              "standard_two_form_defect_spectral2": 9.999504150378784e-05,
+              "conformal_two_form_defect_spectral2": 4.5650425979916526e-06
+            },
+            "structure_sampling": "first step only; ideal implicit tangent, not differentiated finite iteration"
+          },
+          {
+            "step": 0.00025,
+            "maximum_state_error": 1.1425681032420165e-06,
+            "endpoint_error": 1.1425681032420165e-06,
+            "observed_order": 1.9753722680967682,
+            "maximum_energy_drift": 6.113683121886614e-08,
+            "maximum_midpoint_power_balance_residual": 1.0671009190052948e-12,
+            "power_balance_scope": "Energy difference minus midpoint quadrature of -gamma P.H_P; quadrature defect is included, not an exact discrete-energy identity.",
+            "seconds": 10.867017728000064,
+            "steps": 16,
+            "max_increment_residual_inf": 2.4263258774099433e-18,
+            "total_nonlinear_corrections": 32,
+            "max_solver_matrix_condition": 1.0061127221740067,
+            "minimum_solver_matrix_singular_value": 0.9998938001509219,
+            "first_step_diagnostics": {
+              "increment_residual_inf": 7.115076756936123e-19,
+              "nonlinear_corrections": 2,
+              "solver_matrix_condition": 1.0061110132733415,
+              "solver_matrix_minimum_singular_value": 0.9998955741897491,
+              "ideal_implicit_matrix_condition": 1.006110579291977,
+              "ideal_implicit_matrix_minimum_singular_value": 0.9998960030778092,
+              "seconds": 1.0212279630000012,
+              "standard_two_form_defect_spectral2": 4.9998755265090375e-05,
+              "conformal_two_form_defect_spectral2": 5.908901254453548e-07
+            },
+            "structure_sampling": "first step only; ideal implicit tangent, not differentiated finite iteration"
+          }
+        ],
+        "weighted_midpoint": [
+          {
+            "step": 0.001,
+            "maximum_state_error": 1.685600994324261e-05,
+            "endpoint_error": 1.685600994324261e-05,
+            "observed_order": null,
+            "maximum_energy_drift": 6.150842846370293e-08,
+            "maximum_midpoint_power_balance_residual": 2.1813471157575206e-09,
+            "power_balance_scope": "Energy difference minus midpoint quadrature of -gamma P.H_P; quadrature defect is included, not an exact discrete-energy identity.",
+            "seconds": 2.6576234839999415,
+            "steps": 4,
+            "max_increment_residual_inf": 3.632454419246205e-15,
+            "total_nonlinear_corrections": 8,
+            "max_solver_matrix_condition": 1.0917484910748685,
+            "minimum_solver_matrix_singular_value": 0.9997882547266015,
+            "first_step_diagnostics": {
+              "increment_residual_inf": 3.632454419246205e-15,
+              "nonlinear_corrections": 2,
+              "solver_matrix_condition": 1.0917280669051195,
+              "solver_matrix_minimum_singular_value": 0.9998070408459466,
+              "ideal_implicit_matrix_condition": 1.0917272257684296,
+              "ideal_implicit_matrix_minimum_singular_value": 0.9998077992215159,
+              "seconds": 0.9084973619999346,
+              "standard_two_form_defect_spectral2": 0.00019998000133347995,
+              "conformal_two_form_defect_spectral2": 6.662622474546975e-16
+            },
+            "structure_sampling": "first step only; ideal implicit tangent, not differentiated finite iteration"
+          },
+          {
+            "step": 0.0005,
+            "maximum_state_error": 4.4925236891032995e-06,
+            "endpoint_error": 4.4925236891032995e-06,
+            "observed_order": 1.907665054096667,
+            "maximum_energy_drift": 6.132238014757265e-08,
+            "maximum_midpoint_power_balance_residual": 5.592993671053214e-10,
+            "power_balance_scope": "Energy difference minus midpoint quadrature of -gamma P.H_P; quadrature defect is included, not an exact discrete-energy identity.",
+            "seconds": 4.897903916999894,
+            "steps": 8,
+            "max_increment_residual_inf": 5.932819932894092e-17,
+            "total_nonlinear_corrections": 16,
+            "max_solver_matrix_condition": 1.023830365425839,
+            "minimum_solver_matrix_singular_value": 0.9998352787653062,
+            "first_step_diagnostics": {
+              "increment_residual_inf": 5.622467061020117e-17,
+              "nonlinear_corrections": 2,
+              "solver_matrix_condition": 1.0238186545396404,
+              "solver_matrix_minimum_singular_value": 0.9998467906853666,
+              "ideal_implicit_matrix_condition": 1.0238181034016673,
+              "ideal_implicit_matrix_minimum_singular_value": 0.9998473244187074,
+              "seconds": 0.9288658670000132,
+              "standard_two_form_defect_spectral2": 9.999500016710794e-05,
+              "conformal_two_form_defect_spectral2": 4.440963192778696e-16
+            },
+            "structure_sampling": "first step only; ideal implicit tangent, not differentiated finite iteration"
+          },
+          {
+            "step": 0.00025,
+            "maximum_state_error": 1.142480008318948e-06,
+            "endpoint_error": 1.142480008318948e-06,
+            "observed_order": 1.9753571905827083,
+            "maximum_energy_drift": 6.12786980909029e-08,
+            "maximum_midpoint_power_balance_residual": 1.4084785983152437e-10,
+            "power_balance_scope": "Energy difference minus midpoint quadrature of -gamma P.H_P; quadrature defect is included, not an exact discrete-energy identity.",
+            "seconds": 11.175964275999831,
+            "steps": 16,
+            "max_increment_residual_inf": 2.3483988462625477e-18,
+            "total_nonlinear_corrections": 32,
+            "max_solver_matrix_condition": 1.0061029981002132,
+            "minimum_solver_matrix_singular_value": 0.9998799108132536,
+            "first_step_diagnostics": {
+              "increment_residual_inf": 1.4083510934878845e-18,
+              "nonlinear_corrections": 2,
+              "solver_matrix_condition": 1.0060953806754893,
+              "solver_matrix_minimum_singular_value": 0.9998875594835921,
+              "ideal_implicit_matrix_condition": 1.0060950668880426,
+              "ideal_implicit_matrix_minimum_singular_value": 0.9998878690968501,
+              "seconds": 1.0010133989999304,
+              "standard_two_form_defect_spectral2": 4.999875002109636e-05,
+              "conformal_two_form_defect_spectral2": 6.726885776029658e-16
+            },
+            "structure_sampling": "first step only; ideal implicit tangent, not differentiated finite iteration"
+          }
+        ]
+      }
+    }
+  },
+  "status": "all convergence, residual, reference and applicable structure assertions passed"
+}
