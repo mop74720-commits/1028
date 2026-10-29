@@ -1,0 +1,35 @@
+{
+  "method": "Deterministic reversal of the recorded inverse-backend patch, reconstructed after the run; not an original-time byte snapshot",
+  "checks": {
+    "transport_native.py": {
+      "reconstructed_sha256": "02f4f21acce9dd55ca9febfc25591b2d850361135c68eedd4d2b81fd5ee27b0b",
+      "recorded_legacy_run_sha256": "02f4f21acce9dd55ca9febfc25591b2d850361135c68eedd4d2b81fd5ee27b0b",
+      "match": true
+    },
+    "transport_cache.py": {
+      "reconstructed_sha256": "e3b91b8ca0261318dfdb6e92986f903644390cad6ffd394257e023e6313d36f6",
+      "recorded_legacy_run_sha256": "e3b91b8ca0261318dfdb6e92986f903644390cad6ffd394257e023e6313d36f6",
+      "match": true
+    },
+    "run_transport_experiments.py": {
+      "reconstructed_sha256": "03fd204d89b989dec6091330b49352d6ce4f3994878f34f464f50f4a4abb8a19",
+      "recorded_legacy_run_sha256": "03fd204d89b989dec6091330b49352d6ce4f3994878f34f464f50f4a4abb8a19",
+      "match": true
+    },
+    "moser_chart.py": {
+      "reconstructed_sha256": "869356bfa0997c2d5e5bc03878752822ad6da4ed74ac283f716acb72e9301fae",
+      "recorded_legacy_run_sha256": "869356bfa0997c2d5e5bc03878752822ad6da4ed74ac283f716acb72e9301fae",
+      "match": true
+    },
+    "run_transport_prototype.py": {
+      "reconstructed_sha256": "74f43628bf2d1e8916c28c7ee03d45d043b3861bc10fdc59795014668d284fd7",
+      "recorded_legacy_run_sha256": "74f43628bf2d1e8916c28c7ee03d45d043b3861bc10fdc59795014668d284fd7",
+      "match": true
+    },
+    "run_transport_ad_check.py": {
+      "reconstructed_sha256": "7e0e3a4086f19b6a45c0cb98db1a8849ca6b79609668b990805cf245d2484919",
+      "recorded_legacy_run_sha256": "7e0e3a4086f19b6a45c0cb98db1a8849ca6b79609668b990805cf245d2484919",
+      "match": true
+    }
+  }
+}

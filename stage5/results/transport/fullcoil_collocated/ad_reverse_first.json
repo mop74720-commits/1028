@@ -1,0 +1,7 @@
+{
+  "method": "reverse",
+  "status": "terminated_by_signal",
+  "coil_sha256": "53004846e9fbd219efc146dee46dd9ce9966a2d1b67c9a782bf577012d9e199e",
+  "shell_exit_code": 137,
+  "reason": "Process killed externally while evaluating all-output reverse-over-reverse D2b1; no derivative tensor produced. Last observed RSS 3.4 GiB. No numerical pass claimed."
+}

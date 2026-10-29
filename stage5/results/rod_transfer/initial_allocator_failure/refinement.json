@@ -1,0 +1,52 @@
+{
+  "pairs": [
+    {
+      "first": "port_n16_h5us",
+      "second": "port_n32_h5us",
+      "common_reference_samples": 129,
+      "centerline_time_space_rms_m": 4.754264671554118e-06,
+      "tip_time_rms_m": 7.1129396895211315e-06,
+      "max_centerline_difference_m": 1.2622938132152432e-05,
+      "scope": "Adjacent numerical solutions, not error against exact PDE."
+    },
+    {
+      "first": "port_n32_h5us",
+      "second": "port_n64_h5us",
+      "common_reference_samples": 129,
+      "centerline_time_space_rms_m": 3.627509893657015e-06,
+      "tip_time_rms_m": 5.095110092673119e-06,
+      "max_centerline_difference_m": 1.0341611629767812e-05,
+      "scope": "Adjacent numerical solutions, not error against exact PDE."
+    },
+    {
+      "first": "port_n32_h10us",
+      "second": "port_n32_h5us",
+      "common_reference_samples": 129,
+      "centerline_time_space_rms_m": 2.299641486988973e-09,
+      "tip_time_rms_m": 4.798679619996105e-09,
+      "max_centerline_difference_m": 1.2989590918703021e-08,
+      "scope": "Adjacent numerical solutions, not error against exact PDE."
+    },
+    {
+      "first": "port_n32_h5us",
+      "second": "port_n32_h2p5us",
+      "common_reference_samples": 129,
+      "centerline_time_space_rms_m": 3.880236397863414e-06,
+      "tip_time_rms_m": 5.669924325810725e-06,
+      "max_centerline_difference_m": 8.840107453973508e-06,
+      "scope": "Adjacent numerical solutions, not error against exact PDE."
+    },
+    {
+      "first": "baseline_n32_h10us",
+      "second": "port_n32_h10us",
+      "common_reference_samples": 129,
+      "centerline_time_space_rms_m": 6.280045234266467e-06,
+      "tip_time_rms_m": 9.56833171793809e-06,
+      "max_centerline_difference_m": 1.8173040157026823e-05,
+      "scope": "Adjacent numerical solutions, not error against exact PDE."
+    }
+  ],
+  "observed_space_order": 0.3902426717480824,
+  "observed_time_order": -10.720519870656755,
+  "numerical_order_scope": "Observed adjacent differences only; no smoothness or formal order claim for the open constrained controller."
+}

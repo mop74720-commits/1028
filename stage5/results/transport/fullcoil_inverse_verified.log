@@ -1,0 +1,30 @@
+CACHE {"status": "running", "order": 1, "derivative": "value"}
+CACHE {"order": 1, "derivative": "value", "seconds": 0.5208361670011072, "norm": 0.003423434753825412}
+CACHE {"status": "running", "order": 1, "derivative": "jacobian"}
+CACHE {"order": 1, "derivative": "jacobian", "seconds": 3.2871555169986095, "norm": 14.031221597288802}
+CACHE {"status": "running", "order": 1, "derivative": "hessian"}
+CACHE {"order": 1, "derivative": "hessian", "seconds": 30.914147488001618, "norm": 197.21508477751905, "raw_hessian_antisymmetry_max": 1.2114753644709708e-11, "raw_hessian_antisymmetry_relative": 1.4089257390345047e-13}
+CACHE {"status": "running", "order": 2, "derivative": "value"}
+CACHE {"order": 2, "derivative": "value", "seconds": 5.815615544001048, "norm": 0.2016396933505335}
+CACHE {"status": "running", "order": 2, "derivative": "jacobian"}
+CACHE {"order": 2, "derivative": "jacobian", "seconds": 18.180120713997894, "norm": 723.9896541478414}
+NATIVE_POINT_CENTER
+NATIVE_POINT_OFF_CENTER
+MOSER 1 2.2204670544007777e-16
+MOSER 2 6.661526675627703e-16
+REFERENCE_REPRESENTED 1 2e-10
+REFERENCE_REPRESENTED 1 5e-12
+INTEGRATE 1 4
+ROW {"order": 1, "h": 0.000125, "error_to_represented_max": 3.5869706817860856e-08, "error_to_original_max": 6.17461444567147e-08, "observed_order_to_represented": null, "auxiliary_calls": 22, "auxiliary_nfev": 1448, "auxiliary_seconds": 0.6006407290042262, "seconds": 49.66732190600305, "max_residual_inf": 3.351119413837504e-15, "steps": 4}
+INTEGRATE 1 8
+ROW {"order": 1, "h": 6.25e-05, "error_to_represented_max": 8.977205461864445e-09, "error_to_original_max": 5.0943281195177516e-08, "observed_order_to_represented": 1.9984276338381703, "auxiliary_calls": 41, "auxiliary_nfev": 2602, "auxiliary_seconds": 0.8053612650182913, "seconds": 66.8125787300014, "max_residual_inf": 2.0928850049761836e-16, "steps": 8}
+INTEGRATE 1 16
+ROW {"order": 1, "h": 3.125e-05, "error_to_represented_max": 2.2449202536234703e-09, "error_to_original_max": 5.016945020863518e-08, "observed_order_to_represented": 1.9996022175081103, "auxiliary_calls": 65, "auxiliary_nfev": 4090, "auxiliary_seconds": 1.3764912089900463, "seconds": 116.07097361700289, "max_residual_inf": 8.355900636500691e-14, "steps": 16}
+REFERENCE_REPRESENTED 2 2e-10
+REFERENCE_REPRESENTED 2 5e-12
+INTEGRATE 2 4
+ROW {"order": 2, "h": 0.000125, "error_to_represented_max": 3.586970818747318e-08, "error_to_original_max": 3.589225290419176e-08, "observed_order_to_represented": null, "auxiliary_calls": 22, "auxiliary_nfev": 1448, "auxiliary_seconds": 0.6294374900098774, "seconds": 44.69288251099715, "max_residual_inf": 3.3511092494421368e-15, "steps": 4}
+INTEGRATE 2 8
+ROW {"order": 2, "h": 6.25e-05, "error_to_represented_max": 8.977205803459358e-09, "error_to_original_max": 9.048055682587829e-09, "observed_order_to_represented": 1.9984276340280531, "auxiliary_calls": 41, "auxiliary_nfev": 2602, "auxiliary_seconds": 0.7950925220029603, "seconds": 64.50050459900012, "max_residual_inf": 2.0928977104703924e-16, "steps": 8}
+INTEGRATE 2 16
+ROW {"order": 2, "h": 3.125e-05, "error_to_represented_max": 2.244920334929077e-09, "error_to_original_max": 2.4959453788269735e-09, "observed_order_to_represented": 1.9996022201536834, "auxiliary_calls": 65, "auxiliary_nfev": 4090, "auxiliary_seconds": 1.3523821490052796, "seconds": 107.55291388399928, "max_residual_inf": 8.3559010917809e-14, "steps": 16}

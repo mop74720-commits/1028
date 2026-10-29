@@ -1,0 +1,32 @@
+{
+  "ideal_damping_and_constraints": {
+    "ideal_power_W": -4.172425013819098e-10,
+    "identity_error_W": 0.0,
+    "actual_max_current_A": 0.03999999999112402,
+    "projection_residual_A": 21.634082121355085,
+    "optimizer_success": false,
+    "minimum_sampled_constraint_margin": 2.01000216470959e-10,
+    "tolerance": 1e-08,
+    "scope": "Unconstrained damping identity plus constrained infeasible-target residual; not a sampled closed-loop passivity theorem"
+  },
+  "joint_translation_rotation_virtual_work": {
+    "exact_current_port_power_W": 3.16842706886023e-08,
+    "eps_s": [
+      0.0001,
+      5e-05,
+      2.5e-05
+    ],
+    "energy_directional_power_W": [
+      3.168427066741795e-08,
+      3.1684270682224484e-08,
+      3.168427068874267e-08
+    ],
+    "relative_error": 4.4302500318649674e-12,
+    "tolerance": 2e-07,
+    "coordinates": "spatial translation and exp(-eps*omega_body) applied to material directors"
+  },
+  "status": "independently_executed",
+  "command": "rod Python -m unittest discover -s stage5/tests -p test_rod_transfer.py -v",
+  "elapsed_s": 0.8554931069993472,
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+}

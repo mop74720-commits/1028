@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/workspace/1028-cloud/venvs/learning/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "stage3/tests",
+    "-v"
+  ],
+  "cwd": "/tmp/1028-stage5-regression-e9h3pd55",
+  "started_utc": "2026-10-29T15:15:45.838830+00:00",
+  "scope": "18 direct legacy tests and 5 saved-evidence acceptances; does not regenerate legacy experiments",
+  "interpreter": "/workspace/1028-cloud/venvs/learning/bin/python",
+  "source_commit": "f3aa09c6449ff6d0ff732f2b19a4f65c6dcf4cda",
+  "exit_code": 0,
+  "seconds": 46.52681098999892,
+  "finished_utc": "2026-10-29T15:16:32.365617+00:00",
+  "frozen_differences": [],
+  "status": "passed",
+  "log": "stage5/results/regression/legacy_23.log",
+  "scratch_retained_for_inspection": true
+}

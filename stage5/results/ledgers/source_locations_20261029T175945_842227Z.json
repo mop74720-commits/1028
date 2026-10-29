@@ -1,0 +1,2590 @@
+{
+  "timestamp_utc": "2026-10-29T17:59:45.841219+00:00",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "stage5/program/update_inheritance.py",
+    "--updates",
+    "stage5/results/ledgers/stable_branch_updates.json",
+    "--updates",
+    "stage5/results/ledgers/learning_and_proof_updates.json",
+    "--updates",
+    "stage5/results/ledgers/transport_final_updates.json"
+  ],
+  "locations": [
+    {
+      "table": "inheritance_update",
+      "id": "B01",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "birkhoff_field",
+      "line": 157,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B02",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "twoform_evaluation",
+      "line": 147,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B03",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "time_compatibility_defect",
+      "line": 166,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B04",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "transported_volume_ratio",
+      "line": 294,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B05",
+      "column": "stage5_source_code",
+      "path": "stage5/program/transport_native.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a77ad9df7fc789f3a1eb061616e7f42de596047ba8e9fd6e7dbe436179505e3f"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B05",
+      "column": "stage5_source_code",
+      "path": "stage5/program/transport_cache.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "52d8b9b90cb53fc613dd730c5fdac78e0a49a8a02d37652af020434e6e3cf635"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B05",
+      "column": "stage5_source_code",
+      "path": "stage5/program/moser_chart.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "869356bfa0997c2d5e5bc03878752822ad6da4ed74ac283f716acb72e9301fae"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B06",
+      "column": "stage5_source_code",
+      "path": "stage5/program/transport_native.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a77ad9df7fc789f3a1eb061616e7f42de596047ba8e9fd6e7dbe436179505e3f"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B06",
+      "column": "stage5_source_code",
+      "path": "stage5/program/transport_cache.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "52d8b9b90cb53fc613dd730c5fdac78e0a49a8a02d37652af020434e6e3cf635"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B06",
+      "column": "stage5_source_code",
+      "path": "stage5/program/moser_chart.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "869356bfa0997c2d5e5bc03878752822ad6da4ed74ac283f716acb72e9301fae"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B07",
+      "column": "stage5_source_code",
+      "path": "stage5/program/transport_native.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a77ad9df7fc789f3a1eb061616e7f42de596047ba8e9fd6e7dbe436179505e3f"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B07",
+      "column": "stage5_source_code",
+      "path": "stage5/program/transport_cache.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "52d8b9b90cb53fc613dd730c5fdac78e0a49a8a02d37652af020434e6e3cf635"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B07",
+      "column": "stage5_source_code",
+      "path": "stage5/program/moser_chart.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "869356bfa0997c2d5e5bc03878752822ad6da4ed74ac283f716acb72e9301fae"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B08",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "endpoint_gradient_jacobian",
+      "line": 228,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B08",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "reconstruct_flow_jacobian",
+      "line": 235,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B08",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "radial_generator_potential",
+      "line": 195,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B09",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "fixed_endpoint_rhs",
+      "line": 240,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B09",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "central_generator_coefficients",
+      "line": 265,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B10",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "original_endpoint_matrix",
+      "line": 171,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B10",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "endpoint_inverse",
+      "line": 186,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B11",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "original_endpoint_matrix",
+      "line": 171,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B11",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "endpoint_inverse",
+      "line": 186,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B12",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "fixed_endpoint_rhs",
+      "line": 240,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B13",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "gradient_integrability_defect",
+      "line": 152,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B14",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "gradient_integrability_defect",
+      "line": 152,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B15",
+      "column": "stage5_source_code",
+      "path": "stage5/program/closed_loop.py",
+      "anchor": "implicit_midpoint",
+      "line": 113,
+      "sha256": "4f7e5e16e1cc5d105a298811627989cd064819f8790dadb0429920374739db31"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B15",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "mechanical_field",
+      "line": 129,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B16",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "midpoint_linear_mechanical_step",
+      "line": 248,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B16",
+      "column": "stage5_source_code",
+      "path": "stage5/program/closed_loop.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "4f7e5e16e1cc5d105a298811627989cd064819f8790dadb0429920374739db31"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B17",
+      "column": "stage5_source_code",
+      "path": "stage5/program/closed_loop.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "4f7e5e16e1cc5d105a298811627989cd064819f8790dadb0429920374739db31"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B18",
+      "column": "stage5_source_code",
+      "path": "stage5/program/closed_loop.py",
+      "anchor": "step",
+      "line": 155,
+      "sha256": "4f7e5e16e1cc5d105a298811627989cd064819f8790dadb0429920374739db31"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B19",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "torus_primitive_periods",
+      "line": 303,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B19",
+      "column": "stage5_source_code",
+      "path": "stage5/program/closed_loop.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "4f7e5e16e1cc5d105a298811627989cd064819f8790dadb0429920374739db31"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B20",
+      "column": "stage5_source_code",
+      "path": "stage5/program/transport_native.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a77ad9df7fc789f3a1eb061616e7f42de596047ba8e9fd6e7dbe436179505e3f"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B20",
+      "column": "stage5_source_code",
+      "path": "stage5/program/transport_cache.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "52d8b9b90cb53fc613dd730c5fdac78e0a49a8a02d37652af020434e6e3cf635"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B20",
+      "column": "stage5_source_code",
+      "path": "stage5/program/moser_chart.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "869356bfa0997c2d5e5bc03878752822ad6da4ed74ac283f716acb72e9301fae"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B21",
+      "column": "stage5_source_code",
+      "path": "stage5/program/transport_native.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a77ad9df7fc789f3a1eb061616e7f42de596047ba8e9fd6e7dbe436179505e3f"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B21",
+      "column": "stage5_source_code",
+      "path": "stage5/program/transport_cache.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "52d8b9b90cb53fc613dd730c5fdac78e0a49a8a02d37652af020434e6e3cf635"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B21",
+      "column": "stage5_source_code",
+      "path": "stage5/program/moser_chart.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "869356bfa0997c2d5e5bc03878752822ad6da4ed74ac283f716acb72e9301fae"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B22",
+      "column": "stage5_source_code",
+      "path": "stage5/program/transport_native.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a77ad9df7fc789f3a1eb061616e7f42de596047ba8e9fd6e7dbe436179505e3f"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B22",
+      "column": "stage5_source_code",
+      "path": "stage5/program/transport_cache.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "52d8b9b90cb53fc613dd730c5fdac78e0a49a8a02d37652af020434e6e3cf635"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B22",
+      "column": "stage5_source_code",
+      "path": "stage5/program/moser_chart.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "869356bfa0997c2d5e5bc03878752822ad6da4ed74ac283f716acb72e9301fae"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B23",
+      "column": "stage5_source_code",
+      "path": "stage5/program/closed_loop.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "4f7e5e16e1cc5d105a298811627989cd064819f8790dadb0429920374739db31"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B26",
+      "column": "stage5_source_code",
+      "path": "stage5/program/closed_loop.py",
+      "anchor": "jacobian",
+      "line": 62,
+      "sha256": "4f7e5e16e1cc5d105a298811627989cd064819f8790dadb0429920374739db31"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "B26",
+      "column": "stage5_source_code",
+      "path": "stage5/program/closed_loop_sampled.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "43ddbe4eda6dc31049ec233571c60c7a8e5d35c0e0caf22fd432fbe6fd37e8f2"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK01",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "wirtinger_real_energy",
+      "line": 102,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK01",
+      "column": "stage5_source_code",
+      "path": "stage5/program/learning_models.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "28055b5406777df87a94e66f6ac0a42909b9b60efad0070f599e00616fe143a0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK01",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_learning_research.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "ba705e9d21ac6f04483cfcd539edf43a50f35523e5dc913fd19f710a273f1bf8"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK02",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "rayleigh_force_from_momentum_gradient",
+      "line": 119,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK02",
+      "column": "stage5_source_code",
+      "path": "stage5/program/coil_rom.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK03",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "complex_energy_rate_squared",
+      "line": 112,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK03",
+      "column": "stage5_source_code",
+      "path": "stage5/program/learning_models.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "28055b5406777df87a94e66f6ac0a42909b9b60efad0070f599e00616fe143a0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK03",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_learning_research.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "ba705e9d21ac6f04483cfcd539edf43a50f35523e5dc913fd19f710a273f1bf8"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK04",
+      "column": "stage5_source_code",
+      "path": "stage5/program/learning_models.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "28055b5406777df87a94e66f6ac0a42909b9b60efad0070f599e00616fe143a0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK04",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_learning_research.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "ba705e9d21ac6f04483cfcd539edf43a50f35523e5dc913fd19f710a273f1bf8"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK05",
+      "column": "stage5_source_code",
+      "path": "stage5/program/learning_models.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "28055b5406777df87a94e66f6ac0a42909b9b60efad0070f599e00616fe143a0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK05",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_learning_research.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "ba705e9d21ac6f04483cfcd539edf43a50f35523e5dc913fd19f710a273f1bf8"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK06",
+      "column": "stage5_source_code",
+      "path": "stage5/program/learning_models.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "28055b5406777df87a94e66f6ac0a42909b9b60efad0070f599e00616fe143a0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK06",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_learning_research.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "ba705e9d21ac6f04483cfcd539edf43a50f35523e5dc913fd19f710a273f1bf8"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK07",
+      "column": "stage5_source_code",
+      "path": "stage5/program/learning_models.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "28055b5406777df87a94e66f6ac0a42909b9b60efad0070f599e00616fe143a0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK07",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_learning_research.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "ba705e9d21ac6f04483cfcd539edf43a50f35523e5dc913fd19f710a273f1bf8"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK08",
+      "column": "stage5_source_code",
+      "path": "stage5/program/learning_models.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "28055b5406777df87a94e66f6ac0a42909b9b60efad0070f599e00616fe143a0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK08",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_learning_research.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "ba705e9d21ac6f04483cfcd539edf43a50f35523e5dc913fd19f710a273f1bf8"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK09",
+      "column": "stage5_source_code",
+      "path": "stage5/program/resonance_research.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "00d96cc67a88674de6c25490164acad1cfbfc70a2a987c6808cab92331f2fa6b"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK09",
+      "column": "stage5_source_code",
+      "path": "stage5/program/resonance_normalform_pair.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "72e700e7ad1bc521b4ad4119aff9f87e53eaf94158fc993e047d6835a0ff8a05"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK10",
+      "column": "stage5_source_code",
+      "path": "stage5/program/learning_models.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "28055b5406777df87a94e66f6ac0a42909b9b60efad0070f599e00616fe143a0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK10",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_learning_research.py",
+      "anchor": "metrics",
+      "line": 32,
+      "sha256": "ba705e9d21ac6f04483cfcd539edf43a50f35523e5dc913fd19f710a273f1bf8"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK11",
+      "column": "stage5_source_code",
+      "path": "stage5/program/learning_models.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "28055b5406777df87a94e66f6ac0a42909b9b60efad0070f599e00616fe143a0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK11",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_learning_research.py",
+      "anchor": "hpp_legendre",
+      "line": 103,
+      "sha256": "ba705e9d21ac6f04483cfcd539edf43a50f35523e5dc913fd19f710a273f1bf8"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK12",
+      "column": "stage5_source_code",
+      "path": "stage5/program/learning_models.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "28055b5406777df87a94e66f6ac0a42909b9b60efad0070f599e00616fe143a0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK12",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_learning_research.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "ba705e9d21ac6f04483cfcd539edf43a50f35523e5dc913fd19f710a273f1bf8"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK13",
+      "column": "stage5_source_code",
+      "path": "stage5/program/learning_models.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "28055b5406777df87a94e66f6ac0a42909b9b60efad0070f599e00616fe143a0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK13",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_learning_research.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "ba705e9d21ac6f04483cfcd539edf43a50f35523e5dc913fd19f710a273f1bf8"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK14",
+      "column": "stage5_source_code",
+      "path": "stage5/program/learning_models.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "28055b5406777df87a94e66f6ac0a42909b9b60efad0070f599e00616fe143a0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK14",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_learning_research.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "ba705e9d21ac6f04483cfcd539edf43a50f35523e5dc913fd19f710a273f1bf8"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK15",
+      "column": "stage5_source_code",
+      "path": "stage5/program/learning_models.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "28055b5406777df87a94e66f6ac0a42909b9b60efad0070f599e00616fe143a0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK15",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_learning_research.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "ba705e9d21ac6f04483cfcd539edf43a50f35523e5dc913fd19f710a273f1bf8"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK16",
+      "column": "stage5_source_code",
+      "path": "stage5/program/learning_models.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "28055b5406777df87a94e66f6ac0a42909b9b60efad0070f599e00616fe143a0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK16",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_learning_research.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "ba705e9d21ac6f04483cfcd539edf43a50f35523e5dc913fd19f710a273f1bf8"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK17",
+      "column": "stage5_source_code",
+      "path": "stage5/program/learning_models.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "28055b5406777df87a94e66f6ac0a42909b9b60efad0070f599e00616fe143a0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK17",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_learning_research.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "ba705e9d21ac6f04483cfcd539edf43a50f35523e5dc913fd19f710a273f1bf8"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK18",
+      "column": "stage5_source_code",
+      "path": "stage5/program/resonance_research.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "00d96cc67a88674de6c25490164acad1cfbfc70a2a987c6808cab92331f2fa6b"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK18",
+      "column": "stage5_source_code",
+      "path": "stage5/program/resonance_normalform_pair.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "72e700e7ad1bc521b4ad4119aff9f87e53eaf94158fc993e047d6835a0ff8a05"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK22",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "torus_primitive_periods",
+      "line": 303,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK23",
+      "column": "stage5_source_code",
+      "path": "stage5/program/closed_loop.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "4f7e5e16e1cc5d105a298811627989cd064819f8790dadb0429920374739db31"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK25",
+      "column": "stage5_source_code",
+      "path": "stage5/program/resonance_research.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "00d96cc67a88674de6c25490164acad1cfbfc70a2a987c6808cab92331f2fa6b"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK25",
+      "column": "stage5_source_code",
+      "path": "stage5/program/resonance_normalform_pair.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "72e700e7ad1bc521b4ad4119aff9f87e53eaf94158fc993e047d6835a0ff8a05"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK25",
+      "column": "stage5_source_code",
+      "path": "stage5/program/resonance_reduce_pair.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a00271f3ae31bf6c1f49cf4dedb494ff34bff1cf8a939e2de60cac754121e8e1"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK25",
+      "column": "stage5_source_code",
+      "path": "stage5/program/resonance_verify_partial_scope.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "b60af3ca1a6f2c8f9f85c8a71d5922abe6991db27a9201fe3c4a4a00809e815a"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK26",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK26",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK27",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK27",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK28",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK28",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK29",
+      "column": "stage5_source_code",
+      "path": "stage5/program/learning_models.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "28055b5406777df87a94e66f6ac0a42909b9b60efad0070f599e00616fe143a0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK29",
+      "column": "stage5_source_code",
+      "path": "stage5/program/learning_coil_reachability.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "240ffd6e3aaf4de42b50c55064e7d7c21d5a3887aebf221a34427efb2f8ebfd9"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "CK29",
+      "column": "stage5_source_code",
+      "path": "stage5/program/coil_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "1b01c4fcdf0e2808d178fa9fc7e1996b1ebb7440c05c81394cf07df6ec772797"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O001",
+      "column": "stage5_source_code",
+      "path": "stage5/program/coil_rom.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O001",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O001",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O002",
+      "column": "stage5_source_code",
+      "path": "stage5/program/coil_rom.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O002",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O002",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O003",
+      "column": "stage5_source_code",
+      "path": "stage5/program/coil_rom.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O003",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O003",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O004",
+      "column": "stage5_source_code",
+      "path": "stage5/program/coil_rom.py",
+      "anchor": "field_basis_tensor",
+      "line": 63,
+      "sha256": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O004",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": "current_power_port",
+      "line": 28,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O005",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "corrected_morison_transverse",
+      "line": 35,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O005",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O005",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O006",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "contact_penalty",
+      "line": 65,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O006",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O006",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O007",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O007",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O008",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "darboux_perpendicular",
+      "line": 85,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O008",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O008",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O009",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer_matched.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6a6df367b66233e79351a15d4f444ee3556115cc68fd626adc301da2b22ed5b0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O010",
+      "column": "stage5_source_code",
+      "path": "stage5/program/coil_rom.py",
+      "anchor": "hamiltonian_tensor",
+      "line": 115,
+      "sha256": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O010",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "mechanical_field",
+      "line": 129,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O010",
+      "column": "stage5_source_code",
+      "path": "stage5/program/learning_models.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "28055b5406777df87a94e66f6ac0a42909b9b60efad0070f599e00616fe143a0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O010",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_learning_research.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "ba705e9d21ac6f04483cfcd539edf43a50f35523e5dc913fd19f710a273f1bf8"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O011",
+      "column": "stage5_source_code",
+      "path": "stage5/program/coil_rom.py",
+      "anchor": "hamiltonian_tensor",
+      "line": 115,
+      "sha256": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O012",
+      "column": "stage5_source_code",
+      "path": "stage5/program/coil_rom.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O012",
+      "column": "stage5_source_code",
+      "path": "stage5/program/closed_loop.py",
+      "anchor": "energy_and_power",
+      "line": 74,
+      "sha256": "4f7e5e16e1cc5d105a298811627989cd064819f8790dadb0429920374739db31"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O012",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O012",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O013",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "canonical_J",
+      "line": 13,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O013",
+      "column": "stage5_source_code",
+      "path": "stage5/program/coil_rom.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O014",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "rayleigh_force_from_momentum_gradient",
+      "line": 119,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O015",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "wirtinger_real_energy",
+      "line": 102,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O015",
+      "column": "stage5_source_code",
+      "path": "stage5/program/learning_models.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "28055b5406777df87a94e66f6ac0a42909b9b60efad0070f599e00616fe143a0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O015",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_learning_research.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "ba705e9d21ac6f04483cfcd539edf43a50f35523e5dc913fd19f710a273f1bf8"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O016",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "complex_energy_rate_squared",
+      "line": 112,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O016",
+      "column": "stage5_source_code",
+      "path": "stage5/program/learning_models.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "28055b5406777df87a94e66f6ac0a42909b9b60efad0070f599e00616fe143a0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O016",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_learning_research.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "ba705e9d21ac6f04483cfcd539edf43a50f35523e5dc913fd19f710a273f1bf8"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O017",
+      "column": "stage5_source_code",
+      "path": "stage5/program/learning_models.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "28055b5406777df87a94e66f6ac0a42909b9b60efad0070f599e00616fe143a0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O017",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_learning_research.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "ba705e9d21ac6f04483cfcd539edf43a50f35523e5dc913fd19f710a273f1bf8"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O018",
+      "column": "stage5_source_code",
+      "path": "stage5/program/transport_native.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a77ad9df7fc789f3a1eb061616e7f42de596047ba8e9fd6e7dbe436179505e3f"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O018",
+      "column": "stage5_source_code",
+      "path": "stage5/program/transport_cache.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "52d8b9b90cb53fc613dd730c5fdac78e0a49a8a02d37652af020434e6e3cf635"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O018",
+      "column": "stage5_source_code",
+      "path": "stage5/program/moser_chart.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "869356bfa0997c2d5e5bc03878752822ad6da4ed74ac283f716acb72e9301fae"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O019",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "endpoint_gradient_jacobian",
+      "line": 228,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O019",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "reconstruct_flow_jacobian",
+      "line": 235,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O019",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "radial_generator_potential",
+      "line": 195,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O020",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "fixed_endpoint_rhs",
+      "line": 240,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O020",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "central_generator_coefficients",
+      "line": 265,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O021",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "original_endpoint_matrix",
+      "line": 171,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O021",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "endpoint_inverse",
+      "line": 186,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O022",
+      "column": "stage5_source_code",
+      "path": "stage5/program/transport_native.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a77ad9df7fc789f3a1eb061616e7f42de596047ba8e9fd6e7dbe436179505e3f"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O022",
+      "column": "stage5_source_code",
+      "path": "stage5/program/transport_cache.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "52d8b9b90cb53fc613dd730c5fdac78e0a49a8a02d37652af020434e6e3cf635"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O022",
+      "column": "stage5_source_code",
+      "path": "stage5/program/moser_chart.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "869356bfa0997c2d5e5bc03878752822ad6da4ed74ac283f716acb72e9301fae"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O022",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "fixed_endpoint_rhs",
+      "line": 240,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O023",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "gradient_integrability_defect",
+      "line": 152,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O024",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "midpoint_linear_mechanical_step",
+      "line": 248,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O024",
+      "column": "stage5_source_code",
+      "path": "stage5/program/closed_loop.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "4f7e5e16e1cc5d105a298811627989cd064819f8790dadb0429920374739db31"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O025",
+      "column": "stage5_source_code",
+      "path": "stage5/program/closed_loop.py",
+      "anchor": "step",
+      "line": 155,
+      "sha256": "4f7e5e16e1cc5d105a298811627989cd064819f8790dadb0429920374739db31"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O026",
+      "column": "stage5_source_code",
+      "path": "stage5/program/coil_rom.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O026",
+      "column": "stage5_source_code",
+      "path": "stage5/program/coil_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "1b01c4fcdf0e2808d178fa9fc7e1996b1ebb7440c05c81394cf07df6ec772797"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O026",
+      "column": "stage5_source_code",
+      "path": "stage5/program/closed_loop.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "4f7e5e16e1cc5d105a298811627989cd064819f8790dadb0429920374739db31"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O027",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "twoform_evaluation",
+      "line": 147,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O028",
+      "column": "stage5_source_code",
+      "path": "stage5/program/resonance_research.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "00d96cc67a88674de6c25490164acad1cfbfc70a2a987c6808cab92331f2fa6b"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O028",
+      "column": "stage5_source_code",
+      "path": "stage5/program/resonance_normalform_pair.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "72e700e7ad1bc521b4ad4119aff9f87e53eaf94158fc993e047d6835a0ff8a05"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O028",
+      "column": "stage5_source_code",
+      "path": "stage5/program/resonance_reduce_pair.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a00271f3ae31bf6c1f49cf4dedb494ff34bff1cf8a939e2de60cac754121e8e1"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "O028",
+      "column": "stage5_source_code",
+      "path": "stage5/program/resonance_verify_partial_scope.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "b60af3ca1a6f2c8f9f85c8a71d5922abe6991db27a9201fe3c4a4a00809e815a"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY01",
+      "column": "stage5_source_code",
+      "path": "stage5/program/coil_rom.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY01",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY01",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY02",
+      "column": "stage5_source_code",
+      "path": "stage5/program/coil_rom.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY02",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY02",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY03",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "darboux_perpendicular",
+      "line": 85,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY03",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY03",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY04",
+      "column": "stage5_source_code",
+      "path": "stage5/program/coil_rom.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY04",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY04",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY05",
+      "column": "stage5_source_code",
+      "path": "stage5/program/coil_rom.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY05",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY05",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY06",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "darboux_perpendicular",
+      "line": 85,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY06",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY06",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY07",
+      "column": "stage5_source_code",
+      "path": "stage5/program/coil_rom.py",
+      "anchor": "field_basis_tensor",
+      "line": 63,
+      "sha256": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY07",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": "current_power_port",
+      "line": 28,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY08",
+      "column": "stage5_source_code",
+      "path": "stage5/program/coil_rom.py",
+      "anchor": "field_basis_tensor",
+      "line": 63,
+      "sha256": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY08",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": "current_power_port",
+      "line": 28,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY09",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "corrected_morison_transverse",
+      "line": 35,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY09",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY09",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY10",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "corrected_morison_transverse",
+      "line": 35,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY10",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY10",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY11",
+      "column": "stage5_source_code",
+      "path": "stage5/program/coil_rom.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY11",
+      "column": "stage5_source_code",
+      "path": "stage5/program/closed_loop.py",
+      "anchor": "energy_and_power",
+      "line": 74,
+      "sha256": "4f7e5e16e1cc5d105a298811627989cd064819f8790dadb0429920374739db31"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY11",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY11",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY12",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "contact_penalty",
+      "line": 65,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY12",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY12",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY13",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "contact_penalty",
+      "line": 65,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY13",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY13",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY14",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY14",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY15",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY15",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY16",
+      "column": "stage5_source_code",
+      "path": "stage5/program/coil_rom.py",
+      "anchor": "hamiltonian_tensor",
+      "line": 115,
+      "sha256": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY16",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "mechanical_field",
+      "line": 129,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY16",
+      "column": "stage5_source_code",
+      "path": "stage5/program/learning_models.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "28055b5406777df87a94e66f6ac0a42909b9b60efad0070f599e00616fe143a0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY16",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_learning_research.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "ba705e9d21ac6f04483cfcd539edf43a50f35523e5dc913fd19f710a273f1bf8"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY17",
+      "column": "stage5_source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "rayleigh_force_from_momentum_gradient",
+      "line": 119,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY17",
+      "column": "stage5_source_code",
+      "path": "stage5/program/coil_rom.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY18",
+      "column": "stage5_source_code",
+      "path": "stage5/program/coil_rom.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY19",
+      "column": "stage5_source_code",
+      "path": "stage5/program/coil_rom.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY19",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_coil_closed_loop.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "9e12d211750123643c9800fa9c0b100073aad3450f21211fecc251e5a42e5706"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY20",
+      "column": "stage5_source_code",
+      "path": "stage5/program/coil_rom.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY20",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_coil_validation.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "8aec37ba0d3f3b804425669397c8022c0d8d2b1df4c53c5580d34a14eb4c7b47"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY21",
+      "column": "stage5_source_code",
+      "path": "stage5/program/coil_rom.py",
+      "anchor": "current_port",
+      "line": 112,
+      "sha256": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY21",
+      "column": "stage5_source_code",
+      "path": "stage5/program/coil_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "1b01c4fcdf0e2808d178fa9fc7e1996b1ebb7440c05c81394cf07df6ec772797"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY22",
+      "column": "stage5_source_code",
+      "path": "stage5/program/coil_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "1b01c4fcdf0e2808d178fa9fc7e1996b1ebb7440c05c81394cf07df6ec772797"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY22",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY22",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY23",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY23",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY23",
+      "column": "stage5_source_code",
+      "path": "stage5/program/coil_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "1b01c4fcdf0e2808d178fa9fc7e1996b1ebb7440c05c81394cf07df6ec772797"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY24",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY24",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY25",
+      "column": "stage5_source_code",
+      "path": "stage5/program/learning_models.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "28055b5406777df87a94e66f6ac0a42909b9b60efad0070f599e00616fe143a0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY25",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_learning_research.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "ba705e9d21ac6f04483cfcd539edf43a50f35523e5dc913fd19f710a273f1bf8"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY25",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY25",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY26",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY26",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY27",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY27",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY27",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_analysis.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "228ad9919355a2e297ce50248da04c3d6e60c4cd9d0e9a390397ae64bfee1e39"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY28",
+      "column": "stage5_source_code",
+      "path": "stage5/program/rod_transfer_control.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY28",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6bb2145209f73d8ee97b09dd8e8d8e0cbe2b9c91c9b4c0048538b26f6feb9b51"
+    },
+    {
+      "table": "inheritance_update",
+      "id": "PHY28",
+      "column": "stage5_source_code",
+      "path": "stage5/program/run_rod_transfer_matched.py",
+      "anchor": null,
+      "line": 1,
+      "sha256": "6a6df367b66233e79351a15d4f444ee3556115cc68fd626adc301da2b22ed5b0"
+    },
+    {
+      "table": "repair_status",
+      "id": "E01",
+      "column": "source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "corrected_morison_transverse",
+      "line": 35,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "repair_status",
+      "id": "E01",
+      "column": "tests",
+      "path": "stage5/tests/test_corrected_identities.py",
+      "anchor": "test_E01_morison_dimensions_relative_power_and_fluid_supply",
+      "line": 19,
+      "sha256": "adc6398f93ba5d59528ab3ee2a6c8fa84ca0fbbbe5bc9f333da636cc60722c49"
+    },
+    {
+      "table": "repair_status",
+      "id": "E02",
+      "column": "source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "contact_penalty",
+      "line": 65,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "repair_status",
+      "id": "E02",
+      "column": "source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "regularized_friction",
+      "line": 78,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "repair_status",
+      "id": "E02",
+      "column": "tests",
+      "path": "stage5/tests/test_corrected_identities.py",
+      "anchor": "test_E02_real_penetration_energy_gradient_and_friction_power",
+      "line": 32,
+      "sha256": "adc6398f93ba5d59528ab3ee2a6c8fa84ca0fbbbe5bc9f333da636cc60722c49"
+    },
+    {
+      "table": "repair_status",
+      "id": "E03",
+      "column": "source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "darboux_perpendicular",
+      "line": 85,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "repair_status",
+      "id": "E03",
+      "column": "tests",
+      "path": "stage5/tests/test_corrected_identities.py",
+      "anchor": "test_E03_director_sign_and_independent_torsion",
+      "line": 44,
+      "sha256": "adc6398f93ba5d59528ab3ee2a6c8fa84ca0fbbbe5bc9f333da636cc60722c49"
+    },
+    {
+      "table": "repair_status",
+      "id": "E04",
+      "column": "source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "complex_coordinates",
+      "line": 97,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "repair_status",
+      "id": "E04",
+      "column": "source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "wirtinger_real_energy",
+      "line": 102,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "repair_status",
+      "id": "E04",
+      "column": "source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "complex_hamiltonian_rhs",
+      "line": 107,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "repair_status",
+      "id": "E04",
+      "column": "tests",
+      "path": "stage5/tests/test_corrected_identities.py",
+      "anchor": "test_E04_scaled_complex_chain_rule_including_force",
+      "line": 54,
+      "sha256": "adc6398f93ba5d59528ab3ee2a6c8fa84ca0fbbbe5bc9f333da636cc60722c49"
+    },
+    {
+      "table": "repair_status",
+      "id": "E05",
+      "column": "source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "complex_energy_rate_squared",
+      "line": 112,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "repair_status",
+      "id": "E05",
+      "column": "source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "complex_hamiltonian_rhs",
+      "line": 107,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "repair_status",
+      "id": "E05",
+      "column": "tests",
+      "path": "stage5/tests/test_corrected_identities.py",
+      "anchor": "test_E05_power_loss_and_conjugate_gradient",
+      "line": 61,
+      "sha256": "adc6398f93ba5d59528ab3ee2a6c8fa84ca0fbbbe5bc9f333da636cc60722c49"
+    },
+    {
+      "table": "repair_status",
+      "id": "E06",
+      "column": "source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "gradient_integrability_defect",
+      "line": 152,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "repair_status",
+      "id": "E06",
+      "column": "source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "birkhoff_field",
+      "line": 157,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "repair_status",
+      "id": "E06",
+      "column": "tests",
+      "path": "stage5/tests/test_corrected_identities.py",
+      "anchor": "test_E06_original_pfaff_cross_partial_incompatibility",
+      "line": 71,
+      "sha256": "adc6398f93ba5d59528ab3ee2a6c8fa84ca0fbbbe5bc9f333da636cc60722c49"
+    },
+    {
+      "table": "repair_status",
+      "id": "E07",
+      "column": "source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "endpoint_gradient_jacobian",
+      "line": 228,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "repair_status",
+      "id": "E07",
+      "column": "source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "reconstruct_flow_jacobian",
+      "line": 235,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "repair_status",
+      "id": "E07",
+      "column": "source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "radial_generator_potential",
+      "line": 195,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "repair_status",
+      "id": "E07",
+      "column": "tests",
+      "path": "stage5/tests/test_corrected_identities.py",
+      "anchor": "test_E07_endpoint_compatibility_transversality_not_Hessian_inverse",
+      "line": 80,
+      "sha256": "adc6398f93ba5d59528ab3ee2a6c8fa84ca0fbbbe5bc9f333da636cc60722c49"
+    },
+    {
+      "table": "repair_status",
+      "id": "E07",
+      "column": "tests",
+      "path": "stage5/tests/test_corrected_identities.py",
+      "anchor": "test_nonzero_initial_generator_gauge_and_endpoint_compatibility",
+      "line": 194,
+      "sha256": "adc6398f93ba5d59528ab3ee2a6c8fa84ca0fbbbe5bc9f333da636cc60722c49"
+    },
+    {
+      "table": "repair_status",
+      "id": "E08",
+      "column": "source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "central_generator_coefficients",
+      "line": 265,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "repair_status",
+      "id": "E08",
+      "column": "tests",
+      "path": "stage5/tests/test_corrected_identities.py",
+      "anchor": "test_E08_fixed_coordinate_generator_recurrence",
+      "line": 93,
+      "sha256": "adc6398f93ba5d59528ab3ee2a6c8fa84ca0fbbbe5bc9f333da636cc60722c49"
+    },
+    {
+      "table": "repair_status",
+      "id": "E09",
+      "column": "source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "fixed_endpoint_rhs",
+      "line": 240,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "repair_status",
+      "id": "E09",
+      "column": "source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "original_endpoint_matrix",
+      "line": 171,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "repair_status",
+      "id": "E09",
+      "column": "tests",
+      "path": "stage5/tests/test_corrected_identities.py",
+      "anchor": "test_E09_fixed_w_chain_rule_and_original32_blocks",
+      "line": 104,
+      "sha256": "adc6398f93ba5d59528ab3ee2a6c8fa84ca0fbbbe5bc9f333da636cc60722c49"
+    },
+    {
+      "table": "repair_status",
+      "id": "E10",
+      "column": "source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "gradient_integrability_defect",
+      "line": 152,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "repair_status",
+      "id": "E10",
+      "column": "tests",
+      "path": "stage5/tests/test_corrected_identities.py",
+      "anchor": "test_E10_damping_sign_does_not_restore_scalar_gradient",
+      "line": 119,
+      "sha256": "adc6398f93ba5d59528ab3ee2a6c8fa84ca0fbbbe5bc9f333da636cc60722c49"
+    },
+    {
+      "table": "repair_status",
+      "id": "E11",
+      "column": "source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "midpoint_linear_mechanical_step",
+      "line": 248,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "repair_status",
+      "id": "E11",
+      "column": "source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "mechanical_field",
+      "line": 129,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "repair_status",
+      "id": "E11",
+      "column": "tests",
+      "path": "stage5/tests/test_corrected_identities.py",
+      "anchor": "test_E11_noncommuting_original36_matches_full_midpoint",
+      "line": 126,
+      "sha256": "adc6398f93ba5d59528ab3ee2a6c8fa84ca0fbbbe5bc9f333da636cc60722c49"
+    },
+    {
+      "table": "repair_status",
+      "id": "E12",
+      "column": "source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "twoform_from_oneform_jacobian",
+      "line": 142,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "repair_status",
+      "id": "E12",
+      "column": "source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "twoform_evaluation",
+      "line": 147,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "repair_status",
+      "id": "E12",
+      "column": "tests",
+      "path": "stage5/tests/test_corrected_identities.py",
+      "anchor": "test_E12_twoform_half_double_sum",
+      "line": 140,
+      "sha256": "adc6398f93ba5d59528ab3ee2a6c8fa84ca0fbbbe5bc9f333da636cc60722c49"
+    },
+    {
+      "table": "repair_status",
+      "id": "E13",
+      "column": "source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "birkhoff_field_from_negative_D",
+      "line": 161,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "repair_status",
+      "id": "E13",
+      "column": "source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "time_compatibility_defect",
+      "line": 166,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "repair_status",
+      "id": "E13",
+      "column": "tests",
+      "path": "stage5/tests/test_corrected_identities.py",
+      "anchor": "test_E13_negative_D_and_time_compatibility",
+      "line": 148,
+      "sha256": "adc6398f93ba5d59528ab3ee2a6c8fa84ca0fbbbe5bc9f333da636cc60722c49"
+    },
+    {
+      "table": "repair_status",
+      "id": "E14",
+      "column": "source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "transported_volume_ratio",
+      "line": 294,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "repair_status",
+      "id": "E14",
+      "column": "tests",
+      "path": "stage5/tests/test_corrected_identities.py",
+      "anchor": "test_E14_transport_volume_not_Euclidean_volume",
+      "line": 158,
+      "sha256": "adc6398f93ba5d59528ab3ee2a6c8fa84ca0fbbbe5bc9f333da636cc60722c49"
+    },
+    {
+      "table": "repair_status",
+      "id": "E15",
+      "column": "source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "torus_primitive_periods",
+      "line": 303,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "repair_status",
+      "id": "E15",
+      "column": "tests",
+      "path": "stage5/tests/test_corrected_identities.py",
+      "anchor": "test_E15_torus_closed_primitive_has_nonzero_period",
+      "line": 166,
+      "sha256": "adc6398f93ba5d59528ab3ee2a6c8fa84ca0fbbbe5bc9f333da636cc60722c49"
+    },
+    {
+      "table": "repair_status",
+      "id": "E16",
+      "column": "source_code",
+      "path": "stage5/program/corrected_identities.py",
+      "anchor": "rayleigh_force_from_momentum_gradient",
+      "line": 119,
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7"
+    },
+    {
+      "table": "repair_status",
+      "id": "E16",
+      "column": "tests",
+      "path": "stage5/tests/test_corrected_identities.py",
+      "anchor": "test_E16_Rayleigh_mass_chain_rule_and_velocity_dependent_coefficient",
+      "line": 174,
+      "sha256": "adc6398f93ba5d59528ab3ee2a6c8fa84ca0fbbbe5bc9f333da636cc60722c49"
+    }
+  ],
+  "scope": "Actual file/function/test line positions at export; no inference of research completion."
+}

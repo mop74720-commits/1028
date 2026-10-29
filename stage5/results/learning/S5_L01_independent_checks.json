@@ -1,0 +1,728 @@
+{
+  "experiment": "S5-L01-independent-checks",
+  "status": "executed_pass",
+  "label_recomputation": {
+    "energy_max_abs_difference": 0.0,
+    "gradient_max_abs_difference": 0.0,
+    "coordinate_dimension": 24,
+    "physical_model": "same12DOF20cell geometric ROM, original ideal axial bias"
+  },
+  "source_hash_matches": {
+    "stage5/program/run_learning_research.py": true,
+    "stage5/program/learning_models.py": true,
+    "stage3/source_inputs/starter/stage2/program/learning/rod_rom.py": true,
+    "stage3/source_inputs/starter/stage2/program/learning/run_learning.py": true,
+    "stage3/source_inputs/starter/stage2/program/learning/train_spd_complex.py": true
+  },
+  "checkpoint_hash_matches": {
+    "stage5/results/learning/S5_L01_analytic_mechanical4_seed51001.pt": true,
+    "stage5/results/learning/S5_L01_analytic_mechanical4_seed51002.pt": true,
+    "stage5/results/learning/S5_L01_analytic_mechanical4_seed51003.pt": true,
+    "stage5/results/learning/S5_L01_complex_hidden_seed51001.pt": true,
+    "stage5/results/learning/S5_L01_complex_hidden_seed51002.pt": true,
+    "stage5/results/learning/S5_L01_complex_hidden_seed51003.pt": true,
+    "stage5/results/learning/S5_L01_spd_complex_seed51001.pt": true,
+    "stage5/results/learning/S5_L01_spd_complex_seed51002.pt": true,
+    "stage5/results/learning/S5_L01_spd_complex_seed51003.pt": true
+  },
+  "config_sha256": "500006a75ab5f3ba951c2f7912e6e27dc97418faf1b0a9149258318ca6b81c5b",
+  "inverse_diagnostics": [
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51001,
+      "split": "test",
+      "solver_success_flag_count": 5,
+      "residual_below_1e8_count": 8,
+      "largest_equation_residual": 3.924035379030691e-15,
+      "note": "Residual convergence and scipy success flag are distinct. A non-success progress flag at machine residual is not loss of mathematical invertibility; physical momentum error remains a separate quantity."
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51001,
+      "split": "OOD",
+      "solver_success_flag_count": 5,
+      "residual_below_1e8_count": 8,
+      "largest_equation_residual": 4.139871054184098e-15,
+      "note": "Residual convergence and scipy success flag are distinct. A non-success progress flag at machine residual is not loss of mathematical invertibility; physical momentum error remains a separate quantity."
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51002,
+      "split": "test",
+      "solver_success_flag_count": 4,
+      "residual_below_1e8_count": 8,
+      "largest_equation_residual": 5.595632850485216e-15,
+      "note": "Residual convergence and scipy success flag are distinct. A non-success progress flag at machine residual is not loss of mathematical invertibility; physical momentum error remains a separate quantity."
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51002,
+      "split": "OOD",
+      "solver_success_flag_count": 3,
+      "residual_below_1e8_count": 8,
+      "largest_equation_residual": 3.691595899673213e-15,
+      "note": "Residual convergence and scipy success flag are distinct. A non-success progress flag at machine residual is not loss of mathematical invertibility; physical momentum error remains a separate quantity."
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51003,
+      "split": "test",
+      "solver_success_flag_count": 5,
+      "residual_below_1e8_count": 8,
+      "largest_equation_residual": 2.1503597502515598e-14,
+      "note": "Residual convergence and scipy success flag are distinct. A non-success progress flag at machine residual is not loss of mathematical invertibility; physical momentum error remains a separate quantity."
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51003,
+      "split": "OOD",
+      "solver_success_flag_count": 4,
+      "residual_below_1e8_count": 8,
+      "largest_equation_residual": 4.0780291272457946e-15,
+      "note": "Residual convergence and scipy success flag are distinct. A non-success progress flag at machine residual is not loss of mathematical invertibility; physical momentum error remains a separate quantity."
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51001,
+      "split": "test",
+      "solver_success_flag_count": 4,
+      "residual_below_1e8_count": 4,
+      "largest_equation_residual": 0.018809482080343772,
+      "note": "Residual convergence and scipy success flag are distinct. A non-success progress flag at machine residual is not loss of mathematical invertibility; physical momentum error remains a separate quantity."
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51001,
+      "split": "OOD",
+      "solver_success_flag_count": 3,
+      "residual_below_1e8_count": 3,
+      "largest_equation_residual": 0.20355949087677983,
+      "note": "Residual convergence and scipy success flag are distinct. A non-success progress flag at machine residual is not loss of mathematical invertibility; physical momentum error remains a separate quantity."
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51002,
+      "split": "test",
+      "solver_success_flag_count": 6,
+      "residual_below_1e8_count": 6,
+      "largest_equation_residual": 0.025327645247678807,
+      "note": "Residual convergence and scipy success flag are distinct. A non-success progress flag at machine residual is not loss of mathematical invertibility; physical momentum error remains a separate quantity."
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51002,
+      "split": "OOD",
+      "solver_success_flag_count": 4,
+      "residual_below_1e8_count": 4,
+      "largest_equation_residual": 0.05628801750114587,
+      "note": "Residual convergence and scipy success flag are distinct. A non-success progress flag at machine residual is not loss of mathematical invertibility; physical momentum error remains a separate quantity."
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51003,
+      "split": "test",
+      "solver_success_flag_count": 5,
+      "residual_below_1e8_count": 5,
+      "largest_equation_residual": 0.04341031705061843,
+      "note": "Residual convergence and scipy success flag are distinct. A non-success progress flag at machine residual is not loss of mathematical invertibility; physical momentum error remains a separate quantity."
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51003,
+      "split": "OOD",
+      "solver_success_flag_count": 6,
+      "residual_below_1e8_count": 6,
+      "largest_equation_residual": 0.5213171224366808,
+      "note": "Residual convergence and scipy success flag are distinct. A non-success progress flag at machine residual is not loss of mathematical invertibility; physical momentum error remains a separate quantity."
+    },
+    {
+      "kind": "spd_complex",
+      "seed": 51001,
+      "split": "test",
+      "solver_success_flag_count": 3,
+      "residual_below_1e8_count": 8,
+      "largest_equation_residual": 4.621532547029659e-16,
+      "note": "Residual convergence and scipy success flag are distinct. A non-success progress flag at machine residual is not loss of mathematical invertibility; physical momentum error remains a separate quantity."
+    },
+    {
+      "kind": "spd_complex",
+      "seed": 51001,
+      "split": "OOD",
+      "solver_success_flag_count": 1,
+      "residual_below_1e8_count": 8,
+      "largest_equation_residual": 1.803501822466652e-15,
+      "note": "Residual convergence and scipy success flag are distinct. A non-success progress flag at machine residual is not loss of mathematical invertibility; physical momentum error remains a separate quantity."
+    },
+    {
+      "kind": "spd_complex",
+      "seed": 51002,
+      "split": "test",
+      "solver_success_flag_count": 4,
+      "residual_below_1e8_count": 8,
+      "largest_equation_residual": 4.602872265713534e-16,
+      "note": "Residual convergence and scipy success flag are distinct. A non-success progress flag at machine residual is not loss of mathematical invertibility; physical momentum error remains a separate quantity."
+    },
+    {
+      "kind": "spd_complex",
+      "seed": 51002,
+      "split": "OOD",
+      "solver_success_flag_count": 4,
+      "residual_below_1e8_count": 8,
+      "largest_equation_residual": 8.903441835098303e-16,
+      "note": "Residual convergence and scipy success flag are distinct. A non-success progress flag at machine residual is not loss of mathematical invertibility; physical momentum error remains a separate quantity."
+    },
+    {
+      "kind": "spd_complex",
+      "seed": 51003,
+      "split": "test",
+      "solver_success_flag_count": 3,
+      "residual_below_1e8_count": 8,
+      "largest_equation_residual": 4.485258295275749e-16,
+      "note": "Residual convergence and scipy success flag are distinct. A non-success progress flag at machine residual is not loss of mathematical invertibility; physical momentum error remains a separate quantity."
+    },
+    {
+      "kind": "spd_complex",
+      "seed": 51003,
+      "split": "OOD",
+      "solver_success_flag_count": 2,
+      "residual_below_1e8_count": 8,
+      "largest_equation_residual": 7.189126077893384e-16,
+      "note": "Residual convergence and scipy success flag are distinct. A non-success progress flag at machine residual is not loss of mathematical invertibility; physical momentum error remains a separate quantity."
+    }
+  ],
+  "negative_Hpp_examples": [
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51001,
+      "split": "test",
+      "index": 73,
+      "Hpp_minimum_eigenvalue": -7.168086986008057,
+      "independent_energy_second_difference": -7.1679565729539325,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51001,
+      "split": "test",
+      "index": 146,
+      "Hpp_minimum_eigenvalue": -3.3154491671866264,
+      "independent_energy_second_difference": -3.315492731126082,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51001,
+      "split": "test",
+      "index": 219,
+      "Hpp_minimum_eigenvalue": -0.22919472091769827,
+      "independent_energy_second_difference": -0.22918846606860957,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51001,
+      "split": "test",
+      "index": 292,
+      "Hpp_minimum_eigenvalue": -0.9565040238016865,
+      "independent_energy_second_difference": -0.9564898533249115,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51001,
+      "split": "OOD",
+      "index": 36,
+      "Hpp_minimum_eigenvalue": -134.67395389926696,
+      "independent_energy_second_difference": -134.67591412161602,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51001,
+      "split": "OOD",
+      "index": 72,
+      "Hpp_minimum_eigenvalue": -6.651130129442362,
+      "independent_energy_second_difference": -6.651032933068699,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51001,
+      "split": "OOD",
+      "index": 108,
+      "Hpp_minimum_eigenvalue": -96.58175651524621,
+      "independent_energy_second_difference": -96.58480216183075,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51001,
+      "split": "OOD",
+      "index": 144,
+      "Hpp_minimum_eigenvalue": -5.836203187823908,
+      "independent_energy_second_difference": -5.836382547227602,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51001,
+      "split": "OOD",
+      "index": 180,
+      "Hpp_minimum_eigenvalue": -35.78413690313359,
+      "independent_energy_second_difference": -35.78469993850407,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51001,
+      "split": "OOD",
+      "index": 216,
+      "Hpp_minimum_eigenvalue": -29.88792484337244,
+      "independent_energy_second_difference": -29.88788245175537,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51001,
+      "split": "OOD",
+      "index": 255,
+      "Hpp_minimum_eigenvalue": -3.815006389443467,
+      "independent_energy_second_difference": -3.815152177783851,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51002,
+      "split": "test",
+      "index": 73,
+      "Hpp_minimum_eigenvalue": -5.458402529373005,
+      "independent_energy_second_difference": -5.458174278700169,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51002,
+      "split": "test",
+      "index": 146,
+      "Hpp_minimum_eigenvalue": -4.267301651888827,
+      "independent_energy_second_difference": -4.2672842468334045,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51002,
+      "split": "test",
+      "index": 219,
+      "Hpp_minimum_eigenvalue": -0.09652250766170492,
+      "independent_energy_second_difference": -0.09652628875280314,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51002,
+      "split": "test",
+      "index": 292,
+      "Hpp_minimum_eigenvalue": -0.891235903332065,
+      "independent_energy_second_difference": -0.8912499338008005,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51002,
+      "split": "OOD",
+      "index": 36,
+      "Hpp_minimum_eigenvalue": -118.37331829695924,
+      "independent_energy_second_difference": -118.37964487687178,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51002,
+      "split": "OOD",
+      "index": 72,
+      "Hpp_minimum_eigenvalue": -5.964665942825162,
+      "independent_energy_second_difference": -5.964477619805972,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51002,
+      "split": "OOD",
+      "index": 108,
+      "Hpp_minimum_eigenvalue": -105.21457566036578,
+      "independent_energy_second_difference": -105.21483283100369,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51002,
+      "split": "OOD",
+      "index": 144,
+      "Hpp_minimum_eigenvalue": -4.321543099035951,
+      "independent_energy_second_difference": -4.321573631862124,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51002,
+      "split": "OOD",
+      "index": 180,
+      "Hpp_minimum_eigenvalue": -33.35450853384814,
+      "independent_energy_second_difference": -33.35538576327553,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51002,
+      "split": "OOD",
+      "index": 216,
+      "Hpp_minimum_eigenvalue": -30.9985739671348,
+      "independent_energy_second_difference": -30.998747378320427,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51002,
+      "split": "OOD",
+      "index": 255,
+      "Hpp_minimum_eigenvalue": -3.972645900105096,
+      "independent_energy_second_difference": -3.9725346254807548,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51003,
+      "split": "test",
+      "index": 73,
+      "Hpp_minimum_eigenvalue": -5.556806803788711,
+      "independent_energy_second_difference": -5.556765616900789,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51003,
+      "split": "test",
+      "index": 146,
+      "Hpp_minimum_eigenvalue": -5.120521800068414,
+      "independent_energy_second_difference": -5.120511730191604,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51003,
+      "split": "test",
+      "index": 219,
+      "Hpp_minimum_eigenvalue": -0.038880411549709386,
+      "independent_energy_second_difference": -0.03887079523110586,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51003,
+      "split": "test",
+      "index": 292,
+      "Hpp_minimum_eigenvalue": -0.6891931201055704,
+      "independent_energy_second_difference": -0.6892230782276394,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51003,
+      "split": "OOD",
+      "index": 36,
+      "Hpp_minimum_eigenvalue": -113.87691204905009,
+      "independent_energy_second_difference": -113.88329114130384,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51003,
+      "split": "OOD",
+      "index": 72,
+      "Hpp_minimum_eigenvalue": -5.466533255049988,
+      "independent_energy_second_difference": -5.466270217099661,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51003,
+      "split": "OOD",
+      "index": 108,
+      "Hpp_minimum_eigenvalue": -99.46130619286964,
+      "independent_energy_second_difference": -99.46471512838103,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51003,
+      "split": "OOD",
+      "index": 144,
+      "Hpp_minimum_eigenvalue": -4.359996729463465,
+      "independent_energy_second_difference": -4.359983233101514,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51003,
+      "split": "OOD",
+      "index": 180,
+      "Hpp_minimum_eigenvalue": -36.594992139128685,
+      "independent_energy_second_difference": -36.59524444620402,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51003,
+      "split": "OOD",
+      "index": 216,
+      "Hpp_minimum_eigenvalue": -24.970576285178648,
+      "independent_energy_second_difference": -24.97058838436649,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51003,
+      "split": "OOD",
+      "index": 255,
+      "Hpp_minimum_eigenvalue": -4.085706655851151,
+      "independent_energy_second_difference": -4.085364217730761,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51001,
+      "split": "test",
+      "index": 146,
+      "Hpp_minimum_eigenvalue": -0.06928940055066826,
+      "independent_energy_second_difference": -0.06927541351639302,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51001,
+      "split": "test",
+      "index": 219,
+      "Hpp_minimum_eigenvalue": -0.005345391037829599,
+      "independent_energy_second_difference": -0.005329073080661147,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51001,
+      "split": "OOD",
+      "index": 36,
+      "Hpp_minimum_eigenvalue": -14.44214499482546,
+      "independent_energy_second_difference": -14.44364420275489,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51001,
+      "split": "OOD",
+      "index": 72,
+      "Hpp_minimum_eigenvalue": -1.8607010052669586,
+      "independent_energy_second_difference": -1.8606182216797325,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51001,
+      "split": "OOD",
+      "index": 180,
+      "Hpp_minimum_eigenvalue": -2.310401640480735,
+      "independent_energy_second_difference": -2.310509135298769,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51001,
+      "split": "OOD",
+      "index": 216,
+      "Hpp_minimum_eigenvalue": -0.04363107804466792,
+      "independent_energy_second_difference": -0.04369016991826377,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51001,
+      "split": "OOD",
+      "index": 255,
+      "Hpp_minimum_eigenvalue": -2.6212660506861205,
+      "independent_energy_second_difference": -2.6209782821921483,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51002,
+      "split": "test",
+      "index": 365,
+      "Hpp_minimum_eigenvalue": -0.21956922977993207,
+      "independent_energy_second_difference": -0.2195564394831123,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51002,
+      "split": "test",
+      "index": 438,
+      "Hpp_minimum_eigenvalue": -0.7954794337126726,
+      "independent_energy_second_difference": -0.7954812122862361,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51002,
+      "split": "OOD",
+      "index": 0,
+      "Hpp_minimum_eigenvalue": -1.189924839878729,
+      "independent_energy_second_difference": -1.189866164235791,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51002,
+      "split": "OOD",
+      "index": 36,
+      "Hpp_minimum_eigenvalue": -2.8984776619600883,
+      "independent_energy_second_difference": -2.8985242149314216,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51002,
+      "split": "OOD",
+      "index": 72,
+      "Hpp_minimum_eigenvalue": -0.08562377847564012,
+      "independent_energy_second_difference": -0.08562878492052495,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51002,
+      "split": "OOD",
+      "index": 144,
+      "Hpp_minimum_eigenvalue": -1.280874839653559,
+      "independent_energy_second_difference": -1.2808943990324253,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51002,
+      "split": "OOD",
+      "index": 180,
+      "Hpp_minimum_eigenvalue": -0.021591019565668976,
+      "independent_energy_second_difference": -0.021562391065992385,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51002,
+      "split": "OOD",
+      "index": 255,
+      "Hpp_minimum_eigenvalue": -2.579051246525446,
+      "independent_energy_second_difference": -2.579008019857104,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51003,
+      "split": "test",
+      "index": 0,
+      "Hpp_minimum_eigenvalue": -0.26261081836127376,
+      "independent_energy_second_difference": -0.26263639783395376,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51003,
+      "split": "test",
+      "index": 73,
+      "Hpp_minimum_eigenvalue": -0.20328656268433154,
+      "independent_energy_second_difference": -0.2032895462882345,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51003,
+      "split": "test",
+      "index": 365,
+      "Hpp_minimum_eigenvalue": -0.030966315748509315,
+      "independent_energy_second_difference": -0.03096856196639397,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51003,
+      "split": "test",
+      "index": 438,
+      "Hpp_minimum_eigenvalue": -0.7774234060875265,
+      "independent_energy_second_difference": -0.777383682857404,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51003,
+      "split": "OOD",
+      "index": 36,
+      "Hpp_minimum_eigenvalue": -9.197274170161853,
+      "independent_energy_second_difference": -9.198252837085082,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51003,
+      "split": "OOD",
+      "index": 72,
+      "Hpp_minimum_eigenvalue": -2.853867629232995,
+      "independent_energy_second_difference": -2.8538698918440084,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51003,
+      "split": "OOD",
+      "index": 108,
+      "Hpp_minimum_eigenvalue": -1.9620673587649518,
+      "independent_energy_second_difference": -1.9620577838475204,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51003,
+      "split": "OOD",
+      "index": 144,
+      "Hpp_minimum_eigenvalue": -0.3899637012670586,
+      "independent_energy_second_difference": -0.39002527955414823,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51003,
+      "split": "OOD",
+      "index": 180,
+      "Hpp_minimum_eigenvalue": -1.9706757825106198,
+      "independent_energy_second_difference": -1.970693068234774,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51003,
+      "split": "OOD",
+      "index": 216,
+      "Hpp_minimum_eigenvalue": -0.9423618039376561,
+      "independent_energy_second_difference": -0.9423714752045014,
+      "negative_sign_confirmed": true
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51003,
+      "split": "OOD",
+      "index": 255,
+      "Hpp_minimum_eigenvalue": -2.442751128190768,
+      "independent_energy_second_difference": -2.442554328086363,
+      "negative_sign_confirmed": true
+    }
+  ],
+  "all_negative_signs_confirmed": true,
+  "formal_SPD_scope": "For finite real L with positive exponential diagonal, H_PP=Dnu LL^T Dnu is SPD. Uniform conditioning/physical accuracy not inferred."
+}

@@ -1,0 +1,59 @@
+{
+  "experiment": "S5-R03",
+  "status": "executed",
+  "A": 0.0004112209869572539,
+  "B": 0.006602499239534154,
+  "computed_identity": "Z4_first_pair=A*(I0+I1)^2+B*(Q0*P1-Q1*P0)^2",
+  "coefficient_identity_max_defect": 1.22738624819263e-13,
+  "circular_coordinates": "xi_plus=(xi0-i*xi1)/sqrt2; xi_minus=(xi0+i*xi1)/sqrt2",
+  "circular_actions": "I_plus=(N+L)/2; I_minus=(N-L)/2; N=I0+I1",
+  "real_canonical_map": [
+    [
+      0.7071067811865475,
+      -0.0,
+      -0.0,
+      0.7071067811865475
+    ],
+    [
+      0.7071067811865475,
+      0.0,
+      -0.0,
+      -0.7071067811865475
+    ],
+    [
+      0.0,
+      -0.7071067811865475,
+      0.7071067811865475,
+      -0.0
+    ],
+    [
+      0.0,
+      0.7071067811865475,
+      0.7071067811865475,
+      0.0
+    ]
+  ],
+  "canonical_defect": 4.463374267214424e-16,
+  "formal_quartic_twist": [
+    [
+      0.014027440452982817,
+      -0.0123825565051538
+    ],
+    [
+      -0.0123825565051538,
+      0.014027440452982817
+    ]
+  ],
+  "twist_eigenvalues": [
+    0.0016448839478290173,
+    0.026409996958136617
+  ],
+  "twist_determinant": 4.344138005865203e-05,
+  "limitations": [
+    "Only the first-pair restriction of the fourth-order resonant normal form is evaluated.",
+    "No full12D twist or full normal form; no quantitative remainder/domain bounds.",
+    "The exact24D system need not leave the first-pair subspace invariant.",
+    "One global axial SO(2) symmetry does not yield four independent reductions.",
+    "Floating nonzero determinant is a numerical candidate, not an interval/KAM certificate."
+  ]
+}

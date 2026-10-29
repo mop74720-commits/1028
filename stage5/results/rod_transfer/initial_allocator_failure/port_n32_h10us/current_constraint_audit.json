@@ -1,0 +1,29 @@
+{
+  "sample_points": 387,
+  "centerline_stations": 43,
+  "tube_radius_m": 0.0033,
+  "z_interval_m": [
+    -0.001,
+    0.101
+  ],
+  "sampled_B_limit_T": 0.00475,
+  "sampled_G_frobenius_limit_T_per_m": 0.028499999999999998,
+  "desired_B_bound_T": 0.005,
+  "desired_G_bound_T_per_m": 0.03,
+  "sampled_point_to_exact_coil_circle_min_distance_m": 0.005866321764765968,
+  "continuous_tube_to_wire_conservative_distance_lower_bound_m": 0.0044871860547442055,
+  "geometry_distance_bound": "distance to exact circular wires; centerline Lipschitz bound covers z between stations and radius covers the tube",
+  "field_bound_scope": "finite sampling only, with 5 percent margin; not a continuous field/gradient certificate",
+  "excluded_ball": "The 0.12m ideal-affine sphere contains these coil conductors and is not a source-free domain for the full coil field.",
+  "actual_current_amplitude_max_A": 1.6761017919920962,
+  "actual_current_slew_max_A_per_s": 20.000000000000007,
+  "continuity_defect_A": 0.0,
+  "allocation_calls": 99,
+  "optimizer_nonconverged": 2,
+  "fallback_count": 1,
+  "maximum_sampled_constraint_violation": 8.549132513024915e-10,
+  "collocated_gain_A2_per_W": 95590.3224538941,
+  "law": "i_req=i_ff-kappa*y, y_j=F_j.v+tau_j.omega in W/A",
+  "instantaneous_dissipation_scope": "Only unconstrained zero-delay increment -kappa*y has guaranteed nonpositive power. Projection about nonzero nominal current and ramp delay may violate that incremental inequality.",
+  "continuous_constraint_scope": "Current segments connect feasible endpoints; convex field/gradient norms remain feasible at the fixed tube sample points, not everywhere in the moving lumen."
+}

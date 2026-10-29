@@ -1,0 +1,190 @@
+{
+  "status": "actual_new_allocator_map_recomputed_and_compared",
+  "command": [
+    "/workspace/1028-cloud/venvs/learning/bin/python",
+    "stage5/program/compare_sampled_versions.py",
+    "--new-output",
+    "stage5/results/closed_loop/sampled_warmfix/matched_initial_bias"
+  ],
+  "rows": [
+    {
+      "kind": "collocated",
+      "original_initial_state_and_protocol_identical": true,
+      "actual_fixed_total_bias_current_A": [
+        0.8852530495400104,
+        -1.228695819339872,
+        -0.7250601367549548,
+        -0.796103697740145,
+        -0.5688797115813509,
+        0.6475670120790167,
+        0.6980256464312167,
+        0.7809830505705962,
+        1.1490316192924095,
+        0.2890435974002692,
+        1.512480402413065,
+        -0.3281350083833579
+      ],
+      "bias_metadata": "For the matched run both model.bias_currents and model.bias_currents_tensor were set to these exact saved currents before evaluating either map; this is the old fixed local-bias fit, not the newly refitted rounding variant.",
+      "Jacobian_change_spectral_norm": 2.8712136314654795e-13,
+      "Jacobian_change_relative_frobenius": 3.392575528901596e-14,
+      "mechanical_block_change_spectral_norm": 2.670915597872001e-13,
+      "current_memory_block_change_spectral_norm": 0.0,
+      "actual_final_state_change_norm": 4.0657581468206416e-20,
+      "actual_final_current_change_norm_A": 1.1102230246251565e-16,
+      "old_rank": 28,
+      "new_rank": 28,
+      "old_condition": 1.272547239640942e+18,
+      "new_condition": 5.428704590164214e+18,
+      "old_mechanical_K0_defect": 0.003227490606142413,
+      "new_mechanical_K0_defect": 0.0032274906061177705,
+      "old_active_box_signature": {
+        "lower": [],
+        "upper": [],
+        "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+      },
+      "new_active_box_signature": {
+        "lower": [],
+        "upper": [],
+        "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+      },
+      "old_probe_signature_changes": 0,
+      "new_probe_signature_changes": 0,
+      "old_directional_checks": [
+        {
+          "epsilon_refinement_relative": 8.718533515131615e-11,
+          "matrix_direction_relative": 2.514735368904606e-10
+        },
+        {
+          "epsilon_refinement_relative": 2.6893347396703256e-10,
+          "matrix_direction_relative": 1.4046803553374162e-10
+        }
+      ],
+      "new_directional_checks": [
+        {
+          "epsilon_refinement_relative": 8.718533386653355e-11,
+          "matrix_direction_relative": 2.514735159630482e-10
+        },
+        {
+          "epsilon_refinement_relative": 2.689334717025654e-10,
+          "matrix_direction_relative": 1.4046808424360072e-10
+        }
+      ]
+    },
+    {
+      "kind": "damping_compensation",
+      "original_initial_state_and_protocol_identical": true,
+      "actual_fixed_total_bias_current_A": [
+        0.8852530495400104,
+        -1.228695819339872,
+        -0.7250601367549548,
+        -0.796103697740145,
+        -0.5688797115813509,
+        0.6475670120790167,
+        0.6980256464312167,
+        0.7809830505705962,
+        1.1490316192924095,
+        0.2890435974002692,
+        1.512480402413065,
+        -0.3281350083833579
+      ],
+      "bias_metadata": "For the matched run both model.bias_currents and model.bias_currents_tensor were set to these exact saved currents before evaluating either map; this is the old fixed local-bias fit, not the newly refitted rounding variant.",
+      "Jacobian_change_spectral_norm": 0.0001771123154292041,
+      "Jacobian_change_relative_frobenius": 2.662821707981755e-05,
+      "mechanical_block_change_spectral_norm": 3.90464802153839e-09,
+      "current_memory_block_change_spectral_norm": 0.0001771123151042512,
+      "actual_final_state_change_norm": 1.0384237305531073e-14,
+      "actual_final_current_change_norm_A": 1.646394037953515e-10,
+      "old_rank": 36,
+      "new_rank": 36,
+      "old_condition": 176866.33706910728,
+      "new_condition": 209183.68772734125,
+      "old_mechanical_K0_defect": 0.00010300832085830882,
+      "new_mechanical_K0_defect": 0.00010300832086892499,
+      "old_active_box_signature": {
+        "lower": [
+          0,
+          2,
+          9
+        ],
+        "upper": [
+          3,
+          4,
+          5,
+          7,
+          10
+        ],
+        "allocator_message": "Optimization terminated successfully"
+      },
+      "new_active_box_signature": {
+        "lower": [
+          0,
+          2,
+          9
+        ],
+        "upper": [
+          3,
+          4,
+          5,
+          7,
+          10
+        ],
+        "allocator_message": "Optimization terminated successfully"
+      },
+      "old_probe_signature_changes": 0,
+      "new_probe_signature_changes": 0,
+      "old_directional_checks": [
+        {
+          "epsilon_refinement_relative": 3.64995821820101e-09,
+          "matrix_direction_relative": 2.782077396082088e-08
+        },
+        {
+          "epsilon_refinement_relative": 7.205206137441785e-08,
+          "matrix_direction_relative": 7.594985591552041e-08
+        }
+      ],
+      "new_directional_checks": [
+        {
+          "epsilon_refinement_relative": 7.385913871748335e-08,
+          "matrix_direction_relative": 3.036713056719109e-07
+        },
+        {
+          "epsilon_refinement_relative": 1.3736990326209915e-08,
+          "matrix_direction_relative": 1.987651249599206e-06
+        }
+      ]
+    }
+  ],
+  "old_sources": {
+    "stage5/program/run_closed_loop_sampled.py": "0bad0afe7421d7d4d8918722a22d53bcefbf1336da82e78e408f1fb635ae7576",
+    "stage5/program/closed_loop_sampled.py": "43ddbe4eda6dc31049ec233571c60c7a8e5d35c0e0caf22fd432fbe6fd37e8f2",
+    "stage5/program/coil_control.py": "9df4995b57d982ce0558a0d0276d5da41308f5900bad1c4376e51b088a52214f",
+    "stage5/program/coil_rom.py": "53004846e9fbd219efc146dee46dd9ce9966a2d1b67c9a782bf577012d9e199e"
+  },
+  "new_sources": {
+    "stage5/program/run_closed_loop_sampled.py": "341960bfd46fbd90eef42fa609ab8b92359ae59d73f18cf88c4fa8dd5241af47",
+    "stage5/program/closed_loop_sampled.py": "43ddbe4eda6dc31049ec233571c60c7a8e5d35c0e0caf22fd432fbe6fd37e8f2",
+    "stage5/program/coil_control.py": "1b01c4fcdf0e2808d178fa9fc7e1996b1ebb7440c05c81394cf07df6ec772797",
+    "stage5/program/coil_rom.py": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc"
+  },
+  "old_exact_source_locations": {
+    "stage5/program/run_closed_loop_sampled.py": "stage5/results/closed_loop/source_before_sampled_output_option.py",
+    "stage5/program/closed_loop_sampled.py": "stage5/program/closed_loop_sampled.py",
+    "stage5/program/coil_control.py": "stage5/results/coil/source_before_force_warm_fix_coil_control.py",
+    "stage5/program/coil_rom.py": "stage5/results/coil/source_before_higher_ad_fix.py"
+  },
+  "implementation_changes": "Force-allocation warm start uses the feasible previous current; coil distance norm is algebraically rewritten to support high AD. The physical sampled-map protocol, constraints and tolerances are unchanged.",
+  "new_sources_unchanged_during_run": {
+    "stage5/program/run_closed_loop_sampled.py": true,
+    "stage5/program/closed_loop_sampled.py": true,
+    "stage5/program/coil_control.py": true,
+    "stage5/program/coil_rom.py": true
+  },
+  "result_sha256": {
+    "stage5/results/closed_loop/sampled_jacobian.json": "36088ff6422dd0e6b045bbb9814a716596e3cf58ec9f256604dbfac8782a1399",
+    "stage5/results/closed_loop/sampled_jacobians.npz": "dfdead8879310feef90563f7a8e68efc6f87635594654cce09b4ea02cfe075a3",
+    "stage5/results/closed_loop/sampled_warmfix/matched_initial_bias/sampled_jacobian.json": "6c272756ff8a5f23f78cb0a92b499dff866e95e03ff1efc787fe060b6d1e9281",
+    "stage5/results/closed_loop/sampled_warmfix/matched_initial_bias/sampled_jacobians.npz": "48932abdb88fed8737b57ed73117a0bac9b858ee439644dd032320c6235af0a6"
+  },
+  "active_signature_limit": "Old results retained only base signature and changed-probe count. The new result additionally saves all 72 coordinate probe signatures; full old/new per-probe signature comparison is unavailable.",
+  "interpretation": "Both Jacobians belong to the actual 36D sampled map including current memory, allocation and current ramps. Neither is declared a Hamiltonian/symplectic map. A finite-difference matrix is not a neighborhood smoothness proof. Condition numbers and relative-threshold numerical ranks use the reported scaled Q,P and current-in-A coordinates and depend on this coordinate scaling."
+}

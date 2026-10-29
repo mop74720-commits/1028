@@ -1,0 +1,722 @@
+{
+  "status": "actually_executed_pass",
+  "model": {
+    "model": "3D inextensible unshearable Kirchhoff strain Ritz; exact SO(3) frame updates and midpoint centerline embedding",
+    "q_dof": 12,
+    "phase_dimension": 24,
+    "quadrature_elements": 20,
+    "configuration": "four Legendre curvature coefficients in each of two bending axes and torsion by default; all are dynamical",
+    "mass": "configuration dependent; includes translational and rotary inertia from embedding Jacobians",
+    "E0_J": 3.6200000000000004e-07,
+    "omega0_rad_s": 4.457629408507532,
+    "omega_rad_s": [
+      4.457629408507532,
+      4.457629408507532,
+      27.694195720027146,
+      27.694195720027146,
+      79.78328659507957,
+      79.78328659507957,
+      356.9402366587693,
+      356.9402366587693,
+      370.43091613854864,
+      1118.611090690932,
+      1984.631631100378,
+      3899.8926690677044
+    ],
+    "nu": [
+      1.0,
+      1.0,
+      6.212763148765096,
+      6.212763148765096,
+      17.898142551467057,
+      17.898142551467057,
+      80.0740043525236,
+      80.0740043525236,
+      83.10042899294614,
+      250.94304352803,
+      445.22131591124275,
+      874.8804155017085
+    ],
+    "canonical_scaling_defect": 5.55251128130777e-21,
+    "mass0_condition": 1264760.7588499414,
+    "repeated_frequency_pairs": [
+      {
+        "i": 0,
+        "j": 1,
+        "relative_difference": 0.0
+      },
+      {
+        "i": 2,
+        "j": 3,
+        "relative_difference": 0.0
+      },
+      {
+        "i": 4,
+        "j": 5,
+        "relative_difference": 0.0
+      },
+      {
+        "i": 6,
+        "j": 7,
+        "relative_difference": 0.0
+      }
+    ],
+    "KAM_status": "Standard nonresonant elliptic KAM is not certified; circular isotropic rod with axial bias has paired bending frequencies.",
+    "relation_to_full_model": "Shares material, distal magnet and field interface with the Cosserat model; shear/stretch omitted in this analytical ROM; modal truncation and fluid/contact closure errors are not yet bounded.",
+    "time": "tau=omega0*t_seconds",
+    "coordinates": "z=(Q,P); q_physical=Sq Q; p_physical=Sp P",
+    "input": "12 total coil currents in A; no separate 8-field increment input or extra ideal bias",
+    "drag": "synthetic smooth gamma*P; not a blood/contact closure",
+    "derivatives": "double-precision automatic differentiation through full variable-mass SO(3) geometry",
+    "magnetism": "Full circular-coil Biot-Savart energy; no additional ideal bias",
+    "coil_config": {
+      "origin_m": [
+        0.0,
+        0.0,
+        0.1
+      ],
+      "centers_m": [
+        [
+          -0.014258091544161544,
+          0.028179296678682336,
+          0.03197328418765823
+        ],
+        [
+          -0.02823677355664579,
+          -0.04786085900246092,
+          0.15036886731560742
+        ],
+        [
+          -0.045691567848612266,
+          -0.018652962478301362,
+          0.15647430936557563
+        ],
+        [
+          -0.04514527606524731,
+          0.048274040871414105,
+          0.06455255965605347
+        ],
+        [
+          -0.05250918804532998,
+          0.0484943955231713,
+          0.07728263277440807
+        ],
+        [
+          -0.0613859164096309,
+          -0.011163250855872636,
+          0.14161911936692878
+        ],
+        [
+          -0.0671668545586991,
+          -0.0017953283979293688,
+          0.06667747841723036
+        ],
+        [
+          -0.064453232278896,
+          0.02259524567813345,
+          0.1309876704762954
+        ],
+        [
+          0.02328501712550232,
+          0.044097556051387404,
+          0.043980239845570486
+        ],
+        [
+          -0.057995959548040495,
+          0.010875668587236294,
+          0.05370541598758392
+        ],
+        [
+          0.015634413697846045,
+          -0.0715657961482294,
+          0.11609042976413864
+        ],
+        [
+          0.053878424569565875,
+          -0.04269688322911903,
+          0.12998485498415116
+        ]
+      ],
+      "normals": [
+        [
+          0.19010788725548727,
+          -0.3757239557157645,
+          0.9070228774978905
+        ],
+        [
+          0.37649031408861056,
+          0.6381447866994789,
+          -0.6715848975414321
+        ],
+        [
+          0.6092209046481636,
+          0.2487061663773515,
+          -0.7529907915410083
+        ],
+        [
+          0.6019370142032975,
+          -0.6436538782855215,
+          0.4726325379192871
+        ],
+        [
+          0.7001225072710664,
+          -0.6465919403089507,
+          0.30289822967455915
+        ],
+        [
+          0.8184788854617453,
+          0.1488433447449685,
+          -0.5549215915590505
+        ],
+        [
+          0.8955580607826548,
+          0.023937711972391584,
+          0.4443002877702619
+        ],
+        [
+          0.8593764303852801,
+          -0.3012699423751127,
+          -0.4131689396839387
+        ],
+        [
+          -0.3104668950066976,
+          -0.5879674140184987,
+          0.7469301353923936
+        ],
+        [
+          0.77327946064054,
+          -0.14500891449648393,
+          0.6172611201655479
+        ],
+        [
+          -0.20845884930461392,
+          0.9542106153097254,
+          -0.21453906352184832
+        ],
+        [
+          -0.7183789942608784,
+          0.5692917763882537,
+          -0.3997980664553487
+        ]
+      ],
+      "radius_m": 0.025,
+      "turns": 300,
+      "quadrature_points": 256,
+      "current_bound_A": 2.0,
+      "slew_bound_A_s": 20.0,
+      "status": "Engineering geometry and ratings; unbuilt and uncalibrated air-core coil benchmark"
+    },
+    "current_channels": 12,
+    "current_units": "A; total currents, not increments",
+    "bias_currents_A": [
+      0.8852530495400104,
+      -1.228695819339872,
+      -0.7250601367549548,
+      -0.796103697740145,
+      -0.5688797115813509,
+      0.6475670120790167,
+      0.6980256464312167,
+      0.7809830505705962,
+      1.1490316192924095,
+      0.2890435974002692,
+      1.512480402413065,
+      -0.3281350083833579
+    ],
+    "bias_origin_field_gradient_residual": [
+      3.253473849378942e-10,
+      -1.277110638222374e-08,
+      -1.8185624118573218e-08,
+      1.5314266256158393e-07,
+      1.8360020899443885e-08,
+      -1.8035595366130974e-07,
+      -3.7419132875582406e-07,
+      9.198263548754193e-08
+    ],
+    "bias_initialization": "Pre-energized fixed local axial-bias fit; not a zero-current startup",
+    "collocated_gain_dimensionless": 0.15425045617918903,
+    "collocated_gain_A2_per_W": 95590.3224538941,
+    "feedback_derivative": "Hamiltonian partial z derivative first; compose i(z) afterwards; total field Jacobian contains Di/Dz",
+    "magnetic_domain": "Away from ideal circular wires; physical_samples evaluates actual magnet quadrature points only",
+    "constraints": "Smooth feedback not automatically bounded; coil_control handles explicit constrained current ramps."
+  },
+  "energy_and_units": {
+    "total_moment_A_m2": 0.0007240000000000007,
+    "full_force_Q": [
+      -0.09086343212824033,
+      0.005661496016384493,
+      0.033055559829427233,
+      -0.0013143162952061471,
+      0.018506055598070503,
+      0.0002299022532957773,
+      0.0020095043020899594,
+      0.01046843305927142,
+      0.0013688550299215995,
+      0.0004638821106791672,
+      -2.432075637899718e-07,
+      -0.0001709841959270019
+    ],
+    "virtual_work_difference": 5.776511873702927e-16,
+    "energy_central_differences": [
+      {
+        "eps": 2e-06,
+        "difference": 2.9381700310172164e-10
+      },
+      {
+        "eps": 1e-06,
+        "difference": 7.299946101309183e-10
+      }
+    ],
+    "full_vs_affine_force_relative": 0.9852356634542025,
+    "analytic_B_difference_T": 4.444138993379706e-19,
+    "analytic_G_difference_T_per_m": 1.2231386637175826e-17,
+    "independent_stage2_basis_difference_T_per_A": 5.128069258974647e-19,
+    "maxwell_divergence_T_per_m": 8.998878031629687e-18,
+    "maxwell_curl_T_per_m": 1.2270179968253057e-17,
+    "axial_closed_form_relative_error": 3.008300762356232e-16
+  },
+  "wire_quadrature": [
+    {
+      "wire_points": 128,
+      "field_difference_T": 4.0912305139769224e-19,
+      "gradient_difference_T_per_m": 1.2006353538034267e-17,
+      "force_difference_Q": 5.695024868667558e-16
+    },
+    {
+      "wire_points": 256,
+      "field_difference_T": 4.444138993379706e-19,
+      "gradient_difference_T_per_m": 1.2231386637175826e-17,
+      "force_difference_Q": 0.0
+    },
+    {
+      "wire_points": 512,
+      "field_difference_T": 3.6081615157995947e-19,
+      "gradient_difference_T_per_m": 1.3462080712326861e-17,
+      "force_difference_Q": 4.652725154290875e-16
+    }
+  ],
+  "same_physical_q_spatial_quadrature": [
+    {
+      "elements": 20,
+      "magnetic_points": 1,
+      "common_force_Q": [
+        -0.09086343212824038,
+        0.0056614960163845485,
+        0.03305555982942726,
+        -0.0013143162952061749,
+        0.01850605559807053,
+        0.00022990225329569403,
+        0.0020095043020899594,
+        0.01046843305927131,
+        0.0013688550299215995,
+        0.0004638821106791685,
+        -2.4320756379235704e-07,
+        -0.00017098419592700346
+      ],
+      "difference_from_20": 1.6656303545676623e-16,
+      "full_vs_affine_relative": 0.985235663454203,
+      "rank_rcond": 1e-08,
+      "rank": 5,
+      "singular_values": [
+        1.138680200853094,
+        0.837962462414629,
+        0.46707748621103684,
+        0.3669183751927381,
+        0.00032578046109607806,
+        1.4422864806775333e-16,
+        8.179175115592437e-17,
+        4.7492811096346925e-17,
+        2.6287897199446786e-18,
+        1.3455467033409164e-18,
+        7.5225195289408795e-19,
+        2.2074511585428715e-19
+      ]
+    },
+    {
+      "elements": 40,
+      "magnetic_points": 2,
+      "common_force_Q": [
+        -0.09024289299266897,
+        0.004960068463674583,
+        0.030980286684908626,
+        -0.0008656316353114479,
+        0.01858127559799186,
+        0.0004811925955594265,
+        0.0026134780020790616,
+        0.005120786475297678,
+        0.0013239324447662168,
+        0.0004603079824540238,
+        1.583562864513645e-05,
+        -0.00017879372021438748
+      ],
+      "difference_from_20": 0.005866720498832545,
+      "full_vs_affine_relative": 0.9859787519912357,
+      "rank_rcond": 1e-08,
+      "rank": 7,
+      "singular_values": [
+        1.1336317838317642,
+        0.8347754913186817,
+        0.46906704636688407,
+        0.3691646378465859,
+        0.00032458311411153834,
+        2.158741352369777e-06,
+        8.257078117142992e-07,
+        1.2528996028780305e-16,
+        4.446533777124785e-18,
+        1.1626095949573814e-18,
+        3.462586655411501e-19,
+        1.7356907041063856e-19
+      ]
+    },
+    {
+      "elements": 80,
+      "magnetic_points": 4,
+      "common_force_Q": [
+        -0.09008802213568035,
+        0.004784446332733838,
+        0.03046138110139826,
+        -0.0007545295873164215,
+        0.018595763817652627,
+        0.000548549589506786,
+        0.002763135581861753,
+        0.003793770963290033,
+        0.0013126855374523674,
+        0.00045941910313959016,
+        1.9730562142003007e-05,
+        -0.00018060686356492577
+      ],
+      "difference_from_20": 0.007324337895256266,
+      "full_vs_affine_relative": 0.9861829677212952,
+      "rank_rcond": 1e-08,
+      "rank": 7,
+      "singular_values": [
+        1.1323878129915643,
+        0.8340014430307476,
+        0.46960389531651014,
+        0.3697543199829353,
+        0.00032538971072413453,
+        2.4729753198312945e-06,
+        2.5215369945226754e-07,
+        1.443035324606999e-10,
+        2.9123733411151435e-12,
+        6.089511799664837e-16,
+        9.148435445041e-17,
+        1.3265712830012209e-18
+      ],
+      "difference_40_to_80": 0.00145763334187706
+    }
+  ],
+  "force_space_allocation": [
+    {
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 11,
+      "allocation_objective": "least squares of Gcoil(Q)(i-i_bias)-desired_force, in fixed canonical Pdot norm",
+      "desired_force_increment": [
+        0.00020686414466293768,
+        0.0006524273601770584,
+        0.00024242186366961344,
+        3.9631839825551455e-05,
+        -0.00011379806085626175,
+        -0.00016482579037278795,
+        -4.307804060171464e-05,
+        2.437069882611515e-05,
+        7.202764820824115e-05,
+        3.776354819908431e-05,
+        4.128767267055478e-06,
+        -1.6563189827572644e-05
+      ],
+      "achieved_force_increment": [
+        0.00013922316739932612,
+        0.0005903093681230378,
+        -2.2781855745037614e-05,
+        -0.00018846352923160726,
+        8.874703965420567e-06,
+        -8.840429165306502e-05,
+        2.833503637332947e-06,
+        6.353918242314667e-05,
+        4.941576503603071e-06,
+        2.5770058082166066e-06,
+        3.049682360475653e-06,
+        -2.294770108163074e-06
+      ],
+      "orthogonal_unreachable_residual": 0.00026552961743084666,
+      "constrained_force_residual": 0.00040158278800723584,
+      "generalized_force_allocation_residual": 0.00040158278800723584,
+      "rank_rcond": 1e-08,
+      "rank": 5,
+      "singular_values": [
+        1.1386802008530936,
+        0.8379624624146291,
+        0.4670774862110365,
+        0.3669183751927382,
+        0.0003257804610961143,
+        1.6834670597370134e-16,
+        5.474178759677509e-17,
+        1.7526177624360747e-17,
+        3.3971370938901624e-18,
+        1.8710432470587047e-18,
+        6.090903264777341e-19,
+        2.3856055956302903e-19
+      ],
+      "current_request_distance_A": 0.9247654857009869,
+      "requested_current_A": [
+        0.30539263261069405,
+        -1.3079350934939804,
+        -0.9437459626673268,
+        -0.5233849133854481,
+        -0.1609870826476557,
+        0.7074509762938693,
+        0.7018778946815878,
+        0.9757205258771866,
+        1.2658483882092266,
+        0.08325432927860302,
+        1.832248350144593,
+        -0.1451987305871451
+      ],
+      "allocated_current_A": [
+        0.8832530495400104,
+        -1.2292617417474387,
+        -0.7270601367549548,
+        -0.7942276700500841,
+        -0.5668797115813509,
+        0.6495670120790167,
+        0.6960256464312167,
+        0.7829830505705963,
+        1.148291895814247,
+        0.28704359740026925,
+        1.514480402413065,
+        -0.3273060445029795
+      ],
+      "maximum_planned_slew_A_s": 20.000000000000018,
+      "constraint_violation": 0.0,
+      "physical_interval_s": 0.0001,
+      "active_magnetic_points": 1,
+      "field_constraints_scope": "Decision-state actual magnet quadrature points; moving-point checks separate",
+      "momentum_scale": 1.0,
+      "maximum_actual_B_T": 0.000499935751538761,
+      "maximum_actual_G_T_per_m": 0.0042747961579935765
+    },
+    {
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 12,
+      "allocation_objective": "least squares of Gcoil(Q)(i-i_bias)-desired_force, in fixed canonical Pdot norm",
+      "desired_force_increment": [
+        0.0020686414466293767,
+        0.006524273601770584,
+        0.0024242186366961343,
+        0.0003963183982555145,
+        -0.0011379806085626174,
+        -0.0016482579037278794,
+        -0.0004307804060171464,
+        0.00024370698826115152,
+        0.0007202764820824114,
+        0.0003776354819908431,
+        4.128767267055478e-05,
+        -0.00016563189827572644
+      ],
+      "achieved_force_increment": [
+        0.0003448364958792438,
+        0.0032775036829835458,
+        -4.310104000534792e-06,
+        -0.0011511799614571012,
+        9.853791608754642e-05,
+        -0.0006148608435115157,
+        -0.0002570233369905402,
+        0.00032257103370764156,
+        3.392267004410836e-05,
+        1.6416717003745405e-05,
+        1.638394150696478e-05,
+        -1.3626377341125314e-05
+      ],
+      "orthogonal_unreachable_residual": 0.0026552961743084662,
+      "constrained_force_residual": 0.005006406541596535,
+      "generalized_force_allocation_residual": 0.005006406541596535,
+      "rank_rcond": 1e-08,
+      "rank": 5,
+      "singular_values": [
+        1.1386802008530936,
+        0.8379624624146291,
+        0.4670774862110365,
+        0.3669183751927382,
+        0.0003257804610961143,
+        1.6834670597370134e-16,
+        5.474178759677509e-17,
+        1.7526177624360747e-17,
+        3.3971370938901624e-18,
+        1.8710432470587047e-18,
+        6.090903264777341e-19,
+        2.3856055956302903e-19
+      ],
+      "current_request_distance_A": 9.297664522304457,
+      "requested_current_A": [
+        -4.913351119753152,
+        -2.0210885608809552,
+        -2.911918395878675,
+        1.9310841458068235,
+        3.5100465777556007,
+        1.2464066542275432,
+        0.7365481289349277,
+        2.728357803636499,
+        2.317199308460581,
+        -1.7688490838163924,
+        4.710159879728344,
+        1.50122776957877
+      ],
+      "allocated_current_A": [
+        0.8832530495400344,
+        -1.2266958193400168,
+        -0.7230601367549548,
+        -0.7981036977401379,
+        -0.5708797115813509,
+        0.6495670120789979,
+        0.6960256464312167,
+        0.7829830505705963,
+        1.1508014155842536,
+        0.2870435974002692,
+        1.510480402413065,
+        -0.3301350083833579
+      ],
+      "maximum_planned_slew_A_s": 20.000000000000018,
+      "constraint_violation": 0.0,
+      "physical_interval_s": 0.0001,
+      "active_magnetic_points": 1,
+      "field_constraints_scope": "Decision-state actual magnet quadrature points; moving-point checks separate",
+      "momentum_scale": 10.0,
+      "maximum_actual_B_T": 0.000499170301989957,
+      "maximum_actual_G_T_per_m": 0.0043514082456425456
+    },
+    {
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 2,
+      "allocation_objective": "least squares of Gcoil(Q)(i-i_bias)-desired_force, in fixed canonical Pdot norm",
+      "desired_force_increment": [
+        0.020686414466293768,
+        0.06524273601770583,
+        0.024242186366961342,
+        0.003963183982555145,
+        -0.011379806085626174,
+        -0.016482579037278795,
+        -0.004307804060171464,
+        0.002437069882611515,
+        0.007202764820824114,
+        0.003776354819908431,
+        0.0004128767267055478,
+        -0.0016563189827572644
+      ],
+      "achieved_force_increment": [
+        0.00029155447977471054,
+        0.003274592479174062,
+        -0.00035330020728638453,
+        -0.0015156834066173555,
+        -0.00035730088420717163,
+        -0.0010768126463751838,
+        -0.0012965265157435283,
+        -0.0007191311190555183,
+        3.042767197735384e-05,
+        1.8028864550842034e-05,
+        1.543494269861626e-05,
+        -1.3819288396559629e-05
+      ],
+      "orthogonal_unreachable_residual": 0.026552961743084663,
+      "constrained_force_residual": 0.07305643661426368,
+      "generalized_force_allocation_residual": 0.07305643661426368,
+      "rank_rcond": 1e-08,
+      "rank": 5,
+      "singular_values": [
+        1.1386802008530936,
+        0.8379624624146291,
+        0.4670774862110365,
+        0.3669183751927382,
+        0.0003257804610961143,
+        1.6834670597370134e-16,
+        5.474178759677509e-17,
+        1.7526177624360747e-17,
+        3.3971370938901624e-18,
+        1.8710432470587047e-18,
+        6.090903264777341e-19,
+        2.3856055956302903e-19
+      ],
+      "current_request_distance_A": 92.96822562557048,
+      "requested_current_A": [
+        -57.10078864339161,
+        -9.152623234750703,
+        -22.593642727992155,
+        26.47577473772954,
+        40.22038318178816,
+        6.635963433564281,
+        1.0832504714683273,
+        20.254730581229627,
+        12.830708510974125,
+        -20.289883214766345,
+        33.489275175565865,
+        17.965492771237916
+      ],
+      "allocated_current_A": [
+        0.8832530495400104,
+        -1.226695819339872,
+        -0.7230601367549548,
+        -0.798103697740145,
+        -0.5668797115813509,
+        0.6495670120790167,
+        0.6960256464312167,
+        0.7829830505705963,
+        1.1510316192924095,
+        0.2870435974002692,
+        1.510480402413065,
+        -0.3301350083833579
+      ],
+      "maximum_planned_slew_A_s": 20.000000000000018,
+      "constraint_violation": 0.0,
+      "physical_interval_s": 0.0001,
+      "active_magnetic_points": 1,
+      "field_constraints_scope": "Decision-state actual magnet quadrature points; moving-point checks separate",
+      "momentum_scale": 100.0,
+      "maximum_actual_B_T": 0.0004994702349783628,
+      "maximum_actual_G_T_per_m": 0.004341931513843
+    }
+  ],
+  "smooth_feedback": {
+    "full_jacobian_direction_FD_difference": 2.3892689406197603e-09,
+    "incorrectly_differentiated_feedback_H_field_error": 5.473011072973546,
+    "magnetic_increment_power": -6.700701185556337e-05,
+    "power_identity_error": 2.7376104855258987e-18,
+    "unbounded_requested_currents_A": [
+      0.8852280022039489,
+      -1.22967486291885,
+      -0.7262653610498749,
+      -0.7965773050527942,
+      -0.5695340563177396,
+      0.6460923929893349,
+      0.6968401460272861,
+      0.7797023103081296,
+      1.149666817683478,
+      0.28816832859521385,
+      1.5123476181634339,
+      -0.3272053527996615
+    ],
+    "fixed_input_vs_feedback_jacobian_difference": 12.564912321467
+  },
+  "elapsed_seconds": 19.818214401999285,
+  "tolerances": {
+    "virtual_work_abs": 1e-11,
+    "energy_FD_abs": 2e-08,
+    "axis_relative": 1e-12,
+    "maxwell_abs": 1e-12,
+    "feedback_J_direction_abs": 2e-06,
+    "power_abs": 1e-12,
+    "allocation_feasibility": 1e-09
+  },
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "torch": "2.5.1+cpu"
+  },
+  "source_sha256": {
+    "run_coil_validation.py": "91b6200870a8af5c2a9fd5aaac6842a9b5b998edd73ae4f35e73bccbc7e3c877",
+    "coil_rom.py": "53004846e9fbd219efc146dee46dd9ce9966a2d1b67c9a782bf577012d9e199e",
+    "coil_control.py": "9df4995b57d982ce0558a0d0276d5da41308f5900bad1c4376e51b088a52214f"
+  },
+  "limitation": "Independent local energy/derivative tests and common-q spatial diagnostics; no global domain/ROM-to-PDE error/thermal or physiology certification."
+}

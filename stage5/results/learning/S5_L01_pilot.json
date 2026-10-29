@@ -1,0 +1,141 @@
+{
+  "scope": "train/validation-only timing, no test or OOD generated",
+  "dataset_seconds": 1.467879340001673,
+  "hscale": 0.009543957355763131,
+  "gscale_z": 0.46614707019577395,
+  "model": {
+    "model": "3D inextensible unshearable Kirchhoff strain Ritz; exact SO(3) frame updates and midpoint centerline embedding",
+    "q_dof": 12,
+    "phase_dimension": 24,
+    "quadrature_elements": 20,
+    "configuration": "four Legendre curvature coefficients in each of two bending axes and torsion by default; all are dynamical",
+    "mass": "configuration dependent; includes translational and rotary inertia from embedding Jacobians",
+    "E0_J": 3.6200000000000004e-07,
+    "omega0_rad_s": 4.457629408507532,
+    "omega_rad_s": [
+      4.457629408507532,
+      4.457629408507532,
+      27.694195720027146,
+      27.694195720027146,
+      79.78328659507957,
+      79.78328659507957,
+      356.9402366587693,
+      356.9402366587693,
+      370.43091613854864,
+      1118.611090690932,
+      1984.631631100378,
+      3899.8926690677044
+    ],
+    "nu": [
+      1.0,
+      1.0,
+      6.212763148765096,
+      6.212763148765096,
+      17.898142551467057,
+      17.898142551467057,
+      80.0740043525236,
+      80.0740043525236,
+      83.10042899294614,
+      250.94304352803,
+      445.22131591124275,
+      874.8804155017085
+    ],
+    "canonical_scaling_defect": 5.55251128130777e-21,
+    "mass0_condition": 1264760.7588499414,
+    "repeated_frequency_pairs": [
+      {
+        "i": 0,
+        "j": 1,
+        "relative_difference": 0.0
+      },
+      {
+        "i": 2,
+        "j": 3,
+        "relative_difference": 0.0
+      },
+      {
+        "i": 4,
+        "j": 5,
+        "relative_difference": 0.0
+      },
+      {
+        "i": 6,
+        "j": 7,
+        "relative_difference": 0.0
+      }
+    ],
+    "KAM_status": "Standard nonresonant elliptic KAM is not certified; circular isotropic rod with axial bias has paired bending frequencies.",
+    "relation_to_full_model": "Shares material, distal magnet and field interface with the Cosserat model; shear/stretch omitted in this analytical ROM; modal truncation and fluid/contact closure errors are not yet bounded."
+  },
+  "runs": [
+    {
+      "kind": "analytic_mechanical4",
+      "lr": 0.001,
+      "real_parameters": 8749,
+      "seconds": 6.210388471998158,
+      "history": [
+        {
+          "step": 0,
+          "training_loss": 0.9476343730016518,
+          "validation_residual_canonical_gradient_relative_l2": 0.9995731342351174
+        },
+        {
+          "step": 50,
+          "training_loss": 0.6894766074425572,
+          "validation_residual_canonical_gradient_relative_l2": 0.9790966243633141
+        },
+        {
+          "step": 100,
+          "training_loss": 0.4905609099524723,
+          "validation_residual_canonical_gradient_relative_l2": 0.979375927235635
+        }
+      ]
+    },
+    {
+      "kind": "complex_hidden",
+      "lr": 0.003,
+      "real_parameters": 7104,
+      "seconds": 0.9341328160007834,
+      "history": [
+        {
+          "step": 0,
+          "training_loss": 0.947776907224717,
+          "validation_residual_canonical_gradient_relative_l2": 1.0000325399718708
+        },
+        {
+          "step": 50,
+          "training_loss": 0.9234105883882412,
+          "validation_residual_canonical_gradient_relative_l2": 1.0254813713456836
+        },
+        {
+          "step": 100,
+          "training_loss": 0.22959924814518534,
+          "validation_residual_canonical_gradient_relative_l2": 0.556116459593158
+        }
+      ]
+    },
+    {
+      "kind": "spd_complex",
+      "lr": 0.003,
+      "real_parameters": 13440,
+      "seconds": 0.8758176529991033,
+      "history": [
+        {
+          "step": 0,
+          "training_loss": 0.9489799999368755,
+          "validation_residual_canonical_gradient_relative_l2": 0.9936114248777143
+        },
+        {
+          "step": 50,
+          "training_loss": 0.5620496716518812,
+          "validation_residual_canonical_gradient_relative_l2": 0.775594452709695
+        },
+        {
+          "step": 100,
+          "training_loss": 0.4722660495794277,
+          "validation_residual_canonical_gradient_relative_l2": 0.7741525015778353
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "only_stage5_staged": true,
+  "files_staged": 551,
+  "authored_source_document_whitespace": "passed",
+  "generated_artifact_policy": "Raw CSV records retain csv.writer CRLF and generated Matplotlib SVG path whitespace. Their original bytes are preserved, not normalized to satisfy a style check. Scientific JSON/schema/provenance checks are separate.",
+  "environment_draft_excluded": "stage3/install.sh"
+}

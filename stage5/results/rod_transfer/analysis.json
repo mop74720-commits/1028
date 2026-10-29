@@ -1,0 +1,204 @@
+{
+  "status": "postprocessing_of_independently_executed_trajectories",
+  "cases": [
+    {
+      "case": "baseline_n32_h10us",
+      "initial_penetration_m": 0.0,
+      "max_resultant_flow_force_N": 2.1494436687872997e-05,
+      "min_ideal_incremental_power_W": -0.0,
+      "max_projected_incremental_power_W": 3.298484888179121e-08,
+      "max_ramp_start_incremental_power_W": 3.311752339794275e-08,
+      "projection_nonconverged": 1,
+      "fallback_count": 0,
+      "repair_count": 99,
+      "largest_repair_current_norm_A": 1.0029803322707561e-07,
+      "largest_repair_objective_change_A2": 7.49071484840158e-08,
+      "feasibility_minimum_margin": -0.0
+    },
+    {
+      "case": "port_n16_h5us",
+      "initial_penetration_m": 0.0,
+      "max_resultant_flow_force_N": 2.1497386393417937e-05,
+      "min_ideal_incremental_power_W": -1.2938279438982456e-09,
+      "max_projected_incremental_power_W": 3.203038601094377e-08,
+      "max_ramp_start_incremental_power_W": 3.2058866023218946e-08,
+      "projection_nonconverged": 3,
+      "fallback_count": 0,
+      "repair_count": 99,
+      "largest_repair_current_norm_A": 4.121287353203609e-05,
+      "largest_repair_objective_change_A2": 9.054255143547962e-05,
+      "feasibility_minimum_margin": -0.0
+    },
+    {
+      "case": "port_n32_h10us",
+      "initial_penetration_m": 0.0,
+      "max_resultant_flow_force_N": 2.1498898438898127e-05,
+      "min_ideal_incremental_power_W": -1.034809601868257e-09,
+      "max_projected_incremental_power_W": 3.190397727960049e-08,
+      "max_ramp_start_incremental_power_W": 3.201490658983009e-08,
+      "projection_nonconverged": 2,
+      "fallback_count": 0,
+      "repair_count": 99,
+      "largest_repair_current_norm_A": 4.437753134480861e-05,
+      "largest_repair_objective_change_A2": 7.523617382387826e-05,
+      "feasibility_minimum_margin": -0.0
+    },
+    {
+      "case": "port_n32_h5us",
+      "initial_penetration_m": 0.0,
+      "max_resultant_flow_force_N": 2.149892598268749e-05,
+      "min_ideal_incremental_power_W": -1.0348003566219546e-09,
+      "max_projected_incremental_power_W": 3.192621414373841e-08,
+      "max_ramp_start_incremental_power_W": 3.2037558192062726e-08,
+      "projection_nonconverged": 4,
+      "fallback_count": 0,
+      "repair_count": 99,
+      "largest_repair_current_norm_A": 4.435994507051977e-05,
+      "largest_repair_objective_change_A2": 8.632572641653624e-05,
+      "feasibility_minimum_margin": -0.0
+    },
+    {
+      "case": "port_n32_h2p5us",
+      "initial_penetration_m": 0.0,
+      "max_resultant_flow_force_N": 2.1498926956871368e-05,
+      "min_ideal_incremental_power_W": -1.0352074256732733e-09,
+      "max_projected_incremental_power_W": 3.189289136922672e-08,
+      "max_ramp_start_incremental_power_W": 3.200477911051111e-08,
+      "projection_nonconverged": 1,
+      "fallback_count": 0,
+      "repair_count": 99,
+      "largest_repair_current_norm_A": 7.414662585744703e-07,
+      "largest_repair_objective_change_A2": 2.2554575629385454e-07,
+      "feasibility_minimum_margin": -0.0
+    },
+    {
+      "case": "port_n64_h5us",
+      "initial_penetration_m": 0.0,
+      "max_resultant_flow_force_N": 2.149746228636237e-05,
+      "min_ideal_incremental_power_W": -1.1063182150978862e-09,
+      "max_projected_incremental_power_W": 3.230369011233161e-08,
+      "max_ramp_start_incremental_power_W": 3.229680594271434e-08,
+      "projection_nonconverged": 1,
+      "fallback_count": 0,
+      "repair_count": 99,
+      "largest_repair_current_norm_A": 4.064073144047841e-05,
+      "largest_repair_objective_change_A2": 9.054185443879703e-05,
+      "feasibility_minimum_margin": -0.0
+    },
+    {
+      "case": "port_contact_n32_h5us",
+      "initial_penetration_m": 0.0,
+      "max_resultant_flow_force_N": 1.766369118499705e-05,
+      "min_ideal_incremental_power_W": -1.0300159738874008e-09,
+      "max_projected_incremental_power_W": 3.015376922386656e-08,
+      "max_ramp_start_incremental_power_W": 3.068678926429367e-08,
+      "projection_nonconverged": 4,
+      "fallback_count": 0,
+      "repair_count": 99,
+      "largest_repair_current_norm_A": 4.201225785919788e-05,
+      "largest_repair_objective_change_A2": 9.510789912914319e-05,
+      "feasibility_minimum_margin": -0.0
+    }
+  ],
+  "refinement": {
+    "pairs": [
+      {
+        "first": "port_n16_h5us",
+        "second": "port_n32_h5us",
+        "common_reference_samples": 129,
+        "centerline_time_space_rms_m": 3.648024584036586e-06,
+        "tip_time_rms_m": 4.112428623648774e-06,
+        "max_centerline_difference_m": 1.0040299992466444e-05,
+        "scope": "Adjacent numerical solutions, not error against exact PDE."
+      },
+      {
+        "first": "port_n32_h5us",
+        "second": "port_n64_h5us",
+        "common_reference_samples": 129,
+        "centerline_time_space_rms_m": 1.815140430944534e-06,
+        "tip_time_rms_m": 2.1667575617282292e-06,
+        "max_centerline_difference_m": 5.4628086884295505e-06,
+        "scope": "Adjacent numerical solutions, not error against exact PDE."
+      },
+      {
+        "first": "port_n32_h10us",
+        "second": "port_n32_h5us",
+        "common_reference_samples": 129,
+        "centerline_time_space_rms_m": 3.7092818888564284e-09,
+        "tip_time_rms_m": 5.922336920208879e-09,
+        "max_centerline_difference_m": 1.533453517669915e-08,
+        "scope": "Adjacent numerical solutions, not error against exact PDE."
+      },
+      {
+        "first": "port_n32_h5us",
+        "second": "port_n32_h2p5us",
+        "common_reference_samples": 129,
+        "centerline_time_space_rms_m": 2.679392282125741e-09,
+        "tip_time_rms_m": 5.4468591411760124e-09,
+        "max_centerline_difference_m": 9.547426501895292e-09,
+        "scope": "Adjacent numerical solutions, not error against exact PDE."
+      },
+      {
+        "first": "baseline_n32_h10us",
+        "second": "port_n32_h10us",
+        "common_reference_samples": 129,
+        "centerline_time_space_rms_m": 1.2160748772216053e-06,
+        "tip_time_rms_m": 2.861171008292466e-06,
+        "max_centerline_difference_m": 5.410377615027146e-06,
+        "scope": "Adjacent numerical solutions, not error against exact PDE."
+      }
+    ],
+    "observed_space_order": 1.007034283145546,
+    "observed_time_order": 0.469234092906824,
+    "numerical_order_scope": "Observed adjacent differences only; no smoothness or formal order claim for the open constrained controller."
+  },
+  "failures_preserved": "initial_allocator_failure/ contains the complete failed time-refinement batch; smoke_failed_api_execution.json preserves the repaired API failure.",
+  "matched_ROM_Cosserat": {
+    "status": "independently_executed",
+    "records": [
+      {
+        "n_elements": 16,
+        "physical_duration_s": 0.002,
+        "centerline_time_space_rms_m": 7.859328852668441e-09,
+        "tip_time_rms_m": 3.3475537510973985e-08,
+        "final_tip_difference_m": 6.836262530393624e-08,
+        "final_rod_tip_displacement_m": 2.2903926609754863e-07,
+        "final_ROM_tip_displacement_m": 2.940144932656615e-07,
+        "true_node_gradient_max_T_per_m": 0.7265571418147533,
+        "gradient_limit_T_per_m": 0.03,
+        "node_gradient_limit_satisfied": false,
+        "mechanical_work_residual_J": 2.23520015742024e-18
+      },
+      {
+        "n_elements": 32,
+        "physical_duration_s": 0.002,
+        "centerline_time_space_rms_m": 1.1203030370461626e-08,
+        "tip_time_rms_m": 6.568522743178028e-08,
+        "final_tip_difference_m": 1.2084832208291775e-07,
+        "final_rod_tip_displacement_m": 1.756120519665545e-07,
+        "final_ROM_tip_displacement_m": 2.940144932656615e-07,
+        "true_node_gradient_max_T_per_m": 0.7983942213224946,
+        "gradient_limit_T_per_m": 0.03,
+        "node_gradient_limit_satisfied": false,
+        "mechanical_work_residual_J": 4.317723678097552e-18
+      },
+      {
+        "n_elements": 64,
+        "physical_duration_s": 0.002,
+        "centerline_time_space_rms_m": 1.4169007521141186e-08,
+        "tip_time_rms_m": 8.642093750531824e-08,
+        "final_tip_difference_m": 1.5047057785097816e-07,
+        "final_rod_tip_displacement_m": 1.4590279143212195e-07,
+        "final_ROM_tip_displacement_m": 2.940144932656615e-07,
+        "true_node_gradient_max_T_per_m": 0.7983942213224946,
+        "gradient_limit_T_per_m": 0.03,
+        "node_gradient_limit_satisfied": false,
+        "mechanical_work_residual_J": 5.282216682441079e-18
+      }
+    ],
+    "matching": "same straight static initial state, same constant full coil currents/material/magnet, no fluid/contact/gravity/damping in either model",
+    "differences": "Kirchhoff ROM constrains shear/stretch, truncates 12 Ritz coordinates, uses20-cell midpoint mass/field; rods retain shear/stretch and N-dependent boundary and magnetic quadrature.",
+    "constraint_scope": "The local bias fit is held fixed for model comparison, not projected. It violates full-rod gradient limits, explicitly retained as a diagnostic limitation. Main transfer uses tube-constrained actual currents.",
+    "interpretation": "These observed model differences are not monotone convergence to ROM or a rigorous PDE error estimate. The separate main experiment retains flow/contact."
+  }
+}

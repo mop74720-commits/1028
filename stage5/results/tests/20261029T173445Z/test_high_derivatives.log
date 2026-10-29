@@ -1,0 +1,7 @@
+test_inverse_and_pure_reverse_match_analytic_division (test_high_derivatives.HighDerivativeGuard.test_inverse_and_pure_reverse_match_analytic_division) ... ok
+test_known_solve_failure_is_detected_not_symmetrized_away (test_high_derivatives.HighDerivativeGuard.test_known_solve_failure_is_detected_not_symmetrized_away) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 1.197s
+
+OK

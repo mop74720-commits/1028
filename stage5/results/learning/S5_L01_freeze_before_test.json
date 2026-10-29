@@ -1,0 +1,77 @@
+{
+  "timestamp_utc": "2026-10-29T15:15:11Z",
+  "records": [
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51001,
+      "checkpoint": "stage5/results/learning/S5_L01_analytic_mechanical4_seed51001.pt",
+      "checkpoint_sha256": "1b57d3fd9cf0c7946204aa789110c8f3a0697404ee096581ac2c8a00fd523b65",
+      "best_validation_step": 1200
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51002,
+      "checkpoint": "stage5/results/learning/S5_L01_analytic_mechanical4_seed51002.pt",
+      "checkpoint_sha256": "d690cec4287ceb961e4e41f5d177d45ed68d35184c6de74c275b42e6a7a5d35b",
+      "best_validation_step": 1200
+    },
+    {
+      "kind": "analytic_mechanical4",
+      "seed": 51003,
+      "checkpoint": "stage5/results/learning/S5_L01_analytic_mechanical4_seed51003.pt",
+      "checkpoint_sha256": "fcc440548bf4246c8a379e0c4811d7704b8c7193d069ab4bdd568bcd05fb8ee5",
+      "best_validation_step": 1200
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51001,
+      "checkpoint": "stage5/results/learning/S5_L01_complex_hidden_seed51001.pt",
+      "checkpoint_sha256": "d28f377074e2056a9e3d5230e600b6082316d4e7c86762d2c406fceffe9953ae",
+      "best_validation_step": 1100
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51002,
+      "checkpoint": "stage5/results/learning/S5_L01_complex_hidden_seed51002.pt",
+      "checkpoint_sha256": "7811ea82db4a54904040d402890927e7e4835b4701ac7b33b1d676676139cb89",
+      "best_validation_step": 1200
+    },
+    {
+      "kind": "complex_hidden",
+      "seed": 51003,
+      "checkpoint": "stage5/results/learning/S5_L01_complex_hidden_seed51003.pt",
+      "checkpoint_sha256": "0e0e8ffd0309f2f56b0996f3b095c7db0f3efc2a2eacdf60613b26e848548a8e",
+      "best_validation_step": 1200
+    },
+    {
+      "kind": "spd_complex",
+      "seed": 51001,
+      "checkpoint": "stage5/results/learning/S5_L01_spd_complex_seed51001.pt",
+      "checkpoint_sha256": "fda6af612b2f00342a79acce8d8972dca54a812b78dab159996ee6991e391c5a",
+      "best_validation_step": 1200
+    },
+    {
+      "kind": "spd_complex",
+      "seed": 51002,
+      "checkpoint": "stage5/results/learning/S5_L01_spd_complex_seed51002.pt",
+      "checkpoint_sha256": "07f3f583e19c4d0bfa0f2e01a31b56833d742e69287c793867755ac02aaeec19",
+      "best_validation_step": 1150
+    },
+    {
+      "kind": "spd_complex",
+      "seed": 51003,
+      "checkpoint": "stage5/results/learning/S5_L01_spd_complex_seed51003.pt",
+      "checkpoint_sha256": "f4f25328b837a8be9a5b07cea96712fe96e9f93fe24225932379c298c08a1216",
+      "best_validation_step": 1100
+    }
+  ],
+  "source_sha256": {
+    "stage5/program/run_learning_research.py": "ba705e9d21ac6f04483cfcd539edf43a50f35523e5dc913fd19f710a273f1bf8",
+    "stage5/program/learning_models.py": "28055b5406777df87a94e66f6ac0a42909b9b60efad0070f599e00616fe143a0",
+    "stage3/source_inputs/starter/stage2/program/learning/rod_rom.py": "5aebcea066b73f717c2c26fd0b8f3454e205fbcc1bafd970762f3fb9371ee3c9",
+    "stage3/source_inputs/starter/stage2/program/learning/run_learning.py": "868de74c224e46082555b5a6553ea70f52a0ee17ec23ed4631fc932e10aecdae",
+    "stage3/source_inputs/starter/stage2/program/learning/train_spd_complex.py": "6cfb62e29bdf141e3cbe2ca7f82c0a3ee8ac8bdac8525fc8bb1b8827ddb00d50"
+  },
+  "legacy48_sha256": "0860778f0944050357f26b04cfe17a60480679b939f3f09f91e50db778c1d4d6",
+  "test_and_OOD_labels_generated": false
+}

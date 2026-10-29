@@ -1,0 +1,8 @@
+Mass moment of inertia matrix smaller than tolerance, please check provided radius, density and length.
+test_ideal_feedback_power_and_unavoidable_constraint_residual (test_rod_transfer.TestRodTransfer.test_ideal_feedback_power_and_unavoidable_constraint_residual) ... ok
+test_power_port_matches_fixed_current_energy_derivative (test_rod_transfer.TestRodTransfer.test_power_port_matches_fixed_current_energy_derivative) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.856s
+
+OK

@@ -1,0 +1,364 @@
+{
+  "status": "failed",
+  "command": "stage5/program/run_transport_experiments.py --model fullcoil_collocated --maximum-order 2 --quadratic-through 1 --run-id main",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "torch": "2.5.1+cpu"
+  },
+  "rows": [],
+  "phases": [
+    {
+      "cache": {
+        "status": "running",
+        "order": 1,
+        "derivative": "value"
+      }
+    },
+    {
+      "cache": {
+        "order": 1,
+        "derivative": "value",
+        "seconds": 0.37411123299898463,
+        "norm": 0.0034234347538254135
+      }
+    },
+    {
+      "cache": {
+        "status": "running",
+        "order": 1,
+        "derivative": "jacobian"
+      }
+    },
+    {
+      "cache": {
+        "order": 1,
+        "derivative": "jacobian",
+        "seconds": 1.1715527169981215,
+        "norm": 14.031221597288805
+      }
+    },
+    {
+      "cache": {
+        "status": "running",
+        "order": 1,
+        "derivative": "hessian"
+      }
+    },
+    {
+      "cache": {
+        "order": 1,
+        "derivative": "hessian",
+        "seconds": 22.32040815900109,
+        "norm": 197.21508477751857
+      }
+    },
+    {
+      "cache": {
+        "status": "running",
+        "order": 2,
+        "derivative": "value"
+      }
+    },
+    {
+      "cache": {
+        "order": 2,
+        "derivative": "value",
+        "seconds": 4.781761398000526,
+        "norm": 0.20163969335053378
+      }
+    },
+    {
+      "cache": {
+        "status": "running",
+        "order": 2,
+        "derivative": "jacobian"
+      }
+    }
+  ],
+  "solver_tolerance": 2e-13,
+  "metadata": {
+    "base": {
+      "model": "3D inextensible unshearable Kirchhoff strain Ritz; exact SO(3) frame updates and midpoint centerline embedding",
+      "q_dof": 12,
+      "phase_dimension": 24,
+      "quadrature_elements": 20,
+      "configuration": "four Legendre curvature coefficients in each of two bending axes and torsion by default; all are dynamical",
+      "mass": "configuration dependent; includes translational and rotary inertia from embedding Jacobians",
+      "E0_J": 3.6200000000000004e-07,
+      "omega0_rad_s": 4.457629408507532,
+      "omega_rad_s": [
+        4.457629408507532,
+        4.457629408507532,
+        27.694195720027146,
+        27.694195720027146,
+        79.78328659507957,
+        79.78328659507957,
+        356.9402366587693,
+        356.9402366587693,
+        370.43091613854864,
+        1118.611090690932,
+        1984.631631100378,
+        3899.8926690677044
+      ],
+      "nu": [
+        1.0,
+        1.0,
+        6.212763148765096,
+        6.212763148765096,
+        17.898142551467057,
+        17.898142551467057,
+        80.0740043525236,
+        80.0740043525236,
+        83.10042899294614,
+        250.94304352803,
+        445.22131591124275,
+        874.8804155017085
+      ],
+      "canonical_scaling_defect": 5.55251128130777e-21,
+      "mass0_condition": 1264760.7588499414,
+      "repeated_frequency_pairs": [
+        {
+          "i": 0,
+          "j": 1,
+          "relative_difference": 0.0
+        },
+        {
+          "i": 2,
+          "j": 3,
+          "relative_difference": 0.0
+        },
+        {
+          "i": 4,
+          "j": 5,
+          "relative_difference": 0.0
+        },
+        {
+          "i": 6,
+          "j": 7,
+          "relative_difference": 0.0
+        }
+      ],
+      "KAM_status": "Standard nonresonant elliptic KAM is not certified; circular isotropic rod with axial bias has paired bending frequencies.",
+      "relation_to_full_model": "Shares material, distal magnet and field interface with the Cosserat model; shear/stretch omitted in this analytical ROM; modal truncation and fluid/contact closure errors are not yet bounded.",
+      "time": "tau=omega0*t_seconds",
+      "coordinates": "z=(Q,P); q_physical=Sq Q; p_physical=Sp P",
+      "input": "12 total coil currents in A; no separate 8-field increment input or extra ideal bias",
+      "drag": "synthetic smooth gamma*P; not a blood/contact closure",
+      "derivatives": "double-precision automatic differentiation through full variable-mass SO(3) geometry",
+      "magnetism": "Full circular-coil Biot-Savart energy; no additional ideal bias",
+      "coil_config": {
+        "origin_m": [
+          0.0,
+          0.0,
+          0.1
+        ],
+        "centers_m": [
+          [
+            -0.014258091544161544,
+            0.028179296678682336,
+            0.03197328418765823
+          ],
+          [
+            -0.02823677355664579,
+            -0.04786085900246092,
+            0.15036886731560742
+          ],
+          [
+            -0.045691567848612266,
+            -0.018652962478301362,
+            0.15647430936557563
+          ],
+          [
+            -0.04514527606524731,
+            0.048274040871414105,
+            0.06455255965605347
+          ],
+          [
+            -0.05250918804532998,
+            0.0484943955231713,
+            0.07728263277440807
+          ],
+          [
+            -0.0613859164096309,
+            -0.011163250855872636,
+            0.14161911936692878
+          ],
+          [
+            -0.0671668545586991,
+            -0.0017953283979293688,
+            0.06667747841723036
+          ],
+          [
+            -0.064453232278896,
+            0.02259524567813345,
+            0.1309876704762954
+          ],
+          [
+            0.02328501712550232,
+            0.044097556051387404,
+            0.043980239845570486
+          ],
+          [
+            -0.057995959548040495,
+            0.010875668587236294,
+            0.05370541598758392
+          ],
+          [
+            0.015634413697846045,
+            -0.0715657961482294,
+            0.11609042976413864
+          ],
+          [
+            0.053878424569565875,
+            -0.04269688322911903,
+            0.12998485498415116
+          ]
+        ],
+        "normals": [
+          [
+            0.19010788725548727,
+            -0.3757239557157645,
+            0.9070228774978905
+          ],
+          [
+            0.37649031408861056,
+            0.6381447866994789,
+            -0.6715848975414321
+          ],
+          [
+            0.6092209046481636,
+            0.2487061663773515,
+            -0.7529907915410083
+          ],
+          [
+            0.6019370142032975,
+            -0.6436538782855215,
+            0.4726325379192871
+          ],
+          [
+            0.7001225072710664,
+            -0.6465919403089507,
+            0.30289822967455915
+          ],
+          [
+            0.8184788854617453,
+            0.1488433447449685,
+            -0.5549215915590505
+          ],
+          [
+            0.8955580607826548,
+            0.023937711972391584,
+            0.4443002877702619
+          ],
+          [
+            0.8593764303852801,
+            -0.3012699423751127,
+            -0.4131689396839387
+          ],
+          [
+            -0.3104668950066976,
+            -0.5879674140184987,
+            0.7469301353923936
+          ],
+          [
+            0.77327946064054,
+            -0.14500891449648393,
+            0.6172611201655479
+          ],
+          [
+            -0.20845884930461392,
+            0.9542106153097254,
+            -0.21453906352184832
+          ],
+          [
+            -0.7183789942608784,
+            0.5692917763882537,
+            -0.3997980664553487
+          ]
+        ],
+        "radius_m": 0.025,
+        "turns": 300,
+        "quadrature_points": 256,
+        "current_bound_A": 2.0,
+        "slew_bound_A_s": 20.0,
+        "status": "Engineering geometry and ratings; unbuilt and uncalibrated air-core coil benchmark"
+      },
+      "current_channels": 12,
+      "current_units": "A; total currents, not increments",
+      "bias_currents_A": [
+        0.8852530495400104,
+        -1.228695819339872,
+        -0.7250601367549548,
+        -0.796103697740145,
+        -0.5688797115813509,
+        0.6475670120790167,
+        0.6980256464312167,
+        0.7809830505705962,
+        1.1490316192924095,
+        0.2890435974002692,
+        1.512480402413065,
+        -0.3281350083833579
+      ],
+      "bias_origin_field_gradient_residual": [
+        3.253473849378942e-10,
+        -1.277110638222374e-08,
+        -1.8185624118573218e-08,
+        1.5314266256158393e-07,
+        1.8360020899443885e-08,
+        -1.8035595366130974e-07,
+        -3.7419132875582406e-07,
+        9.198263548754193e-08
+      ],
+      "bias_initialization": "Pre-energized fixed local axial-bias fit; not a zero-current startup",
+      "collocated_gain_dimensionless": 0.15425045617918903,
+      "collocated_gain_A2_per_W": 95590.3224538941,
+      "feedback_derivative": "Hamiltonian partial z derivative first; compose i(z) afterwards; total field Jacobian contains Di/Dz",
+      "magnetic_domain": "Away from ideal circular wires; physical_samples evaluates actual magnet quadrature points only",
+      "constraints": "Smooth feedback not automatically bounded; coil_control handles explicit constrained current ramps."
+    },
+    "kind": "fullcoil_collocated",
+    "load": "independent supplied force",
+    "exact_flow_used": false,
+    "mass_frozen": false,
+    "recurrence": "a_(k+1)=-(Da_k f + Df.T a_k)/(k+1); fixed expansion origin"
+  },
+  "initial_state": [
+    0.009800665778412416,
+    0.006216099682706645,
+    -0.00011714758713290688,
+    -0.002673078944651098,
+    -0.0023400650034276762,
+    -0.002004670955008666,
+    -0.0003434497763517713,
+    0.00042239663856923494,
+    0.0009713964335523372,
+    0.0006164865934812456,
+    0.00028831449452181235,
+    -1.555261969333705e-05,
+    0.0010343207233146883,
+    0.003262136800885292,
+    0.0012121093183480672,
+    0.00019815919912775725,
+    -0.0005689903042813087,
+    -0.0008241289518639397,
+    -0.0002153902030085732,
+    0.00012185349413057576,
+    0.0003601382410412057,
+    0.00018881774099542155,
+    2.064383633527739e-05,
+    -8.281594913786322e-05
+  ],
+  "duration_tau": 0.0005,
+  "orders": [
+    1,
+    2
+  ],
+  "exception": "RuntimeError('one of the variables needed for gradient computation has been modified by an inplace operation: [torch.DoubleTensor [1, 12, 256, 3]], which is output 0 of MaskedFillBackward0, is at version 1; expected version 0 instead. Hint: enable anomaly detection to find the operation that failed to compute its gradient, with torch.autograd.set_detect_anomaly(True).')",
+  "traceback": "Traceback (most recent call last):\n  File \"/workspace/1028/stage5/program/run_transport_experiments.py\", line 129, in main\n    cache=OneFormCache.fit(native,z0,maximum_order=args.maximum_order,quadratic_through=args.quadratic_through,progress=progress)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/1028/stage5/program/transport_cache.py\", line 30, in fit\n    start=time.perf_counter();a=op(x).detach().numpy();elapsed=time.perf_counter()-start\n                                ^^^^^\n  File \"/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/_functorch/eager_transforms.py\", line 724, in wrapper_fn\n    flat_jacobians_per_input = compute_jacobian_stacked()\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/_functorch/eager_transforms.py\", line 646, in compute_jacobian_stacked\n    chunked_result = vmap(vjp_fn)(basis)\n                     ^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/_functorch/apis.py\", line 203, in wrapped\n    return vmap_impl(\n           ^^^^^^^^^^\n  File \"/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/_functorch/vmap.py\", line 331, in vmap_impl\n    return _flat_vmap(\n           ^^^^^^^^^^^\n  File \"/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/_functorch/vmap.py\", line 479, in _flat_vmap\n    batched_outputs = func(*batched_inputs, **kwargs)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/_functorch/eager_transforms.py\", line 430, in wrapper\n    result = _autograd_grad(\n             ^^^^^^^^^^^^^^^\n  File \"/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/_functorch/eager_transforms.py\", line 180, in _autograd_grad\n    grad_inputs = torch.autograd.grad(\n                  ^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/autograd/__init__.py\", line 496, in grad\n    result = _engine_run_backward(\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/autograd/graph.py\", line 825, in _engine_run_backward\n    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: one of the variables needed for gradient computation has been modified by an inplace operation: [torch.DoubleTensor [1, 12, 256, 3]], which is output 0 of MaskedFillBackward0, is at version 1; expected version 0 instead. Hint: enable anomaly detection to find the operation that failed to compute its gradient, with torch.autograd.set_detect_anomaly(True).\n",
+  "elapsed_seconds": 41.23716616399906,
+  "shell_exit_code": 134,
+  "shutdown_note": "Caught higher-AD RuntimeError was saved, followed by PyTorch fatal finalization and shell abort."
+}

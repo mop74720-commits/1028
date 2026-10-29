@@ -1,0 +1,3617 @@
+{
+  "status": "completed",
+  "started_at": "2026-10-29T15:04:41.842025+00:00",
+  "command": [
+    "/workspace/1028-cloud/venvs/learning/bin/python",
+    "stage5/program/run_closed_loop.py"
+  ],
+  "cwd": "/workspace/1028",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "torch": "2.5.1+cpu"
+  },
+  "source_sha256": {
+    "stage5/program/run_closed_loop.py": "af4fd8da3a660e3670aeb74d0e46a0baa76605fc93bc3209a516bc8fd00936b3",
+    "stage5/program/closed_loop.py": "4f7e5e16e1cc5d105a298811627989cd064819f8790dadb0429920374739db31",
+    "stage5/program/coil_rom.py": "3ba520ca8dd96a2133dfdce512ca80847d8287dfcf8f77ec98fabbf4da2265fd",
+    "stage3/program/rom_integrators.py": "c43abfec3195ae1c2478ff582a2d62e50d3ad5b0f8880d22e0eaabc19457d7ca"
+  },
+  "model": {
+    "model": "3D inextensible unshearable Kirchhoff strain Ritz; exact SO(3) frame updates and midpoint centerline embedding",
+    "q_dof": 12,
+    "phase_dimension": 24,
+    "quadrature_elements": 20,
+    "configuration": "four Legendre curvature coefficients in each of two bending axes and torsion by default; all are dynamical",
+    "mass": "configuration dependent; includes translational and rotary inertia from embedding Jacobians",
+    "E0_J": 3.6200000000000004e-07,
+    "omega0_rad_s": 4.457629408507532,
+    "omega_rad_s": [
+      4.457629408507532,
+      4.457629408507532,
+      27.694195720027146,
+      27.694195720027146,
+      79.78328659507957,
+      79.78328659507957,
+      356.9402366587693,
+      356.9402366587693,
+      370.43091613854864,
+      1118.611090690932,
+      1984.631631100378,
+      3899.8926690677044
+    ],
+    "nu": [
+      1.0,
+      1.0,
+      6.212763148765096,
+      6.212763148765096,
+      17.898142551467057,
+      17.898142551467057,
+      80.0740043525236,
+      80.0740043525236,
+      83.10042899294614,
+      250.94304352803,
+      445.22131591124275,
+      874.8804155017085
+    ],
+    "canonical_scaling_defect": 5.55251128130777e-21,
+    "mass0_condition": 1264760.7588499414,
+    "repeated_frequency_pairs": [
+      {
+        "i": 0,
+        "j": 1,
+        "relative_difference": 0.0
+      },
+      {
+        "i": 2,
+        "j": 3,
+        "relative_difference": 0.0
+      },
+      {
+        "i": 4,
+        "j": 5,
+        "relative_difference": 0.0
+      },
+      {
+        "i": 6,
+        "j": 7,
+        "relative_difference": 0.0
+      }
+    ],
+    "KAM_status": "Standard nonresonant elliptic KAM is not certified; circular isotropic rod with axial bias has paired bending frequencies.",
+    "relation_to_full_model": "Shares material, distal magnet and field interface with the Cosserat model; shear/stretch omitted in this analytical ROM; modal truncation and fluid/contact closure errors are not yet bounded.",
+    "time": "tau=omega0*t_seconds",
+    "coordinates": "z=(Q,P); q_physical=Sq Q; p_physical=Sp P",
+    "input": "12 total coil currents in A; no separate 8-field increment input or extra ideal bias",
+    "drag": "synthetic smooth gamma*P; not a blood/contact closure",
+    "derivatives": "double-precision automatic differentiation through full variable-mass SO(3) geometry",
+    "magnetism": "Full circular-coil Biot-Savart energy; no additional ideal bias",
+    "coil_config": {
+      "origin_m": [
+        0.0,
+        0.0,
+        0.1
+      ],
+      "centers_m": [
+        [
+          -0.014258091544161544,
+          0.028179296678682336,
+          0.03197328418765823
+        ],
+        [
+          -0.02823677355664579,
+          -0.04786085900246092,
+          0.15036886731560742
+        ],
+        [
+          -0.045691567848612266,
+          -0.018652962478301362,
+          0.15647430936557563
+        ],
+        [
+          -0.04514527606524731,
+          0.048274040871414105,
+          0.06455255965605347
+        ],
+        [
+          -0.05250918804532998,
+          0.0484943955231713,
+          0.07728263277440807
+        ],
+        [
+          -0.0613859164096309,
+          -0.011163250855872636,
+          0.14161911936692878
+        ],
+        [
+          -0.0671668545586991,
+          -0.0017953283979293688,
+          0.06667747841723036
+        ],
+        [
+          -0.064453232278896,
+          0.02259524567813345,
+          0.1309876704762954
+        ],
+        [
+          0.02328501712550232,
+          0.044097556051387404,
+          0.043980239845570486
+        ],
+        [
+          -0.057995959548040495,
+          0.010875668587236294,
+          0.05370541598758392
+        ],
+        [
+          0.015634413697846045,
+          -0.0715657961482294,
+          0.11609042976413864
+        ],
+        [
+          0.053878424569565875,
+          -0.04269688322911903,
+          0.12998485498415116
+        ]
+      ],
+      "normals": [
+        [
+          0.19010788725548727,
+          -0.3757239557157645,
+          0.9070228774978905
+        ],
+        [
+          0.37649031408861056,
+          0.6381447866994789,
+          -0.6715848975414321
+        ],
+        [
+          0.6092209046481636,
+          0.2487061663773515,
+          -0.7529907915410083
+        ],
+        [
+          0.6019370142032975,
+          -0.6436538782855215,
+          0.4726325379192871
+        ],
+        [
+          0.7001225072710664,
+          -0.6465919403089507,
+          0.30289822967455915
+        ],
+        [
+          0.8184788854617453,
+          0.1488433447449685,
+          -0.5549215915590505
+        ],
+        [
+          0.8955580607826548,
+          0.023937711972391584,
+          0.4443002877702619
+        ],
+        [
+          0.8593764303852801,
+          -0.3012699423751127,
+          -0.4131689396839387
+        ],
+        [
+          -0.3104668950066976,
+          -0.5879674140184987,
+          0.7469301353923936
+        ],
+        [
+          0.77327946064054,
+          -0.14500891449648393,
+          0.6172611201655479
+        ],
+        [
+          -0.20845884930461392,
+          0.9542106153097254,
+          -0.21453906352184832
+        ],
+        [
+          -0.7183789942608784,
+          0.5692917763882537,
+          -0.3997980664553487
+        ]
+      ],
+      "radius_m": 0.025,
+      "turns": 300,
+      "quadrature_points": 256,
+      "current_bound_A": 2.0,
+      "slew_bound_A_s": 20.0,
+      "status": "Engineering geometry and ratings; unbuilt and uncalibrated air-core coil benchmark"
+    },
+    "current_channels": 12,
+    "current_units": "A; total currents, not increments",
+    "bias_currents_A": [
+      0.8852530495400104,
+      -1.228695819339872,
+      -0.7250601367549548,
+      -0.796103697740145,
+      -0.5688797115813509,
+      0.6475670120790167,
+      0.6980256464312167,
+      0.7809830505705962,
+      1.1490316192924095,
+      0.2890435974002692,
+      1.512480402413065,
+      -0.3281350083833579
+    ],
+    "bias_origin_field_gradient_residual": [
+      3.253473849378942e-10,
+      -1.277110638222374e-08,
+      -1.8185624118573218e-08,
+      1.5314266256158393e-07,
+      1.8360020899443885e-08,
+      -1.8035595366130974e-07,
+      -3.7419132875582406e-07,
+      9.198263548754193e-08
+    ],
+    "bias_initialization": "Pre-energized fixed local axial-bias fit; not a zero-current startup",
+    "collocated_gain_dimensionless": 0.15425045617918903,
+    "collocated_gain_A2_per_W": 95590.3224538941,
+    "feedback_derivative": "Hamiltonian partial z derivative first; compose i(z) afterwards; total field Jacobian contains Di/Dz",
+    "magnetic_domain": "Away from ideal circular wires; physical_samples evaluates actual magnet quadrature points only",
+    "constraints": "Smooth feedback not automatically bounded; coil_control handles explicit constrained current ramps.",
+    "input_at_execution": "SI increment above axial bias: Bx,By,Bz,Gxx,Gyy,Gxy,Gxz,Gyz"
+  },
+  "duration_tau": 0.0005,
+  "duration_seconds": 0.0001121672427604084,
+  "initial_state": [
+    0.009800665778412416,
+    0.006216099682706645,
+    -0.00011714758713290688,
+    -0.002673078944651098,
+    -0.0023400650034276762,
+    -0.002004670955008666,
+    -0.0003434497763517713,
+    0.00042239663856923494,
+    0.0009713964335523372,
+    0.0006164865934812456,
+    0.00028831449452181235,
+    -1.555261969333705e-05,
+    0.0010343207233146883,
+    0.003262136800885292,
+    0.0012121093183480672,
+    0.00019815919912775725,
+    -0.0005689903042813087,
+    -0.0008241289518639397,
+    -0.0002153902030085732,
+    0.00012185349413057576,
+    0.0003601382410412057,
+    0.00018881774099542155,
+    2.064383633527739e-05,
+    -8.281594913786322e-05
+  ],
+  "initial_state_amplitude": 0.01,
+  "step_counts": [
+    4,
+    8,
+    16
+  ],
+  "solver_increment_tolerance": 2e-13,
+  "same_field_protocol": "Each branch and all methods in it share one full-coil/variable-mass field. Each branch has its own DOP853 references.",
+  "branches": {
+    "conservative": {
+      "kind": "conservative",
+      "gamma": 0.0,
+      "collocated_gain": 0.15425045617918903,
+      "initial_structure": {
+        "original_canonical_transport_defect_2": 5.471056400900184e-14,
+        "proportional_transport_defect_2": 5.471056400900184e-14,
+        "jacobian_condition": 1228.7470909095764,
+        "jacobian_spectral_norm": 874.9053313352144,
+        "original_form_preserved": true,
+        "weighted_form_available": false,
+        "new_Ku_required_for_Birkhoff_claim": false,
+        "statement": "Pointwise diagnostics; no uniform domain or KAM certificate."
+      },
+      "references": [
+        {
+          "success": true,
+          "message": "The solver successfully reached the end of the integration interval.",
+          "nfev": 62,
+          "rtol": 2e-11,
+          "atol": 2e-13,
+          "max_step": 0.000125,
+          "seconds": 9.010586174001219
+        },
+        {
+          "success": true,
+          "message": "The solver successfully reached the end of the integration interval.",
+          "nfev": 122,
+          "rtol": 5e-13,
+          "atol": 5e-15,
+          "max_step": 6.25e-05,
+          "seconds": 17.44693996099886
+        }
+      ],
+      "methods": {
+        "midpoint": [
+          {
+            "step": 0.000125,
+            "steps": 4,
+            "maximum_state_error": 3.586970766982001e-08,
+            "observed_order": null,
+            "maximum_fixed_bias_power_balance_residual": 2.5091040356528538e-14,
+            "maximum_mechanical_power_balance_residual": 2.469769052787521e-14,
+            "maximum_instantaneous_power_identity_residual": 1.3186608922854948e-17,
+            "maximum_current_A": 1.512480402413065,
+            "maximum_sample_difference_slew_A_per_s": 0.0,
+            "maximum_sampled_field_T": 0.0005009446838256966,
+            "maximum_sampled_gradient_T_per_m": 0.004314109465276227,
+            "minimum_sampled_wire_distance_m": 0.07659983115789175,
+            "maximum_increment_residual_inf": 5.343901747469819e-17,
+            "maximum_solver_condition": 1.001597217818843,
+            "minimum_solver_singular_value": 0.999915796513891,
+            "maximum_sampled_canonical_defect_2": 6.672284069210727e-16,
+            "maximum_sampled_weighted_defect_2": 6.672284069210727e-16,
+            "structure_steps_sampled": 4,
+            "structure_scope": "Ideal implicit tangents; all midpoint/weighted steps, first Central4 step.",
+            "seconds": 11.02236575400093,
+            "solver_steps": [
+              {
+                "increment_residual_inf": 5.343901747469819e-17,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0015971932404175,
+                "final_matrix_min_singular": 0.9999158523212051,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 4.463365694773693e-07,
+                    "matrix_condition": 1.0015971934938506
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 5.343901747469819e-17,
+                    "matrix_condition": 1.0015971932404175
+                  }
+                ],
+                "seconds": 1.4903687369987892,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 6.672284069210727e-16,
+                "weighted_two_form_defect_2": 6.672284069210727e-16
+              },
+              {
+                "increment_residual_inf": 4.9936668586699666e-17,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.001597178055153,
+                "final_matrix_min_singular": 0.9999158567073412,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 4.4591326616095817e-07,
+                    "matrix_condition": 1.0015971783857482
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 4.9936668586699666e-17,
+                    "matrix_condition": 1.001597178055153
+                  }
+                ],
+                "seconds": 1.4982327930010797,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 4.441131648287426e-16,
+                "weighted_two_form_defect_2": 4.441131648287426e-16
+              },
+              {
+                "increment_residual_inf": 4.4319596066762375e-17,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.001597186975785,
+                "final_matrix_min_singular": 0.9999158373806813,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 4.4410995457195605e-07,
+                    "matrix_condition": 1.0015971873947547
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 4.4319596066762375e-17,
+                    "matrix_condition": 1.001597186975785
+                  }
+                ],
+                "seconds": 1.5503628229998867,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 4.482039571760068e-16,
+                "weighted_two_form_defect_2": 4.482039571760068e-16
+              },
+              {
+                "increment_residual_inf": 4.0192533910384204e-17,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.001597217818843,
+                "final_matrix_min_singular": 0.999915796513891,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 4.4093221536491996e-07,
+                    "matrix_condition": 1.0015972183331376
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 4.0192533910384204e-17,
+                    "matrix_condition": 1.001597217818843
+                  }
+                ],
+                "seconds": 1.4739012709978851,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 4.444951994989459e-16,
+                "weighted_two_form_defect_2": 4.444951994989459e-16
+              }
+            ]
+          },
+          {
+            "step": 6.25e-05,
+            "steps": 8,
+            "maximum_state_error": 8.977205679816349e-09,
+            "observed_order": 1.998427633078052,
+            "maximum_fixed_bias_power_balance_residual": 6.439293542825908e-15,
+            "maximum_mechanical_power_balance_residual": 6.201052417252288e-15,
+            "maximum_instantaneous_power_identity_residual": 1.4535085374883794e-17,
+            "maximum_current_A": 1.512480402413065,
+            "maximum_sample_difference_slew_A_per_s": 0.0,
+            "maximum_sampled_field_T": 0.0005009446838258357,
+            "maximum_sampled_gradient_T_per_m": 0.0043141094654215485,
+            "minimum_sampled_wire_distance_m": 0.07659983115789175,
+            "maximum_increment_residual_inf": 2.5083027848363986e-18,
+            "maximum_solver_condition": 1.000449877152936,
+            "minimum_solver_singular_value": 0.9999421301809162,
+            "maximum_sampled_canonical_defect_2": 9.992065273041382e-16,
+            "maximum_sampled_weighted_defect_2": 9.992065273041382e-16,
+            "structure_steps_sampled": 8,
+            "structure_scope": "Ideal implicit tangents; all midpoint/weighted steps, first Central4 step.",
+            "seconds": 22.953462116998708,
+            "solver_steps": [
+              {
+                "increment_residual_inf": 1.9598224817096374e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.000449877152936,
+                "final_matrix_min_singular": 0.9999421301809162,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.1158409495479655e-07,
+                    "matrix_condition": 1.0004498771843604
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.9598224817096374e-18,
+                    "matrix_condition": 1.000449877152936
+                  }
+                ],
+                "seconds": 1.5036551049997797,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 6.661339127741726e-16,
+                "weighted_two_form_defect_2": 6.661339127741726e-16
+              },
+              {
+                "increment_residual_inf": 2.5083027848363986e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0004498552966126,
+                "final_matrix_min_singular": 0.9999421463676408,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.1157434286071466e-07,
+                    "matrix_condition": 1.0004498553281893
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 2.5083027848363986e-18,
+                    "matrix_condition": 1.0004498552966126
+                  }
+                ],
+                "seconds": 1.4513873670002795,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 4.442417621352512e-16,
+                "weighted_two_form_defect_2": 4.442417621352512e-16
+              },
+              {
+                "increment_residual_inf": 1.5033776022579763e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0004498368808743,
+                "final_matrix_min_singular": 0.9999421592325228,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.114782158048483e-07,
+                    "matrix_condition": 1.0004498369133383
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.5033776022579763e-18,
+                    "matrix_condition": 1.0004498368808743
+                  }
+                ],
+                "seconds": 1.4920195349986898,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 4.443594641715468e-16,
+                "weighted_two_form_defect_2": 4.443594641715468e-16
+              },
+              {
+                "increment_residual_inf": 1.858919681867969e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0004498218502493,
+                "final_matrix_min_singular": 0.9999421688297224,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.1129578819641748e-07,
+                    "matrix_condition": 1.00044982188431
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.858919681867969e-18,
+                    "matrix_condition": 1.0004498218502493
+                  }
+                ],
+                "seconds": 1.5655949690008129,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 9.992065273041382e-16,
+                "weighted_two_form_defect_2": 9.992065273041382e-16
+              },
+              {
+                "increment_residual_inf": 2.1031298684732243e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.000449810127074,
+                "final_matrix_min_singular": 0.9999421752353509,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.1102720125439181e-07,
+                    "matrix_condition": 1.0004498101634076
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 2.1031298684732243e-18,
+                    "matrix_condition": 1.000449810127074
+                  }
+                ],
+                "seconds": 1.5798700590021326,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 6.661563190827067e-16,
+                "weighted_two_form_defect_2": 6.661563190827067e-16
+              },
+              {
+                "increment_residual_inf": 1.6467379285807666e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0004498016139773,
+                "final_matrix_min_singular": 0.9999421785449907,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.1067266289846097e-07,
+                    "matrix_condition": 1.000449801653222
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.6467379285807666e-18,
+                    "matrix_condition": 1.0004498016139773
+                  }
+                ],
+                "seconds": 1.537213546998828,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 6.661340017939699e-16,
+                "weighted_two_form_defect_2": 6.661340017939699e-16
+              },
+              {
+                "increment_residual_inf": 1.2346563997415495e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0004497961967342,
+                "final_matrix_min_singular": 0.9999421788708501,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.1023244758783439e-07,
+                    "matrix_condition": 1.0004497962394827
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.2346563997415495e-18,
+                    "matrix_condition": 1.0004497961967342
+                  }
+                ],
+                "seconds": 1.5352515790000325,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 6.662118542624657e-16,
+                "weighted_two_form_defect_2": 6.662118542624657e-16
+              },
+              {
+                "increment_residual_inf": 1.6748620694075696e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0004497937472958,
+                "final_matrix_min_singular": 0.9999421763387392,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.0970689610913724e-07,
+                    "matrix_condition": 1.0004497937940975
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.6748620694075696e-18,
+                    "matrix_condition": 1.0004497937472958
+                  }
+                ],
+                "seconds": 1.5079273560004367,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 7.771562666155139e-16,
+                "weighted_two_form_defect_2": 7.771562666155139e-16
+              }
+            ]
+          },
+          {
+            "step": 3.125e-05,
+            "steps": 16,
+            "maximum_state_error": 2.2449138176111573e-09,
+            "observed_order": 1.9996063886351476,
+            "maximum_fixed_bias_power_balance_residual": 2.220446049250313e-15,
+            "maximum_mechanical_power_balance_residual": 1.5533353474066838e-15,
+            "maximum_instantaneous_power_identity_residual": 2.7098278048559576e-17,
+            "maximum_current_A": 1.512480402413065,
+            "maximum_sample_difference_slew_A_per_s": 0.0,
+            "maximum_sampled_field_T": 0.0005009446838258702,
+            "maximum_sampled_gradient_T_per_m": 0.004314109465457792,
+            "minimum_sampled_wire_distance_m": 0.07659983115789175,
+            "maximum_increment_residual_inf": 8.578789394460956e-19,
+            "maximum_solver_condition": 1.0001465324499537,
+            "minimum_solver_singular_value": 0.9999637673144341,
+            "maximum_sampled_canonical_defect_2": 9.992012611885845e-16,
+            "maximum_sampled_weighted_defect_2": 9.992012611885845e-16,
+            "structure_steps_sampled": 16,
+            "structure_scope": "Ideal implicit tangents; all midpoint/weighted steps, first Central4 step.",
+            "seconds": 45.796499248001055,
+            "solver_steps": [
+              {
+                "increment_residual_inf": 6.007647352850129e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001465324499537,
+                "final_matrix_min_singular": 0.9999637673144341,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.789601781184022e-08,
+                    "matrix_condition": 1.0001465324500016
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 6.007647352850129e-19,
+                    "matrix_condition": 1.0001465324499537
+                  }
+                ],
+                "seconds": 1.488712567002949,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 6.661708245936163e-16,
+                "weighted_two_form_defect_2": 6.661708245936163e-16
+              },
+              {
+                "increment_residual_inf": 5.574800281913381e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001465262894178,
+                "final_matrix_min_singular": 0.9999637709327147,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.789749848789737e-08,
+                    "matrix_condition": 1.0001465262893676
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 5.574800281913381e-19,
+                    "matrix_condition": 1.0001465262894178
+                  }
+                ],
+                "seconds": 1.451997661999485,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 7.771562237999043e-16,
+                "weighted_two_form_defect_2": 7.771562237999043e-16
+              },
+              {
+                "increment_residual_inf": 4.586617234933032e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001465205185596,
+                "final_matrix_min_singular": 0.9999637741987533,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7893579186914873e-08,
+                    "matrix_condition": 1.000146520518439
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 4.586617234933032e-19,
+                    "matrix_condition": 1.0001465205185596
+                  }
+                ],
+                "seconds": 1.6958139809976274,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 4.442967298622258e-16,
+                "weighted_two_form_defect_2": 4.442967298622258e-16
+              },
+              {
+                "increment_residual_inf": 3.4275717606237297e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001465151352387,
+                "final_matrix_min_singular": 0.9999637771144247,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7884260667183742e-08,
+                    "matrix_condition": 1.0001465151350748
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 3.4275717606237297e-19,
+                    "matrix_condition": 1.0001465151352387
+                  }
+                ],
+                "seconds": 1.5299507429990626,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 6.661339028751928e-16,
+                "weighted_two_form_defect_2": 6.661339028751928e-16
+              },
+              {
+                "increment_residual_inf": 2.200168080493045e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001465101366327,
+                "final_matrix_min_singular": 0.9999637796822655,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7869544732294828e-08,
+                    "matrix_condition": 1.0001465101364535
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 2.200168080493045e-19,
+                    "matrix_condition": 1.0001465101366327
+                  }
+                ],
+                "seconds": 1.7360944350002683,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 7.771561737916307e-16,
+                "weighted_two_form_defect_2": 7.771561737916307e-16
+              },
+              {
+                "increment_residual_inf": 6.51149960756843e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.000146505519262,
+                "final_matrix_min_singular": 0.9999637819054465,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.784943423052768e-08,
+                    "matrix_condition": 1.0001465055190955
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 6.51149960756843e-19,
+                    "matrix_condition": 1.000146505519262
+                  }
+                ],
+                "seconds": 1.6430434039975808,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 4.442726229087134e-16,
+                "weighted_two_form_defect_2": 4.442726229087134e-16
+              },
+              {
+                "increment_residual_inf": 4.0405456817500253e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001465012790225,
+                "final_matrix_min_singular": 0.9999637837877409,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7823933054339248e-08,
+                    "matrix_condition": 1.0001465012788961
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 4.0405456817500253e-19,
+                    "matrix_condition": 1.0001465012790225
+                  }
+                ],
+                "seconds": 1.7053442960022949,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 4.441737954936618e-16,
+                "weighted_two_form_defect_2": 4.441737954936618e-16
+              },
+              {
+                "increment_residual_inf": 8.578789394460956e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001464974112197,
+                "final_matrix_min_singular": 0.9999637853334928,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7793046139632426e-08,
+                    "matrix_condition": 1.0001464974111614
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 8.578789394460956e-19,
+                    "matrix_condition": 1.0001464974112197
+                  }
+                ],
+                "seconds": 1.6481122549994325,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 9.992012611885845e-16,
+                "weighted_two_form_defect_2": 9.992012611885845e-16
+              },
+              {
+                "increment_residual_inf": 3.3106415092332337e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001464939106053,
+                "final_matrix_min_singular": 0.9999637865475777,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7756779464865175e-08,
+                    "matrix_condition": 1.0001464939106426
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 3.3106415092332337e-19,
+                    "matrix_condition": 1.0001464939106053
+                  }
+                ],
+                "seconds": 1.5385054849975859,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 5.551335953221397e-16,
+                "weighted_two_form_defect_2": 5.551335953221397e-16
+              },
+              {
+                "increment_residual_inf": 3.620271756124083e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001464907714184,
+                "final_matrix_min_singular": 0.9999637874353631,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7715140049804623e-08,
+                    "matrix_condition": 1.0001464907715782
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 3.620271756124083e-19,
+                    "matrix_condition": 1.0001464907714184
+                  }
+                ],
+                "seconds": 1.7207103589971666,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 8.881784669909461e-16,
+                "weighted_two_form_defect_2": 8.881784669909461e-16
+              },
+              {
+                "increment_residual_inf": 5.460318485136042e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001464879874253,
+                "final_matrix_min_singular": 0.9999637880026689,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7668135954211725e-08,
+                    "matrix_condition": 1.000146487987735
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 5.460318485136042e-19,
+                    "matrix_condition": 1.0001464879874253
+                  }
+                ],
+                "seconds": 1.6904685399968002,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 5.554089753248739e-16,
+                "weighted_two_form_defect_2": 5.554089753248739e-16
+              },
+              {
+                "increment_residual_inf": 3.9004543732080446e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001464855519635,
+                "final_matrix_min_singular": 0.9999637882557251,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.761577627628384e-08,
+                    "matrix_condition": 1.0001464855524496
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 3.9004543732080446e-19,
+                    "matrix_condition": 1.0001464855519635
+                  }
+                ],
+                "seconds": 1.66176348999943,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 8.88178433888306e-16,
+                "weighted_two_form_defect_2": 8.88178433888306e-16
+              },
+              {
+                "increment_residual_inf": 2.762386199233087e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001464834579825,
+                "final_matrix_min_singular": 0.9999637882011277,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7558071150870763e-08,
+                    "matrix_condition": 1.0001464834586715
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 2.762386199233087e-19,
+                    "matrix_condition": 1.0001464834579825
+                  }
+                ],
+                "seconds": 1.6402169829998456,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 4.4462443381063925e-16,
+                "weighted_two_form_defect_2": 4.4462443381063925e-16
+              },
+              {
+                "increment_residual_inf": 3.4944079541180144e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001464816980872,
+                "final_matrix_min_singular": 0.9999637878457994,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.749503174743323e-08,
+                    "matrix_condition": 1.0001464816990049
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 3.4944079541180144e-19,
+                    "matrix_condition": 1.0001464816980872
+                  }
+                ],
+                "seconds": 1.5877497479996237,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 4.440916812300379e-16,
+                "weighted_two_form_defect_2": 4.440916812300379e-16
+              },
+              {
+                "increment_residual_inf": 4.913320489666976e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001464802645799,
+                "final_matrix_min_singular": 0.9999637871969457,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7426670268133698e-08,
+                    "matrix_condition": 1.0001464802657514
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 4.913320489666976e-19,
+                    "matrix_condition": 1.0001464802645799
+                  }
+                ],
+                "seconds": 1.627473871998518,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 8.88178521549713e-16,
+                "weighted_two_form_defect_2": 8.88178521549713e-16
+              },
+              {
+                "increment_residual_inf": 3.8853665988350774e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001464791495,
+                "final_matrix_min_singular": 0.9999637862620162,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.73529999452296e-08,
+                    "matrix_condition": 1.00014647915095
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 3.8853665988350774e-19,
+                    "matrix_condition": 1.0001464791495
+                  }
+                ],
+                "seconds": 1.6079799860017374,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 8.881784720743824e-16,
+                "weighted_two_form_defect_2": 8.881784720743824e-16
+              }
+            ]
+          }
+        ],
+        "central4": [
+          {
+            "step": 0.000125,
+            "steps": 4,
+            "maximum_state_error": 3.759843466493459e-11,
+            "observed_order": null,
+            "maximum_fixed_bias_power_balance_residual": 1.2878587085651816e-14,
+            "maximum_mechanical_power_balance_residual": 1.5659624327020133e-13,
+            "maximum_instantaneous_power_identity_residual": 1.151287181908045e-17,
+            "maximum_current_A": 1.512480402413065,
+            "maximum_sample_difference_slew_A_per_s": 0.0,
+            "maximum_sampled_field_T": 0.0005009446838258783,
+            "maximum_sampled_gradient_T_per_m": 0.004314109465466783,
+            "minimum_sampled_wire_distance_m": 0.07659983115789175,
+            "maximum_increment_residual_inf": 1.2226728486543388e-13,
+            "maximum_solver_condition": 1.0016001816741622,
+            "minimum_solver_singular_value": 0.9999158150973119,
+            "maximum_sampled_canonical_defect_2": 8.882041241555056e-16,
+            "maximum_sampled_weighted_defect_2": 8.882041241555056e-16,
+            "structure_steps_sampled": 1,
+            "structure_scope": "Ideal implicit tangents; all midpoint/weighted steps, first Central4 step.",
+            "seconds": 19.925586644996656,
+            "solver_steps": [
+              {
+                "increment_residual_inf": 1.210764759732399e-13,
+                "nonlinear_corrections": 1,
+                "solver_matrix_condition": 1.0016001922479596,
+                "solver_matrix_minimum_singular_value": 0.9999158363253582,
+                "ideal_implicit_matrix_condition": 1.00160017565462,
+                "ideal_implicit_matrix_minimum_singular_value": 0.9999158477505297,
+                "increment_Hamiltonian_Jacobian_defect": 8.026277370933604e-18,
+                "seconds": 6.797883560000628,
+                "residual_coordinates": "Full nonseparable central-generator increment",
+                "final_matrix_condition": 1.00160017565462,
+                "final_matrix_min_singular": 0.9999158477505297,
+                "derivative": "Inherited chord solve; exact residual; ideal generator tangent when sampled",
+                "canonical_two_form_defect_2": 8.882041241555056e-16,
+                "weighted_two_form_defect_2": 8.882041241555056e-16
+              },
+              {
+                "increment_residual_inf": 1.2226728486543388e-13,
+                "nonlinear_corrections": 1,
+                "solver_matrix_condition": 1.0016001642869807,
+                "solver_matrix_minimum_singular_value": 0.9999158532909318,
+                "seconds": 2.695127243998286,
+                "residual_coordinates": "Full nonseparable central-generator increment",
+                "final_matrix_condition": 1.0016001642869807,
+                "final_matrix_min_singular": 0.9999158532909318,
+                "derivative": "Inherited chord solve; exact residual; ideal generator tangent when sampled"
+              },
+              {
+                "increment_residual_inf": 1.2190496652224585e-13,
+                "nonlinear_corrections": 1,
+                "solver_matrix_condition": 1.0016001614585621,
+                "solver_matrix_minimum_singular_value": 0.9999158455219612,
+                "seconds": 2.656388382998557,
+                "residual_coordinates": "Full nonseparable central-generator increment",
+                "final_matrix_condition": 1.0016001614585621,
+                "final_matrix_min_singular": 0.9999158455219612,
+                "derivative": "Inherited chord solve; exact residual; ideal generator tangent when sampled"
+              },
+              {
+                "increment_residual_inf": 1.2005582668278688e-13,
+                "nonlinear_corrections": 1,
+                "solver_matrix_condition": 1.0016001816741622,
+                "solver_matrix_minimum_singular_value": 0.9999158150973119,
+                "seconds": 2.4969244849999086,
+                "residual_coordinates": "Full nonseparable central-generator increment",
+                "final_matrix_condition": 1.0016001816741622,
+                "final_matrix_min_singular": 0.9999158150973119,
+                "derivative": "Inherited chord solve; exact residual; ideal generator tangent when sampled"
+              }
+            ]
+          },
+          {
+            "step": 6.25e-05,
+            "steps": 8,
+            "maximum_state_error": 2.3543947273024002e-12,
+            "observed_order": 3.9972444778793346,
+            "maximum_fixed_bias_power_balance_residual": 1.9984014443252818e-15,
+            "maximum_mechanical_power_balance_residual": 3.834857189399629e-14,
+            "maximum_instantaneous_power_identity_residual": 1.015761910347357e-17,
+            "maximum_current_A": 1.512480402413065,
+            "maximum_sample_difference_slew_A_per_s": 0.0,
+            "maximum_sampled_field_T": 0.0005009446838258814,
+            "maximum_sampled_gradient_T_per_m": 0.004314109465469504,
+            "minimum_sampled_wire_distance_m": 0.07659983115789175,
+            "maximum_increment_residual_inf": 7.633687501969145e-15,
+            "maximum_solver_condition": 1.000450065196749,
+            "minimum_solver_singular_value": 0.9999421284723105,
+            "maximum_sampled_canonical_defect_2": 6.702446628942567e-16,
+            "maximum_sampled_weighted_defect_2": 6.702446628942567e-16,
+            "structure_steps_sampled": 1,
+            "structure_scope": "Ideal implicit tangents; all midpoint/weighted steps, first Central4 step.",
+            "seconds": 34.78747745199871,
+            "solver_steps": [
+              {
+                "increment_residual_inf": 7.508834422027388e-15,
+                "nonlinear_corrections": 1,
+                "solver_matrix_condition": 1.0004500772614051,
+                "solver_matrix_minimum_singular_value": 0.9999421191961796,
+                "ideal_implicit_matrix_condition": 1.000450065196749,
+                "ideal_implicit_matrix_minimum_singular_value": 0.9999421284723105,
+                "increment_Hamiltonian_Jacobian_defect": 4.015224215148052e-18,
+                "seconds": 6.339490040001692,
+                "residual_coordinates": "Full nonseparable central-generator increment",
+                "final_matrix_condition": 1.000450065196749,
+                "final_matrix_min_singular": 0.9999421284723105,
+                "derivative": "Inherited chord solve; exact residual; ideal generator tangent when sampled",
+                "canonical_two_form_defect_2": 6.702446628942567e-16,
+                "weighted_two_form_defect_2": 6.702446628942567e-16
+              },
+              {
+                "increment_residual_inf": 7.575222746850812e-15,
+                "nonlinear_corrections": 1,
+                "solver_matrix_condition": 1.000450053670134,
+                "solver_matrix_minimum_singular_value": 0.999942137058683,
+                "seconds": 2.6251427860006515,
+                "residual_coordinates": "Full nonseparable central-generator increment",
+                "final_matrix_condition": 1.000450053670134,
+                "final_matrix_min_singular": 0.999942137058683,
+                "derivative": "Inherited chord solve; exact residual; ideal generator tangent when sampled"
+              },
+              {
+                "increment_residual_inf": 7.616709150057906e-15,
+                "nonlinear_corrections": 1,
+                "solver_matrix_condition": 1.0004500335389177,
+                "solver_matrix_minimum_singular_value": 0.9999421515804717,
+                "seconds": 2.57200775399906,
+                "residual_coordinates": "Full nonseparable central-generator increment",
+                "final_matrix_condition": 1.0004500335389177,
+                "final_matrix_min_singular": 0.9999421515804717,
+                "derivative": "Inherited chord solve; exact residual; ideal generator tangent when sampled"
+              },
+              {
+                "increment_residual_inf": 7.633687501969145e-15,
+                "nonlinear_corrections": 1,
+                "solver_matrix_condition": 1.0004500168241364,
+                "solver_matrix_minimum_singular_value": 0.999942162803977,
+                "seconds": 2.7421854929998517,
+                "residual_coordinates": "Full nonseparable central-generator increment",
+                "final_matrix_condition": 1.0004500168241364,
+                "final_matrix_min_singular": 0.999942162803977,
+                "derivative": "Inherited chord solve; exact residual; ideal generator tangent when sampled"
+              },
+              {
+                "increment_residual_inf": 7.62649661576343e-15,
+                "nonlinear_corrections": 1,
+                "solver_matrix_condition": 1.000450003458917,
+                "solver_matrix_minimum_singular_value": 0.9999421707946391,
+                "seconds": 2.677724691999174,
+                "residual_coordinates": "Full nonseparable central-generator increment",
+                "final_matrix_condition": 1.000450003458917,
+                "final_matrix_min_singular": 0.9999421707946391,
+                "derivative": "Inherited chord solve; exact residual; ideal generator tangent when sampled"
+              },
+              {
+                "increment_residual_inf": 7.59570866219663e-15,
+                "nonlinear_corrections": 1,
+                "solver_matrix_condition": 1.0004499933553723,
+                "solver_matrix_minimum_singular_value": 0.9999421756386716,
+                "seconds": 2.4958278960002644,
+                "residual_coordinates": "Full nonseparable central-generator increment",
+                "final_matrix_condition": 1.0004499933553723,
+                "final_matrix_min_singular": 0.9999421756386716,
+                "derivative": "Inherited chord solve; exact residual; ideal generator tangent when sampled"
+              },
+              {
+                "increment_residual_inf": 7.542021596417285e-15,
+                "nonlinear_corrections": 1,
+                "solver_matrix_condition": 1.0004499864072947,
+                "solver_matrix_minimum_singular_value": 0.9999421774403775,
+                "seconds": 2.7126840319979237,
+                "residual_coordinates": "Full nonseparable central-generator increment",
+                "final_matrix_condition": 1.0004499864072947,
+                "final_matrix_min_singular": 0.9999421774403775,
+                "derivative": "Inherited chord solve; exact residual; ideal generator tangent when sampled"
+              },
+              {
+                "increment_residual_inf": 7.465812348086921e-15,
+                "nonlinear_corrections": 1,
+                "solver_matrix_condition": 1.0004499824931206,
+                "solver_matrix_minimum_singular_value": 0.9999421763191895,
+                "seconds": 2.7942720120008744,
+                "residual_coordinates": "Full nonseparable central-generator increment",
+                "final_matrix_condition": 1.0004499824931206,
+                "final_matrix_min_singular": 0.9999421763191895,
+                "derivative": "Inherited chord solve; exact residual; ideal generator tangent when sampled"
+              }
+            ]
+          },
+          {
+            "step": 3.125e-05,
+            "steps": 16,
+            "maximum_state_error": 1.4749262237590846e-13,
+            "observed_order": 3.9966415190960998,
+            "maximum_fixed_bias_power_balance_residual": 8.881784197001252e-16,
+            "maximum_mechanical_power_balance_residual": 9.488865061759316e-15,
+            "maximum_instantaneous_power_identity_residual": 1.4148838350935833e-17,
+            "maximum_current_A": 1.512480402413065,
+            "maximum_sample_difference_slew_A_per_s": 0.0,
+            "maximum_sampled_field_T": 0.0005009446838258817,
+            "maximum_sampled_gradient_T_per_m": 0.0043141094654698476,
+            "minimum_sampled_wire_distance_m": 0.07659983115789175,
+            "maximum_increment_residual_inf": 4.769526058958718e-16,
+            "maximum_solver_condition": 1.0001465446012712,
+            "minimum_solver_singular_value": 0.9999637668657976,
+            "maximum_sampled_canonical_defect_2": 7.77156141876536e-16,
+            "maximum_sampled_weighted_defect_2": 7.77156141876536e-16,
+            "structure_steps_sampled": 1,
+            "structure_scope": "Ideal implicit tangents; all midpoint/weighted steps, first Central4 step.",
+            "seconds": 66.16780080399985,
+            "solver_steps": [
+              {
+                "increment_residual_inf": 4.673991330420273e-16,
+                "nonlinear_corrections": 1,
+                "solver_matrix_condition": 1.0001465477942286,
+                "solver_matrix_minimum_singular_value": 0.9999637649382481,
+                "ideal_implicit_matrix_condition": 1.0001465446012712,
+                "ideal_implicit_matrix_minimum_singular_value": 0.9999637668657976,
+                "increment_Hamiltonian_Jacobian_defect": 2.8960425981622048e-18,
+                "seconds": 6.825662913000997,
+                "residual_coordinates": "Full nonseparable central-generator increment",
+                "final_matrix_condition": 1.0001465446012712,
+                "final_matrix_min_singular": 0.9999637668657976,
+                "derivative": "Inherited chord solve; exact residual; ideal generator tangent when sampled",
+                "canonical_two_form_defect_2": 7.77156141876536e-16,
+                "weighted_two_form_defect_2": 7.77156141876536e-16
+              },
+              {
+                "increment_residual_inf": 4.699080446317946e-16,
+                "nonlinear_corrections": 1,
+                "solver_matrix_condition": 1.0001465414381752,
+                "solver_matrix_minimum_singular_value": 0.9999637687332229,
+                "seconds": 2.9136886010019225,
+                "residual_coordinates": "Full nonseparable central-generator increment",
+                "final_matrix_condition": 1.0001465414381752,
+                "final_matrix_min_singular": 0.9999637687332229,
+                "derivative": "Inherited chord solve; exact residual; ideal generator tangent when sampled"
+              },
+              {
+                "increment_residual_inf": 4.720133450221951e-16,
+                "nonlinear_corrections": 1,
+                "solver_matrix_condition": 1.0001465354726276,
+                "solver_matrix_minimum_singular_value": 0.9999637721752553,
+                "seconds": 2.7860076159995515,
+                "residual_coordinates": "Full nonseparable central-generator increment",
+                "final_matrix_condition": 1.0001465354726276,
+                "final_matrix_min_singular": 0.9999637721752553,
+                "derivative": "Inherited chord solve; exact residual; ideal generator tangent when sampled"
+              },
+              {
+                "increment_residual_inf": 4.738418773970804e-16,
+                "nonlinear_corrections": 1,
+                "solver_matrix_condition": 1.0001465298957959,
+                "solver_matrix_minimum_singular_value": 0.9999637752658812,
+                "seconds": 2.7553049119997013,
+                "residual_coordinates": "Full nonseparable central-generator increment",
+                "final_matrix_condition": 1.0001465298957959,
+                "final_matrix_min_singular": 0.9999637752658812,
+                "derivative": "Inherited chord solve; exact residual; ideal generator tangent when sampled"
+              },
+              {
+                "increment_residual_inf": 4.752079297827647e-16,
+                "nonlinear_corrections": 1,
+                "solver_matrix_condition": 1.000146524705196,
+                "solver_matrix_minimum_singular_value": 0.9999637780073091,
+                "seconds": 2.638068309999653,
+                "residual_coordinates": "Full nonseparable central-generator increment",
+                "final_matrix_condition": 1.000146524705196,
+                "final_matrix_min_singular": 0.9999637780073091,
+                "derivative": "Inherited chord solve; exact residual; ideal generator tangent when sampled"
+              },
+              {
+                "increment_residual_inf": 4.761004907509339e-16,
+                "nonlinear_corrections": 1,
+                "solver_matrix_condition": 1.000146519897673,
+                "solver_matrix_minimum_singular_value": 0.9999637804023956,
+                "seconds": 2.674577566998778,
+                "residual_coordinates": "Full nonseparable central-generator increment",
+                "final_matrix_condition": 1.000146519897673,
+                "final_matrix_min_singular": 0.9999637804023956,
+                "derivative": "Inherited chord solve; exact residual; ideal generator tangent when sampled"
+              },
+              {
+                "increment_residual_inf": 4.767577883180033e-16,
+                "nonlinear_corrections": 1,
+                "solver_matrix_condition": 1.0001465154694311,
+                "solver_matrix_minimum_singular_value": 0.999963782454618,
+                "seconds": 2.4134071139997104,
+                "residual_coordinates": "Full nonseparable central-generator increment",
+                "final_matrix_condition": 1.0001465154694311,
+                "final_matrix_min_singular": 0.999963782454618,
+                "derivative": "Inherited chord solve; exact residual; ideal generator tangent when sampled"
+              },
+              {
+                "increment_residual_inf": 4.769526058958718e-16,
+                "nonlinear_corrections": 1,
+                "solver_matrix_condition": 1.0001465114160657,
+                "solver_matrix_minimum_singular_value": 0.9999637841680382,
+                "seconds": 2.854477519998909,
+                "residual_coordinates": "Full nonseparable central-generator increment",
+                "final_matrix_condition": 1.0001465114160657,
+                "final_matrix_min_singular": 0.9999637841680382,
+                "derivative": "Inherited chord solve; exact residual; ideal generator tangent when sampled"
+              },
+              {
+                "increment_residual_inf": 4.767476239226362e-16,
+                "nonlinear_corrections": 1,
+                "solver_matrix_condition": 1.000146507732602,
+                "solver_matrix_minimum_singular_value": 0.9999637855472716,
+                "seconds": 2.8066361649980536,
+                "residual_coordinates": "Full nonseparable central-generator increment",
+                "final_matrix_condition": 1.000146507732602,
+                "final_matrix_min_singular": 0.9999637855472716,
+                "derivative": "Inherited chord solve; exact residual; ideal generator tangent when sampled"
+              },
+              {
+                "increment_residual_inf": 4.762970023946969e-16,
+                "nonlinear_corrections": 1,
+                "solver_matrix_condition": 1.0001465044135283,
+                "solver_matrix_minimum_singular_value": 0.9999637865974449,
+                "seconds": 2.7382281110003532,
+                "residual_coordinates": "Full nonseparable central-generator increment",
+                "final_matrix_condition": 1.0001465044135283,
+                "final_matrix_min_singular": 0.9999637865974449,
+                "derivative": "Inherited chord solve; exact residual; ideal generator tangent when sampled"
+              },
+              {
+                "increment_residual_inf": 4.754046531847645e-16,
+                "nonlinear_corrections": 1,
+                "solver_matrix_condition": 1.0001465014528432,
+                "solver_matrix_minimum_singular_value": 0.9999637873241572,
+                "seconds": 2.488619984000252,
+                "residual_coordinates": "Full nonseparable central-generator increment",
+                "final_matrix_condition": 1.0001465014528432,
+                "final_matrix_min_singular": 0.9999637873241572,
+                "derivative": "Inherited chord solve; exact residual; ideal generator tangent when sampled"
+              },
+              {
+                "increment_residual_inf": 4.741440564010133e-16,
+                "nonlinear_corrections": 1,
+                "solver_matrix_condition": 1.0001464988440918,
+                "solver_matrix_minimum_singular_value": 0.9999637877334387,
+                "seconds": 2.5505063040000095,
+                "residual_coordinates": "Full nonseparable central-generator increment",
+                "final_matrix_condition": 1.0001464988440918,
+                "final_matrix_min_singular": 0.9999637877334387,
+                "derivative": "Inherited chord solve; exact residual; ideal generator tangent when sampled"
+              },
+              {
+                "increment_residual_inf": 4.725090710545757e-16,
+                "nonlinear_corrections": 1,
+                "solver_matrix_condition": 1.0001464965804128,
+                "solver_matrix_minimum_singular_value": 0.9999637878317081,
+                "seconds": 2.6066965570025786,
+                "residual_coordinates": "Full nonseparable central-generator increment",
+                "final_matrix_condition": 1.0001464965804128,
+                "final_matrix_min_singular": 0.9999637878317081,
+                "derivative": "Inherited chord solve; exact residual; ideal generator tangent when sampled"
+              },
+              {
+                "increment_residual_inf": 4.70529978573316e-16,
+                "nonlinear_corrections": 1,
+                "solver_matrix_condition": 1.0001464946545775,
+                "solver_matrix_minimum_singular_value": 0.9999637876257308,
+                "seconds": 2.582864828000311,
+                "residual_coordinates": "Full nonseparable central-generator increment",
+                "final_matrix_condition": 1.0001464946545775,
+                "final_matrix_min_singular": 0.9999637876257308,
+                "derivative": "Inherited chord solve; exact residual; ideal generator tangent when sampled"
+              },
+              {
+                "increment_residual_inf": 4.682156728031805e-16,
+                "nonlinear_corrections": 1,
+                "solver_matrix_condition": 1.0001464930590334,
+                "solver_matrix_minimum_singular_value": 0.9999637871225757,
+                "seconds": 2.5030673070032208,
+                "residual_coordinates": "Full nonseparable central-generator increment",
+                "final_matrix_condition": 1.0001464930590334,
+                "final_matrix_min_singular": 0.9999637871225757,
+                "derivative": "Inherited chord solve; exact residual; ideal generator tangent when sampled"
+              },
+              {
+                "increment_residual_inf": 4.655470955028558e-16,
+                "nonlinear_corrections": 1,
+                "solver_matrix_condition": 1.0001464917859466,
+                "solver_matrix_minimum_singular_value": 0.9999637863295763,
+                "seconds": 3.224674701999902,
+                "residual_coordinates": "Full nonseparable central-generator increment",
+                "final_matrix_condition": 1.0001464917859466,
+                "final_matrix_min_singular": 0.9999637863295763,
+                "derivative": "Inherited chord solve; exact residual; ideal generator tangent when sampled"
+              }
+            ]
+          }
+        ]
+      },
+      "reference_resolution": {
+        "midpoint": true,
+        "central4": true
+      },
+      "reference_refinement_max": 1.2352097430593461e-17
+    },
+    "proportional": {
+      "kind": "proportional",
+      "gamma": 0.2,
+      "collocated_gain": 0.15425045617918903,
+      "initial_structure": {
+        "original_canonical_transport_defect_2": 0.20000000000003532,
+        "proportional_transport_defect_2": 5.471001974973009e-14,
+        "jacobian_condition": 1269.8445574730097,
+        "jacobian_spectral_norm": 874.9957929931139,
+        "original_form_preserved": false,
+        "weighted_form_available": true,
+        "new_Ku_required_for_Birkhoff_claim": false,
+        "statement": "Pointwise diagnostics; no uniform domain or KAM certificate."
+      },
+      "references": [
+        {
+          "success": true,
+          "message": "The solver successfully reached the end of the integration interval.",
+          "nfev": 62,
+          "rtol": 2e-11,
+          "atol": 2e-13,
+          "max_step": 0.000125,
+          "seconds": 11.731661032001284
+        },
+        {
+          "success": true,
+          "message": "The solver successfully reached the end of the integration interval.",
+          "nfev": 122,
+          "rtol": 5e-13,
+          "atol": 5e-15,
+          "max_step": 6.25e-05,
+          "seconds": 17.36558673699983
+        }
+      ],
+      "methods": {
+        "midpoint": [
+          {
+            "step": 0.000125,
+            "steps": 4,
+            "maximum_state_error": 3.586993347565747e-08,
+            "observed_order": null,
+            "maximum_fixed_bias_power_balance_residual": 2.6994606959757824e-14,
+            "maximum_mechanical_power_balance_residual": 2.7030988378109878e-14,
+            "maximum_instantaneous_power_identity_residual": 9.041229678992402e-18,
+            "maximum_current_A": 1.512480402413065,
+            "maximum_sample_difference_slew_A_per_s": 0.0,
+            "maximum_sampled_field_T": 0.0005009446838238135,
+            "maximum_sampled_gradient_T_per_m": 0.0043141094615794595,
+            "minimum_sampled_wire_distance_m": 0.07659983115789175,
+            "maximum_increment_residual_inf": 5.3928920155566396e-17,
+            "maximum_solver_condition": 1.0016026389776707,
+            "minimum_solver_singular_value": 0.9999221460021877,
+            "maximum_sampled_canonical_defect_2": 2.4999688142260943e-05,
+            "maximum_sampled_weighted_defect_2": 7.452363884661859e-08,
+            "structure_steps_sampled": 4,
+            "structure_scope": "Ideal implicit tangents; all midpoint/weighted steps, first Central4 step.",
+            "seconds": 12.293461662000482,
+            "solver_steps": [
+              {
+                "increment_residual_inf": 5.3928920155566396e-17,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0016026389776707,
+                "final_matrix_min_singular": 0.9999221460021877,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 4.4633873474921025e-07,
+                    "matrix_condition": 1.001602638786528
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 5.3928920155566396e-17,
+                    "matrix_condition": 1.0016026389776707
+                  }
+                ],
+                "seconds": 1.8578809439968609,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 2.4999688142260943e-05,
+                "weighted_two_form_defect_2": 7.452363884661859e-08
+              },
+              {
+                "increment_residual_inf": 4.931293470016528e-17,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0016024494226197,
+                "final_matrix_min_singular": 0.9999223248839914,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 4.4590428361745823e-07,
+                    "matrix_condition": 1.001602449258479
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 4.931293470016528e-17,
+                    "matrix_condition": 1.0016024494226197
+                  }
+                ],
+                "seconds": 1.6224076739999873,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 2.499968814041869e-05,
+                "weighted_two_form_defect_2": 7.452363810118793e-08
+              },
+              {
+                "increment_residual_inf": 4.484581528524411e-17,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.001602291955891,
+                "final_matrix_min_singular": 0.9999224719794124,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 4.4408988011826257e-07,
+                    "matrix_condition": 1.0016022918521834
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 4.484581528524411e-17,
+                    "matrix_condition": 1.001602291955891
+                  }
+                ],
+                "seconds": 2.1318370509980014,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 2.49996881384715e-05,
+                "weighted_two_form_defect_2": 7.452363815782353e-08
+              },
+              {
+                "increment_residual_inf": 3.8958036329320264e-17,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.001602167930853,
+                "final_matrix_min_singular": 0.9999225859357918,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 4.409011736344749e-07,
+                    "matrix_condition": 1.0016021679175167
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 3.8958036329320264e-17,
+                    "matrix_condition": 1.001602167930853
+                  }
+                ],
+                "seconds": 1.8605748240006506,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 2.499968813676569e-05,
+                "weighted_two_form_defect_2": 7.452363645413006e-08
+              }
+            ]
+          },
+          {
+            "step": 6.25e-05,
+            "steps": 8,
+            "maximum_state_error": 8.977262107867718e-09,
+            "observed_order": 1.9984276467327045,
+            "maximum_fixed_bias_power_balance_residual": 7.235966731845078e-15,
+            "maximum_mechanical_power_balance_residual": 6.7857321623050645e-15,
+            "maximum_instantaneous_power_identity_residual": 1.7076184216646695e-17,
+            "maximum_current_A": 1.512480402413065,
+            "maximum_sample_difference_slew_A_per_s": 0.0,
+            "maximum_sampled_field_T": 0.000500944683823953,
+            "maximum_sampled_gradient_T_per_m": 0.004314109461724093,
+            "minimum_sampled_wire_distance_m": 0.07659983115789175,
+            "maximum_increment_residual_inf": 1.950240421493823e-18,
+            "maximum_solver_condition": 1.0004523709146582,
+            "minimum_solver_singular_value": 0.9999453178251287,
+            "maximum_sampled_canonical_defect_2": 1.2499921955470013e-05,
+            "maximum_sampled_weighted_defect_2": 9.336445111130297e-09,
+            "structure_steps_sampled": 8,
+            "structure_scope": "Ideal implicit tangents; all midpoint/weighted steps, first Central4 step.",
+            "seconds": 26.669029708999005,
+            "solver_steps": [
+              {
+                "increment_residual_inf": 1.935854096280301e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0004523709146582,
+                "final_matrix_min_singular": 0.9999453178251287,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.115846360280296e-07,
+                    "matrix_condition": 1.000452370934514
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.935854096280301e-18,
+                    "matrix_condition": 1.0004523709146582
+                  }
+                ],
+                "seconds": 1.3787140469976293,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 1.249992195538934e-05,
+                "weighted_two_form_defect_2": 9.336445111130297e-09
+              },
+              {
+                "increment_residual_inf": 1.5537760626196072e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0004522933611177,
+                "final_matrix_min_singular": 0.9999453901598149,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.1157348925229839e-07,
+                    "matrix_condition": 1.000452293375366
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.5537760626196072e-18,
+                    "matrix_condition": 1.0004522933611177
+                  }
+                ],
+                "seconds": 1.6915826799995557,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 1.2499921955470013e-05,
+                "weighted_two_form_defect_2": 9.336444737930183e-09
+              },
+              {
+                "increment_residual_inf": 1.6772575844615232e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.000452217928277,
+                "final_matrix_min_singular": 0.9999454604466379,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.1147596885564402e-07,
+                    "matrix_condition": 1.0004522179375497
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.6772575844615232e-18,
+                    "matrix_condition": 1.000452217928277
+                  }
+                ],
+                "seconds": 1.3865089290011383,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 1.2499921954916687e-05,
+                "weighted_two_form_defect_2": 9.336444814534185e-09
+              },
+              {
+                "increment_residual_inf": 1.450040996360557e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0004521448882244,
+                "final_matrix_min_singular": 0.9999455284133646,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.1129215140469022e-07,
+                    "matrix_condition": 1.0004521448932444
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.450040996360557e-18,
+                    "matrix_condition": 1.0004521448882244
+                  }
+                ],
+                "seconds": 1.4388578990001406,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 1.2499921955133687e-05,
+                "weighted_two_form_defect_2": 9.336444993523338e-09
+              },
+              {
+                "increment_residual_inf": 1.950240421493823e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0004520745460337,
+                "final_matrix_min_singular": 0.9999455937547221,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.1102218027209035e-07,
+                    "matrix_condition": 1.000452074547629
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.950240421493823e-18,
+                    "matrix_condition": 1.0004520745460337
+                  }
+                ],
+                "seconds": 1.3903247519992874,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 1.2499921955032299e-05,
+                "weighted_two_form_defect_2": 9.336444629749762e-09
+              },
+              {
+                "increment_residual_inf": 1.2956957115030625e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.000452007241594,
+                "final_matrix_min_singular": 0.9999456561305755,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.1066626552444466e-07,
+                    "matrix_condition": 1.0004520072407057
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.2956957115030625e-18,
+                    "matrix_condition": 1.000452007241594
+                  }
+                ],
+                "seconds": 1.7971514750024653,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 1.2499921954732634e-05,
+                "weighted_two_form_defect_2": 9.33644469537403e-09
+              },
+              {
+                "increment_residual_inf": 1.2143276090074463e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0004519433495258,
+                "final_matrix_min_singular": 0.9999457151660098,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.1022468375892742e-07,
+                    "matrix_condition": 1.0004519433472188
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.2143276090074463e-18,
+                    "matrix_condition": 1.0004519433495258
+                  }
+                ],
+                "seconds": 2.6950910390005447,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 1.2499921954317576e-05,
+                "weighted_two_form_defect_2": 9.336444435995449e-09
+              },
+              {
+                "increment_residual_inf": 1.344029529055761e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0004518832760052,
+                "final_matrix_min_singular": 0.9999457704545047,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.0969777788834896e-07,
+                    "matrix_condition": 1.0004518832734726
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.344029529055761e-18,
+                    "matrix_condition": 1.0004518832760052
+                  }
+                ],
+                "seconds": 1.9822809329998563,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 1.249992195469467e-05,
+                "weighted_two_form_defect_2": 9.336444843297108e-09
+              }
+            ]
+          },
+          {
+            "step": 3.125e-05,
+            "steps": 16,
+            "maximum_state_error": 2.24492792291062e-09,
+            "observed_order": 1.9996063922100158,
+            "maximum_fixed_bias_power_balance_residual": 2.3543202459744688e-15,
+            "maximum_mechanical_power_balance_residual": 1.698460595915254e-15,
+            "maximum_instantaneous_power_identity_residual": 1.5783611939136633e-17,
+            "maximum_current_A": 1.512480402413065,
+            "maximum_sample_difference_slew_A_per_s": 0.0,
+            "maximum_sampled_field_T": 0.0005009446838239875,
+            "maximum_sampled_gradient_T_per_m": 0.004314109461760263,
+            "minimum_sampled_wire_distance_m": 0.07659983115789175,
+            "maximum_increment_residual_inf": 9.069009712684383e-19,
+            "maximum_solver_condition": 1.000147426706287,
+            "minimum_solver_singular_value": 0.9999654312720343,
+            "maximum_sampled_canonical_defect_2": 6.249980479279278e-06,
+            "maximum_sampled_weighted_defect_2": 1.167717586119706e-09,
+            "structure_steps_sampled": 16,
+            "structure_scope": "Ideal implicit tangents; all midpoint/weighted steps, first Central4 step.",
+            "seconds": 58.169870228000946,
+            "solver_steps": [
+              {
+                "increment_residual_inf": 1.9349408888840423e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.000147426706287,
+                "final_matrix_min_singular": 0.9999654312720343,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.789615304955755e-08,
+                    "matrix_condition": 1.0001474267113746
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.9349408888840423e-19,
+                    "matrix_condition": 1.000147426706287
+                  }
+                ],
+                "seconds": 1.9111664809970534,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 6.249980479174971e-06,
+                "weighted_two_form_defect_2": 1.167717586119706e-09
+              },
+              {
+                "increment_residual_inf": 3.277951331425138e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001474054740702,
+                "final_matrix_min_singular": 0.9999654500969668,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7897459365678734e-08,
+                    "matrix_condition": 1.000147405478695
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 3.277951331425138e-19,
+                    "matrix_condition": 1.0001474054740702
+                  }
+                ],
+                "seconds": 1.4582995649980148,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 6.249980479279278e-06,
+                "weighted_two_form_defect_2": 1.1677165794492967e-09
+              },
+              {
+                "increment_residual_inf": 1.5806428889153295e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001473843253603,
+                "final_matrix_min_singular": 0.9999654688598592,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7893365721053748e-08,
+                    "matrix_condition": 1.0001473843295263
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.5806428889153295e-19,
+                    "matrix_condition": 1.0001473843253603
+                  }
+                ],
+                "seconds": 1.5767205880001711,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 6.24998047895345e-06,
+                "weighted_two_form_defect_2": 1.1677173563032283e-09
+              },
+              {
+                "increment_residual_inf": 9.069009712684383e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.000147363267448,
+                "final_matrix_min_singular": 0.9999654875533428,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7883872941509836e-08,
+                    "matrix_condition": 1.0001473632711613
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 9.069009712684383e-19,
+                    "matrix_condition": 1.000147363267448
+                  }
+                ],
+                "seconds": 1.9029890390011133,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 6.249980478832849e-06,
+                "weighted_two_form_defect_2": 1.1677173546196486e-09
+              },
+              {
+                "increment_residual_inf": 4.938400605839584e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001473423084164,
+                "final_matrix_min_singular": 0.9999655061692505,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7868982898141576e-08,
+                    "matrix_condition": 1.0001473423116836
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 4.938400605839584e-19,
+                    "matrix_condition": 1.0001473423084164
+                  }
+                ],
+                "seconds": 1.9710566370013112,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 6.249980479125797e-06,
+                "weighted_two_form_defect_2": 1.1677173492359611e-09
+              },
+              {
+                "increment_residual_inf": 5.631710308057029e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001473214572882,
+                "final_matrix_min_singular": 0.99996552469847,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7848698506597558e-08,
+                    "matrix_condition": 1.0001473214601166
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 5.631710308057029e-19,
+                    "matrix_condition": 1.0001473214572882
+                  }
+                ],
+                "seconds": 1.83642847700321,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 6.249980478931558e-06,
+                "weighted_two_form_defect_2": 1.1677174578430137e-09
+              },
+              {
+                "increment_residual_inf": 5.306065844507153e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.000147300724207,
+                "final_matrix_min_singular": 0.9999655431307615,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7823023726703236e-08,
+                    "matrix_condition": 1.0001473007266057
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 5.306065844507153e-19,
+                    "matrix_condition": 1.000147300724207
+                  }
+                ],
+                "seconds": 2.150151392997941,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 6.249980478864482e-06,
+                "weighted_two_form_defect_2": 1.1677171223311176e-09
+              },
+              {
+                "increment_residual_inf": 4.015068518883392e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001472801206635,
+                "final_matrix_min_singular": 0.9999655614545329,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7791963561624547e-08,
+                    "matrix_condition": 1.000147280122643
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 4.015068518883392e-19,
+                    "matrix_condition": 1.0001472801206635
+                  }
+                ],
+                "seconds": 1.450409203000163,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 6.249980478995833e-06,
+                "weighted_two_form_defect_2": 1.167717230959438e-09
+              },
+              {
+                "increment_residual_inf": 6.789233770039234e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001472596597705,
+                "final_matrix_min_singular": 0.9999655796565643,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7755524057002347e-08,
+                    "matrix_condition": 1.000147259661342
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 6.789233770039234e-19,
+                    "matrix_condition": 1.0001472596597705
+                  }
+                ],
+                "seconds": 3.101384823999979,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 6.249980478822402e-06,
+                "weighted_two_form_defect_2": 1.1677173399914769e-09
+              },
+              {
+                "increment_residual_inf": 2.5592306407900634e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001472393566064,
+                "final_matrix_min_singular": 0.9999655977216636,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7713712299745842e-08,
+                    "matrix_condition": 1.0001472393577846
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 2.5592306407900634e-19,
+                    "matrix_condition": 1.0001472393566064
+                  }
+                ],
+                "seconds": 2.7835334219998913,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 6.249980478562969e-06,
+                "weighted_two_form_defect_2": 1.167717226191328e-09
+              },
+              {
+                "increment_residual_inf": 4.535861432546778e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001472192286471,
+                "final_matrix_min_singular": 0.9999656156322362,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7666536416381826e-08,
+                    "matrix_condition": 1.0001472192294483
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 4.535861432546778e-19,
+                    "matrix_condition": 1.0001472192286471
+                  }
+                ],
+                "seconds": 1.692864771001041,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 6.249980479172127e-06,
+                "weighted_two_form_defect_2": 1.1677168925735402e-09
+              },
+              {
+                "increment_residual_inf": 1.44524996625265e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001471992962994,
+                "final_matrix_min_singular": 0.999965633367751,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7614005571873067e-08,
+                    "matrix_condition": 1.0001471992967432
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.44524996625265e-19,
+                    "matrix_condition": 1.0001471992962994
+                  }
+                ],
+                "seconds": 2.350688579001144,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 6.249980478761427e-06,
+                "weighted_two_form_defect_2": 1.1677168884168727e-09
+              },
+              {
+                "increment_residual_inf": 7.732947587288732e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.000147179583576,
+                "final_matrix_min_singular": 0.9999656509040669,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.755612996770333e-08,
+                    "matrix_condition": 1.0001471795836856
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 7.732947587288732e-19,
+                    "matrix_condition": 1.000147179583576
+                  }
+                ],
+                "seconds": 2.1160569439998653,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 6.249980478910535e-06,
+                "weighted_two_form_defect_2": 1.167717108130253e-09
+              },
+              {
+                "increment_residual_inf": 4.794802051500378e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001471601189362,
+                "final_matrix_min_singular": 0.999965668212589,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.749292083967519e-08,
+                    "matrix_condition": 1.0001471601187386
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 4.794802051500378e-19,
+                    "matrix_condition": 1.0001471601189362
+                  }
+                ],
+                "seconds": 2.3132599189993925,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 6.249980478281068e-06,
+                "weighted_two_form_defect_2": 1.1677171058139044e-09
+              },
+              {
+                "increment_residual_inf": 2.84073674685411e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001471409363452,
+                "final_matrix_min_singular": 0.9999656852592145,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7424390456138683e-08,
+                    "matrix_condition": 1.0001471409358724
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 2.84073674685411e-19,
+                    "matrix_condition": 1.0001471409363452
+                  }
+                ],
+                "seconds": 2.965499022997392,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 6.249980478443308e-06,
+                "weighted_two_form_defect_2": 1.1677172145246878e-09
+              },
+              {
+                "increment_residual_inf": 5.910701785058915e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001471220765867,
+                "final_matrix_min_singular": 0.999965702003015,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7350552115174386e-08,
+                    "matrix_condition": 1.000147122075878
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 5.910701785058915e-19,
+                    "matrix_condition": 1.0001471220765867
+                  }
+                ],
+                "seconds": 2.192317433000426,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 6.249980478764383e-06,
+                "weighted_two_form_defect_2": 1.1677175476756374e-09
+              }
+            ]
+          }
+        ],
+        "weighted_midpoint": [
+          {
+            "step": 0.000125,
+            "steps": 4,
+            "maximum_state_error": 3.587640366022003e-08,
+            "observed_order": null,
+            "maximum_fixed_bias_power_balance_residual": 5.765700659711224e-12,
+            "maximum_mechanical_power_balance_residual": 5.759075483783926e-12,
+            "maximum_instantaneous_power_identity_residual": 1.9559684817996303e-17,
+            "maximum_current_A": 1.512480402413065,
+            "maximum_sample_difference_slew_A_per_s": 0.0,
+            "maximum_sampled_field_T": 0.0005009446838238148,
+            "maximum_sampled_gradient_T_per_m": 0.004314109461576906,
+            "minimum_sampled_wire_distance_m": 0.07659983115789175,
+            "maximum_increment_residual_inf": 5.401198232395652e-17,
+            "maximum_solver_condition": 1.0015972122562742,
+            "minimum_solver_singular_value": 0.9999158008333427,
+            "maximum_sampled_canonical_defect_2": 2.4999687503357567e-05,
+            "maximum_sampled_weighted_defect_2": 7.77469908036495e-16,
+            "structure_steps_sampled": 4,
+            "structure_scope": "Ideal implicit tangents; all midpoint/weighted steps, first Central4 step.",
+            "seconds": 17.503421758003242,
+            "solver_steps": [
+              {
+                "increment_residual_inf": 5.401198232395652e-17,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0015971924351048,
+                "final_matrix_min_singular": 0.9999158529478439,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 4.4633656947163965e-07,
+                    "matrix_condition": 1.0015971926885416
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 5.401198232395652e-17,
+                    "matrix_condition": 1.0015971924351048
+                  }
+                ],
+                "seconds": 3.0238340249998146,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "residual_coordinates": "Centered canonical lift; p endpoint scaled by exp(+-gamma h/2)",
+                "canonical_two_form_defect_2": 2.4999687503140432e-05,
+                "weighted_two_form_defect_2": 5.600682069037488e-16
+              },
+              {
+                "increment_residual_inf": 4.975251833001066e-17,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.001597175652021,
+                "final_matrix_min_singular": 0.9999158585756729,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 4.459132628020649e-07,
+                    "matrix_condition": 1.0015971759826248
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 4.975251833001066e-17,
+                    "matrix_condition": 1.001597175652021
+                  }
+                ],
+                "seconds": 3.3540223050003988,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "residual_coordinates": "Centered canonical lift; p endpoint scaled by exp(+-gamma h/2)",
+                "canonical_two_form_defect_2": 2.4999687503357567e-05,
+                "weighted_two_form_defect_2": 7.77469908036495e-16
+              },
+              {
+                "increment_residual_inf": 4.430667881431675e-17,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0015971829881674,
+                "final_matrix_min_singular": 0.9999158404786974,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 4.44109975702826e-07,
+                    "matrix_condition": 1.001597183407147
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 4.430667881431675e-17,
+                    "matrix_condition": 1.0015971829881674
+                  }
+                ],
+                "seconds": 3.1360348160014837,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "residual_coordinates": "Centered canonical lift; p endpoint scaled by exp(+-gamma h/2)",
+                "canonical_two_form_defect_2": 2.4999687502913485e-05,
+                "weighted_two_form_defect_2": 6.663645717715293e-16
+              },
+              {
+                "increment_residual_inf": 4.037763707913887e-17,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0015972122562742,
+                "final_matrix_min_singular": 0.9999158008333427,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 4.409323231817143e-07,
+                    "matrix_condition": 1.0015972127705741
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 4.037763707913887e-17,
+                    "matrix_condition": 1.0015972122562742
+                  }
+                ],
+                "seconds": 2.4831013770017307,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "residual_coordinates": "Centered canonical lift; p endpoint scaled by exp(+-gamma h/2)",
+                "canonical_two_form_defect_2": 2.499968750324655e-05,
+                "weighted_two_form_defect_2": 6.661527916979908e-16
+              }
+            ]
+          },
+          {
+            "step": 6.25e-05,
+            "steps": 8,
+            "maximum_state_error": 8.978881904779361e-09,
+            "observed_order": 1.9984275685007193,
+            "maximum_fixed_bias_power_balance_residual": 1.4416040647486147e-12,
+            "maximum_mechanical_power_balance_residual": 1.4404319523915044e-12,
+            "maximum_instantaneous_power_identity_residual": 1.1799168955252404e-17,
+            "maximum_current_A": 1.512480402413065,
+            "maximum_sample_difference_slew_A_per_s": 0.0,
+            "maximum_sampled_field_T": 0.000500944683823953,
+            "maximum_sampled_gradient_T_per_m": 0.004314109461723456,
+            "minimum_sampled_wire_distance_m": 0.07659983115789175,
+            "maximum_increment_residual_inf": 2.4613056911535858e-18,
+            "maximum_solver_condition": 1.000449876863311,
+            "minimum_solver_singular_value": 0.9999421303881146,
+            "maximum_sampled_canonical_defect_2": 1.2499921876130141e-05,
+            "maximum_sampled_weighted_defect_2": 8.882323774607591e-16,
+            "structure_steps_sampled": 8,
+            "structure_scope": "Ideal implicit tangents; all midpoint/weighted steps, first Central4 step.",
+            "seconds": 23.732475233002333,
+            "solver_steps": [
+              {
+                "increment_residual_inf": 2.4613056911535858e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.000449876863311,
+                "final_matrix_min_singular": 0.9999421303881146,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.1158409495436785e-07,
+                    "matrix_condition": 1.0004498768947352
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 2.4613056911535858e-18,
+                    "matrix_condition": 1.000449876863311
+                  }
+                ],
+                "seconds": 2.413503772997501,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "residual_coordinates": "Centered canonical lift; p endpoint scaled by exp(+-gamma h/2)",
+                "canonical_two_form_defect_2": 1.2499921875797076e-05,
+                "weighted_two_form_defect_2": 4.442695124782769e-16
+              },
+              {
+                "increment_residual_inf": 1.6570479077356276e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0004498544292044,
+                "final_matrix_min_singular": 0.9999421469880656,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.115743426504652e-07,
+                    "matrix_condition": 1.0004498544607805
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.6570479077356276e-18,
+                    "matrix_condition": 1.0004498544292044
+                  }
+                ],
+                "seconds": 2.177689621999889,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "residual_coordinates": "Centered canonical lift; p endpoint scaled by exp(+-gamma h/2)",
+                "canonical_two_form_defect_2": 1.2499921876019119e-05,
+                "weighted_two_form_defect_2": 6.661359983324005e-16
+              },
+              {
+                "increment_residual_inf": 1.6945952901006346e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.000449835437351,
+                "final_matrix_min_singular": 0.9999421602648294,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.1147821604674503e-07,
+                    "matrix_condition": 1.0004498354698157
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.6945952901006346e-18,
+                    "matrix_condition": 1.000449835437351
+                  }
+                ],
+                "seconds": 1.534200730999146,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "residual_coordinates": "Centered canonical lift; p endpoint scaled by exp(+-gamma h/2)",
+                "canonical_two_form_defect_2": 1.2499921876019119e-05,
+                "weighted_two_form_defect_2": 8.882323774607591e-16
+              },
+              {
+                "increment_residual_inf": 1.4329679885174626e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0004498198320995,
+                "final_matrix_min_singular": 0.9999421702727418,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.1129579063115037e-07,
+                    "matrix_condition": 1.0004498198661604
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.4329679885174626e-18,
+                    "matrix_condition": 1.0004498198320995
+                  }
+                ],
+                "seconds": 1.466927986999508,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "residual_coordinates": "Centered canonical lift; p endpoint scaled by exp(+-gamma h/2)",
+                "canonical_two_form_defect_2": 1.2499921876130141e-05,
+                "weighted_two_form_defect_2": 7.77156260157654e-16
+              },
+              {
+                "increment_residual_inf": 1.358799666073508e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0004498075355985,
+                "final_matrix_min_singular": 0.9999421770880939,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.1102720869890308e-07,
+                    "matrix_condition": 1.0004498075719328
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.358799666073508e-18,
+                    "matrix_condition": 1.0004498075355985
+                  }
+                ],
+                "seconds": 1.605359758999839,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "residual_coordinates": "Centered canonical lift; p endpoint scaled by exp(+-gamma h/2)",
+                "canonical_two_form_defect_2": 1.2499921875686777e-05,
+                "weighted_two_form_defect_2": 4.440966561351785e-16
+              },
+              {
+                "increment_residual_inf": 1.2921487610364352e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.000449798450297,
+                "final_matrix_min_singular": 0.9999421808066437,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.1067267924138634e-07,
+                    "matrix_condition": 1.0004497984895415
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.2921487610364352e-18,
+                    "matrix_condition": 1.000449798450297
+                  }
+                ],
+                "seconds": 1.685438469001383,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "residual_coordinates": "Centered canonical lift; p endpoint scaled by exp(+-gamma h/2)",
+                "canonical_two_form_defect_2": 1.249992187568605e-05,
+                "weighted_two_form_defect_2": 5.551118059002703e-16
+              },
+              {
+                "increment_residual_inf": 1.3043248596532157e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0004497924617917,
+                "final_matrix_min_singular": 0.9999421815407717,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.1023247778365687e-07,
+                    "matrix_condition": 1.0004497925045404
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.3043248596532157e-18,
+                    "matrix_condition": 1.0004497924617917
+                  }
+                ],
+                "seconds": 1.524292288999277,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "residual_coordinates": "Centered canonical lift; p endpoint scaled by exp(+-gamma h/2)",
+                "canonical_two_form_defect_2": 1.2499921875908098e-05,
+                "weighted_two_form_defect_2": 5.551228862475788e-16
+              },
+              {
+                "increment_residual_inf": 2.058462115395361e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0004497894418671,
+                "final_matrix_min_singular": 0.9999421794164483,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.0970694617023836e-07,
+                    "matrix_condition": 1.00044978948867
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 2.058462115395361e-18,
+                    "matrix_condition": 1.0004497894418671
+                  }
+                ],
+                "seconds": 1.5633385210021515,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "residual_coordinates": "Centered canonical lift; p endpoint scaled by exp(+-gamma h/2)",
+                "canonical_two_form_defect_2": 1.2499921875797113e-05,
+                "weighted_two_form_defect_2": 6.662484004715615e-16
+              }
+            ]
+          },
+          {
+            "step": 3.125e-05,
+            "steps": 16,
+            "maximum_state_error": 2.2453330130243085e-09,
+            "observed_order": 1.9996063726840496,
+            "maximum_fixed_bias_power_balance_residual": 3.6002222615093295e-13,
+            "maximum_mechanical_power_balance_residual": 3.6014851823976324e-13,
+            "maximum_instantaneous_power_identity_residual": 2.4047265372549587e-17,
+            "maximum_current_A": 1.512480402413065,
+            "maximum_sample_difference_slew_A_per_s": 0.0,
+            "maximum_sampled_field_T": 0.0005009446838239878,
+            "maximum_sampled_gradient_T_per_m": 0.004314109461760107,
+            "minimum_sampled_wire_distance_m": 0.07659983115789175,
+            "maximum_increment_residual_inf": 8.982519707835838e-19,
+            "maximum_solver_condition": 1.0001465323582992,
+            "minimum_solver_singular_value": 0.9999637673715704,
+            "maximum_sampled_canonical_defect_2": 6.249980469941185e-06,
+            "maximum_sampled_weighted_defect_2": 1.1102237161103894e-15,
+            "structure_steps_sampled": 16,
+            "structure_scope": "Ideal implicit tangents; all midpoint/weighted steps, first Central4 step.",
+            "seconds": 56.5502034050005,
+            "solver_steps": [
+              {
+                "increment_residual_inf": 6.602687998296275e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001465323582992,
+                "final_matrix_min_singular": 0.9999637673715704,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7896017811827885e-08,
+                    "matrix_condition": 1.0001465323583472
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 6.602687998296275e-19,
+                    "matrix_condition": 1.0001465323582992
+                  }
+                ],
+                "seconds": 1.5350035430019489,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "residual_coordinates": "Centered canonical lift; p endpoint scaled by exp(+-gamma h/2)",
+                "canonical_two_form_defect_2": 6.249980469164587e-06,
+                "weighted_two_form_defect_2": 6.685051180500434e-16
+              },
+              {
+                "increment_residual_inf": 8.982519707835838e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001465260146045,
+                "final_matrix_min_singular": 0.9999637711040339,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7897498474742017e-08,
+                    "matrix_condition": 1.0001465260145543
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 8.982519707835838e-19,
+                    "matrix_condition": 1.0001465260146045
+                  }
+                ],
+                "seconds": 1.4635196099989116,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "residual_coordinates": "Centered canonical lift; p endpoint scaled by exp(+-gamma h/2)",
+                "canonical_two_form_defect_2": 6.249980469386078e-06,
+                "weighted_two_form_defect_2": 5.551361760641613e-16
+              },
+              {
+                "increment_residual_inf": 4.055170234979963e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001465200607589,
+                "final_matrix_min_singular": 0.9999637744841517,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.789357916822047e-08,
+                    "matrix_condition": 1.0001465200606383
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 4.055170234979963e-19,
+                    "matrix_condition": 1.0001465200607589
+                  }
+                ],
+                "seconds": 1.4695448589991429,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "residual_coordinates": "Centered canonical lift; p endpoint scaled by exp(+-gamma h/2)",
+                "canonical_two_form_defect_2": 6.249980469386084e-06,
+                "weighted_two_form_defect_2": 7.771628629936552e-16
+              },
+              {
+                "increment_residual_inf": 6.164480796990183e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001465144946124,
+                "final_matrix_min_singular": 0.9999637775138079,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7884260684376976e-08,
+                    "matrix_condition": 1.000146514494449
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 6.164480796990183e-19,
+                    "matrix_condition": 1.0001465144946124
+                  }
+                ],
+                "seconds": 1.4704650549974758,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "residual_coordinates": "Centered canonical lift; p endpoint scaled by exp(+-gamma h/2)",
+                "canonical_two_form_defect_2": 6.249980469275049e-06,
+                "weighted_two_form_defect_2": 4.440895651228348e-16
+              },
+              {
+                "increment_residual_inf": 5.06406588449864e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.000146509313333,
+                "final_matrix_min_singular": 0.9999637801955465,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7869544860457345e-08,
+                    "matrix_condition": 1.000146509313154
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 5.06406588449864e-19,
+                    "matrix_condition": 1.000146509313333
+                  }
+                ],
+                "seconds": 1.4239159500029928,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "residual_coordinates": "Centered canonical lift; p endpoint scaled by exp(+-gamma h/2)",
+                "canonical_two_form_defect_2": 6.249980469386074e-06,
+                "weighted_two_form_defect_2": 5.551116232655686e-16
+              },
+              {
+                "increment_residual_inf": 8.076922373212783e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001465045134315,
+                "final_matrix_min_singular": 0.9999637825325471,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7849434578445668e-08,
+                    "matrix_condition": 1.0001465045132651
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 8.076922373212783e-19,
+                    "matrix_condition": 1.0001465045134315
+                  }
+                ],
+                "seconds": 1.5627436100003251,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "residual_coordinates": "Centered canonical lift; p endpoint scaled by exp(+-gamma h/2)",
+                "canonical_two_form_defect_2": 6.249980469386075e-06,
+                "weighted_two_form_defect_2": 5.551115432093174e-16
+              },
+              {
+                "increment_residual_inf": 8.141640984338932e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.000146500090795,
+                "final_matrix_min_singular": 0.999963784528592,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.782393376450263e-08,
+                    "matrix_condition": 1.000146500090669
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 8.141640984338932e-19,
+                    "matrix_condition": 1.000146500090795
+                  }
+                ],
+                "seconds": 2.478672091001499,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "residual_coordinates": "Centered canonical lift; p endpoint scaled by exp(+-gamma h/2)",
+                "canonical_two_form_defect_2": 6.249980469275052e-06,
+                "weighted_two_form_defect_2": 5.551364073664878e-16
+              },
+              {
+                "increment_residual_inf": 6.684479617265519e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001464960407191,
+                "final_matrix_min_singular": 0.9999637861880333,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.779304738809922e-08,
+                    "matrix_condition": 1.000146496040661
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 6.684479617265519e-19,
+                    "matrix_condition": 1.0001464960407191
+                  }
+                ],
+                "seconds": 5.109006513997883,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "residual_coordinates": "Centered canonical lift; p endpoint scaled by exp(+-gamma h/2)",
+                "canonical_two_form_defect_2": 6.249980469608124e-06,
+                "weighted_two_form_defect_2": 7.771616644706924e-16
+              },
+              {
+                "increment_residual_inf": 1.8465318250143747e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.000146492357947,
+                "final_matrix_min_singular": 0.9999637875157538,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.775678146131929e-08,
+                    "matrix_condition": 1.0001464923579848
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.8465318250143747e-19,
+                    "matrix_condition": 1.000146492357947
+                  }
+                ],
+                "seconds": 1.9155465849980828,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "residual_coordinates": "Centered canonical lift; p endpoint scaled by exp(+-gamma h/2)",
+                "canonical_two_form_defect_2": 6.249980469719165e-06,
+                "weighted_two_form_defect_2": 8.882032675101954e-16
+              },
+              {
+                "increment_residual_inf": 2.7083878488456253e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.00014648903671,
+                "final_matrix_min_singular": 0.9999637885171293,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7715143037221324e-08,
+                    "matrix_condition": 1.00014648903687
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 2.7083878488456253e-19,
+                    "matrix_condition": 1.00014648903671
+                  }
+                ],
+                "seconds": 1.5349554599997646,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "residual_coordinates": "Centered canonical lift; p endpoint scaled by exp(+-gamma h/2)",
+                "canonical_two_form_defect_2": 6.249980469497093e-06,
+                "weighted_two_form_defect_2": 6.661338564075603e-16
+              },
+              {
+                "increment_residual_inf": 1.6188917204397815e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001464860707658,
+                "final_matrix_min_singular": 0.9999637891979872,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.766814020906966e-08,
+                    "matrix_condition": 1.0001464860710756
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.6188917204397815e-19,
+                    "matrix_condition": 1.0001464860707658
+                  }
+                ],
+                "seconds": 1.6104449220001698,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "residual_coordinates": "Centered canonical lift; p endpoint scaled by exp(+-gamma h/2)",
+                "canonical_two_form_defect_2": 6.2499804693860756e-06,
+                "weighted_two_form_defect_2": 5.551136637813218e-16
+              },
+              {
+                "increment_residual_inf": 8.451999150168828e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001464834534428,
+                "final_matrix_min_singular": 0.9999637895645644,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7615782108213466e-08,
+                    "matrix_condition": 1.0001464834539298
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 8.451999150168828e-19,
+                    "matrix_condition": 1.0001464834534428
+                  }
+                ],
+                "seconds": 2.341837732001295,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "residual_coordinates": "Centered canonical lift; p endpoint scaled by exp(+-gamma h/2)",
+                "canonical_two_form_defect_2": 6.2499804696081185e-06,
+                "weighted_two_form_defect_2": 1.1102230450333053e-15
+              },
+              {
+                "increment_residual_inf": 3.196490584700916e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001464811776841,
+                "final_matrix_min_singular": 0.9999637896234636,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7558078902702738e-08,
+                    "matrix_condition": 1.0001464811783745
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 3.196490584700916e-19,
+                    "matrix_condition": 1.0001464811776841
+                  }
+                ],
+                "seconds": 2.1421424389991444,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "residual_coordinates": "Centered canonical lift; p endpoint scaled by exp(+-gamma h/2)",
+                "canonical_two_form_defect_2": 6.249980469275069e-06,
+                "weighted_two_form_defect_2": 4.441159369950422e-16
+              },
+              {
+                "increment_residual_inf": 2.9614389418378476e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001464792360883,
+                "final_matrix_min_singular": 0.9999637893816133,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7495041794979873e-08,
+                    "matrix_condition": 1.0001464792370063
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 2.9614389418378476e-19,
+                    "matrix_condition": 1.0001464792360883
+                  }
+                ],
+                "seconds": 1.9841760160015838,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "residual_coordinates": "Centered canonical lift; p endpoint scaled by exp(+-gamma h/2)",
+                "canonical_two_form_defect_2": 6.249980469275053e-06,
+                "weighted_two_form_defect_2": 4.440894907347233e-16
+              },
+              {
+                "increment_residual_inf": 6.874664983703711e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001464776209485,
+                "final_matrix_min_singular": 0.9999637888462263,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7426683020079405e-08,
+                    "matrix_condition": 1.0001464776221214
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 6.874664983703711e-19,
+                    "matrix_condition": 1.0001464776209485
+                  }
+                ],
+                "seconds": 4.3897795470002166,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "residual_coordinates": "Centered canonical lift; p endpoint scaled by exp(+-gamma h/2)",
+                "canonical_two_form_defect_2": 6.249980469941185e-06,
+                "weighted_two_form_defect_2": 1.1102237161103894e-15
+              },
+              {
+                "increment_residual_inf": 2.2809009082782206e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0001464763243,
+                "final_matrix_min_singular": 0.999963788024757,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7353015842929147e-08,
+                    "matrix_condition": 1.0001464763257513
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 2.2809009082782206e-19,
+                    "matrix_condition": 1.0001464763243
+                  }
+                ],
+                "seconds": 3.0777233120024903,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "residual_coordinates": "Centered canonical lift; p endpoint scaled by exp(+-gamma h/2)",
+                "canonical_two_form_defect_2": 6.249980469719141e-06,
+                "weighted_two_form_defect_2": 8.881788724058563e-16
+              }
+            ]
+          }
+        ]
+      },
+      "reference_resolution": {
+        "midpoint": true,
+        "weighted_midpoint": true
+      },
+      "reference_refinement_max": 8.00946615498939e-18
+    },
+    "collocated": {
+      "kind": "collocated",
+      "gamma": 0.0,
+      "collocated_gain": 0.15425045617918903,
+      "initial_structure": {
+        "original_canonical_transport_defect_2": 12.564915246496065,
+        "proportional_transport_defect_2": 12.564915246496065,
+        "jacobian_condition": 1237.453880154835,
+        "jacobian_spectral_norm": 874.9052417400976,
+        "original_form_preserved": false,
+        "weighted_form_available": false,
+        "new_Ku_required_for_Birkhoff_claim": true,
+        "statement": "Pointwise diagnostics; no uniform domain or KAM certificate."
+      },
+      "references": [
+        {
+          "success": true,
+          "message": "The solver successfully reached the end of the integration interval.",
+          "nfev": 62,
+          "rtol": 2e-11,
+          "atol": 2e-13,
+          "max_step": 0.000125,
+          "seconds": 27.908005159999448
+        },
+        {
+          "success": true,
+          "message": "The solver successfully reached the end of the integration interval.",
+          "nfev": 122,
+          "rtol": 5e-13,
+          "atol": 5e-15,
+          "max_step": 6.25e-05,
+          "seconds": 38.073625245000585
+        }
+      ],
+      "methods": {
+        "midpoint": [
+          {
+            "step": 0.000125,
+            "steps": 4,
+            "maximum_state_error": 3.586971728432941e-08,
+            "observed_order": null,
+            "maximum_fixed_bias_power_balance_residual": 3.0616628606541595e-14,
+            "maximum_mechanical_power_balance_residual": 3.0494149655726234e-14,
+            "maximum_instantaneous_power_identity_residual": 1.1902506974817428e-17,
+            "maximum_current_A": 1.512369689721717,
+            "maximum_sample_difference_slew_A_per_s": 0.6768084123011164,
+            "maximum_sampled_field_T": 0.000501318044139332,
+            "maximum_sampled_gradient_T_per_m": 0.004313295239176493,
+            "minimum_sampled_wire_distance_m": 0.07659983115789175,
+            "maximum_increment_residual_inf": 5.556949062549997e-17,
+            "maximum_solver_condition": 1.001597695892384,
+            "minimum_solver_singular_value": 0.9999158499480658,
+            "maximum_sampled_canonical_defect_2": 0.0015695150173150997,
+            "maximum_sampled_weighted_defect_2": 0.0015695150173150997,
+            "structure_steps_sampled": 4,
+            "structure_scope": "Ideal implicit tangents; all midpoint/weighted steps, first Central4 step.",
+            "seconds": 27.02816503699796,
+            "solver_steps": [
+              {
+                "increment_residual_inf": 5.556949062549997e-17,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.001597695892384,
+                "final_matrix_min_singular": 0.9999158499480658,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 4.4633264227483366e-07,
+                    "matrix_condition": 1.001597695342546
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 5.556949062549997e-17,
+                    "matrix_condition": 1.001597695892384
+                  }
+                ],
+                "seconds": 3.539885891997983,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 0.0015695150173150997,
+                "weighted_two_form_defect_2": 0.0015695150173150997
+              },
+              {
+                "increment_residual_inf": 5.0637958927467024e-17,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.001597347428628,
+                "final_matrix_min_singular": 0.9999161896582957,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 4.459093973241501e-07,
+                    "matrix_condition": 1.0015973468152055
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 5.0637958927467024e-17,
+                    "matrix_condition": 1.001597347428628
+                  }
+                ],
+                "seconds": 5.992378728999029,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 0.0015695128817131549,
+                "weighted_two_form_defect_2": 0.0015695128817131549
+              },
+              {
+                "increment_residual_inf": 4.3991397269480936e-17,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0015970532179654,
+                "final_matrix_min_singular": 0.9999164755624197,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 4.441061567796756e-07,
+                    "matrix_condition": 1.001597052699962
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 4.3991397269480936e-17,
+                    "matrix_condition": 1.0015970532179654
+                  }
+                ],
+                "seconds": 5.112674738000351,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 0.0015695107428212178,
+                "weighted_two_form_defect_2": 0.0015695107428212178
+              },
+              {
+                "increment_residual_inf": 3.8363392730568144e-17,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.00159689668147,
+                "final_matrix_min_singular": 0.9999166243719281,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 4.409285010608528e-07,
+                    "matrix_condition": 1.0015968966676234
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 3.8363392730568144e-17,
+                    "matrix_condition": 1.00159689668147
+                  }
+                ],
+                "seconds": 4.7610047410016705,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 0.0015695086000475957,
+                "weighted_two_form_defect_2": 0.0015695086000475957
+              }
+            ]
+          },
+          {
+            "step": 6.25e-05,
+            "steps": 8,
+            "maximum_state_error": 8.977208079993568e-09,
+            "observed_order": 1.9984276340537372,
+            "maximum_fixed_bias_power_balance_residual": 8.27954440016071e-15,
+            "maximum_mechanical_power_balance_residual": 7.648484166669137e-15,
+            "maximum_instantaneous_power_identity_residual": 1.0679391398982219e-17,
+            "maximum_current_A": 1.512369689336907,
+            "maximum_sample_difference_slew_A_per_s": 0.6773587373727793,
+            "maximum_sampled_field_T": 0.000501318044139332,
+            "maximum_sampled_gradient_T_per_m": 0.004313295239176493,
+            "minimum_sampled_wire_distance_m": 0.07659983115789175,
+            "maximum_increment_residual_inf": 2.552533786550834e-18,
+            "maximum_solver_condition": 1.0004539387991653,
+            "minimum_solver_singular_value": 0.9999425275182069,
+            "maximum_sampled_canonical_defect_2": 0.0007850363243759893,
+            "maximum_sampled_weighted_defect_2": 0.0007850363243759893,
+            "structure_steps_sampled": 8,
+            "structure_scope": "Ideal implicit tangents; all midpoint/weighted steps, first Central4 step.",
+            "seconds": 48.00708216599742,
+            "solver_steps": [
+              {
+                "increment_residual_inf": 1.6868131748977357e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0004539387991653,
+                "final_matrix_min_singular": 0.9999425275182069,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.1158311190404939e-07,
+                    "matrix_condition": 1.0004539387993998
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.6868131748977357e-18,
+                    "matrix_condition": 1.0004539387991653
+                  }
+                ],
+                "seconds": 3.6236816050004563,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 0.0007850363243759893,
+                "weighted_two_form_defect_2": 0.0007850363243759893
+              },
+              {
+                "increment_residual_inf": 2.552533786550834e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0004538684166528,
+                "final_matrix_min_singular": 0.9999426005673443,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.115733667733735e-07,
+                    "matrix_condition": 1.0004538684125397
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 2.552533786550834e-18,
+                    "matrix_condition": 1.0004538684166528
+                  }
+                ],
+                "seconds": 3.944788972999959,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 0.0007850357897499969,
+                "weighted_two_form_defect_2": 0.0007850357897499969
+              },
+              {
+                "increment_residual_inf": 2.142900712324774e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0004538027062322,
+                "final_matrix_min_singular": 0.9999426690847275,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.1147724747999833e-07,
+                    "matrix_condition": 1.0004538026991865
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 2.142900712324774e-18,
+                    "matrix_condition": 1.0004538027062322
+                  }
+                ],
+                "seconds": 3.2584188350010663,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 0.0007850352547819774,
+                "weighted_two_form_defect_2": 0.0007850352547819774
+              },
+              {
+                "increment_residual_inf": 2.260505943095113e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0004537427788083,
+                "final_matrix_min_singular": 0.999942731958136,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.1129482842649557e-07,
+                    "matrix_condition": 1.000453742770603
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 2.260505943095113e-18,
+                    "matrix_condition": 1.0004537427788083
+                  }
+                ],
+                "seconds": 5.322014418998151,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 0.0007850347193942421,
+                "weighted_two_form_defect_2": 0.0007850347193942421
+              },
+              {
+                "increment_residual_inf": 1.4131685933753933e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0004536899663903,
+                "final_matrix_min_singular": 0.999942787854173,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.1102625082493154e-07,
+                    "matrix_condition": 1.000453689959194
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.4131685933753933e-18,
+                    "matrix_condition": 1.0004536899663903
+                  }
+                ],
+                "seconds": 4.223385802000848,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 0.0007850341835280904,
+                "weighted_two_form_defect_2": 0.0007850341835280904
+              },
+              {
+                "increment_residual_inf": 1.8019964208345197e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.000453645766377,
+                "final_matrix_min_singular": 0.9999428352739534,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.1067172258726443e-07,
+                    "matrix_condition": 1.000453645762723
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.8019964208345197e-18,
+                    "matrix_condition": 1.000453645766377
+                  }
+                ],
+                "seconds": 4.713731202999043,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 0.000785033647150144,
+                "weighted_two_form_defect_2": 0.000785033647150144
+              },
+              {
+                "increment_residual_inf": 1.4813018060701611e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0004536116853224,
+                "final_matrix_min_singular": 0.9999428727092607,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.1023151816453403e-07,
+                    "matrix_condition": 1.0004536116879512
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.4813018060701611e-18,
+                    "matrix_condition": 1.0004536116853224
+                  }
+                ],
+                "seconds": 3.303886526999122,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 0.0007850331102453007,
+                "weighted_two_form_defect_2": 0.0007850331102453007
+              },
+              {
+                "increment_residual_inf": 1.8576226626674857e-18,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0004535889696218,
+                "final_matrix_min_singular": 0.9999428989117245,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 1.0970597833439809e-07,
+                    "matrix_condition": 1.0004535889811823
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 1.8576226626674857e-18,
+                    "matrix_condition": 1.0004535889696218
+                  }
+                ],
+                "seconds": 3.6712761519993364,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 0.0007850325728208364,
+                "weighted_two_form_defect_2": 0.0007850325728208364
+              }
+            ]
+          },
+          {
+            "step": 3.125e-05,
+            "steps": 16,
+            "maximum_state_error": 2.2449144171698347e-09,
+            "observed_order": 1.999606389052459,
+            "maximum_fixed_bias_power_balance_residual": 2.272742697211851e-15,
+            "maximum_mechanical_power_balance_residual": 1.914716277412187e-15,
+            "maximum_instantaneous_power_identity_residual": 1.524151085289388e-17,
+            "maximum_current_A": 1.5123696892403753,
+            "maximum_sample_difference_slew_A_per_s": 0.6776334417712464,
+            "maximum_sampled_field_T": 0.000501318044139332,
+            "maximum_sampled_gradient_T_per_m": 0.004313295239176493,
+            "minimum_sampled_wire_distance_m": 0.07659983115789175,
+            "maximum_increment_residual_inf": 8.948903087741683e-19,
+            "maximum_solver_condition": 1.0002199780663692,
+            "minimum_solver_singular_value": 0.9999641233767097,
+            "maximum_sampled_canonical_defect_2": 0.0003925863784542407,
+            "maximum_sampled_weighted_defect_2": 0.0003925863784542407,
+            "structure_steps_sampled": 16,
+            "structure_scope": "Ideal implicit tangents; all midpoint/weighted steps, first Central4 step.",
+            "seconds": 93.57431177200124,
+            "solver_steps": [
+              {
+                "increment_residual_inf": 3.97509915168483e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0002199780663692,
+                "final_matrix_min_singular": 0.9999641233767097,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.789577189288882e-08,
+                    "matrix_condition": 1.0002199780715748
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 3.97509915168483e-19,
+                    "matrix_condition": 1.0002199780663692
+                  }
+                ],
+                "seconds": 3.6765161719995376,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 0.0003925863784542407,
+                "weighted_two_form_defect_2": 0.0003925863784542407
+              },
+              {
+                "increment_residual_inf": 4.741068398908933e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0002199596683274,
+                "final_matrix_min_singular": 0.9999641429769678,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7897253418536952e-08,
+                    "matrix_condition": 1.0002199596730847
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 4.741068398908933e-19,
+                    "matrix_condition": 1.0002199596683274
+                  }
+                ],
+                "seconds": 3.41473798700099,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 0.00039258624469915666,
+                "weighted_two_form_defect_2": 0.00039258624469915666
+              },
+              {
+                "increment_residual_inf": 5.970655835856758e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0002199413811015,
+                "final_matrix_min_singular": 0.9999641624743886,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7893335017196087e-08,
+                    "matrix_condition": 1.0002199413854187
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 5.970655835856758e-19,
+                    "matrix_condition": 1.0002199413811015
+                  }
+                ],
+                "seconds": 3.498662695998064,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 0.00039258611090801145,
+                "weighted_two_form_defect_2": 0.00039258611090801145
+              },
+              {
+                "increment_residual_inf": 3.0704944337968387e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0002199232191145,
+                "final_matrix_min_singular": 0.99996418185441,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7884017447118804e-08,
+                    "matrix_condition": 1.0002199232230005
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 3.0704944337968387e-19,
+                    "matrix_condition": 1.0002199232191145
+                  }
+                ],
+                "seconds": 4.312905384002079,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 0.00039258597707545487,
+                "weighted_two_form_defect_2": 0.00039258597707545487
+              },
+              {
+                "increment_residual_inf": 4.864285222954832e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.000219905199147,
+                "final_matrix_min_singular": 0.9999642011001089,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7869302511567408e-08,
+                    "matrix_condition": 1.0002199052026128
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 4.864285222954832e-19,
+                    "matrix_condition": 1.000219905199147
+                  }
+                ],
+                "seconds": 5.080455358998734,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 0.0003925858431944816,
+                "weighted_two_form_defect_2": 0.0003925858431944816
+              },
+              {
+                "increment_residual_inf": 2.987577849194523e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0002198873409334,
+                "final_matrix_min_singular": 0.9999642201916065,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7849193058723112e-08,
+                    "matrix_condition": 1.0002198873439916
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 2.987577849194523e-19,
+                    "matrix_condition": 1.0002198873409334
+                  }
+                ],
+                "seconds": 3.3685434719991463,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 0.0003925857092621062,
+                "weighted_two_form_defect_2": 0.0003925857092621062
+              },
+              {
+                "increment_residual_inf": 8.948903087741683e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0002198696678688,
+                "final_matrix_min_singular": 0.9999642391053606,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.782369298068865e-08,
+                    "matrix_condition": 1.0002198696705311
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 8.948903087741683e-19,
+                    "matrix_condition": 1.0002198696678688
+                  }
+                ],
+                "seconds": 3.503668572000606,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 0.0003925855752728719,
+                "weighted_two_form_defect_2": 0.0003925855752728719
+              },
+              {
+                "increment_residual_inf": 7.33014371619991e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0002198522079428,
+                "final_matrix_min_singular": 0.9999642578132331,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.779280721331416e-08,
+                    "matrix_condition": 1.000219852210236
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 7.33014371619991e-19,
+                    "matrix_condition": 1.0002198522079428
+                  }
+                ],
+                "seconds": 3.469743481997284,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 0.00039258544122270554,
+                "weighted_two_form_defect_2": 0.00039258544122270554
+              },
+              {
+                "increment_residual_inf": 4.981149299896324e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0002198349949374,
+                "final_matrix_min_singular": 0.9999642762812923,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7756541734703227e-08,
+                    "matrix_condition": 1.0002198349968787
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 4.981149299896324e-19,
+                    "matrix_condition": 1.0002198349949374
+                  }
+                ],
+                "seconds": 3.527330098000675,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 0.00039258530711010404,
+                "weighted_two_form_defect_2": 0.00039258530711010404
+              },
+              {
+                "increment_residual_inf": 2.7083878488456253e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0002198180699686,
+                "final_matrix_min_singular": 0.9999642944682718,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7714903564351397e-08,
+                    "matrix_condition": 1.0002198180715878
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 2.7083878488456253e-19,
+                    "matrix_condition": 1.0002198180699686
+                  }
+                ],
+                "seconds": 3.622965998998552,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 0.0003925851729317668,
+                "weighted_two_form_defect_2": 0.0003925851729317668
+              },
+              {
+                "increment_residual_inf": 7.90778048155794e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0002198014834736,
+                "final_matrix_min_singular": 0.9999643123235822,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7667900761885372e-08,
+                    "matrix_condition": 1.0002198014848038
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 7.90778048155794e-19,
+                    "matrix_condition": 1.0002198014834736
+                  }
+                ],
+                "seconds": 4.724339546999545,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 0.0003925850386875091,
+                "weighted_two_form_defect_2": 0.0003925850386875091
+              },
+              {
+                "increment_residual_inf": 2.8972497263037326e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.00021978529775,
+                "final_matrix_min_singular": 0.9999643297847767,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7615542425170736e-08,
+                    "matrix_condition": 1.000219785298832
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 2.8972497263037326e-19,
+                    "matrix_condition": 1.00021978529775
+                  }
+                ],
+                "seconds": 3.7475575339994975,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 0.00039258490437527163,
+                "weighted_two_form_defect_2": 0.00039258490437527163
+              },
+              {
+                "increment_residual_inf": 3.948695546532137e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0002197695901343,
+                "final_matrix_min_singular": 0.9999643467743667,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.755783868871731e-08,
+                    "matrix_condition": 1.0002197695910189
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 3.948695546532137e-19,
+                    "matrix_condition": 1.0002197695901343
+                  }
+                ],
+                "seconds": 3.898419834997185,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 0.0003925847699955334,
+                "weighted_two_form_defect_2": 0.0003925847699955334
+              },
+              {
+                "increment_residual_inf": 6.429310941905161e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0002197544568898,
+                "final_matrix_min_singular": 0.9999643631959432,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7494800721857503e-08,
+                    "matrix_condition": 1.0002197544576388
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 6.429310941905161e-19,
+                    "matrix_condition": 1.0002197544568898
+                  }
+                ],
+                "seconds": 3.6559484789977432,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 0.0003925846355493879,
+                "weighted_two_form_defect_2": 0.0003925846355493879
+              },
+              {
+                "increment_residual_inf": 2.2567803216161743e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0002197400176729,
+                "final_matrix_min_singular": 0.9999643789297051,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.742644072640183e-08,
+                    "matrix_condition": 1.0002197400183623
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 2.2567803216161743e-19,
+                    "matrix_condition": 1.0002197400176729
+                  }
+                ],
+                "seconds": 3.404189327997301,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 0.0003925845010364583,
+                "weighted_two_form_defect_2": 0.0003925845010364583
+              },
+              {
+                "increment_residual_inf": 3.630065574576711e-19,
+                "nonlinear_corrections": 1,
+                "final_matrix_condition": 1.0002197264201411,
+                "final_matrix_min_singular": 0.9999643938278554,
+                "newton_history": [
+                  {
+                    "iteration": 0,
+                    "residual_inf": 2.7352771934215332e-08,
+                    "matrix_condition": 1.0002197264208608
+                  },
+                  {
+                    "iteration": 1,
+                    "residual_inf": 3.630065574576711e-19,
+                    "matrix_condition": 1.0002197264201411
+                  }
+                ],
+                "seconds": 3.843601460001082,
+                "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+                "canonical_two_form_defect_2": 0.00039258436645982084,
+                "weighted_two_form_defect_2": 0.00039258436645982084
+              }
+            ]
+          }
+        ]
+      },
+      "reference_resolution": {
+        "midpoint": true
+      },
+      "reference_refinement_max": 1.3756859836787989e-17
+    }
+  },
+  "limitations": [
+    "Smooth collocated feedback is not automatically constrained.",
+    "No blood/contact closure has been added to the Kirchhoff ROM.",
+    "No KAM or uniform-domain invertibility certificate is inferred from numerical structure."
+  ],
+  "elapsed_seconds": 690.713491167,
+  "ended_at": "2026-10-29T15:16:10.404329+00:00",
+  "metadata_correction": "stage5/results/closed_loop/source_metadata_correction.json"
+}

@@ -1,0 +1,30 @@
+{
+  "status": "actually_compared",
+  "scope": "Original successful force compensation vs corrected feasible-warm-start rerun; both original trajectories remain unchanged",
+  "state_max_norm_difference": 1.1742828600491345e-12,
+  "current_max_component_difference_A": 6.508686922757079e-10,
+  "old_source_snapshots": {
+    "coil_control.py": {
+      "path": "stage5/results/coil/source_before_force_warm_fix_coil_control.py",
+      "sha256": "9df4995b57d982ce0558a0d0276d5da41308f5900bad1c4376e51b088a52214f"
+    },
+    "run_coil_closed_loop.py": {
+      "path": "stage5/results/coil/source_before_force_warm_fix_run_coil_closed_loop.py",
+      "sha256": "bbb875f46baa91d997d7b85414369f0bc1837eda395fbaf90292331d4a8b3ae1"
+    },
+    "run_coil_validation.py": {
+      "path": "stage5/results/coil/source_before_force_warm_fix_run_coil_validation.py",
+      "sha256": "91b6200870a8af5c2a9fd5aaac6842a9b5b998edd73ae4f35e73bccbc7e3c877"
+    }
+  },
+  "new_source_sha256": {
+    "coil_control.py": "1b01c4fcdf0e2808d178fa9fc7e1996b1ebb7440c05c81394cf07df6ec772797",
+    "run_coil_closed_loop.py": "9e12d211750123643c9800fa9c0b100073aad3450f21211fecc251e5a42e5706",
+    "run_coil_validation.py": "8aec37ba0d3f3b804425669397c8022c0d8d2b1df4c53c5580d34a14eb4c7b47"
+  },
+  "coil_rom_old": {
+    "path": "stage5/results/coil/source_before_higher_ad_fix.py",
+    "sha256": "53004846e9fbd219efc146dee46dd9ce9966a2d1b67c9a782bf577012d9e199e"
+  },
+  "coil_rom_new_sha256": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc"
+}

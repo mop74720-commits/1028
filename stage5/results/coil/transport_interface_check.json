@@ -1,0 +1,78 @@
+{
+  "status": "actually_executed_pass",
+  "command": "stage5/program/coil_transport_check.py",
+  "initial_state": [
+    0.009800665778412416,
+    0.006216099682706645,
+    -0.00011714758713290688,
+    -0.002673078944651098,
+    -0.0023400650034276762,
+    -0.002004670955008666,
+    -0.0003434497763517713,
+    0.00042239663856923494,
+    0.0009713964335523372,
+    0.0006164865934812456,
+    0.00028831449452181235,
+    -1.555261969333705e-05,
+    0.0010343207233146883,
+    0.003262136800885292,
+    0.0012121093183480672,
+    0.00019815919912775725,
+    -0.0005689903042813087,
+    -0.0008241289518639397,
+    -0.0002153902030085732,
+    0.00012185349413057576,
+    0.0003601382410412057,
+    0.00018881774099542155,
+    2.064383633527739e-05,
+    -8.281594913786322e-05
+  ],
+  "currents_A": [
+    0.8852530495400187,
+    -1.2286958193398705,
+    -0.7250601367549449,
+    -0.7961036977402055,
+    -0.5688797115812853,
+    0.6475670120790111,
+    0.698025646431227,
+    0.7809830505705807,
+    1.1490316192924115,
+    0.28904359740025765,
+    1.5124804024130618,
+    -0.3281350083833567
+  ],
+  "model": "Same full 20-cell/256-wire-point 3D ROM and physical total bias; pure smooth collocated feedback, gamma=0",
+  "force_override": "-gain Gcoil Gcoil.T H_P, using NativeTransport inverse backend velocity for high AD",
+  "checks": {
+    "native_numeric_vs_actual_feedback_field": 1.6114862748110478e-16,
+    "native_tensor_vs_numeric_field": 7.666106750995938e-17,
+    "native_vs_actual_feedback_J": 1.260487054934224e-13,
+    "inverse_vs_solve_H_difference": 0.0,
+    "homogeneous_a1_plus_Lie_a0": 3.295992436580268e-17,
+    "source_b1_plus_force": 0.0
+  },
+  "source_sha256_at_import": {
+    "stage5/program/coil_rom.py": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc",
+    "stage5/program/transport_native.py": "3b86d9c95c65687592b1b25bedc4bcb34fdaa011a3cb51fc237624f1187f161e",
+    "stage5/program/run_transport_experiments.py": "4f60e34561f820ef4b6484a2e4bca8d92f35fe129f59f2214acecf7a71647465",
+    "stage5/program/coil_transport_check.py": "d47a6cff7fc5df84b50a7f52906c4e07f96c620c53e70f300a2978670951f2ca"
+  },
+  "source_unchanged_during_run": {
+    "stage5/program/coil_rom.py": true,
+    "stage5/program/transport_native.py": true,
+    "stage5/program/run_transport_experiments.py": true,
+    "stage5/program/coil_transport_check.py": true
+  },
+  "tolerances": {
+    "field_absolute": 1e-11,
+    "jacobian_absolute": 1e-09,
+    "H_absolute": 1e-12,
+    "a1_absolute": 1e-11,
+    "b1_absolute": 1e-14
+  },
+  "elapsed_seconds": 19.724543874999654,
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "torch": "2.5.1+cpu",
+  "numpy": "2.3.5",
+  "scope": "Physical field, low-order Jacobian and first transport/source coefficient interfaces. This is not a full fourth-order tensor, higher native coefficient, chart or integration certificate."
+}

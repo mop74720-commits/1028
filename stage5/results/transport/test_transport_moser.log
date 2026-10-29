@@ -1,0 +1,9 @@
+test_conservative_source_gauge_zero_coefficients (__main__.Tests.test_conservative_source_gauge_zero_coefficients) ... ok
+test_moser_inverse_time_and_state_sensitivities (__main__.Tests.test_moser_inverse_time_and_state_sensitivities) ... ok
+test_source_gauge_exact_center_residual_orders (__main__.Tests.test_source_gauge_exact_center_residual_orders) ... ok
+test_transformed_full_jacobian_including_moser_second_variation (__main__.Tests.test_transformed_full_jacobian_including_moser_second_variation) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 3.344s
+
+OK

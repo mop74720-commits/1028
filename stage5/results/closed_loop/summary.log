@@ -1,0 +1,76 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "branch": "conservative",
+      "method": "midpoint",
+      "expected_order": 2,
+      "observed_order": 1.9996063886351476,
+      "order_band": [
+        1.8,
+        2.2
+      ],
+      "order_passed": true,
+      "reference_refinement": 1.2352097430593461e-17,
+      "reference_resolved": true
+    },
+    {
+      "branch": "conservative",
+      "method": "central4",
+      "expected_order": 4,
+      "observed_order": 3.9966415190960998,
+      "order_band": [
+        3.8,
+        4.2
+      ],
+      "order_passed": true,
+      "reference_refinement": 1.2352097430593461e-17,
+      "reference_resolved": true
+    },
+    {
+      "branch": "proportional",
+      "method": "midpoint",
+      "expected_order": 2,
+      "observed_order": 1.9996063922100158,
+      "order_band": [
+        1.8,
+        2.2
+      ],
+      "order_passed": true,
+      "reference_refinement": 8.00946615498939e-18,
+      "reference_resolved": true
+    },
+    {
+      "branch": "proportional",
+      "method": "weighted_midpoint",
+      "expected_order": 2,
+      "observed_order": 1.9996063726840496,
+      "order_band": [
+        1.8,
+        2.2
+      ],
+      "order_passed": true,
+      "reference_refinement": 8.00946615498939e-18,
+      "reference_resolved": true
+    },
+    {
+      "branch": "collocated",
+      "method": "midpoint",
+      "expected_order": 2,
+      "observed_order": 1.999606389052459,
+      "order_band": [
+        1.8,
+        2.2
+      ],
+      "order_passed": true,
+      "reference_refinement": 1.3756859836787989e-17,
+      "reference_resolved": true
+    }
+  ],
+  "command": [
+    "/workspace/1028-cloud/venvs/learning/bin/python",
+    "stage5/program/run_closed_loop_summary.py"
+  ],
+  "criteria": "Observed order within expected +/-0.2; refined reference difference <1% finest error; no threshold relaxed.",
+  "limitation": "Finite-grid experiment, not a uniform mathematical convergence certificate."
+}

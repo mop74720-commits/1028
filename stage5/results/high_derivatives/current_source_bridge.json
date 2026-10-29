@@ -1,0 +1,38 @@
+{
+  "status": "executed_AD_functions_unchanged",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "stage5/program/verify_high_derivative_source_bridge.py"
+  ],
+  "utc": "2026-10-29T17:35:25.553926+00:00",
+  "report_source_hashes": {
+    "minimal": "3b86d9c95c65687592b1b25bedc4bcb34fdaa011a3cb51fc237624f1187f161e",
+    "rom": "3b86d9c95c65687592b1b25bedc4bcb34fdaa011a3cb51fc237624f1187f161e",
+    "transport": "3b86d9c95c65687592b1b25bedc4bcb34fdaa011a3cb51fc237624f1187f161e"
+  },
+  "preserved_snapshot": "stage5/results/transport/legacy_ad_source/post_inverse_transport_native.py",
+  "preserved_snapshot_sha256": "3b86d9c95c65687592b1b25bedc4bcb34fdaa011a3cb51fc237624f1187f161e",
+  "current_sha256": "a77ad9df7fc789f3a1eb061616e7f42de596047ba8e9fd6e7dbe436179505e3f",
+  "unchanged_methods": [
+    "a0",
+    "a1",
+    "b1",
+    "coefficient",
+    "coefficient_function",
+    "field_tensor",
+    "force_tensor",
+    "high_order_hamiltonian",
+    "legendre_difference",
+    "lie_oneform",
+    "metadata",
+    "oneform",
+    "source_coefficient_function"
+  ],
+  "changed_methods": [
+    "__init__",
+    "field",
+    "field_and_jacobian"
+  ],
+  "change_scope": "An optional separate numeric-force callback was added. All symbolic/high-order AD functions are byte-AST identical. Physical numeric callbacks require their separate coil-interface check.",
+  "not_claimed": "This does not establish uniform derivative correctness or certify new model callbacks."
+}

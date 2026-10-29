@@ -1,0 +1,9 @@
+{
+  "status": "comparison_failed_exact_initial_identity",
+  "reason": "The new equivalent coil kernel changes recomputed bias-fit floating rounding by max 6.561418075534675e-14 A. Mechanical z is bitwise identical. No comparison tolerance relaxed.",
+  "action": "Keep this completed numerical run; recompute into matched_initial_bias with exact old 36D initial vector and exact old total bias currents.",
+  "old_npz": "stage5/results/closed_loop/sampled_jacobians.npz",
+  "new_npz": "stage5/results/closed_loop/sampled_warmfix/sampled_jacobians.npz",
+  "failing_assertion": "np.array_equal(old_initial,new_initial)",
+  "failing_comparison_source_sha256": "0e33a3166a01522696127d6d5c9e0488e2792bb61bebec0b7c685a2b8750c12f"
+}

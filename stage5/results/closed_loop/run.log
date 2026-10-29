@@ -1,0 +1,21 @@
+conservative reference {'success': True, 'message': 'The solver successfully reached the end of the integration interval.', 'nfev': 62, 'rtol': 2e-11, 'atol': 2e-13, 'max_step': 0.000125, 'seconds': 9.010586174001219}
+conservative reference {'success': True, 'message': 'The solver successfully reached the end of the integration interval.', 'nfev': 122, 'rtol': 5e-13, 'atol': 5e-15, 'max_step': 6.25e-05, 'seconds': 17.44693996099886}
+conservative midpoint 4 error 3.586970766982001e-08 order None
+conservative midpoint 8 error 8.977205679816349e-09 order 1.998427633078052
+conservative midpoint 16 error 2.2449138176111573e-09 order 1.9996063886351476
+conservative central4 4 error 3.759843466493459e-11 order None
+conservative central4 8 error 2.3543947273024002e-12 order 3.9972444778793346
+conservative central4 16 error 1.4749262237590846e-13 order 3.9966415190960998
+proportional reference {'success': True, 'message': 'The solver successfully reached the end of the integration interval.', 'nfev': 62, 'rtol': 2e-11, 'atol': 2e-13, 'max_step': 0.000125, 'seconds': 11.731661032001284}
+proportional reference {'success': True, 'message': 'The solver successfully reached the end of the integration interval.', 'nfev': 122, 'rtol': 5e-13, 'atol': 5e-15, 'max_step': 6.25e-05, 'seconds': 17.36558673699983}
+proportional midpoint 4 error 3.586993347565747e-08 order None
+proportional midpoint 8 error 8.977262107867718e-09 order 1.9984276467327045
+proportional midpoint 16 error 2.24492792291062e-09 order 1.9996063922100158
+proportional weighted_midpoint 4 error 3.587640366022003e-08 order None
+proportional weighted_midpoint 8 error 8.978881904779361e-09 order 1.9984275685007193
+proportional weighted_midpoint 16 error 2.2453330130243085e-09 order 1.9996063726840496
+collocated reference {'success': True, 'message': 'The solver successfully reached the end of the integration interval.', 'nfev': 62, 'rtol': 2e-11, 'atol': 2e-13, 'max_step': 0.000125, 'seconds': 27.908005159999448}
+collocated reference {'success': True, 'message': 'The solver successfully reached the end of the integration interval.', 'nfev': 122, 'rtol': 5e-13, 'atol': 5e-15, 'max_step': 6.25e-05, 'seconds': 38.073625245000585}
+collocated midpoint 4 error 3.586971728432941e-08 order None
+collocated midpoint 8 error 8.977208079993568e-09 order 1.9984276340537372
+collocated midpoint 16 error 2.2449144171698347e-09 order 1.999606389052459

@@ -1,0 +1,3 @@
+plant,controller,steps,duration_tau,elapsed_seconds,total_power_balance_residual,mechanical_power_balance_residual,max_current_A,max_continuous_ramp_slew_A_s,max_actual_magnet_point_B_T,max_actual_magnet_point_G_T_per_m,coarse_fine_max_state_difference
+full,damping_compensation,8,0.004,14.59809111800132,-1.9681922983766365e-09,-1.9681761254447967e-09,1.530427161254727,19.99999999999995,0.0005009446460408326,0.004314035783425629,
+full,damping_compensation,16,0.004,25.064596628999425,-6.245743679189619e-11,-6.245660857260949e-11,1.530427161254727,19.99999999999995,0.0005009446460408326,0.004314035783425629,7.220684307841546e-08

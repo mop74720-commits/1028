@@ -1,0 +1,505 @@
+{
+  "status": "known_failure_detected_and_safe_paths_verified",
+  "section": "minimal",
+  "command": [
+    "/workspace/1028-cloud/venvs/learning/bin/python",
+    "stage5/program/verify_high_derivatives.py",
+    "--section",
+    "all"
+  ],
+  "started_at": "2026-10-29T15:30:52.608553+00:00",
+  "torch_version": "2.5.1+cpu",
+  "numpy_version": "2.3.5",
+  "source_sha256": {
+    "stage5/program/verify_high_derivatives.py": "6a778e09c9e4feb568b17eb3096721bb3f6d2ad3f526dc7c796625169553a929",
+    "stage3/source_inputs/starter/stage2/program/learning/rod_rom.py": "5aebcea066b73f717c2c26fd0b8f3454e205fbcc1bafd970762f3fb9371ee3c9",
+    "stage5/program/transport_native.py": "3b86d9c95c65687592b1b25bedc4bcb34fdaa011a3cb51fc237624f1187f161e"
+  },
+  "records": [
+    {
+      "mass_power": 1,
+      "implementation": "division",
+      "point": [
+        0.0,
+        0.0
+      ],
+      "order": 2,
+      "mixed_vs_analytic_division_max": 0.0,
+      "reverse_vs_analytic_division_max": 0.0,
+      "mixed_full_permutation_defect": 0.0
+    },
+    {
+      "mass_power": 1,
+      "implementation": "solve",
+      "point": [
+        0.0,
+        0.0
+      ],
+      "order": 2,
+      "mixed_vs_analytic_division_max": 0.0,
+      "reverse_vs_analytic_division_max": 0.0,
+      "mixed_full_permutation_defect": 0.0
+    },
+    {
+      "mass_power": 1,
+      "implementation": "inverse",
+      "point": [
+        0.0,
+        0.0
+      ],
+      "order": 2,
+      "mixed_vs_analytic_division_max": 0.0,
+      "reverse_vs_analytic_division_max": 0.0,
+      "mixed_full_permutation_defect": 0.0
+    },
+    {
+      "mass_power": 1,
+      "implementation": "division",
+      "point": [
+        0.0,
+        0.0
+      ],
+      "order": 3,
+      "mixed_vs_analytic_division_max": 0.0,
+      "reverse_vs_analytic_division_max": 0.0,
+      "mixed_full_permutation_defect": 0.0
+    },
+    {
+      "mass_power": 1,
+      "implementation": "solve",
+      "point": [
+        0.0,
+        0.0
+      ],
+      "order": 3,
+      "mixed_vs_analytic_division_max": 1.0,
+      "reverse_vs_analytic_division_max": 0.0,
+      "mixed_full_permutation_defect": 1.0
+    },
+    {
+      "mass_power": 1,
+      "implementation": "inverse",
+      "point": [
+        0.0,
+        0.0
+      ],
+      "order": 3,
+      "mixed_vs_analytic_division_max": 0.0,
+      "reverse_vs_analytic_division_max": 0.0,
+      "mixed_full_permutation_defect": 0.0
+    },
+    {
+      "mass_power": 1,
+      "implementation": "division",
+      "point": [
+        0.0,
+        0.0
+      ],
+      "order": 4,
+      "mixed_vs_analytic_division_max": 0.0,
+      "reverse_vs_analytic_division_max": 0.0,
+      "mixed_full_permutation_defect": 0.0
+    },
+    {
+      "mass_power": 1,
+      "implementation": "solve",
+      "point": [
+        0.0,
+        0.0
+      ],
+      "order": 4,
+      "mixed_vs_analytic_division_max": 2.0,
+      "reverse_vs_analytic_division_max": 0.0,
+      "mixed_full_permutation_defect": 2.0
+    },
+    {
+      "mass_power": 1,
+      "implementation": "inverse",
+      "point": [
+        0.0,
+        0.0
+      ],
+      "order": 4,
+      "mixed_vs_analytic_division_max": 0.0,
+      "reverse_vs_analytic_division_max": 0.0,
+      "mixed_full_permutation_defect": 0.0
+    },
+    {
+      "mass_power": 1,
+      "implementation": "division",
+      "point": [
+        0.2,
+        0.3
+      ],
+      "order": 2,
+      "mixed_vs_analytic_division_max": 0.0,
+      "reverse_vs_analytic_division_max": 0.0,
+      "mixed_full_permutation_defect": 0.0
+    },
+    {
+      "mass_power": 1,
+      "implementation": "solve",
+      "point": [
+        0.2,
+        0.3
+      ],
+      "order": 2,
+      "mixed_vs_analytic_division_max": 0.0,
+      "reverse_vs_analytic_division_max": 0.0,
+      "mixed_full_permutation_defect": 0.0
+    },
+    {
+      "mass_power": 1,
+      "implementation": "inverse",
+      "point": [
+        0.2,
+        0.3
+      ],
+      "order": 2,
+      "mixed_vs_analytic_division_max": 0.0,
+      "reverse_vs_analytic_division_max": 0.0,
+      "mixed_full_permutation_defect": 0.0
+    },
+    {
+      "mass_power": 1,
+      "implementation": "division",
+      "point": [
+        0.2,
+        0.3
+      ],
+      "order": 3,
+      "mixed_vs_analytic_division_max": 0.0,
+      "reverse_vs_analytic_division_max": 0.0,
+      "mixed_full_permutation_defect": 0.0
+    },
+    {
+      "mass_power": 1,
+      "implementation": "solve",
+      "point": [
+        0.2,
+        0.3
+      ],
+      "order": 3,
+      "mixed_vs_analytic_division_max": 0.6944444444444445,
+      "reverse_vs_analytic_division_max": 0.0,
+      "mixed_full_permutation_defect": 0.6944444444444445
+    },
+    {
+      "mass_power": 1,
+      "implementation": "inverse",
+      "point": [
+        0.2,
+        0.3
+      ],
+      "order": 3,
+      "mixed_vs_analytic_division_max": 2.7755575615628914e-17,
+      "reverse_vs_analytic_division_max": 0.0,
+      "mixed_full_permutation_defect": 0.0
+    },
+    {
+      "mass_power": 1,
+      "implementation": "division",
+      "point": [
+        0.2,
+        0.3
+      ],
+      "order": 4,
+      "mixed_vs_analytic_division_max": 1.6653345369377348e-16,
+      "reverse_vs_analytic_division_max": 0.0,
+      "mixed_full_permutation_defect": 1.1102230246251565e-16
+    },
+    {
+      "mass_power": 1,
+      "implementation": "solve",
+      "point": [
+        0.2,
+        0.3
+      ],
+      "order": 4,
+      "mixed_vs_analytic_division_max": 1.1574074074074077,
+      "reverse_vs_analytic_division_max": 1.1102230246251565e-16,
+      "mixed_full_permutation_defect": 1.1574074074074077
+    },
+    {
+      "mass_power": 1,
+      "implementation": "inverse",
+      "point": [
+        0.2,
+        0.3
+      ],
+      "order": 4,
+      "mixed_vs_analytic_division_max": 1.1102230246251565e-16,
+      "reverse_vs_analytic_division_max": 1.1102230246251565e-16,
+      "mixed_full_permutation_defect": 0.0
+    },
+    {
+      "mass_power": 2,
+      "implementation": "division",
+      "point": [
+        0.0,
+        0.0
+      ],
+      "order": 2,
+      "mixed_vs_analytic_division_max": 0.0,
+      "reverse_vs_analytic_division_max": 0.0,
+      "mixed_full_permutation_defect": 0.0
+    },
+    {
+      "mass_power": 2,
+      "implementation": "solve",
+      "point": [
+        0.0,
+        0.0
+      ],
+      "order": 2,
+      "mixed_vs_analytic_division_max": 0.0,
+      "reverse_vs_analytic_division_max": 0.0,
+      "mixed_full_permutation_defect": 0.0
+    },
+    {
+      "mass_power": 2,
+      "implementation": "inverse",
+      "point": [
+        0.0,
+        0.0
+      ],
+      "order": 2,
+      "mixed_vs_analytic_division_max": 0.0,
+      "reverse_vs_analytic_division_max": 0.0,
+      "mixed_full_permutation_defect": 0.0
+    },
+    {
+      "mass_power": 2,
+      "implementation": "division",
+      "point": [
+        0.0,
+        0.0
+      ],
+      "order": 3,
+      "mixed_vs_analytic_division_max": 0.0,
+      "reverse_vs_analytic_division_max": 0.0,
+      "mixed_full_permutation_defect": 0.0
+    },
+    {
+      "mass_power": 2,
+      "implementation": "solve",
+      "point": [
+        0.0,
+        0.0
+      ],
+      "order": 3,
+      "mixed_vs_analytic_division_max": 0.0,
+      "reverse_vs_analytic_division_max": 0.0,
+      "mixed_full_permutation_defect": 0.0
+    },
+    {
+      "mass_power": 2,
+      "implementation": "inverse",
+      "point": [
+        0.0,
+        0.0
+      ],
+      "order": 3,
+      "mixed_vs_analytic_division_max": 0.0,
+      "reverse_vs_analytic_division_max": 0.0,
+      "mixed_full_permutation_defect": 0.0
+    },
+    {
+      "mass_power": 2,
+      "implementation": "division",
+      "point": [
+        0.0,
+        0.0
+      ],
+      "order": 4,
+      "mixed_vs_analytic_division_max": 0.0,
+      "reverse_vs_analytic_division_max": 0.0,
+      "mixed_full_permutation_defect": 0.0
+    },
+    {
+      "mass_power": 2,
+      "implementation": "solve",
+      "point": [
+        0.0,
+        0.0
+      ],
+      "order": 4,
+      "mixed_vs_analytic_division_max": 2.0,
+      "reverse_vs_analytic_division_max": 0.0,
+      "mixed_full_permutation_defect": 2.0
+    },
+    {
+      "mass_power": 2,
+      "implementation": "inverse",
+      "point": [
+        0.0,
+        0.0
+      ],
+      "order": 4,
+      "mixed_vs_analytic_division_max": 0.0,
+      "reverse_vs_analytic_division_max": 0.0,
+      "mixed_full_permutation_defect": 0.0
+    },
+    {
+      "mass_power": 2,
+      "implementation": "division",
+      "point": [
+        0.2,
+        0.3
+      ],
+      "order": 2,
+      "mixed_vs_analytic_division_max": 1.3877787807814457e-17,
+      "reverse_vs_analytic_division_max": 0.0,
+      "mixed_full_permutation_defect": 0.0
+    },
+    {
+      "mass_power": 2,
+      "implementation": "solve",
+      "point": [
+        0.2,
+        0.3
+      ],
+      "order": 2,
+      "mixed_vs_analytic_division_max": 1.3877787807814457e-17,
+      "reverse_vs_analytic_division_max": 1.3877787807814457e-17,
+      "mixed_full_permutation_defect": 0.0
+    },
+    {
+      "mass_power": 2,
+      "implementation": "inverse",
+      "point": [
+        0.2,
+        0.3
+      ],
+      "order": 2,
+      "mixed_vs_analytic_division_max": 1.3877787807814457e-17,
+      "reverse_vs_analytic_division_max": 1.3877787807814457e-17,
+      "mixed_full_permutation_defect": 0.0
+    },
+    {
+      "mass_power": 2,
+      "implementation": "division",
+      "point": [
+        0.2,
+        0.3
+      ],
+      "order": 3,
+      "mixed_vs_analytic_division_max": 5.551115123125783e-17,
+      "reverse_vs_analytic_division_max": 0.0,
+      "mixed_full_permutation_defect": 5.551115123125783e-17
+    },
+    {
+      "mass_power": 2,
+      "implementation": "solve",
+      "point": [
+        0.2,
+        0.3
+      ],
+      "order": 3,
+      "mixed_vs_analytic_division_max": 0.3698224852071006,
+      "reverse_vs_analytic_division_max": 5.551115123125783e-17,
+      "mixed_full_permutation_defect": 0.36982248520710054
+    },
+    {
+      "mass_power": 2,
+      "implementation": "inverse",
+      "point": [
+        0.2,
+        0.3
+      ],
+      "order": 3,
+      "mixed_vs_analytic_division_max": 5.551115123125783e-17,
+      "reverse_vs_analytic_division_max": 5.551115123125783e-17,
+      "mixed_full_permutation_defect": 5.551115123125783e-17
+    },
+    {
+      "mass_power": 2,
+      "implementation": "division",
+      "point": [
+        0.2,
+        0.3
+      ],
+      "order": 4,
+      "mixed_vs_analytic_division_max": 2.220446049250313e-16,
+      "reverse_vs_analytic_division_max": 0.0,
+      "mixed_full_permutation_defect": 2.220446049250313e-16
+    },
+    {
+      "mass_power": 2,
+      "implementation": "solve",
+      "point": [
+        0.2,
+        0.3
+      ],
+      "order": 4,
+      "mixed_vs_analytic_division_max": 1.56463359126081,
+      "reverse_vs_analytic_division_max": 2.220446049250313e-16,
+      "mixed_full_permutation_defect": 1.8491124260355025
+    },
+    {
+      "mass_power": 2,
+      "implementation": "inverse",
+      "point": [
+        0.2,
+        0.3
+      ],
+      "order": 4,
+      "mixed_vs_analytic_division_max": 2.220446049250313e-16,
+      "reverse_vs_analytic_division_max": 2.220446049250313e-16,
+      "mixed_full_permutation_defect": 0.0
+    }
+  ],
+  "nesting_patterns": [
+    {
+      "modes_chronological": "RRR",
+      "maximum_difference_from_reverse": 0.0
+    },
+    {
+      "modes_chronological": "RRF",
+      "maximum_difference_from_reverse": 1.3877787807814457e-16
+    },
+    {
+      "modes_chronological": "RFR",
+      "maximum_difference_from_reverse": 0.9105098855359002
+    },
+    {
+      "modes_chronological": "RFF",
+      "maximum_difference_from_reverse": 0.9105098855359002
+    },
+    {
+      "modes_chronological": "RRRR",
+      "maximum_difference_from_reverse": 0.0
+    },
+    {
+      "modes_chronological": "RRRF",
+      "maximum_difference_from_reverse": 3.3306690738754696e-16
+    },
+    {
+      "modes_chronological": "RRFR",
+      "maximum_difference_from_reverse": 2.0559900641133235
+    },
+    {
+      "modes_chronological": "RRFF",
+      "maximum_difference_from_reverse": 2.0559900641133235
+    },
+    {
+      "modes_chronological": "RFRR",
+      "maximum_difference_from_reverse": 1.0279950320566618
+    },
+    {
+      "modes_chronological": "RFRF",
+      "maximum_difference_from_reverse": 1.0279950320566618
+    },
+    {
+      "modes_chronological": "RFFR",
+      "maximum_difference_from_reverse": 2.0559900641133235
+    },
+    {
+      "modes_chronological": "RFFF",
+      "maximum_difference_from_reverse": 2.0559900641133235
+    }
+  ],
+  "cause_scope": "torch 2.5.1 CPU nested AD of linalg.solve; this is not a proof about every PyTorch version or every possible nesting.",
+  "seconds": 3.1521722639990912,
+  "ended_at": "2026-10-29T15:30:55.760725+00:00"
+}

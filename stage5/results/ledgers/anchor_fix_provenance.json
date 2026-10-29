@@ -1,0 +1,9 @@
+{
+  "status": "reconstructed_from_exact_anchor_patch_and_verified_against_prior_build_sha256",
+  "reason": "O004/PHY07/PHY08 current_power_port function belongs to rod_transfer_control.py; only evidence anchor corrected",
+  "previous_manifest": "stage5/results/ledgers/stable_branch_updates_before_anchor_fix.json",
+  "previous_sha256": "6baa0a128eefee2f04b0e11030fcdc2e42d23be9874b9e76e1ab5d9a2b79524f",
+  "current_manifest": "stage5/results/ledgers/stable_branch_updates.json",
+  "current_sha256": "5650e9f920c2d7985204c2da4dfe714b6daf1ff7cdb2e33ac28b72e8c0ac9434",
+  "scope": "No experiment data or original 21 inheritance fields changed."
+}

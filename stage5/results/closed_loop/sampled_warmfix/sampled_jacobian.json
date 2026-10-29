@@ -1,0 +1,1756 @@
+{
+  "status": "completed",
+  "command": [
+    "/workspace/1028-cloud/venvs/learning/bin/python",
+    "stage5/program/run_closed_loop_sampled.py",
+    "--output",
+    "stage5/results/closed_loop/sampled_warmfix"
+  ],
+  "cwd": "/workspace/1028",
+  "started_at": "2026-10-29T17:44:37.631996+00:00",
+  "runs": [
+    {
+      "kind": "collocated",
+      "interval_tau": 0.0005,
+      "interval_seconds": 0.0001121672427604084,
+      "RK4_substeps": 2,
+      "gamma": 0.2,
+      "allocation": {
+        "success": true,
+        "message": "Box projection already satisfies all magnetic-point field constraints",
+        "iterations": 0,
+        "physical_interval_s": 0.0001121672427604084,
+        "current_request_distance_A": 0.0,
+        "generalized_force_allocation_residual": 0.0,
+        "constraint_violation": 0.0,
+        "active_magnetic_points": 1,
+        "maximum_planned_slew_A_s": 13.146610841024643,
+        "requested_current_A": [
+          0.8852280022039573,
+          -1.2296748629188485,
+          -0.7262653610498649,
+          -0.7965773050528547,
+          -0.569534056317674,
+          0.6460923929893293,
+          0.6968401460272965,
+          0.7797023103081141,
+          1.14966681768348,
+          0.2881683285952023,
+          1.5123476181634308,
+          -0.3272053527996603
+        ],
+        "allocated_current_A": [
+          0.8852280022039573,
+          -1.2296748629188485,
+          -0.7262653610498649,
+          -0.7965773050528547,
+          -0.569534056317674,
+          0.6460923929893293,
+          0.6968401460272965,
+          0.7797023103081141,
+          1.14966681768348,
+          0.2881683285952023,
+          1.5123476181634308,
+          -0.3272053527996603
+        ],
+        "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only"
+      },
+      "active_box_signature": {
+        "lower": [],
+        "upper": [],
+        "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+      },
+      "active_signature_changes_in_72_coordinate_probes": 0,
+      "coordinate_probe_active_signatures": [
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        },
+        {
+          "lower": [],
+          "upper": [],
+          "allocator_message": "Box projection already satisfies all magnetic-point field constraints"
+        }
+      ],
+      "finite_difference_epsilon": 1e-06,
+      "directional_checks": [
+        {
+          "epsilon_refinement_relative": 8.718491166958659e-11,
+          "matrix_direction_relative": 2.514735393564017e-10
+        },
+        {
+          "epsilon_refinement_relative": 2.6893346866550876e-10,
+          "matrix_direction_relative": 1.404682622456263e-10
+        }
+      ],
+      "full_augmented_jacobian_condition": 3.039333352887994e+17,
+      "singular_values": [
+        11.307429049299884,
+        7.810126260449622,
+        1.0353670461656859,
+        1.0232034910977288,
+        1.001558360970023,
+        1.0014791103511016,
+        1.0008949714751159,
+        1.0007810036456453,
+        1.000579997221855,
+        1.0002712448655153,
+        1.000102673445533,
+        1.000059909166003,
+        1.0000013345743668,
+        0.9999922877584208,
+        0.9999601482516152,
+        0.9999140725403586,
+        0.9998642730753345,
+        0.9998132254700887,
+        0.9996786501365127,
+        0.999300773855372,
+        0.9991217191270374,
+        0.9990440597019071,
+        0.9984055086860937,
+        0.9983537601781914,
+        0.00024228703229520042,
+        0.00016694825402285428,
+        1.7966661418324015e-05,
+        1.1900810434013076e-05,
+        2.142491414526747e-11,
+        2.746738966851294e-15,
+        8.098039579190699e-16,
+        2.1471025656397305e-16,
+        1.290540311613309e-16,
+        9.947326563139068e-17,
+        5.992784369577742e-17,
+        3.720364874934002e-17
+      ],
+      "numerical_rank_relative_1e_8": 28,
+      "current_memory_to_mechanics_norm": 0.0002846431124782268,
+      "state_to_next_current_norm": 11.263372538097698,
+      "conditional_mechanical_canonical_defect_2": 0.0032274906061215466,
+      "augmented_degenerate_form_defect_2": 0.0032398895362791384,
+      "structure_interpretation": "24x24 block fixes previous current; it is not the whole map. diag(K0,0) is degenerate, so its defect is only a diagnostic, never a symplectic certificate.",
+      "smoothness_interpretation": "Stable sampled active box signatures do not exclude field-constraint or optimizer sensitivity and do not prove a neighborhood theorem.",
+      "seconds": 120.70631384100125
+    },
+    {
+      "kind": "damping_compensation",
+      "interval_tau": 0.0005,
+      "interval_seconds": 0.0001121672427604084,
+      "RK4_substeps": 2,
+      "gamma": 0.2,
+      "allocation": {
+        "success": true,
+        "message": "Optimization terminated successfully",
+        "iterations": 11,
+        "seed_policy": "previous verified feasible at current magnetic points",
+        "allocation_objective": "least squares of Gcoil(Q)(i-i_bias)-desired_force, in fixed canonical Pdot norm",
+        "desired_force_increment": [
+          0.00020686414466293768,
+          0.0006524273601770584,
+          0.00024242186366961344,
+          3.9631839825551455e-05,
+          -0.00011379806085626175,
+          -0.00016482579037278795,
+          -4.307804060171464e-05,
+          2.437069882611515e-05,
+          7.202764820824115e-05,
+          3.776354819908431e-05,
+          4.128767267055478e-06,
+          -1.6563189827572644e-05
+        ],
+        "achieved_force_increment": [
+          0.00013928446130451183,
+          0.0005904063844058114,
+          -2.2676235517307816e-05,
+          -0.00018831591638166,
+          8.90859268455404e-06,
+          -8.835258210839191e-05,
+          2.790246534953712e-06,
+          6.350361531385859e-05,
+          4.941717579088676e-06,
+          2.577468255890862e-06,
+          3.0504491532618725e-06,
+          -2.29518505995363e-06
+        ],
+        "orthogonal_unreachable_residual": 0.00026552961743084216,
+        "constrained_force_residual": 0.0004014155915683139,
+        "generalized_force_allocation_residual": 0.0004014155915683139,
+        "rank_rcond": 1e-08,
+        "rank": 5,
+        "singular_values": [
+          1.1386802008530938,
+          0.8379624624146291,
+          0.4670774862110367,
+          0.3669183751927382,
+          0.00032578046109612197,
+          1.6436816907212174e-16,
+          1.267762000988557e-16,
+          6.126656405660398e-17,
+          2.1382072544349916e-18,
+          1.282636165552968e-18,
+          9.904713323324249e-19,
+          1.0223969649292912e-19
+        ],
+        "current_request_distance_A": 0.9240829876569574,
+        "requested_current_A": [
+          0.30539263261066674,
+          -1.3079350934940177,
+          -0.9437459626674313,
+          -0.5233849133854179,
+          -0.1609870826476575,
+          0.7074509762938382,
+          0.701877894681693,
+          0.9757205258772029,
+          1.2658483882093088,
+          0.08325432927851123,
+          1.8322483501447935,
+          -0.1451987305873122
+        ],
+        "allocated_current_A": [
+          0.8830097046848105,
+          -1.2294172059708737,
+          -0.7273034816101529,
+          -0.7938603528849973,
+          -0.5666363667260771,
+          0.6498103569342193,
+          0.6958829936395994,
+          0.7832263954257889,
+          1.1481836083719081,
+          0.2868002525450495,
+          1.51472374726827,
+          -0.3270145384559708
+        ],
+        "maximum_planned_slew_A_s": 19.99999999999995,
+        "constraint_violation": 0.0,
+        "physical_interval_s": 0.0001121672427604084,
+        "active_magnetic_points": 1,
+        "field_constraints_scope": "Decision-state actual magnet quadrature points; moving-point checks separate"
+      },
+      "active_box_signature": {
+        "lower": [
+          0,
+          2,
+          9
+        ],
+        "upper": [
+          3,
+          4,
+          5,
+          7,
+          10
+        ],
+        "allocator_message": "Optimization terminated successfully"
+      },
+      "active_signature_changes_in_72_coordinate_probes": 0,
+      "coordinate_probe_active_signatures": [
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        },
+        {
+          "lower": [
+            0,
+            2,
+            9
+          ],
+          "upper": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "allocator_message": "Optimization terminated successfully"
+        }
+      ],
+      "finite_difference_epsilon": 1e-06,
+      "directional_checks": [
+        {
+          "epsilon_refinement_relative": 2.977812103079259e-07,
+          "matrix_direction_relative": 5.339768397128827e-07
+        },
+        {
+          "epsilon_refinement_relative": 2.1177939880546375e-08,
+          "matrix_direction_relative": 1.9651547047532946e-06
+        }
+      ],
+      "full_augmented_jacobian_condition": 209528.29373417053,
+      "singular_values": [
+        2.946388889853069,
+        2.015327848904631,
+        1.4836688280973869,
+        1.2688884380152892,
+        1.0015728561175081,
+        1.0015308449626117,
+        1.0009754232005594,
+        1.0009014498786375,
+        1.0005978757501586,
+        1.0005645732467245,
+        1.0001647228205135,
+        1.0001021903477247,
+        1.000076747931886,
+        1.0000062179286786,
+        1.0000000001349894,
+        1.0000000000717286,
+        1.0000000000263582,
+        0.9999999999697536,
+        0.9999983022708381,
+        0.9999924959803096,
+        0.9999800811518315,
+        0.9999259353707081,
+        0.9999106756432941,
+        0.9998905092758296,
+        0.9998469376816819,
+        0.9997830871429113,
+        0.9994161517512038,
+        0.9992779590396168,
+        0.9990200715702793,
+        0.998926170681064,
+        0.9984318660779127,
+        0.9983138654290196,
+        9.205896848430144e-05,
+        3.18876510988068e-05,
+        2.5671151983260428e-05,
+        1.4062009656753877e-05
+      ],
+      "numerical_rank_relative_1e_8": 36,
+      "current_memory_to_mechanics_norm": 0.00028463934646485604,
+      "state_to_next_current_norm": 1.103336655741593,
+      "conditional_mechanical_canonical_defect_2": 0.00010300832086790626,
+      "augmented_degenerate_form_defect_2": 0.0002889985865361953,
+      "structure_interpretation": "24x24 block fixes previous current; it is not the whole map. diag(K0,0) is degenerate, so its defect is only a diagnostic, never a symplectic certificate.",
+      "smoothness_interpretation": "Stable sampled active box signatures do not exclude field-constraint or optimizer sensitivity and do not prove a neighborhood theorem.",
+      "seconds": 105.53933346100166
+    }
+  ],
+  "coordinate_order": "(Q[12],P[12],previous_total_current_A[12]); dimension 36",
+  "scope": "One actual controller period with continuous current ramp, full-coil plant, gamma=.2; no continuous-time or symplectic claim.",
+  "source_sha256": {
+    "stage5/program/run_closed_loop_sampled.py": "36b4770f59f55c8b5a455f0e1f9648a4898f0214616dfbc42bb8d4ac9eb40bd3",
+    "stage5/program/closed_loop_sampled.py": "43ddbe4eda6dc31049ec233571c60c7a8e5d35c0e0caf22fd432fbe6fd37e8f2",
+    "stage5/program/coil_control.py": "1b01c4fcdf0e2808d178fa9fc7e1996b1ebb7440c05c81394cf07df6ec772797",
+    "stage5/program/coil_rom.py": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc"
+  },
+  "baseline_json": "stage5/results/closed_loop/sampled_jacobian.json",
+  "mathematical_protocol_changed": false,
+  "runner_change": "Add nonoverwriting output option, exact source snapshots, and retain probe active signatures; initial state, map, epsilon, random seed and directions are unchanged.",
+  "source_unchanged_during_run": {
+    "stage5/program/run_closed_loop_sampled.py": true,
+    "stage5/program/closed_loop_sampled.py": true,
+    "stage5/program/coil_control.py": true,
+    "stage5/program/coil_rom.py": true
+  },
+  "ended_at": "2026-10-29T17:48:26.033135+00:00",
+  "elapsed_seconds": 228.40118242500102
+}

@@ -1,0 +1,11 @@
+{
+  "status": "executed_pass",
+  "label_recomputation": {
+    "energy_max_abs_difference": 0.0,
+    "gradient_max_abs_difference": 0.0,
+    "coordinate_dimension": 24,
+    "physical_model": "same12DOF20cell geometric ROM, original ideal axial bias"
+  },
+  "negative_points": 59,
+  "all_negative_signs_confirmed": true
+}

@@ -1,0 +1,76 @@
+{
+  "status": "completed",
+  "rows": [
+    {
+      "kind": "value",
+      "error_2": 0.0,
+      "relative_error": 0.0
+    },
+    {
+      "kind": "gradient",
+      "error_2": 4.41280939622558e-17,
+      "relative_error": 4.41280939622558e-17
+    },
+    {
+      "kind": "hessian",
+      "error_2": 1.6080513664874395e-13,
+      "relative_error": 1.1111854658174484e-16
+    },
+    {
+      "kind": "directional_H",
+      "order": 3,
+      "direction_index": 0,
+      "mixed_inverse": 56.99272857458041,
+      "pure_reverse_original": 56.99272857458469,
+      "relative_error": 7.505285983418059e-14
+    },
+    {
+      "kind": "directional_H",
+      "order": 4,
+      "direction_index": 0,
+      "mixed_inverse": 345.6250013141075,
+      "pure_reverse_original": 345.6250013142538,
+      "relative_error": 4.231699563767271e-13
+    },
+    {
+      "kind": "directional_H",
+      "order": 3,
+      "direction_index": 1,
+      "mixed_inverse": -80.79828389996467,
+      "pure_reverse_original": -80.79828389996504,
+      "relative_error": 4.572896907720239e-15
+    },
+    {
+      "kind": "directional_H",
+      "order": 4,
+      "direction_index": 1,
+      "mixed_inverse": 1138.2485863940421,
+      "pure_reverse_original": 1138.248586394051,
+      "relative_error": 7.79054193282888e-15
+    },
+    {
+      "kind": "native_homogeneous_source_gauge_coefficient_relation",
+      "order": 1,
+      "raw_norm": 0.2442660626077548,
+      "difference_2": 0.0,
+      "seconds": 2.268716749000305
+    },
+    {
+      "kind": "native_homogeneous_source_gauge_coefficient_relation",
+      "order": 2,
+      "raw_norm": 89.23047740219472,
+      "difference_2": 1.2365840964507248e-14,
+      "seconds": 11.215195333999873
+    },
+    {
+      "kind": "native_homogeneous_source_gauge_coefficient_relation",
+      "order": 3,
+      "raw_norm": 36788.021833428356,
+      "difference_2": 4.435791046902552e-12,
+      "seconds": 51.334271620002255
+    }
+  ],
+  "model": "synthetic",
+  "source_sha256": "a2fdae37532ac171535d6c825a96500f31aa5be2db33110eb889a652d8442607",
+  "seconds": 118.35951388100148
+}

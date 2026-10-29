@@ -1,0 +1,114 @@
+{
+  "experiment": "S5-R02",
+  "status": "executed",
+  "selected_real_coordinates": [
+    0,
+    1,
+    12,
+    13
+  ],
+  "convention": "H\u2218Phi_W3=H2+[H4+0.5{H3,W3}]+...; {H2,W3}=-H3; complex bracket=-i(F_xi G_chi-F_chi G_xi)",
+  "raw_tensor_symmetry_defect": 2.2737367544323206e-13,
+  "minimum_cubic_divisor": 1.0,
+  "coefficient_of_xi0_squared_chi1_squared": {
+    "powers": "2,0,0,2",
+    "raw_H4_real": -434.7256304212535,
+    "raw_H4_imag": 0.0,
+    "cubic_correction_real": 434.719027922014,
+    "cubic_correction_imag": 0.0,
+    "corrected_H4_real": -0.006602499239534154,
+    "corrected_H4_imag": 0.0,
+    "divisor": 0.0,
+    "resonant": true,
+    "action": false
+  },
+  "cross_mode_cubic_correction": [
+    {
+      "mode": 0,
+      "frequency_ratio": 1.0,
+      "xi0_squared_chi1_squared_correction_real": 0.0,
+      "xi0_squared_chi1_squared_correction_imag": -0.0
+    },
+    {
+      "mode": 1,
+      "frequency_ratio": 1.0,
+      "xi0_squared_chi1_squared_correction_real": 0.0,
+      "xi0_squared_chi1_squared_correction_imag": -0.0
+    },
+    {
+      "mode": 2,
+      "frequency_ratio": 6.212763148765096,
+      "xi0_squared_chi1_squared_correction_real": 0.0,
+      "xi0_squared_chi1_squared_correction_imag": -0.0
+    },
+    {
+      "mode": 3,
+      "frequency_ratio": 6.212763148765096,
+      "xi0_squared_chi1_squared_correction_real": 0.0,
+      "xi0_squared_chi1_squared_correction_imag": -0.0
+    },
+    {
+      "mode": 4,
+      "frequency_ratio": 17.898142551467057,
+      "xi0_squared_chi1_squared_correction_real": 0.0,
+      "xi0_squared_chi1_squared_correction_imag": -0.0
+    },
+    {
+      "mode": 5,
+      "frequency_ratio": 17.898142551467057,
+      "xi0_squared_chi1_squared_correction_real": 0.0,
+      "xi0_squared_chi1_squared_correction_imag": -0.0
+    },
+    {
+      "mode": 6,
+      "frequency_ratio": 80.0740043525236,
+      "xi0_squared_chi1_squared_correction_real": 0.0,
+      "xi0_squared_chi1_squared_correction_imag": -0.0
+    },
+    {
+      "mode": 7,
+      "frequency_ratio": 80.0740043525236,
+      "xi0_squared_chi1_squared_correction_real": 0.0,
+      "xi0_squared_chi1_squared_correction_imag": -0.0
+    },
+    {
+      "mode": 8,
+      "frequency_ratio": 83.10042899294614,
+      "xi0_squared_chi1_squared_correction_real": 39.17158625287893,
+      "xi0_squared_chi1_squared_correction_imag": -0.0
+    },
+    {
+      "mode": 9,
+      "frequency_ratio": 250.94304352803,
+      "xi0_squared_chi1_squared_correction_real": 167.40054907200897,
+      "xi0_squared_chi1_squared_correction_imag": -0.0
+    },
+    {
+      "mode": 10,
+      "frequency_ratio": 445.22131591124275,
+      "xi0_squared_chi1_squared_correction_real": 196.34694535352446,
+      "xi0_squared_chi1_squared_correction_imag": -0.0
+    },
+    {
+      "mode": 11,
+      "frequency_ratio": 874.8804155017085,
+      "xi0_squared_chi1_squared_correction_real": 31.799947243601668,
+      "xi0_squared_chi1_squared_correction_imag": -0.0
+    }
+  ],
+  "comparison_to_independent_radius_extrapolation": {
+    "raw_coefficient_abs_difference": 7.25644326848851e-07
+  },
+  "timings": {
+    "third_derivative_s": 5.887547143996926,
+    "fourth_derivative_s": 13.00267193900072,
+    "total_s": 18.96741681200001
+  },
+  "completeness": "For a quartic restricted to this four-real-coordinate subspace, the bracket only needs cubic monomials with at most one external variable. These follow from full24-gradient differentiated twice along the four selected coordinates. All12 canonical bracket pairs included. Other quartic terms of the full24D normal form not computed.",
+  "limitations": [
+    "finite-order floating coefficients, no interval residual bound",
+    "restricted quartic normal form is not proof that the four-coordinate subspace is invariant",
+    "no KAM/twist/analytic-domain certificate",
+    "at zero, Rodrigues polynomial branch has the correct required Taylor jet; global branch analyticity is separate"
+  ]
+}

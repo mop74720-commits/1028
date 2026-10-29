@@ -1,0 +1,19 @@
+{
+  "command": [
+    "stage5/program/run_rod_transfer.py",
+    "--smoke",
+    "--duration",
+    ".01"
+  ],
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "elapsed_s": 70.67373838099957,
+  "summaries": [],
+  "failures": [
+    {
+      "case": "smoke_n16_h10us",
+      "exception": "TypeError",
+      "message": "TransferredEnvironment.apply_forces() got an unexpected keyword argument 'system'"
+    }
+  ],
+  "current_protocol": "All physical rod parameters unchanged except explicit narrow-lumen stress case."
+}

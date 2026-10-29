@@ -1,0 +1,48 @@
+{
+  "status": "independently_executed",
+  "records": [
+    {
+      "n_elements": 16,
+      "physical_duration_s": 0.002,
+      "centerline_time_space_rms_m": 7.859328852668441e-09,
+      "tip_time_rms_m": 3.3475537510973985e-08,
+      "final_tip_difference_m": 6.836262530393624e-08,
+      "final_rod_tip_displacement_m": 2.2903926609754863e-07,
+      "final_ROM_tip_displacement_m": 2.940144932656615e-07,
+      "true_node_gradient_max_T_per_m": 0.7265571418147533,
+      "gradient_limit_T_per_m": 0.03,
+      "node_gradient_limit_satisfied": false,
+      "mechanical_work_residual_J": 2.23520015742024e-18
+    },
+    {
+      "n_elements": 32,
+      "physical_duration_s": 0.002,
+      "centerline_time_space_rms_m": 1.1203030370461626e-08,
+      "tip_time_rms_m": 6.568522743178028e-08,
+      "final_tip_difference_m": 1.2084832208291775e-07,
+      "final_rod_tip_displacement_m": 1.756120519665545e-07,
+      "final_ROM_tip_displacement_m": 2.940144932656615e-07,
+      "true_node_gradient_max_T_per_m": 0.7983942213224946,
+      "gradient_limit_T_per_m": 0.03,
+      "node_gradient_limit_satisfied": false,
+      "mechanical_work_residual_J": 4.317723678097552e-18
+    },
+    {
+      "n_elements": 64,
+      "physical_duration_s": 0.002,
+      "centerline_time_space_rms_m": 1.4169007521141186e-08,
+      "tip_time_rms_m": 8.642093750531824e-08,
+      "final_tip_difference_m": 1.5047057785097816e-07,
+      "final_rod_tip_displacement_m": 1.4590279143212195e-07,
+      "final_ROM_tip_displacement_m": 2.940144932656615e-07,
+      "true_node_gradient_max_T_per_m": 0.7983942213224946,
+      "gradient_limit_T_per_m": 0.03,
+      "node_gradient_limit_satisfied": false,
+      "mechanical_work_residual_J": 5.282216682441079e-18
+    }
+  ],
+  "matching": "same straight static initial state, same constant full coil currents/material/magnet, no fluid/contact/gravity/damping in either model",
+  "differences": "Kirchhoff ROM constrains shear/stretch, truncates 12 Ritz coordinates, uses20-cell midpoint mass/field; rods retain shear/stretch and N-dependent boundary and magnetic quadrature.",
+  "constraint_scope": "The local bias fit is held fixed for model comparison, not projected. It violates full-rod gradient limits, explicitly retained as a diagnostic limitation. Main transfer uses tube-constrained actual currents.",
+  "interpretation": "These observed model differences are not monotone convergence to ROM or a rigorous PDE error estimate. The separate main experiment retains flow/contact."
+}

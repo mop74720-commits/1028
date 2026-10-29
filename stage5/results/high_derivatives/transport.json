@@ -1,0 +1,140 @@
+{
+  "status": "inverse_backend_directional_checks_passed",
+  "section": "transport",
+  "command": [
+    "/workspace/1028-cloud/venvs/learning/bin/python",
+    "stage5/program/verify_high_derivatives.py",
+    "--section",
+    "all"
+  ],
+  "started_at": "2026-10-29T15:32:46.713626+00:00",
+  "torch_version": "2.5.1+cpu",
+  "numpy_version": "2.3.5",
+  "source_sha256": {
+    "stage5/program/verify_high_derivatives.py": "6a778e09c9e4feb568b17eb3096721bb3f6d2ad3f526dc7c796625169553a929",
+    "stage3/source_inputs/starter/stage2/program/learning/rod_rom.py": "5aebcea066b73f717c2c26fd0b8f3454e205fbcc1bafd970762f3fb9371ee3c9",
+    "stage5/program/transport_native.py": "3b86d9c95c65687592b1b25bedc4bcb34fdaa011a3cb51fc237624f1187f161e"
+  },
+  "selected_coordinates": [
+    0,
+    1,
+    12,
+    13
+  ],
+  "source_model": "NativeTransport synthetic state-dependent canonical drag, full inherited M(Q)",
+  "interpretation": "Specific finite-point checks; tensor symmetry alone is not a derivative correctness test.",
+  "records": {
+    "original": {
+      "seconds": 112.9117253589975,
+      "b2_value_vs_reverse_norm": 2.783065156210515e-18,
+      "b2_scalar_hessian_antisymmetry": 6.128431095930864e-14,
+      "directions": [
+        {
+          "direction_selected": [
+            0.7071067811865475,
+            0.0,
+            0.0,
+            -0.7071067811865475
+          ],
+          "b2_hessian_pure_reverse": -18.31328063456039,
+          "b2_hessian_native_reverse": -18.313280634560442,
+          "b2_hessian_mixed": -18.313280634560382,
+          "b2_hessian_finite_difference": [
+            {
+              "epsilon": 2e-05,
+              "value": -18.313305711302462
+            },
+            {
+              "epsilon": 1e-05,
+              "value": -18.31329115263569
+            }
+          ],
+          "b3_jacobian_direction_pure_reverse": 102.79861514965201,
+          "b3_jacobian_direction_native": 103.08301625060092,
+          "b3_jacobian_direction_difference": 0.28440110094891224
+        },
+        {
+          "direction_selected": [
+            0.628343668902986,
+            -0.08589404829886853,
+            0.1573112877633037,
+            0.7570070045637737
+          ],
+          "b2_hessian_pure_reverse": -10.464132289987823,
+          "b2_hessian_native_reverse": -10.464132289987816,
+          "b2_hessian_mixed": -10.464132289987829,
+          "b2_hessian_finite_difference": [
+            {
+              "epsilon": 2e-05,
+              "value": -10.46412716459305
+            },
+            {
+              "epsilon": 1e-05,
+              "value": -10.464134697629744
+            }
+          ],
+          "b3_jacobian_direction_pure_reverse": -148.82166709807902,
+          "b3_jacobian_direction_native": -148.47679980828363,
+          "b3_jacobian_direction_difference": 0.3448672897953884
+        }
+      ]
+    },
+    "inverse": {
+      "seconds": 182.17196625400175,
+      "b2_value_vs_reverse_norm": 6.057043471850654e-18,
+      "b2_scalar_hessian_antisymmetry": 6.372680161348399e-14,
+      "directions": [
+        {
+          "direction_selected": [
+            0.7071067811865475,
+            0.0,
+            0.0,
+            -0.7071067811865475
+          ],
+          "b2_hessian_pure_reverse": -18.31328063456039,
+          "b2_hessian_native_reverse": -18.31328063456042,
+          "b2_hessian_mixed": -18.313280634560357,
+          "b2_hessian_finite_difference": [
+            {
+              "epsilon": 2e-05,
+              "value": -18.313305713470864
+            },
+            {
+              "epsilon": 1e-05,
+              "value": -18.313291091920366
+            }
+          ],
+          "b3_jacobian_direction_pure_reverse": 102.79861514965201,
+          "b3_jacobian_direction_native": 102.79861514965208,
+          "b3_jacobian_direction_difference": 7.105427357601002e-14
+        },
+        {
+          "direction_selected": [
+            0.628343668902986,
+            -0.08589404829886853,
+            0.1573112877633037,
+            0.7570070045637737
+          ],
+          "b2_hessian_pure_reverse": -10.464132289987823,
+          "b2_hessian_native_reverse": -10.464132289987809,
+          "b2_hessian_mixed": -10.464132289987843,
+          "b2_hessian_finite_difference": [
+            {
+              "epsilon": 2e-05,
+              "value": -10.464127147245815
+            },
+            {
+              "epsilon": 1e-05,
+              "value": -10.464134706303362
+            }
+          ],
+          "b3_jacobian_direction_pure_reverse": -148.82166709807902,
+          "b3_jacobian_direction_native": -148.82166709807896,
+          "b3_jacobian_direction_difference": 5.684341886080802e-14
+        }
+      ]
+    }
+  },
+  "seconds": 297.24605833500027,
+  "ended_at": "2026-10-29T15:37:43.959685+00:00"
+}

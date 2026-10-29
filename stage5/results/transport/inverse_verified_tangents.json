@@ -1,0 +1,108 @@
+{
+  "status": "completed",
+  "command": [
+    "stage5/program/run_transport_tangent_checks.py",
+    "--run-id",
+    "inverse_verified"
+  ],
+  "source_sha256": {
+    "run_transport_tangent_checks.py": "fbecb0112efc663ba3323cfe907d16591e6cf71fd91219d81310a91956006d79",
+    "transport_native.py": "a77ad9df7fc789f3a1eb061616e7f42de596047ba8e9fd6e7dbe436179505e3f",
+    "transport_cache.py": "52d8b9b90cb53fc613dd730c5fdac78e0a49a8a02d37652af020434e6e3cf635",
+    "moser_chart.py": "869356bfa0997c2d5e5bc03878752822ad6da4ed74ac283f716acb72e9301fae",
+    "coil_rom.py": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc"
+  },
+  "models": [
+    {
+      "model": "synthetic",
+      "order": 3,
+      "time": 0.00025,
+      "represented_transport_compatibility_2": 1.3637573924578496e-13,
+      "transformed_hamiltonian_jacobian_defect_2": 1.3644787156267517e-13,
+      "directions": [
+        {
+          "index": 0,
+          "epsilon": 1e-06,
+          "absolute_error_2": 2.639609064873954e-09,
+          "relative_error": 1.2427063447317963e-09
+        },
+        {
+          "index": 0,
+          "epsilon": 5e-07,
+          "absolute_error_2": 2.862040242059393e-09,
+          "relative_error": 1.347425122536004e-09
+        },
+        {
+          "index": 1,
+          "epsilon": 1e-06,
+          "absolute_error_2": 1.4892169576181312e-09,
+          "relative_error": 4.050416146274919e-12
+        },
+        {
+          "index": 1,
+          "epsilon": 5e-07,
+          "absolute_error_2": 1.6603726321105452e-08,
+          "relative_error": 4.5159303911566335e-11
+        }
+      ],
+      "time_finite_difference": [
+        {
+          "epsilon": 1e-06,
+          "absolute_error_2": 8.789345678201928e-12,
+          "relative_error": 1.336230139440488e-08
+        },
+        {
+          "epsilon": 5e-07,
+          "absolute_error_2": 3.063499443307611e-12,
+          "relative_error": 4.657389114253404e-09
+        }
+      ]
+    },
+    {
+      "model": "fullcoil_collocated",
+      "order": 2,
+      "time": 0.00025,
+      "represented_transport_compatibility_2": 5.1280936732132635e-14,
+      "transformed_hamiltonian_jacobian_defect_2": 5.056783691352741e-14,
+      "directions": [
+        {
+          "index": 0,
+          "epsilon": 1e-06,
+          "absolute_error_2": 5.076136224831949e-10,
+          "relative_error": 2.2870318676974643e-10
+        },
+        {
+          "index": 0,
+          "epsilon": 5e-07,
+          "absolute_error_2": 1.9965025879031845e-09,
+          "relative_error": 8.995158601414809e-10
+        },
+        {
+          "index": 1,
+          "epsilon": 1e-06,
+          "absolute_error_2": 3.741790430160069e-09,
+          "relative_error": 1.0176837411692601e-11
+        },
+        {
+          "index": 1,
+          "epsilon": 5e-07,
+          "absolute_error_2": 2.258998033589351e-09,
+          "relative_error": 6.143972018280208e-12
+        }
+      ],
+      "time_finite_difference": [
+        {
+          "epsilon": 1e-06,
+          "absolute_error_2": 3.2149136738377044e-12,
+          "relative_error": 9.16226437992277e-10
+        },
+        {
+          "epsilon": 5e-07,
+          "absolute_error_2": 1.694102515687437e-12,
+          "relative_error": 4.82806591720762e-10
+        }
+      ]
+    }
+  ],
+  "seconds": 71.31408595699759
+}

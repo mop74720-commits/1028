@@ -1,0 +1,305 @@
+{
+  "experiment": "S5-R04",
+  "status": "independently_executed",
+  "circular_action_checks": [
+    {
+      "action_identity_error": 5.421010862427522e-20,
+      "energy_identity_error": 1.0339757656912846e-25
+    },
+    {
+      "action_identity_error": 1.3552527156068805e-20,
+      "energy_identity_error": 1.2924697071141057e-26
+    },
+    {
+      "action_identity_error": 1.0842021724855044e-19,
+      "energy_identity_error": 4.1359030627651384e-25
+    },
+    {
+      "action_identity_error": 1.0842021724855044e-19,
+      "energy_identity_error": 0.0
+    },
+    {
+      "action_identity_error": 5.421010862427522e-20,
+      "energy_identity_error": 2.5849394142282115e-26
+    },
+    {
+      "action_identity_error": 3.3881317890172014e-21,
+      "energy_identity_error": 0.0
+    },
+    {
+      "action_identity_error": 2.168404344971009e-19,
+      "energy_identity_error": 8.271806125530277e-25
+    },
+    {
+      "action_identity_error": 5.421010862427522e-20,
+      "energy_identity_error": 0.0
+    },
+    {
+      "action_identity_error": 2.168404344971009e-19,
+      "energy_identity_error": 2.481541837659083e-24
+    },
+    {
+      "action_identity_error": 1.0842021724855044e-19,
+      "energy_identity_error": 4.1359030627651384e-25
+    },
+    {
+      "action_identity_error": 2.168404344971009e-19,
+      "energy_identity_error": 1.6543612251060553e-24
+    },
+    {
+      "action_identity_error": 2.168404344971009e-19,
+      "energy_identity_error": 3.308722450212111e-24
+    },
+    {
+      "action_identity_error": 2.168404344971009e-19,
+      "energy_identity_error": 2.481541837659083e-24
+    },
+    {
+      "action_identity_error": 1.0842021724855044e-19,
+      "energy_identity_error": 4.1359030627651384e-25
+    },
+    {
+      "action_identity_error": 2.710505431213761e-20,
+      "energy_identity_error": 1.9387045606711586e-26
+    },
+    {
+      "action_identity_error": 2.168404344971009e-19,
+      "energy_identity_error": 3.308722450212111e-24
+    },
+    {
+      "action_identity_error": 1.3552527156068805e-20,
+      "energy_identity_error": 4.8467614016778965e-27
+    },
+    {
+      "action_identity_error": 4.336808689942018e-19,
+      "energy_identity_error": 4.963083675318166e-24
+    },
+    {
+      "action_identity_error": 2.168404344971009e-19,
+      "energy_identity_error": 1.6543612251060553e-24
+    },
+    {
+      "action_identity_error": 1.0842021724855044e-19,
+      "energy_identity_error": 4.1359030627651384e-25
+    },
+    {
+      "action_identity_error": 1.0842021724855044e-19,
+      "energy_identity_error": 0.0
+    },
+    {
+      "action_identity_error": 2.710505431213761e-20,
+      "energy_identity_error": 9.693522803355793e-27
+    },
+    {
+      "action_identity_error": 2.168404344971009e-19,
+      "energy_identity_error": 1.2407709188295415e-24
+    },
+    {
+      "action_identity_error": 2.710505431213761e-20,
+      "energy_identity_error": 0.0
+    },
+    {
+      "action_identity_error": 2.168404344971009e-19,
+      "energy_identity_error": 2.481541837659083e-24
+    },
+    {
+      "action_identity_error": 8.673617379884035e-19,
+      "energy_identity_error": 8.271806125530277e-24
+    },
+    {
+      "action_identity_error": 5.421010862427522e-20,
+      "energy_identity_error": 2.0679515313825692e-25
+    },
+    {
+      "action_identity_error": 5.421010862427522e-20,
+      "energy_identity_error": 3.101927297073854e-25
+    },
+    {
+      "action_identity_error": 1.0842021724855044e-19,
+      "energy_identity_error": 1.6543612251060553e-24
+    },
+    {
+      "action_identity_error": 2.710505431213761e-20,
+      "energy_identity_error": 0.0
+    },
+    {
+      "action_identity_error": 2.168404344971009e-19,
+      "energy_identity_error": 5.169878828456423e-25
+    },
+    {
+      "action_identity_error": 1.0842021724855044e-19,
+      "energy_identity_error": 8.271806125530277e-25
+    }
+  ],
+  "maximum_action_error": 8.673617379884035e-19,
+  "maximum_energy_error": 8.271806125530277e-24,
+  "original_first_pair_subspace_checks": [
+    {
+      "scale": 0.01,
+      "state": [
+        0.006999999999999999,
+        -0.004,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.002,
+        0.003,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_field_norm": 0.008998578094048812,
+      "external_field_norm": 0.016431041551656568,
+      "external_field_components": [
+        6.6699561067207474e-06,
+        1.1672137801766352e-05,
+        4.980124810689861e-06,
+        8.716328574492551e-06,
+        -1.2751161788762748e-05,
+        -7.285183435627625e-06,
+        -0.002339915869007449,
+        -0.008405792956880405,
+        -0.012125817758609004,
+        0.006840643857240709,
+        -3.185286673537871e-05,
+        2.1235280626063276e-05,
+        -7.979546854200892e-05,
+        5.3196971793539015e-05,
+        -4.128828817893081e-05,
+        6.193221145378244e-05,
+        5.862346440579888e-10,
+        1.9369522998940017e-09,
+        8.056350397383289e-09,
+        -5.148997417143303e-09
+      ]
+    },
+    {
+      "scale": 0.02,
+      "state": [
+        0.013999999999999999,
+        -0.008,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.004,
+        0.006,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_field_norm": 0.019025511101194024,
+      "external_field_norm": 0.06572944853617625,
+      "external_field_components": [
+        5.335798311522839e-05,
+        9.337418739924368e-05,
+        3.984095127775788e-05,
+        6.973054591595366e-05,
+        -0.00010200807171305484,
+        -5.828076890382482e-05,
+        -0.009359665727137768,
+        -0.033623095974015554,
+        -0.048502598291335394,
+        0.027361902090219818,
+        -0.00025481022408152824,
+        0.00016987422121241078,
+        -0.0006383478073179831,
+        0.000425566490467464,
+        -0.00033029497811568054,
+        0.0004954388409752495,
+        9.379600497644661e-09,
+        3.0990736010174445e-08,
+        1.2889959333780418e-07,
+        -8.238268367652187e-08
+      ]
+    },
+    {
+      "scale": 0.04,
+      "state": [
+        0.027999999999999997,
+        -0.016,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.008,
+        0.012,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_field_norm": 0.04690198940598631,
+      "external_field_norm": 0.26300226646516395,
+      "external_field_components": [
+        0.00042681056525867007,
+        0.0007469002256621955,
+        0.00031872609967360734,
+        0.0005578417217286763,
+        -0.0008160254536040006,
+        -0.0004662237982377425,
+        -0.037438698923955446,
+        -0.13449117032736346,
+        -0.19399963007168014,
+        0.10943683575114246,
+        -0.002038075102010036,
+        0.0013587370231874594,
+        -0.005106272421715967,
+        0.0034042348832313517,
+        -0.002641997385027038,
+        0.003962907564397315,
+        1.5006376487355136e-07,
+        4.958197275819862e-07,
+        2.0622646680509536e-06,
+        -1.3180413447269836e-06
+      ]
+    }
+  ],
+  "interpretation": "Nonzero external vector-field components show the original first-pair coordinate subspace is not an invariant physical subsystem. This does not rule out a transformed approximate normal-form subspace; the latter has not been certified.",
+  "model": "Full24D variable-mass H_ideal, not H_coil and not a truncated2DOF physical plant",
+  "source_sha256": {
+    "stage5/program/resonance_verify_partial_scope.py": "b60af3ca1a6f2c8f9f85c8a71d5922abe6991db27a9201fe3c4a4a00809e815a",
+    "stage3/source_inputs/starter/stage2/program/learning/rod_rom.py": "5aebcea066b73f717c2c26fd0b8f3454e205fbcc1bafd970762f3fb9371ee3c9"
+  },
+  "input_result_sha256": "a6bfb45baaf092cc834e718e13dc2b4a784ce63897f702eefdb2fdfe80bac1d6",
+  "wall_seconds": 1.2074186799982272
+}

@@ -1,0 +1,68 @@
+{
+  "status": "legacy_Db3_error_confirmed",
+  "command": [
+    "/workspace/1028-cloud/venvs/learning/bin/python",
+    "stage5/program/verify_high_derivative_cache.py"
+  ],
+  "legacy_file_sha256": {
+    "stage5/results/transport/prototype_r3_jac3_source_hess2_D2b2.npy": "f6b4faa23d88193df229b73fbbaad3776a607c4bed17e488495d579129e93126",
+    "stage5/results/transport/prototype_r3_jac3_source_hess2_Db3.npy": "4d0551260f90475d276dcd5d81a37b31cf996f89422deeb66d1474fab7cf0955"
+  },
+  "coordinate_center": [
+    0.009800665778412416,
+    0.006216099682706645,
+    -0.00011714758713290688,
+    -0.002673078944651098,
+    -0.0023400650034276762,
+    -0.002004670955008666,
+    -0.0003434497763517713,
+    0.00042239663856923494,
+    0.0009713964335523372,
+    0.0006164865934812456,
+    0.00028831449452181235,
+    -1.555261969333705e-05,
+    0.0010343207233146883,
+    0.003262136800885292,
+    0.0012121093183480672,
+    0.00019815919912775725,
+    -0.0005689903042813087,
+    -0.0008241289518639397,
+    -0.0002153902030085732,
+    0.00012185349413057576,
+    0.0003601382410412057,
+    0.00018881774099542155,
+    2.064383633527739e-05,
+    -8.281594913786322e-05
+  ],
+  "rows": [
+    {
+      "direction_selected": [
+        0.7071067811865475,
+        0.0,
+        0.0,
+        -0.7071067811865475
+      ],
+      "legacy_b2_Hessian_contraction": -18.31328063456035,
+      "independently_reversed_b2_Hessian_contraction": -18.31328063456039,
+      "legacy_b2_Hessian_error": 3.907985046680551e-14,
+      "legacy_b3_Jacobian_contraction": 103.08301625060044,
+      "independently_reversed_b3_Jacobian_contraction": 102.79861514965201,
+      "legacy_b3_Jacobian_error": 0.2844011009484291
+    },
+    {
+      "direction_selected": [
+        0.628343668902986,
+        -0.08589404829886853,
+        0.1573112877633037,
+        0.7570070045637737
+      ],
+      "legacy_b2_Hessian_contraction": -10.464132289987878,
+      "independently_reversed_b2_Hessian_contraction": -10.464132289987823,
+      "legacy_b2_Hessian_error": -5.5067062021407764e-14,
+      "legacy_b3_Jacobian_contraction": -148.476799808284,
+      "independently_reversed_b3_Jacobian_contraction": -148.82166709807902,
+      "legacy_b3_Jacobian_error": 0.3448672897950189
+    }
+  ],
+  "action": "Retain failed caches as evidence; do not reuse Db3 for new represented-field results. Source/cache identity and independent derivatives are required."
+}

@@ -1,0 +1,71 @@
+{
+  "status": "failed",
+  "command": [
+    "stage5/program/run_transport_domains.py",
+    "--run-id",
+    "inverse_verified"
+  ],
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "regressions": [
+    {
+      "kind": "conservative",
+      "time": 0.0,
+      "representation_residual_2": 0.0,
+      "transport_compatibility_2": 1.363733558377688e-13,
+      "K_condition": 1.0,
+      "formula": "K=exp(gamma*t) K0, a=exp(gamma*t)(P,0), B=exp(gamma*t) H; gamma=0 conservative"
+    },
+    {
+      "kind": "conservative",
+      "time": 0.0005,
+      "representation_residual_2": 0.0,
+      "transport_compatibility_2": 1.363733558377688e-13,
+      "K_condition": 1.0,
+      "formula": "K=exp(gamma*t) K0, a=exp(gamma*t)(P,0), B=exp(gamma*t) H; gamma=0 conservative"
+    },
+    {
+      "kind": "conservative",
+      "time": 0.005,
+      "representation_residual_2": 0.0,
+      "transport_compatibility_2": 1.363733558377688e-13,
+      "K_condition": 1.0,
+      "formula": "K=exp(gamma*t) K0, a=exp(gamma*t)(P,0), B=exp(gamma*t) H; gamma=0 conservative"
+    },
+    {
+      "kind": "proportional",
+      "time": 0.0,
+      "representation_residual_2": 1.2552012712166834e-17,
+      "transport_compatibility_2": 1.3637335485148535e-13,
+      "K_condition": 1.0,
+      "formula": "K=exp(gamma*t) K0, a=exp(gamma*t)(P,0), B=exp(gamma*t) H; gamma=0 conservative"
+    },
+    {
+      "kind": "proportional",
+      "time": 0.0005,
+      "representation_residual_2": 2.7014453019659154e-17,
+      "transport_compatibility_2": 1.363870215771936e-13,
+      "K_condition": 1.0,
+      "formula": "K=exp(gamma*t) K0, a=exp(gamma*t)(P,0), B=exp(gamma*t) H; gamma=0 conservative"
+    },
+    {
+      "kind": "proportional",
+      "time": 0.005,
+      "representation_residual_2": 3.1555745901990483e-17,
+      "transport_compatibility_2": 1.3650953241691612e-13,
+      "K_condition": 1.0,
+      "formula": "K=exp(gamma*t) K0, a=exp(gamma*t)(P,0), B=exp(gamma*t) H; gamma=0 conservative"
+    }
+  ],
+  "probes": [],
+  "limitations": "Finite numerical samples and sufficient bounds of the cached polynomial. Not global physical-domain certificates.",
+  "source_sha256": {
+    "run_transport_domains.py": "c2eca70ac55b95b4f532d3de0fbbdae6dbb87432573f88b1395fa113b10a992c",
+    "transport_native.py": "a77ad9df7fc789f3a1eb061616e7f42de596047ba8e9fd6e7dbe436179505e3f",
+    "transport_cache.py": "52d8b9b90cb53fc613dd730c5fdac78e0a49a8a02d37652af020434e6e3cf635",
+    "moser_chart.py": "869356bfa0997c2d5e5bc03878752822ad6da4ed74ac283f716acb72e9301fae"
+  },
+  "exception": "numpy.bool_ is not JSON serializable in first completed Moser diagnostic",
+  "failure_log": "stage5/results/transport/inverse_verified_domains.log",
+  "source_sha256_failed": "c2eca70ac55b95b4f532d3de0fbbdae6dbb87432573f88b1395fa113b10a992c"
+}

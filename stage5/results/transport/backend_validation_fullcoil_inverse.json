@@ -1,0 +1,55 @@
+{
+  "status": "completed",
+  "rows": [
+    {
+      "kind": "value",
+      "error_2": 0.0,
+      "relative_error": 0.0
+    },
+    {
+      "kind": "gradient",
+      "error_2": 7.660216364537124e-17,
+      "relative_error": 7.660216364537124e-17
+    },
+    {
+      "kind": "hessian",
+      "error_2": 1.7019820189838482e-13,
+      "relative_error": 1.1760935542564405e-16
+    },
+    {
+      "kind": "directional_H",
+      "order": 3,
+      "direction_index": 0,
+      "mixed_inverse": 57.201945016997456,
+      "pure_reverse_original": 57.201945017001705,
+      "relative_error": 7.428148743163344e-14
+    },
+    {
+      "kind": "directional_H",
+      "order": 4,
+      "direction_index": 0,
+      "mixed_inverse": 345.5382264228593,
+      "pure_reverse_original": 345.53822642299804,
+      "relative_error": 4.015613174716383e-13
+    },
+    {
+      "kind": "directional_H",
+      "order": 3,
+      "direction_index": 1,
+      "mixed_inverse": -80.84129646364815,
+      "pure_reverse_original": -80.84129646364852,
+      "relative_error": 4.57046384407498e-15
+    },
+    {
+      "kind": "directional_H",
+      "order": 4,
+      "direction_index": 1,
+      "mixed_inverse": 1139.873228025874,
+      "pure_reverse_original": 1139.8732280258864,
+      "relative_error": 1.097100260090832e-14
+    }
+  ],
+  "model": "fullcoil",
+  "source_sha256": "a2fdae37532ac171535d6c825a96500f31aa5be2db33110eb889a652d8442607",
+  "seconds": 52.23701799199989
+}

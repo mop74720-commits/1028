@@ -1,0 +1,118 @@
+{
+  "status": "executed_pass",
+  "command": [
+    "/workspace/1028-cloud/venvs/learning/bin/python",
+    "stage5/program/run_corrected_identities.py"
+  ],
+  "cwd": "/workspace/1028",
+  "start_utc": "20261029T174049_252985Z",
+  "wall_seconds": 2.85175324499869,
+  "tests_run": 20,
+  "tests_failed": 0,
+  "tests_errors": 0,
+  "tests_skipped": 0,
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "sympy": "1.13.1",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41"
+  },
+  "records": [
+    {
+      "test": "test_corrected_identities.CorrectedIdentities.test_E01_morison_dimensions_relative_power_and_fluid_supply",
+      "status": "executed_pass"
+    },
+    {
+      "test": "test_corrected_identities.CorrectedIdentities.test_E02_real_penetration_energy_gradient_and_friction_power",
+      "status": "executed_pass"
+    },
+    {
+      "test": "test_corrected_identities.CorrectedIdentities.test_E03_director_sign_and_independent_torsion",
+      "status": "executed_pass"
+    },
+    {
+      "test": "test_corrected_identities.CorrectedIdentities.test_E04_scaled_complex_chain_rule_including_force",
+      "status": "executed_pass"
+    },
+    {
+      "test": "test_corrected_identities.CorrectedIdentities.test_E05_power_loss_and_conjugate_gradient",
+      "status": "executed_pass"
+    },
+    {
+      "test": "test_corrected_identities.CorrectedIdentities.test_E06_original_pfaff_cross_partial_incompatibility",
+      "status": "executed_pass"
+    },
+    {
+      "test": "test_corrected_identities.CorrectedIdentities.test_E07_endpoint_compatibility_transversality_not_Hessian_inverse",
+      "status": "executed_pass"
+    },
+    {
+      "test": "test_corrected_identities.CorrectedIdentities.test_E08_fixed_coordinate_generator_recurrence",
+      "status": "executed_pass"
+    },
+    {
+      "test": "test_corrected_identities.CorrectedIdentities.test_E09_fixed_w_chain_rule_and_original32_blocks",
+      "status": "executed_pass"
+    },
+    {
+      "test": "test_corrected_identities.CorrectedIdentities.test_E10_damping_sign_does_not_restore_scalar_gradient",
+      "status": "executed_pass"
+    },
+    {
+      "test": "test_corrected_identities.CorrectedIdentities.test_E11_noncommuting_original36_matches_full_midpoint",
+      "status": "executed_pass"
+    },
+    {
+      "test": "test_corrected_identities.CorrectedIdentities.test_E12_twoform_half_double_sum",
+      "status": "executed_pass"
+    },
+    {
+      "test": "test_corrected_identities.CorrectedIdentities.test_E13_negative_D_and_time_compatibility",
+      "status": "executed_pass"
+    },
+    {
+      "test": "test_corrected_identities.CorrectedIdentities.test_E14_transport_volume_not_Euclidean_volume",
+      "status": "executed_pass"
+    },
+    {
+      "test": "test_corrected_identities.CorrectedIdentities.test_E15_torus_closed_primitive_has_nonzero_period",
+      "status": "executed_pass"
+    },
+    {
+      "test": "test_corrected_identities.CorrectedIdentities.test_E16_Rayleigh_mass_chain_rule_and_velocity_dependent_coefficient",
+      "status": "executed_pass"
+    },
+    {
+      "test": "test_corrected_identities.CorrectedIdentities.test_complete_variable_mass_geometric_force",
+      "status": "executed_pass"
+    },
+    {
+      "test": "test_corrected_identities.CorrectedIdentities.test_mass_validation_is_independent_of_SI_magnitude",
+      "status": "executed_pass"
+    },
+    {
+      "test": "test_corrected_identities.CorrectedIdentities.test_nonzero_initial_generator_gauge_and_endpoint_compatibility",
+      "status": "executed_pass"
+    },
+    {
+      "test": "test_corrected_identities.CorrectedIdentities.test_original31_roundtrip_and_joint_inverse_24D",
+      "status": "executed_pass"
+    }
+  ],
+  "source_sha256_before": {
+    "stage5/program/corrected_identities.py": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7",
+    "stage5/tests/test_corrected_identities.py": "adc6398f93ba5d59528ab3ee2a6c8fa84ca0fbbbe5bc9f333da636cc60722c49",
+    "stage4/audit/proof_errors_and_corrections.md": "3f9f3c46d1143f897ba180ea5d29cc9a1fe71db84535811873becb3a1a054b06",
+    "stage4/audit/source_omml/original1025_indexed.json": "ef8dcbaaad23ef24b06f70c299262f4ac4ed7b731071a3c6fef088b1a8bdf886"
+  },
+  "source_sha256_after": {
+    "stage5/program/corrected_identities.py": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7",
+    "stage5/tests/test_corrected_identities.py": "adc6398f93ba5d59528ab3ee2a6c8fa84ca0fbbbe5bc9f333da636cc60722c49",
+    "stage4/audit/proof_errors_and_corrections.md": "3f9f3c46d1143f897ba180ea5d29cc9a1fe71db84535811873becb3a1a054b06",
+    "stage4/audit/source_omml/original1025_indexed.json": "ef8dcbaaad23ef24b06f70c299262f4ac4ed7b731071a3c6fef088b1a8bdf886"
+  },
+  "log": "stage5/results/corrected_identities/runs/20261029T174049_252985Z/tests.log",
+  "tolerances": "Per-identity exact SymPy or explicit 1e-15..2e-10 assertions in test source; no frozen thresholds changed.",
+  "scope": "Executable identities and independent counterexamples; 24D endpoint algebra is not full 3D robot/FSI/KAM validation."
+}

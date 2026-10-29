@@ -1,0 +1,331 @@
+{
+  "status": "independently_executed_postprocessing_pass",
+  "command": "stage5/program/verify_physical_evidence.py",
+  "source_sha256": "37ea6d8a6a344c25da46d5a54e5475070099e5c937da346981f4a8d0e617dbbb",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "elapsed_seconds": 0.18244536600104766,
+  "source_checks": [
+    {
+      "report": "stage5/results/coil/validation.json",
+      "source": "stage5/results/coil/source_before_force_warm_fix_run_coil_validation.py",
+      "sha256": "91b6200870a8af5c2a9fd5aaac6842a9b5b998edd73ae4f35e73bccbc7e3c877",
+      "matches": true
+    },
+    {
+      "report": "stage5/results/coil/validation.json",
+      "source": "stage5/results/coil/source_before_higher_ad_fix.py",
+      "sha256": "53004846e9fbd219efc146dee46dd9ce9966a2d1b67c9a782bf577012d9e199e",
+      "matches": true
+    },
+    {
+      "report": "stage5/results/coil/validation.json",
+      "source": "stage5/results/coil/source_before_force_warm_fix_coil_control.py",
+      "sha256": "9df4995b57d982ce0558a0d0276d5da41308f5900bad1c4376e51b088a52214f",
+      "matches": true
+    },
+    {
+      "report": "stage5/results/coil/closed_loop_summary.json",
+      "source": "stage5/results/coil/source_before_force_warm_fix_run_coil_closed_loop.py",
+      "sha256": "bbb875f46baa91d997d7b85414369f0bc1837eda395fbaf90292331d4a8b3ae1",
+      "matches": true
+    },
+    {
+      "report": "stage5/results/coil/closed_loop_summary.json",
+      "source": "stage5/results/coil/source_before_higher_ad_fix.py",
+      "sha256": "53004846e9fbd219efc146dee46dd9ce9966a2d1b67c9a782bf577012d9e199e",
+      "matches": true
+    },
+    {
+      "report": "stage5/results/coil/closed_loop_summary.json",
+      "source": "stage5/results/coil/source_before_force_warm_fix_coil_control.py",
+      "sha256": "9df4995b57d982ce0558a0d0276d5da41308f5900bad1c4376e51b088a52214f",
+      "matches": true
+    },
+    {
+      "report": "stage5/results/coil/force_warm_fix/validation.json",
+      "source": "stage5/program/run_coil_validation.py",
+      "sha256": "8aec37ba0d3f3b804425669397c8022c0d8d2b1df4c53c5580d34a14eb4c7b47",
+      "matches": true
+    },
+    {
+      "report": "stage5/results/coil/force_warm_fix/validation.json",
+      "source": "stage5/program/coil_rom.py",
+      "sha256": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc",
+      "matches": true
+    },
+    {
+      "report": "stage5/results/coil/force_warm_fix/validation.json",
+      "source": "stage5/program/coil_control.py",
+      "sha256": "1b01c4fcdf0e2808d178fa9fc7e1996b1ebb7440c05c81394cf07df6ec772797",
+      "matches": true
+    },
+    {
+      "report": "stage5/results/coil/force_warm_fix/closed_loop_summary.json",
+      "source": "stage5/program/run_coil_closed_loop.py",
+      "sha256": "9e12d211750123643c9800fa9c0b100073aad3450f21211fecc251e5a42e5706",
+      "matches": true
+    },
+    {
+      "report": "stage5/results/coil/force_warm_fix/closed_loop_summary.json",
+      "source": "stage5/program/coil_rom.py",
+      "sha256": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc",
+      "matches": true
+    },
+    {
+      "report": "stage5/results/coil/force_warm_fix/closed_loop_summary.json",
+      "source": "stage5/program/coil_control.py",
+      "sha256": "1b01c4fcdf0e2808d178fa9fc7e1996b1ebb7440c05c81394cf07df6ec772797",
+      "matches": true
+    }
+  ],
+  "coil_trajectory_checks": [
+    {
+      "directory": "stage5/results/coil",
+      "case": "full_plant_full_control_substeps1",
+      "trajectory_sha256": "31b0d11f0fc145ee1a72f89109ac87241fbf55c1226420269fd5768d8b29ee4b",
+      "maximum_current_A": 1.5125088450497397,
+      "ramp_slew_from_raw_nodes_A_s": 13.146610841024643,
+      "maximum_RK_magnet_point_B_T": 0.0005013180809497896,
+      "maximum_RK_magnet_point_gradient_T_per_m": 0.0043140357834256324,
+      "total_energy_work_residual": -1.9681641662576063e-09,
+      "mechanical_energy_work_residual": -1.968148966400419e-09
+    },
+    {
+      "directory": "stage5/results/coil",
+      "case": "full_plant_full_control_substeps2",
+      "trajectory_sha256": "31b0d11f0fc145ee1a72f89109ac87241fbf55c1226420269fd5768d8b29ee4b",
+      "maximum_current_A": 1.5125088443323684,
+      "ramp_slew_from_raw_nodes_A_s": 13.146610841025632,
+      "maximum_RK_magnet_point_B_T": 0.0005013180809497639,
+      "maximum_RK_magnet_point_gradient_T_per_m": 0.0043140357834256324,
+      "total_energy_work_residual": -6.245657772430482e-11,
+      "mechanical_energy_work_residual": -6.24557530183255e-11
+    },
+    {
+      "directory": "stage5/results/coil",
+      "case": "affine_plant_affine_control_substeps1",
+      "trajectory_sha256": "31b0d11f0fc145ee1a72f89109ac87241fbf55c1226420269fd5768d8b29ee4b",
+      "maximum_current_A": 1.5126965689507301,
+      "ramp_slew_from_raw_nodes_A_s": 13.23716890760262,
+      "maximum_RK_magnet_point_B_T": 0.0005013240547591556,
+      "maximum_RK_magnet_point_gradient_T_per_m": 0.0043140357834256324,
+      "total_energy_work_residual": -1.9683023576365193e-09,
+      "mechanical_energy_work_residual": -1.968301071798789e-09
+    },
+    {
+      "directory": "stage5/results/coil",
+      "case": "affine_plant_affine_control_substeps2",
+      "trajectory_sha256": "31b0d11f0fc145ee1a72f89109ac87241fbf55c1226420269fd5768d8b29ee4b",
+      "maximum_current_A": 1.5126965682378248,
+      "ramp_slew_from_raw_nodes_A_s": 13.23716890760361,
+      "maximum_RK_magnet_point_B_T": 0.0005013240547591298,
+      "maximum_RK_magnet_point_gradient_T_per_m": 0.0043140357834256324,
+      "total_energy_work_residual": -6.246534309229355e-11,
+      "mechanical_energy_work_residual": -6.246601874262937e-11
+    },
+    {
+      "directory": "stage5/results/coil",
+      "case": "full_plant_affine_control_substeps1",
+      "trajectory_sha256": "31b0d11f0fc145ee1a72f89109ac87241fbf55c1226420269fd5768d8b29ee4b",
+      "maximum_current_A": 1.5125089827511664,
+      "ramp_slew_from_raw_nodes_A_s": 13.23716890760262,
+      "maximum_RK_magnet_point_B_T": 0.0005013240566296219,
+      "maximum_RK_magnet_point_gradient_T_per_m": 0.0043140357834256324,
+      "total_energy_work_residual": -1.968163397612476e-09,
+      "mechanical_energy_work_residual": -1.9681485227787847e-09
+    },
+    {
+      "directory": "stage5/results/coil",
+      "case": "full_plant_affine_control_substeps2",
+      "trajectory_sha256": "31b0d11f0fc145ee1a72f89109ac87241fbf55c1226420269fd5768d8b29ee4b",
+      "maximum_current_A": 1.5125089820337487,
+      "ramp_slew_from_raw_nodes_A_s": 13.23716890760361,
+      "maximum_RK_magnet_point_B_T": 0.0005013240566295963,
+      "maximum_RK_magnet_point_gradient_T_per_m": 0.0043140357834256324,
+      "total_energy_work_residual": -6.245611867310499e-11,
+      "mechanical_energy_work_residual": -6.245573930525913e-11
+    },
+    {
+      "directory": "stage5/results/coil",
+      "case": "full_plant_damping_compensation_control_substeps1",
+      "trajectory_sha256": "31b0d11f0fc145ee1a72f89109ac87241fbf55c1226420269fd5768d8b29ee4b",
+      "maximum_current_A": 1.5304271612547302,
+      "ramp_slew_from_raw_nodes_A_s": 19.99999999999995,
+      "maximum_RK_magnet_point_B_T": 0.0005009446460408329,
+      "maximum_RK_magnet_point_gradient_T_per_m": 0.0043140357834256324,
+      "total_energy_work_residual": -1.968192548176817e-09,
+      "mechanical_energy_work_residual": -1.968176125553905e-09
+    },
+    {
+      "directory": "stage5/results/coil",
+      "case": "full_plant_damping_compensation_control_substeps2",
+      "trajectory_sha256": "31b0d11f0fc145ee1a72f89109ac87241fbf55c1226420269fd5768d8b29ee4b",
+      "maximum_current_A": 1.5304271612547302,
+      "ramp_slew_from_raw_nodes_A_s": 20.000000000001982,
+      "maximum_RK_magnet_point_B_T": 0.0005009446460408329,
+      "maximum_RK_magnet_point_gradient_T_per_m": 0.0043140357834256324,
+      "total_energy_work_residual": -6.245755648781603e-11,
+      "mechanical_energy_work_residual": -6.245660864084858e-11
+    },
+    {
+      "directory": "stage5/results/coil/force_warm_fix",
+      "case": "full_plant_damping_compensation_control_substeps1",
+      "trajectory_sha256": "07f879c1c14e44b48b2ce31ed732d444108c97362b836b47b147fceb1bfc9a50",
+      "maximum_current_A": 1.530427161254727,
+      "ramp_slew_from_raw_nodes_A_s": 19.99999999999995,
+      "maximum_RK_magnet_point_B_T": 0.0005009446460408326,
+      "maximum_RK_magnet_point_gradient_T_per_m": 0.004314035783425629,
+      "total_energy_work_residual": -1.9681922983766365e-09,
+      "mechanical_energy_work_residual": -1.9681761254447967e-09
+    },
+    {
+      "directory": "stage5/results/coil/force_warm_fix",
+      "case": "full_plant_damping_compensation_control_substeps2",
+      "trajectory_sha256": "07f879c1c14e44b48b2ce31ed732d444108c97362b836b47b147fceb1bfc9a50",
+      "maximum_current_A": 1.530427161254727,
+      "ramp_slew_from_raw_nodes_A_s": 20.000000000001982,
+      "maximum_RK_magnet_point_B_T": 0.0005009446460408326,
+      "maximum_RK_magnet_point_gradient_T_per_m": 0.004314035783425629,
+      "total_energy_work_residual": -6.245743679189619e-11,
+      "mechanical_energy_work_residual": -6.245660857260949e-11
+    }
+  ],
+  "rod_trajectory_checks": [
+    {
+      "case": "baseline_n32_h10us",
+      "trajectory_sha256": "a2d3b2a7afaccf7dfa43695dee180b524a33c4d5a4ae0dd534c511c6006c86bd",
+      "tip_rmse_from_raw_positions_m": 0.00031855775544209876,
+      "maximum_saved_penetration_m": 0.0,
+      "reported_allstep_penetration_m": 0.0,
+      "maximum_saved_normal_force_N": 0.0,
+      "reported_allstep_normal_force_N": 0.0,
+      "maximum_saved_node_gradient_T_per_m": 0.022355974619624457,
+      "maximum_resultant_flow_force_N": 2.1494436687872997e-05,
+      "maximum_continuous_current_A": 1.6763919610793379,
+      "ramp_slew_from_raw_endpoints_A_s": 19.999999993008565,
+      "continuity_defect_A": 0.0,
+      "mechanical_energy_work_residual_J": 1.2526315542526238e-14,
+      "gain_A2_per_W": 0.0,
+      "optimizer_nonconverged": 1,
+      "fallback_count": 0
+    },
+    {
+      "case": "port_n16_h5us",
+      "trajectory_sha256": "c07941b76f5471e793316b638413a3f55118bca257f07fbf80071b8fa52109e4",
+      "tip_rmse_from_raw_positions_m": 0.00031989621849191083,
+      "maximum_saved_penetration_m": 0.0,
+      "reported_allstep_penetration_m": 0.0,
+      "maximum_saved_normal_force_N": 0.0,
+      "reported_allstep_normal_force_N": 0.0,
+      "maximum_saved_node_gradient_T_per_m": 0.022323507396065437,
+      "maximum_resultant_flow_force_N": 2.1497386393417937e-05,
+      "maximum_continuous_current_A": 1.679153085235175,
+      "ramp_slew_from_raw_endpoints_A_s": 19.999999992602945,
+      "continuity_defect_A": 0.0,
+      "mechanical_energy_work_residual_J": 1.2951860638968956e-14,
+      "gain_A2_per_W": 95590.3224538941,
+      "optimizer_nonconverged": 3,
+      "fallback_count": 0
+    },
+    {
+      "case": "port_n32_h10us",
+      "trajectory_sha256": "0c6c7c4c635f2a51bbd2aced4bca22994066557cc57fa2ab67184a4e306c46ed",
+      "tip_rmse_from_raw_positions_m": 0.00032003229842861167,
+      "maximum_saved_penetration_m": 0.0,
+      "reported_allstep_penetration_m": 0.0,
+      "maximum_saved_normal_force_N": 0.0,
+      "reported_allstep_normal_force_N": 0.0,
+      "maximum_saved_node_gradient_T_per_m": 0.02235205369918052,
+      "maximum_resultant_flow_force_N": 2.1498898438898127e-05,
+      "maximum_continuous_current_A": 1.6783189100279883,
+      "ramp_slew_from_raw_endpoints_A_s": 19.999999992575077,
+      "continuity_defect_A": 0.0,
+      "mechanical_energy_work_residual_J": 1.2477597763449624e-14,
+      "gain_A2_per_W": 95590.3224538941,
+      "optimizer_nonconverged": 2,
+      "fallback_count": 0
+    },
+    {
+      "case": "port_n32_h5us",
+      "trajectory_sha256": "828486bb6dee1d2d81b0af521caead832f8ea703b292ded60e3cd6d98390bed4",
+      "tip_rmse_from_raw_positions_m": 0.0003200332583973872,
+      "maximum_saved_penetration_m": 0.0,
+      "reported_allstep_penetration_m": 0.0,
+      "maximum_saved_normal_force_N": 0.0,
+      "reported_allstep_normal_force_N": 0.0,
+      "maximum_saved_node_gradient_T_per_m": 0.022352052489835728,
+      "maximum_resultant_flow_force_N": 2.149892598268749e-05,
+      "maximum_continuous_current_A": 1.6783105619424437,
+      "ramp_slew_from_raw_endpoints_A_s": 19.999999992567503,
+      "continuity_defect_A": 0.0,
+      "mechanical_energy_work_residual_J": 1.246360798986253e-14,
+      "gain_A2_per_W": 95590.3224538941,
+      "optimizer_nonconverged": 4,
+      "fallback_count": 0
+    },
+    {
+      "case": "port_n32_h2p5us",
+      "trajectory_sha256": "091b578db389f3a7b74ca842919cb83cf59fb1c911222a5f4a5997625999d5c7",
+      "tip_rmse_from_raw_positions_m": 0.00032003788737658845,
+      "maximum_saved_penetration_m": 0.0,
+      "reported_allstep_penetration_m": 0.0,
+      "maximum_saved_normal_force_N": 0.0,
+      "reported_allstep_normal_force_N": 0.0,
+      "maximum_saved_node_gradient_T_per_m": 0.02235205453584694,
+      "maximum_resultant_flow_force_N": 2.1498926956871368e-05,
+      "maximum_continuous_current_A": 1.6783109565580885,
+      "ramp_slew_from_raw_endpoints_A_s": 19.99999999255207,
+      "continuity_defect_A": 0.0,
+      "mechanical_energy_work_residual_J": 1.2460349093050105e-14,
+      "gain_A2_per_W": 95590.3224538941,
+      "optimizer_nonconverged": 1,
+      "fallback_count": 0
+    },
+    {
+      "case": "port_n64_h5us",
+      "trajectory_sha256": "9ac9a4875629e8c4887563a796b4a4b41ddaa73d6be6edba6cb98390821b3f5d",
+      "tip_rmse_from_raw_positions_m": 0.00031962841780515367,
+      "maximum_saved_penetration_m": 0.0,
+      "reported_allstep_penetration_m": 0.0,
+      "maximum_saved_normal_force_N": 0.0,
+      "reported_allstep_normal_force_N": 0.0,
+      "maximum_saved_node_gradient_T_per_m": 0.02238104079518887,
+      "maximum_resultant_flow_force_N": 2.149746228636237e-05,
+      "maximum_continuous_current_A": 1.6782604904362317,
+      "ramp_slew_from_raw_endpoints_A_s": 19.999999997989953,
+      "continuity_defect_A": 0.0,
+      "mechanical_energy_work_residual_J": 1.2230421923003719e-14,
+      "gain_A2_per_W": 95590.3224538941,
+      "optimizer_nonconverged": 1,
+      "fallback_count": 0
+    },
+    {
+      "case": "port_contact_n32_h5us",
+      "trajectory_sha256": "1a69cb8da28a049107a20bb94ae6d324605610dd2e1adedbc3095b25ae37b610",
+      "tip_rmse_from_raw_positions_m": 0.0004286888461427277,
+      "maximum_saved_penetration_m": 6.155581325552675e-05,
+      "reported_allstep_penetration_m": 6.16032203777186e-05,
+      "maximum_saved_normal_force_N": 1.1350828471165444e-05,
+      "reported_allstep_normal_force_N": 1.1352409631795995e-05,
+      "maximum_saved_node_gradient_T_per_m": 0.022352649848183873,
+      "maximum_resultant_flow_force_N": 1.766369118499705e-05,
+      "maximum_continuous_current_A": 1.6259856789606075,
+      "ramp_slew_from_raw_endpoints_A_s": 19.99999999261091,
+      "continuity_defect_A": 0.0,
+      "mechanical_energy_work_residual_J": 7.702011772085512e-15,
+      "gain_A2_per_W": 95590.3224538941,
+      "optimizer_nonconverged": 4,
+      "fallback_count": 0
+    }
+  ],
+  "historical_transport_interface_current_source_matches": {
+    "stage5/program/coil_rom.py": true,
+    "stage5/program/transport_native.py": false,
+    "stage5/program/run_transport_experiments.py": false,
+    "stage5/program/coil_transport_check.py": true
+  },
+  "matched_diagnostic_gradient_limits": "All three fixed-bias model-comparison branches exceed .03 T/m; excluded from admissible control evidence.",
+  "metadata_correction": "CoilROM model.omega_rad_s, nu and repeated_frequency_pairs are inherited ideal-uniform-bias reference frequencies used for scaling. They are not the spectrum at a full-coil equilibrium; its existence, linear spectrum and KAM conditions are not certified.",
+  "scope": "Recomputed source identity and constraints/power/trajectory observables from saved raw arrays. No new dynamics integration, no unsampled field bound or clinical validation."
+}

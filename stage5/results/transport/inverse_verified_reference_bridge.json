@@ -1,0 +1,122 @@
+{
+  "status": "completed",
+  "command": [
+    "stage5/program/run_transport_reference_bridge.py"
+  ],
+  "source_sha256": {
+    "stage5/program/run_transport_reference_bridge.py": "a8428d82e0f59600510a67d743fe8b90fd21e919990f7b554a546bb59ec63546",
+    "stage5/results/closed_loop/source_used/coil_rom.py": "3ba520ca8dd96a2133dfdce512ca80847d8287dfcf8f77ec98fabbf4da2265fd",
+    "stage5/program/coil_rom.py": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc",
+    "stage5/program/closed_loop.py": "4f7e5e16e1cc5d105a298811627989cd064819f8790dadb0429920374739db31"
+  },
+  "old_bias_current_A": [
+    0.8852530495400104,
+    -1.228695819339872,
+    -0.7250601367549548,
+    -0.796103697740145,
+    -0.5688797115813509,
+    0.6475670120790167,
+    0.6980256464312167,
+    0.7809830505705962,
+    1.1490316192924095,
+    0.2890435974002692,
+    1.512480402413065,
+    -0.3281350083833579
+  ],
+  "new_bias_current_A": [
+    0.8852530495400187,
+    -1.2286958193398705,
+    -0.7250601367549449,
+    -0.7961036977402055,
+    -0.5688797115812853,
+    0.6475670120790111,
+    0.698025646431227,
+    0.7809830505705807,
+    1.1490316192924115,
+    0.28904359740025765,
+    1.5124804024130618,
+    -0.3281350083833567
+  ],
+  "maximum_bias_change_A": 6.561418075534675e-14,
+  "old_gain": 0.15425045617918903,
+  "new_gain": 0.15425045617918898,
+  "old_metadata_bias_reconstruction_difference_A": 0.0,
+  "reference": {
+    "method": "DOP853",
+    "rtol": 5e-13,
+    "atol": 5e-15,
+    "max_step": 6.25e-05,
+    "nfev": 122,
+    "success": true,
+    "message": "The solver successfully reached the end of the integration interval."
+  },
+  "interpretation": "Shared mathematical full-coil and feedback definitions; no claim of bit-identical recalculated bias. Old numeric reference retained; current numeric field independently integrated.",
+  "sampled_old_new_field_differences": [
+    {
+      "index": 0,
+      "difference_2": 8.60461752073081e-16
+    },
+    {
+      "index": 16,
+      "difference_2": 7.523101922376478e-16
+    },
+    {
+      "index": 32,
+      "difference_2": 9.67624338777674e-16
+    },
+    {
+      "index": 48,
+      "difference_2": 8.295429705428285e-16
+    },
+    {
+      "index": 64,
+      "difference_2": 8.381228103889818e-16
+    }
+  ],
+  "maximum_new_old_reference_state_difference_2": 5.769780529385136e-19,
+  "new_reference_errors": [
+    {
+      "order": 1,
+      "steps": 4,
+      "error_to_new_current_reference": 6.174614445669405e-08,
+      "prior_shared_reference_error": 6.17461444567147e-08,
+      "absolute_error_metric_change": 2.064642808932357e-20
+    },
+    {
+      "order": 1,
+      "steps": 8,
+      "error_to_new_current_reference": 5.0943281195154825e-08,
+      "prior_shared_reference_error": 5.0943281195177516e-08,
+      "absolute_error_metric_change": 2.2691218563554655e-20
+    },
+    {
+      "order": 1,
+      "steps": 16,
+      "error_to_new_current_reference": 5.0169450208612736e-08,
+      "prior_shared_reference_error": 5.016945020863518e-08,
+      "absolute_error_metric_change": 2.244637310223896e-20
+    },
+    {
+      "order": 2,
+      "steps": 4,
+      "error_to_new_current_reference": 3.5892252904185723e-08,
+      "prior_shared_reference_error": 3.589225290419176e-08,
+      "absolute_error_metric_change": 6.03510974918689e-21
+    },
+    {
+      "order": 2,
+      "steps": 8,
+      "error_to_new_current_reference": 9.048055682577047e-09,
+      "prior_shared_reference_error": 9.048055682587829e-09,
+      "absolute_error_metric_change": 1.0781472104016163e-20
+    },
+    {
+      "order": 2,
+      "steps": 16,
+      "error_to_new_current_reference": 2.495945378799871e-09,
+      "prior_shared_reference_error": 2.4959453788269735e-09,
+      "absolute_error_metric_change": 2.7102572770299952e-20
+    }
+  ],
+  "seconds": 31.943555769998056
+}

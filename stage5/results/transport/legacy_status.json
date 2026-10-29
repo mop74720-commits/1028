@@ -1,0 +1,11 @@
+{
+  "status": "legacy_results_preserved_not_final_verified_results",
+  "reason": "Mixed higher-order AD through torch.linalg.solve was independently shown incorrect in a minimal example. Coefficients require independent validation/corrected backend.",
+  "runs": {
+    "synthetic/main.json": "completed nine grids; retained as original-AD evidence; no numerical values overwritten",
+    "fullcoil_collocated/main.json": "retained higher-AD vector_norm failure, exit134",
+    "fullcoil_collocated/ad_reverse_first.json": "retained reverse-over-reverse resource failure, exit137; cgroup reports oom_kill=1",
+    "fullcoil_collocated/main_adfixed.json": "interrupted pending verified higher-AD backend, not a physical-model failure"
+  },
+  "source_provenance_limitation": "Original native/cache/runner source was not byte-snapshotted before the backend patch; original exact contents are retained in tool patch transcript and reconstructed separately with this limitation explicit. Completed legacy runner end-of-run glob hashes may reflect files changed during execution, so those hashes are not accepted as run-source attestation."
+}

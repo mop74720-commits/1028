@@ -1,0 +1,10 @@
+START field
+{"name": "field", "seconds": 0.579421309997997, "shape": [24], "norm": 0.24453521259962413, "max_rss_kib": 323324}
+START field_jacobian
+{"name": "field_jacobian", "seconds": 1.4284114570000384, "shape": [24, 24], "norm": 1447.1495781493895, "max_rss_kib": 337544}
+START a1
+{"name": "a1", "seconds": 1.1986453490026179, "shape": [24], "norm": 0.2442660626077548, "max_rss_kib": 337672}
+START a2
+{"name": "a2", "seconds": 6.885752722002508, "shape": [24], "norm": 89.23047740219471, "max_rss_kib": 357516}
+START Da1
+{"name": "Da1", "seconds": 1.4019557319988962, "shape": [24, 24], "norm": 1447.146238327638, "max_rss_kib": 371212}

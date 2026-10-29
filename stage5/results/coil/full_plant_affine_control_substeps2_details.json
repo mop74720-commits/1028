@@ -1,0 +1,1032 @@
+{
+  "allocations": [
+    {
+      "success": true,
+      "message": "Box projection already satisfies all magnetic-point field constraints",
+      "iterations": 0,
+      "physical_interval_s": 0.0001121672427604084,
+      "current_request_distance_A": 0.0,
+      "generalized_force_allocation_residual": 0.0,
+      "constraint_violation": 0.0,
+      "active_magnetic_points": 1,
+      "maximum_planned_slew_A_s": 13.23716890760262,
+      "requested_current_A": [
+        0.8852171526007881,
+        -1.2296844775264708,
+        -0.726287354648668,
+        -0.79657650304291,
+        -0.5695251811877413,
+        0.6460822353406971,
+        0.6968426738138209,
+        0.7797022762746001,
+        1.1496787690238413,
+        0.2881565309196442,
+        1.5123457189595044,
+        -0.3272085090469505
+      ],
+      "allocated_current_A": [
+        0.8852171526007881,
+        -1.2296844775264708,
+        -0.726287354648668,
+        -0.79657650304291,
+        -0.5695251811877413,
+        0.6460822353406971,
+        0.6968426738138209,
+        0.7797022762746001,
+        1.1496787690238413,
+        0.2881565309196442,
+        1.5123457189595044,
+        -0.3272085090469505
+      ],
+      "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only",
+      "update": 0,
+      "tau": 0.0,
+      "plant": "full",
+      "controller": "affine"
+    },
+    {
+      "success": true,
+      "message": "Box projection already satisfies all magnetic-point field constraints",
+      "iterations": 0,
+      "physical_interval_s": 0.0001121672427604084,
+      "current_request_distance_A": 0.0,
+      "generalized_force_allocation_residual": 0.0,
+      "constraint_violation": 0.0,
+      "active_magnetic_points": 1,
+      "maximum_planned_slew_A_s": 0.652353169242217,
+      "requested_current_A": [
+        0.8852112244102863,
+        -1.229628984278846,
+        -0.7262269820530364,
+        -0.7965624343352429,
+        -0.569502054532314,
+        0.646155407996997,
+        0.6969107262859197,
+        0.7797600970215611,
+        1.1496265490672437,
+        0.2882061481551004,
+        1.5123688401118747,
+        -0.3272448408794328
+      ],
+      "allocated_current_A": [
+        0.8852112244102863,
+        -1.229628984278846,
+        -0.7262269820530364,
+        -0.7965624343352429,
+        -0.569502054532314,
+        0.646155407996997,
+        0.6969107262859197,
+        0.7797600970215611,
+        1.1496265490672437,
+        0.2882061481551004,
+        1.5123688401118747,
+        -0.3272448408794328
+      ],
+      "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only",
+      "update": 1,
+      "tau": 0.0005,
+      "plant": "full",
+      "controller": "affine"
+    },
+    {
+      "success": true,
+      "message": "Box projection already satisfies all magnetic-point field constraints",
+      "iterations": 0,
+      "physical_interval_s": 0.0001121672427604084,
+      "current_request_distance_A": 0.0,
+      "generalized_force_allocation_residual": 0.0,
+      "constraint_violation": 0.0,
+      "active_magnetic_points": 1,
+      "maximum_planned_slew_A_s": 0.6884425071582833,
+      "requested_current_A": [
+        0.8852060618826059,
+        -1.2295714280943901,
+        -0.7261635006456895,
+        -0.7965457762513753,
+        -0.5694758642154719,
+        0.646232628694824,
+        0.6969828585609097,
+        0.7798219868619545,
+        1.1495728274433903,
+        0.28825920791769827,
+        1.5123912058538689,
+        -0.32728452756201776
+      ],
+      "allocated_current_A": [
+        0.8852060618826059,
+        -1.2295714280943901,
+        -0.7261635006456895,
+        -0.7965457762513753,
+        -0.5694758642154719,
+        0.646232628694824,
+        0.6969828585609097,
+        0.7798219868619545,
+        1.1495728274433903,
+        0.28825920791769827,
+        1.5123912058538689,
+        -0.32728452756201776
+      ],
+      "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only",
+      "update": 2,
+      "tau": 0.001,
+      "plant": "full",
+      "controller": "affine"
+    },
+    {
+      "success": true,
+      "message": "Box projection already satisfies all magnetic-point field constraints",
+      "iterations": 0,
+      "physical_interval_s": 0.0001121672427604084,
+      "current_request_distance_A": 0.0,
+      "generalized_force_allocation_residual": 0.0,
+      "constraint_violation": 0.0,
+      "active_magnetic_points": 1,
+      "maximum_planned_slew_A_s": 0.6972377748368188,
+      "requested_current_A": [
+        0.8852009685898234,
+        -1.2295131747893828,
+        -0.7260992187924589,
+        -0.7965287013093567,
+        -0.5694491509891435,
+        0.6463108359335759,
+        0.6970559757567152,
+        0.7798847201799017,
+        1.1495185548362372,
+        0.2883130520606866,
+        1.5124137188045712,
+        -0.32732479937685294
+      ],
+      "allocated_current_A": [
+        0.8852009685898234,
+        -1.2295131747893828,
+        -0.7260992187924589,
+        -0.7965287013093567,
+        -0.5694491509891435,
+        0.6463108359335759,
+        0.6970559757567152,
+        0.7798847201799017,
+        1.1495185548362372,
+        0.2883130520606866,
+        1.5124137188045712,
+        -0.32732479937685294
+      ],
+      "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only",
+      "update": 3,
+      "tau": 0.0015,
+      "plant": "full",
+      "controller": "affine"
+    },
+    {
+      "success": true,
+      "message": "Box projection already satisfies all magnetic-point field constraints",
+      "iterations": 0,
+      "physical_interval_s": 0.0001121672427604084,
+      "current_request_distance_A": 0.0,
+      "generalized_force_allocation_residual": 0.0,
+      "constraint_violation": 0.0,
+      "active_magnetic_points": 1,
+      "maximum_planned_slew_A_s": 0.706047301614466,
+      "requested_current_A": [
+        0.8851958573963725,
+        -1.2294541162035229,
+        -0.7260341112594217,
+        -0.7965113600347029,
+        -0.5694220669433852,
+        0.6463900313126564,
+        0.6971300614774331,
+        0.7799482116857123,
+        1.149463609070968,
+        0.28836763196564735,
+        1.5124365767165542,
+        -0.3273655226668757
+      ],
+      "allocated_current_A": [
+        0.8851958573963725,
+        -1.2294541162035229,
+        -0.7260341112594217,
+        -0.7965113600347029,
+        -0.5694220669433852,
+        0.6463900313126564,
+        0.6971300614774331,
+        0.7799482116857123,
+        1.149463609070968,
+        0.28836763196564735,
+        1.5124365767165542,
+        -0.3273655226668757
+      ],
+      "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only",
+      "update": 4,
+      "tau": 0.002,
+      "plant": "full",
+      "controller": "affine"
+    },
+    {
+      "success": true,
+      "message": "Box projection already satisfies all magnetic-point field constraints",
+      "iterations": 0,
+      "physical_interval_s": 0.0001121672427604084,
+      "current_request_distance_A": 0.0,
+      "generalized_force_allocation_residual": 0.0,
+      "constraint_violation": 0.0,
+      "active_magnetic_points": 1,
+      "maximum_planned_slew_A_s": 0.7148881934020064,
+      "requested_current_A": [
+        0.8851906383852415,
+        -1.2293941399536594,
+        -0.7259681504524239,
+        -0.7964939073279856,
+        -0.5693947683199901,
+        0.6464702183501922,
+        0.6972050993705083,
+        0.7800123752358942,
+        1.1494078640858796,
+        0.2884228977432764,
+        1.5124599830645908,
+        -0.32740656115582967
+      ],
+      "allocated_current_A": [
+        0.8851906383852415,
+        -1.2293941399536594,
+        -0.7259681504524239,
+        -0.7964939073279856,
+        -0.5693947683199901,
+        0.6464702183501922,
+        0.6972050993705083,
+        0.7800123752358942,
+        1.1494078640858796,
+        0.2884228977432764,
+        1.5124599830645908,
+        -0.32740656115582967
+      ],
+      "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only",
+      "update": 5,
+      "tau": 0.0025,
+      "plant": "full",
+      "controller": "affine"
+    },
+    {
+      "success": true,
+      "message": "Box projection already satisfies all magnetic-point field constraints",
+      "iterations": 0,
+      "physical_interval_s": 0.0001121672427604084,
+      "current_request_distance_A": 0.0,
+      "generalized_force_allocation_residual": 0.0,
+      "constraint_violation": 0.0,
+      "active_magnetic_points": 1,
+      "maximum_planned_slew_A_s": 0.7235063800233167,
+      "requested_current_A": [
+        0.8851852374345728,
+        -1.2293331761293111,
+        -0.7259013368884609,
+        -0.7964764791077149,
+        -0.5693673950095524,
+        0.646551372065959,
+        0.6972810482574304,
+        0.7800771183475548,
+        1.1493512345697456,
+        0.288478787004155,
+        1.512484096121212,
+        -0.3274477896387228
+      ],
+      "allocated_current_A": [
+        0.8851852374345728,
+        -1.2293331761293111,
+        -0.7259013368884609,
+        -0.7964764791077149,
+        -0.5693673950095524,
+        0.646551372065959,
+        0.6972810482574304,
+        0.7800771183475548,
+        1.1493512345697456,
+        0.288478787004155,
+        1.512484096121212,
+        -0.3274477896387228
+      ],
+      "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only",
+      "update": 6,
+      "tau": 0.003,
+      "plant": "full",
+      "controller": "affine"
+    },
+    {
+      "success": true,
+      "message": "Box projection already satisfies all magnetic-point field constraints",
+      "iterations": 0,
+      "physical_interval_s": 0.0001121672427604084,
+      "current_request_distance_A": 0.0,
+      "generalized_force_allocation_residual": 0.0,
+      "constraint_violation": 0.0,
+      "active_magnetic_points": 1,
+      "maximum_planned_slew_A_s": 0.7314797243532065,
+      "requested_current_A": [
+        0.8851796142521094,
+        -1.229271234775416,
+        -0.7258337200549101,
+        -0.7964591662579061,
+        -0.5693400460463174,
+        0.6466334201297749,
+        0.6973578284337568,
+        0.7801423456483896,
+        1.1492937124542182,
+        0.2885352219723975,
+        1.5125089820337487,
+        -0.3274891130754449
+      ],
+      "allocated_current_A": [
+        0.8851796142521094,
+        -1.229271234775416,
+        -0.7258337200549101,
+        -0.7964591662579061,
+        -0.5693400460463174,
+        0.6466334201297749,
+        0.6973578284337568,
+        0.7801423456483896,
+        1.1492937124542182,
+        0.2885352219723975,
+        1.5125089820337487,
+        -0.3274891130754449
+      ],
+      "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only",
+      "update": 7,
+      "tau": 0.0035,
+      "plant": "full",
+      "controller": "affine"
+    }
+  ],
+  "RK_stage_checks": [
+    {
+      "time_tau": 0.0,
+      "maximum_B_T": 0.0005009446460408329,
+      "maximum_G_T_per_m": 0.0043140357834256324,
+      "minimum_wire_distance_m": 0.07659983115789175,
+      "maximum_current_A": 1.512480402413065,
+      "mechanical_magnetic_power_W": 8.114979889880539e-11
+    },
+    {
+      "time_tau": 0.000125,
+      "maximum_B_T": 0.0005010390302805274,
+      "maximum_G_T_per_m": 0.00431379872815787,
+      "minimum_wire_distance_m": 0.07659983171837445,
+      "maximum_current_A": 1.5124467315496748,
+      "mechanical_magnetic_power_W": 5.781857112338661e-11
+    },
+    {
+      "time_tau": 0.000125,
+      "maximum_B_T": 0.000501039030330277,
+      "maximum_G_T_per_m": 0.004313798626100116,
+      "minimum_wire_distance_m": 0.07659983170973725,
+      "maximum_current_A": 1.5124467315496748,
+      "mechanical_magnetic_power_W": 5.784441692719081e-11
+    },
+    {
+      "time_tau": 0.00025,
+      "maximum_B_T": 0.000501133726942341,
+      "maximum_G_T_per_m": 0.004313578157321181,
+      "minimum_wire_distance_m": 0.07659983226119069,
+      "maximum_current_A": 1.5124130606862847,
+      "mechanical_magnetic_power_W": 3.521330216200994e-11
+    },
+    {
+      "time_tau": 0.00025,
+      "maximum_B_T": 0.0005011337269430811,
+      "maximum_G_T_per_m": 0.0043135781594341605,
+      "minimum_wire_distance_m": 0.07659983226126867,
+      "maximum_current_A": 1.5124130606862847,
+      "mechanical_magnetic_power_W": 3.5213068682522654e-11
+    },
+    {
+      "time_tau": 0.000375,
+      "maximum_B_T": 0.000501228735753062,
+      "maximum_G_T_per_m": 0.004313374285409627,
+      "minimum_wire_distance_m": 0.07659983280393497,
+      "maximum_current_A": 1.5123793898228945,
+      "mechanical_magnetic_power_W": 1.329990441620839e-11
+    },
+    {
+      "time_tau": 0.000375,
+      "maximum_B_T": 0.0005012287358014844,
+      "maximum_G_T_per_m": 0.004313374176078174,
+      "minimum_wire_distance_m": 0.07659983279505109,
+      "maximum_current_A": 1.5123793898228945,
+      "mechanical_magnetic_power_W": 1.3344832144243035e-11
+    },
+    {
+      "time_tau": 0.0005,
+      "maximum_B_T": 0.0005013240566288948,
+      "maximum_G_T_per_m": 0.004313186884964677,
+      "minimum_wire_distance_m": 0.07659983332845514,
+      "maximum_current_A": 1.5123457189595044,
+      "mechanical_magnetic_power_W": -7.812328555060221e-12
+    },
+    {
+      "time_tau": 0.0005,
+      "maximum_B_T": 0.0005013240566295963,
+      "maximum_G_T_per_m": 0.004313186887073972,
+      "minimum_wire_distance_m": 0.07659983332853357,
+      "maximum_current_A": 1.5123457189595044,
+      "mechanical_magnetic_power_W": -7.812491929058563e-12
+    },
+    {
+      "time_tau": 0.000625,
+      "maximum_B_T": 0.000501317424056428,
+      "maximum_G_T_per_m": 0.00431317323315041,
+      "minimum_wire_distance_m": 0.0765998338529199,
+      "maximum_current_A": 1.512351499247597,
+      "mechanical_magnetic_power_W": -1.4760119985295934e-12
+    },
+    {
+      "time_tau": 0.000625,
+      "maximum_B_T": 0.0005013174241032235,
+      "maximum_G_T_per_m": 0.004313173116962955,
+      "minimum_wire_distance_m": 0.07659983384378909,
+      "maximum_current_A": 1.512351499247597,
+      "mechanical_magnetic_power_W": -1.475194642562092e-12
+    },
+    {
+      "time_tau": 0.00075,
+      "maximum_B_T": 0.0005013107923308237,
+      "maximum_G_T_per_m": 0.004313159379979287,
+      "minimum_wire_distance_m": 0.07659983435892248,
+      "maximum_current_A": 1.5123572795356894,
+      "mechanical_magnetic_power_W": 4.826571136122399e-12
+    },
+    {
+      "time_tau": 0.00075,
+      "maximum_B_T": 0.0005013107923311566,
+      "maximum_G_T_per_m": 0.004313159380287568,
+      "minimum_wire_distance_m": 0.07659983435892104,
+      "maximum_current_A": 1.5123572795356894,
+      "mechanical_magnetic_power_W": 4.8264684847489646e-12
+    },
+    {
+      "time_tau": 0.000875,
+      "maximum_B_T": 0.0005013041613604949,
+      "maximum_G_T_per_m": 0.004313145561275549,
+      "minimum_wire_distance_m": 0.07659983486480507,
+      "maximum_current_A": 1.512363059823782,
+      "mechanical_magnetic_power_W": 1.1093054783391266e-11
+    },
+    {
+      "time_tau": 0.000875,
+      "maximum_B_T": 0.0005013041614063118,
+      "maximum_G_T_per_m": 0.00431314544405292,
+      "minimum_wire_distance_m": 0.07659983485566889,
+      "maximum_current_A": 1.512363059823782,
+      "mechanical_magnetic_power_W": 1.1093963189177955e-11
+    },
+    {
+      "time_tau": 0.001,
+      "maximum_B_T": 0.0005012975312354223,
+      "maximum_G_T_per_m": 0.0043131315412070215,
+      "minimum_wire_distance_m": 0.07659983535231106,
+      "maximum_current_A": 1.5123688401118747,
+      "mechanical_magnetic_power_W": 1.732548569628574e-11
+    },
+    {
+      "time_tau": 0.001,
+      "maximum_B_T": 0.0005012975312357473,
+      "maximum_G_T_per_m": 0.004313131541506905,
+      "minimum_wire_distance_m": 0.07659983535230974,
+      "maximum_current_A": 1.5123688401118747,
+      "mechanical_magnetic_power_W": 1.7325415326635015e-11
+    },
+    {
+      "time_tau": 0.0011250000000000001,
+      "maximum_B_T": 0.0005012908662408287,
+      "maximum_G_T_per_m": 0.004313115849891262,
+      "minimum_wire_distance_m": 0.07659983583971249,
+      "maximum_current_A": 1.512374431547373,
+      "mechanical_magnetic_power_W": 2.3595674548694002e-11
+    },
+    {
+      "time_tau": 0.0011250000000000001,
+      "maximum_B_T": 0.0005012908662856864,
+      "maximum_G_T_per_m": 0.004313115731690343,
+      "minimum_wire_distance_m": 0.07659983583057293,
+      "maximum_current_A": 1.512374431547373,
+      "mechanical_magnetic_power_W": 2.359631805059699e-11
+    },
+    {
+      "time_tau": 0.00125,
+      "maximum_B_T": 0.0005012842021931101,
+      "maximum_G_T_per_m": 0.004313099960450047,
+      "minimum_wire_distance_m": 0.07659983630874721,
+      "maximum_current_A": 1.5123800229828719,
+      "mechanical_magnetic_power_W": 2.9828610495591435e-11
+    },
+    {
+      "time_tau": 0.00125,
+      "maximum_B_T": 0.0005012842021934357,
+      "maximum_G_T_per_m": 0.004313099960739387,
+      "minimum_wire_distance_m": 0.07659983630874512,
+      "maximum_current_A": 1.5123800229828719,
+      "mechanical_magnetic_power_W": 2.9828568246543485e-11
+    },
+    {
+      "time_tau": 0.001375,
+      "maximum_B_T": 0.0005012775390041503,
+      "maximum_G_T_per_m": 0.00431308411082257,
+      "minimum_wire_distance_m": 0.0765998367776906,
+      "maximum_current_A": 1.5123856144183705,
+      "mechanical_magnetic_power_W": 3.602259503817319e-11
+    },
+    {
+      "time_tau": 0.001375,
+      "maximum_B_T": 0.0005012775390480294,
+      "maximum_G_T_per_m": 0.004313083991701594,
+      "minimum_wire_distance_m": 0.07659983676855213,
+      "maximum_current_A": 1.5123856144183705,
+      "mechanical_magnetic_power_W": 3.602316416531342e-11
+    },
+    {
+      "time_tau": 0.0015,
+      "maximum_B_T": 0.00050127087676003,
+      "maximum_G_T_per_m": 0.004313068061423362,
+      "minimum_wire_distance_m": 0.0765998372282848,
+      "maximum_current_A": 1.5123912058538689,
+      "mechanical_magnetic_power_W": 4.2178722701200846e-11
+    },
+    {
+      "time_tau": 0.0015,
+      "maximum_B_T": 0.000501270876760359,
+      "maximum_G_T_per_m": 0.00431306806170895,
+      "minimum_wire_distance_m": 0.07659983722828215,
+      "maximum_current_A": 1.5123912058538689,
+      "mechanical_magnetic_power_W": 4.217870270009642e-11
+    },
+    {
+      "time_tau": 0.0016250000000000001,
+      "maximum_B_T": 0.0005012641630098949,
+      "maximum_G_T_per_m": 0.00431305185085104,
+      "minimum_wire_distance_m": 0.07659983767879901,
+      "maximum_current_A": 1.5123968340915446,
+      "mechanical_magnetic_power_W": 4.831172276495719e-11
+    },
+    {
+      "time_tau": 0.0016250000000000001,
+      "maximum_B_T": 0.0005012641630527539,
+      "maximum_G_T_per_m": 0.004313051730841107,
+      "minimum_wire_distance_m": 0.07659983766966619,
+      "maximum_current_A": 1.5123968340915446,
+      "mechanical_magnetic_power_W": 4.8312130019298344e-11
+    },
+    {
+      "time_tau": 0.00175,
+      "maximum_B_T": 0.0005012574502266299,
+      "maximum_G_T_per_m": 0.0043130354400332535,
+      "minimum_wire_distance_m": 0.07659983811098814,
+      "maximum_current_A": 1.51240246232922,
+      "mechanical_magnetic_power_W": 5.440556567538674e-11
+    },
+    {
+      "time_tau": 0.00175,
+      "maximum_B_T": 0.0005012574502269658,
+      "maximum_G_T_per_m": 0.0043130354403150125,
+      "minimum_wire_distance_m": 0.07659983811098507,
+      "maximum_current_A": 1.51240246232922,
+      "mechanical_magnetic_power_W": 5.440556078079522e-11
+    },
+    {
+      "time_tau": 0.001875,
+      "maximum_B_T": 0.0005012507383261927,
+      "maximum_G_T_per_m": 0.004313019070468406,
+      "minimum_wire_distance_m": 0.07659983854310637,
+      "maximum_current_A": 1.5124080905668955,
+      "mechanical_magnetic_power_W": 6.045921232646923e-11
+    },
+    {
+      "time_tau": 0.001875,
+      "maximum_B_T": 0.0005012507383679694,
+      "maximum_G_T_per_m": 0.004313018949594773,
+      "minimum_wire_distance_m": 0.07659983853398375,
+      "maximum_current_A": 1.5124080905668955,
+      "mechanical_magnetic_power_W": 6.045946586044798e-11
+    },
+    {
+      "time_tau": 0.002,
+      "maximum_B_T": 0.000501244027390405,
+      "maximum_G_T_per_m": 0.0043130024990766435,
+      "minimum_wire_distance_m": 0.07659983895693062,
+      "maximum_current_A": 1.5124137188045712,
+      "mechanical_magnetic_power_W": 6.647298932110976e-11
+    },
+    {
+      "time_tau": 0.002,
+      "maximum_B_T": 0.0005012440273907495,
+      "maximum_G_T_per_m": 0.004313002499356267,
+      "minimum_wire_distance_m": 0.07659983895692694,
+      "maximum_current_A": 1.5124137188045712,
+      "mechanical_magnetic_power_W": 6.647299134887789e-11
+    },
+    {
+      "time_tau": 0.002125,
+      "maximum_B_T": 0.0005012372359319197,
+      "maximum_G_T_per_m": 0.004312985835226283,
+      "minimum_wire_distance_m": 0.07659983937069006,
+      "maximum_current_A": 1.512419433282567,
+      "mechanical_magnetic_power_W": 7.246069466054809e-11
+    },
+    {
+      "time_tau": 0.002125,
+      "maximum_B_T": 0.0005012372359725374,
+      "maximum_G_T_per_m": 0.004312985713503831,
+      "minimum_wire_distance_m": 0.07659983936158278,
+      "maximum_current_A": 1.512419433282567,
+      "mechanical_magnetic_power_W": 7.246077600243024e-11
+    },
+    {
+      "time_tau": 0.0022500000000000003,
+      "maximum_B_T": 0.0005012304454586876,
+      "maximum_G_T_per_m": 0.004312968969072906,
+      "minimum_wire_distance_m": 0.07659983976619426,
+      "maximum_current_A": 1.5124251477605628,
+      "mechanical_magnetic_power_W": 7.84072637623212e-11
+    },
+    {
+      "time_tau": 0.0022500000000000003,
+      "maximum_B_T": 0.0005012304454590396,
+      "maximum_G_T_per_m": 0.0043129689693486555,
+      "minimum_wire_distance_m": 0.0765998397661899,
+      "maximum_current_A": 1.5124251477605628,
+      "mechanical_magnetic_power_W": 7.840726394671794e-11
+    },
+    {
+      "time_tau": 0.0023750000000000004,
+      "maximum_B_T": 0.0005012236558912855,
+      "maximum_G_T_per_m": 0.004312952145509672,
+      "minimum_wire_distance_m": 0.07659984016163643,
+      "maximum_current_A": 1.5124308622385585,
+      "mechanical_magnetic_power_W": 8.431234096487391e-11
+    },
+    {
+      "time_tau": 0.0023750000000000004,
+      "maximum_B_T": 0.0005012236559306642,
+      "maximum_G_T_per_m": 0.004312952022953008,
+      "minimum_wire_distance_m": 0.07659984015254974,
+      "maximum_current_A": 1.5124308622385585,
+      "mechanical_magnetic_power_W": 8.431229373595883e-11
+    },
+    {
+      "time_tau": 0.0025000000000000005,
+      "maximum_B_T": 0.0005012168673067183,
+      "maximum_G_T_per_m": 0.004312935118122575,
+      "minimum_wire_distance_m": 0.07659984053886891,
+      "maximum_current_A": 1.5124365767165542,
+      "mechanical_magnetic_power_W": 9.017568595960541e-11
+    },
+    {
+      "time_tau": 0.0025,
+      "maximum_B_T": 0.0005012168673070758,
+      "maximum_G_T_per_m": 0.004312935118394315,
+      "minimum_wire_distance_m": 0.07659984053886383,
+      "maximum_current_A": 1.5124365767165542,
+      "mechanical_magnetic_power_W": 9.017567534451621e-11
+    },
+    {
+      "time_tau": 0.002625,
+      "maximum_B_T": 0.0005012099681393258,
+      "maximum_G_T_per_m": 0.004312918070190463,
+      "minimum_wire_distance_m": 0.07659984091603865,
+      "maximum_current_A": 1.5124424283035633,
+      "mechanical_magnetic_power_W": 9.600996635517373e-11
+    },
+    {
+      "time_tau": 0.002625,
+      "maximum_B_T": 0.0005012099681773877,
+      "maximum_G_T_per_m": 0.004312917946810118,
+      "minimum_wire_distance_m": 0.07659984090697762,
+      "maximum_current_A": 1.5124424283035633,
+      "mechanical_magnetic_power_W": 9.600984528345278e-11
+    },
+    {
+      "time_tau": 0.00275,
+      "maximum_B_T": 0.0005012030699739196,
+      "maximum_G_T_per_m": 0.0043129008179659135,
+      "minimum_wire_distance_m": 0.07659984127505044,
+      "maximum_current_A": 1.5124482798905725,
+      "mechanical_magnetic_power_W": 1.0180151012526388e-10
+    },
+    {
+      "time_tau": 0.00275,
+      "maximum_B_T": 0.0005012030699742774,
+      "maximum_G_T_per_m": 0.004312900818230477,
+      "minimum_wire_distance_m": 0.07659984127504517,
+      "maximum_current_A": 1.5124482798905725,
+      "mechanical_magnetic_power_W": 1.0180148007974497e-10
+    },
+    {
+      "time_tau": 0.002875,
+      "maximum_B_T": 0.0005011961727362945,
+      "maximum_G_T_per_m": 0.004312883609616504,
+      "minimum_wire_distance_m": 0.07659984163399568,
+      "maximum_current_A": 1.5124541314775817,
+      "mechanical_magnetic_power_W": 1.0755022887594596e-10
+    },
+    {
+      "time_tau": 0.002875,
+      "maximum_B_T": 0.0005011961727729767,
+      "maximum_G_T_per_m": 0.004312883485429544,
+      "minimum_wire_distance_m": 0.07659984162496497,
+      "maximum_current_A": 1.5124541314775817,
+      "mechanical_magnetic_power_W": 1.0755011093887904e-10
+    },
+    {
+      "time_tau": 0.003,
+      "maximum_B_T": 0.0005011892764981439,
+      "maximum_G_T_per_m": 0.0043128661955507555,
+      "minimum_wire_distance_m": 0.07659984197483842,
+      "maximum_current_A": 1.5124599830645908,
+      "mechanical_magnetic_power_W": 1.1325595212575687e-10
+    },
+    {
+      "time_tau": 0.003,
+      "maximum_B_T": 0.0005011892764984965,
+      "maximum_G_T_per_m": 0.004312866195806311,
+      "minimum_wire_distance_m": 0.07659984197483297,
+      "maximum_current_A": 1.5124599830645908,
+      "mechanical_magnetic_power_W": 1.1325589475828798e-10
+    },
+    {
+      "time_tau": 0.003125,
+      "maximum_B_T": 0.000501182247086763,
+      "maximum_G_T_per_m": 0.004312848823143764,
+      "minimum_wire_distance_m": 0.07659984231560744,
+      "maximum_current_A": 1.5124660113287463,
+      "mechanical_magnetic_power_W": 1.1892933509220082e-10
+    },
+    {
+      "time_tau": 0.003125,
+      "maximum_B_T": 0.0005011822471220213,
+      "maximum_G_T_per_m": 0.004312848698169163,
+      "minimum_wire_distance_m": 0.07659984230661007,
+      "maximum_current_A": 1.5124660113287463,
+      "mechanical_magnetic_power_W": 1.1892933815450844e-10
+    },
+    {
+      "time_tau": 0.0032500000000000003,
+      "maximum_B_T": 0.0005011752186922865,
+      "maximum_G_T_per_m": 0.004312831244595777,
+      "minimum_wire_distance_m": 0.07659984263833204,
+      "maximum_current_A": 1.5124720395929014,
+      "mechanical_magnetic_power_W": 1.245591912117844e-10
+    },
+    {
+      "time_tau": 0.0032500000000000003,
+      "maximum_B_T": 0.0005011752186926255,
+      "maximum_G_T_per_m": 0.004312831244837904,
+      "minimum_wire_distance_m": 0.07659984263832657,
+      "maximum_current_A": 1.5124720395929014,
+      "mechanical_magnetic_power_W": 1.2455909983000353e-10
+    },
+    {
+      "time_tau": 0.0033750000000000004,
+      "maximum_B_T": 0.000501168191246106,
+      "maximum_G_T_per_m": 0.004312813711175071,
+      "minimum_wire_distance_m": 0.07659984296097251,
+      "maximum_current_A": 1.5124780678570569,
+      "mechanical_magnetic_power_W": 1.3014489828451743e-10
+    },
+    {
+      "time_tau": 0.0033750000000000004,
+      "maximum_B_T": 0.0005011681912799296,
+      "maximum_G_T_per_m": 0.004312813585444456,
+      "minimum_wire_distance_m": 0.07659984295201144,
+      "maximum_current_A": 1.5124780678570569,
+      "mechanical_magnetic_power_W": 1.301451228017363e-10
+    },
+    {
+      "time_tau": 0.0035000000000000005,
+      "maximum_B_T": 0.0005011611648144312,
+      "maximum_G_T_per_m": 0.004312795970360026,
+      "minimum_wire_distance_m": 0.07659984326562744,
+      "maximum_current_A": 1.512484096121212,
+      "mechanical_magnetic_power_W": 1.3568732771384972e-10
+    },
+    {
+      "time_tau": 0.0035,
+      "maximum_B_T": 0.0005011611648147493,
+      "maximum_G_T_per_m": 0.004312795970586119,
+      "minimum_wire_distance_m": 0.07659984326562205,
+      "maximum_current_A": 1.512484096121212,
+      "mechanical_magnetic_power_W": 1.3568719719303713e-10
+    },
+    {
+      "time_tau": 0.003625,
+      "maximum_B_T": 0.0005011539975976257,
+      "maximum_G_T_per_m": 0.004312778307580869,
+      "minimum_wire_distance_m": 0.0765998435701847,
+      "maximum_current_A": 1.512490317599346,
+      "mechanical_magnetic_power_W": 1.411939186199595e-10
+    },
+    {
+      "time_tau": 0.003625,
+      "maximum_B_T": 0.0005011539976300334,
+      "maximum_G_T_per_m": 0.004312778181133114,
+      "minimum_wire_distance_m": 0.07659984356126076,
+      "maximum_current_A": 1.512490317599346,
+      "mechanical_magnetic_power_W": 1.4119452216766139e-10
+    },
+    {
+      "time_tau": 0.00375,
+      "maximum_B_T": 0.0005011468314107325,
+      "maximum_G_T_per_m": 0.0043127604370896185,
+      "minimum_wire_distance_m": 0.07659984385681277,
+      "maximum_current_A": 1.5124965390774805,
+      "mechanical_magnetic_power_W": 1.4665731963008777e-10
+    },
+    {
+      "time_tau": 0.00375,
+      "maximum_B_T": 0.0005011468314110183,
+      "maximum_G_T_per_m": 0.004312760437294374,
+      "minimum_wire_distance_m": 0.0765998438568082,
+      "maximum_current_A": 1.5124965390774805,
+      "mechanical_magnetic_power_W": 1.4665714670792235e-10
+    },
+    {
+      "time_tau": 0.003875,
+      "maximum_B_T": 0.0005011396661906526,
+      "maximum_G_T_per_m": 0.004312742612940577,
+      "minimum_wire_distance_m": 0.07659984414332742,
+      "maximum_current_A": 1.5125027605556145,
+      "mechanical_magnetic_power_W": 1.5207532775967267e-10
+    },
+    {
+      "time_tau": 0.003875,
+      "maximum_B_T": 0.0005011396662217091,
+      "maximum_G_T_per_m": 0.004312742485830966,
+      "minimum_wire_distance_m": 0.07659984413443974,
+      "maximum_current_A": 1.5125027605556145,
+      "mechanical_magnetic_power_W": 1.520764190044845e-10
+    },
+    {
+      "time_tau": 0.004,
+      "maximum_B_T": 0.0005011325019984652,
+      "maximum_G_T_per_m": 0.004312724580093276,
+      "minimum_wire_distance_m": 0.07659984441196471,
+      "maximum_current_A": 1.5125089820337487,
+      "mechanical_magnetic_power_W": 1.5745098825823114e-10
+    }
+  ],
+  "nodes": [
+    {
+      "time_tau": 0.00025,
+      "time_s": 5.60836213802042e-05,
+      "H_total": -1.0019343987026916,
+      "H_mechanical": 0.0003131646380732137,
+      "input_work": -0.0003711324575314847,
+      "mechanical_work": 5.8528332815106176e-09,
+      "magnetic_work": 8.977745194099692e-09,
+      "maximum_current_A": 1.5124130606862847
+    },
+    {
+      "time_tau": 0.0005,
+      "time_s": 0.0001121672427604084,
+      "H_total": -1.0023055227280298,
+      "H_mechanical": 0.0003131638154955826,
+      "input_work": -0.0007422564789652437,
+      "mechanical_work": 5.034160119246631e-09,
+      "magnetic_work": 1.1061262398938208e-08,
+      "maximum_current_A": 1.5123457189595044
+    },
+    {
+      "time_tau": 0.00075,
+      "time_s": 0.0001682508641406126,
+      "H_total": -1.002279522403876,
+      "H_mechanical": 0.00031316082734406266,
+      "input_work": -0.0007162561509057586,
+      "mechanical_work": 2.0499149199187647e-09,
+      "magnetic_work": 1.0831755049504611e-08,
+      "maximum_current_A": 1.5123572795356894
+    },
+    {
+      "time_tau": 0.001,
+      "time_s": 0.0002243344855208168,
+      "H_total": -1.0022535224052065,
+      "H_mechanical": 0.00031315985187214674,
+      "input_work": -0.0006902561483282365,
+      "mechanical_work": 1.0783509706047905e-09,
+      "magnetic_work": 1.2549535179421507e-08,
+      "maximum_current_A": 1.5123688401118747
+    },
+    {
+      "time_tau": 0.00125,
+      "time_s": 0.000280418106901021,
+      "H_total": -1.0022274123332997,
+      "H_mechanical": 0.0003131607926958575,
+      "input_work": -0.0006641460725118921,
+      "mechanical_work": 2.023083992219035e-09,
+      "magnetic_work": 1.6204214839181262e-08,
+      "maximum_current_A": 1.5123800229828719
+    },
+    {
+      "time_tau": 0.0015,
+      "time_s": 0.0003365017282812252,
+      "H_total": -1.002201302757539,
+      "H_mechanical": 0.0003131635521674498,
+      "input_work": -0.0006380364928413535,
+      "mechanical_work": 4.786465570522185e-09,
+      "magnetic_work": 2.17841429259966e-08,
+      "maximum_current_A": 1.5123912058538689
+    },
+    {
+      "time_tau": 0.00175,
+      "time_s": 0.0003925853496614294,
+      "H_total": -1.002174991855267,
+      "H_mechanical": 0.0003131680277312164,
+      "input_work": -0.0006117255866592567,
+      "mechanical_work": 9.265939095575312e-09,
+      "magnetic_work": 2.9267948952954322e-08,
+      "maximum_current_A": 1.51240246232922
+    },
+    {
+      "time_tau": 0.002,
+      "time_s": 0.0004486689710416336,
+      "H_total": -1.0021486815807565,
+      "H_mechanical": 0.0003131741262910603,
+      "input_work": -0.0005854153082405737,
+      "mechanical_work": 1.5368407496054294e-08,
+      "magnetic_work": 3.8633704739033016e-08,
+      "maximum_current_A": 1.5124137188045712
+    },
+    {
+      "time_tau": 0.0022500000000000003,
+      "time_s": 0.0005047525924218378,
+      "H_total": -1.0021220536837996,
+      "H_mechanical": 0.00031318176890290656,
+      "input_work": -0.000558787407377002,
+      "mechanical_work": 2.3014925839987516e-08,
+      "magnetic_work": 4.985877433119396e-08,
+      "maximum_current_A": 1.5124251477605628
+    },
+    {
+      "time_tau": 0.0025000000000000005,
+      "time_s": 0.0005608362138020421,
+      "H_total": -1.002095426486714,
+      "H_mechanical": 0.0003131908946431964,
+      "input_work": -0.0005321602063877005,
+      "mechanical_work": 3.21445699956992e-08,
+      "magnetic_work": 6.291996340558515e-08,
+      "maximum_current_A": 1.5124365767165542
+    },
+    {
+      "time_tau": 0.00275,
+      "time_s": 0.0006169198351822461,
+      "H_total": -1.0020683611563461,
+      "H_mechanical": 0.00031320146246603783,
+      "input_work": -0.0005050948721180493,
+      "mechanical_work": 4.271629390359496e-08,
+      "magnetic_work": 7.779340199232645e-08,
+      "maximum_current_A": 1.5124482798905725
+    },
+    {
+      "time_tau": 0.003,
+      "time_s": 0.0006730034565624504,
+      "H_total": -1.0020412965166638,
+      "H_mechanical": 0.00031321345125381146,
+      "input_work": -0.00047803022853733093,
+      "mechanical_work": 5.47089802201727e-08,
+      "magnetic_work": 9.445473331675929e-08,
+      "maximum_current_A": 1.5124599830645908
+    },
+    {
+      "time_tau": 0.0032500000000000003,
+      "time_s": 0.0007290870779426546,
+      "H_total": -1.0020137028627414,
+      "H_mechanical": 0.00031322685740104654,
+      "input_work": -0.0004504365707174238,
+      "mechanical_work": 6.81190241577333e-08,
+      "magnetic_work": 1.1287898874253211e-07,
+      "maximum_current_A": 1.5124720395929014
+    },
+    {
+      "time_tau": 0.0035000000000000005,
+      "time_s": 0.0007851706993228589,
+      "H_total": -1.001986109818414,
+      "H_mechanical": 0.0003132416909383735,
+      "input_work": -0.00042284352249462743,
+      "mechanical_work": 8.295645732463203e-08,
+      "magnetic_work": 1.3304085618784235e-07,
+      "maximum_current_A": 1.512484096121212
+    },
+    {
+      "time_tau": 0.00375,
+      "time_s": 0.000841254320703063,
+      "H_total": -1.0019579564595686,
+      "H_mechanical": 0.00031325796998582164,
+      "input_work": -0.00039469015975263734,
+      "mechanical_work": 9.92394008521714e-08,
+      "magnetic_work": 1.5491453748196902e-07,
+      "maximum_current_A": 1.5124965390774805
+    },
+    {
+      "time_tau": 0.004,
+      "time_s": 0.0008973379420832672,
+      "H_total": -1.0019298035941009,
+      "H_mechanical": 0.00031327571521701307,
+      "input_work": -0.0003665372903877467,
+      "mechanical_work": 1.1698852939774772e-07,
+      "magnetic_work": 1.784740901133591e-07,
+      "maximum_current_A": 1.5125089820337487
+    }
+  ]
+}

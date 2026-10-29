@@ -1,0 +1,152 @@
+{
+  "schema": "rod3d-tong2025-v1",
+  "model_label": "Literature-anchored 3D dynamic benchmark; prescribed reference flow and rigid lumen; not a reproduction of Tong's quasi-static experiment or full FSI",
+  "rod": {
+    "length_m": 0.1,
+    "radius_m": 0.0006,
+    "young_modulus_Pa": 3000000.0,
+    "shear_modulus_Pa": 1000000.0,
+    "density_kg_m3": 1800.0,
+    "mass_proportional_damping_rate_s_inv": 2.0,
+    "initial_twist_rad": 0.0
+  },
+  "magnet": {
+    "distal_length_m": 0.005,
+    "line_dipole_A_m": 0.1448,
+    "body_direction": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "derived_total_dipole_A_m2": 0.000724,
+    "field_origin_m": [
+      0.0,
+      0.0,
+      0.1
+    ],
+    "B_workspace_bound_T": 0.005,
+    "gradient_frobenius_bound_T_per_m": 0.03,
+    "workspace_radius_m": 0.12,
+    "bias_z_T": 0.0005
+  },
+  "flow": {
+    "enabled": true,
+    "density_kg_m3": 1060.0,
+    "viscosity_Pa_s": 0.0035,
+    "peak_centerline_speed_m_s": 0.04,
+    "pulsation_fraction": 0.45,
+    "frequency_Hz": 1.2,
+    "quadratic_drag_coefficient": 1.2,
+    "added_mass_implemented": false,
+    "closure": "Prescribed curved-tube parabolic reference field; anisotropic linear resistive drag plus transverse quadratic drag and axial-spin viscous torque. Not a Navier-Stokes solution."
+  },
+  "lumen": {
+    "enabled": true,
+    "radius_m": 0.003,
+    "centerline_x_amplitude_m": 0.0009,
+    "centerline_y_amplitude_m": 0.0006,
+    "geometry": "c(z)=(ax*sin(2*pi*z/L), ay*sin(pi*z/L), z); closest-point projection by Newton iteration",
+    "wall_motion": "stationary",
+    "contact_envelope_radius_m": 0.0006,
+    "contact_exponent": 1.5,
+    "contact_penalty_N_per_m_power_2p5": 2000.0,
+    "normal_damping_ratio": 0.25,
+    "friction_coefficient": 0.15,
+    "friction_velocity_regularization_m_s": 0.0001
+  },
+  "microgravity": {
+    "enabled": true,
+    "residual_vector_m_s2": [
+      8e-05,
+      -5e-05,
+      2e-05
+    ],
+    "jitter_amplitude_m_s2": 3e-05,
+    "jitter_frequency_Hz": 3.0,
+    "buoyancy": "Hydrostatic residual-g buoyancy approximation included once; prescribed drag omits pressure forces"
+  },
+  "controller": {
+    "input_order": [
+      "Bx_T",
+      "By_T",
+      "Bz_T",
+      "Gxx_T_per_m",
+      "Gyy_T_per_m",
+      "Gxy_T_per_m",
+      "Gxz_T_per_m",
+      "Gyz_T_per_m"
+    ],
+    "gradient_convention": "G_ij=dB_i/dx_j; symmetric; Gzz=-Gxx-Gyy",
+    "position_error_gain": 1.5,
+    "velocity_error_gain_s": 0.0,
+    "uniform_field_share": 0.8,
+    "target_ramp_s": 0.3,
+    "target_frequency_Hz": 0.5,
+    "target_base_xy_m": [
+      0.0012,
+      -0.0007
+    ],
+    "target_amplitude_xy_m": [
+      0.0004,
+      0.0003
+    ],
+    "stage5_current_port_gain_A2_per_W": 0.0,
+    "stage5_nominal_law": "inherited static compliance feedforward plus position feedback, mapped to nominal currents by weighted ridge least squares",
+    "stage5_executed_law": "current-port correction, current-space constrained projection, continuous 2ms ramps; full Biot-Savart at every force evaluation"
+  },
+  "numerics": {
+    "package": "PyElastica",
+    "package_version": "1.0.0",
+    "time_integrator": "official PositionVerlet; explicit force-dependent kick; empirical order measured, no full-system symplecticity claim",
+    "baseline_elements": 32,
+    "baseline_dt_s": 1e-05,
+    "final_time_s": 2.0,
+    "snapshot_interval_s": 0.002,
+    "boundary": "fixed node 0 and first material frame; free distal end; no insertion in current benchmark"
+  },
+  "provenance": {
+    "literature_reported": [
+      "rod.length_m",
+      "rod.radius_m",
+      "rod.young_modulus_Pa",
+      "rod.shear_modulus_Pa",
+      "magnet.distal_length_m",
+      "magnet.line_dipole_A_m",
+      "magnet.body_direction"
+    ],
+    "literature_source": "Tong et al., Journal of the Mechanics and Physics of Solids 203 (2025) 106198, DOI 10.1016/j.jmps.2025.106198; published PDF p.10 section5.1 directly read and visually checked",
+    "literature_pdf_sha256": "41c2420bccc7e27e12050605a5d4bd5a56174af456e415ea91e5662c11a9f6f5",
+    "source_url": "https://eprints.ncl.ac.uk/file_store/production/306197/7CAB59D2-D36A-4A12-8648-428A2D798BBC.pdf",
+    "uniform_shaft_assumption": "Reported E/G refer to magnetic composite; assigning them to the full uniform rod is an explicit benchmark assumption, not evidence of the unmagnetized shaft's measured properties.",
+    "engineering_choices": [
+      "rod.density_kg_m3",
+      "rod.mass_proportional_damping_rate_s_inv",
+      "magnet.B_workspace_bound_T",
+      "magnet.gradient_frobenius_bound_T_per_m",
+      "magnet.workspace_radius_m",
+      "magnet.bias_z_T",
+      "flow parameters",
+      "lumen penalty/friction parameters"
+    ],
+    "synthetic_choices": [
+      "lumen centerline",
+      "microgravity residual and jitter",
+      "controller target and gains",
+      "all initial conditions"
+    ],
+    "user_measurements": "none supplied",
+    "flow_note": "rho=1060kg/m^3 and eta=0.0035Pa*s appear as modeling inputs in the primary numerical study DOI10.1186/s11671-015-1127-5; adopting them here is an engineering modeling choice, not a subject-specific measurement.",
+    "unvalidated": [
+      "actual catheter density/damping",
+      "material variation along shaft",
+      "coil-current calibration and joint field/gradient bandwidth",
+      "blood force closure",
+      "wall/friction parameters",
+      "space-station acceleration record",
+      "full two-way FSI",
+      "added mass",
+      "self contact",
+      "insertion/ALE"
+    ]
+  }
+}

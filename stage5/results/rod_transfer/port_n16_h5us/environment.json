@@ -1,0 +1,10 @@
+{
+  "pyelastica": "1.0.0",
+  "numba": "0.62.1",
+  "llvmlite": "0.45.1",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "matplotlib": "3.10.8",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "model_sha256": "ded2a6de00f8a2f0a62b8e9b6be8d09b22ba1c8bd295aeee753934c0bd2b698d"
+}

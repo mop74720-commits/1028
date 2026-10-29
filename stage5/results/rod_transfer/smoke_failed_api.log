@@ -1,0 +1,4 @@
+/workspace/1028/stage3/source_inputs/starter/stage2/program/rod3d/model.py:175: NumbaPerformanceWarning: '@' is faster on contiguous arrays, called on (Array(float64, 2, 'A', False, aligned=True), Array(float64, 1, 'C', False, aligned=True))
+  torques[0,:,e] += directors[:,:,e]@tm
+/workspace/1028/stage3/source_inputs/starter/stage2/program/rod3d/model.py:180: NumbaPerformanceWarning: '@' is faster on contiguous arrays, called on (Array(float64, 2, 'A', False, aligned=True), Array(float64, 1, 'A', False, aligned=True))
+  wsp = directors[:,:,e].T@omega[:,e]

@@ -1,0 +1,81 @@
+CACHE {"status": "running", "order": 1, "derivative": "value"}
+CACHE {"order": 1, "derivative": "value", "seconds": 0.31890405300146085, "norm": 0.0034234347538254118}
+CACHE {"status": "running", "order": 1, "derivative": "jacobian"}
+CACHE {"order": 1, "derivative": "jacobian", "seconds": 1.8776727180011221, "norm": 14.0312215972888}
+CACHE {"status": "running", "order": 1, "derivative": "hessian"}
+CACHE {"order": 1, "derivative": "hessian", "seconds": 31.000205811997148, "norm": 197.2150847775189}
+CACHE {"status": "running", "order": 2, "derivative": "value"}
+CACHE {"order": 2, "derivative": "value", "seconds": 3.87664063199918, "norm": 0.20163969335053353}
+CACHE {"status": "running", "order": 2, "derivative": "jacobian"}
+CACHE {"order": 2, "derivative": "jacobian", "seconds": 12.730360920002568, "norm": 724.1965270666882}
+NATIVE_POINT_CENTER
+NATIVE_POINT_OFF_CENTER
+MOSER 1 2.220467365943046e-16
+MOSER 2 2.238857026307399e-16
+REFERENCE_REPRESENTED 1 2e-10
+REFERENCE_REPRESENTED 1 5e-12
+Traceback (most recent call last):
+  File "/workspace/1028/stage5/program/run_transport_experiments.py", line 199, in <module>
+    assert (len(grid)-1)%steps==0
+            ^^^^^^
+  File "/workspace/1028/stage5/program/run_transport_experiments.py", line 171, in main
+    report['original_reference']=dict(source=str(shared.relative_to(ROOT)),scope='same actual fullcoil collocated field; independent tolerances and refinement in closed_loop/results.json',field_equality_protocol='same fixed bias, gain, partial-current force and initial_state')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/scipy/integrate/_ivp/ivp.py", line 670, in solve_ivp
+    sol = solver.dense_output()
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/scipy/integrate/_ivp/base.py", line 228, in dense_output
+    return self._dense_output_impl()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/scipy/integrate/_ivp/rk.py", line 536, in _dense_output_impl
+    K[s] = self.fun(self.t_old + c * h, self.y_old + dy)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/scipy/integrate/_ivp/base.py", line 158, in fun
+    return self.fun_single(t, y)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/scipy/integrate/_ivp/base.py", line 24, in fun_wrapped
+    return np.asarray(fun(t, y), dtype=dtype)
+                      ^^^^^^^^^
+  File "/workspace/1028/stage5/program/transport_cache.py", line 93, in evaluate
+    auxiliary_speed_upper_bound=float(b_bound/(1-deltaK)) if deltaK<1 else None,
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028/stage5/program/transport_native.py", line 111, in field_and_jacobian
+    return self._coeff[order]
+           ~~~~~~~~~~~^^^^^^^~
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/_functorch/eager_transforms.py", line 604, in wrapper_fn
+    vjp_out = _vjp_with_argnums(func, *args, argnums=argnums, has_aux=has_aux)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/_functorch/vmap.py", line 48, in fn
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/_functorch/eager_transforms.py", line 399, in _vjp_with_argnums
+    primals_out = func(*primals)
+                  ^^^^^^^^^^^^^^
+  File "/workspace/1028/stage5/program/transport_native.py", line 42, in force_tensor
+    """Algebraically identical full M(q), avoiding mixed-high-AD solve bug.
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028/stage5/program/run_transport_experiments.py", line 119, in force
+    for name in sources:(snapshot/name).write_bytes((Path(__file__).parent/name).read_bytes())
+                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/_functorch/apis.py", line 399, in wrapper
+    return eager_transforms.grad_impl(func, argnums, has_aux, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/_functorch/eager_transforms.py", line 1449, in grad_impl
+    results = grad_and_value_impl(func, argnums, has_aux, args, kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/_functorch/vmap.py", line 48, in fn
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/_functorch/eager_transforms.py", line 1433, in grad_and_value_impl
+    flat_grad_input = _autograd_grad(
+                      ^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/_functorch/eager_transforms.py", line 180, in _autograd_grad
+    grad_inputs = torch.autograd.grad(
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/autograd/__init__.py", line 496, in grad
+    result = _engine_run_backward(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/autograd/graph.py", line 825, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

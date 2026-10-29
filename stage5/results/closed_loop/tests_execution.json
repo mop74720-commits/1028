@@ -1,0 +1,26 @@
+{
+  "command": [
+    "/workspace/1028-cloud/venvs/learning/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "stage5/tests",
+    "-p",
+    "test_closed_loop.py",
+    "-v"
+  ],
+  "cwd": "/workspace/1028",
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "status": "passed",
+  "tests": 5,
+  "skipped": 0,
+  "test_runner_seconds": 56.553,
+  "log": "stage5/results/closed_loop/tests.log",
+  "timing_note": "Test runner elapsed reported verbatim. UTC command start was not captured in this initial invocation."
+}

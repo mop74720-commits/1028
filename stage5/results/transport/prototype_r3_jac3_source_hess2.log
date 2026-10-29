@@ -1,0 +1,20 @@
+START field
+{"name": "field", "seconds": 0.26988317300128983, "shape": [24], "norm": 0.24453521259962413, "max_rss_kib": 323500}
+START field_jacobian
+{"name": "field_jacobian", "seconds": 0.791581726000004, "shape": [24, 24], "norm": 1447.1495781493895, "max_rss_kib": 337720}
+START b1
+{"name": "b1", "seconds": 0.0004278449996490963, "shape": [24], "norm": 0.0006521647083840453, "max_rss_kib": 337720}
+START b2
+{"name": "b2", "seconds": 0.8915913950004324, "shape": [24], "norm": 0.03623832167695323, "max_rss_kib": 349560}
+START b3
+{"name": "b3", "seconds": 4.415574072001618, "shape": [24], "norm": 8.602576438967633, "max_rss_kib": 357192}
+START Db1
+{"name": "Db1", "seconds": 0.0017820020002545789, "shape": [24, 24], "norm": 0.7710766380267496, "max_rss_kib": 357192}
+START Db2
+{"name": "Db2", "seconds": 3.107005981000839, "shape": [24, 24], "norm": 213.42426314648895, "max_rss_kib": 385096}
+START Db3
+{"name": "Db3", "seconds": 11.939918587999273, "shape": [24, 24], "norm": 111899.35780297338, "max_rss_kib": 611536}
+START D2b1
+{"name": "D2b1", "seconds": 0.007804790999216493, "shape": [24, 24, 24], "norm": 75.40942074806928, "max_rss_kib": 611536}
+START D2b2
+{"name": "D2b2", "seconds": 9.412247493997711, "shape": [24, 24, 24], "norm": 6205.851984435452, "max_rss_kib": 611536}

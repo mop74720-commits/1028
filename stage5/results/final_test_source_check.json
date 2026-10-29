@@ -1,0 +1,93 @@
+{
+  "status": "passed",
+  "test_run": "20261029T174332Z",
+  "test_count": 45,
+  "checked_sources": [
+    {
+      "path": "stage5/program/closed_loop.py",
+      "sha256": "4f7e5e16e1cc5d105a298811627989cd064819f8790dadb0429920374739db31",
+      "unchanged": true
+    },
+    {
+      "path": "stage5/program/closed_loop_sampled.py",
+      "sha256": "43ddbe4eda6dc31049ec233571c60c7a8e5d35c0e0caf22fd432fbe6fd37e8f2",
+      "unchanged": true
+    },
+    {
+      "path": "stage5/program/coil_control.py",
+      "sha256": "1b01c4fcdf0e2808d178fa9fc7e1996b1ebb7440c05c81394cf07df6ec772797",
+      "unchanged": true
+    },
+    {
+      "path": "stage5/program/coil_rom.py",
+      "sha256": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc",
+      "unchanged": true
+    },
+    {
+      "path": "stage5/program/corrected_identities.py",
+      "sha256": "4631b8fb7623c4fd079ee1bd24f104ed64887739f6ec638bdfcd9b3de7be4bf7",
+      "unchanged": true
+    },
+    {
+      "path": "stage5/program/learning_models.py",
+      "sha256": "28055b5406777df87a94e66f6ac0a42909b9b60efad0070f599e00616fe143a0",
+      "unchanged": true
+    },
+    {
+      "path": "stage5/program/moser_chart.py",
+      "sha256": "869356bfa0997c2d5e5bc03878752822ad6da4ed74ac283f716acb72e9301fae",
+      "unchanged": true
+    },
+    {
+      "path": "stage5/program/rod_transfer_control.py",
+      "sha256": "a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0",
+      "unchanged": true
+    },
+    {
+      "path": "stage5/program/transport_cache.py",
+      "sha256": "52d8b9b90cb53fc613dd730c5fdac78e0a49a8a02d37652af020434e6e3cf635",
+      "unchanged": true
+    },
+    {
+      "path": "stage5/program/transport_native.py",
+      "sha256": "a77ad9df7fc789f3a1eb061616e7f42de596047ba8e9fd6e7dbe436179505e3f",
+      "unchanged": true
+    },
+    {
+      "path": "stage5/tests/test_closed_loop.py",
+      "sha256": "8c6dcd1671b29c4402e8703a9ec4e9815e7d4a4319b2d5279fa38fd3f4831be1",
+      "unchanged": true
+    },
+    {
+      "path": "stage5/tests/test_coil_interface.py",
+      "sha256": "5b7dc41c81436cdab36b21fcc37bdab8d3ccb5c3d5fa5242b9a57a1e3fabf32a",
+      "unchanged": true
+    },
+    {
+      "path": "stage5/tests/test_corrected_identities.py",
+      "sha256": "adc6398f93ba5d59528ab3ee2a6c8fa84ca0fbbbe5bc9f333da636cc60722c49",
+      "unchanged": true
+    },
+    {
+      "path": "stage5/tests/test_high_derivatives.py",
+      "sha256": "46147d54a742e7b1f1b10a2c6daa709a737abe848bb770471902268d8613444e",
+      "unchanged": true
+    },
+    {
+      "path": "stage5/tests/test_learning_research.py",
+      "sha256": "ecaba8f6951579936d6fbe617d47b7022279043de51fcb28fdd500523fbcaec8",
+      "unchanged": true
+    },
+    {
+      "path": "stage5/tests/test_rod_transfer.py",
+      "sha256": "de288d4bafed6770237c6315d79e6b422c3b5d0a3346cd7c1a1a093ddbdb50fb",
+      "unchanged": true
+    },
+    {
+      "path": "stage5/tests/test_transport_moser.py",
+      "sha256": "7aa0f2c95e8c7e30470198a4a53b9a64faed857286c9aff62845026deec68bf4",
+      "unchanged": true
+    }
+  ],
+  "scope": "Current test modules and scientific model/integrator implementations match the final successful test run. Later report/rerun wrappers have separate executed logs."
+}

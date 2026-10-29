@@ -1,0 +1,43 @@
+{
+  "status": "independently_executed",
+  "references": [
+    {
+      "rtol": 2e-10,
+      "atol": 2e-12,
+      "max_step_tau": 0.0008915258817015064,
+      "evaluations": 167,
+      "success": true
+    },
+    {
+      "rtol": 5e-12,
+      "atol": 5e-14,
+      "max_step_tau": 0.0004457629408507532,
+      "evaluations": 317,
+      "success": true
+    }
+  ],
+  "reference_refinement_max_state_norm": 1.575103875415393e-17,
+  "elapsed_s": 69.66270563999933,
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "total_currents_A": [
+    0.8852530495400104,
+    -1.228695819339872,
+    -0.7250601367549548,
+    -0.796103697740145,
+    -0.5688797115813509,
+    0.6475670120790167,
+    0.6980256464312167,
+    0.7809830505705962,
+    1.1490316192924095,
+    0.2890435974002692,
+    1.512480402413065,
+    -0.3281350083833579
+  ],
+  "omega0": 4.457629408507532,
+  "E0_J": 3.6200000000000004e-07,
+  "initial_state": "straight untwisted rod, zero all configuration coefficients and momenta",
+  "boundary": "ROM fixes continuum base frame; Cosserat fixes first element frame, causing finite-spatial-step boundary discrepancy",
+  "field": "Full 256-source-point circular coils; total bias currents, no extra ideal bias",
+  "source_sha256": "53004846e9fbd219efc146dee46dd9ce9966a2d1b67c9a782bf577012d9e199e",
+  "scope": "Conservative same-input model comparison only; not the flow/contact tracking case or a proven ROM error bound."
+}

@@ -1,0 +1,50 @@
+CACHE {"status": "running", "order": 1, "derivative": "value"}
+CACHE {"order": 1, "derivative": "value", "seconds": 0.37411123299898463, "norm": 0.0034234347538254135}
+CACHE {"status": "running", "order": 1, "derivative": "jacobian"}
+CACHE {"order": 1, "derivative": "jacobian", "seconds": 1.1715527169981215, "norm": 14.031221597288805}
+CACHE {"status": "running", "order": 1, "derivative": "hessian"}
+CACHE {"order": 1, "derivative": "hessian", "seconds": 22.32040815900109, "norm": 197.21508477751857}
+CACHE {"status": "running", "order": 2, "derivative": "value"}
+CACHE {"order": 2, "derivative": "value", "seconds": 4.781761398000526, "norm": 0.20163969335053378}
+CACHE {"status": "running", "order": 2, "derivative": "jacobian"}
+Traceback (most recent call last):
+  File "/workspace/1028/stage5/program/run_transport_experiments.py", line 199, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/1028/stage5/program/run_transport_experiments.py", line 129, in main
+    cache=OneFormCache.fit(native,z0,maximum_order=args.maximum_order,quadratic_through=args.quadratic_through,progress=progress)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028/stage5/program/transport_cache.py", line 30, in fit
+    start=time.perf_counter();a=op(x).detach().numpy();elapsed=time.perf_counter()-start
+                                ^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/_functorch/eager_transforms.py", line 724, in wrapper_fn
+    flat_jacobians_per_input = compute_jacobian_stacked()
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/_functorch/eager_transforms.py", line 646, in compute_jacobian_stacked
+    chunked_result = vmap(vjp_fn)(basis)
+                     ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/_functorch/apis.py", line 203, in wrapped
+    return vmap_impl(
+           ^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/_functorch/vmap.py", line 331, in vmap_impl
+    return _flat_vmap(
+           ^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/_functorch/vmap.py", line 479, in _flat_vmap
+    batched_outputs = func(*batched_inputs, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/_functorch/eager_transforms.py", line 430, in wrapper
+    result = _autograd_grad(
+             ^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/_functorch/eager_transforms.py", line 180, in _autograd_grad
+    grad_inputs = torch.autograd.grad(
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/autograd/__init__.py", line 496, in grad
+    result = _engine_run_backward(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/autograd/graph.py", line 825, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: one of the variables needed for gradient computation has been modified by an inplace operation: [torch.DoubleTensor [1, 12, 256, 3]], which is output 0 of MaskedFillBackward0, is at version 1; expected version 0 instead. Hint: enable anomaly detection to find the operation that failed to compute its gradient, with torch.autograd.set_detect_anomaly(True).
+Fatal Python error: gilstate_tss_set: failed to set current tstate (TSS)
+Python runtime state: finalizing (tstate=0x00000000015b7de0)
+

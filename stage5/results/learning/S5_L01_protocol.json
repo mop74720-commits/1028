@@ -1,0 +1,65 @@
+{
+  "experiment": "S5-L01",
+  "timestamp_utc": "2026-10-29T15:08:46Z",
+  "training_data_sha256": "321a5245c3c9ae5f54163bd08f2f4d0a7d89cae83e56c6e38487f4e61c762c44",
+  "target": "same 12-DOF,20-cell variable-mass Kirchhoff ROM with ideal axial bias; excludes full-coil bias and fluid/contact",
+  "amplitude": 0.08,
+  "train": 1024,
+  "validation": 256,
+  "test": 512,
+  "OOD": 256,
+  "seeds": [
+    51001,
+    51002,
+    51003
+  ],
+  "steps": 1200,
+  "loss": "mean((D*(grad_x hres_pred-grad_x hres_true))/global_train_rms_grad_z_res)^2 + 0.15*mean((hres_pred-hres_true)/train_std_hres)^2",
+  "scales": {
+    "hscale": 0.009543957355763131,
+    "gscale_z": 0.46614707019577395,
+    "coordinate_D": [
+      12.5,
+      12.5,
+      31.15676879900331,
+      31.15676879900331,
+      52.88274551937264,
+      52.88274551937264,
+      111.85509903478612,
+      111.85509903478612,
+      113.94929587385714,
+      198.01477356817264,
+      263.7533518481456,
+      369.72971874349236,
+      12.5,
+      12.5,
+      31.15676879900331,
+      31.15676879900331,
+      52.88274551937264,
+      52.88274551937264,
+      111.85509903478612,
+      111.85509903478612,
+      113.94929587385714,
+      198.01477356817264,
+      263.7533518481456,
+      369.72971874349236
+    ]
+  },
+  "algorithms": "Adam with same batches/update count; polynomial lr=.001, networks=.003 fixed after training/validation-only timing pilot. Validation selects frozen checkpoint every50 updates; test/OOD labels generated after all nine models frozen.",
+  "analytic_scope": "complete degree3/4 momentum-quadratic mechanical residual,8749 parameters; no p^4; not exact full dictionary least-squares optimum",
+  "source_sha256": {
+    "stage5/program/run_learning_research.py": "ba705e9d21ac6f04483cfcd539edf43a50f35523e5dc913fd19f710a273f1bf8",
+    "stage5/program/learning_models.py": "28055b5406777df87a94e66f6ac0a42909b9b60efad0070f599e00616fe143a0",
+    "stage3/source_inputs/starter/stage2/program/learning/rod_rom.py": "5aebcea066b73f717c2c26fd0b8f3454e205fbcc1bafd970762f3fb9371ee3c9",
+    "stage3/source_inputs/starter/stage2/program/learning/run_learning.py": "868de74c224e46082555b5a6553ea70f52a0ee17ec23ed4631fc932e10aecdae",
+    "stage3/source_inputs/starter/stage2/program/learning/train_spd_complex.py": "6cfb62e29bdf141e3cbe2ca7f82c0a3ee8ac8bdac8525fc8bb1b8827ddb00d50"
+  },
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "torch": "2.5.1+cpu",
+    "threads": 1,
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41"
+  }
+}

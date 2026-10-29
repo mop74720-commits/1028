@@ -1,0 +1,58 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "stage5/program/update_inheritance.py",
+    "--updates",
+    "stage5/results/ledgers/stable_branch_updates.json",
+    "--updates",
+    "stage5/results/ledgers/learning_and_proof_updates.json",
+    "--updates",
+    "stage5/results/ledgers/transport_final_updates.json"
+  ],
+  "timestamp_utc": "2026-10-29T17:59:45.841219+00:00",
+  "audited_baseline": "f3aa09c",
+  "baseline_file": "stage4/audit/full_inheritance_matrix.csv",
+  "baseline_sha256": "1c54d6a25f8db1a52ead6f8c8b4a0c7cda1967ef945ff45306bf1b4636bdbf74",
+  "original_rows_preserved": 115,
+  "original_columns_preserved": [
+    "id",
+    "item_kind",
+    "original_location",
+    "mathematical_item",
+    "old_v10",
+    "general_birkhoff",
+    "stage2",
+    "stage3",
+    "latest_manuscript_or_notes",
+    "source_code",
+    "evidence",
+    "material_exists",
+    "mentioned_in_latest",
+    "full_derivation_inherited",
+    "algorithm_reused",
+    "verified_on_3d",
+    "generalization_proved",
+    "proof_status",
+    "defect",
+    "repair",
+    "priority"
+  ],
+  "stage5_rows_updated": 115,
+  "repair_rows": 16,
+  "input_update_manifests": [
+    {
+      "path": "stage5/results/ledgers/stable_branch_updates.json",
+      "sha256": "5650e9f920c2d7985204c2da4dfe714b6daf1ff7cdb2e33ac28b72e8c0ac9434"
+    },
+    {
+      "path": "stage5/results/ledgers/learning_and_proof_updates.json",
+      "sha256": "9c6fa26a1be2e10e04624390e645b422dd4631e3dd17c198548c7dc70bf553b2"
+    },
+    {
+      "path": "stage5/results/ledgers/transport_final_updates.json",
+      "sha256": "0b60665021ca45b681d27b4f76953fb061e9a6da3ceec95e50446b55467bd522"
+    }
+  ],
+  "validated_python_locations": 286,
+  "semantics": "Row export is not research completion. Original 21 columns and six audited inheritance states remain unchanged."
+}

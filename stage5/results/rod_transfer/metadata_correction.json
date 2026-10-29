@@ -1,0 +1,7 @@
+{
+  "path": "stage5/results/rod_transfer/port_contact_n32_h5us/parameters.json",
+  "field": "lumen.stage5_stress_note",
+  "before": "Separate narrower rigid lumen; straight initial rod has small initial overlap. This tests active contact, not feasible navigation.",
+  "after": "Separate narrower rigid lumen; initial quadrature penetration is zero, and contact activates during the trajectory. This tests active contact, not feasible navigation.",
+  "reason": "Actual saved initial contact penetration and contact energy are zero. This corrects a descriptive assumption, without changing any physical parameter or trajectory. Earlier failed-attempt parameter files remain preserved."
+}

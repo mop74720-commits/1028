@@ -1,0 +1,195 @@
+{
+  "note": "补充独立初始生成规范、完整旧CHNN/KAM证明恢复以及新的学习/共振证据；不升级实际3D KAM或全网络闭环。A主输运图仍另等最终运行。",
+  "inheritance": {
+    "CK01": {
+      "stage5_proof": "stage5/proofs/chnn_kam_restored.md; stage5/notes/chnn_kam_experiments.md"
+    },
+    "CK02": {
+      "stage5_proof": "stage5/proofs/chnn_kam_restored.md; stage5/notes/chnn_kam_experiments.md"
+    },
+    "CK03": {
+      "stage5_proof": "stage5/proofs/chnn_kam_restored.md; stage5/notes/chnn_kam_experiments.md"
+    },
+    "CK07": {
+      "stage5_proof": "stage5/proofs/chnn_kam_restored.md; stage5/notes/chnn_kam_experiments.md"
+    },
+    "CK08": {
+      "stage5_proof": "stage5/proofs/chnn_kam_restored.md; stage5/notes/chnn_kam_experiments.md",
+      "stage5_status": "split tanh实解析网络的独立(ξ,χ)复化公式恢复",
+      "stage5_full_derivation_inherited": "yes_conditional：逐层双变量复化及避极点假设明确；无统一复域常数",
+      "stage5_generalization_proved": "conditional_local：固定有限网络在避极点复域延拓，学习误差界未证"
+    },
+    "CK09": {
+      "stage5_proof": "stage5/proofs/chnn_kam_restored.md; stage5/notes/chnn_kam_experiments.md"
+    },
+    "CK10": {
+      "stage5_proof": "stage5/proofs/chnn_kam_restored.md; stage5/notes/chnn_kam_experiments.md"
+    },
+    "CK11": {
+      "stage5_proof": "stage5/proofs/chnn_kam_restored.md; stage5/notes/chnn_kam_experiments.md"
+    },
+    "CK12": {
+      "stage5_proof": "stage5/proofs/chnn_kam_restored.md; stage5/notes/chnn_kam_experiments.md",
+      "stage5_status": "SPD机械复网络逐点正定/Legendre可逆证明恢复并实际新训练",
+      "stage5_full_derivation_inherited": "yes：vᵀDνLLᵀDνv>0的完整证明；有限输出/实输入/精确算术条件明确",
+      "stage5_generalization_proved": "conditional_pointwise：无统一下界/条件数/真实质量误差界"
+    },
+    "CK13": {
+      "stage5_proof": "stage5/proofs/chnn_kam_restored.md; stage5/notes/chnn_kam_experiments.md"
+    },
+    "CK14": {
+      "stage5_proof": "stage5/proofs/chnn_kam_restored.md; stage5/notes/chnn_kam_experiments.md"
+    },
+    "CK15": {
+      "stage5_proof": "stage5/proofs/chnn_kam_restored.md; stage5/notes/chnn_kam_experiments.md",
+      "stage5_status": "旧有限特征Gram到强范数的完整条件证明恢复，新字典尚无证书",
+      "stage5_full_derivation_inherited": "yes：观测残差、噪声/类外误差、λ_min及函数范数常数完整推导",
+      "stage5_algorithm_reused": "theorem_restored：实际新三维字典训练；本轮未计算/认证其Gram下界",
+      "stage5_generalization_proved": "conditional_dictionary_lemma：一般有限字典命题成立；新8749输入常数未验证",
+      "stage5_missing": "新字典λ、类外R、复域ρ和动作角复合常数未认证"
+    },
+    "CK16": {
+      "stage5_proof": "stage5/proofs/chnn_kam_restored.md; stage5/notes/chnn_kam_experiments.md",
+      "stage5_status": "积分观测的Gram误差桥恢复为同一线性代数命题；新积分识别实验未做",
+      "stage5_full_derivation_inherited": "partial：替换观测矩阵后的误差界已恢复；具体求积/端点/观测常数未实算",
+      "stage5_missing": "真实三维积分特征矩阵、噪声/求积/端点误差、λ_min认证与复域界未完成"
+    },
+    "CK17": {
+      "stage5_proof": "stage5/proofs/chnn_kam_restored.md; stage5/notes/chnn_kam_experiments.md",
+      "stage5_status": "iid参数覆盖→Hoeffding→Poincaré→GN强范数完整条件链恢复",
+      "stage5_full_derivation_inherited": "yes_conditional：l∞参数网和Lipschitz度量一致，GN指数与均值规范明确",
+      "stage5_generalization_proved": "conditional_theorem：新三维网络未核验M_s/Q/L_g/密度/域/小量常数",
+      "stage5_missing": "不能把一次实样本训练误差当复域/强范数认证；轨迹样本也不自动iid"
+    },
+    "CK18": {
+      "stage5_proof": "stage5/proofs/chnn_kam_restored.md; stage5/notes/chnn_kam_experiments.md",
+      "stage5_status": "旧余弦twist行列式有效保留；新三维三次Lie消元及第一对四次限制实算",
+      "stage5_full_derivation_inherited": "partial：旧twist代数与新四阶Lie展开恢复；完整旧余项仍依冻结原文，新统一尾项未证",
+      "stage5_evidence": "stage5/results/resonance/S5_R01_results.json; stage5/results/resonance/S5_R02_results.json; stage5/results/resonance/S5_R03_pair_reduction.json; stage5/results/resonance/S5_R04_partial_scope.json",
+      "stage5_missing": "全24D四阶NF、变换逆域和高阶Lie余项统一界尚未完成"
+    },
+    "CK19": {
+      "stage5_proof": "stage5/proofs/chnn_kam_restored.md; stage5/notes/chnn_kam_experiments.md",
+      "stage5_status": "旧冻结两模态/学习对象身份、有限幅值证书及测度适用范围恢复说明",
+      "stage5_full_derivation_inherited": "historical_and_partial_restoration：证书定理假设/输入/对象和体积用途恢复；数值认证仍属历史冻结证据",
+      "stage5_generalization_proved": "no_new_3d_KAM：不迁移证书、不将实训练误差冒充解析界",
+      "stage5_missing": "原S1 Fourier/Arb/COMSOL数值档案缺失，不能本轮精确复算；新的共振域/twist/尾项/小量未完成"
+    },
+    "CK20": {
+      "stage5_proof": "stage5/proofs/chnn_kam_restored.md; stage5/notes/chnn_kam_experiments.md",
+      "stage5_status": "旧冻结两模态/学习对象身份、有限幅值证书及测度适用范围恢复说明",
+      "stage5_full_derivation_inherited": "historical_and_partial_restoration：证书定理假设/输入/对象和体积用途恢复；数值认证仍属历史冻结证据",
+      "stage5_generalization_proved": "no_new_3d_KAM：不迁移证书、不将实训练误差冒充解析界",
+      "stage5_missing": "原S1 Fourier/Arb/COMSOL数值档案缺失，不能本轮精确复算；新的共振域/twist/尾项/小量未完成"
+    },
+    "CK21": {
+      "stage5_proof": "stage5/proofs/chnn_kam_restored.md; stage5/notes/chnn_kam_experiments.md",
+      "stage5_status": "旧冻结两模态/学习对象身份、有限幅值证书及测度适用范围恢复说明",
+      "stage5_full_derivation_inherited": "historical_and_partial_restoration：证书定理假设/输入/对象和体积用途恢复；数值认证仍属历史冻结证据",
+      "stage5_generalization_proved": "no_new_3d_KAM：不迁移证书、不将实训练误差冒充解析界",
+      "stage5_missing": "原S1 Fourier/Arb/COMSOL数值档案缺失，不能本轮精确复算；新的共振域/twist/尾项/小量未完成"
+    },
+    "CK22": {
+      "stage5_proof": "stage5/proofs/corrected_mathematics.md; stage5/proofs/chnn_kam_restored.md; stage5/proofs/integrators_full_coil.md",
+      "stage5_full_derivation_inherited": "yes_conditional：非零周期、作用常数修正与同伦条件；中心法另有单值exact原函数"
+    },
+    "CK24": {
+      "stage5_proof": "stage5/proofs/chnn_kam_restored.md; stage5/notes/chnn_kam_experiments.md",
+      "stage5_status": "连续/离散KAM输入逐项恢复，离散分母与G_h/h规范明确",
+      "stage5_full_derivation_inherited": "conditional_theorem_inputs：保留所选KAM定理责任；不在此重证外部KAM定理",
+      "stage5_missing": "全coil/学习系统的解析域、离散步长非共振、twist和小量常数均未认证"
+    },
+    "CK25": {
+      "stage5_proof": "stage5/proofs/chnn_kam_restored.md; stage5/notes/chnn_kam_experiments.md",
+      "stage5_status": "1:1共振推进到第一对四阶形式twist；独立反例否定原第一对子空间不变性",
+      "stage5_evidence": "stage5/results/resonance/S5_R01_results.json; stage5/results/resonance/S5_R02_results.json; stage5/results/resonance/S5_R03_pair_reduction.json; stage5/results/resonance/S5_R04_partial_scope.json",
+      "stage5_source_code": "stage5/program/resonance_research.py; stage5/program/resonance_normalform_pair.py; stage5/program/resonance_reduce_pair.py; stage5/program/resonance_verify_partial_scope.py",
+      "stage5_full_derivation_inherited": "partial：三次全12通道消元、第一对限制四阶与圆偏振形式twist；非全24D正规形",
+      "stage5_verified_on_3d": "yes_limited_and_negative：完整ROM的原第一对子空间外场非零；有限系数与32点作用恒等式实算",
+      "stage5_generalization_proved": "finite_order_formal：候选twist不是完整系统KAM或不变子流形证明",
+      "stage5_missing": "其余三对和对间耦合、正规化不变性/约化域、统一twist/尾项/全阶小除数待证"
+    },
+    "CK26": {
+      "stage5_proof": "stage5/proofs/chnn_kam_restored.md; stage5/notes/chnn_kam_experiments.md",
+      "stage5_status": "旧64平面自由度受控提升的完整条件证明恢复",
+      "stage5_full_derivation_inherited": "yes_for_old_model：低模态反馈消元与高模态受迫稳定Fourier响应、吸引性完整论证",
+      "stage5_generalization_proved": "old_model_only：二维环面在128维平面闭环的提升，不是全闭环Hamiltonian或128维KAM族",
+      "stage5_missing": "新三维真实线圈非满秩、约束、非线性高模态不满足旧定理，不能直接推广"
+    },
+    "CK27": {
+      "stage5_proof": "stage5/proofs/chnn_kam_restored.md; stage5/notes/chnn_kam_experiments.md",
+      "stage5_status": "旧S形四种控制数值及CHNN不利对照明确恢复，未重跑旧实验",
+      "stage5_full_derivation_inherited": "historical_experiment：方法/对象/指标/不利比较恢复，不是新3D实验",
+      "stage5_missing": "旧无流接触平面带基座进给任务不等于三维血管插入；新完整网络闭环转移尚未完成"
+    },
+    "CK28": {
+      "stage5_proof": "stage5/proofs/chnn_kam_restored.md; stage5/notes/chnn_kam_experiments.md"
+    },
+    "CK29": {
+      "stage5_proof": "stage5/proofs/chnn_kam_restored.md; stage5/notes/chnn_kam_experiments.md",
+      "stage5_status": "完整新网络残差通过full-coil真实端口独立72状态分配；不冒称学习闭环",
+      "stage5_source_code": "stage5/program/learning_models.py; stage5/program/learning_coil_reachability.py; stage5/program/coil_control.py",
+      "stage5_evidence": "stage5/results/learning/S5_L01_results.json; stage5/results/learning/S5_L02_coil_reachability.json; stage5/results/learning/S5_L02_pre_warmfix_coil_reachability.json",
+      "stage5_verified_on_3d": "yes_diagnostic：72/72受限分配，原23失败保留；Qdot误差不可直接磁补偿",
+      "stage5_algorithm_reused": "yes：第二阶段全复/机械SPD网络实际复用；新增全coil残差投影",
+      "stage5_missing": "新学习标签H_ideal与实际H_coil不同；未将冻结网络真正放入闭环或32/64段杆"
+    },
+    "CK30": {
+      "stage5_proof": "stage5/proofs/chnn_kam_restored.md; stage5/notes/chnn_kam_experiments.md",
+      "stage5_status": "完整学习/误差/KAM理论链恢复到证明与新实验包，仍无完整正式新论文",
+      "stage5_missing": "完整统一稿及新全coil学习闭环、复域误差、全24D共振/KAM、全杆学习转移仍未完成"
+    },
+    "CK04": {
+      "stage5_status": "旧35参数完整解析类的定义、对象和误差责任恢复；新8749机械字典独立训练",
+      "stage5_proof": "stage5/proofs/chnn_kam_restored.md#2; stage5/notes/chnn_kam_experiments.md",
+      "stage5_full_derivation_inherited": "partial：完整旧函数类和Gram链恢复；旧35参数训练不在此重新复现",
+      "stage5_missing": "新8749字典不含旧精确余弦全尾项；新的Gram下界/类外误差未认证"
+    },
+    "CK05": {
+      "stage5_proof": "stage5/proofs/chnn_kam_restored.md; stage5/notes/chnn_kam_experiments.md",
+      "stage5_status": "旧35/45参数公平对照保留；本轮三模型匹配数据/更新次数，不声称隔离复数优势",
+      "stage5_missing": "本轮参数数、学习率和FLOP不同；尚缺匹配容量/预算的完整实网络对照"
+    },
+    "CK06": {
+      "stage5_proof": "stage5/proofs/chnn_kam_restored.md; stage5/notes/chnn_kam_experiments.md",
+      "stage5_status": "旧梯度下降定理的假设边界保留；新Adam训练不冒称满足其收敛证明",
+      "stage5_missing": "本轮未建立Adam全局/局部优化收敛定理或完整复解析梯度训练保证"
+    },
+    "O028": {
+      "stage5_status": "1:1共振推进到第一对四阶形式twist；独立反例否定原第一对子空间不变性",
+      "stage5_proof": "stage5/proofs/chnn_kam_restored.md; stage5/notes/chnn_kam_experiments.md",
+      "stage5_evidence": "stage5/results/resonance/S5_R01_results.json; stage5/results/resonance/S5_R02_results.json; stage5/results/resonance/S5_R03_pair_reduction.json; stage5/results/resonance/S5_R04_partial_scope.json",
+      "stage5_source_code": "stage5/program/resonance_research.py; stage5/program/resonance_normalform_pair.py; stage5/program/resonance_reduce_pair.py; stage5/program/resonance_verify_partial_scope.py",
+      "stage5_full_derivation_inherited": "partial：三次全12通道消元、第一对限制四阶与圆偏振形式twist；非全24D正规形",
+      "stage5_verified_on_3d": "yes_limited_and_negative：完整ROM的原第一对子空间外场非零；有限系数与32点作用恒等式实算",
+      "stage5_generalization_proved": "finite_order_formal：候选twist不是完整系统KAM或不变子流形证明",
+      "stage5_missing": "其余三对和对间耦合、正规化不变性/约化域、统一twist/尾项/全阶小除数待证"
+    },
+    "B08": {
+      "stage5_full_derivation_inherited": "yes_local：A1–A4双向证明、初始径向积分与规范、演化横截小时间条件完整",
+      "stage5_source_code": "stage5/program/corrected_identities.py#endpoint_gradient_jacobian; stage5/program/corrected_identities.py#reconstruct_flow_jacobian; stage5/program/corrected_identities.py#radial_generator_potential",
+      "stage5_evidence": "stage5/results/corrected_identities/latest.json; stage5/results/tests/20261029T173445Z/execution.json",
+      "stage5_verified_on_3d": "algebra_only：24D端点矩阵及非线性规范回归；真实时变图域证据另列"
+    },
+    "O019": {
+      "stage5_full_derivation_inherited": "yes_local：A1–A4双向证明、初始径向积分与规范、演化横截小时间条件完整",
+      "stage5_source_code": "stage5/program/corrected_identities.py#endpoint_gradient_jacobian; stage5/program/corrected_identities.py#reconstruct_flow_jacobian; stage5/program/corrected_identities.py#radial_generator_potential",
+      "stage5_evidence": "stage5/results/corrected_identities/latest.json; stage5/results/tests/20261029T173445Z/execution.json",
+      "stage5_verified_on_3d": "algebra_only：24D端点矩阵及非线性规范回归；真实时变图域证据另列"
+    },
+    "B19": {
+      "stage5_proof": "stage5/proofs/corrected_mathematics.md; stage5/proofs/chnn_kam_restored.md; stage5/proofs/integrators_full_coil.md",
+      "stage5_full_derivation_inherited": "yes_conditional：非零周期、作用常数修正与同伦条件；中心法另有单值exact原函数"
+    }
+  },
+  "repairs": {
+    "E07": {
+      "adopted_by_stage5_modules": "端点兼容/横截/联合逆及一般非零初始φ0径向积分进入corrected_identities；非线性端点规范回归通过。实际高维Moser图另列，不把代数回归当全域证书。",
+      "execution_evidence": "stage5/results/corrected_identities/latest.json; stage5/results/tests/20261029T173445Z/execution.json"
+    },
+    "E15": {
+      "corrected_statement": "闭差形式周期给I0_j=(2π)^−1∮β；在T^n×可缩U上F*λ=(I+I0)·dθ+dS。相对未移位原函数不能无条件称exact。中心法和满足同伦条件的共轭映射另有独立exact证明。",
+      "proof": "stage5/proofs/corrected_mathematics.md; stage5/proofs/chnn_kam_restored.md"
+    }
+  }
+}

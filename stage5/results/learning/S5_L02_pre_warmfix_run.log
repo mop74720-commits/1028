@@ -1,0 +1,7 @@
+{
+  "status": "executed_with_failures",
+  "rows": 72,
+  "failures": 23,
+  "source_unchanged": true,
+  "wall_seconds": 20.347971659000905
+}

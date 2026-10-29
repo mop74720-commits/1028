@@ -1,0 +1,59 @@
+{
+  "status": "actually_executed_pass",
+  "old_source": "stage5/results/coil/source_before_higher_ad_fix.py",
+  "old_sha256": "53004846e9fbd219efc146dee46dd9ce9966a2d1b67c9a782bf577012d9e199e",
+  "new_source": "stage5/program/coil_rom.py",
+  "new_sha256": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc",
+  "change": "r=linalg.vector_norm(distance) changed to sqrt(sum(distance*distance)); domain excludes wires, so r>0. No mass, force, current, gain or physical model modification.",
+  "comparison": {
+    "fixed_field": {
+      "absolute_norm_difference": 8.641447992178346e-16,
+      "reference_norm": 0.26689980754635667
+    },
+    "fixed_jacobian": {
+      "absolute_norm_difference": 7.233185822542748e-15,
+      "reference_norm": 1447.1484966686085
+    },
+    "feedback_field": {
+      "absolute_norm_difference": 8.60461752073081e-16,
+      "reference_norm": 0.26736669513385153
+    },
+    "feedback_jacobian": {
+      "absolute_norm_difference": 1.1640106772677214e-14,
+      "reference_norm": 1447.216504787757
+    },
+    "current_port": {
+      "absolute_norm_difference": 3.726749521184016e-16,
+      "reference_norm": 1.533481094289408
+    }
+  },
+  "old_mixed_AD": {
+    "status": "executed",
+    "norm": 1421.5899407801476
+  },
+  "new_mixed_AD": {
+    "status": "passed",
+    "derivative": "Directional derivative of complete feedback Jacobian; forward-over-reverse high-order AD",
+    "norm": 1421.5899407801476,
+    "finite_difference_refinement": [
+      {
+        "eps": 2e-06,
+        "absolute_error": 6.156806071224442e-06,
+        "relative_error": 4.330929682750624e-09
+      },
+      {
+        "eps": 1e-06,
+        "absolute_error": 1.4997927387784905e-05,
+        "relative_error": 1.0550107986522657e-08
+      }
+    ]
+  },
+  "tolerances": {
+    "old_new_absolute": 1e-09,
+    "higher_derivative_relative": 2e-06
+  },
+  "torch": "2.5.1+cpu",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "elapsed_seconds": 23.808450912998524,
+  "historical_scope": "validation.json and closed_loop_summary.json retain SHA53004846... and original actual numerical outputs. Their exact source bytes are the immutable snapshot. This equivalence check connects them to the current algebraically identical implementation, rather than fabricating a new long execution."
+}

@@ -1,0 +1,9 @@
+{
+  "executed_source_sha256": "3ba520ca8dd96a2133dfdce512ca80847d8287dfcf8f77ec98fabbf4da2265fd",
+  "current_source_sha256": "53004846e9fbd219efc146dee46dd9ce9966a2d1b67c9a782bf577012d9e199e",
+  "difference": "Only metadata.input override was added during execution; field, Hamiltonian, force, feedback and all derivatives are unchanged.",
+  "executed_source": "stage5/results/closed_loop/source_used/coil_rom.py",
+  "executed_input_label": "SI increment above axial bias: Bx,By,Bz,Gxx,Gyy,Gxy,Gxz,Gyz",
+  "correct_input_label": "12 total coil currents in A; no separate 8-field increment input or extra ideal bias",
+  "scientific_data_changed": false
+}

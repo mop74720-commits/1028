@@ -1,0 +1,72 @@
+{
+  "status": "real_ROM_failure_detected_inverse_verified",
+  "section": "rom",
+  "command": [
+    "/workspace/1028-cloud/venvs/learning/bin/python",
+    "stage5/program/verify_high_derivatives.py",
+    "--section",
+    "all"
+  ],
+  "started_at": "2026-10-29T15:30:55.762221+00:00",
+  "torch_version": "2.5.1+cpu",
+  "numpy_version": "2.3.5",
+  "source_sha256": {
+    "stage5/program/verify_high_derivatives.py": "6a778e09c9e4feb568b17eb3096721bb3f6d2ad3f526dc7c796625169553a929",
+    "stage3/source_inputs/starter/stage2/program/learning/rod_rom.py": "5aebcea066b73f717c2c26fd0b8f3454e205fbcc1bafd970762f3fb9371ee3c9",
+    "stage5/program/transport_native.py": "3b86d9c95c65687592b1b25bedc4bcb34fdaa011a3cb51fc237624f1187f161e"
+  },
+  "selected_coordinates": [
+    0,
+    1,
+    12,
+    13
+  ],
+  "point": "zero 24D phase state",
+  "direction_in_selected_coordinates": [
+    1.0,
+    0.0,
+    0.0,
+    -1.0
+  ],
+  "records": {
+    "original_solve": {
+      "seconds": 32.429532703001314,
+      "H3_mixed_vs_reverse_max": 0.0,
+      "H3_full_permutation_defect": 0.0,
+      "H4_full_permutation_defect": 1738.9048227476667,
+      "directional_quartic_mixed": 144.91216006674773,
+      "directional_quartic_pure_reverse": 434.7260416422408,
+      "finite_radius_even_energy": [
+        {
+          "radius": 0.004,
+          "quartic_coefficient": 434.72572762839206
+        },
+        {
+          "radius": 0.002,
+          "quartic_coefficient": 434.7259770010989
+        }
+      ]
+    },
+    "inverse_mass": {
+      "seconds": 77.04331983600059,
+      "H3_mixed_vs_reverse_max": 0.0,
+      "H3_full_permutation_defect": 0.0,
+      "H4_full_permutation_defect": 2.2737367544323206e-13,
+      "directional_quartic_mixed": 434.7260416422407,
+      "directional_quartic_pure_reverse": 434.7260416422408,
+      "finite_radius_even_energy": [
+        {
+          "radius": 0.004,
+          "quartic_coefficient": 434.7257276284185
+        },
+        {
+          "radius": 0.002,
+          "quartic_coefficient": 434.72597700120474
+        }
+      ]
+    }
+  },
+  "full_mass_retained": true,
+  "seconds": 110.9508563039999,
+  "ended_at": "2026-10-29T15:32:46.713077+00:00"
+}
