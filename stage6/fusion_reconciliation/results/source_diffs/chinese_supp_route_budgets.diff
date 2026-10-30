@@ -1,0 +1,103 @@
+--- stage3/source_inputs/v10/v10_framework_20261028/chinese/sections/supp_route_budgets.tex
++++ fusion_archive::chinese/sections/supp_route_budgets.tex
+@@ -0,0 +1,100 @@
++\subsection{两条路线各自的局部解析预算}
++\label{sr:budget-domain}
++
++即使可以共用同一系数误差估计，式~\eqref{ri:budgets} 中的两个能量仍需要不同的正规形。本计算为已记录的两模态参数值给出局部定义域及完整余项上界。这是对解析估计的数值评价，并未提供定理常数或这些参数的经验证不确定性区间。
++
++记 $x=(X_1,X_2,Y_1,Y_2)$，令
++$\mathcal U_r=\{x\in\C^4:\norm{x}_\infty<r\}$。对于多项式 $P(x)=\sum_aP_ax^a$，定义其系数主控量
++\begin{equation}\label{sr:majorant}
++ [P]_r=\sum_a|P_a|r^{|a|},\qquad
++ \norm{P}_{\mathcal U_r}\le[P]_r.
++\end{equation}
++对多项式向量与矩阵逐分量使用相同定义；矩阵采用诱导的最大行和范数。这样得到的是可以直接计算的上界，而非实域上的采样值。
++
++令 $W=W_{4,\kappa}$ 满足式~\eqref{kam:homological}，取 $v_W=J\nabla W$，并令 $\Phi_W^s$ 为关于辅助参数 $s$ 的局部流。该参数用于生成正则正规形变换，并非物理时间。定义
++\begin{equation}\label{sr:flow-bounds}
++ m_\kappa(r)=\max_i[(v_W)_i]_r,\qquad
++ \ell_\kappa(r)=\max_i\sum_j[\partial_j(v_W)_i]_r.
++\end{equation}
++若 $r_{\rm in}+m_\kappa(r_{\rm out})<r_{\rm out}$，则从 $\mathcal U_{r_{\rm in}}$ 出发的轨迹保持于 $\mathcal U_{r_{\rm out}}$，对所有 $|s|\le1$ 成立。事实上，首次离开该域需要至少为 $r_{\rm out}-r_{\rm in}$ 的位移，而在首次离开前对 $\norm{v_W}_\infty\le m_\kappa$ 积分，得到位移至多为 $m_\kappa$。严格不等式排除了离域，并允许该解析多项式流继续延拓。其变分方程和逆向流在相应像域上给出导数及逆导数界 $e^{\ell_\kappa}$。因此，这两个流在所述局部定义域上定义了解析正则坐标变换。
++
++本计算中的所有半径均针对无量纲平衡坐标或其作用量。为给出具体的共同作用--角定义域，取
++\begin{equation}\label{sr:chosen-domain}
++\begin{aligned}
++ &\operatorname{dist}(I_j,[10^{-4},2\times10^{-4}])<\rho_I,
++                   \qquad j=1,2,\\
++ &|\operatorname{Im}\phi_j|<\rho_\phi,\qquad \rho_\phi=0.1,\\
++ &\rho_I=2.5\times10^{-5},\qquad r_{\rm out}=0.03.
++\end{aligned}
++\end{equation}
++第一行规定了各实作用量区间的复邻域。由于 $\rho_I<10^{-4}$，该域内存在 $\sqrt{I_j}$ 的解析分支。第~\ref{kam:normalform-section} 节中的极坐标映射 $\mathcal P(I,\phi)$ 满足
++\begin{equation}\label{sr:polar-bound}
++ \norm{\mathcal P(I,\phi)}_\infty\le r_{\rm in}
++ :=\sqrt{2(2\times10^{-4}+\rho_I)}\cosh\rho_\phi.
++\end{equation}
++因此，只要前述流余量条件成立，$\mathcal T_\kappa=\Phi_{W_{4,\kappa}}^1\circ\mathcal P$ 就把该域映入同一 $\mathcal U_{r_{\rm out}}$。虽然共用了原型作用量区间，两个映射及其像仍随 $\kappa$ 不同而变化。作用量远离零，保证了极坐标局部逆分支的解析性；角变量的提升按模 $2\pi$ 理解。例如，取 $I_{\min}=10^{-4}$，直接求导可用下式界定极坐标 Jacobian 及其逆：
++\begin{equation}\label{sr:polar-derivatives}
++\begin{aligned}
++ c_P&=\frac{\cosh\rho_\phi}{\sqrt{2(I_{\min}-\rho_I)}}+r_{\rm in},\\
++ c_{P^{-1}}&=\max\!\left(2r_{\rm in},
++                 \frac{r_{\rm in}}{I_{\min}-\rho_I}\right).
++\end{aligned}
++\end{equation}
++乘以 $e^{\ell_\kappa}$ 后即得到相应完整坐标图的导数界。这些界没有声称有限时间控制轨迹位于这一较小的解析域内；其初始位置已经超过 $r_{\rm out}$。
++
++为控制完整余项，将能量分解为
++$h_\kappa=h_2+h_{4,\kappa}+h_{\ge6,\kappa}$，并令
++$Z_{4,\kappa}=\langle h_{4,\kappa}\rangle$。由链式法则有
++$\frac{d}{ds}(F\circ\Phi_W^s)=\{F,W\}\circ\Phi_W^s$。
++对 $h_{4,\kappa}$ 使用一次积分形式，对 $h_2$ 使用两次，得
++\begin{equation}\label{sr:integral-expansion}
++\begin{aligned}
++ &h_{4,\kappa}\circ\Phi_W^1-h_{4,\kappa}\\
++ &\quad=\int_0^1\{h_{4,\kappa},W\}\circ\Phi_W^s\,\dd s,\\
++ &h_2\circ\Phi_W^1-h_2-\{h_2,W\}\\
++ &\quad=\int_0^1(1-s)\{\{h_2,W\},W\}
++                          \circ\Phi_W^s\,\dd s.
++\end{aligned}
++\end{equation}
++利用 $\{h_2,W\}=-(h_{4,\kappa}-Z_{4,\kappa})$，将这些恒等式与复合后的尾项相加，得到笛卡尔坐标中的精确余项
++\begin{equation}\label{sr:full-remainder}
++\begin{aligned}
++ \mathcal R_{6,\kappa}={}&h_{\ge6,\kappa}\circ\Phi_W^1\\
++ &+\int_0^1\{h_{4,\kappa},W\}\circ\Phi_W^s\,\dd s\\
++ &+\int_0^1(1-s)\{\{h_2,W\},W\}
++                         \circ\Phi_W^s\,\dd s,\\
++ h_\kappa\circ\Phi_W^1&=h_2+Z_{4,\kappa}+\mathcal R_{6,\kappa}.
++\end{aligned}
++\end{equation}
++这是完整变换的积分恒等式，没有舍弃更高阶的 Lie 项。再与 $\mathcal P$ 复合，得 $R_6^\kappa=\mathcal R_{6,\kappa}\circ\mathcal P$。所示两个括号项均为六次项，且均正比于 $\kappa^2$。令 $s_d=\norm{d}_1r_{\rm out}$，由共同像域上界及式~\eqref{ss:cosine-tail} 得
++\begin{equation}\label{sr:remainder-bound}
++\begin{aligned}
++ \norm{R_6^\kappa}\le\overline R_\kappa:={}&
++ |\kappa|\frac{s_d^6\cosh s_d}{720}\\
++ &+[\{h_{4,\kappa},W\}]_{r_{\rm out}}\\
++ &+\tfrac12[\{\{h_2,W\},W\}]_{r_{\rm out}}.
++\end{aligned}
++\end{equation}
++对于单个特征，$|\beta_*-\widehat\beta|\le b_\beta$ 与同一像域包含关系给出
++\begin{equation}\label{sr:shared-residual-bound}
++\begin{aligned}
++ B_g&=\cosh s_d-1-\tfrac12s_d^2,\\
++ b_R^A, b_R^B&\le b_\beta B_g,\\
++ \epsilon_A&\le\overline R_1+b_\beta B_g,\qquad
++ \epsilon_B\le\overline R_{1.2}+b_\beta B_g.
++\end{aligned}
++\end{equation}
++当式~\eqref{kam:integral-bound} 所需的独立观测缺陷与 Gram 矩阵假设成立时，可取 $b_\beta=b_I$。合成记录中基于真值的系数差异是另一项诊断。二者都不能仅由较小的训练残差推出。
++
++\input{sections/route_budget_table}
++
++脚本 \path{reproduction/route_budget/normal_form_budgets.py} 以已记录十进制系数的有理数表示构造有限同调多项式，并精确检验其恒等式；随后以普通浮点运算评价各主控量及定义域余量，结果写入 \path{reproduction/route_budget/normal_form_budget_results.json}。符号恒等式对该记录的参数点模型精确成立；显示的数值上界不是针对不确定物理输入进行向外舍入的区间证书。式~\eqref{ri:discrete-budgets} 中的常数 $C_3^s,C_4^s$、定理常数 $\delta_0$ 以及所需的完整 Diophantine 条件均尚未完成计算或核验。因此，数值余项主控量只提供扰动预算的一个组成部分，尚未证明 KAM 小量不等式成立。
++
++\subsection{所引用持续存在结果的具体适用范围}
++\label{sr:theorem-audit}
++
++\citet[Theorem~11]{chen2022} 的统计结果假设目标系统可积且非退化，具有正则紧致的 Liouville--Arnold 水平集，并满足该文的采样与泛化假设以及模型函数的充分光滑性。其定理~8 的梯度函数类估计使用有界权重、输入和激活函数导数；实域上的能量估计还要求采样密度有正下界，以及大于相空间维数的 Sobolev 指数。这些条件不能由本文的经验积分损失推出。因此，本文保留确定性的系数界~\eqref{kam:integral-bound} 与独立定义的复特征范数~\eqref{kam:analytic-error}，不直接移用概率结论，也不把实域上确界范数当作解析条带范数。
++
++对于离散结论，\citet[Theorem~2, Remark~2 and Section~4]{shang} 适用于补充材料~\ref{ss:map-kam} 所述的精确辛混合生成映射。其解析小量条件、频率域余量、扭转矩阵界及离散小除数条件均予保留。该文第~4 节给出模型误差与离散化误差的合并预算，但没有证明当建模扰动固定而仅令步长趋于零时，数值环面收敛到近可积连续流的某个指定环面。对于连续持续存在，\citet{poschel} 第~1 节的经典定理要求频率微分同胚、一致解析邻域以及内部 Diophantine 频率。其定量参数形式还依赖复域宽度。本文的仿射非奇异频率映射允许这一域限制，但尚未认证其阈值。
++
++若进一步开展后验计算，\citet[Theorem~3.1 and Remark~3.2]{haro2019aposteriori} 适用于自治哈密顿流。令该定理的环面维数等于自由度数，即 $d=n=2$，可免去额外第一积分的要求，但仍需控制解析几何及向量场导数，在具有正定义域余量的复条带上构造嵌入，提供满秩标架、平均扭转量的逆界，以及 Diophantine 频率。不变性缺陷必须满足该定理的定量不等式。当前基准尚未完成这些嵌入与常数计算。上述任何连续流或映射定理，都不能仅由时变 Birkhoff 拉回恒等式推出。

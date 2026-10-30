@@ -1,0 +1,19 @@
+{
+  "status": "failed",
+  "command": "stage6/fusion_reconciliation/program/run_fusion_theory.py",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "versions": {
+    "numpy": "2.3.5",
+    "torch": "2.5.1+cpu"
+  },
+  "rows": [],
+  "sources": {
+    "stage6/fusion_reconciliation/program/run_fusion_theory.py": "a448ddc8c02463df267cf855208ac2198388eae23eb259f59da87f8c04729dd7",
+    "stage6/fusion_reconciliation/program/fusion_theory.py": "f9ea591229f1fd853fb1bcfb1619205e05f823c7f0a64dfcd2069c83fef21942",
+    "stage5/program/transport_native.py": "a77ad9df7fc789f3a1eb061616e7f42de596047ba8e9fd6e7dbe436179505e3f",
+    "stage5/program/transport_cache.py": "52d8b9b90cb53fc613dd730c5fdac78e0a49a8a02d37652af020434e6e3cf635",
+    "stage5/program/moser_chart.py": "869356bfa0997c2d5e5bc03878752822ad6da4ed74ac283f716acb72e9301fae"
+  },
+  "exception": "Traceback (most recent call last):\n  File \"/workspace/1028/stage6/fusion_reconciliation/program/run_fusion_theory.py\", line 109, in main\n    report['rows'].append(run(name));save()\n                          ^^^^^^^^^\n  File \"/workspace/1028/stage6/fusion_reconciliation/program/run_fusion_theory.py\", line 93, in run\n    print('DONE',name,json.dumps(result['checks']),flush=True)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/__init__.py\", line 231, in dumps\n    return _default_encoder.encode(obj)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py\", line 200, in encode\n    chunks = self.iterencode(o, _one_shot=True)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py\", line 258, in iterencode\n    return _iterencode(o, 0)\n           ^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py\", line 180, in default\n    raise TypeError(f'Object of type {o.__class__.__name__} '\nTypeError: Object of type bool is not JSON serializable\n"
+}

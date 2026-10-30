@@ -1,0 +1,8 @@
+{
+  "inventory": "stage6/fusion_reconciliation/results/manuscript_index.json",
+  "output_directory": "stage6/fusion_reconciliation/annotations",
+  "format": "JSON object with reviewer_scope and rows, each row corresponding to one inventory review_units id. Cover both assigned English and Chinese source files. Preserve the actual inventory id, source and line_start.",
+  "required_fields": ["id", "topic", "original_1025", "old_v10", "general_birkhoff", "stage4", "stage5_code", "stage5_proof", "stage5_results", "fusion_verdict", "stage5_inheritance", "stage6_action", "new_code", "tests", "evidence", "remaining", "review_note"],
+  "six_status_fields": ["material_exists", "mentioned", "derivation_inherited", "algorithm_reused", "verified_on_3d", "generalization_proved"],
+  "instructions": "Paths/labels/line anchors must be precise. Use explicit not-applicable or not-found when appropriate. Individual formula can share a coherent derivation's evidence, but do not attach one vague boilerplate assessment to an entire chapter. Numerical observations, conditional theorems and independent executed checks are distinct. Chinese counterpart may share assessment only after actual mathematical comparison; record counterpart in review_note. Inline notation is indexed separately and belongs to chapter context, not automatically verified mathematical claims. No blanket completion claim based on index coverage."
+}

@@ -1,0 +1,10 @@
+test_actual_fullcoil_time_derivative_and_current_force (test_nonautonomous_transport.NonautonomousTransportTests.test_actual_fullcoil_time_derivative_and_current_force) ... ok
+test_chart_rejects_outside_declared_ball (test_nonautonomous_transport.NonautonomousTransportTests.test_chart_rejects_outside_declared_ball) ... ok
+test_represented_nonzero_time_Jacobian_and_transport (test_nonautonomous_transport.NonautonomousTransportTests.test_represented_nonzero_time_Jacobian_and_transport) ... ok
+test_second_coefficient_has_required_time_force_term (test_nonautonomous_transport.NonautonomousTransportTests.test_second_coefficient_has_required_time_force_term) ... ok
+test_zero_modulation_reuses_autonomous_coefficients (test_nonautonomous_transport.NonautonomousTransportTests.test_zero_modulation_reuses_autonomous_coefficients) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 35.932s
+
+OK

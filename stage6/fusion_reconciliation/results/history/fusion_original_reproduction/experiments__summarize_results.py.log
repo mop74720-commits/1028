@@ -1,0 +1,15 @@
+{
+  "status": "summary checks passed",
+  "domain_maxima": {
+    "maximum_abs_tip_angle_rad": 0.07069883412918385,
+    "maximum_abs_tip_angle_deg": 4.050744812097697,
+    "maximum_abs_beam_slope_spatial_grid": 0.07134939065400761,
+    "minimum_abs_cos_tip_angle": 0.9975018782218941,
+    "maximum_abs_By_T": 0.00359537779923315,
+    "maximum_total_local_field_T": 0.0302146775842341,
+    "maximum_local_gradient_spectral2_T_per_m": 0.075673153493818,
+    "maximum_input_reconstruction_error": 5.3860300581534765e-17,
+    "status": "sampled time trajectories; 257 spatial grid points; all endpoints and actual integration midpoints for command diagnostics"
+  },
+  "scenario_count": 5
+}

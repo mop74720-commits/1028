@@ -1,0 +1,29 @@
+--- stage3/source_inputs/v10/v10_framework_20261028/english/sections/supp_structure.tex
++++ fusion_archive::english/sections/supp_structure.tex
+@@ -16,7 +16,7 @@
+  \alpha_t=(\Phi_{t,t_0}^{-1})^*\alpha_0,
+  \qquad\mathcal B=\alpha_t(v).
+ \]
+-The transport equation $\partial_t\alpha_t+\mathcal L_v\alpha_t=0$ and Cartan's identity give $\mathcal K v=\dd\mathcal B+\partial_t\alpha_t$. This is a local, flow-dependent representation, not a computable Hamiltonian reduction supplied by the mechanical coefficients alone. It neither establishes a global analytic chart nor an autonomous integrable reference.
++The transport equation $\partial_t\alpha_t+\mathcal L_v\alpha_t=0$ and Cartan's identity give $\mathcal K v=\dd\mathcal B+\partial_t\alpha_t$. This is a local, flow-dependent existence representation. The coordinate transport equation and coefficient construction below provide routes to approximation, but do not establish a low-cost Hamiltonian reduction for arbitrary mechanical coefficients. The representation neither establishes a global analytic chart nor an autonomous integrable reference.
+ 
+ The proportional-damping choice in \eqref{struct:weighted-hamiltonian} is constructive. Indeed,
+ \[
+@@ -32,6 +32,8 @@
+  \qquad D\Phi^{\mathsf T}JD\Phi=e^{-\alpha\Delta_t}J.
+ \]
+ Explicit time dependence must be evaluated at $t_m$ for the stated second-order method. For variable mass the complete $\widetilde H_q$ is retained, rather than reusing the constant-mass update.
++
++\input{sections/supp_general_birkhoff}
+ 
+ \subsection{Endpoint projection, dimensions and the implicit branch}
+ \label{ss:projection}
+@@ -317,7 +319,7 @@
+ The full transformed remainder also contains
+ $\{h_{4,\kappa},W_{4,\kappa}\}$ and
+ $\tfrac12\{\{h_2,W_{4,\kappa}\},W_{4,\kappa}\}$,
+-both of degree six, and higher Lie terms. A rigorous finite-amplitude bound must control the local flow of $W_{4,\kappa}$, its image and inverse, these brackets and the tail on a domain with margin. The notation $R_6=O(r^6)$ states an order of vanishing, not a numerical sup-norm certificate. For the new baseline, evaluation of the retained finite divisors gives $\min_{0<|k|_1\le4}|k\cdot\nu|=1$; this does not bound the infinite family of divisors at nonlinear frequencies.
++both of degree six, and higher Lie terms. A rigorous finite-amplitude bound must control the local flow of $W_{4,\kappa}$, its image and inverse, these brackets and the tail on a domain with margin. The notation $R_6=O(r^6)$ states an order of vanishing, not a numerical sup-norm certificate. Supplement~\ref{sr:budget-domain} gives an explicit local complete-remainder majorant on an auxiliary complex domain; it does not evaluate the finite-amplitude theorem threshold. For the new baseline, evaluation of the retained finite divisors gives $\min_{0<|k|_1\le4}|k\cdot\nu|=1$; this does not bound the infinite family of divisors at nonlinear frequencies.
+ 
+ \subsection{The integral-error inequality and implementation uncertainty}
+ \label{ss:integral-error}

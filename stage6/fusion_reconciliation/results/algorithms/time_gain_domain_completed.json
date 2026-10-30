@@ -1,0 +1,683 @@
+{
+  "command": [
+    "/workspace/1028-cloud/venvs/learning/bin/python",
+    "stage6/fusion_reconciliation/program/run_nonautonomous_domain.py",
+    "--run-id",
+    "time_gain_domain_completed"
+  ],
+  "metadata": {
+    "base": {
+      "model": "3D inextensible unshearable Kirchhoff strain Ritz; exact SO(3) frame updates and midpoint centerline embedding",
+      "q_dof": 12,
+      "phase_dimension": 24,
+      "quadrature_elements": 20,
+      "configuration": "four Legendre curvature coefficients in each of two bending axes and torsion by default; all are dynamical",
+      "mass": "configuration dependent; includes translational and rotary inertia from embedding Jacobians",
+      "E0_J": 3.6200000000000004e-07,
+      "omega0_rad_s": 4.457629408507532,
+      "omega_rad_s": [
+        4.457629408507532,
+        4.457629408507532,
+        27.694195720027146,
+        27.694195720027146,
+        79.78328659507957,
+        79.78328659507957,
+        356.9402366587693,
+        356.9402366587693,
+        370.43091613854864,
+        1118.611090690932,
+        1984.631631100378,
+        3899.8926690677044
+      ],
+      "nu": [
+        1.0,
+        1.0,
+        6.212763148765096,
+        6.212763148765096,
+        17.898142551467057,
+        17.898142551467057,
+        80.0740043525236,
+        80.0740043525236,
+        83.10042899294614,
+        250.94304352803,
+        445.22131591124275,
+        874.8804155017085
+      ],
+      "canonical_scaling_defect": 5.55251128130777e-21,
+      "mass0_condition": 1264760.7588499414,
+      "repeated_frequency_pairs": [
+        {
+          "i": 0,
+          "j": 1,
+          "relative_difference": 0.0
+        },
+        {
+          "i": 2,
+          "j": 3,
+          "relative_difference": 0.0
+        },
+        {
+          "i": 4,
+          "j": 5,
+          "relative_difference": 0.0
+        },
+        {
+          "i": 6,
+          "j": 7,
+          "relative_difference": 0.0
+        }
+      ],
+      "KAM_status": "Standard nonresonant elliptic KAM is not certified; circular isotropic rod with axial bias has paired bending frequencies.",
+      "relation_to_full_model": "Shares material, distal magnet and field interface with the Cosserat model; shear/stretch omitted in this analytical ROM; modal truncation and fluid/contact closure errors are not yet bounded.",
+      "time": "tau=omega0*t_seconds",
+      "coordinates": "z=(Q,P); q_physical=Sq Q; p_physical=Sp P",
+      "input": "12 total coil currents in A; no separate 8-field increment input or extra ideal bias",
+      "drag": "synthetic smooth gamma*P; not a blood/contact closure",
+      "derivatives": "double-precision automatic differentiation through full variable-mass SO(3) geometry",
+      "magnetism": "Full circular-coil Biot-Savart energy; no additional ideal bias",
+      "coil_config": {
+        "origin_m": [
+          0.0,
+          0.0,
+          0.1
+        ],
+        "centers_m": [
+          [
+            -0.014258091544161544,
+            0.028179296678682336,
+            0.03197328418765823
+          ],
+          [
+            -0.02823677355664579,
+            -0.04786085900246092,
+            0.15036886731560742
+          ],
+          [
+            -0.045691567848612266,
+            -0.018652962478301362,
+            0.15647430936557563
+          ],
+          [
+            -0.04514527606524731,
+            0.048274040871414105,
+            0.06455255965605347
+          ],
+          [
+            -0.05250918804532998,
+            0.0484943955231713,
+            0.07728263277440807
+          ],
+          [
+            -0.0613859164096309,
+            -0.011163250855872636,
+            0.14161911936692878
+          ],
+          [
+            -0.0671668545586991,
+            -0.0017953283979293688,
+            0.06667747841723036
+          ],
+          [
+            -0.064453232278896,
+            0.02259524567813345,
+            0.1309876704762954
+          ],
+          [
+            0.02328501712550232,
+            0.044097556051387404,
+            0.043980239845570486
+          ],
+          [
+            -0.057995959548040495,
+            0.010875668587236294,
+            0.05370541598758392
+          ],
+          [
+            0.015634413697846045,
+            -0.0715657961482294,
+            0.11609042976413864
+          ],
+          [
+            0.053878424569565875,
+            -0.04269688322911903,
+            0.12998485498415116
+          ]
+        ],
+        "normals": [
+          [
+            0.19010788725548727,
+            -0.3757239557157645,
+            0.9070228774978905
+          ],
+          [
+            0.37649031408861056,
+            0.6381447866994789,
+            -0.6715848975414321
+          ],
+          [
+            0.6092209046481636,
+            0.2487061663773515,
+            -0.7529907915410083
+          ],
+          [
+            0.6019370142032975,
+            -0.6436538782855215,
+            0.4726325379192871
+          ],
+          [
+            0.7001225072710664,
+            -0.6465919403089507,
+            0.30289822967455915
+          ],
+          [
+            0.8184788854617453,
+            0.1488433447449685,
+            -0.5549215915590505
+          ],
+          [
+            0.8955580607826548,
+            0.023937711972391584,
+            0.4443002877702619
+          ],
+          [
+            0.8593764303852801,
+            -0.3012699423751127,
+            -0.4131689396839387
+          ],
+          [
+            -0.3104668950066976,
+            -0.5879674140184987,
+            0.7469301353923936
+          ],
+          [
+            0.77327946064054,
+            -0.14500891449648393,
+            0.6172611201655479
+          ],
+          [
+            -0.20845884930461392,
+            0.9542106153097254,
+            -0.21453906352184832
+          ],
+          [
+            -0.7183789942608784,
+            0.5692917763882537,
+            -0.3997980664553487
+          ]
+        ],
+        "radius_m": 0.025,
+        "turns": 300,
+        "quadrature_points": 256,
+        "current_bound_A": 2.0,
+        "slew_bound_A_s": 20.0,
+        "status": "Engineering geometry and ratings; unbuilt and uncalibrated air-core coil benchmark"
+      },
+      "current_channels": 12,
+      "current_units": "A; total currents, not increments",
+      "bias_currents_A": [
+        0.8852530495400187,
+        -1.2286958193398705,
+        -0.7250601367549449,
+        -0.7961036977402055,
+        -0.5688797115812853,
+        0.6475670120790111,
+        0.698025646431227,
+        0.7809830505705807,
+        1.1490316192924115,
+        0.28904359740025765,
+        1.5124804024130618,
+        -0.3281350083833567
+      ],
+      "bias_origin_field_gradient_residual": [
+        3.253473847481588e-10,
+        -1.277110638244058e-08,
+        -1.818562411879006e-08,
+        1.531426625598492e-07,
+        1.8360020897709162e-08,
+        -1.80355953669116e-07,
+        -3.7419132874715044e-07,
+        9.198263549795027e-08
+      ],
+      "bias_initialization": "Pre-energized fixed local axial-bias fit; not a zero-current startup",
+      "collocated_gain_dimensionless": 0.15425045617918898,
+      "collocated_gain_A2_per_W": 95590.32245389407,
+      "feedback_derivative": "Hamiltonian partial z derivative first; compose i(z) afterwards; total field Jacobian contains Di/Dz",
+      "magnetic_domain": "Away from ideal circular wires; physical_samples evaluates actual magnet quadrature points only",
+      "constraints": "Smooth feedback not automatically bounded; coil_control handles explicit constrained current ramps."
+    },
+    "time_gain": {
+      "amplitude": 0.25,
+      "frequency_tau": 200.0,
+      "frequency_rad_per_second": 891.5258817015064,
+      "formula": "kappa(tau)=kappa0*(1+a*sin(Omega*tau))"
+    },
+    "expansion_origin_tau": 0.0,
+    "coefficient_convention": "time powers; derivatives divided by factorial",
+    "exact_flow_used": false,
+    "mass_frozen": false,
+    "high_order_ad_backend": "inverse",
+    "boundary": "Smooth feedback only; no limiter, sampled controller, blood-flow calibration or contact switching. Current/field bounds sampled separately."
+  },
+  "rows": [
+    {
+      "time": 0.0005,
+      "bounds": {
+        "radius": 0.002,
+        "K_perturbation_upper_bound": 0.0065745735330279866,
+        "all_lambda_min_singular_lower_bound": 0.993425426466972,
+        "auxiliary_speed_upper_bound": 1.4830780090013826e-05,
+        "interpretation": "Analytic sufficient bound on the specified Euclidean ball for the cached polynomial; coefficients evaluated in floating point, not an interval certificate."
+      },
+      "status": "completed",
+      "diagnostics": {
+        "time": 0.0005,
+        "chart_matching_2": 8.881784627112462e-16,
+        "inverse_composition_error_2": 1.3580999905287221e-18,
+        "derivative_inverse_error_2": 6.661338147799038e-16,
+        "time_inverse_error_2": 2.5180598725436954e-18,
+        "chart_condition": 1.0063523809437431,
+        "chart_time_derivative_norm": 0.0036806442320030243,
+        "chi": {
+          "nfev": 77,
+          "seconds": 0.023824706993764266,
+          "max_auxiliary_distance": 1.7758262973496563e-06,
+          "rtol": 2e-11,
+          "atol": 2e-13,
+          "max_lambda_step": 0.25,
+          "minimum_solver_stage_Klambda_singular_value": 0.9995974271716853,
+          "lambda_grid": [
+            0.0,
+            0.0625,
+            0.125,
+            0.1875,
+            0.25,
+            0.3125,
+            0.375,
+            0.4375,
+            0.5,
+            0.5625,
+            0.625,
+            0.6875,
+            0.75,
+            0.8125,
+            0.875,
+            0.9375,
+            1.0
+          ],
+          "lambda_grid_min_singular_values": [
+            1.0,
+            0.9999747637918649,
+            0.9999495376624334,
+            0.9999243216064413,
+            0.9998991156186247,
+            0.9998739196937257,
+            0.9998487338264889,
+            0.9998235580116617,
+            0.9997983922439952,
+            0.999773236518244,
+            0.9997480908291659,
+            0.9997229551715219,
+            0.9996978295400768,
+            0.9996727139295977,
+            0.9996476083348559,
+            0.999622512750626,
+            0.9995974271716853
+          ],
+          "uniform_ball_sufficient_bounds": {
+            "radius": 0.002,
+            "K_perturbation_upper_bound": 0.0065745735330279866,
+            "all_lambda_min_singular_lower_bound": 0.993425426466972,
+            "auxiliary_speed_upper_bound": 1.4830780090013826e-05,
+            "interpretation": "Analytic sufficient bound on the specified Euclidean ball for the cached polynomial; coefficients evaluated in floating point, not an interval certificate."
+          },
+          "sufficient_stay_in_ball": true
+        },
+        "rho": {
+          "nfev": 77,
+          "seconds": 0.020075003994861618,
+          "max_auxiliary_distance": 1.7758262973496563e-06,
+          "rtol": 2e-11,
+          "atol": 2e-13,
+          "max_lambda_step": 0.25,
+          "minimum_solver_stage_Klambda_singular_value": 0.9995974271716852,
+          "lambda_grid": [
+            0.0,
+            0.0625,
+            0.125,
+            0.1875,
+            0.25,
+            0.3125,
+            0.375,
+            0.4375,
+            0.5,
+            0.5625,
+            0.625,
+            0.6875,
+            0.75,
+            0.8125,
+            0.875,
+            0.9375,
+            1.0
+          ],
+          "lambda_grid_min_singular_values": [
+            1.0,
+            0.9999747637918648,
+            0.9999495376624337,
+            0.9999243216064412,
+            0.9998991156186244,
+            0.9998739196937261,
+            0.9998487338264889,
+            0.9998235580116617,
+            0.9997983922439952,
+            0.999773236518244,
+            0.9997480908291656,
+            0.999722955171522,
+            0.9996978295400766,
+            0.9996727139295978,
+            0.9996476083348559,
+            0.9996225127506259,
+            0.9995974271716852
+          ],
+          "uniform_ball_sufficient_bounds": {
+            "radius": 0.002,
+            "K_perturbation_upper_bound": 0.0065745735330279866,
+            "all_lambda_min_singular_lower_bound": 0.993425426466972,
+            "auxiliary_speed_upper_bound": 1.4830780090013826e-05,
+            "interpretation": "Analytic sufficient bound on the specified Euclidean ball for the cached polynomial; coefficients evaluated in floating point, not an interval certificate."
+          },
+          "sufficient_stay_in_ball": true
+        }
+      },
+      "seconds": 0.05695041999570094
+    },
+    {
+      "time": 0.005,
+      "bounds": {
+        "radius": 0.002,
+        "K_perturbation_upper_bound": 0.07469494447698509,
+        "all_lambda_min_singular_lower_bound": 0.9253050555230149,
+        "auxiliary_speed_upper_bound": 0.00018797869496397552,
+        "interpretation": "Analytic sufficient bound on the specified Euclidean ball for the cached polynomial; coefficients evaluated in floating point, not an interval certificate."
+      },
+      "status": "completed",
+      "diagnostics": {
+        "time": 0.005,
+        "chart_matching_2": 4.465108847290579e-16,
+        "inverse_composition_error_2": 1.861589579487105e-18,
+        "derivative_inverse_error_2": 5.551115185310927e-16,
+        "time_inverse_error_2": 8.80072911020602e-18,
+        "chart_condition": 1.0741952099876482,
+        "chart_time_derivative_norm": 0.00608654980886272,
+        "chi": {
+          "nfev": 77,
+          "seconds": 0.022187352005857974,
+          "max_auxiliary_distance": 2.3674304532804218e-05,
+          "rtol": 2e-11,
+          "atol": 2e-13,
+          "max_lambda_step": 0.25,
+          "minimum_solver_stage_Klambda_singular_value": 0.9954003126659658,
+          "lambda_grid": [
+            0.0,
+            0.0625,
+            0.125,
+            0.1875,
+            0.25,
+            0.3125,
+            0.375,
+            0.4375,
+            0.5,
+            0.5625,
+            0.625,
+            0.6875,
+            0.75,
+            0.8125,
+            0.875,
+            0.9375,
+            1.0
+          ],
+          "lambda_grid_min_singular_values": [
+            1.0,
+            0.9997027389824945,
+            0.9994068181011885,
+            0.999112229448774,
+            0.9988189651743278,
+            0.9985270174828585,
+            0.9982363786348711,
+            0.997947040945923,
+            0.9976589967861901,
+            0.9973722385800337,
+            0.9970867588055726,
+            0.9968025499942582,
+            0.9965196047304492,
+            0.9962379156509975,
+            0.9959574754448303,
+            0.9956782768525382,
+            0.9954003126659658
+          ],
+          "uniform_ball_sufficient_bounds": {
+            "radius": 0.002,
+            "K_perturbation_upper_bound": 0.07469494447698509,
+            "all_lambda_min_singular_lower_bound": 0.9253050555230149,
+            "auxiliary_speed_upper_bound": 0.00018797869496397552,
+            "interpretation": "Analytic sufficient bound on the specified Euclidean ball for the cached polynomial; coefficients evaluated in floating point, not an interval certificate."
+          },
+          "sufficient_stay_in_ball": true
+        },
+        "rho": {
+          "nfev": 77,
+          "seconds": 0.020379834997584112,
+          "max_auxiliary_distance": 2.36743045323147e-05,
+          "rtol": 2e-11,
+          "atol": 2e-13,
+          "max_lambda_step": 0.25,
+          "minimum_solver_stage_Klambda_singular_value": 0.9954003126659657,
+          "lambda_grid": [
+            0.0,
+            0.0625,
+            0.125,
+            0.1875,
+            0.25,
+            0.3125,
+            0.375,
+            0.4375,
+            0.5,
+            0.5625,
+            0.625,
+            0.6875,
+            0.75,
+            0.8125,
+            0.875,
+            0.9375,
+            1.0
+          ],
+          "lambda_grid_min_singular_values": [
+            1.0,
+            0.9997027389824944,
+            0.9994068181011883,
+            0.9991122294487742,
+            0.9988189651743277,
+            0.9985270174828585,
+            0.998236378634871,
+            0.9979470409459231,
+            0.9976589967861901,
+            0.9973722385800335,
+            0.9970867588055726,
+            0.9968025499942578,
+            0.9965196047304493,
+            0.9962379156509978,
+            0.9959574754448305,
+            0.9956782768525377,
+            0.9954003126659657
+          ],
+          "uniform_ball_sufficient_bounds": {
+            "radius": 0.002,
+            "K_perturbation_upper_bound": 0.07469494447698509,
+            "all_lambda_min_singular_lower_bound": 0.9253050555230149,
+            "auxiliary_speed_upper_bound": 0.00018797869496397552,
+            "interpretation": "Analytic sufficient bound on the specified Euclidean ball for the cached polynomial; coefficients evaluated in floating point, not an interval certificate."
+          },
+          "sufficient_stay_in_ball": true
+        }
+      },
+      "seconds": 0.053246404000674374
+    },
+    {
+      "time": 0.05,
+      "bounds": {
+        "radius": 0.002,
+        "K_perturbation_upper_bound": 1.7561235266469082,
+        "all_lambda_min_singular_lower_bound": -0.7561235266469082,
+        "auxiliary_speed_upper_bound": null,
+        "interpretation": "Analytic sufficient bound on the specified Euclidean ball for the cached polynomial; coefficients evaluated in floating point, not an interval certificate."
+      },
+      "status": "completed",
+      "diagnostics": {
+        "time": 0.05,
+        "chart_matching_2": 1.419495709646881e-12,
+        "inverse_composition_error_2": 1.4992401962041793e-16,
+        "derivative_inverse_error_2": 3.0086433058636337e-13,
+        "time_inverse_error_2": 6.781675619949349e-14,
+        "chart_condition": 5.223238510285205,
+        "chart_time_derivative_norm": 0.040842573400888836,
+        "chi": {
+          "nfev": 179,
+          "seconds": 0.049330863999784924,
+          "max_auxiliary_distance": 0.0009762041897717387,
+          "rtol": 2e-11,
+          "atol": 2e-13,
+          "max_lambda_step": 0.25,
+          "minimum_solver_stage_Klambda_singular_value": 0.9035297053869016,
+          "lambda_grid": [
+            0.0,
+            0.0625,
+            0.125,
+            0.1875,
+            0.25,
+            0.3125,
+            0.375,
+            0.4375,
+            0.5,
+            0.5625,
+            0.625,
+            0.6875,
+            0.75,
+            0.8125,
+            0.875,
+            0.9375,
+            1.0
+          ],
+          "lambda_grid_min_singular_values": [
+            1.0,
+            0.9893679366552186,
+            0.979717914552083,
+            0.970933536476541,
+            0.9629141936941851,
+            0.9555728191760405,
+            0.9488339329426386,
+            0.9426319597554922,
+            0.9369097915555066,
+            0.9316175646726731,
+            0.9267116225404891,
+            0.9221536369415608,
+            0.9179098637778854,
+            0.9139505124752832,
+            0.9102492111120506,
+            0.906782552069696,
+            0.9035297053869016
+          ],
+          "uniform_ball_sufficient_bounds": {
+            "radius": 0.002,
+            "K_perturbation_upper_bound": 1.7561235266469082,
+            "all_lambda_min_singular_lower_bound": -0.7561235266469082,
+            "auxiliary_speed_upper_bound": null,
+            "interpretation": "Analytic sufficient bound on the specified Euclidean ball for the cached polynomial; coefficients evaluated in floating point, not an interval certificate."
+          },
+          "sufficient_stay_in_ball": false
+        },
+        "rho": {
+          "nfev": 182,
+          "seconds": 0.05350337400159333,
+          "max_auxiliary_distance": 0.0009762041823929338,
+          "rtol": 2e-11,
+          "atol": 2e-13,
+          "max_lambda_step": 0.25,
+          "minimum_solver_stage_Klambda_singular_value": 0.9035297053869016,
+          "lambda_grid": [
+            0.0,
+            0.0625,
+            0.125,
+            0.1875,
+            0.25,
+            0.3125,
+            0.375,
+            0.4375,
+            0.5,
+            0.5625,
+            0.625,
+            0.6875,
+            0.75,
+            0.8125,
+            0.875,
+            0.9375,
+            1.0
+          ],
+          "lambda_grid_min_singular_values": [
+            1.0,
+            0.9893679366552187,
+            0.9797179145520831,
+            0.970933536476541,
+            0.962914193694185,
+            0.9555728191760403,
+            0.9488339329426385,
+            0.9426319597554915,
+            0.9369097915555074,
+            0.9316175646726729,
+            0.9267116225404889,
+            0.9221536369415607,
+            0.9179098637778855,
+            0.9139505124752829,
+            0.9102492111120505,
+            0.9067825520696962,
+            0.9035297053869016
+          ],
+          "uniform_ball_sufficient_bounds": {
+            "radius": 0.002,
+            "K_perturbation_upper_bound": 1.7561235266469082,
+            "all_lambda_min_singular_lower_bound": -0.7561235266469082,
+            "auxiliary_speed_upper_bound": null,
+            "interpretation": "Analytic sufficient bound on the specified Euclidean ball for the cached polynomial; coefficients evaluated in floating point, not an interval certificate."
+          },
+          "sufficient_stay_in_ball": false
+        }
+      },
+      "seconds": 0.11457120299746748
+    },
+    {
+      "time": 0.5,
+      "bounds": {
+        "radius": 0.002,
+        "K_perturbation_upper_bound": 124.44338286434068,
+        "all_lambda_min_singular_lower_bound": -123.44338286434068,
+        "auxiliary_speed_upper_bound": null,
+        "interpretation": "Analytic sufficient bound on the specified Euclidean ball for the cached polynomial; coefficients evaluated in floating point, not an interval certificate."
+      },
+      "status": "failed",
+      "error": "ValueError('Moser auxiliary path left declared ball: 0.002106562081404835 >= 0.002')",
+      "seconds": 0.019977948992163874
+    },
+    {
+      "time": 2.0,
+      "bounds": {
+        "radius": 0.002,
+        "K_perturbation_upper_bound": 1927.4191424526086,
+        "all_lambda_min_singular_lower_bound": -1926.4191424526086,
+        "auxiliary_speed_upper_bound": null,
+        "interpretation": "Analytic sufficient bound on the specified Euclidean ball for the cached polynomial; coefficients evaluated in floating point, not an interval certificate."
+      },
+      "status": "failed",
+      "error": "ValueError('Moser auxiliary path left declared ball: 0.0020364749408232664 >= 0.002')",
+      "seconds": 0.02058878399839159
+    }
+  ],
+  "scope": "Fixed-origin finite cached polynomial only. Local chart failure is not physical instability; long-window time-series accuracy is not certified."
+}

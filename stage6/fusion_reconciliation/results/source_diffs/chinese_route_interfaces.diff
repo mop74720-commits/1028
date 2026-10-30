@@ -1,0 +1,38 @@
+--- stage3/source_inputs/v10/v10_framework_20261028/chinese/sections/route_interfaces.tex
++++ fusion_archive::chinese/sections/route_interfaces.tex
+@@ -0,0 +1,35 @@
++\subsection{通过同一学习残差衔接的两个持续存在对象}
++\label{kam:two-route-interface}
++
++补偿构造与学习参考构造使用同一力学模型和冻结的辨识结果，回答不同的动力学问题。方向~I 研究实际补偿动力学及其数值映射。方向~II 先研究从受控对象中学习得到的保守模型，再判断磁反馈能否跟踪该模型的一条选定轨迹。在复算实验的记号中，它们分别对应路线~A 与路线~B。两者的共同接口为
++\begin{equation}\label{ri:hamiltonians}
++\begin{aligned}
++ h_*&=h_0+R_*,\qquad \delta R=R_*-\widehat R,\\
++ h_c&=h_0+\delta R,\qquad
++ \widehat h=h_0+\widehat R=h_*-\delta R.
++\end{aligned}
++\end{equation}
++因此，同一系数误差估计以相反符号进入两个不同的比较哈密顿量。当 $\delta R=0$ 时，方向~I 恢复 $h_0$，方向~II 则恢复以 $h_*$ 为保守参考的模型；这并不使两个目标相同。
++
++对于单特征受控对象，有 $h_*=h_{\kappa_*}$，其中 $\kappa_*=1+\beta_*=1.2$。由式~\eqref{kam:homological} 的四次构造选取 $\mathcal T_A=\mathcal T_1$ 和 $\mathcal T_B=\mathcal T_{\kappa_*}$。令 $\mathcal D_A$、$\mathcal D_B$ 分别为它们的复作用--角定义域；$\mathcal D_A$ 就是上文使用的 $\mathcal D_c$。代入式~\eqref{ri:hamiltonians} 得
++\begin{equation}\label{ri:budgets}
++\begin{aligned}
++ h_c\circ\mathcal T_A&=H_{\rm NF}^{1}+P_A,\\
++ P_A&=R_6^{1}+\delta R\circ\mathcal T_A,\\
++ \widehat h\circ\mathcal T_B&=H_{\rm NF}^{\kappa_*}+P_B,\\
++ P_B&=R_6^{\kappa_*}-\delta R\circ\mathcal T_B,\\
++ \epsilon_A&=\norm{R_6^{1}}_{\mathcal D_A}+b_R^A,\\
++ \epsilon_B&=\norm{R_6^{\kappa_*}}_{\mathcal D_B}+b_R^B.
++\end{aligned}
++\end{equation}
++这里，$b_R^s$ 界定 $\delta R\circ\mathcal T_s$ 在 $\mathcal D_s$ 上的范数。标量系数界 $b_I$ 可以共用。只有核验两个像域包含关系 $\mathcal T_s(\mathcal D_s)\subset\mathcal U$ 对式~\eqref{kam:analytic-error} 中同一物理复邻域 $\mathcal U$ 均成立后，才能共用解析残差本身的函数界。两者的扭转矩阵分别为 $A_1$ 与 $A_{\kappa_*}$，完整余项须分别计算。真实合成能量的坐标图用于分析，跟踪控制器仅使用学习模型。当系数未知时，各项界必须在所声明的系数区间内一致成立，或者直接为冻结的 $\widehat h$ 构造正规形。
++
++\input{sections/route_budget_main_values}
++
++补充材料~\ref{sr:budget-domain} 给出了两个坐标图的显式局部像域余量和完整余项上界，包括正比于 $\kappa$ 平方的项。这一计算在声明的小定义域上评价了解析预算的一部分，既没有核验依赖于具体定理的阈值，也不覆盖控制实验中较大的初始振幅。对于任一保守能量的精确求解中点映射或自治 Central4 映射，在相应解析分支与定义域假设下，其归一化生成扰动分别满足
++\begin{equation}\label{ri:discrete-budgets}
++ \norm{G_\Delta^s/\Delta}
++ \le C_3^s\epsilon_s+C_4^s\Delta^p,
++ \qquad s\in\{A,B\}.
++\end{equation}
++这些常数依赖各自的坐标图与定义域，不能默认相等。方向~II 的连续参考采用命题~\ref{kam:flow-theorem} 及式~\eqref{kam:flow-divisors} 中的连续小除数条件；该参考的数值实现还需要独立的离散假设。第~\ref{app:learned-tracking-main} 节通过推导跟踪误差并报告共同基准上的检验，完成方向~II 的研究闭环。其耗散跟踪系统并不是 KAM 所作用的保守对象。

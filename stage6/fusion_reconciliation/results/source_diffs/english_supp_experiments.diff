@@ -1,0 +1,38 @@
+--- stage3/source_inputs/v10/v10_framework_20261028/english/sections/supp_experiments.tex
++++ fusion_archive::english/sections/supp_experiments.tex
+@@ -435,7 +435,7 @@
+ used by the midpoint integrator. The $20$ mT transverse-field value
+ discussed as a design comparison is not an enforced clipping rule.
+ 
+-\subsection{P1 framework matrix verification}
++\subsection{Matrix verification protocols}
+ \label{sx:framework-matrix}
+ The additional experiments are stored separately in
+ \texttt{reproduction/framework\_experiments}. From the package root,
+@@ -481,7 +481,7 @@
+ 
+ \begin{table*}[t]
+ \centering
+-\caption{P1 matrix full-grid maximum errors at $\Delta=0.01$. Each column uses its own declared damped or conservative target. All preceding step errors and observed orders are retained in the JSON.}
++\caption{Matrix full-grid maximum errors at $\Delta=0.01$. Each column uses its own declared damped or conservative target. All preceding step errors and observed orders are retained in the JSON.}
+ \label{sx:framework-matrix-errors}
+ \begin{tabular}{rcccc}
+ \toprule
+@@ -494,7 +494,7 @@
+ \end{tabular}
+ \end{table*}
+ 
+-\subsection{P3 fixed-error closed field and conservative Central4}
++\subsection{Fixed-error closed field and conservative Central4}
+ \label{sx:framework-closed}
+ The added magnetic tests read the same \texttt{new\_baseline.json} and
+ use initial state $(0.09,0.08,0.015,-0.01)$ over $\tau\in[0,20]$.
+@@ -621,6 +621,8 @@
+ \end{table*}
+ 
+ 
++\input{sections/supp_general_experiments}
++
+ \subsection{Conditional clearance and historical results that do not transfer}
+ \label{sx:migration}
+ The $4$ mm clearance is a net centreline allowance after subtraction

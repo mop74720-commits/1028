@@ -1,0 +1,12 @@
+{
+  "status": "independently actually run",
+  "maximum_state_difference": 1.0556895414694193e-14,
+  "nfev": 200,
+  "method": "DOP853",
+  "rtol": 2e-12,
+  "atol": 2e-14,
+  "maximum_step_tau": 0.000125,
+  "original_tolerance_only_difference": 0.0,
+  "explanation": "Original tolerance-only rerun used the same accepted steps and returned identical floating values; explicitly smaller maximum step adds an independent refinement check, not a rigorous enclosure.",
+  "seconds": 20.892297543992754
+}

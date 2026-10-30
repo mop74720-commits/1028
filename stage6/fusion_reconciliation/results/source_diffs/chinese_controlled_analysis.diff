@@ -1,0 +1,38 @@
+--- stage3/source_inputs/v10/v10_framework_20261028/chinese/sections/controlled_analysis.tex
++++ fusion_archive::chinese/sections/controlled_analysis.tex
+@@ -1,7 +1,7 @@
+ \subsection{将反馈置于同一隐式方程中}
+ \label{ctrl:placement}
+ 
+-第二个子问题给出已辨识残差及其补偿。第三个子问题考察施加该反馈后形成何种差分格式、保留何种结构，以及数值轨迹如何逼近实际闭环动力学。这些问题针对第~\ref{sec:derivation} 节中的同一受控对象和同一未知中点。将式 \eqref{struct:route-a-control} 代入受控对象，得到受控更新式
++已辨识残差与阻尼估计共同确定固定的反馈律。必须针对由此得到的实际闭环，使用第~\ref{sec:derivation} 节中的同一受控对象和同一未知中点，评估其离散结构与收敛性。将式 \eqref{struct:route-a-control} 代入受控对象，得到受控更新式
+ \begin{equation}\label{ctrl:midpoint}
+ \begin{aligned}
+  X_+-X_-&=\Delta\mathsf N\bar Y,\\
+@@ -31,6 +31,17 @@
+ 
+ \subsection{受控映射的精确结构}
+ \label{ctrl:structure}
++
++一般构造能够明确区分原结构与受控结构。设 $G(z,t)\in\R^{2n\times m}$ 为实际输入矩阵，$a_u(z,t)\in\R^m$ 为给定光滑反馈。在单连通局部域上，同一 $\mathcal K$ 与 $f_u=f+Ga_u$ 相容，当且仅当以 $\mathcal KGa_u$ 为系数的一形式闭合；等价地，存在标量 $W$ 满足
++\begin{equation}\label{ctrl:same-K}
++\begin{aligned}
++ \mathcal KGa_u&=\nabla W,\\
++ \mathcal Kf_u&=\nabla(\mathcal B+W)+\partial_t\mathcal R.
++\end{aligned}
++\end{equation}
++该条件还要求 $\nabla W\in\operatorname{Im}(\mathcal KG)$。仅有较小输入幅值并不足够。若条件不成立，将式 \eqref{struct:transport} 用于实际的 $f_u$，可得到新的局部 $\mathcal R_u,\mathcal K_u,\mathcal B_u$ 及其相容图表。所得理想映射保持 $\mathcal K_u$，未必保持原 $\mathcal K$；论证见补充材料~\ref{ss:general-control}。
++
++对于当前受控对象，取初始时刻 $\tau_0=0$，则 $\mathcal K_\gamma=-e^{\gamma\tau}J$。纯势能补偿满足 $\mathcal K_\gamma(0,\nabla\widehat R)^{\mathsf T}=\nabla_x[-e^{\gamma\tau}\widehat R]$，故可保留同一结构。阻尼补偿项 $(0,\widehat\gamma Y)^{\mathsf T}$ 一般不满足闭性条件。将两项均代回后，显式闭环结构为 $\mathcal K_{\delta\gamma}=-e^{\delta\gamma\tau}J$，其初值仍为 $-J$。这将一般构造直接连接到式 \eqref{ctrl:weighted-midpoint} 及下述保守极限。
+ 
+ \begin{proposition}[补偿后的结构]
+ \label{ctrl:structure-proposition}
+@@ -106,7 +117,7 @@
+ \end{proof}
+ 
+ 这一结果将求解器容差纳入精度结论。采用固定绝对容差，在不断细化步长时未必能一直保持二阶渐近收敛率。自治 Central4 方法在五阶局部缺陷、更高阶导数界及稳定隐式分支条件成立时，具有类似估计
+-$C_T(e_0+\Delta^4+\eta_\Delta/\Delta)$；每步残差为 $O(\Delta^5)$ 时保留四阶。补充材料~\ref{ss:inexact-solve} 给出这一扩展。下文的残差预算检验有意扰动增量方程，以考察累积项；它们与 Newton 迭代实际留下的微小残差加以区分。
++$C_T(e_0+\Delta^4+\eta_\Delta/\Delta)$；每步残差为 $O(\Delta^5)$ 时保留四阶。补充材料~\ref{ss:inexact-solve} 给出这一扩展。下文的残差预算检验有意扰动增量方程，以考察累积项；它们与 Newton 迭代实际留下的微小残差加以区分。在图表及逆图表具有一致界的条件下，将同一论证用于变换后的向量场 \eqref{struct:chart-field}，可得补充材料~\ref{ss:general-accuracy} 中一般图表方法的二阶估计。该估计分别计入近似 Birkhoff 表示的误差与坐标实现残差。
+ 
+ \subsection{区分离散误差与补偿误差}
+ \label{ctrl:error-separation}

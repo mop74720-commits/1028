@@ -1,0 +1,17 @@
+--- stage3/source_inputs/v10/v10_framework_20261028/chinese/sections/mechanics.tex
++++ fusion_archive::chinese/sections/mechanics.tex
+@@ -13,7 +13,7 @@
+  T=\tfrac12\dot q^{\mathsf T}M(q)\dot q,\qquad V=V(q),
+  \label{mech:general-energy}
+ \end{equation}
+-其中 $M(q)=M(q)^{\mathsf T}\succ0$。弹性和给定静磁场对 $V$ 作出贡献；
++其中 $q,p\in\mathbb R^n$，$M(q)=M(q)^{\mathsf T}\succ0$ 是 $n\times n$ 动能质量矩阵。工作域上必须采用独立的正则坐标；奇异约束系统须先完成约化，才能作为常微分方程处理。弹性和给定静磁场对 $V$ 作出贡献；
+ 磁场的调制则向系统做功。对于永久磁偶极子，相互作用势 $-m\cdot B$ 给出
+ $\tau=m\times B$ 和 $F=\nabla(m\cdot B)$，其中空间求导时保持取向不变
+ \citep{abbott}。
+@@ -277,4 +277,4 @@
+ 第~\ref{sec:application} 节将这一接口用于学习得到的残差补偿律，
+ 并考察同一控制律在包含更多模态的受控对象上的作用。
+ 针对一般目标哈密顿量（包括学习得到的动量项）的更强实现另见
+-补充材料~\ref{sm:exact-lift}；跟踪扩展在补充材料第~\ref{sec:supp-tracking} 节使用同一接口。
++补充材料~\ref{sm:exact-lift}；学习参考跟踪路线在第~\ref{app:learned-tracking-main} 节及补充材料~\ref{sec:supp-tracking} 使用同一接口。

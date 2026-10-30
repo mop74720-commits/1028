@@ -1,0 +1,57 @@
+--- stage3/source_inputs/v10/v10_framework_20261028/chinese/sections/tracking_main.tex
++++ fusion_archive::chinese/sections/tracking_main.tex
+@@ -0,0 +1,54 @@
++\subsection{学习保守参考与磁驱动跟踪}
++\label{app:learned-tracking-main}
++
++方向~II 使用同一受控对象、势能读出和磁端口，跟踪学习得到的保守运动。辨识结束后冻结 $\widehat V=V_0+\widehat R$，并生成参考
++\begin{equation}\label{tm:reference}
++ X_r'=\mathsf N Y_r,\qquad
++ Y_r'=-\nabla\widehat V(X_r).
++\end{equation}
++该参考的哈密顿量为式~\eqref{ri:hamiltonians} 中的 $\widehat h$；其条件性持续存在分析由式~\eqref{ri:budgets} 和命题~\ref{kam:flow-theorem} 给出。令 $e_X=X-X_r$、$e_Y=Y-Y_r$，沿用反馈
++\begin{equation}\label{tm:control}
++\begin{aligned}
++ U_B={}&\widehat\gamma Y+\nabla\widehat V(X)
++                  -\nabla\widehat V(X_r)\\
++       &-\kappa_p\mathsf N^{-1}e_X-\kappa_de_Y,
++       \qquad \kappa_p,\kappa_d>0.
++\end{aligned}
++\end{equation}
++将其代回同一真实受控对象，再利用 $V_*=\widehat V+\delta R$ 与 $\gamma=\widehat\gamma+\delta\gamma$，得到
++\begin{equation}\label{tm:substitution}
++\begin{aligned}
++ Y'&=-\nabla V_*(X)-\gamma Y+U_B\\
++   &=-\nabla\widehat V(X_r)-\kappa_p\mathsf N^{-1}e_X
++          -\kappa_de_Y\\
++   &\quad-\nabla\delta R(X)-\delta\gamma Y.
++\end{aligned}
++\end{equation}
++减去式~\eqref{tm:reference} 得 $e_X'=\mathsf N e_Y$，进而有
++\begin{equation}\label{tm:error}
++ e_X''+\kappa_de_X'+\kappa_pe_X
++ =-\mathsf N[\nabla\delta R(X)+\delta\gamma Y].
++\end{equation}
++齐次方程指数稳定。当右端有界时，得到式~\eqref{ss:tracking-bound} 中的显式卷积界；精确抵消则给出渐近跟踪。驱动误差 $r_U$ 在右端增加 $\mathsf N r_U$。这是针对实际受控对象的跟踪结论，与保守参考环面的存在性以及数值离散的收敛性分别讨论。
++
++在式~\eqref{app:port-inverse} 与式~\eqref{app:field-gradient} 中取 $U=U_B$。两式的秩为二条件、角度条件及磁场--梯度联合约束均保持不变。连续模态指令 $U_B$、其中点一步增量 $\Delta(0,U_B)^{\mathsf T}$ 以及有量纲的磁场指令是不同的量。与方向~I 相同，两个磁端口不能实现任意高维反馈，因此保留的全模型验证及净空条件同样约束这一路线。
++
++共同基准实验冻结了与补偿实验相同的拟合系数。参考初态为 $(0.09,0.08,0.015,-0.01)$，实际受控对象初态为 $(0.0945,0.084,0.015,-0.01)$。四组均在 $0\le\tau\le20$ 上采用这一相同参考，取 $\Delta=0.001$、$\kappa_p=1$、$\kappa_d=2$。真值参数对照仅将未知的受控对象抵消项替换为合成真值，如式~\eqref{struct:route-b-oracle} 所示，并保留学习参考。各组均通过同一无饱和的理想磁接口施加输入。独立参考由步长 $0.00025$ 的细步长 RK4 积分生成，而实际实现的参考与受控对象共同组成一个八维中点求解系统。
++
++\begin{table*}[t]
++\centering\small
++\caption{共同实验方案下方向~II 在 $10\le\tau\le20$ 上的状态 RMS。范数为全部四个平衡坐标的欧氏范数。}
++\label{tm:results}
++\begin{tabular}{lcc}
++\toprule
++控制方式 & 独立参考 & 同步参考\\
++\midrule
++无控制 & $3.41583\times10^{-2}$ & $3.41580\times10^{-2}$\\
++仅阻尼补偿 & $6.02249\times10^{-3}$ & $6.02060\times10^{-3}$\\
++学习跟踪 & $2.26767\times10^{-5}$ & $8.55100\times10^{-7}$\\
++真值参数跟踪 & $2.26767\times10^{-5}$ & $8.55090\times10^{-7}$\\
++\bottomrule
++\end{tabular}
++\end{table*}
++
++表~\ref{tm:results} 保留了两种误差定义：与实际实现参考的同步误差，以及相对于独立积分的连续参考模型的误差。学习跟踪在全时间窗内相对于独立参考的 RMS 为 $1.58912\times10^{-3}$，其中包含人为设置的初始偏差。参考积分误差的最大值为 $2.96936\times10^{-5}$，步长减半前后的误差比为 $3.999984$。真值参数误差方程与独立构造的 Cayley 更新之差为 $1.0040\times10^{-15}$。在施加反馈前，相对于同一合成 $h_*$ 的保守预测，其状态 RMS 从 $8.04072\times10^{-6}$（采用 $h_0$）改善为 $1.35426\times10^{-10}$（采用 $\widehat h$）。这些结果验证了受限特征下的预测与跟踪对照，并未认证 KAM 环面或真实器件。补充材料~\ref{sec:supp-tracking} 保留完整推导、控制消融、阻尼扫描及输入需求；结果记录位于 \path{reproduction/experiments/route_b_shared_results.json}。

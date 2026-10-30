@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "archive_sha256": "416bdb3c8337816c9ef041bcaa5d5a4b8a8276c6d7be6172e37a0dec0dd9ec7f",
+  "chapters": 46,
+  "review_units": 582,
+  "inline_context_units": 4464,
+  "counts_by_reviewer": {
+    "theory": 190,
+    "algorithms": 52,
+    "kam": 80,
+    "physics": 184,
+    "history": 76
+  },
+  "labels_are_original": true,
+  "missing": [],
+  "duplicates": [],
+  "supplementary_reading": [
+    "english/main.tex",
+    "english/supplement.tex",
+    "chinese/main.tex",
+    "chinese/supplement.tex",
+    "delivery_report/report.tex",
+    "ARCHIVE_PROVENANCE.txt"
+  ],
+  "scope": "46 bilingual section files; displayed formulas, theorem-like blocks and tables are exact indexed units. 4464 inline expressions are contextual anchors, not independent certified theorems. Chapter reading includes surrounding hypotheses, proofs and prose. Coverage is not acceptance or generalization."
+}

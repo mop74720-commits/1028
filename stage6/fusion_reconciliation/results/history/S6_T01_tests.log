@@ -1,0 +1,9 @@
+test_actual_force_identity_and_constant_mass_counterexample (__main__.TrackingConnectionTests.test_actual_force_identity_and_constant_mass_counterexample) ... ok
+test_frozen_complete_complex_reference_and_chain_rule (__main__.TrackingConnectionTests.test_frozen_complete_complex_reference_and_chain_rule) ... ok
+test_geometric_acceleration_by_independent_velocity_difference (__main__.TrackingConnectionTests.test_geometric_acceleration_by_independent_velocity_difference) ... ok
+test_recorded_actual_coil_run_is_bounded_but_not_exact_tracking (__main__.TrackingConnectionTests.test_recorded_actual_coil_run_is_bounded_but_not_exact_tracking) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 2.872s
+
+OK

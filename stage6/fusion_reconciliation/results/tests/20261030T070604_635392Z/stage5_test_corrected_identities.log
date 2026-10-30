@@ -1,0 +1,25 @@
+test_E01_morison_dimensions_relative_power_and_fluid_supply (test_corrected_identities.CorrectedIdentities.test_E01_morison_dimensions_relative_power_and_fluid_supply) ... ok
+test_E02_real_penetration_energy_gradient_and_friction_power (test_corrected_identities.CorrectedIdentities.test_E02_real_penetration_energy_gradient_and_friction_power) ... ok
+test_E03_director_sign_and_independent_torsion (test_corrected_identities.CorrectedIdentities.test_E03_director_sign_and_independent_torsion) ... ok
+test_E04_scaled_complex_chain_rule_including_force (test_corrected_identities.CorrectedIdentities.test_E04_scaled_complex_chain_rule_including_force) ... ok
+test_E05_power_loss_and_conjugate_gradient (test_corrected_identities.CorrectedIdentities.test_E05_power_loss_and_conjugate_gradient) ... ok
+test_E06_original_pfaff_cross_partial_incompatibility (test_corrected_identities.CorrectedIdentities.test_E06_original_pfaff_cross_partial_incompatibility) ... ok
+test_E07_endpoint_compatibility_transversality_not_Hessian_inverse (test_corrected_identities.CorrectedIdentities.test_E07_endpoint_compatibility_transversality_not_Hessian_inverse) ... ok
+test_E08_fixed_coordinate_generator_recurrence (test_corrected_identities.CorrectedIdentities.test_E08_fixed_coordinate_generator_recurrence) ... ok
+test_E09_fixed_w_chain_rule_and_original32_blocks (test_corrected_identities.CorrectedIdentities.test_E09_fixed_w_chain_rule_and_original32_blocks) ... ok
+test_E10_damping_sign_does_not_restore_scalar_gradient (test_corrected_identities.CorrectedIdentities.test_E10_damping_sign_does_not_restore_scalar_gradient) ... ok
+test_E11_noncommuting_original36_matches_full_midpoint (test_corrected_identities.CorrectedIdentities.test_E11_noncommuting_original36_matches_full_midpoint) ... ok
+test_E12_twoform_half_double_sum (test_corrected_identities.CorrectedIdentities.test_E12_twoform_half_double_sum) ... ok
+test_E13_negative_D_and_time_compatibility (test_corrected_identities.CorrectedIdentities.test_E13_negative_D_and_time_compatibility) ... ok
+test_E14_transport_volume_not_Euclidean_volume (test_corrected_identities.CorrectedIdentities.test_E14_transport_volume_not_Euclidean_volume) ... ok
+test_E15_torus_closed_primitive_has_nonzero_period (test_corrected_identities.CorrectedIdentities.test_E15_torus_closed_primitive_has_nonzero_period) ... ok
+test_E16_Rayleigh_mass_chain_rule_and_velocity_dependent_coefficient (test_corrected_identities.CorrectedIdentities.test_E16_Rayleigh_mass_chain_rule_and_velocity_dependent_coefficient) ... ok
+test_complete_variable_mass_geometric_force (test_corrected_identities.CorrectedIdentities.test_complete_variable_mass_geometric_force) ... ok
+test_mass_validation_is_independent_of_SI_magnitude (test_corrected_identities.CorrectedIdentities.test_mass_validation_is_independent_of_SI_magnitude) ... ok
+test_nonzero_initial_generator_gauge_and_endpoint_compatibility (test_corrected_identities.CorrectedIdentities.test_nonzero_initial_generator_gauge_and_endpoint_compatibility) ... ok
+test_original31_roundtrip_and_joint_inverse_24D (test_corrected_identities.CorrectedIdentities.test_original31_roundtrip_and_joint_inverse_24D) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 1.101s
+
+OK

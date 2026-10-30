@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "command": [
+    "/workspace/1028-cloud/venvs/learning/bin/python",
+    "reproduction/general_birkhoff_experiments/run_all.py",
+    "--timing-repetitions",
+    "3"
+  ],
+  "cwd": "/tmp/1028-stage6-G123-p44f3xdy/fusion",
+  "started_utc": "2026-10-30T06:42:55.080577+00:00",
+  "source_archive_sha256": "416bdb3c8337816c9ef041bcaa5d5a4b8a8276c6d7be6172e37a0dec0dd9ec7f",
+  "source_sha256": {
+    "reproduction/general_birkhoff_experiments/synthetic.py": "d12e55c255121841a2a288418eb8abca0c0a11f0d08e60442418e1677bc1c28c",
+    "reproduction/general_birkhoff_experiments/run_all.py": "9c327074b858d8362ebba2ded9699ea7fcd670b7c3aee69b5287b96aa89bfa54",
+    "reproduction/general_birkhoff_experiments/magnetic.py": "484247c253ac13f4fd4f6e648d4fd73c1a2a7af3ce4ee3c53fadc3d73e80d825",
+    "reproduction/general_birkhoff_experiments/common.py": "3221eb0a30f9492e6b84849db4170b13690bf9d7c5fd8f7831307b5eaba84139",
+    "reproduction/general_birkhoff_experiments/check_translation.py": "e27b586d18039fedc2fe1ada850f75e72e31cc9cc2ae8a3da79c876fd3fd59a3",
+    "reproduction/general_birkhoff_experiments/build_chinese.py": "8f7259864c107157d465520db05a8d0790b504c39bc0b1c0b4a8f946e9b9f157",
+    "reproduction/general_birkhoff_experiments/build_assets.py": "9fcfd879203ee7b03f21ec0eb41f624a0e34f41c2801d8e5815eae6b3c051db9"
+  },
+  "scope": "Independent rerun of historical 4D mathematical and two-mode baselines; not a new 3D robot experiment.",
+  "exit_code": 0,
+  "seconds": 19.02031934900151
+}

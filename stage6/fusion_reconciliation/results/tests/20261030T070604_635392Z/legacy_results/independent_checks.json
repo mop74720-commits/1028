@@ -1,0 +1,63 @@
+{
+  "implicit_feedback": {
+    "true_residual_inf": 5.556949062549997e-17,
+    "post_step_control_residual_inf": 2.072052157367919e-09,
+    "canonical_defect": 0.0015695150173150995,
+    "solver": {
+      "increment_residual_inf": 5.556949062549997e-17,
+      "nonlinear_corrections": 1,
+      "final_matrix_condition": 1.001597695892384,
+      "final_matrix_min_singular": 0.9999158499480658,
+      "newton_history": [
+        {
+          "iteration": 0,
+          "residual_inf": 4.4633264227483366e-07,
+          "matrix_condition": 1.0015976953425463
+        },
+        {
+          "iteration": 1,
+          "residual_inf": 5.556949062549997e-17,
+          "matrix_condition": 1.001597695892384
+        }
+      ],
+      "seconds": 2.847892267993302,
+      "derivative": "Full Df of state-dependent input; ideal implicit tangent"
+    }
+  },
+  "feedback_jacobian": {
+    "directional_relative_error": 2.1681965480481682e-11,
+    "omitted_current_chain_rule_norm": 12.564912321466991,
+    "finite_difference_epsilon": 1e-06
+  },
+  "legal_structure": {
+    "midpoint_defect": 6.672283339094962e-16,
+    "weighted_defect": 5.600683098488224e-16
+  },
+  "power": {
+    "fixed_bias_energy": -1.0015632662412566,
+    "mechanical_energy": 0.0003131587891433546,
+    "fixed_bias_power": -6.700701185556585e-05,
+    "mechanical_power": -1.671778979457705e-05,
+    "magnetic_power": -1.671778979457705e-05,
+    "incremental_magnetic_power": -6.700701185556585e-05,
+    "drag_power": 0.0,
+    "fixed_bias_power_identity_residual": -5.827586677109586e-19,
+    "mechanical_power_identity_residual": 9.032759349519859e-18,
+    "current": [
+      0.8852280022039573,
+      -1.2296748629188485,
+      -0.7262653610498649,
+      -0.7965773050528547,
+      -0.569534056317674,
+      0.6460923929893293,
+      0.6968401460272965,
+      0.7797023103081141,
+      1.14966681768348,
+      0.2881683285952023,
+      1.5123476181634308,
+      -0.3272053527996603
+    ],
+    "collocated_expected_power": -6.70070118555661e-05
+  },
+  "actual_solved_map_directional_error": 7.554672612326635e-13
+}

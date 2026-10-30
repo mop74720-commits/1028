@@ -1,0 +1,5 @@
+--- stage3/source_inputs/v10/v10_framework_20261028/chinese/sections/route_budget_main_values.tex
++++ fusion_archive::chinese/sections/route_budget_main_values.tex
+@@ -0,0 +1,2 @@
++% Generated from the shared numerical result.
++对于记录的参数点模型，$\det A_{1.2}\simeq-2.475\times10^{-5}$，$\sigma_{\min}(A_{1.2})\simeq2.478\times10^{-3}$；这是与标称扭转矩阵分开的代数检查。在补充材料~\ref{sr:budget-domain} 指定的辅助域上，局部余项计算给出 $\overline R_1\simeq4.690\times10^{-13}$ 和 $\overline R_{1.2}\simeq6.294\times10^{-13}$。

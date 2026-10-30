@@ -1,0 +1,131 @@
+{
+  "source": "推理草稿5月1025.docx",
+  "source_sha256": "8c62b874caaa6362b0f1c5612ddd6514aa7141454b17ef4cf5688408fe307338",
+  "document_xml_sha256": "723a8b32c36d24e0b11286f69c308253e203e07dca7b413be0661c126163b2af",
+  "index_matches_original_DOCX": true,
+  "rows": [
+    {
+      "id": "original1025-m0194",
+      "paragraph": "original1025-p0350",
+      "structural_rendering": "\\left{ \\begin{aligned}ξ=\\frac{1}{\\sqrt{2}}(q+ip) \\\\ \\overset{̄}{\\overset{̅}{ξ}}=\\frac{1}{\\sqrt{2}}(q−ip)\\end{aligned} \\right",
+      "raw_omml_sha256": "b47acbb0d95941bcbdb2ad929d732859855aa7eca21c16a0f8a2ac42979e108e",
+      "fraction_count": 2,
+      "radical_count": 2,
+      "accent_count": 2,
+      "denominators": [
+        "<ns0:den xmlns:ns0=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:ns1=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:rad><ns0:radPr><ns0:degHide ns0:val=\"1\" /><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:i /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:radPr><ns0:deg><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:deg><ns0:e><ns0:r><ns0:rPr /><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>2</ns0:t></ns0:r><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:e></ns0:rad><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:i /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:den>",
+        "<ns0:den xmlns:ns0=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:ns1=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:rad><ns0:radPr><ns0:degHide ns0:val=\"1\" /><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:i /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:radPr><ns0:deg><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:deg><ns0:e><ns0:r><ns0:rPr /><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>2</ns0:t></ns0:r><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:e></ns0:rad><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:i /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:den>"
+      ]
+    },
+    {
+      "id": "original1025-m0195",
+      "paragraph": "original1025-p0351",
+      "structural_rendering": "\\left{ \\begin{aligned}\\frac{∂}{∂ξ}=\\frac{1}{2}\\left( \\frac{∂}{∂q}−i\\frac{∂}{∂p} \\right) \\\\ \\frac{∂}{∂\\overset{̅}{ξ}}=\\frac{1}{2}\\left( \\frac{∂}{∂q}+i\\frac{∂}{∂p} \\right)\\end{aligned} \\right",
+      "raw_omml_sha256": "e413904d4a5b399c3b346aff264dbe59c2fdd70024e4902cb184ef439bac0d55",
+      "fraction_count": 8,
+      "radical_count": 0,
+      "accent_count": 1,
+      "denominators": [
+        "<ns0:den xmlns:ns0=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:ns1=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:r><ns0:rPr /><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>∂</ns0:t></ns0:r><ns0:r><ns0:rPr><ns0:sty ns0:val=\"p\" /></ns0:rPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" ns1:cs=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>ξ</ns0:t></ns0:r><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:den>",
+        "<ns0:den xmlns:ns0=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:ns1=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:r><ns0:rPr /><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>2</ns0:t></ns0:r><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:den>",
+        "<ns0:den xmlns:ns0=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:ns1=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:r><ns0:rPr /><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>∂q</ns0:t></ns0:r><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:den>",
+        "<ns0:den xmlns:ns0=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:ns1=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:r><ns0:rPr /><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>∂p</ns0:t></ns0:r><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:den>",
+        "<ns0:den xmlns:ns0=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:ns1=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:r><ns0:rPr /><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>∂</ns0:t></ns0:r><ns0:acc><ns0:accPr><ns0:chr ns0:val=\"̅\" /><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:i /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:accPr><ns0:e><ns0:r><ns0:rPr><ns0:sty ns0:val=\"p\" /></ns0:rPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" ns1:cs=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>ξ</ns0:t></ns0:r><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:i /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:e></ns0:acc><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:den>",
+        "<ns0:den xmlns:ns0=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:ns1=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:r><ns0:rPr /><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>2</ns0:t></ns0:r><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:den>",
+        "<ns0:den xmlns:ns0=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:ns1=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:r><ns0:rPr /><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>∂q</ns0:t></ns0:r><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:den>",
+        "<ns0:den xmlns:ns0=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:ns1=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:r><ns0:rPr /><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>∂p</ns0:t></ns0:r><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:den>"
+      ]
+    },
+    {
+      "id": "original1025-m0200",
+      "paragraph": "original1025-p0357",
+      "structural_rendering": "\\left{ \\begin{aligned}q=\\frac{1}{\\sqrt{2}}(ξ+\\overset{̅}{ξ}) \\\\ p=\\frac{−i}{\\sqrt{2}}(ξ−\\overset{̅}{ξ})\\end{aligned} \\right⇒\\left{ \\begin{aligned}dq=\\frac{1}{\\sqrt{2}}(dξ+d\\overset{̅}{ξ}) \\\\ dp=\\frac{−i}{\\sqrt{2}}(dξ−d\\overset{̅}{ξ})\\end{aligned} \\right",
+      "raw_omml_sha256": "faa0b333c652a2d1138a19c641d083d3f45ae4b13c1c41ae80cc5c31a2610026",
+      "fraction_count": 4,
+      "radical_count": 4,
+      "accent_count": 4,
+      "denominators": [
+        "<ns0:den xmlns:ns0=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:ns1=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:rad><ns0:radPr><ns0:degHide ns0:val=\"1\" /><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:i /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:radPr><ns0:deg><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:deg><ns0:e><ns0:r><ns0:rPr /><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>2</ns0:t></ns0:r><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:e></ns0:rad><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:i /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:den>",
+        "<ns0:den xmlns:ns0=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:ns1=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:rad><ns0:radPr><ns0:degHide ns0:val=\"1\" /><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:i /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:radPr><ns0:deg><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:deg><ns0:e><ns0:r><ns0:rPr /><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>2</ns0:t></ns0:r><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:e></ns0:rad><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:i /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:den>",
+        "<ns0:den xmlns:ns0=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:ns1=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:rad><ns0:radPr><ns0:degHide ns0:val=\"1\" /><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:i /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:radPr><ns0:deg><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:deg><ns0:e><ns0:r><ns0:rPr /><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>2</ns0:t></ns0:r><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:e></ns0:rad><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:i /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:den>",
+        "<ns0:den xmlns:ns0=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:ns1=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:rad><ns0:radPr><ns0:degHide ns0:val=\"1\" /><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:i /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:radPr><ns0:deg><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:deg><ns0:e><ns0:r><ns0:rPr /><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>2</ns0:t></ns0:r><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:e></ns0:rad><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:i /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:den>"
+      ]
+    },
+    {
+      "id": "original1025-m0229",
+      "paragraph": "original1025-p0491",
+      "structural_rendering": "ξ=\\sqrt{I}{e}^{iθ}⇒\\overset{̇}{ξ}=\\frac{\\overset{̇}{I}}{2\\sqrt{I}}{e}^{iθ}+i\\sqrt{I}\\overset{̇}{θ}{e}^{iθ}{=}^{二十一}−\\sqrt{2}i\\frac{∂H}{∂I}\\frac{∂I}{∂\\overset{̅}{ξ}}+\\frac{1}{2}P(ξ,\\overset{̅}{ξ})",
+      "raw_omml_sha256": "93214b43e32b50a0afd84dd6915d9803690cfbd4ed2ff574b69b1109f39e6f5c",
+      "fraction_count": 4,
+      "radical_count": 4,
+      "accent_count": 5,
+      "denominators": [
+        "<ns0:den xmlns:ns0=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:ns1=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:r><ns0:rPr /><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>2</ns0:t></ns0:r><ns0:rad><ns0:radPr><ns0:degHide ns0:val=\"1\" /><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:i /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:radPr><ns0:deg><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:deg><ns0:e><ns0:r><ns0:rPr /><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /><ns1:lang ns1:val=\"en-US\" ns1:eastAsia=\"zh-CN\" /></ns1:rPr><ns0:t>I</ns0:t></ns0:r><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:e></ns0:rad><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:i /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:den>",
+        "<ns0:den xmlns:ns0=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:ns1=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:r><ns0:rPr /><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>∂I</ns0:t></ns0:r><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:i /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:den>",
+        "<ns0:den xmlns:ns0=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:ns1=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:r><ns0:rPr /><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>∂</ns0:t></ns0:r><ns0:acc><ns0:accPr><ns0:chr ns0:val=\"̅\" /><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:i /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:accPr><ns0:e><ns0:r><ns0:rPr><ns0:sty ns0:val=\"p\" /></ns0:rPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" ns1:cs=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>ξ</ns0:t></ns0:r><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:i /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:e></ns0:acc><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:i /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:den>",
+        "<ns0:den xmlns:ns0=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:ns1=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:r><ns0:rPr /><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>2</ns0:t></ns0:r><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:i /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:den>"
+      ]
+    },
+    {
+      "id": "original1025-m0240",
+      "paragraph": "original1025-p0505",
+      "structural_rendering": "ω'(I)=−\\sqrt{2}H''(I)≠0",
+      "raw_omml_sha256": "481ed71d92a1675d493d34a4158205b543f59bada970f2cfa545ef7fed9f944e",
+      "fraction_count": 0,
+      "radical_count": 1,
+      "accent_count": 0,
+      "denominators": []
+    },
+    {
+      "id": "original1025-m0242",
+      "paragraph": "original1025-p0508",
+      "structural_rendering": "∀\\left| ⟨k,ω(I)⟩ \\right|≥\\frac{γ}{ \\left| k \\right|{ }^{τ}},  ",
+      "raw_omml_sha256": "01eee4311d76020050c7cb1e0886bc06e3d788464591fc66c3e026ae0162d303",
+      "fraction_count": 1,
+      "radical_count": 0,
+      "accent_count": 0,
+      "denominators": [
+        "<ns0:den xmlns:ns0=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:ns1=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:r><ns0:rPr><ns0:sty ns0:val=\"p\" /></ns0:rPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t xml:space=\"preserve\"> </ns0:t></ns0:r><ns0:d><ns0:dPr><ns0:begChr ns0:val=\"|\" /><ns0:endChr ns0:val=\"|\" /><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:dPr><ns0:e><ns0:r><ns0:rPr /><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>k</ns0:t></ns0:r><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:e></ns0:d><ns0:sSup><ns0:sSupPr><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:sSupPr><ns0:e><ns0:r><ns0:rPr><ns0:sty ns0:val=\"p\" /></ns0:rPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t xml:space=\"preserve\"> </ns0:t></ns0:r><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:e><ns0:sup><ns0:r><ns0:rPr /><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>τ</ns0:t></ns0:r><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:sup></ns0:sSup><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:den>"
+      ]
+    },
+    {
+      "id": "original1025-m0284",
+      "paragraph": "original1025-p0591",
+      "structural_rendering": "{L}_{energy}\\underset{⇒}{26}{\\left‖ \\frac{d{\\overset{̃}{H}}_{λ}(ξ,\\overset{̄}{ξ})}{dt} \\right‖}^{2}={\\left‖ \\sqrt{2}\\frac{d\\left[ {H}_{λ}(ξ,\\overset{̄}{ξ})+i{\\overset{̃}{P}}_{λ}(ξ,\\overset{̄}{ξ}) \\right]}{dt} \\right‖}^{2}=2{\\left‖ \\frac{d{\\overset{̃}{P}}_{λ}(ξ,\\overset{̄}{ξ})}{dt} \\right‖}^{2} (能量−耗散行为约束)",
+      "raw_omml_sha256": "42e6e325c78543d9788e86ebdca88a5fe80b39ed19932a245658b702002fdd83",
+      "fraction_count": 3,
+      "radical_count": 1,
+      "accent_count": 7,
+      "denominators": [
+        "<ns0:den xmlns:ns0=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:ns1=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:r><ns0:rPr /><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>dt</ns0:t></ns0:r><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:den>",
+        "<ns0:den xmlns:ns0=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:ns1=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:r><ns0:rPr /><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>dt</ns0:t></ns0:r><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:i /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:den>",
+        "<ns0:den xmlns:ns0=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:ns1=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:r><ns0:rPr /><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>dt</ns0:t></ns0:r><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:den>"
+      ]
+    },
+    {
+      "id": "original1025-m0286",
+      "paragraph": "original1025-p0593",
+      "structural_rendering": "{L}_{hamilton}={\\left‖ \\overset{̇}{ξ}+i\\frac{∂{\\overset{̃}{H}}_{λ}(ξ,\\overset{̄}{ξ})}{∂ξ} \\right‖}^{2} (动力学约束)",
+      "raw_omml_sha256": "d87a80591358d209a55076ba460a79f1d8d3d0a47b0b4b6ae58ef018704de5db",
+      "fraction_count": 1,
+      "radical_count": 0,
+      "accent_count": 3,
+      "denominators": [
+        "<ns0:den xmlns:ns0=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:ns1=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:r><ns0:rPr /><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>∂ξ</ns0:t></ns0:r><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:den>"
+      ]
+    },
+    {
+      "id": "original1025-m0289",
+      "paragraph": "original1025-p0598",
+      "structural_rendering": "\\left{ \\begin{aligned}{\\overset{̇}{ξ}}_{predict}=−i\\frac{∂{\\overset{̃}{H}}_{λ}(ξ,\\overset{̄}{ξ})}{∂\\overset{̄}{ξ}}{|}_{ξ={ξ}_{t}},{ξ}_{t}=\\frac{1}{\\sqrt{2}}({q}_{t}+i{p}_{t})∈{ℂ}^{N} (可直接观测的量) \\\\ Integrate: RK4(可能更优)或 Euler 积分器等尝试,步长(∆t)小，可调节 \\end{aligned} \\right",
+      "raw_omml_sha256": "220ff3617bd5023139577f9df581646fb8c57830ab95acff7cdb7f4ce23e56b8",
+      "fraction_count": 2,
+      "radical_count": 1,
+      "accent_count": 4,
+      "denominators": [
+        "<ns0:den xmlns:ns0=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:ns1=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:r><ns0:rPr /><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>∂</ns0:t></ns0:r><ns0:acc><ns0:accPr><ns0:chr ns0:val=\"̄\" /><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:accPr><ns0:e><ns0:r><ns0:rPr /><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>ξ</ns0:t></ns0:r><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:e></ns0:acc><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:den>",
+        "<ns0:den xmlns:ns0=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:ns1=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:rad><ns0:radPr><ns0:degHide ns0:val=\"1\" /><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:i /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:radPr><ns0:deg><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:deg><ns0:e><ns0:r><ns0:rPr /><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr><ns0:t>2</ns0:t></ns0:r><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:e></ns0:rad><ns0:ctrlPr><ns1:rPr><ns1:rFonts ns1:hint=\"default\" ns1:ascii=\"Cambria Math\" ns1:hAnsi=\"Cambria Math\" /><ns1:i /><ns1:sz ns1:val=\"21\" /></ns1:rPr></ns0:ctrlPr></ns0:den>"
+      ]
+    }
+  ]
+}

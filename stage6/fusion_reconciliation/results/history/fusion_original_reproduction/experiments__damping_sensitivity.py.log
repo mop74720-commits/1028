@@ -1,0 +1,11 @@
+scenario zeta1= 0.0 fit= [ 2.00003041e-01 -1.40378967e-12]
+{"zeta1": 0.0, "route_a_RMS": {"passive": 3.7736225795142524e-05, "learned": 3.428846719542186e-05, "oracle": 3.428851869240461e-05}, "route_b_RMS": {"passive": 0.006023128870629879, "learned_tracking": 0.0022477249628525663, "oracle_tracking": 0.002247724970333174}, "elapsed_seconds": 14.054407967996667}
+scenario zeta1= 0.01 fit= [0.20000318 0.02      ]
+{"zeta1": 0.01, "route_a_RMS": {"passive": 0.0067365659144882255, "learned": 3.428846489583986e-05, "oracle": 3.42885186925194e-05}, "route_b_RMS": {"passive": 0.003645223778841846, "learned_tracking": 0.002247724962567571, "oracle_tracking": 0.002247724970333034}, "elapsed_seconds": 20.0786431190063}
+scenario zeta1= 0.025 fit= [0.20000337 0.05      ]
+{"zeta1": 0.025, "route_a_RMS": {"passive": 0.015950075018543067, "learned": 3.4288461680169695e-05, "oracle": 3.4288518692571825e-05}, "route_b_RMS": {"passive": 0.01194403971954161, "learned_tracking": 0.002247724962174804, "oracle_tracking": 0.0022477249703330387}, "elapsed_seconds": 16.12485660900711}
+scenario zeta1= 0.05 fit= [0.20000364 0.1       ]
+{"zeta1": 0.05, "route_a_RMS": {"passive": 0.029239589781136995, "learned": 3.428845717107241e-05, "oracle": 3.4288518692472485e-05}, "route_b_RMS": {"passive": 0.025618448849614582, "learned_tracking": 0.0022477249616431163, "oracle_tracking": 0.0022477249703331172}, "elapsed_seconds": 14.693937118994654}
+scenario zeta1= 0.1 fit= [0.20000394 0.2       ]
+{"zeta1": 0.1, "route_a_RMS": {"passive": 0.0497373832285228, "learned": 3.428845211932288e-05, "oracle": 3.4288518692531717e-05}, "route_b_RMS": {"passive": 0.04695637767490863, "learned_tracking": 0.002247724961144905, "oracle_tracking": 0.00224772497033315}, "elapsed_seconds": 14.66784918999474}
+All damping scenarios completed.

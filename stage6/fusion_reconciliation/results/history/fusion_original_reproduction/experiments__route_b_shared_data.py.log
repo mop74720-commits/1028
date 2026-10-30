@@ -1,0 +1,25 @@
+Shared fit recomputed: [0.20000337 0.05      ]
+passive 0.025587481768660523 0.034158345660954666
+damping_only 0.006021845321318727 0.00602248758308574
+learned_tracking 0.0015891190653289848 2.2676741956115454e-05
+oracle_tracking 0.001589119071098301 2.2676743094634733e-05
+{
+  "status": "all assertions passed",
+  "prediction": {
+    "initial_state": [
+      0.09,
+      0.08,
+      0.015,
+      -0.01
+    ],
+    "duration_tau": 20.0,
+    "RK4_step": 0.00025,
+    "nominal_h0_RMS_state_error_vs_hstar": 8.040721848251114e-06,
+    "learned_hhat_RMS_state_error_vs_hstar": 1.3542649599735999e-10,
+    "nominal_h0_final_error_vs_hstar": 1.425678592259634e-05,
+    "learned_hhat_final_error_vs_hstar": 2.401212065209373e-10,
+    "hstar_reference_refinement_maximum": 6.3602732320994745e-12,
+    "hhat_reference_refinement_maximum": 6.358406725976876e-12
+  },
+  "elapsed_seconds": 64.06916869799898
+}

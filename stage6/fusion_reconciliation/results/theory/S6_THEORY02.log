@@ -1,0 +1,8 @@
+GAUGE synthetic
+OPERATOR synthetic
+CHART synthetic
+DONE synthetic {"gauge_rhs": true, "gauge_form": true, "stage5_field_agreement": true, "gauge_time_fd": true, "gauge_space_fd": true, "variational_operator": true, "complete_chart_decomposition": true, "nonzero_original_representation_error": true, "nonzero_power": true, "incorrect_gauge_changes_field": true}
+GAUGE fullcoil_collocated
+OPERATOR fullcoil_collocated
+CHART fullcoil_collocated
+DONE fullcoil_collocated {"gauge_rhs": true, "gauge_form": true, "stage5_field_agreement": true, "gauge_time_fd": true, "gauge_space_fd": true, "variational_operator": true, "complete_chart_decomposition": true, "nonzero_original_representation_error": true, "nonzero_power": true, "incorrect_gauge_changes_field": true}

@@ -1,0 +1,19 @@
+--- stage3/source_inputs/v10/v10_framework_20261028/english/sections/mechanics.tex
++++ fusion_archive::english/sections/mechanics.tex
+@@ -19,7 +19,7 @@
+  T=\tfrac12\dot q^{\mathsf T}M(q)\dot q,\qquad V=V(q),
+  \label{mech:general-energy}
+ \end{equation}
+-with $M(q)=M(q)^{\mathsf T}\succ0$. Elasticity and a prescribed static
++with $q,p\in\mathbb R^n$ and $M(q)=M(q)^{\mathsf T}\succ0$ an $n\times n$ kinetic mass matrix. Independent coordinates are required on a regular working domain; a singular constrained system must first be reduced before it is treated as an ordinary differential equation. Elasticity and a prescribed static
+ magnetic field contribute to $V$; modulation of that field supplies work.
+ For a permanent dipole, the interaction potential $-m\cdot B$ gives
+ $\tau=m\times B$ and $F=\nabla(m\cdot B)$, with orientation held fixed
+@@ -324,5 +324,5 @@
+ residual-compensation law and follows the same law into higher-mode
+ plants. A stronger realization of general target Hamiltonians,
+ including learned momentum terms, is stated separately in
+-Supplement~\ref{sm:exact-lift}; the tracking extension uses the shared
+-interface in Supplementary Section~\ref{sec:supp-tracking}.
++Supplement~\ref{sm:exact-lift}; the learned-reference tracking route uses the same interface in
++Section~\ref{app:learned-tracking-main} and Supplement~\ref{sec:supp-tracking}.

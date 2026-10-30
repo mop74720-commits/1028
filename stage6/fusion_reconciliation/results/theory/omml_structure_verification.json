@@ -1,0 +1,614 @@
+{
+  "source": "stage4/audit/source_omml/original1025_indexed.json",
+  "source_sha256": "ef8dcbaaad23ef24b06f70c299262f4ac4ed7b731071a3c6fef088b1a8bdf886",
+  "method": "Parse native OMML subtree; preserve matrix/fraction/superscript structure, not flattened text",
+  "records": [
+    {
+      "id": "original1025-m0377",
+      "paragraph": "original1025-p0867",
+      "omml_sha256": "8dc5364a8d2ee5b70bffcf7c5c836291abeb7424f16ad2dde5a1feaae004d2f9",
+      "superscripts": [],
+      "fractions": [],
+      "matrices": []
+    },
+    {
+      "id": "original1025-m0399",
+      "paragraph": "original1025-p0888",
+      "omml_sha256": "6509b9c46ca81170ed4711ba2211363598e03c5a2079d54a84cea5c654845bf4",
+      "superscripts": [
+        "(k)",
+        "k",
+        "(0)",
+        "(0)"
+      ],
+      "fractions": [
+        {
+          "numerator": "1",
+          "denominator": "(k+1)!"
+        }
+      ],
+      "matrices": []
+    },
+    {
+      "id": "original1025-m0400",
+      "paragraph": "original1025-p0910",
+      "omml_sha256": "ccda5dbd6fefad8b2bb53f42d748d57934c484aec6b137e2c0719cc46cc19e54",
+      "superscripts": [],
+      "fractions": [
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        }
+      ],
+      "matrices": [
+        {
+          "rows": 6,
+          "columns": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "original1025-m0407",
+      "paragraph": "original1025-p0917",
+      "omml_sha256": "a654dd237a1c08923c33313ced01f7b63e169d76c8f88019354ec55d38a095bd",
+      "superscripts": [],
+      "fractions": [
+        {
+          "numerator": "∂Q",
+          "denominator": "∂q"
+        },
+        {
+          "numerator": "∂Q",
+          "denominator": "∂p"
+        },
+        {
+          "numerator": "∂Q",
+          "denominator": "∂q"
+        },
+        {
+          "numerator": "∂Q",
+          "denominator": "∂p"
+        },
+        {
+          "numerator": "∂P",
+          "denominator": "∂q"
+        },
+        {
+          "numerator": "∂P",
+          "denominator": "∂p"
+        },
+        {
+          "numerator": "∂P",
+          "denominator": "∂q"
+        },
+        {
+          "numerator": "∂P",
+          "denominator": "∂p"
+        },
+        {
+          "numerator": "∂Q",
+          "denominator": "∂q"
+        },
+        {
+          "numerator": "∂Q",
+          "denominator": "∂p"
+        },
+        {
+          "numerator": "∂Q",
+          "denominator": "∂q"
+        },
+        {
+          "numerator": "∂Q",
+          "denominator": "∂p"
+        },
+        {
+          "numerator": "∂P",
+          "denominator": "∂q"
+        },
+        {
+          "numerator": "∂P",
+          "denominator": "∂p"
+        },
+        {
+          "numerator": "∂P",
+          "denominator": "∂q"
+        },
+        {
+          "numerator": "∂P",
+          "denominator": "∂p"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        }
+      ],
+      "matrices": [
+        {
+          "rows": 4,
+          "columns": [
+            4,
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "rows": 4,
+          "columns": [
+            4,
+            4,
+            4,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "original1025-m0408",
+      "paragraph": "original1025-p0920",
+      "omml_sha256": "821b225f5b441bd77f086bc29070d1aa7a5811bb6441c3f0b36220bc8f97f442",
+      "superscripts": [],
+      "fractions": [
+        {
+          "numerator": "P+2Q",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "Q−2P",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "2Q−P",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "−2P−Q",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        }
+      ],
+      "matrices": [
+        {
+          "rows": 4,
+          "columns": [
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "original1025-m0414",
+      "paragraph": "original1025-p0925",
+      "omml_sha256": "8fe134c26ae0d745afde4569d1f2b9b3020d3dfb2fb8596a987da85a9131b83a",
+      "superscripts": [
+        "−1"
+      ],
+      "fractions": [
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        }
+      ],
+      "matrices": [
+        {
+          "rows": 4,
+          "columns": [
+            4,
+            4,
+            4,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "original1025-m0417",
+      "paragraph": "original1025-p0931",
+      "omml_sha256": "90a80e774c2ae9223ddea2ad205ed425da2925074561e3b321dc6a8ba340a7e9",
+      "superscripts": [
+        "T",
+        "−1",
+        "−1",
+        "−1"
+      ],
+      "fractions": [
+        {
+          "numerator": "dw",
+          "denominator": "dt"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "∂M−1(q)",
+          "denominator": "∂q"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        }
+      ],
+      "matrices": [
+        {
+          "rows": 2,
+          "columns": [
+            2,
+            2
+          ]
+        },
+        {
+          "rows": 2,
+          "columns": [
+            1,
+            1
+          ]
+        },
+        {
+          "rows": 2,
+          "columns": [
+            1,
+            1
+          ]
+        },
+        {
+          "rows": 2,
+          "columns": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "original1025-m0434",
+      "paragraph": "original1025-p0986",
+      "omml_sha256": "f374d1277faa8b75a24e8ef8d3f159c52cb29651169b25102e3cf6e499788938",
+      "superscripts": [
+        "−1",
+        "−1",
+        "−1"
+      ],
+      "fractions": [
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "∂M−1",
+          "denominator": "∂12(q+q)"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        }
+      ],
+      "matrices": []
+    },
+    {
+      "id": "original1025-m0442",
+      "paragraph": "original1025-p1003",
+      "omml_sha256": "e8a8ef2f25f0cf51987695d493af296ad6818a705e15b548fb58e1c48e866528",
+      "superscripts": [
+        "−1",
+        "−1"
+      ],
+      "fractions": [
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1−ε",
+          "denominator": "1+ε"
+        },
+        {
+          "numerator": "δ",
+          "denominator": "1+ε"
+        },
+        {
+          "numerator": "δ",
+          "denominator": "1+ε"
+        }
+      ],
+      "matrices": [
+        {
+          "rows": 2,
+          "columns": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "original1025-m0499",
+      "paragraph": "original1025-p1113",
+      "omml_sha256": "668da0360b6d273cad1e8c3d7dbbee135bb5dd9e0c63d1c236acc2816b384479",
+      "superscripts": [],
+      "fractions": [
+        {
+          "numerator": "∂Fj",
+          "denominator": "∂zi"
+        },
+        {
+          "numerator": "∂Fi",
+          "denominator": "∂zj"
+        }
+      ],
+      "matrices": []
+    },
+    {
+      "id": "original1025-m0500",
+      "paragraph": "original1025-p1114",
+      "omml_sha256": "37ba07b73ed946a6f0e5d70846fd5b294916647e23e068409ee8400f8e0d9648",
+      "superscripts": [],
+      "fractions": [
+        {
+          "numerator": "dzj",
+          "denominator": "dt"
+        },
+        {
+          "numerator": "∂B",
+          "denominator": "∂zi"
+        },
+        {
+          "numerator": "∂Fi",
+          "denominator": "∂t"
+        }
+      ],
+      "matrices": []
+    },
+    {
+      "id": "original1025-m0505",
+      "paragraph": "original1025-p1120",
+      "omml_sha256": "89821316cf91bb9417acab5ae2bb16d71497dd8212ffcee368fb56ee0934991a",
+      "superscripts": [],
+      "fractions": [
+        {
+          "numerator": "∂Kij",
+          "denominator": "∂zk"
+        },
+        {
+          "numerator": "∂Kjk",
+          "denominator": "∂zi"
+        },
+        {
+          "numerator": "∂Kki",
+          "denominator": "∂zj"
+        },
+        {
+          "numerator": "∂Kij",
+          "denominator": "∂t"
+        },
+        {
+          "numerator": "∂Di",
+          "denominator": "∂zj"
+        },
+        {
+          "numerator": "∂Dj",
+          "denominator": "∂zi"
+        }
+      ],
+      "matrices": []
+    },
+    {
+      "id": "original1025-m0509",
+      "paragraph": "original1025-p1125",
+      "omml_sha256": "9df2da0e27c1c7181b52972d1fd353e3cdf1fe6eafa4eff5b5542fb2f2d3cd04",
+      "superscripts": [
+        "2n"
+      ],
+      "fractions": [],
+      "matrices": []
+    },
+    {
+      "id": "original1025-m0541",
+      "paragraph": "original1025-p1180",
+      "omml_sha256": "e171358fb5f543e19c8f8a902d04445f2f21fd987f32f41583f7eead790e7dbf",
+      "superscripts": [
+        "−1"
+      ],
+      "fractions": [
+        {
+          "numerator": "∂ϕw",
+          "denominator": "∂t"
+        },
+        {
+          "numerator": "d",
+          "denominator": "dt"
+        },
+        {
+          "numerator": "∂w",
+          "denominator": "∂w"
+        },
+        {
+          "numerator": "d",
+          "denominator": "dt"
+        },
+        {
+          "numerator": "∂w",
+          "denominator": "∂w"
+        },
+        {
+          "numerator": "∂α1",
+          "denominator": "∂t"
+        },
+        {
+          "numerator": "∂w",
+          "denominator": "∂w"
+        },
+        {
+          "numerator": "∂α2",
+          "denominator": "∂t"
+        }
+      ],
+      "matrices": []
+    },
+    {
+      "id": "original1025-m0558",
+      "paragraph": "original1025-p1204",
+      "omml_sha256": "6f60b537817be85dbbbfb3cd882b857b9064db89c0edb687d12ed255e71a20eb",
+      "superscripts": [],
+      "fractions": [
+        {
+          "numerator": "∂w",
+          "denominator": "∂w"
+        },
+        {
+          "numerator": "∂z",
+          "denominator": "∂w"
+        }
+      ],
+      "matrices": []
+    },
+    {
+      "id": "original1025-m0565",
+      "paragraph": "original1025-p1213",
+      "omml_sha256": "ce83585ebcaa3cbf00bdfdfb26dd93f10a20fb0c35ed916749b16a6507466176",
+      "superscripts": [
+        "(0)",
+        "(k+1)",
+        "k",
+        "(0)",
+        "(0)"
+      ],
+      "fractions": [
+        {
+          "numerator": "1",
+          "denominator": "(k+1)!"
+        }
+      ],
+      "matrices": []
+    },
+    {
+      "id": "original1025-m0570",
+      "paragraph": "original1025-p1220",
+      "omml_sha256": "2a6cb84908a07a01517d409d0b94625e19d58d8d7894c807c671e6f9fb6bd654",
+      "superscripts": [
+        "−1",
+        "−1"
+      ],
+      "fractions": [
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1−ε",
+          "denominator": "1+ε"
+        },
+        {
+          "numerator": "δ",
+          "denominator": "1+ε"
+        },
+        {
+          "numerator": "δ",
+          "denominator": "1+ε"
+        }
+      ],
+      "matrices": [
+        {
+          "rows": 2,
+          "columns": [
+            1,
+            1
+          ]
+        }
+      ]
+    }
+  ]
+}

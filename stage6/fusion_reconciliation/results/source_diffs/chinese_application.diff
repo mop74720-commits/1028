@@ -1,0 +1,22 @@
+--- stage3/source_inputs/v10/v10_framework_20261028/chinese/sections/application.tex
++++ fusion_archive::chinese/sections/application.tex
+@@ -1,9 +1,4 @@
+-应用目标是通过学习得到的残差补偿和阻尼补偿，恢复耦合的标称磁驱动运动。
+-物理输入映射必须实现式~\eqref{struct:route-a-control} 中的反馈，
+-保留其估计误差，并采用与式~\eqref{ctrl:midpoint} 相同的中点约定。
+-首先将这条链在两模态对象上闭合，再明确同一拟合控制器作用于更多梁模态时出现的附加项。
+-全梁净空论证则是关于物理能量的另一项条件。
+-对学习参考轨迹的跟踪保留为补充材料第~\ref{sec:supp-tracking} 节中的扩展。
++第一类应用目标是通过学习残差与阻尼补偿恢复耦合的标称磁动力学。第二类目标是通过相同的物理端口跟踪学习得到的保守参考。物理输入映射必须实现式~\eqref{struct:route-a-control} 的反馈，保留其中的估计误差，并采用与式~\eqref{ctrl:midpoint} 相同的中点约定。本文首先闭合两模态对象上的这一联系，再明确同一拟合控制器作用于更多梁模态时出现的附加项。全梁净空论证是关于物理能量的另一项条件。第~\ref{app:learned-tracking-main} 节给出第二条路线及其独立的误差系统；补充材料~\ref{sec:supp-tracking} 保留完整证明和数值协议。
+ 
+ \subsection{学习残差补偿的磁驱动实现}
+ \label{app:ports}
+@@ -94,6 +89,8 @@
+ 为这一场强尺度提供依据，但不能据此确定本文设计中可同时满足的梯度、工作空间或带宽限制。
+ 学习残差补偿测试所需横向场峰值约为 $0.54449$ mT。
+ 第~\ref{sec:analysis} 节报告了其输入重构与采样运行域检查。
++
++\input{sections/tracking_main}
+ 
+ \subsection{同一控制器作用于增加保留模态的受控对象}
+ \label{app:full-model}

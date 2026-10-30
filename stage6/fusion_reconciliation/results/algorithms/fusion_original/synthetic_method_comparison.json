@@ -1,0 +1,1294 @@
+{
+  "scope": "Artificial variable-mass, nonproportional-damping known-chart test from material B; not a physical catheter or KAM certificate.",
+  "units": "All synthetic coordinates, time and matrices are dimensionless declared mathematical test values.",
+  "parameters": {
+    "M0": [
+      [
+        1.12,
+        0.12
+      ],
+      [
+        0.12,
+        1.32
+      ]
+    ],
+    "C0": [
+      [
+        0.18,
+        0.025
+      ],
+      [
+        0.025,
+        0.37
+      ]
+    ],
+    "Cd": [
+      [
+        0.09,
+        0.009
+      ],
+      [
+        0.009,
+        0.14
+      ]
+    ],
+    "Ks": [
+      [
+        1.05,
+        0.05
+      ],
+      [
+        0.05,
+        2.05
+      ]
+    ],
+    "Kp": [
+      [
+        0.05,
+        0.0
+      ],
+      [
+        0.0,
+        0.1
+      ]
+    ]
+  },
+  "point_chart": "Q1=q1+0.2*q1^3; Q2=(1+0.15*q1)*q2; P=DQ(q)^(-T)*p; xi=(Q,P)",
+  "mechanical_model": "M(q)=DQ^T M0 DQ; C(q)=DQ^T C DQ; V(q)=Q^T stiffness Q/2; H_q includes every derivative of M(q)^(-1)",
+  "specified_structure": "K_y(t)=exp(-A^T*t)*K0*exp(-A*t); K_z=Dxi^T*K_y*Dxi, fixed before discretization",
+  "chart": "chi_t=T(t)*xi with real principal T=(K0^-1 K_y)^(1/2); Tdot by Sylvester; midpoint in transformed field L(t)=Tdot*T^-1+T*A*T^-1",
+  "cases": [
+    {
+      "name": "uncontrolled",
+      "A": [
+        [
+          0.0,
+          0.0,
+          0.9016393442622951,
+          -0.08196721311475409
+        ],
+        [
+          0.0,
+          0.0,
+          -0.08196721311475409,
+          0.7650273224043715
+        ],
+        [
+          -1.05,
+          -0.05,
+          -0.16024590163934427,
+          -0.004371584699453554
+        ],
+        [
+          -0.05,
+          -2.05,
+          0.007786885245901636,
+          -0.2810109289617486
+        ]
+      ],
+      "C": [
+        [
+          0.18,
+          0.025
+        ],
+        [
+          0.025,
+          0.37
+        ]
+      ],
+      "stiffness": [
+        [
+          1.05,
+          0.05
+        ],
+        [
+          0.05,
+          2.05
+        ]
+      ],
+      "initial_state": [
+        0.25,
+        -0.18,
+        0.03,
+        0.04
+      ],
+      "T": 2.0,
+      "steps": [
+        0.2,
+        0.1,
+        0.05,
+        0.025
+      ],
+      "CM_inverse_commutator_spectral2": 0.01215846994535519,
+      "original_equation_conjugacy_error": 1.2494826774185e-16,
+      "reference": {
+        "exact": "xi^{-1}(expm(A*t)*xi(z0)); evaluated independently at each finest-grid time",
+        "independent_original_coordinate_check": {
+          "method": "Independent DOP853 in original coordinates",
+          "settings": [
+            {
+              "rtol": 1e-11,
+              "atol": 1e-13,
+              "max_step": 0.05
+            },
+            {
+              "rtol": 2e-13,
+              "atol": 2e-15,
+              "max_step": 0.025
+            }
+          ],
+          "interval_enclosure": false
+        },
+        "maximum_grid_exact_DOP853_difference": 4.506414950445284e-15,
+        "maximum_grid_DOP853_refinement_difference": 2.0689077556528787e-16
+      },
+      "symbolic_original_model_build_seconds": 0.795305642997846,
+      "model_build_note": "One-off symbolic differentiation of the full original mechanical H, its Jacobian and Dxi, disclosed separately from per-grid method cost. The latent A and point map are declared inputs.",
+      "methods": {
+        "ordinary_midpoint": [
+          {
+            "step": 0.2,
+            "endpoint_error": 0.003342161665493729,
+            "maximum_grid_error": 0.003342161665493729,
+            "RMS_grid_error": 0.0019110043879842242,
+            "endpoint_error_order": null,
+            "maximum_grid_error_order": null,
+            "max_increment_residual_inf": 1.7645607197636082e-14,
+            "max_Newton_corrections": 2.0,
+            "max_ideal_K_defect_spectral2": 0.0014022612168180626,
+            "minimum_Newton_matrix_singular_value": 0.9481543875983,
+            "total_Newton_corrections": 20,
+            "failed_steps": 0,
+            "required_setup_operation_counts": {
+              "expm": 0,
+              "sqrtm": 0,
+              "Sylvester": 0,
+              "dense_linear_solve": 0
+            },
+            "chart_checks": {},
+            "cost": {
+              "repetitions": 3,
+              "cold_total_seconds": [
+                0.0017371519934386015,
+                0.0019265620067017153,
+                0.0016250960034085438
+              ],
+              "required_setup_seconds": [
+                1.4420074876397848e-06,
+                1.3829994713887572e-06,
+                1.4319957699626684e-06
+              ],
+              "cold_advance_seconds": [
+                0.0017357099859509617,
+                0.0019251790072303265,
+                0.001623664007638581
+              ],
+              "warm_cached_advance_seconds": [
+                0.0016539179923711345,
+                0.0020453580073080957,
+                0.0020025550038553774
+              ],
+              "median_cold_total_seconds": 0.0017371519934386015,
+              "median_required_setup_seconds": 1.4319957699626684e-06,
+              "median_cold_advance_seconds": 0.0017357099859509617,
+              "median_warm_cached_advance_seconds": 0.0020025550038553774,
+              "timing_scope": "Same process, single BLAS thread, one unmeasured dispatch warmup; cold includes every required per-grid method preparation. Independent references and ideal-tangent diagnostics excluded from every method. Common model-symbolic compilation reported separately.",
+              "interpretation": "Implementation-specific wall time, not a universal efficiency or complexity claim."
+            },
+            "minimum_sampled_mass_eigenvalue": 1.04731974430127,
+            "minimum_abs_point_chart_denominator": 0.9923588709784508
+          },
+          {
+            "step": 0.1,
+            "endpoint_error": 0.0008398743707994276,
+            "maximum_grid_error": 0.0008398743707994276,
+            "RMS_grid_error": 0.00047393087131355235,
+            "endpoint_error_order": 1.992536071005064,
+            "maximum_grid_error_order": 1.992536071005064,
+            "max_increment_residual_inf": 2.949029909160572e-17,
+            "max_Newton_corrections": 2.0,
+            "max_ideal_K_defect_spectral2": 0.00018219945757281844,
+            "minimum_Newton_matrix_singular_value": 0.9714690245267612,
+            "total_Newton_corrections": 40,
+            "failed_steps": 0,
+            "required_setup_operation_counts": {
+              "expm": 0,
+              "sqrtm": 0,
+              "Sylvester": 0,
+              "dense_linear_solve": 0
+            },
+            "chart_checks": {},
+            "cost": {
+              "repetitions": 3,
+              "cold_total_seconds": [
+                0.0034700160031206906,
+                0.0033926329924724996,
+                0.003399292007088661
+              ],
+              "required_setup_seconds": [
+                1.3219978427514434e-06,
+                1.8229911802336574e-06,
+                1.5120021998882294e-06
+              ],
+              "cold_advance_seconds": [
+                0.003468694005277939,
+                0.003390810001292266,
+                0.003397780004888773
+              ],
+              "warm_cached_advance_seconds": [
+                0.0033217780000995845,
+                0.00317564100259915,
+                0.0037852639943594113
+              ],
+              "median_cold_total_seconds": 0.003399292007088661,
+              "median_required_setup_seconds": 1.5120021998882294e-06,
+              "median_cold_advance_seconds": 0.003397780004888773,
+              "median_warm_cached_advance_seconds": 0.0033217780000995845,
+              "timing_scope": "Same process, single BLAS thread, one unmeasured dispatch warmup; cold includes every required per-grid method preparation. Independent references and ideal-tangent diagnostics excluded from every method. Common model-symbolic compilation reported separately.",
+              "interpretation": "Implementation-specific wall time, not a universal efficiency or complexity claim."
+            },
+            "minimum_sampled_mass_eigenvalue": 1.0472724761984054,
+            "minimum_abs_point_chart_denominator": 0.992228664348712
+          },
+          {
+            "step": 0.05,
+            "endpoint_error": 0.00021024057643311998,
+            "maximum_grid_error": 0.00021024057643311998,
+            "RMS_grid_error": 0.00011779604416280898,
+            "endpoint_error_order": 1.9981324080158127,
+            "maximum_grid_error_order": 1.9981324080158127,
+            "max_increment_residual_inf": 2.3852447794681098e-17,
+            "max_Newton_corrections": 2.0,
+            "max_ideal_K_defect_spectral2": 2.3159552295119956e-05,
+            "minimum_Newton_matrix_singular_value": 0.9850744972165086,
+            "total_Newton_corrections": 80,
+            "failed_steps": 0,
+            "required_setup_operation_counts": {
+              "expm": 0,
+              "sqrtm": 0,
+              "Sylvester": 0,
+              "dense_linear_solve": 0
+            },
+            "chart_checks": {},
+            "cost": {
+              "repetitions": 3,
+              "cold_total_seconds": [
+                0.006739827003912069,
+                0.006802060001064092,
+                0.007666343997698277
+              ],
+              "required_setup_seconds": [
+                1.591994077898562e-06,
+                2.043001586571336e-06,
+                3.4349941415712237e-06
+              ],
+              "cold_advance_seconds": [
+                0.00673823500983417,
+                0.006800016999477521,
+                0.007662909003556706
+              ],
+              "warm_cached_advance_seconds": [
+                0.0063925739959813654,
+                0.006040431995643303,
+                0.007150666002416983
+              ],
+              "median_cold_total_seconds": 0.006802060001064092,
+              "median_required_setup_seconds": 2.043001586571336e-06,
+              "median_cold_advance_seconds": 0.006800016999477521,
+              "median_warm_cached_advance_seconds": 0.0063925739959813654,
+              "timing_scope": "Same process, single BLAS thread, one unmeasured dispatch warmup; cold includes every required per-grid method preparation. Independent references and ideal-tangent diagnostics excluded from every method. Common model-symbolic compilation reported separately.",
+              "interpretation": "Implementation-specific wall time, not a universal efficiency or complexity claim."
+            },
+            "minimum_sampled_mass_eigenvalue": 1.0472610938781814,
+            "minimum_abs_point_chart_denominator": 0.9921960834102753
+          },
+          {
+            "step": 0.025,
+            "endpoint_error": 5.257716032462081e-05,
+            "maximum_grid_error": 5.257716032462081e-05,
+            "RMS_grid_error": 2.934980507832319e-05,
+            "endpoint_error_order": 1.9995330066473294,
+            "maximum_grid_error_order": 1.9995330066473294,
+            "max_increment_residual_inf": 2.7972416050126014e-17,
+            "max_Newton_corrections": 2.0,
+            "max_ideal_K_defect_spectral2": 2.917312239572347e-06,
+            "minimum_Newton_matrix_singular_value": 0.9923716689203573,
+            "total_Newton_corrections": 160,
+            "failed_steps": 0,
+            "required_setup_operation_counts": {
+              "expm": 0,
+              "sqrtm": 0,
+              "Sylvester": 0,
+              "dense_linear_solve": 0
+            },
+            "chart_checks": {},
+            "cost": {
+              "repetitions": 3,
+              "cold_total_seconds": [
+                0.01366490899818018,
+                0.015854840996325947,
+                0.01419629598967731
+              ],
+              "required_setup_seconds": [
+                1.4020042726770043e-06,
+                6.129004759714007e-06,
+                6.72000169288367e-06
+              ],
+              "cold_advance_seconds": [
+                0.013663506993907504,
+                0.015848711991566233,
+                0.014189575987984426
+              ],
+              "warm_cached_advance_seconds": [
+                0.013378094998188317,
+                0.013631299007101916,
+                0.01265460300783161
+              ],
+              "median_cold_total_seconds": 0.01419629598967731,
+              "median_required_setup_seconds": 6.129004759714007e-06,
+              "median_cold_advance_seconds": 0.014189575987984426,
+              "median_warm_cached_advance_seconds": 0.013378094998188317,
+              "timing_scope": "Same process, single BLAS thread, one unmeasured dispatch warmup; cold includes every required per-grid method preparation. Independent references and ideal-tangent diagnostics excluded from every method. Common model-symbolic compilation reported separately.",
+              "interpretation": "Implementation-specific wall time, not a universal efficiency or complexity claim."
+            },
+            "minimum_sampled_mass_eigenvalue": 1.0472582758354936,
+            "minimum_abs_point_chart_denominator": 0.9921879364112846
+          }
+        ],
+        "birkhoff_chart_midpoint": [
+          {
+            "step": 0.2,
+            "endpoint_error": 0.003246037383225236,
+            "maximum_grid_error": 0.003246037383225236,
+            "RMS_grid_error": 0.0017828495209740898,
+            "endpoint_error_order": null,
+            "maximum_grid_error_order": null,
+            "max_inverse_chart_Newton_corrections": 3.0,
+            "max_inverse_chart_residual_inf": 3.608224830031759e-16,
+            "max_linear_chart_increment_residual_inf": 3.8163916471489756e-16,
+            "max_ideal_K_defect_spectral2": 3.1844733886108404e-15,
+            "minimum_point_chart_singular_value": 0.9513921864819364,
+            "total_inverse_chart_Newton_corrections": 23,
+            "failed_steps": 0,
+            "required_setup_operation_counts": {
+              "expm": 21,
+              "sqrtm": 21,
+              "Sylvester": 10,
+              "dense_linear_solve": 61
+            },
+            "chart_checks": {
+              "maximum_chart_congruence_defect_spectral2": 1.9869532196002214e-15,
+              "maximum_transformed_Hamiltonian_defect_spectral2": 6.178993072489828e-16,
+              "maximum_square_root_imaginary_part": 0.0,
+              "maximum_Sylvester_equation_residual_inf": 4.861698066696563e-16,
+              "minimum_chart_singular_value": 1.0,
+              "maximum_Cayley_matrix_equation_residual_inf": 4.598101413511024e-16
+            },
+            "cost": {
+              "repetitions": 3,
+              "cold_total_seconds": [
+                0.001996816004975699,
+                0.001955675004865043,
+                0.001879422998172231
+              ],
+              "required_setup_seconds": [
+                0.0017729350074660033,
+                0.0017337860044790432,
+                0.0016561420052312315
+              ],
+              "cold_advance_seconds": [
+                0.0002238809975096956,
+                0.00022188900038599968,
+                0.00022328099294099957
+              ],
+              "warm_cached_advance_seconds": [
+                0.00019171299936715513,
+                0.000192395003978163,
+                0.00019566999981179833
+              ],
+              "median_cold_total_seconds": 0.001955675004865043,
+              "median_required_setup_seconds": 0.0017337860044790432,
+              "median_cold_advance_seconds": 0.00022328099294099957,
+              "median_warm_cached_advance_seconds": 0.000192395003978163,
+              "timing_scope": "Same process, single BLAS thread, one unmeasured dispatch warmup; cold includes every required per-grid method preparation. Independent references and ideal-tangent diagnostics excluded from every method. Common model-symbolic compilation reported separately.",
+              "interpretation": "Implementation-specific wall time, not a universal efficiency or complexity claim."
+            },
+            "minimum_sampled_mass_eigenvalue": 1.0473867293912622,
+            "minimum_abs_point_chart_denominator": 0.9923883725902138,
+            "max_increment_residual_inf": null,
+            "max_Newton_corrections": null,
+            "Newton_increment_note": "Not applicable: chart midpoint is a linear solve. Its residual and the nonlinear inverse-coordinate Newton residual/count are reported separately."
+          },
+          {
+            "step": 0.1,
+            "endpoint_error": 0.0008175341411048606,
+            "maximum_grid_error": 0.0008175341411048606,
+            "RMS_grid_error": 0.00044089230163285467,
+            "endpoint_error_order": 1.9893287294060482,
+            "maximum_grid_error_order": 1.9893287294060482,
+            "max_inverse_chart_Newton_corrections": 3.0,
+            "max_inverse_chart_residual_inf": 1.6653345369377348e-15,
+            "max_linear_chart_increment_residual_inf": 1.7832957333041577e-15,
+            "max_ideal_K_defect_spectral2": 2.6775897301268664e-15,
+            "minimum_point_chart_singular_value": 0.9512278098595953,
+            "total_inverse_chart_Newton_corrections": 46,
+            "failed_steps": 0,
+            "required_setup_operation_counts": {
+              "expm": 41,
+              "sqrtm": 41,
+              "Sylvester": 20,
+              "dense_linear_solve": 121
+            },
+            "chart_checks": {
+              "maximum_chart_congruence_defect_spectral2": 2.563833550372929e-15,
+              "maximum_transformed_Hamiltonian_defect_spectral2": 1.07894829336732e-15,
+              "maximum_square_root_imaginary_part": 0.0,
+              "maximum_Sylvester_equation_residual_inf": 4.473678626306472e-16,
+              "minimum_chart_singular_value": 1.0,
+              "maximum_Cayley_matrix_equation_residual_inf": 2.777454915364741e-16
+            },
+            "cost": {
+              "repetitions": 3,
+              "cold_total_seconds": [
+                0.003982024994911626,
+                0.004119188000913709,
+                0.003418339998461306
+              ],
+              "required_setup_seconds": [
+                0.0035221339931013063,
+                0.0035866790130967274,
+                0.002981723999255337
+              ],
+              "cold_advance_seconds": [
+                0.0004598910018103197,
+                0.000532508987816982,
+                0.0004366159992059693
+              ],
+              "warm_cached_advance_seconds": [
+                0.0004781580064445734,
+                0.000411750006605871,
+                0.0005648060032399371
+              ],
+              "median_cold_total_seconds": 0.003982024994911626,
+              "median_required_setup_seconds": 0.0035221339931013063,
+              "median_cold_advance_seconds": 0.0004598910018103197,
+              "median_warm_cached_advance_seconds": 0.0004781580064445734,
+              "timing_scope": "Same process, single BLAS thread, one unmeasured dispatch warmup; cold includes every required per-grid method preparation. Independent references and ideal-tangent diagnostics excluded from every method. Common model-symbolic compilation reported separately.",
+              "interpretation": "Implementation-specific wall time, not a universal efficiency or complexity claim."
+            },
+            "minimum_sampled_mass_eigenvalue": 1.0472894537177069,
+            "minimum_abs_point_chart_denominator": 0.9922361742238864,
+            "max_increment_residual_inf": null,
+            "max_Newton_corrections": null,
+            "Newton_increment_note": "Not applicable: chart midpoint is a linear solve. Its residual and the nonlinear inverse-coordinate Newton residual/count are reported separately."
+          },
+          {
+            "step": 0.05,
+            "endpoint_error": 0.00020476370913143652,
+            "maximum_grid_error": 0.00020476370913143652,
+            "RMS_grid_error": 0.00010938831873749625,
+            "endpoint_error_order": 1.9973189354153114,
+            "maximum_grid_error_order": 1.9973189354153114,
+            "max_inverse_chart_Newton_corrections": 3.0,
+            "max_inverse_chart_residual_inf": 3.3029134982598407e-15,
+            "max_linear_chart_increment_residual_inf": 3.5492442318485473e-15,
+            "max_ideal_K_defect_spectral2": 2.9188651700798928e-15,
+            "minimum_point_chart_singular_value": 0.9512274962400823,
+            "total_inverse_chart_Newton_corrections": 93,
+            "failed_steps": 0,
+            "required_setup_operation_counts": {
+              "expm": 81,
+              "sqrtm": 81,
+              "Sylvester": 40,
+              "dense_linear_solve": 241
+            },
+            "chart_checks": {
+              "maximum_chart_congruence_defect_spectral2": 2.754358724081533e-15,
+              "maximum_transformed_Hamiltonian_defect_spectral2": 1.091376938436422e-15,
+              "maximum_square_root_imaginary_part": 0.0,
+              "maximum_Sylvester_equation_residual_inf": 8.281796879143141e-16,
+              "minimum_chart_singular_value": 1.0,
+              "maximum_Cayley_matrix_equation_residual_inf": 4.479991139345885e-16
+            },
+            "cost": {
+              "repetitions": 3,
+              "cold_total_seconds": [
+                0.008893766003893688,
+                0.0071179480000864714,
+                0.006712308007990941
+              ],
+              "required_setup_seconds": [
+                0.007798905004165135,
+                0.006262220995267853,
+                0.005889559994102456
+              ],
+              "cold_advance_seconds": [
+                0.001094860999728553,
+                0.0008557270048186183,
+                0.0008227480138884857
+              ],
+              "warm_cached_advance_seconds": [
+                0.0009378279937664047,
+                0.0007605860009789467,
+                0.0007960079965414479
+              ],
+              "median_cold_total_seconds": 0.0071179480000864714,
+              "median_required_setup_seconds": 0.006262220995267853,
+              "median_cold_advance_seconds": 0.0008557270048186183,
+              "median_warm_cached_advance_seconds": 0.0007960079965414479,
+              "timing_scope": "Same process, single BLAS thread, one unmeasured dispatch warmup; cold includes every required per-grid method preparation. Independent references and ideal-tangent diagnostics excluded from every method. Common model-symbolic compilation reported separately.",
+              "interpretation": "Implementation-specific wall time, not a universal efficiency or complexity claim."
+            },
+            "minimum_sampled_mass_eigenvalue": 1.0472653528382478,
+            "minimum_abs_point_chart_denominator": 0.9921979693638392,
+            "max_increment_residual_inf": null,
+            "max_Newton_corrections": null,
+            "Newton_increment_note": "Not applicable: chart midpoint is a linear solve. Its residual and the nonlinear inverse-coordinate Newton residual/count are reported separately."
+          },
+          {
+            "step": 0.025,
+            "endpoint_error": 5.1214745353409704e-05,
+            "maximum_grid_error": 5.1214745353409704e-05,
+            "RMS_grid_error": 2.722825108764825e-05,
+            "endpoint_error_order": 1.9993289002063679,
+            "maximum_grid_error_order": 1.9993289002063679,
+            "max_inverse_chart_Newton_corrections": 3.0,
+            "max_inverse_chart_residual_inf": 4.551914400963142e-15,
+            "max_linear_chart_increment_residual_inf": 4.90059381963448e-15,
+            "max_ideal_K_defect_spectral2": 4.808510652099923e-15,
+            "minimum_point_chart_singular_value": 0.9512274177586809,
+            "total_inverse_chart_Newton_corrections": 187,
+            "failed_steps": 0,
+            "required_setup_operation_counts": {
+              "expm": 161,
+              "sqrtm": 161,
+              "Sylvester": 80,
+              "dense_linear_solve": 481
+            },
+            "chart_checks": {
+              "maximum_chart_congruence_defect_spectral2": 3.3819087797387336e-15,
+              "maximum_transformed_Hamiltonian_defect_spectral2": 1.143742509171899e-15,
+              "maximum_square_root_imaginary_part": 0.0,
+              "maximum_Sylvester_equation_residual_inf": 7.259944801905026e-16,
+              "minimum_chart_singular_value": 1.0,
+              "maximum_Cayley_matrix_equation_residual_inf": 4.477924378954584e-16
+            },
+            "cost": {
+              "repetitions": 3,
+              "cold_total_seconds": [
+                0.015798808002728038,
+                0.01484042900847271,
+                0.014911343998392113
+              ],
+              "required_setup_seconds": [
+                0.013937232011812739,
+                0.013172931008739397,
+                0.012850202998379245
+              ],
+              "cold_advance_seconds": [
+                0.0018615759909152985,
+                0.001667497999733314,
+                0.002061141000012867
+              ],
+              "warm_cached_advance_seconds": [
+                0.0015072219975991175,
+                0.0019163969991495833,
+                0.001503726001828909
+              ],
+              "median_cold_total_seconds": 0.014911343998392113,
+              "median_required_setup_seconds": 0.013172931008739397,
+              "median_cold_advance_seconds": 0.0018615759909152985,
+              "median_warm_cached_advance_seconds": 0.0015072219975991175,
+              "timing_scope": "Same process, single BLAS thread, one unmeasured dispatch warmup; cold includes every required per-grid method preparation. Independent references and ideal-tangent diagnostics excluded from every method. Common model-symbolic compilation reported separately.",
+              "interpretation": "Implementation-specific wall time, not a universal efficiency or complexity claim."
+            },
+            "minimum_sampled_mass_eigenvalue": 1.0472593414887783,
+            "minimum_abs_point_chart_denominator": 0.9921884084312362,
+            "max_increment_residual_inf": null,
+            "max_Newton_corrections": null,
+            "Newton_increment_note": "Not applicable: chart midpoint is a linear solve. Its residual and the nonlinear inverse-coordinate Newton residual/count are reported separately."
+          }
+        ]
+      },
+      "representative_composed_derivative_check": {
+        "time": 0.0,
+        "h": 0.1,
+        "state": [
+          0.25,
+          -0.16999999999999998,
+          0.05,
+          0.07
+        ],
+        "epsilon_sweep": [
+          {
+            "difference_step": 0.0002,
+            "finite_difference_vs_ideal_tangent_error_spectral2": 3.60261543280479e-09,
+            "finite_difference_K_defect_spectral2": 6.44213326053164e-10
+          },
+          {
+            "difference_step": 2e-05,
+            "finite_difference_vs_ideal_tangent_error_spectral2": 3.617414852395408e-11,
+            "finite_difference_K_defect_spectral2": 6.5305995488518525e-12
+          },
+          {
+            "difference_step": 2e-06,
+            "finite_difference_vs_ideal_tangent_error_spectral2": 3.3048093859095395e-11,
+            "finite_difference_K_defect_spectral2": 3.17648207696204e-11
+          }
+        ],
+        "scope": "One step and state per synthetic case; epsilon sweep exposes differencing/rounding effects and is not a full-domain exact derivative certificate."
+      },
+      "endpoint_compatibility_defect_spectral2": 1.5910246719213022e-15
+    },
+    {
+      "name": "controlled",
+      "A": [
+        [
+          0.0,
+          0.0,
+          0.9016393442622951,
+          -0.08196721311475409
+        ],
+        [
+          0.0,
+          0.0,
+          -0.08196721311475409,
+          0.7650273224043715
+        ],
+        [
+          -1.1,
+          -0.05,
+          -0.08040983606557378,
+          0.0004918032786885248
+        ],
+        [
+          -0.05,
+          -2.15,
+          0.0033606557377049194,
+          -0.10636612021857925
+        ]
+      ],
+      "C": [
+        [
+          0.09,
+          0.009
+        ],
+        [
+          0.009,
+          0.14
+        ]
+      ],
+      "stiffness": [
+        [
+          1.1,
+          0.05
+        ],
+        [
+          0.05,
+          2.15
+        ]
+      ],
+      "initial_state": [
+        0.25,
+        -0.18,
+        0.03,
+        0.04
+      ],
+      "T": 2.0,
+      "steps": [
+        0.2,
+        0.1,
+        0.05,
+        0.025
+      ],
+      "CM_inverse_commutator_spectral2": 0.0028688524590163946,
+      "original_equation_conjugacy_error": 2.2215299868541707e-16,
+      "reference": {
+        "exact": "xi^{-1}(expm(A*t)*xi(z0)); evaluated independently at each finest-grid time",
+        "independent_original_coordinate_check": {
+          "method": "Independent DOP853 in original coordinates",
+          "settings": [
+            {
+              "rtol": 1e-11,
+              "atol": 1e-13,
+              "max_step": 0.05
+            },
+            {
+              "rtol": 2e-13,
+              "atol": 2e-15,
+              "max_step": 0.025
+            }
+          ],
+          "interval_enclosure": false
+        },
+        "maximum_grid_exact_DOP853_difference": 4.197818625448209e-15,
+        "maximum_grid_DOP853_refinement_difference": 2.306595211858756e-16
+      },
+      "symbolic_original_model_build_seconds": 0.30565194599330425,
+      "model_build_note": "One-off symbolic differentiation of the full original mechanical H, its Jacobian and Dxi, disclosed separately from per-grid method cost. The latent A and point map are declared inputs.",
+      "methods": {
+        "ordinary_midpoint": [
+          {
+            "step": 0.2,
+            "endpoint_error": 0.004188889534331528,
+            "maximum_grid_error": 0.004188889534331528,
+            "RMS_grid_error": 0.002277398523341596,
+            "endpoint_error_order": null,
+            "maximum_grid_error_order": null,
+            "max_increment_residual_inf": 1.930400284066991e-14,
+            "max_Newton_corrections": 3.0,
+            "max_ideal_K_defect_spectral2": 0.000414919282678644,
+            "max_ideal_defect_against_uncontrolled_K_spectral2": 0.05954430157033977,
+            "minimum_Newton_matrix_singular_value": 0.9360779776636222,
+            "total_Newton_corrections": 21,
+            "failed_steps": 0,
+            "required_setup_operation_counts": {
+              "expm": 0,
+              "sqrtm": 0,
+              "Sylvester": 0,
+              "dense_linear_solve": 0
+            },
+            "chart_checks": {},
+            "cost": {
+              "repetitions": 3,
+              "cold_total_seconds": [
+                0.001679726003203541,
+                0.001636062006582506,
+                0.0024001129932003096
+              ],
+              "required_setup_seconds": [
+                1.1509982869029045e-06,
+                1.3219978427514434e-06,
+                1.391992554999888e-06
+              ],
+              "cold_advance_seconds": [
+                0.0016785750049166381,
+                0.0016347400087397546,
+                0.0023987210006453097
+              ],
+              "warm_cached_advance_seconds": [
+                0.001631154998904094,
+                0.0016669980104779825,
+                0.001475954006309621
+              ],
+              "median_cold_total_seconds": 0.001679726003203541,
+              "median_required_setup_seconds": 1.3219978427514434e-06,
+              "median_cold_advance_seconds": 0.0016785750049166381,
+              "median_warm_cached_advance_seconds": 0.001631154998904094,
+              "timing_scope": "Same process, single BLAS thread, one unmeasured dispatch warmup; cold includes every required per-grid method preparation. Independent references and ideal-tangent diagnostics excluded from every method. Common model-symbolic compilation reported separately.",
+              "interpretation": "Implementation-specific wall time, not a universal efficiency or complexity claim."
+            },
+            "minimum_sampled_mass_eigenvalue": 1.0433660085520373,
+            "minimum_abs_point_chart_denominator": 0.9886260800069043
+          },
+          {
+            "step": 0.1,
+            "endpoint_error": 0.0010546786039256457,
+            "maximum_grid_error": 0.0010546786039256457,
+            "RMS_grid_error": 0.0005627019062856237,
+            "endpoint_error_order": 1.9897644110753072,
+            "maximum_grid_error_order": 1.9897644110753072,
+            "max_increment_residual_inf": 2.6020852139652106e-17,
+            "max_Newton_corrections": 2.0,
+            "max_ideal_K_defect_spectral2": 5.3029393595234716e-05,
+            "max_ideal_defect_against_uncontrolled_K_spectral2": 0.03013525084691973,
+            "minimum_Newton_matrix_singular_value": 0.9652107119507317,
+            "total_Newton_corrections": 40,
+            "failed_steps": 0,
+            "required_setup_operation_counts": {
+              "expm": 0,
+              "sqrtm": 0,
+              "Sylvester": 0,
+              "dense_linear_solve": 0
+            },
+            "chart_checks": {},
+            "cost": {
+              "repetitions": 3,
+              "cold_total_seconds": [
+                0.0030494840029859915,
+                0.0036570230004144832,
+                0.0031116160098463297
+              ],
+              "required_setup_seconds": [
+                1.4319957699626684e-06,
+                1.7220008885487914e-06,
+                1.6620033420622349e-06
+              ],
+              "cold_advance_seconds": [
+                0.003048052007216029,
+                0.0036553009995259345,
+                0.0031099540065042675
+              ],
+              "warm_cached_advance_seconds": [
+                0.003407102994970046,
+                0.0032837110047694296,
+                0.0033072259975597262
+              ],
+              "median_cold_total_seconds": 0.0031116160098463297,
+              "median_required_setup_seconds": 1.6620033420622349e-06,
+              "median_cold_advance_seconds": 0.0031099540065042675,
+              "median_warm_cached_advance_seconds": 0.0033072259975597262,
+              "timing_scope": "Same process, single BLAS thread, one unmeasured dispatch warmup; cold includes every required per-grid method preparation. Independent references and ideal-tangent diagnostics excluded from every method. Common model-symbolic compilation reported separately.",
+              "interpretation": "Implementation-specific wall time, not a universal efficiency or complexity claim."
+            },
+            "minimum_sampled_mass_eigenvalue": 1.0433181047511122,
+            "minimum_abs_point_chart_denominator": 0.9884747645432151
+          },
+          {
+            "step": 0.05,
+            "endpoint_error": 0.0002641396785488335,
+            "maximum_grid_error": 0.0002641396785488335,
+            "RMS_grid_error": 0.00013954464278348778,
+            "endpoint_error_order": 1.9974304864203194,
+            "maximum_grid_error_order": 1.9974304864203194,
+            "max_increment_residual_inf": 2.699663409488906e-17,
+            "max_Newton_corrections": 2.0,
+            "max_ideal_K_defect_spectral2": 6.68317788076955e-06,
+            "max_ideal_defect_against_uncontrolled_K_spectral2": 0.015187086797129844,
+            "minimum_Newton_matrix_singular_value": 0.9818925380555251,
+            "total_Newton_corrections": 80,
+            "failed_steps": 0,
+            "required_setup_operation_counts": {
+              "expm": 0,
+              "sqrtm": 0,
+              "Sylvester": 0,
+              "dense_linear_solve": 0
+            },
+            "chart_checks": {},
+            "cost": {
+              "repetitions": 3,
+              "cold_total_seconds": [
+                0.006279315988649614,
+                0.006054112003766932,
+                0.006065098990802653
+              ],
+              "required_setup_seconds": [
+                1.6829872038215399e-06,
+                1.9330036593601108e-06,
+                1.4929973985999823e-06
+              ],
+              "cold_advance_seconds": [
+                0.006277633001445793,
+                0.0060521790001075715,
+                0.006063605993404053
+              ],
+              "warm_cached_advance_seconds": [
+                0.006981605998589657,
+                0.005987693992210552,
+                0.006020372995408252
+              ],
+              "median_cold_total_seconds": 0.006065098990802653,
+              "median_required_setup_seconds": 1.6829872038215399e-06,
+              "median_cold_advance_seconds": 0.006063605993404053,
+              "median_warm_cached_advance_seconds": 0.006020372995408252,
+              "timing_scope": "Same process, single BLAS thread, one unmeasured dispatch warmup; cold includes every required per-grid method preparation. Independent references and ideal-tangent diagnostics excluded from every method. Common model-symbolic compilation reported separately.",
+              "interpretation": "Implementation-specific wall time, not a universal efficiency or complexity claim."
+            },
+            "minimum_sampled_mass_eigenvalue": 1.0433065795557883,
+            "minimum_abs_point_chart_denominator": 0.9884368754161886
+          },
+          {
+            "step": 0.025,
+            "endpoint_error": 6.606435954725622e-05,
+            "maximum_grid_error": 6.606435954725622e-05,
+            "RMS_grid_error": 3.4725999211028253e-05,
+            "endpoint_error_order": 1.9993569561742408,
+            "maximum_grid_error_order": 1.9993569561742408,
+            "max_increment_residual_inf": 2.688821387764051e-17,
+            "max_Newton_corrections": 2.0,
+            "max_ideal_K_defect_spectral2": 8.382002674059906e-07,
+            "max_ideal_defect_against_uncontrolled_K_spectral2": 0.007627145962037549,
+            "minimum_Newton_matrix_singular_value": 0.990767714207433,
+            "total_Newton_corrections": 160,
+            "failed_steps": 0,
+            "required_setup_operation_counts": {
+              "expm": 0,
+              "sqrtm": 0,
+              "Sylvester": 0,
+              "dense_linear_solve": 0
+            },
+            "chart_checks": {},
+            "cost": {
+              "repetitions": 3,
+              "cold_total_seconds": [
+                0.012037659995257854,
+                0.01238520500191953,
+                0.012882480994448997
+              ],
+              "required_setup_seconds": [
+                3.4849945222958922e-06,
+                2.052998752333224e-06,
+                3.4760014386847615e-06
+              ],
+              "cold_advance_seconds": [
+                0.012034175000735559,
+                0.012383152003167197,
+                0.012879004993010312
+              ],
+              "warm_cached_advance_seconds": [
+                0.01215186899935361,
+                0.01271396099764388,
+                0.01307245199859608
+              ],
+              "median_cold_total_seconds": 0.01238520500191953,
+              "median_required_setup_seconds": 3.4760014386847615e-06,
+              "median_cold_advance_seconds": 0.012383152003167197,
+              "median_warm_cached_advance_seconds": 0.01271396099764388,
+              "timing_scope": "Same process, single BLAS thread, one unmeasured dispatch warmup; cold includes every required per-grid method preparation. Independent references and ideal-tangent diagnostics excluded from every method. Common model-symbolic compilation reported separately.",
+              "interpretation": "Implementation-specific wall time, not a universal efficiency or complexity claim."
+            },
+            "minimum_sampled_mass_eigenvalue": 1.0433037268810588,
+            "minimum_abs_point_chart_denominator": 0.9884273994382178
+          }
+        ],
+        "birkhoff_chart_midpoint": [
+          {
+            "step": 0.2,
+            "endpoint_error": 0.004196297313915219,
+            "maximum_grid_error": 0.004196297313915219,
+            "RMS_grid_error": 0.002235310307670404,
+            "endpoint_error_order": null,
+            "maximum_grid_error_order": null,
+            "max_inverse_chart_Newton_corrections": 3.0,
+            "max_inverse_chart_residual_inf": 4.468647674116255e-15,
+            "max_linear_chart_increment_residual_inf": 4.565792188770956e-15,
+            "max_ideal_K_defect_spectral2": 2.8823906579851417e-15,
+            "max_ideal_defect_against_uncontrolled_K_spectral2": 0.05895764146927984,
+            "minimum_point_chart_singular_value": 0.9513520500807091,
+            "total_inverse_chart_Newton_corrections": 23,
+            "failed_steps": 0,
+            "required_setup_operation_counts": {
+              "expm": 21,
+              "sqrtm": 21,
+              "Sylvester": 10,
+              "dense_linear_solve": 61
+            },
+            "chart_checks": {
+              "maximum_chart_congruence_defect_spectral2": 2.1012010347086927e-15,
+              "maximum_transformed_Hamiltonian_defect_spectral2": 4.800328110043265e-16,
+              "maximum_square_root_imaginary_part": 0.0,
+              "maximum_Sylvester_equation_residual_inf": 1.8394103955103342e-16,
+              "minimum_chart_singular_value": 1.0,
+              "maximum_Cayley_matrix_equation_residual_inf": 4.189357194483989e-16
+            },
+            "cost": {
+              "repetitions": 3,
+              "cold_total_seconds": [
+                0.0023658419959247112,
+                0.001960743000381626,
+                0.0021402280108304694
+              ],
+              "required_setup_seconds": [
+                0.0020659690053435043,
+                0.0017149090126622468,
+                0.0019158360082656145
+              ],
+              "cold_advance_seconds": [
+                0.000299872990581207,
+                0.00024583398771937937,
+                0.00022439200256485492
+              ],
+              "warm_cached_advance_seconds": [
+                0.00023957500525284559,
+                0.00018885001190938056,
+                0.00019133399473503232
+              ],
+              "median_cold_total_seconds": 0.0021402280108304694,
+              "median_required_setup_seconds": 0.0019158360082656145,
+              "median_cold_advance_seconds": 0.00024583398771937937,
+              "median_warm_cached_advance_seconds": 0.00019133399473503232,
+              "timing_scope": "Same process, single BLAS thread, one unmeasured dispatch warmup; cold includes every required per-grid method preparation. Independent references and ideal-tangent diagnostics excluded from every method. Common model-symbolic compilation reported separately.",
+              "interpretation": "Implementation-specific wall time, not a universal efficiency or complexity claim."
+            },
+            "minimum_sampled_mass_eigenvalue": 1.0433931462572965,
+            "minimum_abs_point_chart_denominator": 0.9886484814222133,
+            "max_increment_residual_inf": null,
+            "max_Newton_corrections": null,
+            "Newton_increment_note": "Not applicable: chart midpoint is a linear solve. Its residual and the nonlinear inverse-coordinate Newton residual/count are reported separately."
+          },
+          {
+            "step": 0.1,
+            "endpoint_error": 0.0010574589396332857,
+            "maximum_grid_error": 0.0010574589396332857,
+            "RMS_grid_error": 0.0005514186402831917,
+            "endpoint_error_order": 1.9885152530025074,
+            "maximum_grid_error_order": 1.9885152530025074,
+            "max_inverse_chart_Newton_corrections": 3.0,
+            "max_inverse_chart_residual_inf": 4.3021142204224816e-15,
+            "max_linear_chart_increment_residual_inf": 4.423544863740858e-15,
+            "max_ideal_K_defect_spectral2": 3.025482874811858e-15,
+            "max_ideal_defect_against_uncontrolled_K_spectral2": 0.030060268086398653,
+            "minimum_point_chart_singular_value": 0.9512196510090127,
+            "total_inverse_chart_Newton_corrections": 45,
+            "failed_steps": 0,
+            "required_setup_operation_counts": {
+              "expm": 41,
+              "sqrtm": 41,
+              "Sylvester": 20,
+              "dense_linear_solve": 121
+            },
+            "chart_checks": {
+              "maximum_chart_congruence_defect_spectral2": 2.3289904201179484e-15,
+              "maximum_transformed_Hamiltonian_defect_spectral2": 8.368563574270775e-16,
+              "maximum_square_root_imaginary_part": 0.0,
+              "maximum_Sylvester_equation_residual_inf": 1.6142243042026143e-16,
+              "minimum_chart_singular_value": 1.0,
+              "maximum_Cayley_matrix_equation_residual_inf": 2.6499256348261335e-16
+            },
+            "cost": {
+              "repetitions": 3,
+              "cold_total_seconds": [
+                0.004045228008180857,
+                0.00449328200193122,
+                0.0040806710021570325
+              ],
+              "required_setup_seconds": [
+                0.0035759629972744733,
+                0.0038551870093215257,
+                0.0036686410021502525
+              ],
+              "cold_advance_seconds": [
+                0.0004692650109063834,
+                0.0006380949926096946,
+                0.00041203000000678003
+              ],
+              "warm_cached_advance_seconds": [
+                0.0003698780055856332,
+                0.00039857100637163967,
+                0.0005207809881540015
+              ],
+              "median_cold_total_seconds": 0.0040806710021570325,
+              "median_required_setup_seconds": 0.0036686410021502525,
+              "median_cold_advance_seconds": 0.0004692650109063834,
+              "median_warm_cached_advance_seconds": 0.00039857100637163967,
+              "timing_scope": "Same process, single BLAS thread, one unmeasured dispatch warmup; cold includes every required per-grid method preparation. Independent references and ideal-tangent diagnostics excluded from every method. Common model-symbolic compilation reported separately.",
+              "interpretation": "Implementation-specific wall time, not a universal efficiency or complexity claim."
+            },
+            "minimum_sampled_mass_eigenvalue": 1.0433249749211948,
+            "minimum_abs_point_chart_denominator": 0.988480459567631,
+            "max_increment_residual_inf": null,
+            "max_Newton_corrections": null,
+            "Newton_increment_note": "Not applicable: chart midpoint is a linear solve. Its residual and the nonlinear inverse-coordinate Newton residual/count are reported separately."
+          },
+          {
+            "step": 0.05,
+            "endpoint_error": 0.00026489412676329366,
+            "maximum_grid_error": 0.00026489412676329366,
+            "RMS_grid_error": 0.00013661016911462796,
+            "endpoint_error_order": 1.9971138839086982,
+            "maximum_grid_error_order": 1.9971138839086982,
+            "max_inverse_chart_Newton_corrections": 3.0,
+            "max_inverse_chart_residual_inf": 4.274358644806853e-15,
+            "max_linear_chart_increment_residual_inf": 4.44436154545258e-15,
+            "max_ideal_K_defect_spectral2": 3.2229016644152404e-15,
+            "max_ideal_defect_against_uncontrolled_K_spectral2": 0.0151776368080693,
+            "minimum_point_chart_singular_value": 0.9512195625043589,
+            "total_inverse_chart_Newton_corrections": 92,
+            "failed_steps": 0,
+            "required_setup_operation_counts": {
+              "expm": 81,
+              "sqrtm": 81,
+              "Sylvester": 40,
+              "dense_linear_solve": 241
+            },
+            "chart_checks": {
+              "maximum_chart_congruence_defect_spectral2": 2.3289904201179484e-15,
+              "maximum_transformed_Hamiltonian_defect_spectral2": 7.902238852951176e-16,
+              "maximum_square_root_imaginary_part": 0.0,
+              "maximum_Sylvester_equation_residual_inf": 1.6703492578797795e-16,
+              "minimum_chart_singular_value": 1.0,
+              "maximum_Cayley_matrix_equation_residual_inf": 2.502677427275446e-16
+            },
+            "cost": {
+              "repetitions": 3,
+              "cold_total_seconds": [
+                0.00754002200847026,
+                0.006721760990330949,
+                0.011451497004600242
+              ],
+              "required_setup_seconds": [
+                0.006626510003115982,
+                0.00587819199427031,
+                0.010593487008009106
+              ],
+              "cold_advance_seconds": [
+                0.0009135120053542778,
+                0.0008435689960606396,
+                0.0008580099965911359
+              ],
+              "warm_cached_advance_seconds": [
+                0.0008651709940750152,
+                0.0007560300000477582,
+                0.00498249099473469
+              ],
+              "median_cold_total_seconds": 0.00754002200847026,
+              "median_required_setup_seconds": 0.006626510003115982,
+              "median_cold_advance_seconds": 0.0008580099965911359,
+              "median_warm_cached_advance_seconds": 0.0008651709940750152,
+              "timing_scope": "Same process, single BLAS thread, one unmeasured dispatch warmup; cold includes every required per-grid method preparation. Independent references and ideal-tangent diagnostics excluded from every method. Common model-symbolic compilation reported separately.",
+              "interpretation": "Implementation-specific wall time, not a universal efficiency or complexity claim."
+            },
+            "minimum_sampled_mass_eigenvalue": 1.043308302516109,
+            "minimum_abs_point_chart_denominator": 0.9884383051437962,
+            "max_increment_residual_inf": null,
+            "max_Newton_corrections": null,
+            "Newton_increment_note": "Not applicable: chart midpoint is a linear solve. Its residual and the nonlinear inverse-coordinate Newton residual/count are reported separately."
+          },
+          {
+            "step": 0.025,
+            "endpoint_error": 6.625670322462951e-05,
+            "maximum_grid_error": 6.625670322462951e-05,
+            "RMS_grid_error": 3.397716942254056e-05,
+            "endpoint_error_order": 1.9992775313487121,
+            "maximum_grid_error_order": 1.9992775313487121,
+            "max_inverse_chart_Newton_corrections": 3.0,
+            "max_inverse_chart_residual_inf": 4.978656376053436e-15,
+            "max_linear_chart_increment_residual_inf": 5.3316726034147166e-15,
+            "max_ideal_K_defect_spectral2": 2.750570880383077e-15,
+            "max_ideal_defect_against_uncontrolled_K_spectral2": 0.007625960750304366,
+            "minimum_point_chart_singular_value": 0.9512195404109925,
+            "total_inverse_chart_Newton_corrections": 185,
+            "failed_steps": 0,
+            "required_setup_operation_counts": {
+              "expm": 161,
+              "sqrtm": 161,
+              "Sylvester": 80,
+              "dense_linear_solve": 481
+            },
+            "chart_checks": {
+              "maximum_chart_congruence_defect_spectral2": 2.455039238184609e-15,
+              "maximum_transformed_Hamiltonian_defect_spectral2": 1.1928809713206845e-15,
+              "maximum_square_root_imaginary_part": 0.0,
+              "maximum_Sylvester_equation_residual_inf": 1.6715071406483403e-16,
+              "minimum_chart_singular_value": 1.0,
+              "maximum_Cayley_matrix_equation_residual_inf": 4.479944552533786e-16
+            },
+            "cost": {
+              "repetitions": 3,
+              "cold_total_seconds": [
+                0.01624899399757851,
+                0.018741494001005776,
+                0.015942942001856863
+              ],
+              "required_setup_seconds": [
+                0.014439986000070348,
+                0.01673309100442566,
+                0.013961638993350789
+              ],
+              "cold_advance_seconds": [
+                0.0018090079975081608,
+                0.0020084029965801165,
+                0.0019813030085060745
+              ],
+              "warm_cached_advance_seconds": [
+                0.0018130040116375312,
+                0.0016174839984159917,
+                0.0016617899964330718
+              ],
+              "median_cold_total_seconds": 0.01624899399757851,
+              "median_required_setup_seconds": 0.014439986000070348,
+              "median_cold_advance_seconds": 0.0019813030085060745,
+              "median_warm_cached_advance_seconds": 0.0016617899964330718,
+              "timing_scope": "Same process, single BLAS thread, one unmeasured dispatch warmup; cold includes every required per-grid method preparation. Independent references and ideal-tangent diagnostics excluded from every method. Common model-symbolic compilation reported separately.",
+              "interpretation": "Implementation-specific wall time, not a universal efficiency or complexity claim."
+            },
+            "minimum_sampled_mass_eigenvalue": 1.0433041579606852,
+            "minimum_abs_point_chart_denominator": 0.9884277572441955,
+            "max_increment_residual_inf": null,
+            "max_Newton_corrections": null,
+            "Newton_increment_note": "Not applicable: chart midpoint is a linear solve. Its residual and the nonlinear inverse-coordinate Newton residual/count are reported separately."
+          }
+        ]
+      },
+      "representative_composed_derivative_check": {
+        "time": 0.0,
+        "h": 0.1,
+        "state": [
+          0.25,
+          -0.16999999999999998,
+          0.05,
+          0.07
+        ],
+        "epsilon_sweep": [
+          {
+            "difference_step": 0.0002,
+            "finite_difference_vs_ideal_tangent_error_spectral2": 3.7869932787414274e-09,
+            "finite_difference_K_defect_spectral2": 6.624319389700516e-10
+          },
+          {
+            "difference_step": 2e-05,
+            "finite_difference_vs_ideal_tangent_error_spectral2": 3.7920730724399284e-11,
+            "finite_difference_K_defect_spectral2": 6.0121360866489326e-12
+          },
+          {
+            "difference_step": 2e-06,
+            "finite_difference_vs_ideal_tangent_error_spectral2": 1.5653840362079045e-11,
+            "finite_difference_K_defect_spectral2": 1.9459398192588114e-11
+          }
+        ],
+        "scope": "One step and state per synthetic case; epsilon sweep exposes differencing/rounding effects and is not a full-domain exact derivative certificate."
+      },
+      "endpoint_compatibility_defect_spectral2": 8.989758658467586e-16
+    }
+  ],
+  "control_comparison": {
+    "reference": "same exact controlled target for both groups",
+    "initial_state": [
+      0.25,
+      -0.18,
+      0.03,
+      0.04
+    ],
+    "T": 2.0,
+    "h": 0.025,
+    "uncontrolled_RMS_to_target": 0.03581297472117815,
+    "controlled_RMS_to_target": 3.397716942254056e-05,
+    "maximum_generalized_control_norm": 0.0607119447957401,
+    "maximum_control_substitution_identity_error": 1.2412670766236366e-16,
+    "K_controlled_minus_uncontrolled_at_t1_z0_spectral2": 0.21211101460049994,
+    "input_assumptions": "Ideal, unrestricted, fully actuated two-coordinate generalized force; no learned coefficients, magnetic decoder, measurement noise or saturation.",
+    "scope": "Confirms a structure can be rebuilt for a closed loop that still has nonproportional drag; not a catheter control-performance result."
+  },
+  "error_definitions": {
+    "endpoint_error": "||z_N-z_ref(T)||_2",
+    "maximum_grid_error": "max_k ||z_k-z_ref(t_k)||_2",
+    "structure": "max_k ||Dpsi^T K(z_{k+1},t_{k+1})Dpsi-K(z_k,t_k)||_2",
+    "solves": "Infinity residual of ordinary nonlinear increment, chart linear midpoint increment and inverse xi equation reported separately"
+  },
+  "Newton": {
+    "ordinary_tolerance_inf": 2e-14,
+    "ordinary_max_corrections": 12,
+    "inverse_chart_function_tolerance": 5e-15,
+    "inverse_chart_max_corrections": 30
+  },
+  "limitations": [
+    "Known nonlinear conjugacy and explicit matrix-exponential K are essential to this test, not an efficient construction for arbitrary f.",
+    "Required chart preparation is included in cold cost. Cached warm cost is disclosed separately and cannot establish a universal speed advantage.",
+    "No proportional weighted formula or autonomous Central4 is assigned to this general nonautonomous chart problem.",
+    "Finite-difference tangent checks and floating-point defects are implementation diagnostics, not interval enclosures or exact arithmetic certificates."
+  ],
+  "status": "all assertions passed",
+  "provenance": {
+    "baseline_file": "../new_baseline.json",
+    "baseline_sha256": "2bac37b2f4444efc6a0ba742139fbf0b35e268e9f4f3597ba13a0793bc2049ac",
+    "source_sha256": {
+      "build_assets.py": "9fcfd879203ee7b03f21ec0eb41f624a0e34f41c2801d8e5815eae6b3c051db9",
+      "build_chinese.py": "8f7259864c107157d465520db05a8d0790b504c39bc0b1c0b4a8f946e9b9f157",
+      "check_translation.py": "e27b586d18039fedc2fe1ada850f75e72e31cc9cc2ae8a3da79c876fd3fd59a3",
+      "common.py": "3221eb0a30f9492e6b84849db4170b13690bf9d7c5fd8f7831307b5eaba84139",
+      "magnetic.py": "484247c253ac13f4fd4f6e648d4fd73c1a2a7af3ce4ee3c53fadc3d73e80d825",
+      "run_all.py": "9c327074b858d8362ebba2ded9699ea7fcd670b7c3aee69b5287b96aa89bfa54",
+      "synthetic.py": "d12e55c255121841a2a288418eb8abca0c0a11f0d08e60442418e1677bc1c28c"
+    },
+    "environment": {
+      "python": "3.12.14",
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "sympy": "1.13.1",
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+      "processor": ""
+    },
+    "parameter_policy": "Material A is the sole physical baseline. B's display-precision old-v10 values are not loaded.",
+    "structure_policy": "Ideal implicit/conjugated tangents evaluated at floating-point states; no assertion that finite Newton code is exactly structure preserving."
+  }
+}

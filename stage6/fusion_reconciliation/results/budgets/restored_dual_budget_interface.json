@@ -1,0 +1,8 @@
+{
+  "status": "conditional_missing_coefficient_error_bound",
+  "epsilon_A": null,
+  "epsilon_B": null,
+  "KAM_certificate": false,
+  "symbolic_A": "4.689940278267777e-13 + 1.112134755326214e-08 * b",
+  "symbolic_B": "6.293752412502822e-13 + 1.112134755326214e-08 * b"
+}

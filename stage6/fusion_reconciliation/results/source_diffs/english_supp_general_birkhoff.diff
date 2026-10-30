@@ -1,0 +1,218 @@
+--- stage3/source_inputs/v10/v10_framework_20261028/english/sections/supp_general_birkhoff.tex
++++ fusion_archive::english/sections/supp_general_birkhoff.tex
+@@ -0,0 +1,215 @@
++\subsection{Local transport, compatibility and gauge choice}
++\label{ss:general-transport}
++
++The local construction in Supplement~\ref{ss:birkhoff} applies on an even-dimensional regular phase-coordinate domain. Assume that $f$ is smooth on an open space--time neighborhood. Restrict the initial coordinate ball and time interval so that the two-parameter flow $\Phi_{t,t_0}$ and its inverse are defined there. This is a local assumption on a regular ODE, not a claim that a constrained differential-algebraic system or a nonsmooth contact law has already been reduced to that form. Choose $\mathcal R_0=(p,0)$, whose exterior derivative has matrix $\mathcal K_0=-J$.
++
++Let $S(t,z_0)=D_{z_0}\Phi_{t,t_0}(z_0)$. The one-form transport equation \eqref{struct:transport} has the characteristic solution
++\begin{equation}\label{ss:general-characteristics}
++\begin{aligned}
++ \mathcal R(\Phi_{t,t_0}(z_0),t)&=S(t,z_0)^{-\mathsf T}\mathcal R_0(z_0),\\
++ \mathcal K(\Phi_{t,t_0}(z_0),t)
++     &=S(t,z_0)^{-\mathsf T}\mathcal K_0S(t,z_0)^{-1}.
++\end{aligned}
++\end{equation}
++For the first identity, differentiate along the trajectory and use $\dot S=(D_zf)S$. The result is $\dot{\mathcal R}=-(D_zf)^{\mathsf T}\mathcal R$, precisely the transport PDE along a characteristic. The second identity follows by applying the exterior derivative to the inverse-flow pullback; exterior differentiation commutes with pullback. Thus $\mathcal K$ is skew-symmetric, closed and nondegenerate:
++\[
++ \det\mathcal K=\det\mathcal K_0/(\det S)^2\ne0.
++\]
++The coordinate cancellation \eqref{struct:transport-substitution} proves the Birkhoff equation with $\mathcal B=\mathcal R^{\mathsf T}f$ without a separate integrability assumption on this scalar.
++
++Differentiating $S^{\mathsf T}\mathcal KS=\mathcal K_0$ along the flow gives
++\begin{equation}\label{ss:general-K-transport}
++ \partial_t\mathcal K+(f\cdot\nabla)\mathcal K
++ +(D_zf)^{\mathsf T}\mathcal K+\mathcal KD_zf=0.
++\end{equation}
++Combining this identity with spatial closure yields
++$\partial_t\mathcal K_{ij}=\partial_i b_j-\partial_j b_i$ for $b=\mathcal Kf$. These are exactly the compatibility identities \eqref{ss:birkhoff-compatibility}. Together with skew-symmetry they are the coordinate Helmholtz conditions for variational self-adjointness of $\mathcal K\dot z-b$. They have been established directly here in the smooth local setting. The analytic formulation appears in \citet[Chapter~15, Theorem~2.2]{fengqin} and \citet[Proposition~2.1]{suqin2003}; related local analytic constructions for constrained systems are discussed by \citet{guo2010}. Their broader terminology is not used to infer global, nondegenerate or nonsmooth results here.
++
++The variational meaning can also be checked directly. For the action $\mathcal A_{\rm B}[z]=\int L_{\rm B}(z,\dot z,t)\dd t$ with $L_{\rm B}=\mathcal R^{\mathsf T}\dot z-\mathcal B$, its Euler expression is
++\begin{equation}\label{ss:general-variational}
++\begin{aligned}
++ \frac{\partial L_{\rm B}}{\partial z_i}
++ -\frac{\dd}{\dd t}\frac{\partial L_{\rm B}}{\partial\dot z_i}
++ &=(\partial_i\mathcal R_j-\partial_j\mathcal R_i)\dot z_j\\
++ &\quad-\partial_i\mathcal B-\partial_t\mathcal R_i\\
++ &=\mathcal K_{ij}\dot z_j-b_i.
++\end{aligned}
++\end{equation}
++For smooth variations vanishing at both time endpoints, the second variation of this scalar action is symmetric. Its linearized Euler operator is therefore formally self-adjoint. This statement concerns the multiplier equation $\mathcal K\dot z-b=0$; it does not require the physical Jacobian $D_zf$ to be a symmetric matrix.
++
++The one-form and scalar are not unique. On a common local product neighborhood in $z,t$, with integration at fixed $z$, define
++\begin{equation}\label{ss:general-gauge}
++\begin{aligned}
++ \sigma(z,t)&=\int_{t_0}^{t}[\mathcal B(z,s)-H(z,s)]\dd s,\\
++ \widetilde{\mathcal R}&=\mathcal R+\nabla_z\sigma,\qquad
++ \widetilde{\mathcal B}=\mathcal B-\partial_t\sigma=H.
++\end{aligned}
++\end{equation}
++The added gradient has zero exterior derivative, and its time derivative cancels the change in the scalar gradient. Hence $\widetilde{\mathcal K}=\mathcal K$ and
++$\nabla\widetilde{\mathcal B}+\partial_t\widetilde{\mathcal R}=\mathcal Kf$.
++The adjusted $\widetilde{\mathcal R}$ generally does not satisfy the original homogeneous transport gauge with scalar $\widetilde{\mathcal R}^{\mathsf T}f$. Thus $\mathcal B=H$ is permitted only with the corresponding adjustment of the one-form; it does not imply conservation of physical energy.
++
++For proportional damping, both the transported structure and the explicit choice \eqref{struct:weighted-hamiltonian} have initial matrix $-J$ and satisfy \eqref{ss:general-K-transport}. Uniqueness along characteristics gives the same $\mathcal K=-aJ$. On a simply connected local coordinate domain their one-forms differ by an exact differential, with the scalar changed consistently as above. The explicit choice is retained because its lift and numerical implementation are available directly.
++
++The inverse-flow formula proves existence but need not be used as the numerical recipe. For analytic data, write $s=t-t_0$,
++$f=\sum_{b\ge0}s^bf^{(b)}$ and $\mathcal R=\sum_{a\ge0}s^a\mathcal R^{(a)}$, where the coefficients include the Taylor factorials. Substitution into \eqref{struct:transport} and matching $s^m$ gives
++\begin{equation}\label{ss:general-R-recurrence}
++\begin{aligned}
++ \mathcal R^{(m+1)}&=-\frac1{m+1}\sum_{a+b=m}
++ \bigl[(D_z\mathcal R^{(a)})f^{(b)}\\
++ &\hspace{4em}+(D_zf^{(b)})^{\mathsf T}\mathcal R^{(a)}\bigr].
++\end{aligned}
++\end{equation}
++For $f=(H_p,-H_q+Q_{\rm nc})$, $H=p^{\mathsf T}M(q)^{-1}p/2+V(q)$ and $\mathcal R^{(0)}=(p,0)$, the first coefficient is
++\begin{equation}\label{ss:general-first-coefficient}
++\begin{aligned}
++ (\mathcal R^{(1)}_q)_i
++  &=\partial_{q_i}V-\tfrac12p^{\mathsf T}
++                 (\partial_{q_i}M^{-1})p-(Q_{\rm nc})_i,\\
++ \mathcal R^{(1)}_p&=-M^{-1}p.
++\end{aligned}
++\end{equation}
++Here $Q_{\rm nc}$ denotes the specified nonconservative generalized force, evaluated at $t_0$ in this first coefficient. The two coordinate groups of the one-form must generally evolve; setting its momentum components permanently to zero would restrict this construction. Analyticity gives a convergent local series on a sufficiently small neighborhood. With finite smoothness one uses only a finite expansion with an appropriate remainder. Solving the transport PDE, forming high-order coefficients and evaluating their derivatives can be expensive in many dimensions. None of these formulas establishes a general inexpensive solver for the full catheter model.
++
++\subsection{Compatible charts, endpoint projection and the general midpoint map}
++\label{ss:general-chart}
++
++A local Moser construction makes the chart condition \eqref{struct:general-chart} explicit. Write $\omega_t=\dd_z(\mathcal R^{\mathsf T}\dd z)$, and use an auxiliary parameter $\lambda\in[0,1]$, distinct from physical time. Set
++\begin{equation}\label{ss:general-moser}
++\begin{aligned}
++ \mathcal K_{\lambda,t}&=\mathcal K_0+\lambda(\mathcal K_t-\mathcal K_0),\\
++ \mathcal K_{\lambda,t}v_{\lambda,t}&=\mathcal R_t-\mathcal R_0,\\
++ \frac{\dd\rho_{\lambda,t}}{\dd\lambda}
++     &=v_{\lambda,t}\circ\rho_{\lambda,t},\qquad \rho_{0,t}=\mathrm{id}.
++\end{aligned}
++\end{equation}
++Subscripts $t$ here denote evaluation at physical time, not a time derivative. Shrink the time interval and coordinate neighborhood so that every $\mathcal K_{\lambda,t}$ is nondegenerate and this auxiliary flow remains in its domain for $0\le\lambda\le1$. These conditions follow locally near $t_0$ from $\mathcal K_{t_0}=\mathcal K_0$, smoothness and a domain margin; they need not persist globally.
++
++With the matrix convention used here, contraction of a two-form has coefficient vector $-\mathcal K_{\lambda,t}v_{\lambda,t}$. Consequently,
++\[
++ \iota_{v_{\lambda,t}}\omega_{\lambda,t}
++    =-(\mathcal R_t-\mathcal R_0)^{\mathsf T}\dd z.
++\]
++Cartan's formula and \eqref{ss:general-moser} then give
++$\frac{\dd}{\dd\lambda}(\rho_{\lambda,t}^*\omega_{\lambda,t})=0$.
++Thus $\rho_{1,t}^*\omega_t=\omega_0$ and
++$\mathcal C_t=\rho_{1,t}^{-1}$ satisfies \eqref{struct:general-chart}.
++This is the local form of Moser's argument \citep[Sections~1.4--1.5]{cannas2005}. It requires an auxiliary integration and inversion, not the exact inverse of the original physical flow. Approximating either operation still incurs an implementation error.
++
++The transformed exact flow
++$\mathcal C_t\circ\Phi_{t,s}\circ\mathcal C_s^{-1}$ preserves the constant $\mathcal K_0$. Differentiating this identity at equal endpoints shows that the transformed vector field in \eqref{struct:chart-field} obeys
++\[
++ (D_Zf_Z)^{\mathsf T}\mathcal K_0+\mathcal K_0D_Zf_Z=0.
++\]
++Hence the one-form with coefficients $\mathcal K_0f_Z$ is closed. On a sufficiently small star-shaped chart about $Z_c$, a scalar is explicitly
++\begin{equation}\label{ss:general-chart-Hamiltonian}
++\begin{aligned}
++ \mathcal H(Z,t)&=\int_0^1\bigl[(Z-Z_c)^{\mathsf T}\mathcal K_0\\
++ &\qquad f_Z(Z_c+s(Z-Z_c),t)\bigr]\dd s+c(t).
++\end{aligned}
++\end{equation}
++The local Poincar\'e identity gives $\nabla_Z\mathcal H=\mathcal K_0f_Z$, so that $f_Z=J\nabla_Z\mathcal H$. The term $\partial_t\mathcal C_t$ in \eqref{struct:chart-field} is essential; transforming only the spatial vector field generally gives the wrong Hamiltonian.
++
++Keep the manuscript's endpoint convention unchanged. For fixed $t_-=t$ and $t_+=t+h$, write $T_\pm=D\mathcal C_{t_\pm}(z_\pm)$. Substitution of $Z_\pm=\mathcal C_{t_\pm}(z_\pm)$ into \eqref{struct:endpoint-variables} gives
++\begin{equation}\label{ss:general-endpoint-Jacobian}
++ D\alpha=\begin{pmatrix}
++ \mathsf E T_+&-\mathsf E T_-\\
++ T_0T_+/2&T_0T_-/2
++ \end{pmatrix}.
++\end{equation}
++Since $\mathsf E^{\mathsf T}T_0=\mathcal K_0$ and $T_0^{\mathsf T}\mathsf E=-\mathcal K_0$, direct block multiplication yields
++\begin{equation}\label{ss:general-endpoint-compatibility}
++\begin{aligned}
++ (D\alpha)^{\mathsf T}J_{4n}D\alpha
++ &=\begin{pmatrix}\mathcal K(z_+,t_+)&0\\
++                   0&-\mathcal K(z_-,t_-)\end{pmatrix},\\
++ J_{4n}&=\begin{pmatrix}0&I_{2n}\\-I_{2n}&0\end{pmatrix}.
++\end{aligned}
++\end{equation}
++On a physical graph $z_+=\Phi(z_-)$ its lower projection derivative is
++$T_0(T_+D\Phi+T_-)/2$. At zero step it is $T_0D\mathcal C_t$, which is nonsingular. For a finite step the stated projection condition must still hold; local continuity supplies it for sufficiently small steps on a fixed compact neighborhood. This verifies the hypotheses of the endpoint proposition and of \citet[Chapter~15, Theorems~3.5 and~4.1]{fengqin}. The corresponding preprint results have different numbers \citep[Theorems~3.1 and~4.1]{suqin2003}. The scalar generator is unique only after fixing its additive constant.
++
++For comparison with the alternative convention $w_B=\bar Z$, $\widehat w_B=J(Z_+-Z_-)$, one has $w=T_0w_B$ and $\widehat w=T_0\widehat w_B$. Consequently the manuscript's generator is
++\[
++ \varphi_h(w)=-h\mathcal H(T_0w,t+h/2).
++\]
++Indeed, $\nabla_w\varphi_h=-hT_0\nabla_Z\mathcal H$, and
++\[
++ Z_+-Z_-=\mathsf E\widehat w
++       =-h\mathsf ET_0\nabla_Z\mathcal H
++       =hJ\nabla_Z\mathcal H(\bar Z,t+h/2).
++\]
++Thus the sign and midpoint equation follow from the same endpoint variables, rather than from an independent choice of the force. Its local Newton matrix is $I_{2n}-hD_Zf_Z/2$. Whenever this matrix is invertible, the exact canonical midpoint map is symplectic by the Cayley calculation in Supplement~\ref{ss:exact-symplectic}. If $D_H$ denotes its derivative, the composite derivative is $D\Psi=T_+^{-1}D_HT_-$. Therefore
++\[
++ (D\Psi)^{\mathsf T}\mathcal K_+D\Psi
++   =T_-^{\mathsf T}D_H^{\mathsf T}\mathcal K_0D_HT_-
++   =\mathcal K_-.
++\]
++This proves \eqref{struct:general-K-preservation} for the ideal map and matches the transformation-based construction of \citet{kong2016}. The exact inverse-flow chart would instead make the transformed field zero; that observation is an existence device, not a useful integration method or a KAM argument. The synthetic verification uses a specified nontrivial chart and a nonzero midpoint error.
++
++The analytic recurrence for full endpoint generators in \citet[Chapter~15, Theorems~4.4--4.5]{fengqin} requires an analytic compatible transformation and the projection condition. Its stated order follows from retaining the corresponding complete time expansion. The present time-midpoint formula has a separate second-order consistency proof below; it is not assigned an order merely by counting one retained generator term. Nor does the autonomous Central4 formula automatically apply to a general explicitly time-dependent $\mathcal H$.
++
++\subsection{Control compatibility and the structure of the actual closed loop}
++\label{ss:general-control}
++
++Let $v_u=Ga_u$ be the smooth feedback vector field in Section~\ref{ctrl:structure}. Since the original field satisfies $\partial_t\omega+\mathcal L_f\omega=0$, retaining the same $\omega$ for $f+v_u$ is equivalent to $\mathcal L_{v_u}\omega=0$. Spatial closure and Cartan's formula give
++\[
++ \mathcal L_{v_u}\omega
++  =\dd_z(\iota_{v_u}\omega)
++  =-\dd_z[(\mathcal Kv_u)^{\mathsf T}\dd z].
++\]
++On a simply connected local domain this vanishes precisely when $\mathcal Kv_u=\nabla_zW$. Adding this equality to the original Birkhoff equation proves \eqref{ctrl:same-K}; the same one-form $\mathcal R$ and scalar $\mathcal B+W$ can be used. Designing a desired $W$ still requires its gradient to lie in the image of $\mathcal KG$, with all input constraints respected.
++
++When this condition fails, set $f_u=f+Ga_u$ first and solve the transport equation with $f_u$ in place of $f$ and the same initial $\mathcal R_0$. The characteristic proof gives $\mathcal R_u$, $\mathcal K_u=\dd_z\mathcal R_u$ and $\mathcal B_u=\mathcal R_u^{\mathsf T}f_u$ on a local domain. The chart and midpoint construction then preserve $\mathcal K_u$ under the same assumptions. It does not preserve the uncontrolled $\mathcal K$ unless the compatibility condition is also met. This mathematical representation alone proves neither good tracking nor feasibility of a chosen control.
++
++For the potential-only magnetic residual, $\mathcal K_\gamma(0,\nabla\widehat R)^{\mathsf T}$ is the gradient of $-e^{\gamma\tau}\widehat R$ at fixed time. By contrast, the coefficients $(-e^{\gamma\tau}\widehat\gamma Y,0)$ produced by damping compensation have a nonzero mixed position--momentum curl when the constant $\widehat\gamma\ne0$. The original structure therefore changes. Direct substitution of the retained control law gives \eqref{struct:route-a-closed}, whose proportional-damping structure is $\mathcal K_{\delta\gamma}=-e^{\delta\gamma\tau}J$. Zero residual damping yields the standard exact symplectic midpoint map of $h_c$. Nonzero constant residual damping yields the weighted conformal symplectic map of \eqref{ctrl:weighted-midpoint}, while ordinary midpoint remains a consistent comparison method without that exact exponential factor.
++
++In the full beam the magnetic force and torque supply only two input columns. Their rank cannot exceed two, and momentum-only forcing cannot directly change the position equation. The potential-residual model and the two-mode port inversion respect that restriction. The ideal fully actuated nonproportional synthetic example verifies the new-structure argument on its declared mathematical object; it does not provide a magnetic realization of an arbitrary high-dimensional generalized correction.
++
++\subsection{General-chart accuracy and errors in the constructed structure}
++\label{ss:general-accuracy}
++
++Fix a finite time interval $[t_0,t_0+T]$ on which the chosen charts, their inverses, the transformed trajectories and all step images stay in their working domains. Assume the transformed field $f_Z$ is twice continuously differentiable with bounded derivatives, the charts have the derivatives needed for the transformations, and their inverse derivatives are uniformly bounded there. A sufficient local smooth setting is a $C^3$ chart family and a smooth physical field. Also assume a stable locally unique implicit branch, for example $hL_Z/2<1$ on a convex neighborhood mapped into itself by the midpoint fixed-point iteration, where $L_Z$ is a state Lipschitz bound for $f_Z$.
++
++Substitution of the exact transformed trajectory into the time-midpoint increment equation leaves $O(h^3)$, by the same temporal-midpoint Taylor argument as in Proposition~\ref{ctrl:convergence}. Applying that proposition in $Z$ coordinates and returning through the bounded inverse chart gives
++\begin{equation}\label{ss:general-chart-error}
++ \max_{kh\le T}\norm{\widetilde z_k-z(t_k)}
++   \le C_T\bigl(e_0+h^2+\eta_h/h\bigr).
++\end{equation}
++Here $e_0$ is the initial error and $\eta_h$ bounds each residual in the complete transformed increment equation, including any equivalent per-step coordinate implementation perturbation. If a physical residual is reported, its conversion to these coordinates must be bounded first. A nonlinear chart cannot simply be assigned a constant amplification factor at every step: the stability estimate is established for the transformed trajectory over the whole interval and only then converted back. The constant $C_T$ includes the required chart bounds and is not asserted uniform as $T\to\infty$.
++
++There is a separate error if the one-form itself is approximated. Let smooth $\mathcal R_{\rm a},\mathcal B_{\rm a}$ define a closed nondegenerate $\mathcal K_{\rm a}$ on a common working domain, and set
++\begin{equation}\label{ss:general-structure-residual}
++\begin{aligned}
++ e_{\rm B}&=\mathcal K_{\rm a}f-\partial_t\mathcal R_{\rm a}
++                             -\nabla\mathcal B_{\rm a},\\
++ f_{\rm a}&=\mathcal K_{\rm a}^{-1}
++                 (\nabla\mathcal B_{\rm a}+\partial_t\mathcal R_{\rm a})\\
++          &=f-\mathcal K_{\rm a}^{-1}e_{\rm B}.
++\end{aligned}
++\end{equation}
++Thus the approximated structure represents $f_{\rm a}$ exactly, not necessarily $f$. If $\norm{\mathcal K_{\rm a}^{-1}}\le C_K$ and $\norm{e_{\rm B}}\le\epsilon_{\rm B}$ uniformly, then $\norm{f-f_{\rm a}}\le C_K\epsilon_{\rm B}$. For equal initial states and an $L$-Lipschitz true field, Gronwall's inequality gives
++\[
++ \norm{z(t)-z_{\rm a}(t)}
++ \le C_K\epsilon_{\rm B}\frac{e^{L(t-t_0)}-1}{L},
++\]
++with the limit $C_K\epsilon_{\rm B}(t-t_0)$ when $L=0$. Provided the approximated chart method has the preceding derivative and stability bounds uniformly, the triangle inequality yields
++\begin{equation}\label{ss:general-total-error}
++\begin{aligned}
++ \max_{kh\le T}\norm{\widetilde z_k-z(t_k)}
++ \le{}&C_T(h^2+\eta_h/h)\\
++ &+C_K\epsilon_{\rm B}(e^{LT}-1)/L.
++\end{aligned}
++\end{equation}
++Second-order refinement of this joint approximation requires, in particular, $\epsilon_{\rm B}=O(h^2)$ and $\eta_h=O(h^3)$ with uniform constants. A fixed structural approximation error, like a fixed learning error in \eqref{ctrl:target-error-split}, is not removed by reducing the integration step. Sampled residuals alone do not establish the uniform bounds used in this estimate.
++
++Trajectory convergence and geometric fidelity also remain distinct. Suppose an approximate smooth chart $\widetilde{\mathcal C}_t$ has congruence defect
++$E_t=(D\widetilde{\mathcal C}_t)^{\mathsf T}\mathcal K_0D\widetilde{\mathcal C}_t-\mathcal K_t$.
++Even if its internal map is exactly symplectic, the composed map satisfies
++\begin{equation}\label{ss:general-chart-defect}
++\begin{aligned}
++ (D\widetilde\Psi)^{\mathsf T}\mathcal K_+D\widetilde\Psi-\mathcal K_-
++ =E_--(D\widetilde\Psi)^{\mathsf T}E_+D\widetilde\Psi.
++\end{aligned}
++\end{equation}
++An internal solve or tangent error supplies further terms. An ideal implicit-map Jacobian evaluated at a numerically computed state is not automatically the derivative of the entire floating-point Newton program. The experiments therefore report the ideal tangent identity, actual increment and inverse-chart residuals, and independent finite-difference tangent diagnostics at representative steps and several difference spacings separately. None is substituted for the conditional hypotheses of the convergence or KAM results.

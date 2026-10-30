@@ -1,0 +1,38 @@
+--- stage3/source_inputs/v10/v10_framework_20261028/english/sections/controlled_analysis.tex
++++ fusion_archive::english/sections/controlled_analysis.tex
+@@ -1,7 +1,7 @@
+ \subsection{Putting the feedback into the same implicit equations}
+ \label{ctrl:placement}
+ 
+-The second subproblem supplies an identified residual and its compensation. The third asks what difference scheme results after that feedback is applied, which structure it preserves, and how its numerical trajectories approach the actual closed-loop dynamics. These questions concern the same plant and the same unknown midpoint used in Section~\ref{sec:derivation}. Substitution of \eqref{struct:route-a-control} into the plant gives the controlled update
++The identified residual and damping estimate determine a fixed feedback law. Its discrete structure and convergence must be assessed for the resulting actual closed loop, using the same plant and unknown midpoint as in Section~\ref{sec:derivation}. Substitution of \eqref{struct:route-a-control} into the plant gives the controlled update
+ \begin{equation}\label{ctrl:midpoint}
+ \begin{aligned}
+  X_+-X_-&=\Delta\mathsf N\bar Y,\\
+@@ -31,6 +31,17 @@
+ 
+ \subsection{The exact structure of the controlled map}
+ \label{ctrl:structure}
++
++The distinction between the original and controlled structures is explicit in the general construction. Let $G(z,t)\in\R^{2n\times m}$ be the actual input matrix and let $a_u(z,t)\in\R^m$ be a prescribed smooth feedback. On a simply connected local domain the same $\mathcal K$ is compatible with $f_u=f+Ga_u$ precisely when the one-form with coefficients $\mathcal KGa_u$ is closed; equivalently, a scalar $W$ satisfies
++\begin{equation}\label{ctrl:same-K}
++\begin{aligned}
++ \mathcal KGa_u&=\nabla W,\\
++ \mathcal Kf_u&=\nabla(\mathcal B+W)+\partial_t\mathcal R.
++\end{aligned}
++\end{equation}
++The condition also requires $\nabla W\in\operatorname{Im}(\mathcal KG)$. Small input magnitude alone is insufficient. If it fails, applying \eqref{struct:transport} to the actual $f_u$ gives a new local $\mathcal R_u,\mathcal K_u,\mathcal B_u$ and its own compatible chart. The resulting ideal map preserves $\mathcal K_u$, not necessarily the original $\mathcal K$; Supplement~\ref{ss:general-control} gives the argument.
++
++For the present plant, with initial time $\tau_0=0$, $\mathcal K_\gamma=-e^{\gamma\tau}J$. Pure potential compensation satisfies $\mathcal K_\gamma(0,\nabla\widehat R)^{\mathsf T}=\nabla_x[-e^{\gamma\tau}\widehat R]$, so it can retain the same structure. The damping compensation term $(0,\widehat\gamma Y)^{\mathsf T}$ generally fails the closedness condition. After both terms are substituted, the explicit closed-loop structure is $\mathcal K_{\delta\gamma}=-e^{\delta\gamma\tau}J$, with the same initial value $-J$. This connects the general construction directly to \eqref{ctrl:weighted-midpoint} and to the conservative limit below.
+ 
+ \begin{proposition}[Structure after compensation]
+ \label{ctrl:structure-proposition}
+@@ -106,7 +117,7 @@
+ \end{proof}
+ 
+ This result makes the solver tolerance part of the accuracy statement. A fixed absolute tolerance need not sustain a second-order asymptotic rate under indefinite step refinement. The autonomous Central4 method has an analogous estimate
+-$C_T(e_0+\Delta^4+\eta_\Delta/\Delta)$ when its fifth-order local defect, higher derivative bounds and stable implicit branch hold; a per-step $O(\Delta^5)$ residual preserves fourth order. Supplement~\ref{ss:inexact-solve} records this extension. The residual-budget tests below deliberately perturb increment equations to examine the accumulation term. They are distinguished from the small residuals actually left by Newton iteration.
++$C_T(e_0+\Delta^4+\eta_\Delta/\Delta)$ when its fifth-order local defect, higher derivative bounds and stable implicit branch hold; a per-step $O(\Delta^5)$ residual preserves fourth order. Supplement~\ref{ss:inexact-solve} records this extension. The residual-budget tests below deliberately perturb increment equations to examine the accumulation term. They are distinguished from the small residuals actually left by Newton iteration. Applying the same argument to the transformed field \eqref{struct:chart-field}, with uniform chart and inverse-chart bounds, gives the general-chart second-order estimate in Supplement~\ref{ss:general-accuracy}. That estimate separately accounts for an approximated Birkhoff representation and for coordinate implementation residuals.
+ 
+ \subsection{Separating discretization error from compensation error}
+ \label{ctrl:error-separation}

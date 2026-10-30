@@ -1,0 +1,18 @@
+{
+  "status": "restored",
+  "reason": "Legacy tests write to frozen output paths; runner corrected to isolate legacy execution.",
+  "files": [
+    {
+      "path": "stage5/results/closed_loop/independent_checks.json",
+      "rerun_sha256": "9a4df73fa77004ac1175dd9b621c2611d6458fc81b9001e6aff7a1de8220ef78",
+      "restored_sha256": "ea8a6f778f5cd083a3897d081f23b06ebcdc734ab3d1f3d8c1ae5d800b4822d3",
+      "difference": "Wall-clock timing only; see saved rerun JSON. Original bytes restored after legacy tests wrote fixed result paths."
+    },
+    {
+      "path": "stage5/results/rod_transfer/operator_tests.json",
+      "rerun_sha256": "88985b2c2beb3079b0292b791e81e6bd2eb2a8bed2ba1288e0ef25140604472a",
+      "restored_sha256": "dd38f3c6ad4a1d18660111bc91d29d7b27f22cab12a2f82d789a044c51cf0505",
+      "difference": "Wall-clock timing only; see saved rerun JSON. Original bytes restored after legacy tests wrote fixed result paths."
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "scope": "Theory reviewer executions; preserved stage5 files never written",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "versions": {
+      "numpy": "2.3.5",
+      "torch": "2.5.1+cpu"
+    }
+  },
+  "thread_environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "cwd": "/workspace/1028",
+  "runs": [
+    {
+      "command": "/workspace/1028-cloud/venvs/learning/bin/python -m unittest discover -s stage6/fusion_reconciliation/tests -p test_fusion_theory.py -v",
+      "status": "passed",
+      "tests": 4,
+      "log": "stage6/fusion_reconciliation/results/theory/unit_tests.log",
+      "seconds": 0.94,
+      "tolerances": "stage6/fusion_reconciliation/tests/test_fusion_theory.py"
+    },
+    {
+      "command": "/workspace/1028-cloud/venvs/learning/bin/python stage6/fusion_reconciliation/program/run_fusion_theory.py",
+      "status": "failed",
+      "evidence": "stage6/fusion_reconciliation/results/theory/S6_THEORY01/results.json",
+      "reason": "JSON serialization of np.bool_ in console progress output; source/tolerance/model not changed; failed record preserved"
+    },
+    {
+      "command": "/workspace/1028-cloud/venvs/learning/bin/python stage6/fusion_reconciliation/program/run_fusion_theory.py --run-id S6_THEORY02",
+      "status": "passed",
+      "evidence": "stage6/fusion_reconciliation/results/theory/S6_THEORY02/results.json",
+      "seconds": 60.07068419200368,
+      "new_trajectories_integrated": false,
+      "new_models_trained": false,
+      "independent_new_derivatives_on_actual_24d_rom": true
+    },
+    {
+      "command": "python stage6/fusion_reconciliation/program/annotate_theory.py",
+      "status": "passed",
+      "reviewed_units": 190,
+      "missing_stage5_evidence_paths": 0
+    }
+  ],
+  "core_source_sha256": {
+    "stage6/fusion_reconciliation/program/fusion_theory.py": "f9ea591229f1fd853fb1bcfb1619205e05f823c7f0a64dfcd2069c83fef21942",
+    "stage6/fusion_reconciliation/program/run_fusion_theory.py": "a828b9872190099fe00229d44209c3f25f3547e010981eb730d3d098459b1047",
+    "stage6/fusion_reconciliation/tests/test_fusion_theory.py": "d176ffb57981d0d9a2726fa52ae09597516625cc8bb595f645255b6489956803"
+  }
+}

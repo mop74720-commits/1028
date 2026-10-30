@@ -1,0 +1,10 @@
+test_feedback_is_inside_same_implicit_residual (test_closed_loop.ClosedLoopTests.test_feedback_is_inside_same_implicit_residual) ... ok
+test_full_feedback_jacobian_not_frozen_current (test_closed_loop.ClosedLoopTests.test_full_feedback_jacobian_not_frozen_current) ... ok
+test_legal_structure_and_illegal_method_rejected (test_closed_loop.ClosedLoopTests.test_legal_structure_and_illegal_method_rejected) ... ok
+test_magnetic_and_mechanical_power (test_closed_loop.ClosedLoopTests.test_magnetic_and_mechanical_power) ... ok
+test_solved_map_tangent_direction (test_closed_loop.ClosedLoopTests.test_solved_map_tangent_direction) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 18.319s
+
+OK

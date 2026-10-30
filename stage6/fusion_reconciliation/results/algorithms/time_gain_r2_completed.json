@@ -1,0 +1,3588 @@
+{
+  "status": "completed",
+  "command": [
+    "/workspace/1028-cloud/venvs/learning/bin/python",
+    "stage6/fusion_reconciliation/program/run_nonautonomous_experiment.py",
+    "--run-id",
+    "time_gain_r2_completed",
+    "--reuse-reference-run",
+    "time_gain_r2"
+  ],
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "torch": "2.5.1+cpu"
+  },
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "implicit_tolerance": 2e-13,
+  "phases": [
+    {
+      "reference": "original",
+      "rtol": 2e-10,
+      "atol": 2e-12,
+      "max_step": 0.000125,
+      "nfev": 62,
+      "seconds": 10.914210263988934
+    },
+    {
+      "reference": "original",
+      "rtol": 5e-12,
+      "atol": 5e-14,
+      "max_step": 6.25e-05,
+      "nfev": 122,
+      "seconds": 20.932713463989785
+    },
+    {
+      "reference": "represented_r2",
+      "rtol": 2e-10,
+      "atol": 2e-12,
+      "max_step": 0.000125,
+      "nfev": 62,
+      "seconds": 65.23601999100356
+    },
+    {
+      "reference": "represented_r2",
+      "rtol": 5e-12,
+      "atol": 5e-14,
+      "max_step": 6.25e-05,
+      "nfev": 122,
+      "seconds": 128.92986330699932
+    }
+  ],
+  "rows": [
+    {
+      "seconds": 6.0837170720042195,
+      "records": [
+        {
+          "increment_residual_inf": 1.6783980084458827e-15,
+          "nonlinear_corrections": 1,
+          "final_matrix_condition": 1.006109678366408,
+          "final_matrix_min_singular": 0.9998733086211561,
+          "newton_history": [
+            {
+              "iteration": 0,
+              "residual_inf": 1.7853320284408705e-06,
+              "matrix_condition": 1.0061096824989522
+            },
+            {
+              "iteration": 1,
+              "residual_inf": 1.6783980084458827e-15,
+              "matrix_condition": 1.006109678366408
+            }
+          ],
+          "seconds": 3.1453733459929936,
+          "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+          "discrete_H_power_residual": 1.478442582388776e-10
+        },
+        {
+          "increment_residual_inf": 1.3148437383086933e-15,
+          "nonlinear_corrections": 1,
+          "final_matrix_condition": 1.0061103680056085,
+          "final_matrix_min_singular": 0.9998726062493831,
+          "newton_history": [
+            {
+              "iteration": 0,
+              "residual_inf": 1.7764412576519008e-06,
+              "matrix_condition": 1.0061103730305072
+            },
+            {
+              "iteration": 1,
+              "residual_inf": 1.3148437383086933e-15,
+              "matrix_condition": 1.0061103680056085
+            }
+          ],
+          "seconds": 2.443226308998419,
+          "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+          "discrete_H_power_residual": 3.349659707729347e-10
+        }
+      ],
+      "max_residual_inf": 1.6783980084458827e-15,
+      "method": "midpoint_original",
+      "steps": 2,
+      "h": 0.00025,
+      "error_original_max": 1.428577607614313e-07,
+      "error_represented_max": 1.4285420801655314e-07,
+      "observed_order_to_own_field": null
+    },
+    {
+      "seconds": 21.75592448998941,
+      "records": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "increment_residual_inf": 5.363467086232738e-14,
+          "nonlinear_corrections": 2,
+          "chord_condition": 1.006109428255823,
+          "residual_history": [
+            1.7853477950828669e-06,
+            4.283827393783071e-11,
+            5.363467086232738e-14
+          ],
+          "K_step_defect_2": 9.992046218238684e-16,
+          "transformed_Hamiltonian_Jacobian_defect_2": 7.472043775779287e-14,
+          "actual_implicit_matrix_condition": 1.0061000924357002,
+          "actual_implicit_matrix_min_singular": 0.9998826459560922,
+          "structure_diagnostic_seconds": 11.41307078700629,
+          "derivative_scope": "Differentiated implicit equation; numerical Moser first/second and time sensitivities; full H AD3. Not finite-iteration program exactness."
+        },
+        {
+          "step": 1,
+          "time": 0.00025,
+          "increment_residual_inf": 5.2538838927476076e-14,
+          "nonlinear_corrections": 2,
+          "chord_condition": 1.0061094227618377,
+          "residual_history": [
+            1.7764567021381982e-06,
+            4.200096193454942e-11,
+            5.2538838927476076e-14
+          ]
+        }
+      ],
+      "max_residual_inf": 5.363467086232738e-14,
+      "steps": 2,
+      "auxiliary_calls": 12,
+      "auxiliary_nfev": 828,
+      "auxiliary_seconds": 0.25445929801207967,
+      "method": "moser_midpoint_r2",
+      "h": 0.00025,
+      "error_original_max": 1.4287099149716898e-07,
+      "error_represented_max": 1.42857962969531e-07,
+      "observed_order_to_own_field": null
+    },
+    {
+      "seconds": 12.023725790000753,
+      "records": [
+        {
+          "increment_residual_inf": 5.5416601178520566e-17,
+          "nonlinear_corrections": 1,
+          "final_matrix_condition": 1.0015977212809626,
+          "final_matrix_min_singular": 0.9999158277106361,
+          "newton_history": [
+            {
+              "iteration": 0,
+              "residual_inf": 4.463326300026453e-07,
+              "matrix_condition": 1.0015977207297873
+            },
+            {
+              "iteration": 1,
+              "residual_inf": 5.5416601178520566e-17,
+              "matrix_condition": 1.0015977212809626
+            }
+          ],
+          "seconds": 3.079095679000602,
+          "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+          "discrete_H_power_residual": 3.3397591793883977e-11
+        },
+        {
+          "increment_residual_inf": 4.91307696769464e-17,
+          "nonlinear_corrections": 1,
+          "final_matrix_condition": 1.00159741803799,
+          "final_matrix_min_singular": 0.9999161285888803,
+          "newton_history": [
+            {
+              "iteration": 0,
+              "residual_inf": 4.459093610406163e-07,
+              "matrix_condition": 1.0015974174097662
+            },
+            {
+              "iteration": 1,
+              "residual_inf": 4.91307696769464e-17,
+              "matrix_condition": 1.00159741803799
+            }
+          ],
+          "seconds": 2.7629118289914913,
+          "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+          "discrete_H_power_residual": 4.350099717020852e-11
+        },
+        {
+          "increment_residual_inf": 4.436647404643698e-17,
+          "nonlinear_corrections": 1,
+          "final_matrix_condition": 1.001597152105746,
+          "final_matrix_min_singular": 0.999916392697864,
+          "newton_history": [
+            {
+              "iteration": 0,
+              "residual_inf": 4.4410609727054455e-07,
+              "matrix_condition": 1.0015971515223836
+            },
+            {
+              "iteration": 1,
+              "residual_inf": 4.436647404643698e-17,
+              "matrix_condition": 1.001597152105746
+            }
+          ],
+          "seconds": 2.440694713994162,
+          "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+          "discrete_H_power_residual": 7.961258257185074e-11
+        },
+        {
+          "increment_residual_inf": 3.860056195579935e-17,
+          "nonlinear_corrections": 1,
+          "final_matrix_condition": 1.0015969945172045,
+          "final_matrix_min_singular": 0.999916549112636,
+          "newton_history": [
+            {
+              "iteration": 0,
+              "residual_inf": 4.4092841920576225e-07,
+              "matrix_condition": 1.0015969944057888
+            },
+            {
+              "iteration": 1,
+              "residual_inf": 3.860056195579935e-17,
+              "matrix_condition": 1.0015969945172045
+            }
+          ],
+          "seconds": 2.6570648420020007,
+          "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+          "discrete_H_power_residual": 8.910972150054028e-11
+        }
+      ],
+      "max_residual_inf": 5.5416601178520566e-17,
+      "method": "midpoint_original",
+      "steps": 4,
+      "h": 0.000125,
+      "error_original_max": 3.586965759618164e-08,
+      "error_represented_max": 3.588053812843627e-08,
+      "observed_order_to_own_field": 1.9937435341224155
+    },
+    {
+      "seconds": 19.05112032299803,
+      "records": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "increment_residual_inf": 3.35108976768435e-15,
+          "nonlinear_corrections": 2,
+          "chord_condition": 1.0015978801150305,
+          "residual_history": [
+            4.463365694711376e-07,
+            5.353268596942527e-12,
+            3.35108976768435e-15
+          ]
+        },
+        {
+          "step": 1,
+          "time": 0.000125,
+          "increment_residual_inf": 3.322657412743865e-15,
+          "nonlinear_corrections": 2,
+          "chord_condition": 1.0015975171246836,
+          "residual_history": [
+            4.4591326612100934e-07,
+            5.307597906033137e-12,
+            3.322657412743865e-15
+          ]
+        },
+        {
+          "step": 2,
+          "time": 0.00025,
+          "increment_residual_inf": 3.292197260927653e-15,
+          "nonlinear_corrections": 2,
+          "chord_condition": 1.0015971898041705,
+          "residual_history": [
+            4.441099544994534e-07,
+            5.262920386665392e-12,
+            3.292197260927653e-15
+          ]
+        },
+        {
+          "step": 3,
+          "time": 0.000375,
+          "increment_residual_inf": 3.259674160368403e-15,
+          "nonlinear_corrections": 2,
+          "chord_condition": 1.001596949391994,
+          "residual_history": [
+            4.409322152980988e-07,
+            5.2189406547336606e-12,
+            3.259674160368403e-15
+          ]
+        }
+      ],
+      "max_residual_inf": 3.35108976768435e-15,
+      "steps": 4,
+      "auxiliary_calls": 21,
+      "auxiliary_nfev": 1362,
+      "auxiliary_seconds": 0.27115214602963533,
+      "method": "moser_midpoint_r2",
+      "h": 0.000125,
+      "error_original_max": 3.5897211914576795e-08,
+      "error_represented_max": 3.5869708194423465e-08,
+      "observed_order_to_own_field": 1.9937435411000834
+    },
+    {
+      "seconds": 23.803752876003273,
+      "records": [
+        {
+          "increment_residual_inf": 1.8759662199314617e-18,
+          "nonlinear_corrections": 1,
+          "final_matrix_condition": 1.0004540110573985,
+          "final_matrix_min_singular": 0.9999425248251902,
+          "newton_history": [
+            {
+              "iteration": 0,
+              "residual_inf": 1.1158311036804265e-07,
+              "matrix_condition": 1.0004540110573223
+            },
+            {
+              "iteration": 1,
+              "residual_inf": 1.8759662199314617e-18,
+              "matrix_condition": 1.0004540110573985
+            }
+          ],
+          "seconds": 3.0535582790034823,
+          "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+          "discrete_H_power_residual": 1.1391361283614489e-11
+        },
+        {
+          "increment_residual_inf": 2.3817110638912832e-18,
+          "nonlinear_corrections": 1,
+          "final_matrix_condition": 1.0004540921761034,
+          "final_matrix_min_singular": 0.9999425926757287,
+          "newton_history": [
+            {
+              "iteration": 0,
+              "residual_inf": 1.1157336219800857e-07,
+              "matrix_condition": 1.0004540921710396
+            },
+            {
+              "iteration": 1,
+              "residual_inf": 2.3817110638912832e-18,
+              "matrix_condition": 1.0004540921761034
+            }
+          ],
+          "seconds": 2.810399148002034,
+          "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+          "discrete_H_power_residual": 1.45187740275372e-11
+        },
+        {
+          "increment_residual_inf": 1.5679638644861167e-18,
+          "nonlinear_corrections": 1,
+          "final_matrix_condition": 1.0004541879325355,
+          "final_matrix_min_singular": 0.999942656284648,
+          "newton_history": [
+            {
+              "iteration": 0,
+              "residual_inf": 1.1147723991131219e-07,
+              "matrix_condition": 1.000454187923875
+            },
+            {
+              "iteration": 1,
+              "residual_inf": 1.5679638644861167e-18,
+              "matrix_condition": 1.0004541879325355
+            }
+          ],
+          "seconds": 2.513671501990757,
+          "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+          "discrete_H_power_residual": 8.115121855750695e-12
+        },
+        {
+          "increment_residual_inf": 1.6611904282432931e-18,
+          "nonlinear_corrections": 1,
+          "final_matrix_condition": 1.0004543002857351,
+          "final_matrix_min_singular": 0.9999427145850998,
+          "newton_history": [
+            {
+              "iteration": 0,
+              "residual_inf": 1.1129481791369565e-07,
+              "matrix_condition": 1.0004543002752324
+            },
+            {
+              "iteration": 1,
+              "residual_inf": 1.6611904282432931e-18,
+              "matrix_condition": 1.0004543002857351
+            }
+          ],
+          "seconds": 2.744132626001374,
+          "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+          "discrete_H_power_residual": 1.6325566156642594e-11
+        },
+        {
+          "increment_residual_inf": 1.4064982089157657e-18,
+          "nonlinear_corrections": 1,
+          "final_matrix_condition": 1.0004544315027264,
+          "final_matrix_min_singular": 0.9999427662746475,
+          "newton_history": [
+            {
+              "iteration": 0,
+              "residual_inf": 1.110262374200922e-07,
+              "matrix_condition": 1.0004544314925503
+            },
+            {
+              "iteration": 1,
+              "residual_inf": 1.4064982089157657e-18,
+              "matrix_condition": 1.0004544315027264
+            }
+          ],
+          "seconds": 2.813316853993456,
+          "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+          "discrete_H_power_residual": 1.491975426125454e-11
+        },
+        {
+          "increment_residual_inf": 1.926497029191101e-18,
+          "nonlinear_corrections": 1,
+          "final_matrix_condition": 1.0004545841262467,
+          "final_matrix_min_singular": 0.9999428098486804,
+          "newton_history": [
+            {
+              "iteration": 0,
+              "residual_inf": 1.1067170634540322e-07,
+              "matrix_condition": 1.0004545841189705
+            },
+            {
+              "iteration": 1,
+              "residual_inf": 1.926497029191101e-18,
+              "matrix_condition": 1.0004545841262467
+            }
+          ],
+          "seconds": 2.5025041439948836,
+          "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+          "discrete_H_power_residual": 9.478197442397765e-12
+        },
+        {
+          "increment_residual_inf": 1.7961465995425447e-18,
+          "nonlinear_corrections": 1,
+          "final_matrix_condition": 1.0004547608451506,
+          "final_matrix_min_singular": 0.9999428437293253,
+          "newton_history": [
+            {
+              "iteration": 0,
+              "residual_inf": 1.1023149914351304e-07,
+              "matrix_condition": 1.0004547608436212
+            },
+            {
+              "iteration": 1,
+              "residual_inf": 1.7961465995425447e-18,
+              "matrix_condition": 1.0004547608451506
+            }
+          ],
+          "seconds": 2.6528995589906117,
+          "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+          "discrete_H_power_residual": 2.8313054036151718e-11
+        },
+        {
+          "increment_residual_inf": 1.2325388173734138e-18,
+          "nonlinear_corrections": 1,
+          "final_matrix_condition": 1.0004549642387033,
+          "final_matrix_min_singular": 0.999942866518031,
+          "newton_history": [
+            {
+              "iteration": 0,
+              "residual_inf": 1.097059565949517e-07,
+              "matrix_condition": 1.000454964245753
+            },
+            {
+              "iteration": 1,
+              "residual_inf": 1.2325388173734138e-18,
+              "matrix_condition": 1.0004549642387033
+            }
+          ],
+          "seconds": 2.513264421999338,
+          "derivative": "Full Df of state-dependent input; ideal implicit tangent",
+          "discrete_H_power_residual": 2.3020053596081898e-11
+        }
+      ],
+      "max_residual_inf": 2.3817110638912832e-18,
+      "method": "midpoint_original",
+      "steps": 8,
+      "h": 6.25e-05,
+      "error_original_max": 8.977193155573139e-09,
+      "error_represented_max": 9.04564609349574e-09,
+      "observed_order_to_own_field": 1.9984276318217427
+    },
+    {
+      "seconds": 39.643947525997646,
+      "records": [
+        {
+          "step": 0,
+          "time": 0.0,
+          "increment_residual_inf": 2.093077704971684e-16,
+          "nonlinear_corrections": 2,
+          "chord_condition": 1.0004539754566648,
+          "residual_history": [
+            1.1158409495436462e-07,
+            6.687500649210361e-13,
+            2.093077704971684e-16
+          ]
+        },
+        {
+          "step": 1,
+          "time": 6.25e-05,
+          "increment_residual_inf": 2.0849461886780427e-16,
+          "nonlinear_corrections": 2,
+          "chord_condition": 1.0004539030815554,
+          "residual_history": [
+            1.1157434285741981e-07,
+            6.660784048442999e-13,
+            2.0849461886780427e-16
+          ]
+        },
+        {
+          "step": 2,
+          "time": 0.000125,
+          "increment_residual_inf": 2.076653736124423e-16,
+          "nonlinear_corrections": 2,
+          "chord_condition": 1.000453834902548,
+          "residual_history": [
+            1.1147821579693145e-07,
+            6.634503654820396e-13,
+            2.076653736124423e-16
+          ]
+        },
+        {
+          "step": 3,
+          "time": 0.0001875,
+          "increment_residual_inf": 2.068041528633215e-16,
+          "nonlinear_corrections": 2,
+          "chord_condition": 1.0004537719197166,
+          "residual_history": [
+            1.1129578818317285e-07,
+            6.608613449042528e-13,
+            2.068041528633215e-16
+          ]
+        },
+        {
+          "step": 4,
+          "time": 0.00025,
+          "increment_residual_inf": 2.0591243892809953e-16,
+          "nonlinear_corrections": 2,
+          "chord_condition": 1.000453715356962,
+          "residual_history": [
+            1.1102720123629643e-07,
+            6.583064989295142e-13,
+            2.0591243892809953e-16
+          ]
+        },
+        {
+          "step": 5,
+          "time": 0.0003125,
+          "increment_residual_inf": 2.049902318067764e-16,
+          "nonlinear_corrections": 2,
+          "chord_condition": 1.0004536666416126,
+          "residual_history": [
+            1.10672662877124e-07,
+            6.557809672827724e-13,
+            2.049902318067764e-16
+          ]
+        },
+        {
+          "step": 6,
+          "time": 0.000375,
+          "increment_residual_inf": 2.0403287281814224e-16,
+          "nonlinear_corrections": 2,
+          "chord_condition": 1.000453627302866,
+          "residual_history": [
+            1.102324475661044e-07,
+            6.532797132943649e-13,
+            2.0403287281814224e-16
+          ]
+        },
+        {
+          "step": 7,
+          "time": 0.0004375,
+          "increment_residual_inf": 2.030634436100097e-16,
+          "nonlinear_corrections": 2,
+          "chord_condition": 1.0004535987565908,
+          "residual_history": [
+            1.0970689609094806e-07,
+            6.507976443904544e-13,
+            2.030634436100097e-16
+          ]
+        }
+      ],
+      "max_residual_inf": 2.093077704971684e-16,
+      "steps": 8,
+      "auxiliary_calls": 41,
+      "auxiliary_nfev": 2602,
+      "auxiliary_seconds": 0.5400257369619794,
+      "method": "moser_midpoint_r2",
+      "h": 6.25e-05,
+      "error_original_max": 9.062162346589101e-09,
+      "error_represented_max": 8.977205805368992e-09,
+      "observed_order_to_own_field": 1.9984276340007059
+    }
+  ],
+  "source_sha256": {
+    "stage6/fusion_reconciliation/program/run_nonautonomous_experiment.py": "ea67105c8dfc8101bc0f5de5d267e280faa34e4320cbd3a0ba20aae287e0285c",
+    "stage6/fusion_reconciliation/program/nonautonomous_transport.py": "5204f870601acadd76496c543ab8e2438fe73507024b28fc0fcb78d21eb33bcf",
+    "stage5/program/coil_rom.py": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc",
+    "stage5/program/transport_native.py": "a77ad9df7fc789f3a1eb061616e7f42de596047ba8e9fd6e7dbe436179505e3f",
+    "stage5/program/transport_cache.py": "52d8b9b90cb53fc613dd730c5fdac78e0a49a8a02d37652af020434e6e3cf635",
+    "stage5/program/moser_chart.py": "869356bfa0997c2d5e5bc03878752822ad6da4ed74ac283f716acb72e9301fae",
+    "stage5/program/run_transport_experiments.py": "5d06d2d8721beec91319270193f2a3b10b6f70ae6bbed1253cee91cb39274511",
+    "stage5/program/closed_loop.py": "4f7e5e16e1cc5d105a298811627989cd064819f8790dadb0429920374739db31"
+  },
+  "metadata": {
+    "base": {
+      "model": "3D inextensible unshearable Kirchhoff strain Ritz; exact SO(3) frame updates and midpoint centerline embedding",
+      "q_dof": 12,
+      "phase_dimension": 24,
+      "quadrature_elements": 20,
+      "configuration": "four Legendre curvature coefficients in each of two bending axes and torsion by default; all are dynamical",
+      "mass": "configuration dependent; includes translational and rotary inertia from embedding Jacobians",
+      "E0_J": 3.6200000000000004e-07,
+      "omega0_rad_s": 4.457629408507532,
+      "omega_rad_s": [
+        4.457629408507532,
+        4.457629408507532,
+        27.694195720027146,
+        27.694195720027146,
+        79.78328659507957,
+        79.78328659507957,
+        356.9402366587693,
+        356.9402366587693,
+        370.43091613854864,
+        1118.611090690932,
+        1984.631631100378,
+        3899.8926690677044
+      ],
+      "nu": [
+        1.0,
+        1.0,
+        6.212763148765096,
+        6.212763148765096,
+        17.898142551467057,
+        17.898142551467057,
+        80.0740043525236,
+        80.0740043525236,
+        83.10042899294614,
+        250.94304352803,
+        445.22131591124275,
+        874.8804155017085
+      ],
+      "canonical_scaling_defect": 5.55251128130777e-21,
+      "mass0_condition": 1264760.7588499414,
+      "repeated_frequency_pairs": [
+        {
+          "i": 0,
+          "j": 1,
+          "relative_difference": 0.0
+        },
+        {
+          "i": 2,
+          "j": 3,
+          "relative_difference": 0.0
+        },
+        {
+          "i": 4,
+          "j": 5,
+          "relative_difference": 0.0
+        },
+        {
+          "i": 6,
+          "j": 7,
+          "relative_difference": 0.0
+        }
+      ],
+      "KAM_status": "Standard nonresonant elliptic KAM is not certified; circular isotropic rod with axial bias has paired bending frequencies.",
+      "relation_to_full_model": "Shares material, distal magnet and field interface with the Cosserat model; shear/stretch omitted in this analytical ROM; modal truncation and fluid/contact closure errors are not yet bounded.",
+      "time": "tau=omega0*t_seconds",
+      "coordinates": "z=(Q,P); q_physical=Sq Q; p_physical=Sp P",
+      "input": "12 total coil currents in A; no separate 8-field increment input or extra ideal bias",
+      "drag": "synthetic smooth gamma*P; not a blood/contact closure",
+      "derivatives": "double-precision automatic differentiation through full variable-mass SO(3) geometry",
+      "magnetism": "Full circular-coil Biot-Savart energy; no additional ideal bias",
+      "coil_config": {
+        "origin_m": [
+          0.0,
+          0.0,
+          0.1
+        ],
+        "centers_m": [
+          [
+            -0.014258091544161544,
+            0.028179296678682336,
+            0.03197328418765823
+          ],
+          [
+            -0.02823677355664579,
+            -0.04786085900246092,
+            0.15036886731560742
+          ],
+          [
+            -0.045691567848612266,
+            -0.018652962478301362,
+            0.15647430936557563
+          ],
+          [
+            -0.04514527606524731,
+            0.048274040871414105,
+            0.06455255965605347
+          ],
+          [
+            -0.05250918804532998,
+            0.0484943955231713,
+            0.07728263277440807
+          ],
+          [
+            -0.0613859164096309,
+            -0.011163250855872636,
+            0.14161911936692878
+          ],
+          [
+            -0.0671668545586991,
+            -0.0017953283979293688,
+            0.06667747841723036
+          ],
+          [
+            -0.064453232278896,
+            0.02259524567813345,
+            0.1309876704762954
+          ],
+          [
+            0.02328501712550232,
+            0.044097556051387404,
+            0.043980239845570486
+          ],
+          [
+            -0.057995959548040495,
+            0.010875668587236294,
+            0.05370541598758392
+          ],
+          [
+            0.015634413697846045,
+            -0.0715657961482294,
+            0.11609042976413864
+          ],
+          [
+            0.053878424569565875,
+            -0.04269688322911903,
+            0.12998485498415116
+          ]
+        ],
+        "normals": [
+          [
+            0.19010788725548727,
+            -0.3757239557157645,
+            0.9070228774978905
+          ],
+          [
+            0.37649031408861056,
+            0.6381447866994789,
+            -0.6715848975414321
+          ],
+          [
+            0.6092209046481636,
+            0.2487061663773515,
+            -0.7529907915410083
+          ],
+          [
+            0.6019370142032975,
+            -0.6436538782855215,
+            0.4726325379192871
+          ],
+          [
+            0.7001225072710664,
+            -0.6465919403089507,
+            0.30289822967455915
+          ],
+          [
+            0.8184788854617453,
+            0.1488433447449685,
+            -0.5549215915590505
+          ],
+          [
+            0.8955580607826548,
+            0.023937711972391584,
+            0.4443002877702619
+          ],
+          [
+            0.8593764303852801,
+            -0.3012699423751127,
+            -0.4131689396839387
+          ],
+          [
+            -0.3104668950066976,
+            -0.5879674140184987,
+            0.7469301353923936
+          ],
+          [
+            0.77327946064054,
+            -0.14500891449648393,
+            0.6172611201655479
+          ],
+          [
+            -0.20845884930461392,
+            0.9542106153097254,
+            -0.21453906352184832
+          ],
+          [
+            -0.7183789942608784,
+            0.5692917763882537,
+            -0.3997980664553487
+          ]
+        ],
+        "radius_m": 0.025,
+        "turns": 300,
+        "quadrature_points": 256,
+        "current_bound_A": 2.0,
+        "slew_bound_A_s": 20.0,
+        "status": "Engineering geometry and ratings; unbuilt and uncalibrated air-core coil benchmark"
+      },
+      "current_channels": 12,
+      "current_units": "A; total currents, not increments",
+      "bias_currents_A": [
+        0.8852530495400187,
+        -1.2286958193398705,
+        -0.7250601367549449,
+        -0.7961036977402055,
+        -0.5688797115812853,
+        0.6475670120790111,
+        0.698025646431227,
+        0.7809830505705807,
+        1.1490316192924115,
+        0.28904359740025765,
+        1.5124804024130618,
+        -0.3281350083833567
+      ],
+      "bias_origin_field_gradient_residual": [
+        3.253473847481588e-10,
+        -1.277110638244058e-08,
+        -1.818562411879006e-08,
+        1.531426625598492e-07,
+        1.8360020897709162e-08,
+        -1.80355953669116e-07,
+        -3.7419132874715044e-07,
+        9.198263549795027e-08
+      ],
+      "bias_initialization": "Pre-energized fixed local axial-bias fit; not a zero-current startup",
+      "collocated_gain_dimensionless": 0.15425045617918898,
+      "collocated_gain_A2_per_W": 95590.32245389407,
+      "feedback_derivative": "Hamiltonian partial z derivative first; compose i(z) afterwards; total field Jacobian contains Di/Dz",
+      "magnetic_domain": "Away from ideal circular wires; physical_samples evaluates actual magnet quadrature points only",
+      "constraints": "Smooth feedback not automatically bounded; coil_control handles explicit constrained current ramps."
+    },
+    "time_gain": {
+      "amplitude": 0.25,
+      "frequency_tau": 200.0,
+      "frequency_rad_per_second": 891.5258817015064,
+      "formula": "kappa(tau)=kappa0*(1+a*sin(Omega*tau))"
+    },
+    "expansion_origin_tau": 0.0,
+    "coefficient_convention": "time powers; derivatives divided by factorial",
+    "exact_flow_used": false,
+    "mass_frozen": false,
+    "high_order_ad_backend": "inverse",
+    "boundary": "Smooth feedback only; no limiter, sampled controller, blood-flow calibration or contact switching. Current/field bounds sampled separately."
+  },
+  "cache_metadata": {
+    "source_cache": "stage5/results/transport/fullcoil_collocated/cache_r2_q1_inverse_19461939f03d.npz",
+    "source_sha256": "db3691afc563af964e6c8d6cd4e5b2ba17536fd848ee47819530a73f369d1142",
+    "old_metadata": {
+      "spatial_degree": [
+        2,
+        1
+      ],
+      "costs": [
+        {
+          "order": 1,
+          "derivative": "value",
+          "seconds": 0.5208361670011072,
+          "norm": 0.003423434753825412
+        },
+        {
+          "order": 1,
+          "derivative": "jacobian",
+          "seconds": 3.2871555169986095,
+          "norm": 14.031221597288802
+        },
+        {
+          "order": 1,
+          "derivative": "hessian",
+          "seconds": 30.914147488001618,
+          "norm": 197.21508477751905,
+          "raw_hessian_antisymmetry_max": 1.2114753644709708e-11,
+          "raw_hessian_antisymmetry_relative": 1.4089257390345047e-13
+        },
+        {
+          "order": 2,
+          "derivative": "value",
+          "seconds": 5.815615544001048,
+          "norm": 0.2016396933505335
+        },
+        {
+          "order": 2,
+          "derivative": "jacobian",
+          "seconds": 18.180120713997894,
+          "norm": 723.9896541478414
+        }
+      ],
+      "source": "Exact AD of source-gauge Lie coefficients on full original ROM at center",
+      "original_field_not_cached": true,
+      "represented_field_approximate": true,
+      "mass_frozen": false,
+      "high_order_ad_backend": "inverse",
+      "approximation": "only one-form coefficient spatial Taylor cache",
+      "fingerprint": "19461939f03d4da12b16bb8d4b8061b51b20443876c0cf54330753f53fead9fb",
+      "fingerprint_payload": {
+        "center": [
+          0.009800665778412416,
+          0.006216099682706645,
+          -0.00011714758713290688,
+          -0.002673078944651098,
+          -0.0023400650034276762,
+          -0.002004670955008666,
+          -0.0003434497763517713,
+          0.00042239663856923494,
+          0.0009713964335523372,
+          0.0006164865934812456,
+          0.00028831449452181235,
+          -1.555261969333705e-05,
+          0.0010343207233146883,
+          0.003262136800885292,
+          0.0012121093183480672,
+          0.00019815919912775725,
+          -0.0005689903042813087,
+          -0.0008241289518639397,
+          -0.0002153902030085732,
+          0.00012185349413057576,
+          0.0003601382410412057,
+          0.00018881774099542155,
+          2.064383633527739e-05,
+          -8.281594913786322e-05
+        ],
+        "model": {
+          "base": {
+            "model": "3D inextensible unshearable Kirchhoff strain Ritz; exact SO(3) frame updates and midpoint centerline embedding",
+            "q_dof": 12,
+            "phase_dimension": 24,
+            "quadrature_elements": 20,
+            "configuration": "four Legendre curvature coefficients in each of two bending axes and torsion by default; all are dynamical",
+            "mass": "configuration dependent; includes translational and rotary inertia from embedding Jacobians",
+            "E0_J": 3.6200000000000004e-07,
+            "omega0_rad_s": 4.457629408507532,
+            "omega_rad_s": [
+              4.457629408507532,
+              4.457629408507532,
+              27.694195720027146,
+              27.694195720027146,
+              79.78328659507957,
+              79.78328659507957,
+              356.9402366587693,
+              356.9402366587693,
+              370.43091613854864,
+              1118.611090690932,
+              1984.631631100378,
+              3899.8926690677044
+            ],
+            "nu": [
+              1.0,
+              1.0,
+              6.212763148765096,
+              6.212763148765096,
+              17.898142551467057,
+              17.898142551467057,
+              80.0740043525236,
+              80.0740043525236,
+              83.10042899294614,
+              250.94304352803,
+              445.22131591124275,
+              874.8804155017085
+            ],
+            "canonical_scaling_defect": 5.55251128130777e-21,
+            "mass0_condition": 1264760.7588499414,
+            "repeated_frequency_pairs": [
+              {
+                "i": 0,
+                "j": 1,
+                "relative_difference": 0.0
+              },
+              {
+                "i": 2,
+                "j": 3,
+                "relative_difference": 0.0
+              },
+              {
+                "i": 4,
+                "j": 5,
+                "relative_difference": 0.0
+              },
+              {
+                "i": 6,
+                "j": 7,
+                "relative_difference": 0.0
+              }
+            ],
+            "KAM_status": "Standard nonresonant elliptic KAM is not certified; circular isotropic rod with axial bias has paired bending frequencies.",
+            "relation_to_full_model": "Shares material, distal magnet and field interface with the Cosserat model; shear/stretch omitted in this analytical ROM; modal truncation and fluid/contact closure errors are not yet bounded.",
+            "time": "tau=omega0*t_seconds",
+            "coordinates": "z=(Q,P); q_physical=Sq Q; p_physical=Sp P",
+            "input": "12 total coil currents in A; no separate 8-field increment input or extra ideal bias",
+            "drag": "synthetic smooth gamma*P; not a blood/contact closure",
+            "derivatives": "double-precision automatic differentiation through full variable-mass SO(3) geometry",
+            "magnetism": "Full circular-coil Biot-Savart energy; no additional ideal bias",
+            "coil_config": {
+              "origin_m": [
+                0.0,
+                0.0,
+                0.1
+              ],
+              "centers_m": [
+                [
+                  -0.014258091544161544,
+                  0.028179296678682336,
+                  0.03197328418765823
+                ],
+                [
+                  -0.02823677355664579,
+                  -0.04786085900246092,
+                  0.15036886731560742
+                ],
+                [
+                  -0.045691567848612266,
+                  -0.018652962478301362,
+                  0.15647430936557563
+                ],
+                [
+                  -0.04514527606524731,
+                  0.048274040871414105,
+                  0.06455255965605347
+                ],
+                [
+                  -0.05250918804532998,
+                  0.0484943955231713,
+                  0.07728263277440807
+                ],
+                [
+                  -0.0613859164096309,
+                  -0.011163250855872636,
+                  0.14161911936692878
+                ],
+                [
+                  -0.0671668545586991,
+                  -0.0017953283979293688,
+                  0.06667747841723036
+                ],
+                [
+                  -0.064453232278896,
+                  0.02259524567813345,
+                  0.1309876704762954
+                ],
+                [
+                  0.02328501712550232,
+                  0.044097556051387404,
+                  0.043980239845570486
+                ],
+                [
+                  -0.057995959548040495,
+                  0.010875668587236294,
+                  0.05370541598758392
+                ],
+                [
+                  0.015634413697846045,
+                  -0.0715657961482294,
+                  0.11609042976413864
+                ],
+                [
+                  0.053878424569565875,
+                  -0.04269688322911903,
+                  0.12998485498415116
+                ]
+              ],
+              "normals": [
+                [
+                  0.19010788725548727,
+                  -0.3757239557157645,
+                  0.9070228774978905
+                ],
+                [
+                  0.37649031408861056,
+                  0.6381447866994789,
+                  -0.6715848975414321
+                ],
+                [
+                  0.6092209046481636,
+                  0.2487061663773515,
+                  -0.7529907915410083
+                ],
+                [
+                  0.6019370142032975,
+                  -0.6436538782855215,
+                  0.4726325379192871
+                ],
+                [
+                  0.7001225072710664,
+                  -0.6465919403089507,
+                  0.30289822967455915
+                ],
+                [
+                  0.8184788854617453,
+                  0.1488433447449685,
+                  -0.5549215915590505
+                ],
+                [
+                  0.8955580607826548,
+                  0.023937711972391584,
+                  0.4443002877702619
+                ],
+                [
+                  0.8593764303852801,
+                  -0.3012699423751127,
+                  -0.4131689396839387
+                ],
+                [
+                  -0.3104668950066976,
+                  -0.5879674140184987,
+                  0.7469301353923936
+                ],
+                [
+                  0.77327946064054,
+                  -0.14500891449648393,
+                  0.6172611201655479
+                ],
+                [
+                  -0.20845884930461392,
+                  0.9542106153097254,
+                  -0.21453906352184832
+                ],
+                [
+                  -0.7183789942608784,
+                  0.5692917763882537,
+                  -0.3997980664553487
+                ]
+              ],
+              "radius_m": 0.025,
+              "turns": 300,
+              "quadrature_points": 256,
+              "current_bound_A": 2.0,
+              "slew_bound_A_s": 20.0,
+              "status": "Engineering geometry and ratings; unbuilt and uncalibrated air-core coil benchmark"
+            },
+            "current_channels": 12,
+            "current_units": "A; total currents, not increments",
+            "bias_currents_A": [
+              0.8852530495400187,
+              -1.2286958193398705,
+              -0.7250601367549449,
+              -0.7961036977402055,
+              -0.5688797115812853,
+              0.6475670120790111,
+              0.698025646431227,
+              0.7809830505705807,
+              1.1490316192924115,
+              0.28904359740025765,
+              1.5124804024130618,
+              -0.3281350083833567
+            ],
+            "bias_origin_field_gradient_residual": [
+              3.253473847481588e-10,
+              -1.277110638244058e-08,
+              -1.818562411879006e-08,
+              1.531426625598492e-07,
+              1.8360020897709162e-08,
+              -1.80355953669116e-07,
+              -3.7419132874715044e-07,
+              9.198263549795027e-08
+            ],
+            "bias_initialization": "Pre-energized fixed local axial-bias fit; not a zero-current startup",
+            "collocated_gain_dimensionless": 0.15425045617918898,
+            "collocated_gain_A2_per_W": 95590.32245389407,
+            "feedback_derivative": "Hamiltonian partial z derivative first; compose i(z) afterwards; total field Jacobian contains Di/Dz",
+            "magnetic_domain": "Away from ideal circular wires; physical_samples evaluates actual magnet quadrature points only",
+            "constraints": "Smooth feedback not automatically bounded; coil_control handles explicit constrained current ramps."
+          },
+          "kind": "fullcoil_collocated",
+          "load": "independent supplied force",
+          "exact_flow_used": false,
+          "mass_frozen": false,
+          "high_order_ad_backend": "inverse",
+          "high_order_ad_identity": "0.5 p.T inv(M_full(q)) p + H_base(q,0); original numeric/reference field retains base solve implementation",
+          "recurrence": "a_(k+1)=-(Da_k f + Df.T a_k)/(k+1); fixed expansion origin"
+        },
+        "sources": {
+          "run_transport_prototype.py": "74f43628bf2d1e8916c28c7ee03d45d043b3861bc10fdc59795014668d284fd7",
+          "run_transport_experiments.py": "5d06d2d8721beec91319270193f2a3b10b6f70ae6bbed1253cee91cb39274511",
+          "run_transport_backend_validation.py": "a2fdae37532ac171535d6c825a96500f31aa5be2db33110eb889a652d8442607",
+          "run_transport_ad_check.py": "7e0e3a4086f19b6a45c0cb98db1a8849ca6b79609668b990805cf245d2484919",
+          "transport_native.py": "a77ad9df7fc789f3a1eb061616e7f42de596047ba8e9fd6e7dbe436179505e3f",
+          "coil_transport_check.py": "d47a6cff7fc5df84b50a7f52906c4e07f96c620c53e70f300a2978670951f2ca",
+          "transport_cache.py": "52d8b9b90cb53fc613dd730c5fdac78e0a49a8a02d37652af020434e6e3cf635",
+          "moser_chart.py": "869356bfa0997c2d5e5bc03878752822ad6da4ed74ac283f716acb72e9301fae",
+          "coil_rom.py": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc"
+        },
+        "maximum_order": 2,
+        "quadratic_through": 1,
+        "ad_backend": "inverse",
+        "gain": 0.15425045617918898
+      }
+    },
+    "spatial_degree": [
+      2,
+      1
+    ],
+    "new_model": {
+      "base": {
+        "model": "3D inextensible unshearable Kirchhoff strain Ritz; exact SO(3) frame updates and midpoint centerline embedding",
+        "q_dof": 12,
+        "phase_dimension": 24,
+        "quadrature_elements": 20,
+        "configuration": "four Legendre curvature coefficients in each of two bending axes and torsion by default; all are dynamical",
+        "mass": "configuration dependent; includes translational and rotary inertia from embedding Jacobians",
+        "E0_J": 3.6200000000000004e-07,
+        "omega0_rad_s": 4.457629408507532,
+        "omega_rad_s": [
+          4.457629408507532,
+          4.457629408507532,
+          27.694195720027146,
+          27.694195720027146,
+          79.78328659507957,
+          79.78328659507957,
+          356.9402366587693,
+          356.9402366587693,
+          370.43091613854864,
+          1118.611090690932,
+          1984.631631100378,
+          3899.8926690677044
+        ],
+        "nu": [
+          1.0,
+          1.0,
+          6.212763148765096,
+          6.212763148765096,
+          17.898142551467057,
+          17.898142551467057,
+          80.0740043525236,
+          80.0740043525236,
+          83.10042899294614,
+          250.94304352803,
+          445.22131591124275,
+          874.8804155017085
+        ],
+        "canonical_scaling_defect": 5.55251128130777e-21,
+        "mass0_condition": 1264760.7588499414,
+        "repeated_frequency_pairs": [
+          {
+            "i": 0,
+            "j": 1,
+            "relative_difference": 0.0
+          },
+          {
+            "i": 2,
+            "j": 3,
+            "relative_difference": 0.0
+          },
+          {
+            "i": 4,
+            "j": 5,
+            "relative_difference": 0.0
+          },
+          {
+            "i": 6,
+            "j": 7,
+            "relative_difference": 0.0
+          }
+        ],
+        "KAM_status": "Standard nonresonant elliptic KAM is not certified; circular isotropic rod with axial bias has paired bending frequencies.",
+        "relation_to_full_model": "Shares material, distal magnet and field interface with the Cosserat model; shear/stretch omitted in this analytical ROM; modal truncation and fluid/contact closure errors are not yet bounded.",
+        "time": "tau=omega0*t_seconds",
+        "coordinates": "z=(Q,P); q_physical=Sq Q; p_physical=Sp P",
+        "input": "12 total coil currents in A; no separate 8-field increment input or extra ideal bias",
+        "drag": "synthetic smooth gamma*P; not a blood/contact closure",
+        "derivatives": "double-precision automatic differentiation through full variable-mass SO(3) geometry",
+        "magnetism": "Full circular-coil Biot-Savart energy; no additional ideal bias",
+        "coil_config": {
+          "origin_m": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "centers_m": [
+            [
+              -0.014258091544161544,
+              0.028179296678682336,
+              0.03197328418765823
+            ],
+            [
+              -0.02823677355664579,
+              -0.04786085900246092,
+              0.15036886731560742
+            ],
+            [
+              -0.045691567848612266,
+              -0.018652962478301362,
+              0.15647430936557563
+            ],
+            [
+              -0.04514527606524731,
+              0.048274040871414105,
+              0.06455255965605347
+            ],
+            [
+              -0.05250918804532998,
+              0.0484943955231713,
+              0.07728263277440807
+            ],
+            [
+              -0.0613859164096309,
+              -0.011163250855872636,
+              0.14161911936692878
+            ],
+            [
+              -0.0671668545586991,
+              -0.0017953283979293688,
+              0.06667747841723036
+            ],
+            [
+              -0.064453232278896,
+              0.02259524567813345,
+              0.1309876704762954
+            ],
+            [
+              0.02328501712550232,
+              0.044097556051387404,
+              0.043980239845570486
+            ],
+            [
+              -0.057995959548040495,
+              0.010875668587236294,
+              0.05370541598758392
+            ],
+            [
+              0.015634413697846045,
+              -0.0715657961482294,
+              0.11609042976413864
+            ],
+            [
+              0.053878424569565875,
+              -0.04269688322911903,
+              0.12998485498415116
+            ]
+          ],
+          "normals": [
+            [
+              0.19010788725548727,
+              -0.3757239557157645,
+              0.9070228774978905
+            ],
+            [
+              0.37649031408861056,
+              0.6381447866994789,
+              -0.6715848975414321
+            ],
+            [
+              0.6092209046481636,
+              0.2487061663773515,
+              -0.7529907915410083
+            ],
+            [
+              0.6019370142032975,
+              -0.6436538782855215,
+              0.4726325379192871
+            ],
+            [
+              0.7001225072710664,
+              -0.6465919403089507,
+              0.30289822967455915
+            ],
+            [
+              0.8184788854617453,
+              0.1488433447449685,
+              -0.5549215915590505
+            ],
+            [
+              0.8955580607826548,
+              0.023937711972391584,
+              0.4443002877702619
+            ],
+            [
+              0.8593764303852801,
+              -0.3012699423751127,
+              -0.4131689396839387
+            ],
+            [
+              -0.3104668950066976,
+              -0.5879674140184987,
+              0.7469301353923936
+            ],
+            [
+              0.77327946064054,
+              -0.14500891449648393,
+              0.6172611201655479
+            ],
+            [
+              -0.20845884930461392,
+              0.9542106153097254,
+              -0.21453906352184832
+            ],
+            [
+              -0.7183789942608784,
+              0.5692917763882537,
+              -0.3997980664553487
+            ]
+          ],
+          "radius_m": 0.025,
+          "turns": 300,
+          "quadrature_points": 256,
+          "current_bound_A": 2.0,
+          "slew_bound_A_s": 20.0,
+          "status": "Engineering geometry and ratings; unbuilt and uncalibrated air-core coil benchmark"
+        },
+        "current_channels": 12,
+        "current_units": "A; total currents, not increments",
+        "bias_currents_A": [
+          0.8852530495400187,
+          -1.2286958193398705,
+          -0.7250601367549449,
+          -0.7961036977402055,
+          -0.5688797115812853,
+          0.6475670120790111,
+          0.698025646431227,
+          0.7809830505705807,
+          1.1490316192924115,
+          0.28904359740025765,
+          1.5124804024130618,
+          -0.3281350083833567
+        ],
+        "bias_origin_field_gradient_residual": [
+          3.253473847481588e-10,
+          -1.277110638244058e-08,
+          -1.818562411879006e-08,
+          1.531426625598492e-07,
+          1.8360020897709162e-08,
+          -1.80355953669116e-07,
+          -3.7419132874715044e-07,
+          9.198263549795027e-08
+        ],
+        "bias_initialization": "Pre-energized fixed local axial-bias fit; not a zero-current startup",
+        "collocated_gain_dimensionless": 0.15425045617918898,
+        "collocated_gain_A2_per_W": 95590.32245389407,
+        "feedback_derivative": "Hamiltonian partial z derivative first; compose i(z) afterwards; total field Jacobian contains Di/Dz",
+        "magnetic_domain": "Away from ideal circular wires; physical_samples evaluates actual magnet quadrature points only",
+        "constraints": "Smooth feedback not automatically bounded; coil_control handles explicit constrained current ramps."
+      },
+      "time_gain": {
+        "amplitude": 0.25,
+        "frequency_tau": 200.0,
+        "frequency_rad_per_second": 891.5258817015064,
+        "formula": "kappa(tau)=kappa0*(1+a*sin(Omega*tau))"
+      },
+      "expansion_origin_tau": 0.0,
+      "coefficient_convention": "time powers; derivatives divided by factorial",
+      "exact_flow_used": false,
+      "mass_frozen": false,
+      "high_order_ad_backend": "inverse",
+      "boundary": "Smooth feedback only; no limiter, sampled controller, blood-flow calibration or contact switching. Current/field bounds sampled separately."
+    },
+    "coefficient_identity": "b1_new=b1_old; b2_new=b2_old+(amplitude*frequency/2)*b1_old",
+    "scope": "Reused spatial one-form jets only. Exact full f(t,z), M(Q) and feedback are recomputed at all states."
+  },
+  "initial_state": [
+    0.009800665778412416,
+    0.006216099682706645,
+    -0.00011714758713290688,
+    -0.002673078944651098,
+    -0.0023400650034276762,
+    -0.002004670955008666,
+    -0.0003434497763517713,
+    0.00042239663856923494,
+    0.0009713964335523372,
+    0.0006164865934812456,
+    0.00028831449452181235,
+    -1.555261969333705e-05,
+    0.0010343207233146883,
+    0.003262136800885292,
+    0.0012121093183480672,
+    0.00019815919912775725,
+    -0.0005689903042813087,
+    -0.0008241289518639397,
+    -0.0002153902030085732,
+    0.00012185349413057576,
+    0.0003601382410412057,
+    0.00018881774099542155,
+    2.064383633527739e-05,
+    -8.281594913786322e-05
+  ],
+  "duration_tau": 0.0005,
+  "duration_seconds": 0.0001121672427604084,
+  "native_center": {
+    "state": [
+      0.009800665778412416,
+      0.006216099682706645,
+      -0.00011714758713290688,
+      -0.002673078944651098,
+      -0.0023400650034276762,
+      -0.002004670955008666,
+      -0.0003434497763517713,
+      0.00042239663856923494,
+      0.0009713964335523372,
+      0.0006164865934812456,
+      0.00028831449452181235,
+      -1.555261969333705e-05,
+      0.0010343207233146883,
+      0.003262136800885292,
+      0.0012121093183480672,
+      0.00019815919912775725,
+      -0.0005689903042813087,
+      -0.0008241289518639397,
+      -0.0002153902030085732,
+      0.00012185349413057576,
+      0.0003601382410412057,
+      0.00018881774099542155,
+      2.064383633527739e-05,
+      -8.281594913786322e-05
+    ],
+    "coefficient_checks": [
+      {
+        "order": 1,
+        "seconds": 1.8356455640023341,
+        "cache_value_error_2": 0.0,
+        "cache_Jacobian_error_2": 0.0
+      },
+      {
+        "order": 2,
+        "seconds": 19.992995799999335,
+        "cache_value_error_2": 0.0,
+        "cache_Jacobian_error_2": 5.039267363544878e-14
+      }
+    ],
+    "rows": [
+      {
+        "order": 1,
+        "time": 0.0005,
+        "native_representation_residual_2": 0.0002778754208195047,
+        "native_field_error_2": 0.00027660224458486964,
+        "native_observed_time_order": null,
+        "additional_spatial_cache_field_error_2": 1.3376288817715101e-17,
+        "cached": {
+          "original_field_error_2": 0.00027660224458486964,
+          "representation_residual_2": 0.0002778754208195047,
+          "original_transport_compatibility_2": 0.4775514931196497,
+          "closure_max": 3.469446951953614e-18,
+          "K_min_singular": 0.9996037333870887,
+          "K_condition": 1.0062550209447183,
+          "field_error": [
+            -1.6648530742229096e-08,
+            5.716759647979079e-07,
+            1.4190039565130078e-07,
+            -4.0042969947868324e-06,
+            1.601932401000536e-08,
+            -1.1969621755115168e-05,
+            -0.00010461033632206956,
+            -1.9625724922718864e-06,
+            -1.451677348040171e-07,
+            3.554853246033449e-07,
+            -2.5092961872106314e-07,
+            3.498728349716295e-07,
+            -1.4744969316661765e-05,
+            8.15922045546435e-05,
+            1.0074978372012138e-05,
+            -9.58023920546509e-05,
+            9.276730048268461e-06,
+            -0.00010020077257737028,
+            -0.00019718337735368408,
+            1.5364216520839087e-05,
+            1.8113451011419421e-06,
+            3.9711894051972143e-07,
+            5.0622489675094896e-08,
+            -5.461660287703537e-07
+          ],
+          "e_B": [
+            -1.4754765688101046e-05,
+            8.192442484543892e-05,
+            1.0015045781173687e-05,
+            -9.624082494569296e-05,
+            9.19962790756111e-06,
+            -0.0001006701080410097,
+            -0.00019812375911923245,
+            1.5186013831067144e-05,
+            1.8169267606210048e-06,
+            3.987600319281184e-07,
+            5.1205234801150406e-08,
+            -5.483142950986982e-07,
+            1.6281834919949275e-08,
+            -5.738111975254369e-07,
+            -1.3851874839182628e-07,
+            4.022724618705471e-06,
+            -3.2885039693398587e-09,
+            1.2026482730678176e-05,
+            0.00010512120028520824,
+            2.088616525070891e-06,
+            1.4580321214633272e-07,
+            -3.568775216088528e-07,
+            2.5198102126852756e-07,
+            -3.503021282555951e-07
+          ]
+        },
+        "omitted_time_force_coefficient": {
+          "original_field_error_2": 0.00027660224458486964,
+          "representation_residual_2": 0.0002778754208195047,
+          "original_transport_compatibility_2": 0.4775514931196497,
+          "closure_max": 3.469446951953614e-18,
+          "K_min_singular": 0.9996037333870887,
+          "K_condition": 1.0062550209447183,
+          "field_error": [
+            -1.6648530742229096e-08,
+            5.716759647979079e-07,
+            1.4190039565130078e-07,
+            -4.0042969947868324e-06,
+            1.601932401000536e-08,
+            -1.1969621755115168e-05,
+            -0.00010461033632206956,
+            -1.9625724922718864e-06,
+            -1.451677348040171e-07,
+            3.554853246033449e-07,
+            -2.5092961872106314e-07,
+            3.498728349716295e-07,
+            -1.4744969316661765e-05,
+            8.15922045546435e-05,
+            1.0074978372012138e-05,
+            -9.58023920546509e-05,
+            9.276730048268461e-06,
+            -0.00010020077257737028,
+            -0.00019718337735368408,
+            1.5364216520839087e-05,
+            1.8113451011419421e-06,
+            3.9711894051972143e-07,
+            5.0622489675094896e-08,
+            -5.461660287703537e-07
+          ],
+          "e_B": [
+            -1.4754765688101046e-05,
+            8.192442484543892e-05,
+            1.0015045781173687e-05,
+            -9.624082494569296e-05,
+            9.19962790756111e-06,
+            -0.0001006701080410097,
+            -0.00019812375911923245,
+            1.5186013831067144e-05,
+            1.8169267606210048e-06,
+            3.987600319281184e-07,
+            5.1205234801150406e-08,
+            -5.483142950986982e-07,
+            1.6281834919949275e-08,
+            -5.738111975254369e-07,
+            -1.3851874839182628e-07,
+            4.022724618705471e-06,
+            -3.2885039693398587e-09,
+            1.2026482730678176e-05,
+            0.00010512120028520824,
+            2.088616525070891e-06,
+            1.4580321214633272e-07,
+            -3.568775216088528e-07,
+            2.5198102126852756e-07,
+            -3.503021282555951e-07
+          ]
+        }
+      },
+      {
+        "order": 1,
+        "time": 0.00025,
+        "native_representation_residual_2": 0.00013889621601048457,
+        "native_field_error_2": 0.0001385772351794966,
+        "native_observed_time_order": 0.9971225860440964,
+        "additional_spatial_cache_field_error_2": 1.5534017204935876e-17,
+        "cached": {
+          "original_field_error_2": 0.0001385772351794966,
+          "representation_residual_2": 0.00013889621601048457,
+          "original_transport_compatibility_2": 0.23859189009328002,
+          "closure_max": 1.734723475976807e-18,
+          "K_min_singular": 0.9998015550699756,
+          "K_condition": 1.0031268900040131,
+          "field_error": [
+            -8.233002656779076e-09,
+            2.863705206538769e-07,
+            7.01084412267942e-08,
+            -2.00674373788198e-06,
+            4.839730165641872e-09,
+            -5.998989933651228e-06,
+            -5.243255730372336e-05,
+            -1.0126749510877858e-06,
+            -7.274235756872844e-08,
+            1.7808994725751583e-07,
+            -1.2572705271687435e-07,
+            1.750439240710741e-07,
+            -7.378170469685898e-06,
+            4.086924771631529e-05,
+            5.030294878891e-06,
+            -4.799373486622309e-05,
+            4.628077087828226e-06,
+            -5.0198655445722196e-05,
+            -9.87873700477644e-05,
+            7.656669481901675e-06,
+            9.070166846100424e-07,
+            1.9890693788983887e-07,
+            2.5454193266581574e-08,
+            -2.7356287878383527e-07
+          ],
+          "e_B": [
+            -7.380604509961593e-06,
+            4.095246790305931e-05,
+            5.015253072149708e-06,
+            -4.810356868671954e-05,
+            4.6087318055100965e-06,
+            -5.03162323787572e-05,
+            -9.902295476204572e-05,
+            7.611966450088e-06,
+            9.084143029688838e-07,
+            1.9931796161284377e-07,
+            2.560037964934839e-08,
+            -2.741009829110949e-07,
+            8.140917459974638e-09,
+            -2.8690559876271843e-07,
+            -6.925937419591314e-08,
+            2.0113623093527353e-06,
+            -1.6442519846699293e-09,
+            6.013241365339088e-06,
+            5.256060014260412e-05,
+            1.0443082625354455e-06,
+            7.290160607316636e-08,
+            -1.784387608044264e-07,
+            1.2599051063426378e-07,
+            -1.7515106412779755e-07
+          ]
+        },
+        "omitted_time_force_coefficient": {
+          "original_field_error_2": 0.0001385772351794966,
+          "representation_residual_2": 0.00013889621601048457,
+          "original_transport_compatibility_2": 0.23859189009328002,
+          "closure_max": 1.734723475976807e-18,
+          "K_min_singular": 0.9998015550699756,
+          "K_condition": 1.0031268900040131,
+          "field_error": [
+            -8.233002656779076e-09,
+            2.863705206538769e-07,
+            7.01084412267942e-08,
+            -2.00674373788198e-06,
+            4.839730165641872e-09,
+            -5.998989933651228e-06,
+            -5.243255730372336e-05,
+            -1.0126749510877858e-06,
+            -7.274235756872844e-08,
+            1.7808994725751583e-07,
+            -1.2572705271687435e-07,
+            1.750439240710741e-07,
+            -7.378170469685898e-06,
+            4.086924771631529e-05,
+            5.030294878891e-06,
+            -4.799373486622309e-05,
+            4.628077087828226e-06,
+            -5.0198655445722196e-05,
+            -9.87873700477644e-05,
+            7.656669481901675e-06,
+            9.070166846100424e-07,
+            1.9890693788983887e-07,
+            2.5454193266581574e-08,
+            -2.7356287878383527e-07
+          ],
+          "e_B": [
+            -7.380604509961593e-06,
+            4.095246790305931e-05,
+            5.015253072149708e-06,
+            -4.810356868671954e-05,
+            4.6087318055100965e-06,
+            -5.03162323787572e-05,
+            -9.902295476204572e-05,
+            7.611966450088e-06,
+            9.084143029688838e-07,
+            1.9931796161284377e-07,
+            2.560037964934839e-08,
+            -2.741009829110949e-07,
+            8.140917459974638e-09,
+            -2.8690559876271843e-07,
+            -6.925937419591314e-08,
+            2.0113623093527353e-06,
+            -1.6442519846699293e-09,
+            6.013241365339088e-06,
+            5.256060014260412e-05,
+            1.0443082625354455e-06,
+            7.290160607316636e-08,
+            -1.784387608044264e-07,
+            1.2599051063426378e-07,
+            -1.7515106412779755e-07
+          ]
+        }
+      },
+      {
+        "order": 1,
+        "time": 0.000125,
+        "native_representation_residual_2": 6.943153675997022e-05,
+        "native_field_error_2": 6.935171259538707e-05,
+        "native_observed_time_order": 0.9986868632251136,
+        "additional_spatial_cache_field_error_2": 1.8425809307017127e-17,
+        "cached": {
+          "original_field_error_2": 6.935171259538707e-05,
+          "representation_residual_2": 6.943153675997022e-05,
+          "original_transport_compatibility_2": 0.11923013725162662,
+          "closure_max": 8.673617379884035e-19,
+          "K_min_singular": 0.999900699468696,
+          "K_condition": 1.0015632895658673,
+          "field_error": [
+            -4.093531682763869e-09,
+            1.4331887051013564e-07,
+            3.484241294522599e-08,
+            -1.004525047890985e-06,
+            1.622599678375507e-09,
+            -3.0030532834456674e-06,
+            -2.6248248344123027e-05,
+            -5.142304444213375e-07,
+            -3.641094333409656e-08,
+            8.913208113340086e-08,
+            -6.292931464450862e-08,
+            8.754877016552056e-08,
+            -3.6901916802232234e-06,
+            2.0450722614614277e-05,
+            2.5132699978321023e-06,
+            -2.4017542592947434e-05,
+            2.311438877416931e-06,
+            -2.512134633756119e-05,
+            -4.9437628397931565e-05,
+            3.822030092531111e-06,
+            4.5380099338403204e-07,
+            9.95267613208009e-08,
+            1.2759723487701169e-08,
+            -1.3688730286538713e-07
+          ],
+          "e_B": [
+            -3.6907983541468027e-06,
+            2.047154619845104e-05,
+            2.5095027488878045e-06,
+            -2.404502643354946e-05,
+            2.306594495667573e-06,
+            -2.515076793330683e-05,
+            -4.949657967025407e-05,
+            3.810836758512603e-06,
+            4.5415064261758117e-07,
+            9.962959786987951e-08,
+            1.2796330635186338e-08,
+            -1.3702194554467523e-07,
+            4.070458729987319e-09,
+            -1.4345279938135921e-07,
+            -3.462968709795657e-08,
+            1.0056811546763677e-06,
+            -8.221259923349647e-10,
+            3.006620682669544e-06,
+            2.628030007130206e-05,
+            5.221541312677228e-07,
+            3.645080303658318e-08,
+            -8.92193804022132e-08,
+            6.299525531713189e-08,
+            -8.757553206389878e-08
+          ]
+        },
+        "omitted_time_force_coefficient": {
+          "original_field_error_2": 6.935171259538707e-05,
+          "representation_residual_2": 6.943153675997022e-05,
+          "original_transport_compatibility_2": 0.11923013725162662,
+          "closure_max": 8.673617379884035e-19,
+          "K_min_singular": 0.999900699468696,
+          "K_condition": 1.0015632895658673,
+          "field_error": [
+            -4.093531682763869e-09,
+            1.4331887051013564e-07,
+            3.484241294522599e-08,
+            -1.004525047890985e-06,
+            1.622599678375507e-09,
+            -3.0030532834456674e-06,
+            -2.6248248344123027e-05,
+            -5.142304444213375e-07,
+            -3.641094333409656e-08,
+            8.913208113340086e-08,
+            -6.292931464450862e-08,
+            8.754877016552056e-08,
+            -3.6901916802232234e-06,
+            2.0450722614614277e-05,
+            2.5132699978321023e-06,
+            -2.4017542592947434e-05,
+            2.311438877416931e-06,
+            -2.512134633756119e-05,
+            -4.9437628397931565e-05,
+            3.822030092531111e-06,
+            4.5380099338403204e-07,
+            9.95267613208009e-08,
+            1.2759723487701169e-08,
+            -1.3688730286538713e-07
+          ],
+          "e_B": [
+            -3.6907983541468027e-06,
+            2.047154619845104e-05,
+            2.5095027488878045e-06,
+            -2.404502643354946e-05,
+            2.306594495667573e-06,
+            -2.515076793330683e-05,
+            -4.949657967025407e-05,
+            3.810836758512603e-06,
+            4.5415064261758117e-07,
+            9.962959786987951e-08,
+            1.2796330635186338e-08,
+            -1.3702194554467523e-07,
+            4.070458729987319e-09,
+            -1.4345279938135921e-07,
+            -3.462968709795657e-08,
+            1.0056811546763677e-06,
+            -8.221259923349647e-10,
+            3.006620682669544e-06,
+            2.628030007130206e-05,
+            5.221541312677228e-07,
+            3.645080303658318e-08,
+            -8.92193804022132e-08,
+            6.299525531713189e-08,
+            -8.757553206389878e-08
+          ]
+        }
+      },
+      {
+        "order": 1,
+        "time": 6.25e-05,
+        "native_representation_residual_2": 3.47108534634947e-05,
+        "native_field_error_2": 3.469088798350179e-05,
+        "native_observed_time_order": 0.999374739606538,
+        "additional_spatial_cache_field_error_2": 1.688749529811213e-17,
+        "cached": {
+          "original_field_error_2": 3.469088798350179e-05,
+          "representation_residual_2": 3.47108534634947e-05,
+          "original_transport_compatibility_2": 0.05959614834314792,
+          "closure_max": 4.336808689942018e-19,
+          "K_min_singular": 0.9999503301976814,
+          "K_condition": 1.0007816058839365,
+          "field_error": [
+            -2.041004075490266e-09,
+            7.169289751700271e-08,
+            1.7368082534406153e-08,
+            -5.025513672922483e-07,
+            6.113824060438102e-10,
+            -1.5024179227466534e-06,
+            -1.313213196653628e-05,
+            -2.59094219584468e-07,
+            -1.8215430634304235e-08,
+            4.458785337697526e-08,
+            -3.1481132948469594e-08,
+            4.3781078459893506e-08,
+            -1.845333038188958e-06,
+            1.0229112343436914e-05,
+            1.2561557601752638e-06,
+            -1.2013632421402222e-05,
+            1.1550660449452958e-06,
+            -1.256585901033125e-05,
+            -2.4729177478896735e-05,
+            1.909445740746037e-06,
+            2.2696823241379052e-07,
+            4.978000563169347e-08,
+            6.38762945757061e-09,
+            -6.846835315911461e-08
+          ],
+          "e_B": [
+            -1.8454844799893502e-06,
+            1.0234320425064978e-05,
+            1.2552131317454175e-06,
+            -1.2020506378723848e-05,
+            1.1538539829617233e-06,
+            -1.257321764063955e-05,
+            -2.4743921804345776e-05,
+            1.9066453020906036e-06,
+            2.2705567337667846e-07,
+            4.980572401809765e-08,
+            6.396788690833136e-09,
+            -6.850202759393368e-08,
+            2.0352293649936594e-09,
+            -7.172639969067961e-08,
+            -1.7314843548978285e-08,
+            5.028405773381838e-07,
+            -4.1106299616748233e-10,
+            1.503310341334772e-06,
+            1.314015003565103e-05,
+            2.610770656338614e-07,
+            1.822540151829159e-08,
+            -4.46096902011066e-08,
+            3.1497627658565945e-08,
+            -4.378776603194939e-08
+          ]
+        },
+        "omitted_time_force_coefficient": {
+          "original_field_error_2": 3.469088798350179e-05,
+          "representation_residual_2": 3.47108534634947e-05,
+          "original_transport_compatibility_2": 0.05959614834314792,
+          "closure_max": 4.336808689942018e-19,
+          "K_min_singular": 0.9999503301976814,
+          "K_condition": 1.0007816058839365,
+          "field_error": [
+            -2.041004075490266e-09,
+            7.169289751700271e-08,
+            1.7368082534406153e-08,
+            -5.025513672922483e-07,
+            6.113824060438102e-10,
+            -1.5024179227466534e-06,
+            -1.313213196653628e-05,
+            -2.59094219584468e-07,
+            -1.8215430634304235e-08,
+            4.458785337697526e-08,
+            -3.1481132948469594e-08,
+            4.3781078459893506e-08,
+            -1.845333038188958e-06,
+            1.0229112343436914e-05,
+            1.2561557601752638e-06,
+            -1.2013632421402222e-05,
+            1.1550660449452958e-06,
+            -1.256585901033125e-05,
+            -2.4729177478896735e-05,
+            1.909445740746037e-06,
+            2.2696823241379052e-07,
+            4.978000563169347e-08,
+            6.38762945757061e-09,
+            -6.846835315911461e-08
+          ],
+          "e_B": [
+            -1.8454844799893502e-06,
+            1.0234320425064978e-05,
+            1.2552131317454175e-06,
+            -1.2020506378723848e-05,
+            1.1538539829617233e-06,
+            -1.257321764063955e-05,
+            -2.4743921804345776e-05,
+            1.9066453020906036e-06,
+            2.2705567337667846e-07,
+            4.980572401809765e-08,
+            6.396788690833136e-09,
+            -6.850202759393368e-08,
+            2.0352293649936594e-09,
+            -7.172639969067961e-08,
+            -1.7314843548978285e-08,
+            5.028405773381838e-07,
+            -4.1106299616748233e-10,
+            1.503310341334772e-06,
+            1.314015003565103e-05,
+            2.610770656338614e-07,
+            1.822540151829159e-08,
+            -4.46096902011066e-08,
+            3.1497627658565945e-08,
+            -4.378776603194939e-08
+          ]
+        }
+      },
+      {
+        "order": 2,
+        "time": 0.0005,
+        "native_representation_residual_2": 7.111459657132663e-06,
+        "native_field_error_2": 7.0786207867563175e-06,
+        "native_observed_time_order": null,
+        "additional_spatial_cache_field_error_2": 1.1958111974811679e-17,
+        "cached": {
+          "original_field_error_2": 7.0786207867563175e-06,
+          "representation_residual_2": 7.111459657132663e-06,
+          "original_transport_compatibility_2": 0.007616596825593458,
+          "closure_max": 3.469446951953614e-18,
+          "K_min_singular": 0.9995974271716853,
+          "K_condition": 1.006350730475907,
+          "field_error": [
+            -2.249727220138192e-09,
+            3.531137927879483e-08,
+            3.1013060136537695e-08,
+            -2.5660297207282275e-07,
+            7.481425773490494e-08,
+            -7.763426454870128e-07,
+            -6.846044444941676e-06,
+            5.780833785807917e-07,
+            -9.456048968321927e-09,
+            2.3708181994186483e-08,
+            -1.7218570138375503e-08,
+            3.411616155594954e-08,
+            -7.964585518340601e-08,
+            3.5579505341083274e-07,
+            1.1598152840951137e-07,
+            -3.920853081193363e-07,
+            1.3545879080721512e-07,
+            -3.588898542507356e-07,
+            1.2986434611450484e-06,
+            2.9094173497415446e-07,
+            1.2699944838711801e-08,
+            -2.761548800029973e-08,
+            2.3488541109233086e-08,
+            -7.763214585968419e-08
+          ],
+          "e_B": [
+            -7.997140351423773e-08,
+            3.5412455410047637e-07,
+            1.1685585068545743e-07,
+            -3.896344168917952e-07,
+            1.3647701735124195e-07,
+            -3.562027156935911e-07,
+            1.304727237498235e-06,
+            2.932096144481799e-07,
+            1.2691689168255183e-08,
+            -2.7660928341734915e-08,
+            2.3503883006181298e-08,
+            -7.763368206339693e-08,
+            2.2345725057922735e-09,
+            -3.5454129975908334e-08,
+            -3.086678577880931e-08,
+            2.5780196783580503e-07,
+            -7.421549727289642e-08,
+            7.800337113508861e-07,
+            6.87912799229428e-06,
+            -5.719521573258211e-07,
+            9.498368456144614e-09,
+            -2.380386537147496e-08,
+            1.7289549976812394e-08,
+            -3.416770584216662e-08
+          ]
+        },
+        "omitted_time_force_coefficient": {
+          "original_field_error_2": 8.267888546825771e-05,
+          "representation_residual_2": 8.30640069492696e-05,
+          "original_transport_compatibility_2": 0.312319874460229,
+          "closure_max": 3.469446951953614e-18,
+          "K_min_singular": 0.9996023621498478,
+          "K_condition": 1.0062725161657107,
+          "field_error": [
+            -2.041416840013922e-09,
+            2.8167244493991278e-08,
+            2.923734842336164e-08,
+            -2.0656453468778975e-07,
+            7.460609282398133e-08,
+            -6.267694070757038e-07,
+            -5.538836866777528e-06,
+            6.025346095507811e-07,
+            -7.641958119507271e-09,
+            1.9265702806852572e-08,
+            -1.4082782321326044e-08,
+            2.9743663790481785e-08,
+            -3.9166463438079415e-06,
+            2.82397069935515e-05,
+            8.017428660234753e-07,
+            -3.182493789451011e-05,
+            1.297598696113314e-07,
+            -3.295022526468779e-05,
+            -6.23742652779007e-05,
+            -1.1548697499697727e-06,
+            5.595371867036849e-07,
+            1.4543555484338893e-07,
+            6.534975745957228e-08,
+            -2.570752966340795e-07
+          ],
+          "e_B": [
+            -3.913876167289547e-06,
+            2.834586802522238e-05,
+            7.740587220571678e-07,
+            -3.1967144308395895e-05,
+            9.585720931430926e-08,
+            -3.3102880370931885e-05,
+            -6.268028384036036e-05,
+            -1.2304281721315461e-06,
+            5.610859166573575e-07,
+            1.4606913743904802e-07,
+            6.547170582922303e-08,
+            -2.577436744950949e-07,
+            2.0310495692929143e-09,
+            -2.8281490006840417e-08,
+            -2.9135301423911438e-08,
+            2.0751791010198624e-07,
+            -7.417439097327966e-08,
+            6.297026772174075e-07,
+            5.565112988729177e-06,
+            -5.980598638892076e-07,
+            7.67582830431528e-09,
+            -1.9342896351363967e-08,
+            1.4139787210956005e-08,
+            -2.978892923897286e-08
+          ]
+        }
+      },
+      {
+        "order": 2,
+        "time": 0.00025,
+        "native_representation_residual_2": 1.774986419966053e-06,
+        "native_field_error_2": 1.7709176733467693e-06,
+        "native_observed_time_order": 1.998971144525286,
+        "additional_spatial_cache_field_error_2": 1.3402613246833592e-17,
+        "cached": {
+          "original_field_error_2": 1.7709176733467693e-06,
+          "representation_residual_2": 1.774986419966053e-06,
+          "original_transport_compatibility_2": 0.0018988109857082714,
+          "closure_max": 1.734723475976807e-18,
+          "K_min_singular": 0.9997999986339462,
+          "K_condition": 1.003150757814702,
+          "field_error": [
+            -5.616797238809686e-10,
+            8.839108548821603e-09,
+            7.745505184440327e-09,
+            -6.424378314097459e-08,
+            1.8668277090401124e-08,
+            -1.9437166247195586e-07,
+            -1.71407072855266e-06,
+            1.4414578086508226e-07,
+            -2.3673328786174573e-09,
+            5.934678878015424e-09,
+            -4.310256855724615e-09,
+            8.53427512788663e-09,
+            -2.078808089899601e-08,
+            9.453393302583305e-08,
+            2.931775062526541e-08,
+            -1.0422284020945058e-07,
+            3.407061269260941e-08,
+            -9.61279817411719e-08,
+            3.1229785742617723e-07,
+            7.289207409983597e-08,
+            3.288740211500807e-09,
+            -6.872916945484265e-09,
+            5.8823253212573155e-09,
+            -1.9446200135754922e-08
+          ],
+          "e_B": [
+            -2.0827992996394267e-08,
+            9.432439709096581e-08,
+            2.9426087632654374e-08,
+            -1.0391560024470593e-07,
+            3.419658405396227e-08,
+            -9.579200803671445e-08,
+            3.130197492699771e-07,
+            7.316617742538081e-08,
+            3.2875559834428354e-09,
+            -6.878185965047348e-09,
+            5.883740735068861e-09,
+            -1.9445715740891354e-08,
+            5.597959945983924e-10,
+            -8.856847606773202e-09,
+            -7.727324692407927e-09,
+            6.439278195126177e-08,
+            -1.8593861555142786e-08,
+            1.9483035083545867e-07,
+            1.7181820330488173e-06,
+            -1.4338383686220013e-07,
+            2.37260256066064e-09,
+            -5.94660931186671e-09,
+            4.319096263577944e-09,
+            -8.540593425613306e-09
+          ]
+        },
+        "omitted_time_force_coefficient": {
+          "original_field_error_2": 4.2056027944219155e-05,
+          "representation_residual_2": 4.215448734295632e-05,
+          "original_transport_compatibility_2": 0.15667066390616588,
+          "closure_max": 1.734723475976807e-18,
+          "K_min_singular": 0.999801236788298,
+          "K_condition": 1.0031312111486221,
+          "field_error": [
+            -5.102106021637925e-10,
+            7.049406653289036e-09,
+            7.307204045016554e-09,
+            -5.170259339367761e-08,
+            1.8637529722792232e-08,
+            -1.5688092713608295e-07,
+            -1.3863937066230372e-06,
+            1.5046990439745144e-07,
+            -1.912724882327914e-09,
+            4.821684911497197e-09,
+            -3.5245149952191436e-09,
+            7.440307689558774e-09,
+            -1.972221846068125e-06,
+            1.4229841999578088e-05,
+            3.939642517953546e-07,
+            -1.605628323485741e-05,
+            5.10389471856855e-08,
+            -1.664015147792535e-05,
+            -3.201596603332878e-05,
+            -6.178376314227481e-07,
+            2.8101053187531286e-07,
+            8.051744276557824e-08,
+            2.6867413109283136e-08,
+            -1.1047021376223485e-07
+          ],
+          "e_B": [
+            -1.9715024993270864e-06,
+            1.4256975149922e-05,
+            3.868684305988689e-07,
+            -1.6092646806644805e-05,
+            4.235089099007919e-08,
+            -1.6679192481979487e-05,
+            -3.2094331304486756e-05,
+            -6.372101301299447e-07,
+            2.8140530246528487e-07,
+            8.068336829500352e-08,
+            2.6896557313020827e-08,
+            -1.1063916631402162e-07,
+            5.089152604735509e-10,
+            -7.063687614506143e-09,
+            -7.294453603683466e-09,
+            5.182176751780728e-08,
+            -1.858358498023859e-08,
+            1.5724759230208986e-07,
+            1.3896782821575416e-06,
+            -1.4991076350304631e-07,
+            1.9169675227033064e-09,
+            -4.831367056839014e-09,
+            3.5316555721136877e-09,
+            -7.445899274814655e-09
+          ]
+        }
+      },
+      {
+        "order": 2,
+        "time": 0.000125,
+        "native_representation_residual_2": 4.4340230972616846e-07,
+        "native_field_error_2": 4.428959749178377e-07,
+        "native_observed_time_order": 1.999457354411224,
+        "additional_spatial_cache_field_error_2": 1.1774906428331059e-17,
+        "cached": {
+          "original_field_error_2": 4.428959749178377e-07,
+          "representation_residual_2": 4.4340230972616846e-07,
+          "original_transport_compatibility_2": 0.0004741241088103031,
+          "closure_max": 8.673617379884035e-19,
+          "K_min_singular": 0.9999003129188296,
+          "K_condition": 1.0015692490212376,
+          "field_error": [
+            -1.4032821407291216e-10,
+            2.2111636683176317e-09,
+            1.9354285823711042e-09,
+            -1.6072396187346036e-08,
+            4.662749465112276e-09,
+            -4.862811286874013e-08,
+            -4.288326806344166e-07,
+            3.599050300619472e-08,
+            -5.92243967583029e-10,
+            1.4846170949971284e-09,
+            -1.0782589177604123e-09,
+            2.1341993844786814e-09,
+            -5.306579123645054e-09,
+            2.432977172516011e-08,
+            7.370149514255691e-09,
+            -2.6828321702539893e-08,
+            8.543860268301003e-09,
+            -2.4830058939625192e-08,
+            7.652713465775612e-08,
+            1.8242405256346404e-08,
+            8.363532154994786e-10,
+            -1.7142932408822496e-09,
+            1.4717591914411285e-09,
+            -4.866183078874121e-09
+          ],
+          "e_B": [
+            -5.31151967756425e-09,
+            2.4303525889696198e-08,
+            7.38363451743872e-09,
+            -2.6789850222311978e-08,
+            8.559527919736376e-09,
+            -2.478804483094059e-08,
+            7.661497882513815e-08,
+            1.8276086505727128e-08,
+            8.361955283945721e-10,
+            -1.714926172170943e-09,
+            1.4719046372407243e-09,
+            -4.866080198023953e-09,
+            1.4009342310868248e-10,
+            -2.2133744588182143e-09,
+            -1.9331626167067095e-09,
+            1.6090965921588245e-08,
+            -4.653474751790833e-09,
+            4.868527928207819e-08,
+            4.2934507416817594e-07,
+            -3.589554237409811e-08,
+            5.929014007617166e-10,
+            -1.4861065050592286e-09,
+            1.0793617601138327e-09,
+            -2.1349813617228752e-09
+          ]
+        },
+        "omitted_time_force_coefficient": {
+          "original_field_error_2": 2.1211044113473278e-05,
+          "representation_residual_2": 2.123593650048677e-05,
+          "original_transport_compatibility_2": 0.07844049919077087,
+          "closure_max": 8.673617379884035e-19,
+          "K_min_singular": 0.9999006229778101,
+          "K_condition": 1.0015643632728375,
+          "field_error": [
+            -1.2753512034639362e-10,
+            1.7632993276889614e-09,
+            1.8265382967613867e-09,
+            -1.2933315448354835e-08,
+            4.657647530380574e-09,
+            -3.924375622102373e-08,
+            -3.4680856180039387e-07,
+            3.7597153556692905e-08,
+            -4.784617571837667e-10,
+            1.206083611800435e-09,
+            -8.816080792107672e-10,
+            1.8606130469836458e-09,
+            -9.892641111034612e-07,
+            7.140401565194236e-06,
+            1.951276310573783e-07,
+            -8.061870389568909e-06,
+            2.197183635352457e-08,
+            -8.359040780399307e-06,
+            -1.6210767084947905e-05,
+            -3.191030275208567e-07,
+            1.4077462571311553e-07,
+            4.219721570962063e-08,
+            1.1978278796290902e-08,
+            -5.070443495341927e-08
+          ],
+          "e_B": [
+            -9.890810434045043e-07,
+            7.147258911746526e-06,
+            1.933320067728394e-07,
+            -8.071062707585555e-06,
+            1.9773512607083183e-08,
+            -8.368910480931234e-06,
+            -1.623058473789211e-05,
+            -3.2400508977269133e-07,
+            1.408742868628046e-07,
+            4.223957775479793e-08,
+            1.1985472415842649e-08,
+            -5.0747017403463796e-08,
+            1.2737323957747212e-10,
+            -1.7650844607514364e-09,
+            -1.824944844525591e-09,
+            1.2948212313224624e-08,
+            -4.650905608064787e-09,
+            3.9289589648735355e-08,
+            3.472191364453604e-07,
+            -3.7527274034309814e-08,
+            4.789926412723171e-10,
+            -1.207295941302318e-09,
+            8.825015872477026e-10,
+            -1.8613078240230536e-09
+          ]
+        }
+      },
+      {
+        "order": 2,
+        "time": 6.25e-05,
+        "native_representation_residual_2": 1.1080852174650224e-07,
+        "native_field_error_2": 1.1074537108883896e-07,
+        "native_observed_time_order": 1.9997214873444438,
+        "additional_spatial_cache_field_error_2": 1.032911752742472e-17,
+        "cached": {
+          "original_field_error_2": 1.1074537108883896e-07,
+          "representation_residual_2": 1.1080852174650224e-07,
+          "original_transport_compatibility_2": 0.0001184643100432514,
+          "closure_max": 4.336808689942018e-19,
+          "K_min_singular": 0.9999502338829106,
+          "K_condition": 1.0007830948073964,
+          "field_error": [
+            -3.5070725018261233e-11,
+            5.529629415442475e-10,
+            4.837400058881021e-10,
+            -4.019519529952629e-09,
+            1.1651528267188318e-09,
+            -1.2161394578168416e-08,
+            -1.0724724667900084e-07,
+            8.991939198568906e-09,
+            -1.481120792272248e-10,
+            3.712723037986731e-10,
+            -2.6965114904151615e-10,
+            5.33627196068878e-10,
+            -1.340336386247708e-09,
+            6.1693473626236285e-09,
+            1.8476519838999006e-09,
+            -6.803478220501548e-09,
+            2.139270192855914e-09,
+            -6.3070903249532875e-09,
+            1.8938279676714772e-08,
+            4.563012982257726e-09,
+            2.1085582569711344e-10,
+            -4.2807724144215853e-10,
+            3.6808100451171726e-10,
+            -1.2171162122978365e-09
+          ],
+          "e_B": [
+            -1.3409509388301322e-09,
+            6.1660629920110704e-09,
+            1.8493341174226417e-09,
+            -6.798664759855369e-09,
+            2.1412238192791525e-09,
+            -6.301837080164088e-09,
+            1.8949111292229648e-08,
+            4.5671869360579135e-09,
+            2.1083550663246638e-10,
+            -4.2815475169545667e-10,
+            3.680972150403057e-10,
+            -1.2171007046990882e-09,
+            3.504141871281849e-11,
+            -5.532388770662423e-10,
+            -4.834571756945668e-10,
+            4.021837290135041e-09,
+            -1.1639952009508299e-09,
+            1.2168529741332705e-08,
+            1.0731120057111343e-07,
+            -8.980086879702915e-09,
+            1.481941782176459e-10,
+            -3.714583610685238e-10,
+            2.697888736051917e-10,
+            -5.337244546736754e-10
+          ]
+        },
+        "omitted_time_force_coefficient": {
+          "original_field_error_2": 1.0651732653477373e-05,
+          "representation_residual_2": 1.0657990737159387e-05,
+          "original_transport_compatibility_2": 0.03924373730553063,
+          "closure_max": 4.336808689942018e-19,
+          "K_min_singular": 0.999950311460748,
+          "K_condition": 1.0007818734885026,
+          "field_error": [
+            -3.1881605581381205e-11,
+            4.4094323520416205e-10,
+            4.5660189180073745e-10,
+            -3.2342867746032976e-09,
+            1.1641955810466225e-09,
+            -9.81387813963583e-09,
+            -8.672839416545332e-08,
+            9.396753906302842e-09,
+            -1.19650593201774e-10,
+            3.016040500314701e-10,
+            -2.2046208335509993e-10,
+            4.6521948409490596e-10,
+            -4.953801618786498e-07,
+            3.5763195517985702e-06,
+            9.7084051687942e-08,
+            -4.039090272023792e-06,
+            1.008788331459689e-08,
+            -4.188975827172122e-06,
+            -8.155526016351024e-06,
+            -1.621080555746679e-07,
+            7.044953025663784e-08,
+            2.1581781526054964e-08,
+            5.6248710277354984e-09,
+            -2.421787628021674e-08
+          ],
+          "e_B": [
+            -4.953339984702803e-07,
+            3.5780431429765624e-06,
+            9.663244800085807e-08,
+            -4.04140102584858e-06,
+            9.535028400672082e-09,
+            -4.1914569214034515e-06,
+            -8.160508331750069e-06,
+            -1.6334084956295508e-07,
+            7.04745678635977e-08,
+            2.159247832950594e-08,
+            5.6266626036007e-09,
+            -2.4228571940638668e-08,
+            3.186137283001487e-11,
+            -4.411663775495478e-10,
+            -4.564027326492839e-10,
+            3.236148888044136e-09,
+            -1.1633529150193186e-09,
+            9.819607332996784e-09,
+            8.67797161404087e-08,
+            -9.388019794755841e-09,
+            1.197169883453225e-10,
+            -3.017557201292763e-10,
+            2.2057383038867572e-10,
+            -4.65306070248667e-10
+          ]
+        }
+      }
+    ]
+  },
+  "native_probe": {
+    "state": [
+      0.009801252486380526,
+      0.006217063100585297,
+      -0.00011442816260198614,
+      -0.0026725700494732636,
+      -0.0023440049076359514,
+      -0.002010110422236621,
+      -0.0003499519517238524,
+      0.00042612654134317816,
+      0.000981768457899797,
+      0.0006327800106589955,
+      0.0002888336898871492,
+      -3.8465662338851833e-05,
+      0.000997036426825309,
+      0.0032618062661010226,
+      0.00122429653452982,
+      0.00020385497621241923,
+      -0.0005467454927670173,
+      -0.0008106502927112732,
+      -0.00020442934037354007,
+      0.00011212062280157155,
+      0.00033035085682267074,
+      0.00013093861091318735,
+      -2.7510594740881224e-05,
+      -7.77853064063087e-05
+    ],
+    "coefficient_checks": [
+      {
+        "order": 1,
+        "seconds": 1.173213076996035,
+        "cache_value_error_2": 2.764151885256498e-13,
+        "cache_Jacobian_error_2": 6.555346373281633e-08
+      },
+      {
+        "order": 2,
+        "seconds": 18.87995298700116,
+        "cache_value_error_2": 5.2486507881953555e-06,
+        "cache_Jacobian_error_2": 0.9637837046743947
+      }
+    ],
+    "rows": [
+      {
+        "order": 1,
+        "time": 0.0005,
+        "native_representation_residual_2": 0.00027524462210544367,
+        "native_field_error_2": 0.0002739825504370862,
+        "native_observed_time_order": null,
+        "additional_spatial_cache_field_error_2": 1.49087929023031e-12,
+        "cached": {
+          "original_field_error_2": 0.00027398255091306124,
+          "representation_residual_2": 0.0002752446225827457,
+          "original_transport_compatibility_2": 0.4775558729636443,
+          "closure_max": 3.469446951953614e-18,
+          "K_min_singular": 0.9996037344340277,
+          "K_condition": 1.0062549953236983,
+          "field_error": [
+            -1.3780386034297685e-08,
+            5.513618546994833e-07,
+            1.192602407369581e-07,
+            -3.856639237484415e-06,
+            -4.477560013798694e-08,
+            -1.1521901662478786e-05,
+            -0.00010065691740533492,
+            -2.4661154487717107e-06,
+            -1.3967796264875178e-07,
+            3.415348927553775e-07,
+            -2.407794205444476e-07,
+            3.278128828528873e-07,
+            -1.4608074684256629e-05,
+            8.115755821016151e-05,
+            9.848688159876693e-06,
+            -9.535360723799787e-05,
+            9.015908813911004e-06,
+            -9.974390216836319e-05,
+            -0.0001963065393689263,
+            1.4864745302630967e-05,
+            1.7966688031889854e-06,
+            3.986185571720588e-07,
+            5.6900368350763436e-08,
+            -5.464019177330796e-07
+          ],
+          "e_B": [
+            -1.461741308589741e-05,
+            8.148830548035326e-05,
+            9.788398440237718e-06,
+            -9.579025626088372e-05,
+            8.938425096707782e-06,
+            -0.00010021134568389211,
+            -0.00019724322460914784,
+            1.4686035460962117e-05,
+            1.8021825891914681e-06,
+            4.002763736559101e-07,
+            5.749052978080845e-08,
+            -5.485526973568583e-07,
+            1.341422075215649e-08,
+            -5.534140696965569e-07,
+            -1.1594597669960796e-07,
+            3.874391211316451e-06,
+            5.7224127976544504e-08,
+            1.1576682666795669e-05,
+            0.00010114915574098204,
+            2.5892097564513673e-06,
+            1.4029118936438528e-07,
+            -3.428790301385098e-07,
+            2.417941059943491e-07,
+            -3.281908846188385e-07
+          ]
+        },
+        "omitted_time_force_coefficient": {
+          "original_field_error_2": 0.00027398255091306124,
+          "representation_residual_2": 0.0002752446225827457,
+          "original_transport_compatibility_2": 0.4775558729636443,
+          "closure_max": 3.469446951953614e-18,
+          "K_min_singular": 0.9996037344340277,
+          "K_condition": 1.0062549953236983,
+          "field_error": [
+            -1.3780386034297685e-08,
+            5.513618546994833e-07,
+            1.192602407369581e-07,
+            -3.856639237484415e-06,
+            -4.477560013798694e-08,
+            -1.1521901662478786e-05,
+            -0.00010065691740533492,
+            -2.4661154487717107e-06,
+            -1.3967796264875178e-07,
+            3.415348927553775e-07,
+            -2.407794205444476e-07,
+            3.278128828528873e-07,
+            -1.4608074684256629e-05,
+            8.115755821016151e-05,
+            9.848688159876693e-06,
+            -9.535360723799787e-05,
+            9.015908813911004e-06,
+            -9.974390216836319e-05,
+            -0.0001963065393689263,
+            1.4864745302630967e-05,
+            1.7966688031889854e-06,
+            3.986185571720588e-07,
+            5.6900368350763436e-08,
+            -5.464019177330796e-07
+          ],
+          "e_B": [
+            -1.461741308589741e-05,
+            8.148830548035326e-05,
+            9.788398440237718e-06,
+            -9.579025626088372e-05,
+            8.938425096707782e-06,
+            -0.00010021134568389211,
+            -0.00019724322460914784,
+            1.4686035460962117e-05,
+            1.8021825891914681e-06,
+            4.002763736559101e-07,
+            5.749052978080845e-08,
+            -5.485526973568583e-07,
+            1.341422075215649e-08,
+            -5.534140696965569e-07,
+            -1.1594597669960796e-07,
+            3.874391211316451e-06,
+            5.7224127976544504e-08,
+            1.1576682666795669e-05,
+            0.00010114915574098204,
+            2.5892097564513673e-06,
+            1.4029118936438528e-07,
+            -3.428790301385098e-07,
+            2.417941059943491e-07,
+            -3.281908846188385e-07
+          ]
+        }
+      },
+      {
+        "order": 1,
+        "time": 0.00025,
+        "native_representation_residual_2": 0.0001375820700325838,
+        "native_field_error_2": 0.00013726586838181862,
+        "native_observed_time_order": 0.9971110737748211,
+        "additional_spatial_cache_field_error_2": 8.821844812959188e-13,
+        "cached": {
+          "original_field_error_2": 0.00013726586865604176,
+          "representation_residual_2": 0.00013758207030718312,
+          "original_transport_compatibility_2": 0.2385940779468689,
+          "closure_max": 1.734723475976807e-18,
+          "K_min_singular": 0.999801555595429,
+          "K_condition": 1.0031268771978177,
+          "field_error": [
+            -6.79905438285995e-09,
+            2.761927593037221e-07,
+            5.880509701775821e-08,
+            -1.9327463646531486e-06,
+            -2.5487553969845448e-08,
+            -5.7746111905814795e-06,
+            -5.045120312392227e-05,
+            -1.2637128113875564e-06,
+            -6.999192147282527e-08,
+            1.7110274013120594e-07,
+            -1.2064279334008282e-07,
+            1.6400113807307577e-07,
+            -7.309542667171489e-06,
+            4.065197282246181e-05,
+            4.916807691150081e-06,
+            -4.776951111095937e-05,
+            4.497269367284864e-06,
+            -4.9970418003777206e-05,
+            -9.834938988693681e-05,
+            7.406149133908462e-06,
+            8.996658294825544e-07,
+            1.9966327421871608e-07,
+            2.859584534472167e-08,
+            -2.736836576842761e-07
+          ],
+          "e_B": [
+            -7.311861830083561e-06,
+            4.0734825129545155e-05,
+            4.901675946995973e-06,
+            -4.787889961193801e-05,
+            4.477827933714484e-06,
+            -5.0087522661114567e-05,
+            -9.858405198355383e-05,
+            7.3613178616094695e-06,
+            9.010464480971965e-07,
+            2.0007849965356812e-07,
+            2.874388432881733e-08,
+            -2.742223979677001e-07,
+            6.707110376078245e-09,
+            -2.7670703484827844e-07,
+            -5.797298834980398e-08,
+            1.9371956056582254e-06,
+            2.8612063988272252e-08,
+            5.7883413333978345e-06,
+            5.057457787049102e-05,
+            1.2946048782256836e-06,
+            7.014559468219264e-08,
+            -1.714395150692549e-07,
+            1.2089705299717454e-07,
+            -1.6409544230941926e-07
+          ]
+        },
+        "omitted_time_force_coefficient": {
+          "original_field_error_2": 0.00013726586865604176,
+          "representation_residual_2": 0.00013758207030718312,
+          "original_transport_compatibility_2": 0.2385940779468689,
+          "closure_max": 1.734723475976807e-18,
+          "K_min_singular": 0.999801555595429,
+          "K_condition": 1.0031268771978177,
+          "field_error": [
+            -6.79905438285995e-09,
+            2.761927593037221e-07,
+            5.880509701775821e-08,
+            -1.9327463646531486e-06,
+            -2.5487553969845448e-08,
+            -5.7746111905814795e-06,
+            -5.045120312392227e-05,
+            -1.2637128113875564e-06,
+            -6.999192147282527e-08,
+            1.7110274013120594e-07,
+            -1.2064279334008282e-07,
+            1.6400113807307577e-07,
+            -7.309542667171489e-06,
+            4.065197282246181e-05,
+            4.916807691150081e-06,
+            -4.776951111095937e-05,
+            4.497269367284864e-06,
+            -4.9970418003777206e-05,
+            -9.834938988693681e-05,
+            7.406149133908462e-06,
+            8.996658294825544e-07,
+            1.9966327421871608e-07,
+            2.859584534472167e-08,
+            -2.736836576842761e-07
+          ],
+          "e_B": [
+            -7.311861830083561e-06,
+            4.0734825129545155e-05,
+            4.901675946995973e-06,
+            -4.787889961193801e-05,
+            4.477827933714484e-06,
+            -5.0087522661114567e-05,
+            -9.858405198355383e-05,
+            7.3613178616094695e-06,
+            9.010464480971965e-07,
+            2.0007849965356812e-07,
+            2.874388432881733e-08,
+            -2.742223979677001e-07,
+            6.707110376078245e-09,
+            -2.7670703484827844e-07,
+            -5.797298834980398e-08,
+            1.9371956056582254e-06,
+            2.8612063988272252e-08,
+            5.7883413333978345e-06,
+            5.057457787049102e-05,
+            1.2946048782256836e-06,
+            7.014559468219264e-08,
+            -1.714395150692549e-07,
+            1.2089705299717454e-07,
+            -1.6409544230941926e-07
+          ]
+        }
+      },
+      {
+        "order": 2,
+        "time": 0.0005,
+        "native_representation_residual_2": 7.0965240678033895e-06,
+        "native_field_error_2": 7.063751036016248e-06,
+        "native_observed_time_order": null,
+        "additional_spatial_cache_field_error_2": 1.1487485769681898e-08,
+        "cached": {
+          "original_field_error_2": 7.06191252307638e-06,
+          "representation_residual_2": 7.094671957073138e-06,
+          "original_transport_compatibility_2": 0.0076608486061688,
+          "closure_max": 3.469446951953614e-18,
+          "K_min_singular": 0.9995974284335759,
+          "K_condition": 1.0063507045354054,
+          "field_error": [
+            -2.227948182830823e-09,
+            3.52837643722384e-08,
+            3.061732248757145e-08,
+            -2.566919318165704e-07,
+            7.341798268785663e-08,
+            -7.767011453971369e-07,
+            -6.850079122778986e-06,
+            5.659661416193321e-07,
+            -9.49273673795064e-09,
+            2.3850732349704875e-08,
+            -1.7281877129798154e-08,
+            3.36796615165103e-08,
+            -8.45693247805414e-08,
+            3.7908380877730173e-07,
+            1.1648534797492526e-07,
+            -4.215633015212996e-07,
+            1.3515625985146966e-07,
+            -3.9188252390329937e-07,
+            1.15745209547538e-06,
+            2.9583301199784106e-07,
+            1.3039841912513384e-08,
+            -2.6544431219809812e-08,
+            2.2304391621255555e-08,
+            -7.291902384359173e-08
+          ],
+          "e_B": [
+            -8.489610421109255e-08,
+            3.776416803800281e-07,
+            1.1730863102315554e-07,
+            -4.194202174396047e-07,
+            1.361067015532742e-07,
+            -3.895254139037359e-07,
+            1.1628715832967193e-06,
+            2.9795803249812796e-07,
+            1.3034647003244693e-08,
+            -2.6588194800330133e-08,
+            2.232145760245091e-08,
+            -7.292250972800448e-08,
+            2.2122327347656384e-09,
+            -3.542649907591088e-08,
+            -3.0469773478856344e-08,
+            2.578920777574902e-07,
+            -7.281456416287802e-08,
+            7.803958101426006e-07,
+            6.883196323930781e-06,
+            -5.597916690876394e-07,
+            9.535207448750084e-09,
+            -2.3946889873244425e-08,
+            1.7353100522811183e-08,
+            -3.372980195696834e-08
+          ]
+        },
+        "omitted_time_force_coefficient": {
+          "original_field_error_2": 7.963336004519562e-05,
+          "representation_residual_2": 8.000493994607104e-05,
+          "original_transport_compatibility_2": 0.3123209269527483,
+          "closure_max": 3.469446951953614e-18,
+          "K_min_singular": 0.9996023634137863,
+          "K_condition": 1.006272490222666,
+          "field_error": [
+            -2.055493539876505e-09,
+            2.839352958758472e-08,
+            2.912469119934591e-08,
+            -2.0849904686040482e-07,
+            7.396984130153256e-08,
+            -6.32723917067802e-07,
+            -5.592284925249651e-06,
+            5.967113681473349e-07,
+            -7.746897621835866e-09,
+            1.958298874836874e-08,
+            -1.4271348736771716e-08,
+            2.9585642834300854e-08,
+            -3.717415992530947e-06,
+            2.7262873685842935e-05,
+            6.268106625422036e-07,
+            -3.065514958004503e-05,
+            -4.271410365353866e-08,
+            -3.172330212989643e-05,
+            -6.002748268674774e-05,
+            -1.4616219584676115e-06,
+            5.35292631583336e-07,
+            1.4049169093647955e-07,
+            6.27235989428338e-08,
+            -2.4566816903701516e-07
+          ],
+          "e_B": [
+            -3.714405197931508e-06,
+            2.736506705855804e-05,
+            5.996612506486911e-07,
+            -3.07921667158323e-05,
+            -7.589279488538522e-08,
+            -3.187041100710794e-05,
+            -6.032240106093774e-05,
+            -1.5354392489724317e-06,
+            5.367663282890232e-07,
+            1.4110201755407329e-07,
+            6.284053980075196e-08,
+            -2.463126991508702e-07,
+            2.0445604159728377e-09,
+            -2.8508798373510364e-08,
+            -2.902054008987179e-08,
+            2.094620246736586e-07,
+            -7.352999166180457e-08,
+            6.356868042814696e-07,
+            5.618827671072845e-06,
+            -5.921568407701797e-07,
+            7.781196376004495e-09,
+            -1.966125423862681e-08,
+            1.4329055088096942e-08,
+            -2.9630159409088937e-08
+          ]
+        }
+      },
+      {
+        "order": 2,
+        "time": 0.00025,
+        "native_representation_residual_2": 1.771661808496601e-06,
+        "native_field_error_2": 1.767600021552579e-06,
+        "native_observed_time_order": 1.998642641872687,
+        "additional_spatial_cache_field_error_2": 4.187034786533663e-09,
+        "cached": {
+          "original_field_error_2": 1.7669548622702983e-06,
+          "representation_residual_2": 1.7710142676635064e-06,
+          "original_transport_compatibility_2": 0.002010638040130312,
+          "closure_max": 1.734723475976807e-18,
+          "K_min_singular": 0.9997999992136921,
+          "K_condition": 1.00315074492807,
+          "field_error": [
+            -5.679301385172759e-10,
+            8.83065937394756e-09,
+            7.640106858188983e-09,
+            -6.426593234878133e-08,
+            1.8315956491794396e-08,
+            -1.944591056546563e-07,
+            -1.7150580646097322e-06,
+            1.4110381692471348e-07,
+            -2.37247635010488e-09,
+            5.95843413512832e-09,
+            -4.326214228664002e-09,
+            8.44015286579436e-09,
+            -2.174029219587286e-08,
+            1.0027950488759556e-07,
+            2.901709630204644e-08,
+            -1.1163521812428365e-07,
+            3.363453027680724e-08,
+            -1.0443917684604007e-07,
+            2.7679253330157794e-07,
+            7.309380046702e-08,
+            3.3678640101731726e-09,
+            -6.602893886403093e-09,
+            5.542196841297177e-09,
+            -1.824893264730875e-08
+          ],
+          "e_B": [
+            -2.177987850685817e-08,
+            1.0009847973722549e-07,
+            2.9118364675631152e-08,
+            -1.1136658922220738e-07,
+            3.3751278526599614e-08,
+            -1.0414463915819211e-07,
+            2.774309279655364e-07,
+            7.334847937374566e-08,
+            3.367044910957816e-09,
+            -6.607953399002086e-09,
+            5.543827887354092e-09,
+            -1.8248695299963403e-08,
+            5.659764073566208e-10,
+            -8.84839610062289e-09,
+            -7.621768132812264e-09,
+            6.441507220563568e-08,
+            -1.8240962120236147e-08,
+            1.9491823543342062e-07,
+            1.7191734998807577e-06,
+            -1.4033649748055514e-07,
+            2.3777648860450356e-09,
+            -5.970423842379605e-09,
+            4.335084097881571e-09,
+            -8.446295243587333e-09
+          ]
+        },
+        "omitted_time_force_coefficient": {
+          "original_field_error_2": 4.049676507103913e-05,
+          "representation_residual_2": 4.05917389670207e-05,
+          "original_transport_compatibility_2": 0.15667143404401002,
+          "closure_max": 1.734723475976807e-18,
+          "K_min_singular": 0.9998012373682119,
+          "K_condition": 1.0031311982618147,
+          "field_error": [
+            -5.254244574038747e-10,
+            7.104562185580168e-09,
+            7.2724736379764915e-09,
+            -5.218718506870161e-08,
+            1.8474783654380093e-08,
+            -1.5837061827237197e-07,
+            -1.399763446331263e-06,
+            1.489969178285919e-07,
+            -1.9349658286529035e-09,
+            4.889198461744752e-09,
+            -3.571844280721076e-09,
+            7.415887847640037e-09,
+            -1.8712510376230397e-06,
+            1.3736193167766437e-05,
+            3.0595678837034664e-07,
+            -1.546496452218482e-05,
+            -3.554335269510909e-08,
+            -1.60194735407081e-05,
+            -3.080943651103174e-05,
+            -7.735634850322081e-07,
+            2.6881381756092005e-07,
+            7.779888056170598e-08,
+            2.583289642694692e-08,
+            -1.0593669725255414e-07
+          ],
+          "e_B": [
+            -1.8704707023844936e-06,
+            1.3762308934374672e-05,
+            2.9899931950236824e-07,
+            -1.549999666745276e-05,
+            -4.404399756859983e-08,
+            -1.6057091469222264e-05,
+            -3.088495422130105e-05,
+            -7.924871211035741e-07,
+            2.6918942667479925e-07,
+            7.795885017615612e-08,
+            2.5860581544107163e-08,
+            -1.06099468625427e-07,
+            5.240583276584222e-10,
+            -7.118970925022708e-09,
+            -7.259459785566125e-09,
+            5.230755893467799e-08,
+            -1.8419818994967788e-08,
+            1.587409839681366e-07,
+            1.4030813366662772e-06,
+            -1.484277904011901e-07,
+            1.9392621178587443e-09,
+            -4.899014933725149e-09,
+            3.5790727392029845e-09,
+            -7.421384606617059e-09
+          ]
+        }
+      }
+    ]
+  },
+  "moser": [
+    {
+      "time": 0.0005,
+      "chart_matching_2": 2.2204670544007777e-16,
+      "inverse_composition_error_2": 2.690099830350113e-19,
+      "derivative_inverse_error_2": 3.3306762390982883e-16,
+      "time_inverse_error_2": 3.793946450297349e-18,
+      "chart_condition": 1.006255017910679,
+      "chart_time_derivative_norm": 0.003423434753825411,
+      "chi": {
+        "nfev": 77,
+        "seconds": 0.02315552599611692,
+        "max_auxiliary_distance": 1.7117173769127921e-06,
+        "rtol": 2e-11,
+        "atol": 2e-13,
+        "max_lambda_step": 0.25,
+        "minimum_solver_stage_Klambda_singular_value": 0.9996037333870887,
+        "lambda_grid": [
+          0.0,
+          0.0625,
+          0.125,
+          0.1875,
+          0.25,
+          0.3125,
+          0.375,
+          0.4375,
+          0.5,
+          0.5625,
+          0.625,
+          0.6875,
+          0.75,
+          0.8125,
+          0.875,
+          0.9375,
+          1.0
+        ],
+        "lambda_grid_min_singular_values": [
+          1.0,
+          0.9999751602117137,
+          0.9999503301968501,
+          0.9999255099503784,
+          0.9999006994672722,
+          0.9998758987425085,
+          0.9998511077710663,
+          0.999826326547928,
+          0.9998015550680805,
+          0.9997767933265125,
+          0.9997520413182156,
+          0.9997272990381857,
+          0.9997025664814208,
+          0.9996778436429224,
+          0.9996531305176951,
+          0.9996284271007472,
+          0.9996037333870887
+        ],
+        "uniform_ball_sufficient_bounds": {
+          "radius": 0.002,
+          "K_perturbation_upper_bound": 0.006478565017929669,
+          "all_lambda_min_singular_lower_bound": 0.9935214349820704,
+          "auxiliary_speed_upper_bound": 1.4568221011181319e-05,
+          "interpretation": "Analytic sufficient bound on the specified Euclidean ball for the cached polynomial; coefficients evaluated in floating point, not an interval certificate."
+        },
+        "sufficient_stay_in_ball": true
+      },
+      "rho": {
+        "nfev": 77,
+        "seconds": 0.023009960001218133,
+        "max_auxiliary_distance": 1.7117173769127921e-06,
+        "rtol": 2e-11,
+        "atol": 2e-13,
+        "max_lambda_step": 0.25,
+        "minimum_solver_stage_Klambda_singular_value": 0.9996037333870887,
+        "lambda_grid": [
+          0.0,
+          0.0625,
+          0.125,
+          0.1875,
+          0.25,
+          0.3125,
+          0.375,
+          0.4375,
+          0.5,
+          0.5625,
+          0.625,
+          0.6875,
+          0.75,
+          0.8125,
+          0.875,
+          0.9375,
+          1.0
+        ],
+        "lambda_grid_min_singular_values": [
+          1.0,
+          0.9999751602117137,
+          0.9999503301968501,
+          0.9999255099503784,
+          0.9999006994672721,
+          0.9998758987425086,
+          0.9998511077710662,
+          0.9998263265479286,
+          0.9998015550680805,
+          0.9997767933265126,
+          0.9997520413182156,
+          0.9997272990381855,
+          0.9997025664814208,
+          0.9996778436429224,
+          0.9996531305176951,
+          0.999628427100747,
+          0.9996037333870887
+        ],
+        "uniform_ball_sufficient_bounds": {
+          "radius": 0.002,
+          "K_perturbation_upper_bound": 0.006478565017929669,
+          "all_lambda_min_singular_lower_bound": 0.9935214349820704,
+          "auxiliary_speed_upper_bound": 1.4568221011181319e-05,
+          "interpretation": "Analytic sufficient bound on the specified Euclidean ball for the cached polynomial; coefficients evaluated in floating point, not an interval certificate."
+        },
+        "sufficient_stay_in_ball": true
+      },
+      "order": 1
+    },
+    {
+      "time": 0.0005,
+      "chart_matching_2": 8.881784627112462e-16,
+      "inverse_composition_error_2": 1.3580999905287221e-18,
+      "derivative_inverse_error_2": 6.661338147799038e-16,
+      "time_inverse_error_2": 2.5180598725436954e-18,
+      "chart_condition": 1.0063523809437431,
+      "chart_time_derivative_norm": 0.0036806442320030243,
+      "chi": {
+        "nfev": 77,
+        "seconds": 0.021435368005768396,
+        "max_auxiliary_distance": 1.7758262973496563e-06,
+        "rtol": 2e-11,
+        "atol": 2e-13,
+        "max_lambda_step": 0.25,
+        "minimum_solver_stage_Klambda_singular_value": 0.9995974271716853,
+        "lambda_grid": [
+          0.0,
+          0.0625,
+          0.125,
+          0.1875,
+          0.25,
+          0.3125,
+          0.375,
+          0.4375,
+          0.5,
+          0.5625,
+          0.625,
+          0.6875,
+          0.75,
+          0.8125,
+          0.875,
+          0.9375,
+          1.0
+        ],
+        "lambda_grid_min_singular_values": [
+          1.0,
+          0.9999747637918649,
+          0.9999495376624334,
+          0.9999243216064413,
+          0.9998991156186247,
+          0.9998739196937257,
+          0.9998487338264889,
+          0.9998235580116617,
+          0.9997983922439952,
+          0.999773236518244,
+          0.9997480908291659,
+          0.9997229551715219,
+          0.9996978295400768,
+          0.9996727139295977,
+          0.9996476083348559,
+          0.999622512750626,
+          0.9995974271716853
+        ],
+        "uniform_ball_sufficient_bounds": {
+          "radius": 0.002,
+          "K_perturbation_upper_bound": 0.0065745735330279866,
+          "all_lambda_min_singular_lower_bound": 0.993425426466972,
+          "auxiliary_speed_upper_bound": 1.4830780090013826e-05,
+          "interpretation": "Analytic sufficient bound on the specified Euclidean ball for the cached polynomial; coefficients evaluated in floating point, not an interval certificate."
+        },
+        "sufficient_stay_in_ball": true
+      },
+      "rho": {
+        "nfev": 77,
+        "seconds": 0.02194103600049857,
+        "max_auxiliary_distance": 1.7758262973496563e-06,
+        "rtol": 2e-11,
+        "atol": 2e-13,
+        "max_lambda_step": 0.25,
+        "minimum_solver_stage_Klambda_singular_value": 0.9995974271716852,
+        "lambda_grid": [
+          0.0,
+          0.0625,
+          0.125,
+          0.1875,
+          0.25,
+          0.3125,
+          0.375,
+          0.4375,
+          0.5,
+          0.5625,
+          0.625,
+          0.6875,
+          0.75,
+          0.8125,
+          0.875,
+          0.9375,
+          1.0
+        ],
+        "lambda_grid_min_singular_values": [
+          1.0,
+          0.9999747637918648,
+          0.9999495376624337,
+          0.9999243216064412,
+          0.9998991156186244,
+          0.9998739196937261,
+          0.9998487338264889,
+          0.9998235580116617,
+          0.9997983922439952,
+          0.999773236518244,
+          0.9997480908291656,
+          0.999722955171522,
+          0.9996978295400766,
+          0.9996727139295978,
+          0.9996476083348559,
+          0.9996225127506259,
+          0.9995974271716852
+        ],
+        "uniform_ball_sufficient_bounds": {
+          "radius": 0.002,
+          "K_perturbation_upper_bound": 0.0065745735330279866,
+          "all_lambda_min_singular_lower_bound": 0.993425426466972,
+          "auxiliary_speed_upper_bound": 1.4830780090013826e-05,
+          "interpretation": "Analytic sufficient bound on the specified Euclidean ball for the cached polynomial; coefficients evaluated in floating point, not an interval certificate."
+        },
+        "sufficient_stay_in_ball": true
+      },
+      "order": 2
+    }
+  ],
+  "reused_reference_run": {
+    "source": "time_gain_r2",
+    "sha256": "905ddd1a0c091c51c8461d83cedabc411276d7106d1fdb9149fb1b775a496d99",
+    "reason": "Unchanged numerical kernels; preceding run stopped only at duplicate steps keyword in result assembly. Failure retained."
+  },
+  "original_reference_refinement_max": 2.095880934833054e-17,
+  "represented_r2_reference_refinement_max": 1.2937073694291158e-17,
+  "represented_original_model_gap_max": 1.1769009850574987e-09,
+  "physical_samples": [
+    {
+      "time": 0.0,
+      "current_A": [
+        0.8852280022039573,
+        -1.2296748629188485,
+        -0.7262653610498649,
+        -0.7965773050528547,
+        -0.569534056317674,
+        0.6460923929893293,
+        0.6968401460272965,
+        0.7797023103081141,
+        1.14966681768348,
+        0.2881683285952023,
+        1.5123476181634308,
+        -0.3272053527996603
+      ],
+      "maximum_current_A": 1.5123476181634308,
+      "power_H_tau": -6.700701185556643e-05,
+      "collocated_power_formula": -6.70070118555661e-05,
+      "power_identity_residual": -3.3881317890172014e-19,
+      "maximum_B_T": 0.0005013180441393317,
+      "maximum_G_T_per_m": 0.0043132952391764885
+    },
+    {
+      "time": 6.25e-05,
+      "current_A": [
+        0.88522716548824,
+        -1.2296708573350739,
+        -0.726261408382502,
+        -0.7965768147984823,
+        -0.5695329210197813,
+        0.6460972028471529,
+        0.6968452560557669,
+        0.7797058519512473,
+        1.1496621756269527,
+        0.2881720090564714,
+        1.5123499712793083,
+        -0.3272072737745177
+      ],
+      "maximum_current_A": 1.5123499712793083,
+      "power_H_tau": -6.633909967065009e-05,
+      "collocated_power_formula": -6.633909967064995e-05,
+      "power_identity_residual": -1.3552527156068805e-19,
+      "maximum_B_T": 0.0005013159011557383,
+      "maximum_G_T_per_m": 0.004313284943760391
+    },
+    {
+      "time": 0.000125,
+      "current_A": [
+        0.8852263268955085,
+        -1.2296667963781784,
+        -0.7262573927085616,
+        -0.7965763016145673,
+        -0.569531753129752,
+        0.6461020903897885,
+        0.6968504400755939,
+        0.7797094584994527,
+        1.1496574841321279,
+        0.2881757452021008,
+        1.5123523407970103,
+        -0.32720923865147217
+      ],
+      "maximum_current_A": 1.5123523407970103,
+      "power_H_tau": -6.566986987518165e-05,
+      "collocated_power_formula": -6.56698698751838e-05,
+      "power_identity_residual": 2.15485181781494e-18,
+      "maximum_B_T": 0.0005013137355962168,
+      "maximum_G_T_per_m": 0.004313274491987466
+    },
+    {
+      "time": 0.0001875,
+      "current_A": [
+        0.8852254864458248,
+        -1.229662679585195,
+        -0.7262533134480159,
+        -0.7965757652541768,
+        -0.569530552312524,
+        0.646107056331446,
+        0.6968556986733806,
+        0.7797131305825022,
+        1.1496527428924348,
+        0.2881795374706866,
+        1.512354726762907,
+        -0.3272112478944006
+      ],
+      "maximum_current_A": 1.512354726762907,
+      "power_H_tau": -6.499938145669061e-05,
+      "collocated_power_formula": -6.499938145669061e-05,
+      "power_identity_residual": 0.0,
+      "maximum_B_T": 0.0005013115472938064,
+      "maximum_G_T_per_m": 0.004313263884013678
+    },
+    {
+      "time": 0.00025,
+      "current_A": [
+        0.8852246441489772,
+        -1.2296585064846988,
+        -0.7262491700246572,
+        -0.7965752054920082,
+        -0.569529318256318,
+        0.6461121013774381,
+        0.6968610324249053,
+        0.7797168688109716,
+        1.1496479515921003,
+        0.2881833862882488,
+        1.5123571292477929,
+        -0.32721330194390824
+      ],
+      "maximum_current_A": 1.5123571292477929,
+      "power_H_tau": -6.432769475208615e-05,
+      "collocated_power_formula": -6.432769475209197e-05,
+      "power_identity_residual": 5.8140341499535175e-18,
+      "maximum_B_T": 0.0005013093360693859,
+      "maximum_G_T_per_m": 0.004313253120075403
+    },
+    {
+      "time": 0.0003125,
+      "current_A": [
+        0.8852238000044444,
+        -1.2296542765970133,
+        -0.7262449618663539,
+        -0.7965746221245497,
+        -0.5695280506728359,
+        0.6461172262238556,
+        0.6968664418947994,
+        0.7797206737759432,
+        1.149643109906303,
+        0.2881872920679719,
+        1.5123595483468817,
+        -0.327215401217107
+      ],
+      "maximum_current_A": 1.5123595483468817,
+      "power_H_tau": -6.36548714729979e-05,
+      "collocated_power_formula": -6.365487147299797e-05,
+      "power_identity_residual": 6.776263578034403e-20,
+      "maximum_B_T": 0.0005013071017317225,
+      "maximum_G_T_per_m": 0.0043132422004899034
+    },
+    {
+      "time": 0.000375,
+      "current_A": [
+        0.8852229540013968,
+        -1.2296499894344917,
+        -0.726240688405352,
+        -0.7965740149701878,
+        -0.5695267492974079,
+        0.6461224315572044,
+        0.6968719276361971,
+        0.7797245460487185,
+        1.1496382175014037,
+        0.2881912552099379,
+        1.5123619841796998,
+        -0.32721754610743325
+      ],
+      "maximum_current_A": 1.5123619841796998,
+      "power_H_tau": -6.298097473240739e-05,
+      "collocated_power_formula": -6.298097473240373e-05,
+      "power_identity_residual": -3.6591823321385775e-18,
+      "maximum_B_T": 0.0005013048440775821,
+      "maximum_G_T_per_m": 0.004313231125655294
+    },
+    {
+      "time": 0.0004375,
+      "current_A": [
+        0.8852221061187405,
+        -1.229645644501881,
+        -0.7262363490786151,
+        -0.7965733838692493,
+        -0.5695254138890768,
+        0.6461277180540076,
+        0.6968774901903627,
+        0.7797284861805464,
+        1.149633274035255,
+        0.28819527610086204,
+        1.512364436889871,
+        -0.3272197369845179
+      ],
+      "maximum_current_A": 1.512364436889871,
+      "power_H_tau": -6.230606907177366e-05,
+      "collocated_power_formula": -6.230606907177252e-05,
+      "power_identity_residual": -1.1384122811097797e-18,
+      "maximum_B_T": 0.0005013025628919079,
+      "maximum_G_T_per_m": 0.004313219896050871
+    },
+    {
+      "time": 0.0005,
+      "current_A": [
+        0.8852212563251979,
+        -1.2296412412967652,
+        -0.7262319433282093,
+        -0.7965727286839902,
+        -0.5695240442306325,
+        0.6461330863803687,
+        0.6968831300862889,
+        0.7797324947023577,
+        1.149628279157587,
+        0.28819935511382033,
+        1.512366906644805,
+        -0.3272219741940949
+      ],
+      "maximum_current_A": 1.512366906644805,
+      "power_H_tau": -6.163022048930946e-05,
+      "collocated_power_formula": -6.163022048931161e-05,
+      "power_identity_residual": 2.15485181781494e-18,
+      "maximum_B_T": 0.0005013002579480627,
+      "maximum_G_T_per_m": 0.004313208512236654
+    }
+  ],
+  "sampled_current_slew_max_A_per_s": 0.40224905506255526,
+  "constraint_scope": "Sampled smooth feedback only. No online limiter, no continuum field/slew certificate; compare coil configuration limits explicitly.",
+  "elapsed_seconds": 127.26834533899091
+}

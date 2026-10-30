@@ -1,0 +1,50 @@
+--- stage3/source_inputs/v10/v10_framework_20261028/english/sections/references.tex
++++ fusion_archive::english/sections/references.tex
+@@ -8,6 +8,11 @@
+ \bibitem[Antman(2005)]{antman}
+ Antman SS (2005) \textit{Nonlinear Problems of Elasticity}. 2nd ed. Springer.
+ \doi{10.1007/0-387-27649-1}
++
++\bibitem[Cannas da Silva(2005)]{cannas2005}
++Cannas da Silva A (2005) Symplectic geometry.
++Overview prepared for the \textit{Handbook of Differential Geometry}, vol. 2.
++Preprint version used: \url{https://arxiv.org/abs/math/0505366v1}, Sections 1.4--1.5.
+ 
+ \bibitem[Chen et~al.(2022)]{chen2022}
+ Chen Y, Matsubara T and Yaguchi T (2022) KAM theory meets statistical learning theory:
+@@ -49,6 +54,11 @@
+ In: \textit{Advances in Neural Information Processing Systems}, vol. 32.
+ \url{https://arxiv.org/abs/1906.01563}.
+ 
++\bibitem[Guo et~al.(2010)]{guo2010}
++Guo YX, Liu C and Liu SX (2010) Generalized Birkhoffian realization of nonholonomic systems.
++\textit{Communications in Mathematics} 18(1): 21--35.
++\url{https://dml.cz/handle/10338.dmlcz/141670}.
++
+ \bibitem[Hairer et~al.(2006)]{hairer}
+ Hairer E, Lubich C and Wanner G (2006) \textit{Geometric Numerical Integration:
+ Structure-Preserving Algorithms for Ordinary Differential Equations}. 2nd ed. Springer.
+@@ -73,6 +83,11 @@
+ \url{https://www.kjmagnetics.com/blog/magnetic-dipole-moment}.
+ Engineering dipole-moment approximation.
+ 
++\bibitem[Kong et~al.(2016)]{kong2016}
++Kong XL, Wu HB and Mei FX (2016) Birkhoffian symplectic algorithms derived from Hamiltonian symplectic algorithms.
++\textit{Chinese Physics B} 25(1): 010203.
++\doi{10.1088/1674-1056/25/1/010203}
++
+ \bibitem[Lussi et~al.(2021)]{lussi2021cvs}
+ Lussi J et~al. (2021) A submillimeter continuous variable stiffness catheter for compliance control.
+ \textit{Advanced Science} 8(18): 2101290. \doi{10.1002/advs.202101290}
+@@ -96,6 +111,11 @@
+ SM Magnetics / SuperMagnetMan (accessed 28 October 2026) Magnet material grades: NdFeB stock grades, N50.
+ \url{https://supermagnetman.com/pages/magnet-material-grades}.
+ Manufacturer grade range, not an individual magnet calibration.
++
++\bibitem[Su and Qin(2003)]{suqin2003}
++Su H and Qin M (2003) Symplectic schemes for Birkhoffian system.
++Preprint version used: \url{https://arxiv.org/abs/math-ph/0301001v1}.
++Theorem numbering refers to this preprint, separately from the book and the 2007 article.
+ 
+ \bibitem[Su et~al.(2007)]{su2007}
+ Su HL, Sun YJ, Qin MZ and Scherer R (2007) Structure preserving schemes for Birkhoffian systems.

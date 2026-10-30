@@ -1,0 +1,33 @@
+{
+  "scope": "Observed reproducibility environment; not an environment setup draft.",
+  "thread_settings": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMBA_NUM_THREADS": "1"
+  },
+  "environments": {
+    "learning": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+      "packages": {
+        "numpy": "2.3.5",
+        "scipy": "1.17.0",
+        "torch": "2.5.1+cpu",
+        "sympy": "1.13.1",
+        "matplotlib": "3.10.8"
+      },
+      "executable": "/workspace/1028-cloud/venvs/learning/bin/python"
+    },
+    "rod": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+      "packages": {
+        "numpy": "2.3.5",
+        "scipy": "1.17.0",
+        "pyelastica": "1.0.0",
+        "numba": "0.62.1"
+      },
+      "executable": "/workspace/1028-cloud/venvs/rod/bin/python"
+    }
+  }
+}

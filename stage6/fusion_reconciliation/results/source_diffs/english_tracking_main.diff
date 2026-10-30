@@ -1,0 +1,57 @@
+--- stage3/source_inputs/v10/v10_framework_20261028/english/sections/tracking_main.tex
++++ fusion_archive::english/sections/tracking_main.tex
+@@ -0,0 +1,54 @@
++\subsection{Learned conservative references and magnetic tracking}
++\label{app:learned-tracking-main}
++
++Direction~II uses the same plant, potential readout and magnetic ports to follow a learned conservative motion. Freeze $\widehat V=V_0+\widehat R$ after identification and generate
++\begin{equation}\label{tm:reference}
++ X_r'=\mathsf N Y_r,\qquad
++ Y_r'=-\nabla\widehat V(X_r).
++\end{equation}
++The Hamiltonian of this reference is $\widehat h$ from \eqref{ri:hamiltonians}; its conditional persistence analysis is \eqref{ri:budgets} and Proposition~\ref{kam:flow-theorem}. With $e_X=X-X_r$, $e_Y=Y-Y_r$, use the retained feedback
++\begin{equation}\label{tm:control}
++\begin{aligned}
++ U_B={}&\widehat\gamma Y+\nabla\widehat V(X)
++                  -\nabla\widehat V(X_r)\\
++       &-\kappa_p\mathsf N^{-1}e_X-\kappa_de_Y,
++       \qquad \kappa_p,\kappa_d>0.
++\end{aligned}
++\end{equation}
++Substitution into the same true plant, followed by $V_*=\widehat V+\delta R$ and $\gamma=\widehat\gamma+\delta\gamma$, gives
++\begin{equation}\label{tm:substitution}
++\begin{aligned}
++ Y'&=-\nabla V_*(X)-\gamma Y+U_B\\
++   &=-\nabla\widehat V(X_r)-\kappa_p\mathsf N^{-1}e_X
++          -\kappa_de_Y\\
++   &\quad-\nabla\delta R(X)-\delta\gamma Y.
++\end{aligned}
++\end{equation}
++Subtracting \eqref{tm:reference} yields $e_X'=\mathsf N e_Y$ and hence
++\begin{equation}\label{tm:error}
++ e_X''+\kappa_de_X'+\kappa_pe_X
++ =-\mathsf N[\nabla\delta R(X)+\delta\gamma Y].
++\end{equation}
++The homogeneous equation is exponentially stable. A bounded right-hand side gives the explicit convolution bound in \eqref{ss:tracking-bound}; exact cancellation gives asymptotic tracking. An actuation error $r_U$ adds $\mathsf N r_U$ to the right-hand side. This is a tracking statement for the actual controlled plant, distinct from existence of conservative reference tori and from convergence of a numerical discretization.
++
++Use $U=U_B$ in \eqref{app:port-inverse} and \eqref{app:field-gradient}. Their rank-two, angle and joint field--gradient requirements remain unchanged. The continuous modal command $U_B$, its midpoint increment $\Delta(0,U_B)^{\mathsf T}$ and the dimensional field instructions are different quantities. As in Direction~I, two magnetic ports do not realize arbitrary high-dimensional feedback. The retained full-model validation and clearance conditions therefore also constrain this route.
++
++The shared-baseline test freezes the same fitted coefficients as the compensation test. The reference starts at $(0.09,0.08,0.015,-0.01)$ and the actual plant at $(0.0945,0.084,0.015,-0.01)$. All four groups use this same reference on $0\le\tau\le20$, with $\Delta=0.001$, $\kappa_p=1$ and $\kappa_d=2$. The oracle replaces only the unknown plant cancellation terms by their true synthetic values, as in \eqref{struct:route-b-oracle}; it retains the learned reference. Every group passes through the same ideal magnetic interface without saturation. The independent reference is fine-step RK4 at $0.00025$, while the implemented reference and plant form one eight-dimensional midpoint solve.
++
++\begin{table*}[t]
++\centering\small
++\caption{Direction-II state RMS on $10\le\tau\le20$ under the common protocol. The norm is the Euclidean norm of all four balanced coordinates.}
++\label{tm:results}
++\begin{tabular}{lcc}
++\toprule
++Control & Independent reference & Synchronous reference\\
++\midrule
++Passive & $3.41583\times10^{-2}$ & $3.41580\times10^{-2}$\\
++Damping only & $6.02249\times10^{-3}$ & $6.02060\times10^{-3}$\\
++Learned tracking & $2.26767\times10^{-5}$ & $8.55100\times10^{-7}$\\
++Oracle tracking & $2.26767\times10^{-5}$ & $8.55090\times10^{-7}$\\
++\bottomrule
++\end{tabular}
++\end{table*}
++
++Table~\ref{tm:results} retains the two error definitions: synchronization to the implemented reference and error relative to its independently integrated continuous model. The learned whole-window independent RMS is $1.58912\times10^{-3}$, including the imposed startup offset. The reference's maximum integration error is $2.96936\times10^{-5}$ and falls by a factor $3.999984$ on step halving. The oracle error equation agrees with its independently formed Cayley update to $1.0040\times10^{-15}$. Before feedback, conservative prediction against the same synthetic $h_*$ improves from $8.04072\times10^{-6}$ for $h_0$ to $1.35426\times10^{-10}$ for $\widehat h$ in state RMS. These results establish the restricted-feature prediction and tracking comparison, without certifying KAM tori or a physical device. Supplement~\ref{sec:supp-tracking} preserves the full derivation, control ablations, damping scan and input demands; the recorded data are in \path{reproduction/experiments/route_b_shared_results.json}.

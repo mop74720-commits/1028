@@ -1,0 +1,103 @@
+--- stage3/source_inputs/v10/v10_framework_20261028/english/sections/supp_route_budgets.tex
++++ fusion_archive::english/sections/supp_route_budgets.tex
+@@ -0,0 +1,100 @@
++\subsection{Separate local analytic budgets for the two routes}
++\label{sr:budget-domain}
++
++The two energies in \eqref{ri:budgets} require distinct normal forms even when the same coefficient-error estimate is available. This calculation gives a local domain and a complete remainder majorant for the recorded two-mode parameter values. It is an analytic estimate evaluated numerically; it does not supply the theorem constants or a validated uncertainty interval for those parameters.
++
++Write $x=(X_1,X_2,Y_1,Y_2)$ and let
++$\mathcal U_r=\{x\in\C^4:\norm{x}_\infty<r\}$. For a polynomial $P(x)=\sum_aP_ax^a$, define its coefficient majorant
++\begin{equation}\label{sr:majorant}
++ [P]_r=\sum_a|P_a|r^{|a|},\qquad
++ \norm{P}_{\mathcal U_r}\le[P]_r.
++\end{equation}
++The same definition is applied componentwise to polynomial vectors and matrices, using the induced maximum row-sum norm for matrices. This provides directly computable bounds rather than sampled values on the real domain.
++
++Let $W=W_{4,\kappa}$ solve \eqref{kam:homological}, let $v_W=J\nabla W$, and let $\Phi_W^s$ be its local flow for the auxiliary parameter $s$. This parameter generates the canonical normal-form transformation; it is not physical time. Define
++\begin{equation}\label{sr:flow-bounds}
++ m_\kappa(r)=\max_i[(v_W)_i]_r,\qquad
++ \ell_\kappa(r)=\max_i\sum_j[\partial_j(v_W)_i]_r.
++\end{equation}
++If $r_{\rm in}+m_\kappa(r_{\rm out})<r_{\rm out}$, trajectories starting in $\mathcal U_{r_{\rm in}}$ remain in $\mathcal U_{r_{\rm out}}$ for $|s|\le1$. Indeed, a first exit would require displacement at least $r_{\rm out}-r_{\rm in}$, while integrating $\norm{v_W}_\infty\le m_\kappa$ up to that exit gives displacement at most $m_\kappa$. The strict inequality prevents exit and permits continuation of the analytic polynomial flow. Its variational equation and the reverse flow give derivative and inverse-derivative bounds $e^{\ell_\kappa}$ on the corresponding images. The two flows therefore define analytic canonical coordinate changes on the stated local domains.
++
++All radii in this calculation refer to the dimensionless balanced coordinates or their actions. For a concrete common action--angle domain, take
++\begin{equation}\label{sr:chosen-domain}
++\begin{aligned}
++ &\operatorname{dist}(I_j,[10^{-4},2\times10^{-4}])<\rho_I,
++                   \qquad j=1,2,\\
++ &|\operatorname{Im}\phi_j|<\rho_\phi,\qquad \rho_\phi=0.1,\\
++ &\rho_I=2.5\times10^{-5},\qquad r_{\rm out}=0.03.
++\end{aligned}
++\end{equation}
++The first line specifies a complex neighborhood of each real action interval. Since $\rho_I<10^{-4}$, an analytic branch of $\sqrt{I_j}$ exists there. The polar map $\mathcal P(I,\phi)$ from Section~\ref{kam:normalform-section} satisfies
++\begin{equation}\label{sr:polar-bound}
++ \norm{\mathcal P(I,\phi)}_\infty\le r_{\rm in}
++ :=\sqrt{2(2\times10^{-4}+\rho_I)}\cosh\rho_\phi.
++\end{equation}
++Thus $\mathcal T_\kappa=\Phi_{W_{4,\kappa}}^1\circ\mathcal P$ maps this domain into the same $\mathcal U_{r_{\rm out}}$ whenever the preceding flow margin holds. The two maps and their images differ with $\kappa$, even though the prototype action intervals are shared. Local polar inverse branches are analytic because the actions stay away from zero; angular lifts are understood modulo $2\pi$. For example, with $I_{\min}=10^{-4}$, direct differentiation bounds the polar Jacobian and inverse Jacobian by
++\begin{equation}\label{sr:polar-derivatives}
++\begin{aligned}
++ c_P&=\frac{\cosh\rho_\phi}{\sqrt{2(I_{\min}-\rho_I)}}+r_{\rm in},\\
++ c_{P^{-1}}&=\max\!\left(2r_{\rm in},
++                 \frac{r_{\rm in}}{I_{\min}-\rho_I}\right).
++\end{aligned}
++\end{equation}
++Multiplication by $e^{\ell_\kappa}$ bounds the corresponding full-chart derivatives. These bounds do not assert that the finite-time control trajectories lie in this smaller analytic domain; their initial positions already exceed $r_{\rm out}$.
++
++To control the complete remainder, decompose
++$h_\kappa=h_2+h_{4,\kappa}+h_{\ge6,\kappa}$ and set
++$Z_{4,\kappa}=\langle h_{4,\kappa}\rangle$. The chain rule gives
++$\frac{d}{ds}(F\circ\Phi_W^s)=\{F,W\}\circ\Phi_W^s$.
++Apply its integral form once to $h_{4,\kappa}$ and twice to $h_2$:
++\begin{equation}\label{sr:integral-expansion}
++\begin{aligned}
++ &h_{4,\kappa}\circ\Phi_W^1-h_{4,\kappa}\\
++ &\quad=\int_0^1\{h_{4,\kappa},W\}\circ\Phi_W^s\,\dd s,\\
++ &h_2\circ\Phi_W^1-h_2-\{h_2,W\}\\
++ &\quad=\int_0^1(1-s)\{\{h_2,W\},W\}
++                          \circ\Phi_W^s\,\dd s.
++\end{aligned}
++\end{equation}
++Since $\{h_2,W\}=-(h_{4,\kappa}-Z_{4,\kappa})$, adding these identities and the composed tail yields the exact Cartesian remainder
++\begin{equation}\label{sr:full-remainder}
++\begin{aligned}
++ \mathcal R_{6,\kappa}={}&h_{\ge6,\kappa}\circ\Phi_W^1\\
++ &+\int_0^1\{h_{4,\kappa},W\}\circ\Phi_W^s\,\dd s\\
++ &+\int_0^1(1-s)\{\{h_2,W\},W\}
++                         \circ\Phi_W^s\,\dd s,\\
++ h_\kappa\circ\Phi_W^1&=h_2+Z_{4,\kappa}+\mathcal R_{6,\kappa}.
++\end{aligned}
++\end{equation}
++This is an integral identity for the full transformation, so no higher Lie terms have been dropped. Composing with $\mathcal P$ gives $R_6^\kappa=\mathcal R_{6,\kappa}\circ\mathcal P$. Both displayed brackets are degree six and scale as $\kappa^2$. With $s_d=\norm{d}_1r_{\rm out}$, the common image bound and \eqref{ss:cosine-tail} imply
++\begin{equation}\label{sr:remainder-bound}
++\begin{aligned}
++ \norm{R_6^\kappa}\le\overline R_\kappa:={}&
++ |\kappa|\frac{s_d^6\cosh s_d}{720}\\
++ &+[\{h_{4,\kappa},W\}]_{r_{\rm out}}\\
++ &+\tfrac12[\{\{h_2,W\},W\}]_{r_{\rm out}}.
++\end{aligned}
++\end{equation}
++For the single feature, $|\beta_*-\widehat\beta|\le b_\beta$ and the same image inclusion give
++\begin{equation}\label{sr:shared-residual-bound}
++\begin{aligned}
++ B_g&=\cosh s_d-1-\tfrac12s_d^2,\\
++ b_R^A, b_R^B&\le b_\beta B_g,\\
++ \epsilon_A&\le\overline R_1+b_\beta B_g,\qquad
++ \epsilon_B\le\overline R_{1.2}+b_\beta B_g.
++\end{aligned}
++\end{equation}
++One may take $b_\beta=b_I$ when the independent observation-defect and Gram assumptions behind \eqref{kam:integral-bound} hold. The truth-based coefficient discrepancy in the synthetic record is a separate diagnostic. Neither is inferred from a small training residual alone.
++
++\input{sections/route_budget_table}
++
++The script \path{reproduction/route_budget/normal_form_budgets.py} constructs the finite homological polynomial and checks its identity exactly using rational representations of the recorded decimal coefficients. It then evaluates the majorants and domain margins in ordinary floating-point arithmetic, with results in \path{reproduction/route_budget/normal_form_budget_results.json}. The symbolic identity is exact for that recorded point model; the displayed numerical bounds are not outward-rounded interval certificates for uncertain physical inputs. The constants $C_3^s,C_4^s$ in \eqref{ri:discrete-budgets}, the theorem constant $\delta_0$, and the required full Diophantine assertions have not been evaluated. A numerical remainder majorant therefore supplies a component of the perturbation budget, not proof that its KAM smallness inequality holds.
++
++\subsection{Which cited persistence result is being used}
++\label{sr:theorem-audit}
++
++The statistical result of \citet[Theorem~11]{chen2022} assumes an integrable nondegenerate target with a regular compact Liouville--Arnold level set, the sampling and generalization hypotheses of that paper, and sufficiently smooth model functions. Its gradient-class estimate in Theorem~8 uses bounded weights, inputs and activation derivatives; its real-domain energy estimate additionally uses a density bounded below and a Sobolev exponent larger than the phase dimension. These are not consequences of the present empirical integral loss. We retain the deterministic coefficient bound \eqref{kam:integral-bound} and the independently defined complex feature norm in \eqref{kam:analytic-error}, rather than importing a probability or treating a real sup norm as an analytic-strip norm.
++
++For the discrete conclusion, \citet[Theorem~2, Remark~2 and Section~4]{shang} applies to the exact symplectic mixed generating map described in Supplement~\ref{ss:map-kam}. Its analytic smallness condition, frequency-domain margins, twist bounds and discrete divisors are all retained. Section~4 supplies the combined model and discretization budget, but does not prove convergence to a specified near-integrable flow torus when the modeling perturbation is fixed and only the step tends to zero. For continuous persistence, the classical theorem in Section~1 of \citet{poschel} requires a frequency diffeomorphism, a uniform analytic neighborhood and interior Diophantine frequencies. Its quantitative parameter formulation also depends on the complex widths. The affine nonsingular frequency maps here admit this domain restriction, but their thresholds have not been certified.
++
++For a possible a posteriori calculation, \citet[Theorem~3.1 and Remark~3.2]{haro2019aposteriori} applies to an autonomous Hamiltonian flow. Setting its torus dimension equal to its number of degrees of freedom, $d=n=2$, removes the need for additional first integrals. The theorem still requires controlled analytic geometry and vector-field derivatives, an embedding on a complex strip with a positive domain margin, a full-rank frame, an inverse bound for the averaged torsion, and a Diophantine frequency. Its invariance defect must satisfy the theorem's quantitative inequality. Those embedding and constant calculations have not been performed for the present baseline. None of these flow or map theorems follows solely from a time-dependent Birkhoff pullback identity.

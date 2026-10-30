@@ -1,0 +1,42 @@
+{
+  "recorded_utc": "2026-10-30T07:02:25.194663+00:00",
+  "source_sha256": {
+    "program/history_reproduction.py": "eb41c8502d7dba193bbcecb7ad2659f333b8f4c3cc79090a05baab23e264cb6d",
+    "program/history_assets.py": "ff7b4966e703e0c2149d7e7a00d0060881c38e874f4caadc224abca0baa5df52",
+    "program/history_numeric_check.py": "3a1529b8823dc8b8ec616062561953943df673756f4e30e2d16626dfecda4909",
+    "program/learned_reference_tracking.py": "034c18c9c5689ded890da81911d0934453e8aa32261aa57bdafaa211f9f63305",
+    "program/run_learned_reference_tracking.py": "2236d5e1fb7a4fe0c140225116f7c63ecc2a8311a0546f41a416d1dbf6fa57a9",
+    "program/verify_tracking_refinement.py": "828ece917c7d6ab3bb7ed8090a3ea168be483068bf7dcedc461449ac0a5a34d1",
+    "tests/test_learned_reference_tracking.py": "fd404a55147491a66fc6808223c11d46ce3a43e2a2d3afe01a3faff1829b8d42"
+  },
+  "commands": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /workspace/1028-cloud/venvs/learning/bin/python stage6/fusion_reconciliation/program/run_learned_reference_tracking.py",
+      "exit_code": 0,
+      "log": "results/history/S6_T01_run.log"
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /workspace/1028-cloud/venvs/learning/bin/python stage6/fusion_reconciliation/tests/test_learned_reference_tracking.py",
+      "exit_code": 0,
+      "log": "results/history/S6_T01_tests.log"
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /workspace/1028-cloud/venvs/learning/bin/python stage6/fusion_reconciliation/program/verify_tracking_refinement.py",
+      "exit_code": 0,
+      "log": "results/history/S6_T01_refinement.log"
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 stage6/fusion_reconciliation/program/history_numeric_check.py",
+      "exit_code": 0,
+      "result": "results/history/supplied_vs_rerun_numeric.json"
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /workspace/1028-cloud/venvs/learning/bin/python stage6/fusion_reconciliation/tests/test_learned_reference_tracking.py",
+      "exit_code": 0,
+      "log": "results/history/S6_T01_tests_final.log",
+      "scope": "after CLI-only source updates"
+    }
+  ],
+  "source_update_after_initial_run": "Only CLI --run-id support, portable material resolver and deterministic identical-output collection were added after first run. Mathematical calculations/parameters unchanged. Hashes above describe final reproducible source; the first driver byte hash was not separately captured. Original executed command/output logs remain saved.",
+  "reproduction": "To preserve existing evidence run run_learned_reference_tracking.py --run-id S6_T01_recheck and verify_tracking_refinement.py --run-id S6_T01_recheck. Historical wrapper uses --run-id fusion_recheck. Frozen reference tests read saved S6_T01."
+}

@@ -1,0 +1,17 @@
+{
+  "archive": "stage3/source_inputs/v10/v10_birkhoff_20261028_no_fonts_for_github.zip",
+  "assets": [
+    {
+      "path": "reproduction/framework_experiments/closed_loop_convergence_traces.npz",
+      "bytes": 1456744,
+      "sha256": "47093665c2eb1142713596f8211888feed1e6ca85542547c45e3ec43891e931c"
+    }
+  ],
+  "missing_frozen_classes": [
+    "Original v10 S1 Fourier torus candidates and Arb inputs",
+    "Original COMSOL .mph and exported identification trajectories",
+    "Stage2 full complex and SPD trained .pt weights and matching .npz labels"
+  ],
+  "caution": "The one included NPZ contains new two-mode convergence traces, not these historical training/certificate inputs.",
+  "authority": "english/sections/endmatter.tex Data and code availability; supp_experiments.tex sx:migration-table"
+}

@@ -1,0 +1,18 @@
+NATIVE_CENTER
+NATIVE_PROBE
+MOSER 1 2.2204670544007777e-16
+MOSER 2 8.881784627112462e-16
+REFERENCE original 2e-10
+REFERENCE original 5e-12
+REFERENCE represented_r2 2e-10
+REFERENCE represented_r2 5e-12
+INTEGRATE midpoint_original 2
+INTEGRATE moser_midpoint_r2 2
+Traceback (most recent call last):
+  File "/workspace/1028/stage6/fusion_reconciliation/program/run_nonautonomous_experiment.py", line 139, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/1028/stage6/fusion_reconciliation/program/run_nonautonomous_experiment.py", line 114, in main
+    row=dict(method=method,steps=steps,h=T/steps,error_original_max=eo,error_represented_max=ea,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: dict() got multiple values for keyword argument 'steps'

@@ -1,0 +1,26 @@
+--- stage3/source_inputs/v10/v10_framework_20261028/chinese/sections/route_budget_table.tex
++++ fusion_archive::chinese/sections/route_budget_table.tex
+@@ -0,0 +1,23 @@
++% Generated from normal_form_budget_results.json; no independent translated numbers.
++\begin{table*}[t]
++\centering\small
++\caption{式~\eqref{sr:chosen-domain} 所定辅助复域上的两套正规形界。表中数值是解析主控式的浮点评价值。}
++\label{sr:budget-table}
++\begin{tabular}{rrrrrr}
++\toprule
++$\kappa$ & $m_\kappa$ & $\ell_\kappa$ & $\overline R_\kappa$ & $\det A_\kappa$ & $\sigma_{\min}(A_\kappa)$\\
++\midrule
++$1$ & $1.910\times10^{-7}$ & $1.910\times10^{-5}$ & $4.690\times10^{-13}$ & $-1.719\times10^{-5}$ & $2.065\times10^{-3}$\\
++$1.2$ & $2.292\times10^{-7}$ & $2.292\times10^{-5}$ & $6.294\times10^{-13}$ & $-2.475\times10^{-5}$ & $2.478\times10^{-3}$\\
++\bottomrule
++\end{tabular}
++\end{table*}
++
++极坐标像的半径为 $r_{\rm in}=0.02131936$；剩余像域余量分别为 $0.00868045$ 和 $0.00868041$，对应 $\kappa=1$ 和 $1.2$。在上述余量条件下，两张坐标图的像均包含在所定共同外域中。共用特征主控量为 $B_g\simeq1.112\times10^{-8}$。定义 $\overline\epsilon_A=\overline R_1+B_gb_\beta$ 和 $\overline\epsilon_B=\overline R_{1.2}+B_gb_\beta$，则有 $\epsilon_s\le\overline\epsilon_s$。它们的数值评价为
++\begin{equation}\label{sr:evaluated-budgets}
++\begin{aligned}
++ \overline\epsilon_A&\simeq 4.690\times10^{-13}+1.112\times10^{-8}b_\beta,\\
++ \overline\epsilon_B&\simeq 6.294\times10^{-13}+1.112\times10^{-8}b_\beta.
++\end{aligned}
++\end{equation}
++作为数值参照，代入记录中的合成真值系数差后，这个辅助域上的能量预算诊断值分别为 $5.065\times10^{-13}$ 和 $6.668\times10^{-13}$。这些代入使用了合成真值，并未验证独立观测误差前提。

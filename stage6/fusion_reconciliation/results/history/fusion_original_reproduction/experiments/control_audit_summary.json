@@ -1,0 +1,790 @@
+{
+  "scope": "Reviewed new-baseline minimal synthetic route-A/B tests; not a full CHNN benchmark or KAM certificate.",
+  "all_cross_file_checks_passed": true,
+  "parameter_sha256": "2bac37b2f4444efc6a0ba742139fbf0b35e268e9f4f3597ba13a0793bc2049ac",
+  "parameter_sha256_at_actual_runs": {
+    "route_a": "2bac37b2f4444efc6a0ba742139fbf0b35e268e9f4f3597ba13a0793bc2049ac",
+    "route_b": "2bac37b2f4444efc6a0ba742139fbf0b35e268e9f4f3597ba13a0793bc2049ac",
+    "damping_sensitivity": "2bac37b2f4444efc6a0ba742139fbf0b35e268e9f4f3597ba13a0793bc2049ac"
+  },
+  "post_run_source_annotation_update": null,
+  "parameters": {
+    "nu": [
+      1.0,
+      6.045857300068718
+    ],
+    "d": [
+      0.30722439332376256,
+      0.4504263248454578
+    ],
+    "ell_m": [
+      0.018967344318651182,
+      0.007753476139325548
+    ],
+    "omega0_rad_s": 7.840009161840092,
+    "gamma_true": 0.05,
+    "alpha_s_inv_scenario": 0.3920004580920046,
+    "zeta1_scenario": 0.025,
+    "beta_artificial_true": 0.2,
+    "E0_J": 5.315526419670723e-07,
+    "dipole_A_m2": 1.771842139890241e-05,
+    "B0_T": 0.03,
+    "Ds": [
+      9.299435152722878e-05,
+      3.78205311840376e-05
+    ],
+    "mass_matrix_dimensionless": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.16540251454307958
+      ]
+    ],
+    "mass_matrix_note": "M_eff=N^-1 in (X,Y,tau); modal mass I2 applies before balanced scaling."
+  },
+  "identification": {
+    "beta_hat": 0.20000336849105763,
+    "gamma_hat": 0.04999999998680363,
+    "A_B_fit_difference": [
+      0.0,
+      0.0
+    ],
+    "training_RMSE": 1.0123438289547264e-12,
+    "validation_RMSE": 9.249159738508334e-13,
+    "lambda_min_normalized_Gram": 5.1548649902228405e-14,
+    "raw_design_condition2": 10418.251254279161,
+    "column_scaled_design_condition2": 1.0453717881660793,
+    "independent_rigorous_epsilonI_available": false
+  },
+  "main_duration_tau": 20.0,
+  "main_duration_seconds": 2.551017427039064,
+  "main_midpoint_step_tau": 0.001,
+  "route_a": {
+    "passive": {
+      "RMS_target_state_error": 0.02924528069078887,
+      "maximum_abs_tip_angle_rad": 0.06368430138677525,
+      "physical_target_errors": {
+        "RMS_tip_displacement_error_m": 0.00032237613685468127,
+        "maximum_abs_tip_displacement_error_m": 0.0008535027292659849,
+        "RMS_tip_angle_error_rad": 0.007982772152005277
+      },
+      "input_domain": {
+        "maximum_abs_By_T": 3.6546543307030837e-22,
+        "maximum_total_local_field_T": 0.03,
+        "total_local_field_formula": "sqrt(B0^2 + By^2)",
+        "maximum_local_gradient_spectral2_T_per_m": 2.152924162308694e-20,
+        "maximum_abs_tip_force_N": 3.8146417547664417e-25,
+        "maximum_abs_added_By_torque_N_m": 6.46234853557053e-27,
+        "maximum_input_reconstruction_error": 9.87706574737609e-21,
+        "sampled_sites": "all stored endpoints and all adjacent state midpoints",
+        "implementation_status": "algebraic ideal local port realization; no coil design or device limit verified"
+      },
+      "state_domain": {
+        "sample_count": 20001,
+        "maximum_abs_phase_coordinate": [
+          0.09123483338549788,
+          0.08,
+          0.0877736235238908,
+          0.08010045481545029
+        ],
+        "minimum_phase_coordinate": [
+          -0.08434123972104236,
+          -0.07958071466307615,
+          -0.0877736235238908,
+          -0.08010045481545029
+        ],
+        "maximum_phase_coordinate": [
+          0.09123483338549788,
+          0.08,
+          0.08114125633509058,
+          0.07906681860864205
+        ],
+        "maximum_phase_pair_radius": [
+          0.09124143795447329,
+          0.0806225774829855
+        ],
+        "maximum_abs_tip_angle_rad": 0.06368430138677525,
+        "minimum_abs_cos_tip_angle": 0.9979728401450986,
+        "maximum_abs_tip_displacement_m": 0.0023273390798246502,
+        "maxima_status": "sampled along numerical trajectory, not a continuous-time certified bound",
+        "maximum_abs_beam_slope_spatial_grid": 0.06435639840126012,
+        "maximum_abs_beam_displacement_spatial_grid_m": 0.0023273390798246502,
+        "spatial_grid_count": 257
+      }
+    },
+    "damping_only": {
+      "RMS_target_state_error": 2.4343704998429105e-05,
+      "maximum_abs_tip_angle_rad": 0.06371654828841886,
+      "physical_target_errors": {
+        "RMS_tip_displacement_error_m": 1.43530560648017e-07,
+        "maximum_abs_tip_displacement_error_m": 4.423079857963513e-07,
+        "RMS_tip_angle_error_rad": 7.699745465304729e-06
+      },
+      "input_domain": {
+        "maximum_abs_By_T": 0.0005444887561944637,
+        "maximum_total_local_field_T": 0.030004940726580717,
+        "total_local_field_formula": "sqrt(B0^2 + By^2)",
+        "maximum_local_gradient_spectral2_T_per_m": 0.016034244894677925,
+        "maximum_abs_tip_force_N": 2.841015078571031e-07,
+        "maximum_abs_added_By_torque_N_m": 9.647480625825257e-09,
+        "maximum_input_reconstruction_error": 9.69739903612216e-18,
+        "sampled_sites": "all stored endpoints and all adjacent state midpoints",
+        "implementation_status": "algebraic ideal local port realization; no coil design or device limit verified"
+      },
+      "state_domain": {
+        "sample_count": 20001,
+        "maximum_abs_phase_coordinate": [
+          0.0912418155349706,
+          0.08062259071599348,
+          0.09123991681342865,
+          0.08062127232028116
+        ],
+        "minimum_phase_coordinate": [
+          -0.09124179342402564,
+          -0.08062259071599348,
+          -0.09123991681342865,
+          -0.08062123948861939
+        ],
+        "maximum_phase_coordinate": [
+          0.0912418155349706,
+          0.08062258297218161,
+          0.09123936953230954,
+          0.08062127232028116
+        ],
+        "maximum_phase_pair_radius": [
+          0.09124181782246862,
+          0.0806225936695522
+        ],
+        "maximum_abs_tip_angle_rad": 0.06371654828841886,
+        "minimum_abs_cos_tip_angle": 0.9979707873926791,
+        "maximum_abs_tip_displacement_m": 0.0023273390798246502,
+        "maxima_status": "sampled along numerical trajectory, not a continuous-time certified bound",
+        "maximum_abs_beam_slope_spatial_grid": 0.06438686545405249,
+        "maximum_abs_beam_displacement_spatial_grid_m": 0.0023273390798246502,
+        "spatial_grid_count": 257
+      }
+    },
+    "learned": {
+      "RMS_target_state_error": 1.714378882260593e-05,
+      "maximum_abs_tip_angle_rad": 0.06371626997440989,
+      "physical_target_errors": {
+        "RMS_tip_displacement_error_m": 9.411953656586998e-08,
+        "maximum_abs_tip_displacement_error_m": 2.3243671226135397e-07,
+        "RMS_tip_angle_error_rad": 5.466922194106969e-06
+      },
+      "input_domain": {
+        "maximum_abs_By_T": 0.000544490197569228,
+        "maximum_total_local_field_T": 0.030004940752736856,
+        "total_local_field_formula": "sqrt(B0^2 + By^2)",
+        "maximum_local_gradient_spectral2_T_per_m": 0.016034287405048836,
+        "maximum_abs_tip_force_N": 2.841022610737687e-07,
+        "maximum_abs_added_By_torque_N_m": 9.64750616884504e-09,
+        "maximum_input_reconstruction_error": 1.1636878843346593e-17,
+        "sampled_sites": "all stored endpoints and all adjacent state midpoints",
+        "implementation_status": "algebraic ideal local port realization; no coil design or device limit verified"
+      },
+      "state_domain": {
+        "sample_count": 20001,
+        "maximum_abs_phase_coordinate": [
+          0.09124175330710017,
+          0.08062259001410373,
+          0.09124017033521585,
+          0.08062148793297313
+        ],
+        "minimum_phase_coordinate": [
+          -0.09124173370747513,
+          -0.08062259001410373,
+          -0.09124017033521585,
+          -0.08062145957200265
+        ],
+        "maximum_phase_coordinate": [
+          0.09124175330710017,
+          0.08062258234849884,
+          0.0912397142717354,
+          0.08062148793297313
+        ],
+        "maximum_phase_pair_radius": [
+          0.09124175445616194,
+          0.08062259095101051
+        ],
+        "maximum_abs_tip_angle_rad": 0.06371626997440989,
+        "minimum_abs_cos_tip_angle": 0.9979708051138519,
+        "maximum_abs_tip_displacement_m": 0.0023273390798246502,
+        "maxima_status": "sampled along numerical trajectory, not a continuous-time certified bound",
+        "maximum_abs_beam_slope_spatial_grid": 0.06438658200196617,
+        "maximum_abs_beam_displacement_spatial_grid_m": 0.0023273390798246502,
+        "spatial_grid_count": 257
+      }
+    },
+    "oracle": {
+      "RMS_target_state_error": 1.71439037554454e-05,
+      "maximum_abs_tip_angle_rad": 0.06371626998580344,
+      "physical_target_errors": {
+        "RMS_tip_displacement_error_m": 9.412018510937041e-08,
+        "maximum_abs_tip_displacement_error_m": 2.3244035846012745e-07,
+        "RMS_tip_angle_error_rad": 5.466958920197646e-06
+      },
+      "input_domain": {
+        "maximum_abs_By_T": 0.0005444901977174012,
+        "maximum_total_local_field_T": 0.030004940752739545,
+        "total_local_field_formula": "sqrt(B0^2 + By^2)",
+        "maximum_local_gradient_spectral2_T_per_m": 0.01603428740940502,
+        "maximum_abs_tip_force_N": 2.8410226115095345e-07,
+        "maximum_abs_added_By_torque_N_m": 9.647506171470365e-09,
+        "maximum_input_reconstruction_error": 9.055522398700297e-18,
+        "sampled_sites": "all stored endpoints and all adjacent state midpoints",
+        "implementation_status": "algebraic ideal local port realization; no coil design or device limit verified"
+      },
+      "state_domain": {
+        "sample_count": 20001,
+        "maximum_abs_phase_coordinate": [
+          0.09124175331950216,
+          0.08062259002269453,
+          0.09124017033189363,
+          0.08062148793196887
+        ],
+        "minimum_phase_coordinate": [
+          -0.09124173371037402,
+          -0.08062259002269453,
+          -0.09124017033189363,
+          -0.0806214595761817
+        ],
+        "maximum_phase_coordinate": [
+          0.09124175331950216,
+          0.0806225823518283,
+          0.0912397142763139,
+          0.08062148793196887
+        ],
+        "maximum_phase_pair_radius": [
+          0.09124175446859051,
+          0.0806225909596258
+        ],
+        "maximum_abs_tip_angle_rad": 0.06371626998580344,
+        "minimum_abs_cos_tip_angle": 0.9979708051131265,
+        "maximum_abs_tip_displacement_m": 0.0023273390798246502,
+        "maxima_status": "sampled along numerical trajectory, not a continuous-time certified bound",
+        "maximum_abs_beam_slope_spatial_grid": 0.06438658201351646,
+        "maximum_abs_beam_displacement_spatial_grid_m": 0.0023273390798246502,
+        "spatial_grid_count": 257
+      }
+    }
+  },
+  "route_b_prediction": {
+    "initial_state": [
+      0.09,
+      0.08,
+      0.015,
+      -0.01
+    ],
+    "duration_tau": 20.0,
+    "RK4_step": 0.00025,
+    "nominal_h0_RMS_state_error_vs_hstar": 8.040721848251114e-06,
+    "learned_hhat_RMS_state_error_vs_hstar": 1.3542649599735999e-10,
+    "nominal_h0_final_error_vs_hstar": 1.425678592259634e-05,
+    "learned_hhat_final_error_vs_hstar": 2.401212065209373e-10,
+    "hstar_reference_refinement_maximum": 6.3602732320994745e-12,
+    "hhat_reference_refinement_maximum": 6.358406725976876e-12
+  },
+  "route_b": {
+    "passive": {
+      "RMS_state_error_independent_reference": 0.025587481768660523,
+      "second_half_RMS_state_error_independent_reference": 0.034158345660954666,
+      "second_half_RMS_state_error_synchronous_reference": 0.03415801910981562,
+      "final_state_error_synchronous_reference": 0.0436580332882954,
+      "physical_errors_independent_reference": {
+        "RMS_tip_displacement_error_m": 0.0002831407979879313,
+        "maximum_abs_tip_displacement_error_m": 0.0007813684311903896,
+        "RMS_tip_angle_error_rad": 0.007003757242359401
+      },
+      "input_domain": {
+        "maximum_abs_By_T": 3.655417841191529e-22,
+        "maximum_total_local_field_T": 0.03,
+        "total_local_field_formula": "sqrt(B0^2 + By^2)",
+        "maximum_local_gradient_spectral2_T_per_m": 2.3267675747690755e-20,
+        "maximum_abs_tip_force_N": 4.1226648387060653e-25,
+        "maximum_abs_added_By_torque_N_m": 6.46234853557053e-27,
+        "maximum_input_reconstruction_error": 1.0988939314549096e-20,
+        "sampled_sites": "all stored endpoints and all adjacent state midpoints",
+        "implementation_status": "algebraic ideal local port realization; no coil design or device limit verified"
+      },
+      "state_domain": {
+        "sample_count": 20001,
+        "maximum_abs_phase_coordinate": [
+          0.09567710503209087,
+          0.084,
+          0.09204719539329555,
+          0.08404502987290388
+        ],
+        "minimum_phase_coordinate": [
+          -0.08844784972822395,
+          -0.08349973217884427,
+          -0.09204719539329555,
+          -0.08404502987290388
+        ],
+        "maximum_phase_coordinate": [
+          0.09567710503209087,
+          0.084,
+          0.08509187167526368,
+          0.08296054261923676
+        ],
+        "maximum_phase_pair_radius": [
+          0.09568307060290238,
+          0.0845931439302264
+        ],
+        "maximum_abs_tip_angle_rad": 0.06686851645611401,
+        "minimum_abs_cos_tip_angle": 0.9977651336878447,
+        "maximum_abs_tip_displacement_m": 0.0024437060338158827,
+        "maxima_status": "sampled along numerical trajectory, not a continuous-time certified bound",
+        "maximum_abs_beam_slope_spatial_grid": 0.06757421832132313,
+        "maximum_abs_beam_displacement_spatial_grid_m": 0.0024437060338158827,
+        "spatial_grid_count": 257
+      }
+    },
+    "damping_only": {
+      "RMS_state_error_independent_reference": 0.006021845321318727,
+      "second_half_RMS_state_error_independent_reference": 0.00602248758308574,
+      "second_half_RMS_state_error_synchronous_reference": 0.006020600360790797,
+      "final_state_error_synchronous_reference": 0.006020487894089676,
+      "physical_errors_independent_reference": {
+        "RMS_tip_displacement_error_m": 6.488520859353483e-05,
+        "maximum_abs_tip_displacement_error_m": 0.00011636695399123261,
+        "RMS_tip_angle_error_rad": 0.001617437858687973
+      },
+      "input_domain": {
+        "maximum_abs_By_T": 0.0005711764177728109,
+        "maximum_total_local_field_T": 0.030005436882342168,
+        "total_local_field_formula": "sqrt(B0^2 + By^2)",
+        "maximum_local_gradient_spectral2_T_per_m": 0.016816548670392655,
+        "maximum_abs_tip_force_N": 2.979626958171691e-07,
+        "maximum_abs_added_By_torque_N_m": 1.0120341041251037e-08,
+        "maximum_input_reconstruction_error": 9.784286378217223e-18,
+        "sampled_sites": "all stored endpoints and all adjacent state midpoints",
+        "implementation_status": "algebraic ideal local port realization; no coil design or device limit verified"
+      },
+      "state_domain": {
+        "sample_count": 20001,
+        "maximum_abs_phase_coordinate": [
+          0.0956834944218267,
+          0.08459314907382261,
+          0.09568131346485957,
+          0.08459162473329856
+        ],
+        "minimum_phase_coordinate": [
+          -0.0956834944218267,
+          -0.08459314892725081,
+          -0.09568131346485957,
+          -0.08459158792323923
+        ],
+        "maximum_phase_coordinate": [
+          0.09568348514810934,
+          0.08459314907382261,
+          0.09568068518531206,
+          0.08459162473329856
+        ],
+        "maximum_phase_pair_radius": [
+          0.09568349785091824,
+          0.08459315002760902
+        ],
+        "maximum_abs_tip_angle_rad": 0.06686851645611401,
+        "minimum_abs_cos_tip_angle": 0.9977651336878447,
+        "maximum_abs_tip_displacement_m": 0.0024437060338158827,
+        "maxima_status": "sampled along numerical trajectory, not a continuous-time certified bound",
+        "maximum_abs_beam_slope_spatial_grid": 0.06757421832132313,
+        "maximum_abs_beam_displacement_spatial_grid_m": 0.0024437060338158827,
+        "spatial_grid_count": 257
+      }
+    },
+    "learned_tracking": {
+      "RMS_state_error_independent_reference": 0.0015891190653289848,
+      "second_half_RMS_state_error_independent_reference": 2.2676741956115454e-05,
+      "second_half_RMS_state_error_synchronous_reference": 8.551003516511539e-07,
+      "final_state_error_synchronous_reference": 2.983230113613144e-10,
+      "physical_errors_independent_reference": {
+        "RMS_tip_displacement_error_m": 2.9097006171943717e-05,
+        "maximum_abs_tip_displacement_error_m": 0.00011636695399123261,
+        "RMS_tip_angle_error_rad": 0.0007962119744852913
+      },
+      "input_domain": {
+        "maximum_abs_By_T": 0.002197941303015764,
+        "maximum_total_local_field_T": 0.03008040800872725,
+        "total_local_field_formula": "sqrt(B0^2 + By^2)",
+        "maximum_local_gradient_spectral2_T_per_m": 0.03453752548057147,
+        "maximum_abs_tip_force_N": 6.119504305400949e-07,
+        "maximum_abs_added_By_torque_N_m": 3.8938878074777494e-08,
+        "maximum_input_reconstruction_error": 2.7924678825457974e-17,
+        "sampled_sites": "all stored endpoints and all adjacent state midpoints",
+        "implementation_status": "algebraic ideal local port realization; no coil design or device limit verified"
+      },
+      "state_domain": {
+        "sample_count": 20001,
+        "maximum_abs_phase_coordinate": [
+          0.09568868383139663,
+          0.084,
+          0.09261843936135815,
+          0.08085641693585581
+        ],
+        "minimum_phase_coordinate": [
+          -0.09124164102950048,
+          -0.08062258367493591,
+          -0.09261843936135815,
+          -0.08085641693585581
+        ],
+        "maximum_phase_coordinate": [
+          0.09568868383139663,
+          0.084,
+          0.09123936616062851,
+          0.08062125337488285
+        ],
+        "maximum_phase_pair_radius": [
+          0.09568869536132951,
+          0.0845931439302264
+        ],
+        "maximum_abs_tip_angle_rad": 0.06686851645611401,
+        "minimum_abs_cos_tip_angle": 0.9977651336878447,
+        "maximum_abs_tip_displacement_m": 0.0024437060338158827,
+        "maxima_status": "sampled along numerical trajectory, not a continuous-time certified bound",
+        "maximum_abs_beam_slope_spatial_grid": 0.06757421832132313,
+        "maximum_abs_beam_displacement_spatial_grid_m": 0.0024437060338158827,
+        "spatial_grid_count": 257
+      }
+    },
+    "oracle_tracking": {
+      "RMS_state_error_independent_reference": 0.001589119071098301,
+      "second_half_RMS_state_error_independent_reference": 2.2676743094634733e-05,
+      "second_half_RMS_state_error_synchronous_reference": 8.550903661953631e-07,
+      "final_state_error_synchronous_reference": 3.2104570637250185e-10,
+      "physical_errors_independent_reference": {
+        "RMS_tip_displacement_error_m": 2.9097006251982563e-05,
+        "maximum_abs_tip_displacement_error_m": 0.00011636695399123261,
+        "RMS_tip_angle_error_rad": 0.0007962119784541396
+      },
+      "input_domain": {
+        "maximum_abs_By_T": 0.0021979413140043582,
+        "maximum_total_local_field_T": 0.030080408009530175,
+        "total_local_field_formula": "sqrt(B0^2 + By^2)",
+        "maximum_local_gradient_spectral2_T_per_m": 0.034537525664582854,
+        "maximum_abs_tip_force_N": 6.119504338004861e-07,
+        "maximum_abs_added_By_torque_N_m": 3.893887826925898e-08,
+        "maximum_input_reconstruction_error": 2.7326196797511906e-17,
+        "sampled_sites": "all stored endpoints and all adjacent state midpoints",
+        "implementation_status": "algebraic ideal local port realization; no coil design or device limit verified"
+      },
+      "state_domain": {
+        "sample_count": 20001,
+        "maximum_abs_phase_coordinate": [
+          0.09568868383188549,
+          0.084,
+          0.0926184393620311,
+          0.08085641692907394
+        ],
+        "minimum_phase_coordinate": [
+          -0.09124164102970148,
+          -0.0806225836805353,
+          -0.0926184393620311,
+          -0.08085641692907394
+        ],
+        "maximum_phase_coordinate": [
+          0.09568868383188549,
+          0.084,
+          0.0912393661607148,
+          0.080621253373538
+        ],
+        "maximum_phase_pair_radius": [
+          0.09568869536182083,
+          0.0845931439302264
+        ],
+        "maximum_abs_tip_angle_rad": 0.06686851645611401,
+        "minimum_abs_cos_tip_angle": 0.9977651336878447,
+        "maximum_abs_tip_displacement_m": 0.0024437060338158827,
+        "maxima_status": "sampled along numerical trajectory, not a continuous-time certified bound",
+        "maximum_abs_beam_slope_spatial_grid": 0.06757421832132313,
+        "maximum_abs_beam_displacement_spatial_grid_m": 0.0024437060338158827,
+        "spatial_grid_count": 257
+      }
+    }
+  },
+  "damping_scenarios": [
+    {
+      "zeta1": 0.0,
+      "gamma": 0.0,
+      "alpha_s_inv": 0.0,
+      "beta_hat": 0.20000304094856758,
+      "gamma_hat": -1.403789671563059e-12,
+      "lambda_min_normalized_Gram": 6.94505196551772e-14,
+      "route_a_RMS": {
+        "passive": 3.7736225795142524e-05,
+        "learned": 3.428846719542186e-05,
+        "oracle": 3.428851869240461e-05
+      },
+      "route_b_RMS_independent": {
+        "passive": 0.006023128870629879,
+        "learned_tracking": 0.0022477249628525663,
+        "oracle_tracking": 0.002247724970333174
+      },
+      "route_b_second_half_RMS_independent": {
+        "passive": 0.00602444449487639,
+        "learned_tracking": 0.00010956671588884144,
+        "oracle_tracking": 0.00010956670852452428
+      },
+      "route_b_second_half_RMS_synchronous": {
+        "passive": 0.006020602800329929,
+        "learned_tracking": 9.93487917615901e-05,
+        "oracle_tracking": 9.934878333736248e-05
+      },
+      "route_a_learned_inputs": {
+        "maximum_abs_By_T": 2.5875990081146426e-07,
+        "maximum_total_local_field_T": 0.030000000001115943,
+        "total_local_field_formula": "sqrt(B0^2 + By^2)",
+        "maximum_local_gradient_spectral2_T_per_m": 4.501728756645594e-13,
+        "maximum_abs_tip_force_N": 7.976352713380363e-18,
+        "maximum_abs_added_By_torque_N_m": 4.575522806824799e-12,
+        "maximum_input_reconstruction_error": 9.355784695875883e-21,
+        "sampled_sites": "all stored endpoints and all adjacent state midpoints",
+        "implementation_status": "algebraic ideal local port realization; no coil design or device limit verified"
+      },
+      "route_b_learned_inputs": {
+        "maximum_abs_By_T": 0.002176941603101077,
+        "maximum_total_local_field_T": 0.030078880875845634,
+        "total_local_field_formula": "sqrt(B0^2 + By^2)",
+        "maximum_local_gradient_spectral2_T_per_m": 0.035186258653152516,
+        "maximum_abs_tip_force_N": 6.234449582673327e-07,
+        "maximum_abs_added_By_torque_N_m": 3.8485765491140433e-08,
+        "maximum_input_reconstruction_error": 2.646608346106361e-17,
+        "sampled_sites": "all stored endpoints and all adjacent state midpoints",
+        "implementation_status": "algebraic ideal local port realization; no coil design or device limit verified"
+      }
+    },
+    {
+      "zeta1": 0.01,
+      "gamma": 0.02,
+      "alpha_s_inv": 0.15680018323680184,
+      "beta_hat": 0.20000317749215032,
+      "gamma_hat": 0.019999999993886432,
+      "lambda_min_normalized_Gram": 6.134618830566614e-14,
+      "route_a_RMS": {
+        "passive": 0.0067365659144882255,
+        "learned": 3.428846489583986e-05,
+        "oracle": 3.42885186925194e-05
+      },
+      "route_b_RMS_independent": {
+        "passive": 0.003645223778841846,
+        "learned_tracking": 0.002247724962567571,
+        "oracle_tracking": 0.002247724970333034
+      },
+      "route_b_second_half_RMS_independent": {
+        "passive": 0.00371320927608779,
+        "learned_tracking": 0.00010956671618093788,
+        "oracle_tracking": 0.00010956670852458815
+      },
+      "route_b_second_half_RMS_synchronous": {
+        "passive": 0.0037066501568191416,
+        "learned_tracking": 9.934879212266482e-05,
+        "oracle_tracking": 9.93487833372318e-05
+      },
+      "route_a_learned_inputs": {
+        "maximum_abs_By_T": 0.00021779617649980243,
+        "maximum_total_local_field_T": 0.030000790575824797,
+        "total_local_field_formula": "sqrt(B0^2 + By^2)",
+        "maximum_local_gradient_spectral2_T_per_m": 0.006413679835926706,
+        "maximum_abs_tip_force_N": 1.1364028205059265e-07,
+        "maximum_abs_added_By_torque_N_m": 3.859004172246177e-09,
+        "maximum_input_reconstruction_error": 3.223564806432317e-18,
+        "sampled_sites": "all stored endpoints and all adjacent state midpoints",
+        "implementation_status": "algebraic ideal local port realization; no coil design or device limit verified"
+      },
+      "route_b_learned_inputs": {
+        "maximum_abs_By_T": 0.002147078499864511,
+        "maximum_total_local_field_T": 0.030076734298865964,
+        "total_local_field_formula": "sqrt(B0^2 + By^2)",
+        "maximum_local_gradient_spectral2_T_per_m": 0.03422913100841587,
+        "maximum_abs_tip_force_N": 6.064861673253497e-07,
+        "maximum_abs_added_By_torque_N_m": 3.7957820971929177e-08,
+        "maximum_input_reconstruction_error": 2.3996164438307584e-17,
+        "sampled_sites": "all stored endpoints and all adjacent state midpoints",
+        "implementation_status": "algebraic ideal local port realization; no coil design or device limit verified"
+      }
+    },
+    {
+      "zeta1": 0.025,
+      "gamma": 0.05,
+      "alpha_s_inv": 0.3920004580920046,
+      "beta_hat": 0.20000336849105763,
+      "gamma_hat": 0.04999999998680363,
+      "lambda_min_normalized_Gram": 5.1548649902228405e-14,
+      "route_a_RMS": {
+        "passive": 0.015950075018543067,
+        "learned": 3.4288461680169695e-05,
+        "oracle": 3.4288518692571825e-05
+      },
+      "route_b_RMS_independent": {
+        "passive": 0.01194403971954161,
+        "learned_tracking": 0.002247724962174804,
+        "oracle_tracking": 0.0022477249703330387
+      },
+      "route_b_second_half_RMS_independent": {
+        "passive": 0.016206317453262602,
+        "learned_tracking": 0.00010956671658508406,
+        "oracle_tracking": 0.00010956670852442364
+      },
+      "route_b_second_half_RMS_synchronous": {
+        "passive": 0.016204690718342622,
+        "learned_tracking": 9.934879262625387e-05,
+        "oracle_tracking": 9.934878333744027e-05
+      },
+      "route_a_learned_inputs": {
+        "maximum_abs_By_T": 0.0005444904411831296,
+        "maximum_total_local_field_T": 0.03000494075715764,
+        "total_local_field_formula": "sqrt(B0^2 + By^2)",
+        "maximum_local_gradient_spectral2_T_per_m": 0.016034199590073673,
+        "maximum_abs_tip_force_N": 2.8410070513103364e-07,
+        "maximum_abs_added_By_torque_N_m": 9.647510429439359e-09,
+        "maximum_input_reconstruction_error": 9.055522398700297e-18,
+        "sampled_sites": "all stored endpoints and all adjacent state midpoints",
+        "implementation_status": "algebraic ideal local port realization; no coil design or device limit verified"
+      },
+      "route_b_learned_inputs": {
+        "maximum_abs_By_T": 0.0021979373356071155,
+        "maximum_total_local_field_T": 0.03008040771883346,
+        "total_local_field_formula": "sqrt(B0^2 + By^2)",
+        "maximum_local_gradient_spectral2_T_per_m": 0.034537437263928966,
+        "maximum_abs_tip_force_N": 6.119488674804486e-07,
+        "maximum_abs_added_By_torque_N_m": 3.893870290808068e-08,
+        "maximum_input_reconstruction_error": 2.651134817853785e-17,
+        "sampled_sites": "all stored endpoints and all adjacent state midpoints",
+        "implementation_status": "algebraic ideal local port realization; no coil design or device limit verified"
+      }
+    },
+    {
+      "zeta1": 0.05,
+      "gamma": 0.1,
+      "alpha_s_inv": 0.7840009161840092,
+      "beta_hat": 0.20000363662112003,
+      "gamma_hat": 0.09999999997508183,
+      "lambda_min_normalized_Gram": 3.9870238752619234e-14,
+      "route_a_RMS": {
+        "passive": 0.029239589781136995,
+        "learned": 3.428845717107241e-05,
+        "oracle": 3.4288518692472485e-05
+      },
+      "route_b_RMS_independent": {
+        "passive": 0.025618448849614582,
+        "learned_tracking": 0.0022477249616431163,
+        "oracle_tracking": 0.0022477249703331172
+      },
+      "route_b_second_half_RMS_independent": {
+        "passive": 0.03424968348828785,
+        "learned_tracking": 0.00010956671713825553,
+        "oracle_tracking": 0.00010956670852449664
+      },
+      "route_b_second_half_RMS_synchronous": {
+        "passive": 0.03424881036601828,
+        "learned_tracking": 9.93487933266136e-05,
+        "oracle_tracking": 9.934878333736792e-05
+      },
+      "route_a_learned_inputs": {
+        "maximum_abs_By_T": 0.0010889808822851152,
+        "maximum_total_local_field_T": 0.030019758149625098,
+        "total_local_field_formula": "sqrt(B0^2 + By^2)",
+        "maximum_local_gradient_spectral2_T_per_m": 0.032068399179235464,
+        "maximum_abs_tip_force_N": 5.682014102459101e-07,
+        "maximum_abs_added_By_torque_N_m": 1.9295020857440985e-08,
+        "maximum_input_reconstruction_error": 1.6203654470509613e-17,
+        "sampled_sites": "all stored endpoints and all adjacent state midpoints",
+        "implementation_status": "algebraic ideal local port realization; no coil design or device limit verified"
+      },
+      "route_b_learned_inputs": {
+        "maximum_abs_By_T": 0.0026580552756496558,
+        "maximum_total_local_field_T": 0.030117524098909738,
+        "total_local_field_formula": "sqrt(B0^2 + By^2)",
+        "maximum_local_gradient_spectral2_T_per_m": 0.04624142990818597,
+        "maximum_abs_tip_force_N": 8.193251412010483e-07,
+        "maximum_abs_added_By_torque_N_m": 4.708511275315528e-08,
+        "maximum_input_reconstruction_error": 2.987365580481038e-17,
+        "sampled_sites": "all stored endpoints and all adjacent state midpoints",
+        "implementation_status": "algebraic ideal local port realization; no coil design or device limit verified"
+      }
+    },
+    {
+      "zeta1": 0.1,
+      "gamma": 0.2,
+      "alpha_s_inv": 1.5680018323680185,
+      "beta_hat": 0.200003938495125,
+      "gamma_hat": 0.1999999999527544,
+      "lambda_min_normalized_Gram": 2.6883189833998183e-14,
+      "route_a_RMS": {
+        "passive": 0.0497373832285228,
+        "learned": 3.428845211932288e-05,
+        "oracle": 3.4288518692531717e-05
+      },
+      "route_b_RMS_independent": {
+        "passive": 0.04695637767490863,
+        "learned_tracking": 0.002247724961144905,
+        "oracle_tracking": 0.00224772497033315
+      },
+      "route_b_second_half_RMS_independent": {
+        "passive": 0.0613726632134848,
+        "learned_tracking": 0.00010956671768403795,
+        "oracle_tracking": 0.00010956670852387762
+      },
+      "route_b_second_half_RMS_synchronous": {
+        "passive": 0.06137207993351276,
+        "learned_tracking": 9.934879408121926e-05,
+        "oracle_tracking": 9.934878333729376e-05
+      },
+      "route_a_learned_inputs": {
+        "maximum_abs_By_T": 0.0021779617643627198,
+        "maximum_total_local_field_T": 0.030078954726636128,
+        "total_local_field_formula": "sqrt(B0^2 + By^2)",
+        "maximum_local_gradient_spectral2_T_per_m": 0.06413679835385899,
+        "maximum_abs_tip_force_N": 1.1364028204101042e-06,
+        "maximum_abs_added_By_torque_N_m": 3.8590041711205245e-08,
+        "maximum_input_reconstruction_error": 3.878959614448864e-17,
+        "sampled_sites": "all stored endpoints and all adjacent state midpoints",
+        "implementation_status": "algebraic ideal local port realization; no coil design or device limit verified"
+      },
+      "route_b_learned_inputs": {
+        "maximum_abs_By_T": 0.0035953777862231914,
+        "maximum_total_local_field_T": 0.03021467758268599,
+        "total_local_field_formula": "sqrt(B0^2 + By^2)",
+        "maximum_local_gradient_spectral2_T_per_m": 0.07567315301796841,
+        "maximum_abs_tip_force_N": 1.3408088137559882e-06,
+        "maximum_abs_added_By_torque_N_m": 6.368442532132627e-08,
+        "maximum_input_reconstruction_error": 5.04637588931047e-17,
+        "sampled_sites": "all stored endpoints and all adjacent state midpoints",
+        "implementation_status": "algebraic ideal local port realization; no coil design or device limit verified"
+      }
+    }
+  ],
+  "all_run_domain_maxima": {
+    "maximum_abs_tip_angle_rad": 0.07069883412918385,
+    "maximum_abs_tip_angle_deg": 4.050744812097697,
+    "maximum_abs_beam_slope_spatial_grid": 0.07134939065400761,
+    "minimum_abs_cos_tip_angle": 0.9975018782218941,
+    "maximum_abs_By_T": 0.00359537779923315,
+    "maximum_total_local_field_T": 0.0302146775842341,
+    "maximum_local_gradient_spectral2_T_per_m": 0.075673153493818,
+    "maximum_input_reconstruction_error": 5.3860300581534765e-17,
+    "status": "sampled time trajectories; 257 spatial grid points; all endpoints and actual integration midpoints for command diagnostics"
+  },
+  "verification": {
+    "A_RK4_reference_refinement_maximum": 6.360010191661372e-12,
+    "A_final_observed_midpoint_order": 1.9993306989573856,
+    "B_RK4_reference_refinement_maximum": 6.358406725976876e-12,
+    "B_oracle_linear_Cayley_defect": 1.0039891551218213e-15,
+    "B_reference_midpoint_error_ratio_halving_step": 3.999983701901915
+  },
+  "interpretation_limits": [
+    "beta=0.2 and all damping ratios are declared artificial scenarios, not measured physical values.",
+    "E and density are approximate literature reference values; core size and geometry are design inputs.",
+    "Every damping case refits the noiseless synthetic observations; this does not establish robustness to unknown damping, noise, or unmodeled features.",
+    "At zero true damping, the unchanged unconstrained least-squares fit can return a minute negative gamma from numerical error; do not report this as negative measured material damping.",
+    "Comparable learned/oracle errors are dominated by common midpoint phase error; a slightly smaller learned number is not superior control.",
+    "Independent and synchronous references must remain distinct; the final synchronous tracking error cannot substitute for error to the continuous reference.",
+    "Commands are local ideal field/gradient demands only, not tested coils, actuators or operating limits.",
+    "No energy governor or saturation is implemented. Sampled displacement below a comparison clearance is not proof of an energy-cap safety condition.",
+    "Old frozen KAM quantities are not transferable. These computations do not provide a new analytic-domain error bound, remainder threshold or KAM certificate."
+  ]
+}

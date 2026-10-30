@@ -1,0 +1,85 @@
+{
+  "status": "passed",
+  "tolerance": "absolute 1e-12 + relative 1e-9, independently declared comparison tolerance; original solve tolerance unchanged",
+  "files": [
+    {
+      "file": "results/history/fusion_original_reproduction/experiments/control_audit_summary.json",
+      "compared_numeric_fields": 471,
+      "passed_fields": 471,
+      "failures": [],
+      "excluded_runtime_metadata": [],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "file": "results/history/fusion_original_reproduction/experiments/damping_sensitivity_results.json",
+      "compared_numeric_fields": 2567,
+      "passed_fields": 2567,
+      "failures": [],
+      "excluded_runtime_metadata": [
+        "new_baseline_provenance.amplitude_scale_relative_to_archived_experiment",
+        "scenarios[0].elapsed_seconds",
+        "scenarios[1].elapsed_seconds",
+        "scenarios[2].elapsed_seconds",
+        "scenarios[3].elapsed_seconds",
+        "scenarios[4].elapsed_seconds",
+        "elapsed_seconds"
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "file": "results/history/fusion_original_reproduction/experiments/minimal_control_results.json",
+      "compared_numeric_fields": 447,
+      "passed_fields": 447,
+      "failures": [],
+      "excluded_runtime_metadata": [
+        "new_baseline_provenance.amplitude_scale_relative_to_archived_experiment",
+        "elapsed_seconds"
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "file": "results/history/fusion_original_reproduction/experiments/route_b_shared_results.json",
+      "compared_numeric_fields": 603,
+      "passed_fields": 603,
+      "failures": [],
+      "excluded_runtime_metadata": [
+        "new_baseline_provenance.amplitude_scale_relative_to_archived_experiment",
+        "elapsed_seconds"
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "file": "results/history/fusion_original_reproduction/framework_experiments/algebraic_defect_results.json",
+      "compared_numeric_fields": 6925,
+      "passed_fields": 6925,
+      "failures": [],
+      "excluded_runtime_metadata": [],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "file": "results/history/fusion_original_reproduction/framework_experiments/closed_loop_convergence_results.json",
+      "compared_numeric_fields": 140,
+      "passed_fields": 140,
+      "failures": [],
+      "excluded_runtime_metadata": [],
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "file": "results/history/fusion_original_reproduction/framework_experiments/matrix_structure_results.json",
+      "compared_numeric_fields": 521,
+      "passed_fields": 521,
+      "failures": [],
+      "excluded_runtime_metadata": [],
+      "maximum_absolute_difference": 0
+    },
+    {
+      "file": "results/history/fusion_original_reproduction/framework_experiments/nonlinear_weighted_results.json",
+      "compared_numeric_fields": 199,
+      "passed_fields": 199,
+      "failures": [],
+      "excluded_runtime_metadata": [],
+      "maximum_absolute_difference": 0.0
+    }
+  ],
+  "caveat": "This checks reproducibility of supplied float results, not interval validity or transfer to a different physical model."
+}

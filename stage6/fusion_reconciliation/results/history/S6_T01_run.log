@@ -1,0 +1,19 @@
+S6-T01 actual full-coil step 1/4 rank=5 residual=0.146846
+S6-T01 actual full-coil step 2/4 rank=5 residual=0.146912
+S6-T01 actual full-coil step 3/4 rank=5 residual=0.143408
+S6-T01 actual full-coil step 4/4 rank=5 residual=0.136101
+{
+  "max_identity_residual": 4.4751692862699905e-14,
+  "max_constraint_violation": 0.0,
+  "max_current_A": 1.5124804024130618,
+  "max_planned_slew_A_s": 19.99999999999995,
+  "max_sampled_field_T": 0.0005014119735069783,
+  "max_sampled_gradient_T_per_m": 0.004315914464693276,
+  "max_sampled_power_residual": 6.637985449395138e-18,
+  "same_schedule_tolerance_difference": 0.0,
+  "reference_RK4_vs_DOP853_difference": 9.359574218587783e-12,
+  "final_position_tracking_error": 0.0007863360564526339,
+  "final_same_reference_ideal_force_oracle_error": 0.0007869421043162752,
+  "final_actual_vs_ideal_force_oracle": 2.202526787609507e-05,
+  "max_reference_normalized_state": 0.126706311364415
+}

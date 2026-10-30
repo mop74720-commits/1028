@@ -1,0 +1,31 @@
+--- stage3/source_inputs/v10/v10_framework_20261028/english/sections/application.tex
++++ fusion_archive::english/sections/application.tex
+@@ -1,13 +1,15 @@
+-The application objective is to restore the coupled nominal magnetic
+-motion through learned residual and damping compensation. The physical
++The first application objective is to restore the coupled nominal magnetic
++motion through learned residual and damping compensation. The second is
++to track a learned conservative reference through the same physical ports. The physical
+ input map must realize the feedback in
+ \eqref{struct:route-a-control}, preserve its estimation errors and use
+ the same midpoint convention as \eqref{ctrl:midpoint}. We first close
+ that chain for the two-mode object, then expose the additional terms
+ when the same fitted controller acts on more beam modes. The
+ full-beam clearance argument is a separate condition on physical
+-energy. Tracking a learned reference is retained as an extension in
+-Supplementary Section~\ref{sec:supp-tracking}.
++energy. Section~\ref{app:learned-tracking-main} gives the second route
++and its distinct error system; Supplement~\ref{sec:supp-tracking}
++retains its full proof and numerical protocol.
+ 
+ \subsection{Magnetic realization of the learned residual compensation}
+ \label{app:ports}
+@@ -115,6 +117,8 @@
+ design. The learned residual-compensation test requires a peak
+ transverse field of approximately $0.54449$ mT. Section~\ref{sec:analysis}
+ reports its input reconstruction and sampled operating-domain checks.
++
++\input{sections/tracking_main}
+ 
+ \subsection{The same controller on an enriched modal plant}
+ \label{app:full-model}

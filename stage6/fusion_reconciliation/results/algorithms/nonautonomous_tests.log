@@ -1,0 +1,8 @@
+test_actual_fullcoil_time_derivative_and_current_force (test_nonautonomous_transport.NonautonomousTransportTests.test_actual_fullcoil_time_derivative_and_current_force) ... ok
+test_second_coefficient_has_required_time_force_term (test_nonautonomous_transport.NonautonomousTransportTests.test_second_coefficient_has_required_time_force_term) ... ok
+test_zero_modulation_reuses_autonomous_coefficients (test_nonautonomous_transport.NonautonomousTransportTests.test_zero_modulation_reuses_autonomous_coefficients) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 21.145s
+
+OK

@@ -1,0 +1,130 @@
+--- stage3/source_inputs/v10/v10_framework_20261028/english/sections/structure.tex
++++ fusion_archive::english/sections/structure.tex
+@@ -1,7 +1,7 @@
+ \subsection{A compatible Birkhoff representation of the mechanical model}
+ \label{struct:birkhoff-section}
+ 
+-The first subproblem is to obtain a computable difference scheme from the same mechanical equations that define the catheter. The general model in \eqref{mech:general-hamiltonian} separates the conservative energy, dissipation and applied force. For $z=(q,p)\in\R^{2n}$, a Birkhoff representation uses a one-form $\mathcal R(z,t)^{\mathsf T}\dd z$ and a scalar $\mathcal B$:
++The difference scheme is derived from the same mechanical equations that define the catheter. The general model in \eqref{mech:general-hamiltonian} separates the conservative energy, dissipation and applied force. For $z=(q,p)\in\R^{2n}$, a Birkhoff representation uses a one-form $\mathcal R(z,t)^{\mathsf T}\dd z$ and a scalar $\mathcal B$:
+ \begin{equation}\label{struct:birkhoff}
+ \begin{aligned}
+  \mathcal K_{ij}&=\partial_{z_i}\mathcal R_j-
+@@ -17,7 +17,26 @@
+  \partial_t\mathcal K_{ij}&=\partial_i b_j-\partial_j b_i.
+ \end{aligned}
+ \end{equation}
+-These conditions connect the one-form, scalar and vector field; an arbitrary dissipative force cannot be represented by assigning them independently \citep{su2007}. The Birkhoff matrix is $2n\times2n$, whereas the mass matrix is $n\times n$. Table~\ref{mech:dimension-table} records the dimensions in the finite-element, modal and balanced coordinates. Supplement~\ref{ss:birkhoff} gives the compatibility argument and distinguishes a formal local existence construction from the explicit representation used here.
++These conditions connect the one-form, scalar and vector field; an arbitrary dissipative force cannot be represented by assigning them independently \citep{su2007}. The Birkhoff matrix is $2n\times2n$, whereas the mass matrix is $n\times n$. Table~\ref{mech:dimension-table} records the dimensions in the finite-element, modal and balanced coordinates.
++
++For a smooth regular ODE $\dot z=f(z,t)$, the following local construction supplies these quantities consistently. Fix $\mathcal R_0=(p,0)$ at $t_0$, so that $\mathcal K_0=-J$, and transport the one-form:
++\begin{equation}\label{struct:transport}
++\begin{aligned}
++ \partial_t\mathcal R+(D_z\mathcal R)f+(D_zf)^{\mathsf T}\mathcal R&=0,\\
++ \mathcal R(z,t_0)=\mathcal R_0(z),\qquad
++ \mathcal B&=\mathcal R^{\mathsf T}f.
++\end{aligned}
++\end{equation}
++Writing $\partial_i=\partial/\partial z_i$ and summing repeated indices, substitution gives
++\begin{equation}\label{struct:transport-substitution}
++\begin{aligned}
++ \partial_i\mathcal B+\partial_t\mathcal R_i
++ &=(\partial_i\mathcal R_j)f^j+\mathcal R_j\partial_i f^j\\
++ &\quad-f^j\partial_j\mathcal R_i-\mathcal R_j\partial_i f^j
++ =\mathcal K_{ij}f^j.
++\end{aligned}
++\end{equation}
++The local inverse-flow construction in Supplement~\ref{ss:birkhoff} proves existence and nondegeneracy; Supplement~\ref{ss:general-transport} verifies closure, time compatibility and the corresponding variational self-adjointness \citep[Chapter~15, Theorem~2.2]{fengqin}. It also gives a coefficient recurrence and a gauge adjustment that permits $\mathcal B=H$ while changing $\mathcal R$. These are local constructions, not a general low-cost solver for a high-dimensional dissipative catheter. A singular constrained system or a contact event first requires its own reduction or event analysis.
+ 
+ For proportional momentum damping $\dot p=-H_q-\alpha(t)p$, set $a(t)=\exp\!\int_{t_0}^{t}\alpha(s)\dd s$. A constructive compatible choice is
+ \begin{equation}\label{struct:weighted-hamiltonian}
+@@ -28,12 +47,17 @@
+  \widetilde H(q,\Pi,t)=a(t)H(q,\Pi/a(t),t).
+ \end{aligned}
+ \end{equation}
+-It yields the original equations and makes $Z=(q,\Pi)$ canonical. The construction permits $M=M(q)$ if every mass derivative in $H_q$ is retained. The time dependence of $\widetilde H$ and the return to physical momentum carry the damping; this representation alone does not supply the autonomous conservative system required by classical KAM theory.
++It yields the original equations and makes $Z=(q,\Pi)$ canonical. The construction permits $M=M(q)$ if every mass derivative in $H_q$ is retained. Its $\mathcal K$ agrees with the transport construction with the same initial form; its $\mathcal R,\mathcal B$ need only be gauge equivalent, not identical. The time dependence of $\widetilde H$ and the return to physical momentum carry the damping; this representation alone does not supply the autonomous conservative system required by classical KAM theory.
+ 
+ \subsection{Endpoint projection and generating-function construction}
+ \label{struct:endpoint-section}
+ 
+-The endpoint construction and its time expansion play the roles of Theorems A and B in the original framework \citep{feng,fengqin}. We state the local argument needed for the present realization, rather than imposing an inverse on the generated gradient itself. Write $\lambda_Z=\Pi^{\mathsf T}\dd q$. An endpoint transformation $\alpha:(Z_+,Z_-)\mapsto(\widehat w,w)$ is compatible when it is locally invertible and
++The endpoint construction and its time expansion play the roles of Theorems A and B in the original framework \citep{feng,fengqin}. In the general case, a local coordinate map $Z=\mathcal C_t(z)$ replaces the explicit lift $(q,ap)$ and must satisfy
++\begin{equation}\label{struct:general-chart}
++ (D\mathcal C_t)^{\mathsf T}\mathcal K_0D\mathcal C_t
++       =\mathcal K(z,t),\qquad \mathcal K_0=-J.
++\end{equation}
++Here $\mathcal C_t$ denotes a real coordinate map, distinct from the independent complex variable used in the CHNN continuation. A local Moser construction, with its nondegeneracy and domain conditions, is given in Supplement~\ref{ss:general-chart} \citep{cannas2005}. The endpoint argument is in canonical $Z$ coordinates: for the explicit lift $Z=(q,\Pi)$, write $\lambda_Z=\Pi^{\mathsf T}\dd q$; a general chart uses its own two coordinate blocks, which need not equal the physical $q,p$. An endpoint transformation $\alpha:(Z_+,Z_-)\mapsto(\widehat w,w)$ is compatible when it is locally invertible and
+ \[
+  \dd(\widehat w^{\mathsf T}\dd w)
+       =\dd\lambda_{Z_+}-\dd\lambda_{Z_-}.
+@@ -52,7 +76,7 @@
+ The stated projection condition makes $w$ a local coordinate on the graph. Symplecticity and compatibility make $\widehat w^{\mathsf T}\dd w$ closed on that graph. The local Poincar\'e lemma then gives the scalar $\varphi$. These steps use the projection onto $w$, not an inverse of its gradient.
+ \end{proof}
+ 
+-For the central endpoint convention, let $T_0=\diag(I_n,-I_n)$ and $\mathsf E=\left(\begin{smallmatrix}0&I_n\\I_n&0\end{smallmatrix}\right)$. Choose
++For the explicit lift, let $T_0=\diag(I_n,-I_n)$ and $\mathsf E=\left(\begin{smallmatrix}0&I_n\\I_n&0\end{smallmatrix}\right)$. The central endpoint convention is
+ \begin{equation}\label{struct:endpoint-variables}
+ \begin{aligned}
+  \widehat w&=(\widehat Q,\widehat P)=\mathsf E(Z_+-Z_-),\\
+@@ -88,6 +112,28 @@
+ \end{aligned}
+ \end{equation}
+ This is the pullback of canonical symplecticity in $Z$ through $T_t(q,p)=(q,e^{\alpha t}p)$. Full time-midpoint evaluation gives second-order consistency; freezing explicit time dependence at $t_k$ may leave only first order. For variable mass the same construction applies to the complete $\widetilde H$, but the two constant-mass updates in \eqref{struct:weighted-midpoint} cannot be reused unchanged.
++
++For a general compatible $\mathcal C_t$, the transformed field is
++\begin{equation}\label{struct:chart-field}
++\begin{aligned}
++ f_Z(Z,t)&=\left[\partial_t\mathcal C_t+D\mathcal C_t f\right]
++                         _{z=\mathcal C_t^{-1}(Z)},\\
++ \mathcal K_0 f_Z&=\nabla_Z\mathcal H.
++\end{aligned}
++\end{equation}
++The second line follows locally from the transport identity and \eqref{struct:general-chart}; $\mathcal H$ is the chart Hamiltonian, defined up to a function of time. Replace $\widetilde H$ by $\mathcal H$ in \eqref{struct:lifted-generator}. Its two derivatives give $Z_+-Z_-=\Delta_tJ\nabla\mathcal H(\bar Z,t_m)$, hence the physical update is
++\begin{equation}\label{struct:chart-midpoint}
++ \Psi_{\Delta_t,t}
++ =\mathcal C_{t+\Delta_t}^{-1}\circ
++       \Psi_{\Delta_t}^{\mathcal H}\circ\mathcal C_t.
++\end{equation}
++The chain rule and canonical midpoint symplecticity then give
++\begin{equation}\label{struct:general-K-preservation}
++ (D\Psi_{\Delta_t,t})^{\mathsf T}
++ \mathcal K(z_+,t+\Delta_t)D\Psi_{\Delta_t,t}
++ =\mathcal K(z_-,t).
++\end{equation}
++Supplement~\ref{ss:general-chart} verifies the endpoint compatibility and the generator sign in the original convention; this is the coordinate-pullback construction also studied by \citet{kong2016}. Choosing $\mathcal C_t(q,p)=(q,a(t)p)$ recovers the weighted method above. An arbitrary compatible chart need not give that same algorithm: midpoint is not invariant under general nonlinear or time-dependent coordinate changes. Equation~\eqref{struct:general-K-preservation} concerns the ideal exact map. Approximate charts and finite solve tolerances have separate residuals, analyzed in Supplement~\ref{ss:general-accuracy}.
+ 
+ \subsection{The ordinary midpoint scheme and noncommuting matrices}
+ \label{struct:matrix-section}
+@@ -101,7 +147,7 @@
+  \bar v&=M(\bar q)^{-1}\bar p.
+ \end{aligned}
+ \end{equation}
+-Every state-dependent quantity is evaluated at the same midpoint and every explicit time argument at $t_m$. This restores the complete vector form of the original matrix update. With general damping it is distinct from \eqref{struct:weighted-midpoint}; second-order accuracy does not imply the exponential structure factor in \eqref{struct:weighted-structure}.
++Every state-dependent quantity is evaluated at the same midpoint and every explicit time argument at $t_m$. This is the ordinary midpoint implementation corresponding to Eq.~(36) of the source framework; the historical number does not identify the fourth-order generator \eqref{struct:central4} in the present manuscript. With general damping it is distinct from \eqref{struct:weighted-midpoint} and \eqref{struct:chart-midpoint}; equal second-order accuracy does not imply equal maps or the structure identity \eqref{struct:general-K-preservation}.
+ 
+ For constant $M,C,K$, with $M\succ0$, $K=K^{\mathsf T}$ and $V(q)=q^{\mathsf T}Kq/2$, elimination of the position midpoint gives
+ \begin{equation}\label{struct:matrix-elimination}
+@@ -115,6 +161,8 @@
+ \end{aligned}
+ \end{equation}
+ The order $KM^{-1}$ follows from substituting $\bar q=q_-+\Delta_tM^{-1}(p_++p_-)/4$ into the momentum equation. No commutation is assumed. Implementation solves the linear system with $I_n+E_{\Delta_t}$, whose invertibility holds for sufficiently small steps. A feedback depending on the unknown midpoint still gives an implicit problem. For $M=M(q)$, the inertial vector $-(\bar p^{\mathsf T}\partial_{q_i}M^{-1}\bar p)/2$ must also be retained; direct solution of the $2n$-dimensional residual is then appropriate. Supplement~\ref{ss:matrix} gives the full elimination.
++
++In that nonlinear solve the residual is $\mathcal F(z_+)=z_+-z_--\Delta_t f((z_++z_-)/2,t_m)$, and a Newton correction solves $[I_{2n}-\Delta_tD_zf/2]s=-\mathcal F$, with every derivative taken at the current midpoint. Thus $M(q)$ is not the phase-flow Jacobian $D\Phi$. Section~\ref{ctrl:convergence-section} states the smoothness, local branch and residual conditions that give second-order convergence to this same physical field.
+ 
+ For the catheter's balanced coordinates, the substitution is
+ \begin{equation}\label{struct:effective-matrices}
+@@ -203,7 +251,7 @@
+ \end{equation}
+ The stacked design has $nL_I$ rows and $m+1$ columns; here $n=2$, and $L_I$ denotes the number of windows. A QR or SVD solve fits $D\theta\simeq y$ and diagnoses excitation through its singular values. Enforcing $\widehat\gamma\ge0$ gives a passive physical damping estimate. The reproduced calculation uses the unconstrained linear solve, so a negative value at roundoff scale in the zero-damping scenario is reported as a numerical fit result rather than physical negative damping.
+ 
+-No acceleration labels are required. Nevertheless, endpoint noise, interpolation, quadrature and unmodeled dynamics still affect the integrated equation. They enter an independently bounded observation defect, not an inferred consequence of a small training loss. Section~\ref{sec:kam} converts that defect and the Gram lower bound into coefficient, force and analytic energy bounds. The compensation controller and the tracking extension in Supplement~\ref{sec:supp-tracking} use this same frozen fit and the physical input map \eqref{mech:modal-ports}.
++No acceleration labels are required. Nevertheless, endpoint noise, interpolation, quadrature and unmodeled dynamics still affect the integrated equation. They enter an independently bounded observation defect, not an inferred consequence of a small training loss. Section~\ref{sec:kam} converts that defect and the Gram lower bound into coefficient, force and analytic energy bounds. The compensation controller and Direction~II in Section~\ref{app:learned-tracking-main} use this same frozen fit and the physical input map \eqref{mech:modal-ports}; Supplement~\ref{sec:supp-tracking} gives the tracking derivations.
+ 
+ \subsection{Residual compensation toward the nominal dynamics}
+ \label{struct:route-a-section}
+@@ -221,4 +269,4 @@
+ In the exact-compensation limit the closed loop is $h_0$. The nominal reference in the Route~A experiments is the flow of $h_0$ from the same initial state. The oracle uses $U=\gamma Y+\nabla R_*$ solely to separate integration error from identification error; the learned controller uses only the fitted quantities.
+ 
+ 
+-The next section inserts this feedback into the same implicit equations and proves the resulting structure and finite-time convergence. Tracking a learned conservative reference is a distinct objective retained in Supplement~\ref{sec:supp-tracking}.
++The next section inserts this feedback into the same implicit equations and proves the resulting structure and finite-time convergence. Tracking a learned conservative reference is the distinct objective of Direction~II in Section~\ref{app:learned-tracking-main}. Section~\ref{kam:two-route-interface} identifies the two Hamiltonians and their separate analytic budgets, with detailed tracking proofs in Supplement~\ref{sec:supp-tracking}.

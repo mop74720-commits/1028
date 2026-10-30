@@ -1,0 +1,30 @@
+{
+  "source": "logged actual completed framework run, not a new numerical rerun",
+  "outputs": [
+    {
+      "path": "results/history/fusion_original_reproduction/framework_experiments/algebraic_defect_results.json",
+      "sha256": "5a4a0e444bc37690ec9f7a9702662363da5ff942898336f73b16dc9cda39c0b6",
+      "byte_identical_to_supplied": true
+    },
+    {
+      "path": "results/history/fusion_original_reproduction/framework_experiments/closed_loop_convergence_results.json",
+      "sha256": "ada764a388281ff78d277bdce52e30c45297f3e57f89a3678672fbdb1180801c",
+      "byte_identical_to_supplied": true
+    },
+    {
+      "path": "results/history/fusion_original_reproduction/framework_experiments/closed_loop_convergence_traces.npz",
+      "sha256": "47093665c2eb1142713596f8211888feed1e6ca85542547c45e3ec43891e931c",
+      "byte_identical_to_supplied": true
+    },
+    {
+      "path": "results/history/fusion_original_reproduction/framework_experiments/matrix_structure_results.json",
+      "sha256": "cd508e1bc1ca024a29f250d2266b43e2a227849a2f15de46b680aeb696298b8a",
+      "byte_identical_to_supplied": true
+    },
+    {
+      "path": "results/history/fusion_original_reproduction/framework_experiments/nonlinear_weighted_results.json",
+      "sha256": "5292a208e4659970b21c78ee7f0cb5d01992a36bbc2e8b04c093f1533e294882",
+      "byte_identical_to_supplied": true
+    }
+  ]
+}

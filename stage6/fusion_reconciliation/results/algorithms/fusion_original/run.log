@@ -1,0 +1,25 @@
+G1/G2: new-baseline chart specialization, endpoint/grid order, residuals, structure and measured costs passed
+G3: variable mass/nonproportional drag, old/new controlled K, residuals, references, endpoint compatibility and measured costs passed
+{
+  "status": "all selected experiments passed",
+  "selected_experiment": "all",
+  "timing_repetitions": 3,
+  "existing_baseline_and_results_unchanged": true,
+  "protected_source_sha256": {
+    "new_baseline.json": "2bac37b2f4444efc6a0ba742139fbf0b35e268e9f4f3597ba13a0793bc2049ac",
+    "experiments/control_audit_summary.json": "65cf8e206bc38fee0543d476813aaefb66455e28504e41cb587825102bfd1e5e",
+    "experiments/damping_sensitivity_results.json": "76a4ad091b38f51271ac08687bcae08030fbf60875f464158b6e26b036d01263",
+    "experiments/minimal_control_results.json": "dcf128d5ad062a80d525d9cde96d1e7d0eae657da7a2287a23455ed2df4b605d",
+    "experiments/route_b_shared_results.json": "63c5453ee02288311878ed335008ca4aabe3be228be79fe31fc6537766075099",
+    "framework_experiments/algebraic_defect_results.json": "5a4a0e444bc37690ec9f7a9702662363da5ff942898336f73b16dc9cda39c0b6",
+    "framework_experiments/closed_loop_convergence_results.json": "ada764a388281ff78d277bdce52e30c45297f3e57f89a3678672fbdb1180801c",
+    "framework_experiments/figure_data_en.json": "d5f52cc415f2a685f746189ff0e2129959d9a4bdc81c086061ecf876a6a92ff4",
+    "framework_experiments/figure_data_zh.json": "d5f52cc415f2a685f746189ff0e2129959d9a4bdc81c086061ecf876a6a92ff4",
+    "framework_experiments/matrix_structure_results.json": "cd508e1bc1ca024a29f250d2266b43e2a227849a2f15de46b680aeb696298b8a",
+    "framework_experiments/nonlinear_weighted_results.json": "5292a208e4659970b21c78ee7f0cb5d01992a36bbc2e8b04c093f1533e294882"
+  },
+  "new_results": [
+    "magnetic_method_comparison.json",
+    "synthetic_method_comparison.json"
+  ]
+}

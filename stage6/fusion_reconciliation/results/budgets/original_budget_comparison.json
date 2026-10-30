@@ -1,0 +1,102 @@
+{
+  "tolerance_rtol": 5e-13,
+  "tolerance_atol": 1e-30,
+  "rows": [
+    {
+      "kappa": 1.0,
+      "quantity": "m_velocity_majorant",
+      "recomputed": 1.9099979113664924e-07,
+      "frozen": 1.9099979113664924e-07,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "kappa": 1.0,
+      "quantity": "ell_derivative_majorant",
+      "recomputed": 1.9099979113664926e-05,
+      "frozen": 1.9099979113664926e-05,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "kappa": 1.0,
+      "quantity": "image_margin",
+      "recomputed": 0.008680451129618762,
+      "frozen": 0.008680451129618762,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "kappa": 1.0,
+      "quantity": "complete_normal_form_remainder_majorant",
+      "recomputed": 4.689940278267777e-13,
+      "frozen": 4.689940278267777e-13,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "kappa": 1.0,
+      "quantity": "twist_determinant",
+      "recomputed": -1.718933677429915e-05,
+      "frozen": -1.718933677429915e-05,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "kappa": 1.0,
+      "quantity": "twist_sigma_min",
+      "recomputed": 0.0020650579563513604,
+      "frozen": 0.0020650579563513604,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "kappa": 1.2,
+      "quantity": "m_velocity_majorant",
+      "recomputed": 2.2919974936397911e-07,
+      "frozen": 2.2919974936397911e-07,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "kappa": 1.2,
+      "quantity": "ell_derivative_majorant",
+      "recomputed": 2.291997493639791e-05,
+      "frozen": 2.291997493639791e-05,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "kappa": 1.2,
+      "quantity": "image_margin",
+      "recomputed": 0.008680412929660535,
+      "frozen": 0.008680412929660535,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "kappa": 1.2,
+      "quantity": "complete_normal_form_remainder_majorant",
+      "recomputed": 6.293752412502822e-13,
+      "frozen": 6.293752412502822e-13,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "kappa": 1.2,
+      "quantity": "twist_determinant",
+      "recomputed": -2.4752644954990777e-05,
+      "frozen": -2.4752644954990777e-05,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "kappa": 1.2,
+      "quantity": "twist_sigma_min",
+      "recomputed": 0.0024780695476216328,
+      "frozen": 0.0024780695476216328,
+      "absolute_difference": 0.0,
+      "passed": true
+    }
+  ]
+}

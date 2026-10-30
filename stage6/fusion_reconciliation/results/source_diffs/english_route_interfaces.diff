@@ -1,0 +1,38 @@
+--- stage3/source_inputs/v10/v10_framework_20261028/english/sections/route_interfaces.tex
++++ fusion_archive::english/sections/route_interfaces.tex
+@@ -0,0 +1,35 @@
++\subsection{Two persistence objects connected by one learned residual}
++\label{kam:two-route-interface}
++
++The compensation construction and the learned-reference construction answer different dynamical questions using the same mechanical model and frozen identification. Direction~I studies the actual compensation dynamics and their numerical map. Direction~II first studies the conservative model learned from the plant, then asks whether magnetic feedback can track a selected trajectory of that model. In the notation of the reproduced experiments these are Routes~A and~B. Their common interface is
++\begin{equation}\label{ri:hamiltonians}
++\begin{aligned}
++ h_*&=h_0+R_*,\qquad \delta R=R_*-\widehat R,\\
++ h_c&=h_0+\delta R,\qquad
++ \widehat h=h_0+\widehat R=h_*-\delta R.
++\end{aligned}
++\end{equation}
++Thus the same coefficient-error estimate enters with opposite signs and with different comparison Hamiltonians. The equality $\delta R=0$ restores $h_0$ in Direction~I, but recovers $h_*$ as the conservative reference in Direction~II. It does not make these two targets identical.
++
++For the single-feature plant, $h_*=h_{\kappa_*}$ with $\kappa_*=1+\beta_*=1.2$. Choose $\mathcal T_A=\mathcal T_1$ and $\mathcal T_B=\mathcal T_{\kappa_*}$ from the quartic construction in \eqref{kam:homological}. Let $\mathcal D_A$ and $\mathcal D_B$ be their respective complex action--angle domains; $\mathcal D_A$ is the domain $\mathcal D_c$ used above. Substitution in \eqref{ri:hamiltonians} gives
++\begin{equation}\label{ri:budgets}
++\begin{aligned}
++ h_c\circ\mathcal T_A&=H_{\rm NF}^{1}+P_A,\\
++ P_A&=R_6^{1}+\delta R\circ\mathcal T_A,\\
++ \widehat h\circ\mathcal T_B&=H_{\rm NF}^{\kappa_*}+P_B,\\
++ P_B&=R_6^{\kappa_*}-\delta R\circ\mathcal T_B,\\
++ \epsilon_A&=\norm{R_6^{1}}_{\mathcal D_A}+b_R^A,\\
++ \epsilon_B&=\norm{R_6^{\kappa_*}}_{\mathcal D_B}+b_R^B.
++\end{aligned}
++\end{equation}
++Here $b_R^s$ bounds $\delta R\circ\mathcal T_s$ on $\mathcal D_s$. The scalar coefficient bound $b_I$ is shared. A bound on the analytic residual itself is shared only after both image inclusions $\mathcal T_s(\mathcal D_s)\subset\mathcal U$ have been verified for the same physical complex neighborhood $\mathcal U$ in \eqref{kam:analytic-error}. The different twists are $A_1$ and $A_{\kappa_*}$, and their full remainders must be evaluated separately. The chart for the true synthetic energy is used for analysis; the tracking controller uses only the learned model. For an unknown coefficient, the bounds must instead hold over its asserted interval, or a normal form can be constructed directly for the frozen $\widehat h$.
++
++\input{sections/route_budget_main_values}
++
++Supplement~\ref{sr:budget-domain} supplies explicit local image margins and complete remainder majorants for these two charts, including the terms quadratic in $\kappa$. This calculation evaluates one part of the analytic budget on a declared small domain. It neither verifies a theorem-dependent threshold nor covers the larger initial amplitudes of the control tests. For the exactly solved midpoint or autonomous Central4 map of either conservative energy, under the corresponding analytic-branch and domain assumptions, the normalized generating perturbation has its own bound
++\begin{equation}\label{ri:discrete-budgets}
++ \norm{G_\Delta^s/\Delta}
++ \le C_3^s\epsilon_s+C_4^s\Delta^p,
++ \qquad s\in\{A,B\}.
++\end{equation}
++The constants depend on the corresponding chart and domain and are not silently equated. Direction~II's continuous reference instead uses Proposition~\ref{kam:flow-theorem} and the continuous divisors in \eqref{kam:flow-divisors}. A numerical realization of that reference needs its own discrete hypotheses. Section~\ref{app:learned-tracking-main} closes Direction~II by deriving its tracking error and reporting the shared-baseline test; its dissipative tracking loop is not the conservative object to which KAM is applied.

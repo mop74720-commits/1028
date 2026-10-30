@@ -1,0 +1,15 @@
+test_actual_3d_resonance_rejects_old_template (test_fusion_budget.TestFusionBudget.test_actual_3d_resonance_rejects_old_template) ... ok
+test_actual_checkpoint_reconstruction_and_canonical_gradient (test_fusion_budget.TestFusionBudget.test_actual_checkpoint_reconstruction_and_canonical_gradient) ... ok
+test_continuous_divisor_does_not_imply_discrete_divisor (test_fusion_budget.TestFusionBudget.test_continuous_divisor_does_not_imply_discrete_divisor) ... ok
+test_dual_budget_refuses_missing_domain_or_learned_error (test_fusion_budget.TestFusionBudget.test_dual_budget_refuses_missing_domain_or_learned_error) ... ok
+test_dual_route_identity_keeps_distinct_targets (test_fusion_budget.TestFusionBudget.test_dual_route_identity_keeps_distinct_targets) ... ok
+test_exact_rational_legendre_bound (test_fusion_budget.TestFusionBudget.test_exact_rational_legendre_bound) ... ok
+test_full_remainder_has_quadratic_generator_terms (test_fusion_budget.TestFusionBudget.test_full_remainder_has_quadratic_generator_terms) ... ok
+test_hand_monomial_majorant_and_zero_gradient (test_fusion_budget.TestFusionBudget.test_hand_monomial_majorant_and_zero_gradient) ... ok
+test_majorant_and_Hpp_on_complex_and_real_boxes (test_fusion_budget.TestFusionBudget.test_majorant_and_Hpp_on_complex_and_real_boxes) ... ok
+test_weighted_momentum_convexity_sufficient_domain_and_failure (test_fusion_budget.TestFusionBudget.test_weighted_momentum_convexity_sufficient_domain_and_failure) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.779s
+
+OK

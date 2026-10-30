@@ -1,0 +1,24 @@
+--- stage3/source_inputs/v10/v10_framework_20261028/english/sections/extension_tracking_theory.tex
++++ fusion_archive::english/sections/extension_tracking_theory.tex
+@@ -1,4 +1,4 @@
+-The principal manuscript studies residual compensation and the resulting discrete map. This extension retains the alternative task of tracking a learned conservative reference. Both tasks use the same frozen identification and physical input ports, but their target trajectories and mathematical guarantees differ.
++Sections~\ref{kam:two-route-interface} and~\ref{app:learned-tracking-main} present Direction~II alongside the compensation route. This section retains its complete learned-reference and tracking analysis, including the oracle comparator, convolution bound and separate persistence budget. Both tasks use the same frozen identification and physical input ports, but their target trajectories and mathematical guarantees differ.
+ 
+ \subsection{A learned conservative reference and tracking feedback}
+ \label{struct:route-b-section}
+@@ -94,7 +94,7 @@
+  \epsilon_B&=\norm{R_6^{\kappa_*}}_{\mathcal D_B}+b_R^B.
+ \end{aligned}
+ \end{equation}
+-Here $b_R^s$ bounds $\delta R\circ\mathcal T_s$ on the declared complex action--angle domain $\mathcal D_s$. A common coefficient bound can be reused, but a common analytic function bound is valid only if both chart images lie inside the same controlled physical complex neighborhood. The two normal forms generally have different frequencies, remainders and admissible action ranges.
++Here $b_R^s$ bounds $\delta R\circ\mathcal T_s$ on the declared complex action--angle domain $\mathcal D_s$. A common coefficient bound can be reused, but a common analytic function bound is valid only if both chart images lie inside the same controlled physical complex neighborhood. The two normal forms generally have different frequencies, remainders and admissible action ranges. Supplement~\ref{sr:budget-domain} constructs explicit local image margins and evaluates the complete remainder majorants for the two recorded scalar families; its small auxiliary domain does not cover the control-test initial states.
+ 
+ For the synthetic plant $\kappa_*=1.2$. For an unknown plant, \eqref{kam:integral-bound} gives a parameter interval about $\widehat\beta$; the twist and remainder estimates must hold uniformly over the asserted interval, including exclusion of $\kappa_*=0$. Alternatively, the frozen learned Hamiltonian can be put directly into normal form and certified on its own. Neither procedure identifies a physical invariant torus from a training loss alone.
+ 
+@@ -108,5 +108,5 @@
+ If $\epsilon_s$ is below the analytic KAM threshold for these domains, twist bounds and Diophantine parameters, the corresponding Hamiltonian has a Cantor family of invariant Lagrangian tori carrying quasiperiodic flow. A positive-measure family follows for the interior domains and sufficiently small exclusion parameter in the classical theorem. For Route~A this is a statement about the actual closed loop only under the conservative realization premise following \eqref{struct:route-a-closed}; for Route~B it is a statement about the learned reference.
+ \end{proposition}
+ 
+-The proposition follows by substituting \eqref{kam:route-budgets} into the analytic near-integrable Hamiltonian theorem \citep{poschel}. Its threshold depends on the chosen complex widths, frequency-domain margins, twist and inverse-twist bounds, and $\gamma_D,\tau_D$. No fixed numerical threshold is asserted here. The resulting tori describe selected bounded motions; they do not imply attraction of arbitrary initial conditions or clearance of the entire flexible beam.
++The proposition follows by substituting \eqref{kam:route-budgets} into the classical analytic near-integrable Hamiltonian theorem in Section~1 of \citet{poschel}, restricting the domain so that the frequency map is a diffeomorphism onto its image. The affine nonsingular maps used here satisfy this restriction. The threshold depends on the chosen complex widths, frequency-domain margins, twist and inverse-twist bounds, and $\gamma_D,\tau_D$. A positive-measure conclusion additionally uses a frequency domain with the boundary regularity required by that theorem. No fixed numerical threshold is asserted here. The resulting tori describe selected bounded motions; they do not imply attraction of arbitrary initial conditions or clearance of the entire flexible beam.
+ 

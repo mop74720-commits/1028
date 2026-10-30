@@ -1,0 +1,11 @@
+Integral fit: 0.20000336849105763 0.04999999998680363
+passive 0.02924528069078887
+damping_only 2.4343704998429105e-05
+learned 1.714378882260593e-05
+oracle 1.71439037554454e-05
+{
+  "status": "all assertions passed",
+  "elapsed_seconds": 31.255555151001317,
+  "reference_refinement": 6.360010191661372e-12,
+  "last_observed_order": 1.9993306989573856
+}

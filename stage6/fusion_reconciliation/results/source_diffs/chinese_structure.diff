@@ -1,0 +1,130 @@
+--- stage3/source_inputs/v10/v10_framework_20261028/chinese/sections/structure.tex
++++ fusion_archive::chinese/sections/structure.tex
+@@ -1,7 +1,7 @@
+ \subsection{力学模型的相容 Birkhoff 表示}
+ \label{struct:birkhoff-section}
+ 
+-第一个子问题是从定义导管的同一组力学方程出发，得到可计算的差分格式。式 \eqref{mech:general-hamiltonian} 中的一般模型将保守能量、耗散和外加力分开。对于 $z=(q,p)\in\R^{2n}$，Birkhoff 表示采用一形式 $\mathcal R(z,t)^{\mathsf T}\dd z$ 和标量 $\mathcal B$：
++差分格式从定义导管的同一组力学方程导出。式 \eqref{mech:general-hamiltonian} 中的一般模型将保守能量、耗散和外加力分开。对于 $z=(q,p)\in\R^{2n}$，Birkhoff 表示采用一形式 $\mathcal R(z,t)^{\mathsf T}\dd z$ 和标量 $\mathcal B$：
+ \begin{equation}\label{struct:birkhoff}
+ \begin{aligned}
+  \mathcal K_{ij}&=\partial_{z_i}\mathcal R_j-
+@@ -17,7 +17,26 @@
+  \partial_t\mathcal K_{ij}&=\partial_i b_j-\partial_j b_i.
+ \end{aligned}
+ \end{equation}
+-这些条件将一形式、标量和向量场联系起来；不能通过彼此独立地指定它们来表示任意耗散力 \citep{su2007}。Birkhoff 矩阵的尺寸为 $2n\times2n$，质量矩阵的尺寸则为 $n\times n$。表~\ref{mech:dimension-table} 列出了有限元、模态和平衡坐标下的维度。补充材料~\ref{ss:birkhoff} 给出相容性论证，并区分形式上的局部存在性构造与本文采用的显式表示。
++这些条件将一形式、标量和向量场联系起来；不能通过彼此独立地指定它们来表示任意耗散力 \citep{su2007}。Birkhoff 矩阵的尺寸为 $2n\times2n$，质量矩阵的尺寸则为 $n\times n$。表~\ref{mech:dimension-table} 列出了有限元、模态和平衡坐标下的维度。
++
++对于光滑的正则常微分方程 $\dot z=f(z,t)$，以下局部构造能够相容地确定这些量。固定 $\mathcal R_0=(p,0)$ 为 $t_0$ 时的一形式，从而 $\mathcal K_0=-J$，并输运这一形式：
++\begin{equation}\label{struct:transport}
++\begin{aligned}
++ \partial_t\mathcal R+(D_z\mathcal R)f+(D_zf)^{\mathsf T}\mathcal R&=0,\\
++ \mathcal R(z,t_0)=\mathcal R_0(z),\qquad
++ \mathcal B&=\mathcal R^{\mathsf T}f.
++\end{aligned}
++\end{equation}
++记 $\partial_i=\partial/\partial z_i$，并对重复指标求和，代入可得
++\begin{equation}\label{struct:transport-substitution}
++\begin{aligned}
++ \partial_i\mathcal B+\partial_t\mathcal R_i
++ &=(\partial_i\mathcal R_j)f^j+\mathcal R_j\partial_i f^j\\
++ &\quad-f^j\partial_j\mathcal R_i-\mathcal R_j\partial_i f^j
++ =\mathcal K_{ij}f^j.
++\end{aligned}
++\end{equation}
++补充材料~\ref{ss:birkhoff} 中的局部逆流构造证明存在性与非退化性；补充材料~\ref{ss:general-transport} 验证闭性、时间相容性及对应的变分自伴性 \citep[第~15~章，定理~2.2]{fengqin}。其中还给出系数递推与规范调整，允许令 $\mathcal B=H$，同时相应改变 $\mathcal R$。这些构造均为局部构造，并不构成高维耗散导管的一般低成本求解器。对于奇异约束系统或接触事件，必须先完成相应的约化或事件分析。
+ 
+ 对于比例动量阻尼 $\dot p=-H_q-\alpha(t)p$，令 $a(t)=\exp\!\int_{t_0}^{t}\alpha(s)\dd s$。一种可构造的相容选择为
+ \begin{equation}\label{struct:weighted-hamiltonian}
+@@ -28,12 +47,17 @@
+  \widetilde H(q,\Pi,t)=a(t)H(q,\Pi/a(t),t).
+ \end{aligned}
+ \end{equation}
+-它恢复原方程，并使 $Z=(q,\Pi)$ 成为正则变量。只要保留 $M=M(q)$ 情形下 $H_q$ 中的全部质量导数，这一构造就允许质量随位置变化。$\widetilde H$ 的时间依赖性及向物理动量的变换承载了阻尼；仅凭这一表示，还不能得到经典 KAM 理论所需的自治保守系统。
++它恢复原方程，并使 $Z=(q,\Pi)$ 成为正则变量。只要保留 $M=M(q)$ 情形下 $H_q$ 中的全部质量导数，这一构造就允许质量随位置变化。其 $\mathcal K$ 与采用同一初始一形式的输运构造一致；其 $\mathcal R,\mathcal B$ 只需规范等价，不必完全相同。$\widetilde H$ 的时间依赖性及向物理动量的变换承载了阻尼；仅凭这一表示，还不能得到经典 KAM 理论所需的自治保守系统。
+ 
+ \subsection{端点投影与生成函数构造}
+ \label{struct:endpoint-section}
+ 
+-端点构造及其时间展开分别承担原框架中定理 A 和定理 B 的作用 \citep{feng,fengqin}。这里给出当前实现所需的局部论证，不要求所生成的梯度本身可逆。记 $\lambda_Z=\Pi^{\mathsf T}\dd q$。若端点变换 $\alpha:(Z_+,Z_-)\mapsto(\widehat w,w)$ 局部可逆，并满足
++端点构造及其时间展开分别承担原框架中定理 A 和定理 B 的作用 \citep{feng,fengqin}。一般情形下，局部坐标映射 $Z=\mathcal C_t(z)$ 替代显式提升 $(q,ap)$，并须满足
++\begin{equation}\label{struct:general-chart}
++ (D\mathcal C_t)^{\mathsf T}\mathcal K_0D\mathcal C_t
++       =\mathcal K(z,t),\qquad \mathcal K_0=-J.
++\end{equation}
++这里 $\mathcal C_t$ 表示实坐标映射，区别于 CHNN 延拓所用的独立复变量。补充材料~\ref{ss:general-chart} 给出局部 Moser 构造及其非退化性和定义域条件 \citep{cannas2005}。端点论证在正则 $Z$ 坐标中进行：对于显式提升 $Z=(q,\Pi)$，记 $\lambda_Z=\Pi^{\mathsf T}\dd q$；一般图表使用自身的两个坐标分块，它们不必等于物理坐标 $q,p$。若端点变换 $\alpha:(Z_+,Z_-)\mapsto(\widehat w,w)$ 局部可逆，并满足
+ \[
+  \dd(\widehat w^{\mathsf T}\dd w)
+       =\dd\lambda_{Z_+}-\dd\lambda_{Z_-}.
+@@ -53,7 +77,7 @@
+ 上述投影条件使 $w$ 成为图像上的局部坐标。辛性与相容性使 $\widehat w^{\mathsf T}\dd w$ 在该图像上闭合，再由局部 Poincar\'e 引理得到标量 $\varphi$。这些步骤使用的是到 $w$ 的投影，不是其梯度的逆。
+ \end{proof}
+ 
+-在中央端点约定下，令 $T_0=\diag(I_n,-I_n)$、$\mathsf E=\left(\begin{smallmatrix}0&I_n\\I_n&0\end{smallmatrix}\right)$，并选择
++对于显式提升，令 $T_0=\diag(I_n,-I_n)$、$\mathsf E=\left(\begin{smallmatrix}0&I_n\\I_n&0\end{smallmatrix}\right)$。中央端点约定为
+ \begin{equation}\label{struct:endpoint-variables}
+ \begin{aligned}
+  \widehat w&=(\widehat Q,\widehat P)=\mathsf E(Z_+-Z_-),\\
+@@ -89,6 +113,28 @@
+ \end{aligned}
+ \end{equation}
+ 这是 $Z$ 中的正则辛性经 $T_t(q,p)=(q,e^{\alpha t}p)$ 拉回所得的关系。完整的时间中点求值给出二阶一致性；若将显式时间依赖冻结在 $t_k$，可能只剩一阶。变质量时，同一构造仍适用于完整的 $\widetilde H$，但不能原样复用式 \eqref{struct:weighted-midpoint} 中的两条常质量更新式。
++
++对于一般相容的 $\mathcal C_t$，变换后的向量场为
++\begin{equation}\label{struct:chart-field}
++\begin{aligned}
++ f_Z(Z,t)&=\left[\partial_t\mathcal C_t+D\mathcal C_t f\right]
++                         _{z=\mathcal C_t^{-1}(Z)},\\
++ \mathcal K_0 f_Z&=\nabla_Z\mathcal H.
++\end{aligned}
++\end{equation}
++第二行由输运恒等式与式 \eqref{struct:general-chart} 在局部推出；$\mathcal H$ 为图表中的哈密顿量，确定到仅依赖时间的加性函数。在式 \eqref{struct:lifted-generator} 中将 $\widetilde H$ 替换为 $\mathcal H$，其两个偏导数给出 $Z_+-Z_-=\Delta_tJ\nabla\mathcal H(\bar Z,t_m)$，因此物理坐标中的更新为
++\begin{equation}\label{struct:chart-midpoint}
++ \Psi_{\Delta_t,t}
++ =\mathcal C_{t+\Delta_t}^{-1}\circ
++       \Psi_{\Delta_t}^{\mathcal H}\circ\mathcal C_t.
++\end{equation}
++链式法则与正则中点法的辛性继而给出
++\begin{equation}\label{struct:general-K-preservation}
++ (D\Psi_{\Delta_t,t})^{\mathsf T}
++ \mathcal K(z_+,t+\Delta_t)D\Psi_{\Delta_t,t}
++ =\mathcal K(z_-,t).
++\end{equation}
++补充材料~\ref{ss:general-chart} 按原有约定核验端点相容性与生成函数符号；这一坐标拉回构造亦见 \citet{kong2016}。选择 $\mathcal C_t(q,p)=(q,a(t)p)$ 即恢复上述加权方法。任意相容图表未必给出同一算法：中点法在一般非线性或含时坐标变换下并不保持不变。式 \eqref{struct:general-K-preservation} 针对理想精确映射。近似图表和有限求解容差分别产生残差，补充材料~\ref{ss:general-accuracy} 对其进行分析。
+ 
+ \subsection{普通中点格式与非交换矩阵}
+ \label{struct:matrix-section}
+@@ -102,7 +148,7 @@
+  \bar v&=M(\bar q)^{-1}\bar p.
+ \end{aligned}
+ \end{equation}
+-所有状态相关量均在同一中点求值，所有显式时间参数均取 $t_m$。这恢复了原矩阵更新的完整向量形式。存在一般阻尼时，它与式 \eqref{struct:weighted-midpoint} 不同；二阶精度并不意味着具有式 \eqref{struct:weighted-structure} 中的指数结构因子。
++所有状态相关量均在同一中点求值，所有显式时间参数均取 $t_m$。这是对应源框架式~(36) 的普通中点实现；该历史编号并不指本文的四阶生成函数式 \eqref{struct:central4}。存在一般阻尼时，它与式 \eqref{struct:weighted-midpoint} 及式 \eqref{struct:chart-midpoint} 不同；同为二阶精度并不意味着映射相同，也不意味着满足结构恒等式 \eqref{struct:general-K-preservation}。
+ 
+ 对于常矩阵 $M,C,K$，设 $M\succ0$、$K=K^{\mathsf T}$、$V(q)=q^{\mathsf T}Kq/2$，消去位置中点得到
+ \begin{equation}\label{struct:matrix-elimination}
+@@ -116,6 +162,8 @@
+ \end{aligned}
+ \end{equation}
+ 矩阵次序 $KM^{-1}$ 来自将 $\bar q=q_-+\Delta_tM^{-1}(p_++p_-)/4$ 代入动量方程，推导不假设矩阵可交换。实现时求解系数矩阵为 $I_n+E_{\Delta_t}$ 的线性方程组，步长充分小时可保证其可逆。若反馈依赖未知中点，问题仍然是隐式的。对于 $M=M(q)$，还必须保留惯性向量 $-(\bar p^{\mathsf T}\partial_{q_i}M^{-1}\bar p)/2$，此时适宜直接求解 $2n$ 维残差方程。补充材料~\ref{ss:matrix} 给出完整消元过程。
++
++在这一非线性求解中，残差为 $\mathcal F(z_+)=z_+-z_--\Delta_t f((z_++z_-)/2,t_m)$，Newton 修正满足 $[I_{2n}-\Delta_tD_zf/2]s=-\mathcal F$，其中全部导数均在当前中点求值。因此，$M(q)$ 并不是相流 Jacobian $D\Phi$。第~\ref{ctrl:convergence-section} 节给出使数值解二阶收敛到同一物理向量场的光滑性、局部分支和残差条件。
+ 
+ 在导管的平衡坐标中，应作如下代换：
+ \begin{equation}\label{struct:effective-matrices}
+@@ -204,7 +252,7 @@
+ \end{equation}
+ 堆叠后的设计矩阵有 $nL_I$ 行、$m+1$ 列；此处 $n=2$，$L_I$ 表示窗口数。使用 QR 或 SVD 求解来拟合 $D\theta\simeq y$，并通过奇异值诊断激励程度。施加 $\widehat\gamma\ge0$ 可得到满足被动性的物理阻尼估计。复算程序采用无约束线性求解，因此在零阻尼情景中出现的舍入量级负值作为数值拟合结果报告，不解释为物理负阻尼。
+ 
+-上述辨识不需要加速度标签。不过，端点噪声、插值、求积和未建模动力学仍会影响积分方程。它们进入需要独立界定的观测缺陷，不能由较小训练损失反推。第~\ref{sec:kam} 节将该缺陷及 Gram 下界转化为系数、力和解析能量的误差界。补偿控制器与补充材料~\ref{sec:supp-tracking} 中的跟踪扩展使用同一组冻结辨识结果和物理输入映射 \eqref{mech:modal-ports}。
++上述辨识不需要加速度标签。不过，端点噪声、插值、求积和未建模动力学仍会影响积分方程。它们进入需要独立界定的观测缺陷，不能由较小训练损失反推。第~\ref{sec:kam} 节将该缺陷及 Gram 下界转化为系数、力和解析能量的误差界。补偿控制器与第~\ref{app:learned-tracking-main} 节的方向~II 使用同一组冻结辨识结果和物理输入映射 \eqref{mech:modal-ports}；补充材料~\ref{sec:supp-tracking} 给出跟踪推导。
+ 
+ \subsection{面向标称动力学的残差补偿}
+ \label{struct:route-a-section}
+@@ -222,4 +270,4 @@
+ 在精确补偿极限下，闭环为 $h_0$。路线 A 实验中的标称参考，是 $h_0$ 从同一初始状态出发的流。真值参数对照使用 $U=\gamma Y+\nabla R_*$，仅用于分离积分误差与辨识误差；学习控制器只使用拟合量。
+ 
+ 
+-下一节将这一反馈代入同一隐式方程，并证明相应结构和有限时间收敛性。跟踪学习得到的保守参考属于另一控制目标，保留在补充材料~\ref{sec:supp-tracking} 中。
++下一节将这一反馈代入同一隐式方程，并证明相应结构和有限时间收敛性。跟踪学习得到的保守参考是第~\ref{app:learned-tracking-main} 节方向~II 的独立目标。第~\ref{kam:two-route-interface} 节明确区分两个哈密顿量及各自的解析预算，详细跟踪证明见补充材料~\ref{sec:supp-tracking}。

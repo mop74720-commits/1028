@@ -1,0 +1,554 @@
+[
+  {
+    "english": "english/sections/application.tex:L0018:display:1",
+    "chinese": "chinese/sections/application.tex:L0006:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/application.tex:L0030:display:1",
+    "chinese": "chinese/sections/application.tex:L0016:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/application.tex:L0042:display:1",
+    "chinese": "chinese/sections/application.tex:L0027:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/application.tex:L0053:display:1",
+    "chinese": "chinese/sections/application.tex:L0037:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/application.tex:L0071:display:1",
+    "chinese": "chinese/sections/application.tex:L0051:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/application.tex:L0091:display:1",
+    "chinese": "chinese/sections/application.tex:L0069:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/application.tex:L0131:display:1",
+    "chinese": "chinese/sections/application.tex:L0101:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/application.tex:L0147:display:1",
+    "chinese": "chinese/sections/application.tex:L0115:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/application.tex:L0161:display:1",
+    "chinese": "chinese/sections/application.tex:L0128:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/application.tex:L0171:display:1",
+    "chinese": "chinese/sections/application.tex:L0138:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/application.tex:L0199:statement:1",
+    "chinese": "chinese/sections/application.tex:L0161:statement:1",
+    "normalized_math_equal": false,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/application.tex:L0240:display:1",
+    "chinese": "chinese/sections/application.tex:L0195:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/application.tex:L0245:display:1",
+    "chinese": "chinese/sections/application.tex:L0200:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/application.tex:L0261:display:1",
+    "chinese": "chinese/sections/application.tex:L0213:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/application.tex:L0269:display:1",
+    "chinese": "chinese/sections/application.tex:L0220:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/background.tex:L0030:statement:1",
+    "chinese": "chinese/sections/background.tex:L0030:statement:1",
+    "normalized_math_equal": false,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/mechanics.tex:L0018:display:1",
+    "chinese": "chinese/sections/mechanics.tex:L0012:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/mechanics.tex:L0032:display:1",
+    "chinese": "chinese/sections/mechanics.tex:L0024:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/mechanics.tex:L0075:statement:1",
+    "chinese": "chinese/sections/mechanics.tex:L0056:statement:1",
+    "normalized_math_equal": false,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/mechanics.tex:L0102:display:1",
+    "chinese": "chinese/sections/mechanics.tex:L0081:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/mechanics.tex:L0120:display:1",
+    "chinese": "chinese/sections/mechanics.tex:L0095:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/mechanics.tex:L0128:display:1",
+    "chinese": "chinese/sections/mechanics.tex:L0102:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/mechanics.tex:L0141:display:1",
+    "chinese": "chinese/sections/mechanics.tex:L0113:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/mechanics.tex:L0150:display:1",
+    "chinese": "chinese/sections/mechanics.tex:L0122:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/mechanics.tex:L0159:display:1",
+    "chinese": "chinese/sections/mechanics.tex:L0130:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/mechanics.tex:L0176:display:1",
+    "chinese": "chinese/sections/mechanics.tex:L0145:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/mechanics.tex:L0188:display:1",
+    "chinese": "chinese/sections/mechanics.tex:L0157:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/mechanics.tex:L0198:display:1",
+    "chinese": "chinese/sections/mechanics.tex:L0166:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/mechanics.tex:L0204:display:1",
+    "chinese": "chinese/sections/mechanics.tex:L0172:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/mechanics.tex:L0212:display:1",
+    "chinese": "chinese/sections/mechanics.tex:L0179:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/mechanics.tex:L0235:statement:1",
+    "chinese": "chinese/sections/mechanics.tex:L0199:statement:1",
+    "normalized_math_equal": false,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/mechanics.tex:L0263:display:1",
+    "chinese": "chinese/sections/mechanics.tex:L0223:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/mechanics.tex:L0270:display:1",
+    "chinese": "chinese/sections/mechanics.tex:L0230:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/mechanics.tex:L0278:display:1",
+    "chinese": "chinese/sections/mechanics.tex:L0237:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/mechanics.tex:L0292:display:1",
+    "chinese": "chinese/sections/mechanics.tex:L0249:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/mechanics.tex:L0301:display:1",
+    "chinese": "chinese/sections/mechanics.tex:L0257:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/mechanics.tex:L0314:display:1",
+    "chinese": "chinese/sections/mechanics.tex:L0269:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0004:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0004:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0012:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0011:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0028:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0024:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0036:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0031:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0043:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0037:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0053:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0046:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0068:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0058:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0081:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0069:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0095:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0081:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0101:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0087:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0113:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0098:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0121:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0106:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0129:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0113:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0136:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0119:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0152:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0133:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0169:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0148:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0181:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0160:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0207:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0183:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0227:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0199:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0235:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0207:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0243:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0214:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0251:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0221:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0265:statement:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0233:statement:1",
+    "normalized_math_equal": false,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0302:statement:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0265:statement:1",
+    "normalized_math_equal": false,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0344:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0302:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0362:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0315:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0377:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0327:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0394:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0340:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0400:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0346:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0423:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0365:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0443:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0382:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0459:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0396:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0472:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0409:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0483:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0420:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0500:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0435:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0520:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0452:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0535:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0465:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0544:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0472:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0560:statement:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0487:statement:1",
+    "normalized_math_equal": false,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0590:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0512:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0598:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0520:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0614:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0534:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0623:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0541:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0655:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0565:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0668:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0577:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0687:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0594:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0695:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0602:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0724:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0624:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0739:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0638:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0749:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0647:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0759:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0656:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0773:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0667:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0787:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0679:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0792:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0684:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  },
+  {
+    "english": "english/sections/supp_mechanics.tex:L0805:display:1",
+    "chinese": "chinese/sections/supp_mechanics.tex:L0694:display:1",
+    "normalized_math_equal": true,
+    "human_mathematics_and_prose_review": true
+  }
+]

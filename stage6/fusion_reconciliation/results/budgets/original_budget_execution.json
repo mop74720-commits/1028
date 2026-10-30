@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/workspace/1028-cloud/venvs/learning/bin/python",
+    "/tmp/1028-fusion-budget-pz9ol8cs/reproduction/route_budget/normal_form_budgets.py",
+    "--language",
+    "none"
+  ],
+  "source_sha256": {
+    "reproduction/route_budget/normal_form_budgets.py": "91e3daa4209b1d7e6e00cfdbd6b77c8047aa70c71daddf68b6f8d0857cba6590",
+    "reproduction/new_baseline.json": "2bac37b2f4444efc6a0ba742139fbf0b35e268e9f4f3597ba13a0793bc2049ac",
+    "reproduction/experiments/route_b_shared_results.json": "63c5453ee02288311878ed335008ca4aabe3be228be79fe31fc6537766075099"
+  },
+  "elapsed_seconds": 1.0193887139903381,
+  "exit_code": 0,
+  "isolated_copy": true,
+  "originals_written": false
+}

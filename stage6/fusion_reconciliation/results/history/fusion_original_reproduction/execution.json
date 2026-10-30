@@ -1,0 +1,148 @@
+{
+  "status": "completed",
+  "started_utc": "2026-10-30T06:43:23.890806+00:00",
+  "source_root": "/tmp/1028-stage6-fusion-q4idpcer/v10_birkhoff_20261028/reproduction",
+  "scratch": "/tmp/1028-stage6-history-124hcf02",
+  "commands": [
+    {
+      "command": [
+        "/workspace/1028-cloud/venvs/learning/bin/python",
+        "/tmp/1028-stage6-history-124hcf02/reproduction/verify_baseline.py"
+      ],
+      "cwd": "/tmp/1028-stage6-history-124hcf02/reproduction",
+      "exit_code": 0,
+      "seconds": 0.9947827589930966,
+      "status": "passed",
+      "log": "stage6/fusion_reconciliation/results/history/fusion_original_reproduction/verify_baseline.py.log"
+    },
+    {
+      "command": [
+        "/workspace/1028-cloud/venvs/learning/bin/python",
+        "/tmp/1028-stage6-history-124hcf02/reproduction/experiments/minimal_control_loop.py"
+      ],
+      "cwd": "/tmp/1028-stage6-history-124hcf02/reproduction",
+      "exit_code": 0,
+      "seconds": 31.3917106029985,
+      "status": "passed",
+      "log": "stage6/fusion_reconciliation/results/history/fusion_original_reproduction/experiments__minimal_control_loop.py.log"
+    },
+    {
+      "command": [
+        "/workspace/1028-cloud/venvs/learning/bin/python",
+        "/tmp/1028-stage6-history-124hcf02/reproduction/experiments/route_b_shared_data.py"
+      ],
+      "cwd": "/tmp/1028-stage6-history-124hcf02/reproduction",
+      "exit_code": 0,
+      "seconds": 64.16610846300318,
+      "status": "passed",
+      "log": "stage6/fusion_reconciliation/results/history/fusion_original_reproduction/experiments__route_b_shared_data.py.log"
+    },
+    {
+      "command": [
+        "/workspace/1028-cloud/venvs/learning/bin/python",
+        "/tmp/1028-stage6-history-124hcf02/reproduction/experiments/damping_sensitivity.py"
+      ],
+      "cwd": "/tmp/1028-stage6-history-124hcf02/reproduction",
+      "exit_code": 0,
+      "seconds": 81.45878061601252,
+      "status": "passed",
+      "log": "stage6/fusion_reconciliation/results/history/fusion_original_reproduction/experiments__damping_sensitivity.py.log"
+    },
+    {
+      "command": [
+        "/workspace/1028-cloud/venvs/learning/bin/python",
+        "/tmp/1028-stage6-history-124hcf02/reproduction/experiments/summarize_results.py"
+      ],
+      "cwd": "/tmp/1028-stage6-history-124hcf02/reproduction",
+      "exit_code": 0,
+      "seconds": 0.10928174199943896,
+      "status": "passed",
+      "log": "stage6/fusion_reconciliation/results/history/fusion_original_reproduction/experiments__summarize_results.py.log"
+    },
+    {
+      "command": [
+        "/workspace/1028-cloud/venvs/learning/bin/python",
+        "/tmp/1028-stage6-history-124hcf02/reproduction/framework_experiments/run_all.py"
+      ],
+      "cwd": "/tmp/1028-stage6-history-124hcf02/reproduction",
+      "exit_code": 0,
+      "seconds": 13.755851804002305,
+      "status": "passed",
+      "log": "stage6/fusion_reconciliation/results/history/fusion_original_reproduction/framework_experiments__run_all.py.log"
+    }
+  ],
+  "source_sha256": {
+    "\u53c2\u6570\u4f9d\u636e\u4e0e\u590d\u7b97\u8bf4\u660e.txt": "870fc5748f952d4680b030730c99a90935ad3b813ca7a1a16219728033e4b2d0",
+    "verify_baseline.py": "e7e556944d6177a0bd5f31a3e7076c62b8647865abf5bd0465a7a0e6a7b18737",
+    "source_annotation_update.json": "00ff93b55b5fb7a3b33dfbe0d0a185f4b5c5febdc692253b4ad732f8f8349d6e",
+    "run_all.py": "3b1e5d1443b9f93b2fd550f706347e9d1571d9ebbc4b9357bd55ab1c9f474e61",
+    "reproduce_baseline.py": "b469c746c90b65497005198a5d0102a73110398751cae1985183be631d00e5ec",
+    "parameter_sources.bib": "a6beab897dcb6a8fadc6b610d0302dd5aacf8927b0a74f0d4079c2cc5b1bc50e",
+    "parameter_section.tex": "383627c3b4753b01ee4e08e2cceb862a14c2a6f4fbba7197c4263916e739e133",
+    "new_baseline.json": "2bac37b2f4444efc6a0ba742139fbf0b35e268e9f4f3597ba13a0793bc2049ac",
+    "baseline_reverification.json": "f37d4daa8e6b74cf1c66f4089648a104f869c1503245a92dd6160e948bac3b5c",
+    "MANIFEST.json": "bf19f4146a6d3eff817001bfbc5bc4c25480b6b9ce6dc54db683f169ef4aa7a2",
+    "sources/upstream_fixed_commit_manifest.json": "760447f2b640e93c38dfa28b662e5598bc0856469bb6d2322e80c6a7ba331844",
+    "sources/tong_francescon_field_sources.json": "b66305d92a0132b46d5943c5dd7377248aa0673fca98c04638d5be7850308771",
+    "sources/original_reference_model_spec.json": "fd18c090c9f58dac7a5813a5445b7f14c5409ec767c5cb9a4ec38dd2e883ae8c",
+    "sources/missing_parameters_evidence.json": "32fc67e1958d4af72b2a336583ee7291dafb53fbeedd9f307a74f18f13836c47",
+    "sources/material_magnet_sources.json": "a940e79dd5cb8f9d671518b3e8704681b86e6720f55c794acb1a87bf988d5f48",
+    "sources/damping_sources.json": "de534dad2a6df02785f17fcea1d9c6b26c27865dc097cf3886d788e24ac11e36",
+    "route_budget/run_all.py": "513fc62afefba481350110dd9d4f93ef2dc0074575f8c85e22d017350383fe6c",
+    "route_budget/normal_form_budgets.py": "91e3daa4209b1d7e6e00cfdbd6b77c8047aa70c71daddf68b6f8d0857cba6590",
+    "route_budget/normal_form_budget_results.json": "e015cdfb43a22e04fbc908d62f596a9fc5b2d0a869d140082c6f38b0dcb8d8a7",
+    "route_budget/README.txt": "f31125c11e8e2cb66dbe37fdc4789855ecf2939636398dad74394290eec47296",
+    "general_birkhoff_experiments/synthetic_method_comparison.json": "4b67ebd1fbb372759ce28f61b49a44517b9f8590278f061f5d41cb6f1a5f6e87",
+    "general_birkhoff_experiments/synthetic.py": "d12e55c255121841a2a288418eb8abca0c0a11f0d08e60442418e1677bc1c28c",
+    "general_birkhoff_experiments/supp_results.zh.tex.in": "ca3d8f035d907624998675a02dde3d943b514a32fb06a1f6a2ca653de5ebaafe",
+    "general_birkhoff_experiments/supp_results.tex.in": "c06485fa064963b88801741deef2d80887c511063b08d3a1ae3bfda175a54118",
+    "general_birkhoff_experiments/run_validation.json": "d212f96c2a10341528ef5b3400c5433df0c6cd8ac9e0b50fb74932288734ae00",
+    "general_birkhoff_experiments/run_all.py": "9c327074b858d8362ebba2ded9699ea7fcd670b7c3aee69b5287b96aa89bfa54",
+    "general_birkhoff_experiments/preserved_chinese_templates.json": "7f7b3ec3e942f675fde7d838a825f20e7ee6ee499e61f8a1d4076717598407e0",
+    "general_birkhoff_experiments/numerical_provenance_zh.json": "fc9d3b3645efd1b4829af7eba7c0b7c8ca3aecd2430cd36f654c1e1679fa2dea",
+    "general_birkhoff_experiments/numerical_provenance.json": "c8e638147bf6e9fdfcb74dfbeb9669bf76d29bff29aee052e6728a78983e43e2",
+    "general_birkhoff_experiments/main_results.zh.tex.in": "e595d84300dd5775ef0ef3bac3fba1ca82171a1090148ef1eb029ba9c3ef7988",
+    "general_birkhoff_experiments/main_results.tex.in": "d75b17237e1b3b4912f197269b64fda6724edff1aac5a6a0047aae650d5f181a",
+    "general_birkhoff_experiments/magnetic_method_comparison.json": "ef22b0c071c89f3c645f3e18dc5e8ceccccab7235aa773b252bed392a45df583",
+    "general_birkhoff_experiments/magnetic.py": "484247c253ac13f4fd4f6e648d4fd73c1a2a7af3ce4ee3c53fadc3d73e80d825",
+    "general_birkhoff_experiments/common.py": "3221eb0a30f9492e6b84849db4170b13690bf9d7c5fd8f7831307b5eaba84139",
+    "general_birkhoff_experiments/check_translation.py": "e27b586d18039fedc2fe1ada850f75e72e31cc9cc2ae8a3da79c876fd3fd59a3",
+    "general_birkhoff_experiments/build_chinese.py": "8f7259864c107157d465520db05a8d0790b504c39bc0b1c0b4a8f946e9b9f157",
+    "general_birkhoff_experiments/build_assets.py": "9fcfd879203ee7b03f21ec0eb41f624a0e34f41c2801d8e5815eae6b3c051db9",
+    "general_birkhoff_experiments/README.md": "0175bf7d82f3a4caf79009f9cddaaedf56506ee997158b997c084f90c12c9e60",
+    "framework_experiments/supplement_figures.py": "c6215e36ee911478216d1670db387fc219e2aea1b1c4bb86b667e007def5d1c7",
+    "framework_experiments/run_all.py": "91868f920d3f068d9e00cac22149402bda777d6ca72e4d31dfec28678bc48eb0",
+    "framework_experiments/nonlinear_weighted_results.json": "5292a208e4659970b21c78ee7f0cb5d01992a36bbc2e8b04c093f1533e294882",
+    "framework_experiments/matrix_structure_results.json": "cd508e1bc1ca024a29f250d2266b43e2a227849a2f15de46b680aeb696298b8a",
+    "framework_experiments/framework_values.py": "a3f3a9e8478d081d3b656c63de5528f7ccc6a2bd0c563136c6057f5cf5404743",
+    "framework_experiments/framework_common.py": "c31934c80b01c72a877ce7aa858663461a1dcb39d8e76c3c686305e7518d83c8",
+    "framework_experiments/figure_data_zh.json": "d5f52cc415f2a685f746189ff0e2129959d9a4bdc81c086061ecf876a6a92ff4",
+    "framework_experiments/figure_data_en.json": "d5f52cc415f2a685f746189ff0e2129959d9a4bdc81c086061ecf876a6a92ff4",
+    "framework_experiments/closed_loop_convergence_traces.npz": "47093665c2eb1142713596f8211888feed1e6ca85542547c45e3ec43891e931c",
+    "framework_experiments/closed_loop_convergence_results.json": "ada764a388281ff78d277bdce52e30c45297f3e57f89a3678672fbdb1180801c",
+    "framework_experiments/build_manuscript_assets.py": "9538a6a3d6ae2a3782be3765a158d32f5ef60c1e267b82e8483f089cfbf54b73",
+    "framework_experiments/algebraic_defect_results.json": "5a4a0e444bc37690ec9f7a9702662363da5ff942898336f73b16dc9cda39c0b6",
+    "framework_experiments/README.md": "833a9941c9a48cc22f06398430567643ac403970ccb4669b1c41c950cce54653",
+    "experiments/summarize_results.py": "542ce33c4b1e360f5aa4a1317f4ca786753e545be7722610ce35a2a35517a5cc",
+    "experiments/run_all.py": "5bcee17bd60caebd8f451c9a0d8d1de180021aceb3ecc67e34487711ada5473d",
+    "experiments/route_b_shared_results.json": "63c5453ee02288311878ed335008ca4aabe3be228be79fe31fc6537766075099",
+    "experiments/route_b_shared_data.py": "5d4c0795c832944f995603322ed711a30d7109e255643d81e9522a14d27cae48",
+    "experiments/minimal_control_results.json": "dcf128d5ad062a80d525d9cde96d1e7d0eae657da7a2287a23455ed2df4b605d",
+    "experiments/minimal_control_loop.svg": "61c2ebd1545cec58485a4d72d0a467f8086223817808f535034c8a9ecb44cec4",
+    "experiments/minimal_control_loop.py": "58caffc15104072873bf5bf524173f597d75a1baff11f19130a6e7f700507373",
+    "experiments/damping_sensitivity_results.json": "76a4ad091b38f51271ac08687bcae08030fbf60875f464158b6e26b036d01263",
+    "experiments/damping_sensitivity.py": "e5997e633d4a6a91f02f7f33cc780b48eda0529fec627e2db7341c306098a5b1",
+    "experiments/control_audit_summary.json": "65cf8e206bc38fee0543d476813aaefb66455e28504e41cb587825102bfd1e5e",
+    "experiments/baseline_config.py": "7bdb257115686fe5c9f025d7fc7677e351a71f28453e8116f36aa34dd0dff206",
+    "experiments/README.md": "9ee1d6644df749305c1d471c80a7c2a3c296fab0993ead84c1ede25f1c87fa67",
+    "framework_experiments/authoring/supp_framework_protocol.tex.in": "2c322bb9f1e79a225a5be21bd53c6777fcbe7317d1fdd22612d4aa1baa5692d2",
+    "framework_experiments/authoring/supp_experiments_base.tex.in": "cdfec93d2f586abe445171ccc1c34d6b11d56cba25b53949f5b983912d713765",
+    "framework_experiments/authoring/supp_experiments.zh.tex.in": "6d93d2635b00672dd8966b492b165d493c83c32d8cab5bfbdbe5cf074e3b73f7",
+    "framework_experiments/authoring/extension_tracking_results.tex.in": "ffd52695933d9b62abf3ebe24a565a1383a191c239f32a32f9e0268c0b9598d4",
+    "framework_experiments/authoring/analysis.zh.tex.in": "58cfa12d3f416199696eed664120af3686f04f5afc7e6553183a2d42d0a90492",
+    "framework_experiments/authoring/analysis.tex.in": "96969ce54ea00b3cd0ea21de7f4330ca1867418a854557671c422dfbfcfcd62e"
+  },
+  "scope": "Fresh reruns of supplied 2-DOF/linear algorithm regressions; not 3D generalization, CHNN training or KAM certification.",
+  "source_unchanged": true,
+  "finished_utc": "2026-10-30T06:46:35.781185+00:00"
+}

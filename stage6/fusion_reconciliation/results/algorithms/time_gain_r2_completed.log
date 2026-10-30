@@ -1,0 +1,6 @@
+INTEGRATE midpoint_original 2
+INTEGRATE moser_midpoint_r2 2
+INTEGRATE midpoint_original 4
+INTEGRATE moser_midpoint_r2 4
+INTEGRATE midpoint_original 8
+INTEGRATE moser_midpoint_r2 8

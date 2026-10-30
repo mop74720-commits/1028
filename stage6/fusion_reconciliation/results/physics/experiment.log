@@ -1,0 +1,52 @@
+{
+  "runs": [
+    {
+      "name": "baseline_rk4sub1",
+      "completed": 4,
+      "failure": null,
+      "elapsed_s": 3.8586309280071873
+    },
+    {
+      "name": "governed_rk4sub1",
+      "completed": 4,
+      "failure": null,
+      "elapsed_s": 4.624817158008227
+    },
+    {
+      "name": "baseline_rk4sub2",
+      "completed": 4,
+      "failure": null,
+      "elapsed_s": 6.658899903006386
+    },
+    {
+      "name": "governed_rk4sub2",
+      "completed": 4,
+      "failure": null,
+      "elapsed_s": 7.443766057011089
+    },
+    {
+      "name": "baseline_rk4sub4",
+      "completed": 4,
+      "failure": null,
+      "elapsed_s": 13.774198141996749
+    },
+    {
+      "name": "governed_rk4sub4",
+      "completed": 4,
+      "failure": null,
+      "elapsed_s": 13.368911375000607
+    }
+  ],
+  "signed_H_E0": -1.0015632662412566,
+  "clearance_radius_m": 0.0006093059975560059,
+  "baseline_refinement": {
+    "endpoint_difference_1_vs_2": 1.1481523339707117e-06,
+    "endpoint_difference_2_vs_4": 7.223145486266622e-08,
+    "note": "fixed control decision interval; trajectory plus independently recomputed allocation; finite differences do not certify asymptotic order"
+  },
+  "governed_refinement": {
+    "endpoint_difference_1_vs_2": 1.1481196756240966e-06,
+    "endpoint_difference_2_vs_4": 7.222926394619989e-08,
+    "note": "fixed control decision interval; trajectory plus independently recomputed allocation; finite differences do not certify asymptotic order"
+  }
+}

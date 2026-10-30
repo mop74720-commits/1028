@@ -1,0 +1,11 @@
+test_actual_quartic_derivative_symmetry_and_scalar_check (test_learning_research.LearningResearchTests.test_actual_quartic_derivative_symmetry_and_scalar_check) ... ok
+test_cubic_homological_sign_on_known_oscillator (test_learning_research.LearningResearchTests.test_cubic_homological_sign_on_known_oscillator) ... ok
+test_frozen_training_and_negative_examples (test_learning_research.LearningResearchTests.test_frozen_training_and_negative_examples) ... ok
+test_mechanical_polynomial_full_mixed_feature (test_learning_research.LearningResearchTests.test_mechanical_polynomial_full_mixed_feature) ... ok
+test_model_counts_and_equilibrium_jet (test_learning_research.LearningResearchTests.test_model_counts_and_equilibrium_jet) ... ok
+test_resonance_and_cubic_correction_are_retained (test_learning_research.LearningResearchTests.test_resonance_and_cubic_correction_are_retained) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 4.656s
+
+OK

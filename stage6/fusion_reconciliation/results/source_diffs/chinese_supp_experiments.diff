@@ -1,0 +1,38 @@
+--- stage3/source_inputs/v10/v10_framework_20261028/chinese/sections/supp_experiments.tex
++++ fusion_archive::chinese/sections/supp_experiments.tex
+@@ -366,7 +366,7 @@
+ 指令诊断包含中点积分器使用的所有端点与算术中点。
+ 作为设计比较讨论的 $20$ mT 横向场值并非强制截幅规则。
+ 
+-\subsection{P1 框架矩阵验证}
++\subsection{矩阵验证协议}
+ \label{sx:framework-matrix}
+ \texttt{reproduction/framework\_experiments} 单独保存附加实验。从源码包根目录执行的完整入口为
+ \begin{verbatim}
+@@ -387,7 +387,7 @@
+ 
+ \begin{table*}[t]
+ \centering
+-\caption{P1 矩阵在 $\Delta=0.01$ 时的全网格最大误差。各列采用各自声明的含阻尼或保守目标。全部更粗步长的误差与观测阶均保留在 JSON 中。}
++\caption{矩阵在 $\Delta=0.01$ 时的全网格最大误差。各列采用各自声明的含阻尼或保守目标。全部更粗步长的误差与观测阶均保留在 JSON 中。}
+ \label{sx:framework-matrix-errors}
+ \begin{tabular}{rcccc}
+ \toprule
+@@ -400,7 +400,7 @@
+ \end{tabular}
+ \end{table*}
+ 
+-\subsection{P3 固定误差闭环向量场与保守 Central4}
++\subsection{固定误差闭环向量场与保守 Central4}
+ \label{sx:framework-closed}
+ 新增磁模型实验读取同一份 \texttt{new\_baseline.json}，使用初态 $(0.09,0.08,0.015,-0.01)$，积分区间为 $\tau\in[0,20]$。固定误差实验设定 $\delta\beta=0.02$、$\delta\gamma=0.01$，受控对象参数为 $\beta_*=0.2$、$\gamma_*=0.05$，因此声明的控制器系数为 $0.18$ 和 $0.04$。这些误差是有意人为设置的，不作为新的辨识结果。步长改变时不重新拟合任何系数。每次中点求解内部都调用已有物理端口重构。独立参考直接实现约化向量场式~\eqref{num:fixed-error-field}，因此没有复用中点算法。
+ 
+@@ -464,6 +464,8 @@
+ \end{tabular}
+ \end{table*}
+ 
++\input{sections/supp_general_experiments}
++
+ \subsection{条件性净空与历史结果的迁移限制}
+ \label{sx:migration}
+ $4$ mm 净空是扣除杆半径后的中心线净余量。

@@ -1,0 +1,29 @@
+--- stage3/source_inputs/v10/v10_framework_20261028/chinese/sections/supp_structure.tex
++++ fusion_archive::chinese/sections/supp_structure.tex
+@@ -16,7 +16,7 @@
+  \alpha_t=(\Phi_{t,t_0}^{-1})^*\alpha_0,
+  \qquad\mathcal B=\alpha_t(v).
+ \]
+-输运方程 $\partial_t\alpha_t+\mathcal L_v\alpha_t=0$ 和 Cartan 恒等式给出 $\mathcal K v=\dd\mathcal B+\partial_t\alpha_t$。这是依赖相流的局部表示，并非仅由力学系数即可提供的可计算哈密顿约化。它既不建立全局解析坐标图，也不建立自治可积参考。
++输运方程 $\partial_t\alpha_t+\mathcal L_v\alpha_t=0$ 和 Cartan 恒等式给出 $\mathcal K v=\dd\mathcal B+\partial_t\alpha_t$。这是依赖相流的局部存在性表示。下述坐标输运方程与系数构造提供近似计算途径，但并未建立适用于任意力学系数的低成本哈密顿约化。该表示既不建立全局解析图表，也不建立自治可积参考。
+ 
+ 式~\eqref{struct:weighted-hamiltonian} 中比例阻尼的选择具有构造性。事实上，
+ \[
+@@ -32,6 +32,8 @@
+  \qquad D\Phi^{\mathsf T}JD\Phi=e^{-\alpha\Delta_t}J.
+ \]
+ 要得到所声明的二阶方法，显式时间依赖项必须在 $t_m$ 求值。对变质量情形，应保留完整的 $\widetilde H_q$，而不能重复使用常质量更新式。
++
++\input{sections/supp_general_birkhoff}
+ 
+ \subsection{端点投影、维度与隐式分支}
+ \label{ss:projection}
+@@ -317,7 +319,7 @@
+ 完整的变换后余项还包含
+ $\{h_{4,\kappa},W_{4,\kappa}\}$ 和
+ $\tfrac12\{\{h_2,W_{4,\kappa}\},W_{4,\kappa}\}$，
+-二者均为六次项，此外还有更高阶 Lie 项。严格的有限振幅界必须在留有余量的域上控制 $W_{4,\kappa}$ 的局部流、其像及逆映射，以及这些括号项和尾项。记号 $R_6=O(r^6)$ 表示消失阶，而不是数值上确界范数证书。对新基准，计算保留的有限除数得到 $\min_{0<|k|_1\le4}|k\cdot\nu|=1$；这并未控制非线性频率处无穷多个除数。
++二者均为六次项，此外还有更高阶 Lie 项。严格的有限振幅界必须在留有余量的域上控制 $W_{4,\kappa}$ 的局部流、其像及逆映射，以及这些括号项和尾项。记号 $R_6=O(r^6)$ 表示消失阶，而不是数值上确界范数证书。补充材料~\ref{sr:budget-domain} 在辅助复域上给出显式的局部完整余项上界；其中并未计算有限振幅定理的阈值。对新基准，计算保留的有限除数得到 $\min_{0<|k|_1\le4}|k\cdot\nu|=1$；这并未控制非线性频率处无穷多个除数。
+ 
+ \subsection{积分误差不等式与实现不确定性}
+ \label{ss:integral-error}

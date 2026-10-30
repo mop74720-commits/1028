@@ -1,0 +1,9 @@
+test_H_gauge_preserves_form_and_field_but_not_energy (test_fusion_theory.Tests.test_H_gauge_preserves_form_and_field_but_not_energy) ... ok
+test_complete_chart_defect_identity_with_internal_and_inverse_errors (test_fusion_theory.Tests.test_complete_chart_defect_identity_with_internal_and_inverse_errors) ... ok
+test_fixed_position_time_integral_and_spatial_gradient (test_fusion_theory.Tests.test_fixed_position_time_integral_and_spatial_gradient) ... ok
+test_variational_operator_not_physical_Jacobian_symmetry (test_fusion_theory.Tests.test_variational_operator_not_physical_Jacobian_symmetry) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.940s
+
+OK

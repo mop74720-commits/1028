@@ -1,0 +1,31 @@
+--- stage3/source_inputs/v10/v10_framework_20261028/chinese/sections/kam.tex
++++ fusion_archive::chinese/sections/kam.tex
+@@ -70,7 +70,7 @@
+ \end{equation}
+ 存在多项式解；泊松括号约定为
+ $\{f,g\}=\nabla f^{\mathsf T}J\nabla g$。
+-该解的局部 Hamiltonian 流，再接上正作用量域内的极坐标参数化，定义正则坐标图 $\mathcal T_\kappa$。直接作角平均得到
++令 $\Phi_{W_{4,\kappa}}^1$ 为该解生成的局部单位时间 Hamiltonian 流，$\mathcal P$ 为前述正作用量域内的极坐标参数化。复合映射 $\mathcal T_\kappa=\Phi_{W_{4,\kappa}}^1\circ\mathcal P$ 定义了正则坐标图。直接作角平均得到
+ \begin{equation}\label{kam:magnetic-twist}
+ \begin{aligned}
+  h_\kappa\circ\mathcal T_\kappa
+@@ -108,7 +108,7 @@
+ 
+ 式 \eqref{kam:closed-budget} 包含两类误差：标称正规形余项和保守辨识误差。即使精确辨识，仍有 $R_6^1$；仅有较小的数据损失，不能界定其中任一项。前述 $A_1$ 的奇异值计算构成代数非退化性检验；要在有限幅度上应用 KAM，还需要定义域余量、完整余项和逆坐标图的界。该矩阵无须正定，但小量检验不能省略其最小奇异值和逆矩阵范数。
+ 
+-学习得到的保守参考采用不同的比较能量：$\widehat h-h_*=-\delta R$；补偿闭环则满足 $h_c-h_0=\delta R$。补充材料~\ref{sec:supp-tracking} 保留了这一区分以及独立的参考跟踪分析。下述主要离散定理针对 $h_c$ 及标称正规形，不以 $\widehat h$ 替换其目标。
++学习得到的保守参考采用不同的比较能量：$\widehat h-h_*=-\delta R$；补偿闭环则满足 $h_c-h_0=\delta R$。第~\ref{kam:two-route-interface} 节给出各自的坐标图与扰动预算，第~\ref{app:learned-tracking-main} 节完成参考跟踪路线的研究闭环，补充材料~\ref{sec:supp-tracking} 保留其详细分析。下述离散定理针对 $h_c$ 及标称正规形，不以 $\widehat h$ 替换其目标。
+ 
+ \subsection{实际受控数值映射的持续存在结论}
+ \label{kam:map-section}
+@@ -179,6 +179,8 @@
+ 
+ 连续哈密顿量 $h_c$ 有其独立的条件性 KAM 结论。它采用连续小除数 $|k\cdot\omega|\ge\gamma_D|k|_1^{-\tau_D}$，在两个自由度下允许取指数 $\tau_D>1$，并需要自身的解析小量条件 \citep{poschel}。命题~\ref{kam:flow-theorem} 位于补充材料~\ref{sec:supp-tracking}，给出了该对照及其对学习参考的扩展。它不替代离散小除数检验，也不将连续环面等同于某个指定数值映射的环面。当非零 $\epsilon_c$ 固定时，令 $\Delta\to0$ 既不会消除建模扰动，也不能证明数值环面收敛到近可积连续流的某个指定环面。
+ 
+-当前计算提供了更新后的物理与模态输入、冻结的系数辨识结果、有限数据诊断、四次扭转矩阵，以及理想隐式映射的代数结构。它们没有给出独立认证的观测缺陷界、完整复正规形余项或 KAM 阈值的数值核算。因此，命题~\ref{kam:map-theorem} 对当前基准仍是条件性结果。学习补偿计算保留非零阻尼误差，不能将该计算本身声明为精确辛映射；其有限时间数值收敛性则在命题~\ref{ctrl:convergence} 的假设下由该命题保证。
++当前计算提供了更新后的物理与模态输入、冻结的系数辨识结果、有限数据诊断、四次扭转矩阵，以及理想隐式映射的代数结构。补充材料~\ref{sr:budget-domain} 还在声明的辅助复域上给出完整的局部余项上界。这些计算没有提供独立认证的观测缺陷界，也没有完成 KAM 阈值的数值核算。因此，命题~\ref{kam:map-theorem} 对当前基准仍是条件性结果。学习补偿计算保留非零阻尼误差，不能将该计算本身声明为精确辛映射；其有限时间数值收敛性则在命题~\ref{ctrl:convergence} 的假设下由该命题保证。
+ 
+-也可采用后验定理认证有限幅度环面，此时需要近似嵌入、其复条带上的不变性缺陷、Diophantine 频率，以及经过验证的扭转量和定义域界 \citep{haro2019aposteriori}。这些量需要针对当前参数重新计算，先前的环面证书不会自动转移。不变环面描述选定的有界离散运动，并不意味着任意初态都会被吸引到环面上。它们也不能保证整根柔性梁的净空；相应空间与驱动条件在第~\ref{sec:application} 节单独处理。
++也可采用后验定理认证连续哈密顿流的有限幅度环面，此时需要近似嵌入、其复条带上的不变性缺陷、Diophantine 频率，以及经过验证的扭转量和定义域界 \citep[Theorem~3.1 and Remark~3.2]{haro2019aposteriori}。这些量需要针对当前参数重新计算，先前的环面证书不会自动转移。离散映射证书则需要相应的映射定理。不变环面描述选定的有界运动，并不意味着任意初态都会被吸引到环面上。它们也不能保证整根柔性梁的净空；相应空间与驱动条件在第~\ref{sec:application} 节单独处理。
++
++一般 Birkhoff 扩展没有改变上述两个 KAM 对象。采用时变 $\mathcal K$ 的图表中点更新族，保持其相邻时间切片之间所声明的二形式，但未必定义了一个具有固定近可积参考的自治精确辛映射。在应用映射 KAM 定理前，还需要进一步约化，例如构造并论证周期返回映射，并对该映射独立核验非退化性和解析估计。因此，一般变质量与非比例阻尼验证不附带 KAM 结论。

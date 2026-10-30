@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "test_count": 5,
+  "unittest_reported_seconds": 35.932,
+  "log": "stage6/fusion_reconciliation/results/algorithms/nonautonomous_tests_extended.log",
+  "command": "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /workspace/1028-cloud/venvs/learning/bin/python -m unittest discover -s stage6/fusion_reconciliation/tests -p test_nonautonomous_transport.py -v",
+  "source_sha256": {
+    "stage6/fusion_reconciliation/tests/test_nonautonomous_transport.py": "b87e24a0c7232ab6859a444a28d456090d471992640112bc9c01840db9f3d893",
+    "stage6/fusion_reconciliation/program/nonautonomous_transport.py": "5204f870601acadd76496c543ab8e2438fe73507024b28fc0fcb78d21eb33bcf"
+  },
+  "scope": "Actual default full-coil 24D ROM, five independent mathematical/numerical checks; no full-domain certificate."
+}

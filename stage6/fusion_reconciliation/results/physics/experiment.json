@@ -1,0 +1,3229 @@
+{
+  "status": "independently executed",
+  "command": "python stage6/fusion_reconciliation/program/run_fusion_physics.py",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "torch": "2.5.1+cpu",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "metadata": {
+    "model": "3D inextensible unshearable Kirchhoff strain Ritz; exact SO(3) frame updates and midpoint centerline embedding",
+    "q_dof": 12,
+    "phase_dimension": 24,
+    "quadrature_elements": 20,
+    "configuration": "four Legendre curvature coefficients in each of two bending axes and torsion by default; all are dynamical",
+    "mass": "configuration dependent; includes translational and rotary inertia from embedding Jacobians",
+    "E0_J": 3.6200000000000004e-07,
+    "omega0_rad_s": 4.457629408507532,
+    "omega_rad_s": [
+      4.457629408507532,
+      4.457629408507532,
+      27.694195720027146,
+      27.694195720027146,
+      79.78328659507957,
+      79.78328659507957,
+      356.9402366587693,
+      356.9402366587693,
+      370.43091613854864,
+      1118.611090690932,
+      1984.631631100378,
+      3899.8926690677044
+    ],
+    "nu": [
+      1.0,
+      1.0,
+      6.212763148765096,
+      6.212763148765096,
+      17.898142551467057,
+      17.898142551467057,
+      80.0740043525236,
+      80.0740043525236,
+      83.10042899294614,
+      250.94304352803,
+      445.22131591124275,
+      874.8804155017085
+    ],
+    "canonical_scaling_defect": 5.55251128130777e-21,
+    "mass0_condition": 1264760.7588499414,
+    "repeated_frequency_pairs": [
+      {
+        "i": 0,
+        "j": 1,
+        "relative_difference": 0.0
+      },
+      {
+        "i": 2,
+        "j": 3,
+        "relative_difference": 0.0
+      },
+      {
+        "i": 4,
+        "j": 5,
+        "relative_difference": 0.0
+      },
+      {
+        "i": 6,
+        "j": 7,
+        "relative_difference": 0.0
+      }
+    ],
+    "KAM_status": "Standard nonresonant elliptic KAM is not certified; circular isotropic rod with axial bias has paired bending frequencies.",
+    "relation_to_full_model": "Shares material, distal magnet and field interface with the Cosserat model; shear/stretch omitted in this analytical ROM; modal truncation and fluid/contact closure errors are not yet bounded.",
+    "time": "tau=omega0*t_seconds",
+    "coordinates": "z=(Q,P); q_physical=Sq Q; p_physical=Sp P",
+    "input": "12 total coil currents in A; no separate 8-field increment input or extra ideal bias",
+    "drag": "synthetic smooth gamma*P; not a blood/contact closure",
+    "derivatives": "double-precision automatic differentiation through full variable-mass SO(3) geometry",
+    "magnetism": "Full circular-coil Biot-Savart energy; no additional ideal bias",
+    "coil_config": {
+      "origin_m": [
+        0.0,
+        0.0,
+        0.1
+      ],
+      "centers_m": [
+        [
+          -0.014258091544161544,
+          0.028179296678682336,
+          0.03197328418765823
+        ],
+        [
+          -0.02823677355664579,
+          -0.04786085900246092,
+          0.15036886731560742
+        ],
+        [
+          -0.045691567848612266,
+          -0.018652962478301362,
+          0.15647430936557563
+        ],
+        [
+          -0.04514527606524731,
+          0.048274040871414105,
+          0.06455255965605347
+        ],
+        [
+          -0.05250918804532998,
+          0.0484943955231713,
+          0.07728263277440807
+        ],
+        [
+          -0.0613859164096309,
+          -0.011163250855872636,
+          0.14161911936692878
+        ],
+        [
+          -0.0671668545586991,
+          -0.0017953283979293688,
+          0.06667747841723036
+        ],
+        [
+          -0.064453232278896,
+          0.02259524567813345,
+          0.1309876704762954
+        ],
+        [
+          0.02328501712550232,
+          0.044097556051387404,
+          0.043980239845570486
+        ],
+        [
+          -0.057995959548040495,
+          0.010875668587236294,
+          0.05370541598758392
+        ],
+        [
+          0.015634413697846045,
+          -0.0715657961482294,
+          0.11609042976413864
+        ],
+        [
+          0.053878424569565875,
+          -0.04269688322911903,
+          0.12998485498415116
+        ]
+      ],
+      "normals": [
+        [
+          0.19010788725548727,
+          -0.3757239557157645,
+          0.9070228774978905
+        ],
+        [
+          0.37649031408861056,
+          0.6381447866994789,
+          -0.6715848975414321
+        ],
+        [
+          0.6092209046481636,
+          0.2487061663773515,
+          -0.7529907915410083
+        ],
+        [
+          0.6019370142032975,
+          -0.6436538782855215,
+          0.4726325379192871
+        ],
+        [
+          0.7001225072710664,
+          -0.6465919403089507,
+          0.30289822967455915
+        ],
+        [
+          0.8184788854617453,
+          0.1488433447449685,
+          -0.5549215915590505
+        ],
+        [
+          0.8955580607826548,
+          0.023937711972391584,
+          0.4443002877702619
+        ],
+        [
+          0.8593764303852801,
+          -0.3012699423751127,
+          -0.4131689396839387
+        ],
+        [
+          -0.3104668950066976,
+          -0.5879674140184987,
+          0.7469301353923936
+        ],
+        [
+          0.77327946064054,
+          -0.14500891449648393,
+          0.6172611201655479
+        ],
+        [
+          -0.20845884930461392,
+          0.9542106153097254,
+          -0.21453906352184832
+        ],
+        [
+          -0.7183789942608784,
+          0.5692917763882537,
+          -0.3997980664553487
+        ]
+      ],
+      "radius_m": 0.025,
+      "turns": 300,
+      "quadrature_points": 256,
+      "current_bound_A": 2.0,
+      "slew_bound_A_s": 20.0,
+      "status": "Engineering geometry and ratings; unbuilt and uncalibrated air-core coil benchmark"
+    },
+    "current_channels": 12,
+    "current_units": "A; total currents, not increments",
+    "bias_currents_A": [
+      0.8852530495400187,
+      -1.2286958193398705,
+      -0.7250601367549449,
+      -0.7961036977402055,
+      -0.5688797115812853,
+      0.6475670120790111,
+      0.698025646431227,
+      0.7809830505705807,
+      1.1490316192924115,
+      0.28904359740025765,
+      1.5124804024130618,
+      -0.3281350083833567
+    ],
+    "bias_origin_field_gradient_residual": [
+      3.253473847481588e-10,
+      -1.277110638244058e-08,
+      -1.818562411879006e-08,
+      1.531426625598492e-07,
+      1.8360020897709162e-08,
+      -1.80355953669116e-07,
+      -3.7419132874715044e-07,
+      9.198263549795027e-08
+    ],
+    "bias_initialization": "Pre-energized fixed local axial-bias fit; not a zero-current startup",
+    "collocated_gain_dimensionless": 0.15425045617918898,
+    "collocated_gain_A2_per_W": 95590.32245389407,
+    "feedback_derivative": "Hamiltonian partial z derivative first; compose i(z) afterwards; total field Jacobian contains Di/Dz",
+    "magnetic_domain": "Away from ideal circular wires; physical_samples evaluates actual magnet quadrature points only",
+    "constraints": "Smooth feedback not automatically bounded; coil_control handles explicit constrained current ramps."
+  },
+  "initial_state": [
+    0.009800665778412416,
+    0.006216099682706645,
+    -0.00011714758713290688,
+    -0.002673078944651098,
+    -0.0023400650034276762,
+    -0.002004670955008666,
+    -0.0003434497763517713,
+    0.00042239663856923494,
+    0.0009713964335523372,
+    0.0006164865934812456,
+    0.00028831449452181235,
+    -1.555261969333705e-05,
+    0.0010343207233146883,
+    0.003262136800885292,
+    0.0012121093183480672,
+    0.00019815919912775725,
+    -0.0005689903042813087,
+    -0.0008241289518639397,
+    -0.0002153902030085732,
+    0.00012185349413057576,
+    0.0003601382410412057,
+    0.00018881774099542155,
+    2.064383633527739e-05,
+    -8.281594913786322e-05
+  ],
+  "protocol": {
+    "h_tau": 0.001,
+    "steps": 4,
+    "T_tau": 0.004,
+    "T_s": 0.0008973379420832672,
+    "gamma": 0.02,
+    "kappa_tau_inverse": 20.0,
+    "energy_cap_E0": 0.0003131687891433546,
+    "initial_mechanical_energy_E0": 0.0003131587891433546,
+    "initial_current_A": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "requested_current_A": [
+      0.0023372730063007784,
+      0.0913587027186993,
+      0.11246458322507567,
+      0.044194304125749456,
+      0.06105967857904783,
+      0.1376029524428139,
+      0.1106240634238558,
+      0.11951129797581293,
+      -0.05927305201019726,
+      0.08167503906564208,
+      0.012390660689930711,
+      -0.08675009971501856
+    ],
+    "field_limit_T": 0.005,
+    "gradient_limit_T_per_m": 0.03,
+    "current_limit_A": 2.0,
+    "slew_limit_A_s": 20.0,
+    "model": "20-cell actual 12-coordinate 24-phase-space ROM; full variable mass and full 256-point coil quadrature"
+  },
+  "clearance": {
+    "coefficient_m2_per_J": 3274.793067734474,
+    "implied_straight_reference_centerline_radius_m": 0.0006093059975560059,
+    "scope": "straight stress-free reference and clamped root; sufficient theorem, not vascular clearance"
+  },
+  "negative_counterexamples": {
+    "signed_fullcoil_H_E0": -1.0015632662412566,
+    "positive_mechanical_energy_E0": 0.0003131587891433546
+  },
+  "runs": [
+    {
+      "name": "baseline_rk4sub1",
+      "completed_steps": 4,
+      "failure": null,
+      "elapsed_s": 3.8586309280071873,
+      "records": [
+        {
+          "name": "baseline_rk4sub1",
+          "step": 1,
+          "tau": 0.001,
+          "time_s": 0.0002243344855208168,
+          "mechanical_energy_E0": 0.000313278349515186,
+          "work_ledger_E0": 0.0003132942349292217,
+          "cumulative_dissipation_E0": 1.1482020406922263e-09,
+          "independent_energy_ledger_residual_E0": -1.4737211994982213e-08,
+          "step_power_residual_E0": -1.473721199499783e-08,
+          "decision_target_power_dE0_dtau": 0.00028618843026783676,
+          "decision_power_upper_dE0_dtau": 1.9999999999989644e-07,
+          "maximum_RK_stage_power_dE0_dtau": 0.0002645031982832843,
+          "maximum_current_A": 0.004486689710416336,
+          "maximum_slew_A_s": 20.0,
+          "maximum_B_T": 7.031491692143215e-06,
+          "maximum_G_T_per_m": 0.0001278756601196093,
+          "current_allocation_residual_A": 0.28633588668966026,
+          "generalized_force_allocation_residual": 0.3053568627796001,
+          "constraint_violation": 0.0,
+          "allocation": {
+            "success": true,
+            "message": "Box projection already satisfies all magnetic-point field constraints",
+            "iterations": 0,
+            "physical_interval_s": 0.0002243344855208168,
+            "current_request_distance_A": 0.28633588668966026,
+            "generalized_force_allocation_residual": 0.3053568627796001,
+            "constraint_violation": 0.0,
+            "active_magnetic_points": 1,
+            "maximum_planned_slew_A_s": 20.0,
+            "requested_current_A": [
+              0.0023372730063007784,
+              0.0913587027186993,
+              0.11246458322507567,
+              0.044194304125749456,
+              0.06105967857904783,
+              0.1376029524428139,
+              0.1106240634238558,
+              0.11951129797581293,
+              -0.05927305201019726,
+              0.08167503906564208,
+              0.012390660689930711,
+              -0.08675009971501856
+            ],
+            "allocated_current_A": [
+              0.0023372730063007784,
+              0.004486689710416336,
+              0.004486689710416336,
+              0.004486689710416336,
+              0.004486689710416336,
+              0.004486689710416336,
+              0.004486689710416336,
+              0.004486689710416336,
+              -0.004486689710416336,
+              0.004486689710416336,
+              0.004486689710416336,
+              -0.004486689710416336
+            ],
+            "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only"
+          },
+          "RK_stages": [
+            {
+              "tau": 0.0,
+              "power": -4.982671312223422e-19,
+              "dissipation": 1.30381097963882e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 0.00013641738361212148,
+              "dissipation": 1.1413055637126598e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 0.00013766837484744358,
+              "dissipation": 1.114354874043221e-06
+            },
+            {
+              "tau": 0.001,
+              "power": 0.0002645031982832843,
+              "dissipation": 1.0740803890027759e-06
+            }
+          ]
+        },
+        {
+          "name": "baseline_rk4sub1",
+          "step": 2,
+          "tau": 0.002,
+          "time_s": 0.0004486689710416336,
+          "mechanical_energy_E0": 0.000313647453350125,
+          "work_ledger_E0": 0.0003136791949626604,
+          "cumulative_dissipation_E0": 2.338034360347089e-09,
+          "independent_energy_ledger_residual_E0": -2.9403578175086807e-08,
+          "step_power_residual_E0": -1.4666366180082516e-08,
+          "decision_target_power_dE0_dtau": 0.0005280012813204417,
+          "decision_power_upper_dE0_dtau": -2.5089157173411713e-06,
+          "maximum_RK_stage_power_dE0_dtau": 0.0005036918812197726,
+          "maximum_current_A": 0.008973379420832673,
+          "maximum_slew_A_s": 20.0,
+          "maximum_B_T": 1.4013112088274339e-05,
+          "maximum_G_T_per_m": 0.00025225840913622956,
+          "current_allocation_residual_A": 0.2728091115012109,
+          "generalized_force_allocation_residual": 0.29138291799498045,
+          "constraint_violation": 0.0,
+          "allocation": {
+            "success": true,
+            "message": "Box projection already satisfies all magnetic-point field constraints",
+            "iterations": 0,
+            "physical_interval_s": 0.0002243344855208168,
+            "current_request_distance_A": 0.2728091115012109,
+            "generalized_force_allocation_residual": 0.29138291799498045,
+            "constraint_violation": 0.0,
+            "active_magnetic_points": 1,
+            "maximum_planned_slew_A_s": 20.0,
+            "requested_current_A": [
+              0.0023372730063007784,
+              0.0913587027186993,
+              0.11246458322507567,
+              0.044194304125749456,
+              0.06105967857904783,
+              0.1376029524428139,
+              0.1106240634238558,
+              0.11951129797581293,
+              -0.05927305201019726,
+              0.08167503906564208,
+              0.012390660689930711,
+              -0.08675009971501856
+            ],
+            "allocated_current_A": [
+              0.0023372730063007784,
+              0.008973379420832673,
+              0.008973379420832673,
+              0.008973379420832673,
+              0.008973379420832673,
+              0.008973379420832673,
+              0.008973379420832673,
+              0.008973379420832673,
+              -0.008973379420832673,
+              0.008973379420832673,
+              0.008973379420832673,
+              -0.008973379420832673
+            ],
+            "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only"
+          },
+          "RK_stages": [
+            {
+              "tau": 0.0,
+              "power": 0.00026448817719405566,
+              "dissipation": 1.0793931735388096e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 0.0003835546062881477,
+              "dissipation": 1.1806484873978005e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 0.0003872354648210743,
+              "dissipation": 1.1634134665827441e-06
+            },
+            {
+              "tau": 0.001,
+              "power": 0.0005036918812197726,
+              "dissipation": 1.3714768364292767e-06
+            }
+          ]
+        },
+        {
+          "name": "baseline_rk4sub1",
+          "step": 3,
+          "tau": 0.003,
+          "time_s": 0.0006730034565624504,
+          "mechanical_energy_E0": 0.00031425573094628483,
+          "work_ledger_E0": 0.0003143037418154156,
+          "cumulative_dissipation_E0": 4.01248018102191e-09,
+          "independent_energy_ledger_residual_E0": -4.3998388949765635e-08,
+          "step_power_residual_E0": -1.4594810774674278e-08,
+          "decision_target_power_dE0_dtau": 0.0007555548362787291,
+          "decision_power_upper_dE0_dtau": -1.0208116386115854e-05,
+          "maximum_RK_stage_power_dE0_dtau": 0.0007487901410556642,
+          "maximum_current_A": 0.01346006913124901,
+          "maximum_slew_A_s": 20.000000000000004,
+          "maximum_B_T": 2.104041034233489e-05,
+          "maximum_G_T_per_m": 0.0003776496687810936,
+          "current_allocation_residual_A": 0.25942842453296855,
+          "generalized_force_allocation_residual": 0.2773027978124251,
+          "constraint_violation": 0.0,
+          "allocation": {
+            "success": true,
+            "message": "Box projection already satisfies all magnetic-point field constraints",
+            "iterations": 0,
+            "physical_interval_s": 0.0002243344855208168,
+            "current_request_distance_A": 0.25942842453296855,
+            "generalized_force_allocation_residual": 0.2773027978124251,
+            "constraint_violation": 0.0,
+            "active_magnetic_points": 1,
+            "maximum_planned_slew_A_s": 20.000000000000004,
+            "requested_current_A": [
+              0.0023372730063007784,
+              0.0913587027186993,
+              0.11246458322507567,
+              0.044194304125749456,
+              0.06105967857904783,
+              0.1376029524428139,
+              0.1106240634238558,
+              0.11951129797581293,
+              -0.05927305201019726,
+              0.08167503906564208,
+              0.012390660689930711,
+              -0.08675009971501856
+            ],
+            "allocated_current_A": [
+              0.0023372730063007784,
+              0.01346006913124901,
+              0.01346006913124901,
+              0.01346006913124901,
+              0.01346006913124901,
+              0.01346006913124901,
+              0.01346006913124901,
+              0.01346006913124901,
+              -0.01346006913124901,
+              0.01346006913124901,
+              0.012390660689930711,
+              -0.01346006913124901
+            ],
+            "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only"
+          },
+          "RK_stages": [
+            {
+              "tau": 0.0,
+              "power": 0.000503695267490399,
+              "dissipation": 1.3834630011109716e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 0.0006206488732070207,
+              "dissipation": 1.708677839490032e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 0.000626748980785544,
+              "dissipation": 1.645614214616458e-06
+            },
+            {
+              "tau": 0.001,
+              "power": 0.0007487901410556642,
+              "dissipation": 1.9546278147249736e-06
+            }
+          ]
+        },
+        {
+          "name": "baseline_rk4sub1",
+          "step": 4,
+          "tau": 0.004,
+          "time_s": 0.0008973379420832672,
+          "mechanical_energy_E0": 0.00031512806295673154,
+          "work_ledger_E0": 0.00031519282163805035,
+          "cumulative_dissipation_E0": 6.236437978535394e-09,
+          "independent_energy_ledger_residual_E0": -5.85222433402744e-08,
+          "step_power_residual_E0": -1.4523854390509293e-08,
+          "decision_target_power_dE0_dtau": 0.0010048029494498425,
+          "decision_power_upper_dE0_dtau": -2.2699053441219922e-05,
+          "maximum_RK_stage_power_dE0_dtau": 0.0010389655319586865,
+          "maximum_current_A": 0.017946758841665345,
+          "maximum_slew_A_s": 19.999999999999996,
+          "maximum_B_T": 2.8204491999164272e-05,
+          "maximum_G_T_per_m": 0.0005059669286483631,
+          "current_allocation_residual_A": 0.24616191642018764,
+          "generalized_force_allocation_residual": 0.2628565312793215,
+          "constraint_violation": 0.0,
+          "allocation": {
+            "success": true,
+            "message": "Box projection already satisfies all magnetic-point field constraints",
+            "iterations": 0,
+            "physical_interval_s": 0.0002243344855208168,
+            "current_request_distance_A": 0.24616191642018764,
+            "generalized_force_allocation_residual": 0.2628565312793215,
+            "constraint_violation": 0.0,
+            "active_magnetic_points": 1,
+            "maximum_planned_slew_A_s": 19.999999999999996,
+            "requested_current_A": [
+              0.0023372730063007784,
+              0.0913587027186993,
+              0.11246458322507567,
+              0.044194304125749456,
+              0.06105967857904783,
+              0.1376029524428139,
+              0.1106240634238558,
+              0.11951129797581293,
+              -0.05927305201019726,
+              0.08167503906564208,
+              0.012390660689930711,
+              -0.08675009971501856
+            ],
+            "allocated_current_A": [
+              0.0023372730063007784,
+              0.017946758841665345,
+              0.017946758841665345,
+              0.017946758841665345,
+              0.017946758841665345,
+              0.017946758841665345,
+              0.017946758841665345,
+              0.017946758841665345,
+              -0.017946758841665345,
+              0.017946758841665345,
+              0.012390660689930711,
+              -0.017946758841665345
+            ],
+            "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only"
+          },
+          "RK_stages": [
+            {
+              "tau": 0.0,
+              "power": 0.0007488225498046081,
+              "dissipation": 1.975542284420123e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 0.0008823105093727116,
+              "dissipation": 2.2977589737297125e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 0.0008910349176498419,
+              "dissipation": 2.1800854101302854e-06
+            },
+            {
+              "tau": 0.001,
+              "power": 0.0010389655319586865,
+              "dissipation": 2.4125157329407865e-06
+            }
+          ]
+        }
+      ],
+      "final_state": [
+        0.009804116912582851,
+        0.006232103617394412,
+        -8.834762966899583e-05,
+        -0.0026659619400257357,
+        -0.002376160637964609,
+        -0.0020592287493964344,
+        -0.0004057530054153819,
+        0.0004387521179360515,
+        0.0010268605133113501,
+        0.0004770634903440297,
+        -5.681725824510001e-05,
+        3.7733459142456036e-05,
+        0.000985459881525833,
+        0.003269397378769185,
+        0.0012123692463395393,
+        0.00021847791842142202,
+        -0.0004043805233354074,
+        -0.0007290761177951736,
+        -0.000198272470035915,
+        -2.438440563762735e-05,
+        2.5482028847051142e-05,
+        -0.00041138234108894773,
+        -0.00026518975509635896,
+        4.6681739430609464e-05
+      ]
+    },
+    {
+      "name": "governed_rk4sub1",
+      "completed_steps": 4,
+      "failure": null,
+      "elapsed_s": 4.624817158008227,
+      "records": [
+        {
+          "name": "governed_rk4sub1",
+          "step": 1,
+          "tau": 0.001,
+          "time_s": 0.0002243344855208168,
+          "mechanical_energy_E0": 0.00031314300170395544,
+          "work_ledger_E0": 0.0003131588831025244,
+          "cumulative_dissipation_E0": 1.1464177747244767e-09,
+          "independent_energy_ledger_residual_E0": -1.4734980794225644e-08,
+          "step_power_residual_E0": -1.4734980794239583e-08,
+          "decision_target_power_dE0_dtau": 2.000000000026513e-07,
+          "decision_power_upper_dE0_dtau": 1.9999999999989644e-07,
+          "maximum_RK_stage_power_dE0_dtau": 1.8178625537014377e-07,
+          "maximum_current_A": 4.401387403690955e-06,
+          "maximum_slew_A_s": 0.01961975392892741,
+          "maximum_B_T": 4.833997485538533e-09,
+          "maximum_G_T_per_m": 1.0058080199163097e-07,
+          "current_allocation_residual_A": 0.2999904041577766,
+          "generalized_force_allocation_residual": 0.3194449773878529,
+          "constraint_violation": 6.608821544020963e-17,
+          "allocation": {
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "iterations": 2,
+            "physical_interval_s": 0.0002243344855208168,
+            "current_request_distance_A": 0.2999904041577766,
+            "generalized_force_allocation_residual": 0.3194449773878529,
+            "constraint_violation": 6.608821544020963e-17,
+            "active_magnetic_points": 1,
+            "maximum_planned_slew_A_s": 0.019619753928927414,
+            "requested_current_A": [
+              0.0023372730063007784,
+              0.0913587027186993,
+              0.11246458322507567,
+              0.044194304125749456,
+              0.06105967857904783,
+              0.1376029524428139,
+              0.1106240634238558,
+              0.11951129797581293,
+              -0.05927305201019726,
+              0.08167503906564208,
+              0.012390660689930711,
+              -0.08675009971501856
+            ],
+            "allocated_current_A": [
+              7.476034333785131e-08,
+              2.9222123234086753e-06,
+              3.5973079878072814e-06,
+              1.4136052318676831e-06,
+              1.953063472834478e-06,
+              4.401387403690955e-06,
+              3.5384368624021348e-06,
+              3.8227051976065865e-06,
+              -1.895916183961184e-06,
+              2.6124692948771913e-06,
+              3.9632941674621475e-07,
+              -2.7748008990776188e-06
+            ],
+            "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only",
+            "power_upper_dE0_dtau": 1.9999999999989644e-07,
+            "allocated_power_dE0_dtau": 2.000000000026513e-07,
+            "power_upper_W": 3.2273236917577823e-13,
+            "power_constraint_scope": "decision state only; no between-sample envelope claimed"
+          },
+          "RK_stages": [
+            {
+              "tau": 0.0,
+              "power": -4.982671312223422e-19,
+              "dissipation": 1.30381097963882e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 9.554078806931643e-08,
+              "dissipation": 1.1413055637126598e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 9.544359357728601e-08,
+              "dissipation": 1.1116173793225878e-06
+            },
+            {
+              "tau": 0.001,
+              "power": 1.8178625537014377e-07,
+              "dissipation": 1.0688497826375443e-06
+            }
+          ]
+        },
+        {
+          "name": "governed_rk4sub1",
+          "step": 2,
+          "tau": 0.002,
+          "time_s": 0.0004486689710416336,
+          "mechanical_energy_E0": 0.0003131226240720456,
+          "work_ledger_E0": 0.0003131543497122802,
+          "cumulative_dissipation_E0": 2.324574483174404e-09,
+          "independent_energy_ledger_residual_E0": -2.9401065751412106e-08,
+          "step_power_residual_E0": -1.4666084957200854e-08,
+          "decision_target_power_dE0_dtau": 1.9812081660807158e-07,
+          "decision_power_upper_dE0_dtau": 1.9812081660463242e-07,
+          "maximum_RK_stage_power_dE0_dtau": 1.817784033814144e-07,
+          "maximum_current_A": 0.004489611922739745,
+          "maximum_slew_A_s": 20.0,
+          "maximum_B_T": 6.6031775347363255e-06,
+          "maximum_G_T_per_m": 6.589758043979326e-05,
+          "current_allocation_residual_A": 0.2994629549451819,
+          "generalized_force_allocation_residual": 0.32192677605693554,
+          "constraint_violation": 9.058109477929009e-17,
+          "allocation": {
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "iterations": 2,
+            "physical_interval_s": 0.0002243344855208168,
+            "current_request_distance_A": 0.2994629549451819,
+            "generalized_force_allocation_residual": 0.32192677605693554,
+            "constraint_violation": 9.058109477929009e-17,
+            "active_magnetic_points": 1,
+            "maximum_planned_slew_A_s": 20.0,
+            "requested_current_A": [
+              0.0023372730063007784,
+              0.0913587027186993,
+              0.11246458322507567,
+              0.044194304125749456,
+              0.06105967857904783,
+              0.1376029524428139,
+              0.1106240634238558,
+              0.11951129797581293,
+              -0.05927305201019726,
+              0.08167503906564208,
+              0.012390660689930711,
+              -0.08675009971501856
+            ],
+            "allocated_current_A": [
+              -0.0037417840076727597,
+              0.004489611922739745,
+              0.002524149222799527,
+              -0.004485276105184453,
+              -0.004484736646943472,
+              0.0016220222348715344,
+              0.002128531284182023,
+              -0.0032295906397794474,
+              -0.0044885856266002975,
+              0.0002666408447604216,
+              0.0044870860398330825,
+              0.004483914909517208
+            ],
+            "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only",
+            "power_upper_dE0_dtau": 1.9812081660463242e-07,
+            "allocated_power_dE0_dtau": 1.9812081660807158e-07,
+            "power_upper_W": 3.1970000262942995e-13,
+            "power_constraint_scope": "decision state only; no between-sample envelope claimed"
+          },
+          "RK_stages": [
+            {
+              "tau": 0.0,
+              "power": 1.817784033814144e-07,
+              "dissipation": 1.074164709093331e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": -3.933950588600347e-06,
+              "dissipation": 1.1706386412144157e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": -3.1556228126590095e-06,
+              "dissipation": 1.1507871131359653e-06
+            },
+            {
+              "tau": 0.001,
+              "power": -1.320297306597341e-05,
+              "dissipation": 1.3519240329054702e-06
+            }
+          ]
+        },
+        {
+          "name": "governed_rk4sub1",
+          "step": 3,
+          "tau": 0.003,
+          "time_s": 0.0006730034565624504,
+          "mechanical_energy_E0": 0.0003130917691753103,
+          "work_ledger_E0": 0.00031313973348984914,
+          "cumulative_dissipation_E0": 3.968878514416071e-09,
+          "independent_energy_ledger_residual_E0": -4.3995436024430016e-08,
+          "step_power_residual_E0": -1.459437027299703e-08,
+          "decision_target_power_dE0_dtau": 2.887886214885286e-07,
+          "decision_power_upper_dE0_dtau": 2.887886214886226e-07,
+          "maximum_RK_stage_power_dE0_dtau": -1.2969441360256391e-05,
+          "maximum_current_A": 0.008976301633156068,
+          "maximum_slew_A_s": 20.000000000000004,
+          "maximum_B_T": 1.2978670567185196e-05,
+          "maximum_G_T_per_m": 0.00012809655493359003,
+          "current_allocation_residual_A": 0.29788837672385066,
+          "generalized_force_allocation_residual": 0.32307830063199694,
+          "constraint_violation": 0.0,
+          "allocation": {
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "iterations": 2,
+            "physical_interval_s": 0.0002243344855208168,
+            "current_request_distance_A": 0.29788837672385066,
+            "generalized_force_allocation_residual": 0.32307830063199694,
+            "constraint_violation": 0.0,
+            "active_magnetic_points": 1,
+            "maximum_planned_slew_A_s": 20.000000000000004,
+            "requested_current_A": [
+              0.0023372730063007784,
+              0.0913587027186993,
+              0.11246458322507567,
+              0.044194304125749456,
+              0.06105967857904783,
+              0.1376029524428139,
+              0.1106240634238558,
+              0.11951129797581293,
+              -0.05927305201019726,
+              0.08167503906564208,
+              0.012390660689930711,
+              -0.08675009971501856
+            ],
+            "allocated_current_A": [
+              -0.0073061770830127664,
+              0.008976301633156068,
+              0.005536751181243019,
+              -0.00897196581560079,
+              -0.00897142635735981,
+              0.003970145833567396,
+              0.005483201951091954,
+              -0.005663058730055994,
+              -0.008975275337016628,
+              0.0016243197954268823,
+              0.008973775750249418,
+              0.008970604619933546
+            ],
+            "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only",
+            "power_upper_dE0_dtau": 2.887886214886226e-07,
+            "allocated_power_dE0_dtau": 2.887886214885286e-07,
+            "power_upper_W": 4.660071800203924e-13,
+            "power_constraint_scope": "decision state only; no between-sample envelope claimed"
+          },
+          "RK_stages": [
+            {
+              "tau": 0.0,
+              "power": -1.3196483593030873e-05,
+              "dissipation": 1.3639082343383854e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": -1.5082276927512728e-05,
+              "dissipation": 1.680045640148909e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": -1.2969441360256391e-05,
+              "dissipation": 1.614612901345174e-06
+            },
+            {
+              "tau": 0.001,
+              "power": -1.8397414417858744e-05,
+              "dissipation": 1.912598870123446e-06
+            }
+          ]
+        },
+        {
+          "name": "governed_rk4sub1",
+          "step": 4,
+          "tau": 0.004,
+          "time_s": 0.0008973379420832672,
+          "mechanical_energy_E0": 0.00031305818389065483,
+          "work_ledger_E0": 0.00031312283839527415,
+          "cumulative_dissipation_E0": 6.1361853884922805e-09,
+          "independent_energy_ledger_residual_E0": -5.851831923082403e-08,
+          "step_power_residual_E0": -1.4522883206404718e-08,
+          "decision_target_power_dE0_dtau": 5.811130701095305e-07,
+          "decision_power_upper_dE0_dtau": 5.811130701096311e-07,
+          "maximum_RK_stage_power_dE0_dtau": -1.5129663786282722e-05,
+          "maximum_current_A": 0.013462991343572348,
+          "maximum_slew_A_s": 19.999999999999996,
+          "maximum_B_T": 1.876032353684561e-05,
+          "maximum_G_T_per_m": 0.00018293967829454373,
+          "current_allocation_residual_A": 0.2957512478351323,
+          "generalized_force_allocation_residual": 0.3233679716603614,
+          "constraint_violation": 0.0,
+          "allocation": {
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "iterations": 2,
+            "physical_interval_s": 0.0002243344855208168,
+            "current_request_distance_A": 0.2957512478351323,
+            "generalized_force_allocation_residual": 0.3233679716603614,
+            "constraint_violation": 0.0,
+            "active_magnetic_points": 1,
+            "maximum_planned_slew_A_s": 19.999999999999996,
+            "requested_current_A": [
+              0.0023372730063007784,
+              0.0913587027186993,
+              0.11246458322507567,
+              0.044194304125749456,
+              0.06105967857904783,
+              0.1376029524428139,
+              0.1106240634238558,
+              0.11951129797581293,
+              -0.05927305201019726,
+              0.08167503906564208,
+              0.012390660689930711,
+              -0.08675009971501856
+            ],
+            "allocated_current_A": [
+              -0.009853053522081838,
+              0.013462991343572348,
+              0.008030654486644754,
+              -0.013458655526017126,
+              -0.013458116067776145,
+              0.006248460057636535,
+              0.009969891661508277,
+              -0.006908076991766859,
+              -0.01346196504743295,
+              0.004468831966034165,
+              0.013460465460665753,
+              0.013457294330349832
+            ],
+            "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only",
+            "power_upper_dE0_dtau": 5.811130701096311e-07,
+            "allocated_power_dE0_dtau": 5.811130701095305e-07,
+            "power_upper_W": 9.377199893779423e-13,
+            "power_constraint_scope": "decision state only; no between-sample envelope claimed"
+          },
+          "RK_stages": [
+            {
+              "tau": 0.0,
+              "power": -1.8355275876766486e-05,
+              "dissipation": 1.933509031775811e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": -1.823189519986486e-05,
+              "dissipation": 2.242652895027019e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": -1.5129663786282722e-05,
+              "dissipation": 2.122616676683487e-06
+            },
+            {
+              "tau": 0.001,
+              "power": -1.629217360082739e-05,
+              "dissipation": 2.3397930692604306e-06
+            }
+          ]
+        }
+      ],
+      "final_state": [
+        0.00980412144985864,
+        0.006232066203955682,
+        -8.82901986477823e-05,
+        -0.0026656041490821535,
+        -0.0023759029987956014,
+        -0.0020581039830489508,
+        -0.0003955357105693542,
+        0.0004414976339126402,
+        0.001026873191095086,
+        0.0004770372013075771,
+        -5.6799504357153206e-05,
+        3.7737095501489564e-05,
+        0.0009869862193484817,
+        0.0032406731591166256,
+        0.0012244001723027112,
+        0.0002617997342724333,
+        -0.0003888588240161663,
+        -0.0006816725071954264,
+        -0.00010237080094408486,
+        1.0832907856242162e-05,
+        2.511048134439931e-05,
+        -0.0004115809818166995,
+        -0.00026521710050522165,
+        4.6873277156338146e-05
+      ]
+    },
+    {
+      "name": "baseline_rk4sub2",
+      "completed_steps": 4,
+      "failure": null,
+      "elapsed_s": 6.658899903006386,
+      "records": [
+        {
+          "name": "baseline_rk4sub2",
+          "step": 1,
+          "tau": 0.001,
+          "time_s": 0.0002243344855208168,
+          "mechanical_energy_E0": 0.0003132925913133713,
+          "work_ledger_E0": 0.0003132942330077616,
+          "cumulative_dissipation_E0": 1.1487380392038691e-09,
+          "independent_energy_ledger_residual_E0": -4.92956351090236e-10,
+          "step_power_residual_E0": -4.929563510735865e-10,
+          "decision_target_power_dE0_dtau": 0.00028618843026783676,
+          "decision_power_upper_dE0_dtau": 1.9999999999989644e-07,
+          "maximum_RK_stage_power_dE0_dtau": 0.000264488930866521,
+          "maximum_current_A": 0.004486689710416336,
+          "maximum_slew_A_s": 20.0,
+          "maximum_B_T": 7.031491692147232e-06,
+          "maximum_G_T_per_m": 0.00012787566012051926,
+          "current_allocation_residual_A": 0.28633588668966026,
+          "generalized_force_allocation_residual": 0.3053568627796001,
+          "constraint_violation": 0.0,
+          "allocation": {
+            "success": true,
+            "message": "Box projection already satisfies all magnetic-point field constraints",
+            "iterations": 0,
+            "physical_interval_s": 0.0002243344855208168,
+            "current_request_distance_A": 0.28633588668966026,
+            "generalized_force_allocation_residual": 0.3053568627796001,
+            "constraint_violation": 0.0,
+            "active_magnetic_points": 1,
+            "maximum_planned_slew_A_s": 20.0,
+            "requested_current_A": [
+              0.0023372730063007784,
+              0.0913587027186993,
+              0.11246458322507567,
+              0.044194304125749456,
+              0.06105967857904783,
+              0.1376029524428139,
+              0.1106240634238558,
+              0.11951129797581293,
+              -0.05927305201019726,
+              0.08167503906564208,
+              0.012390660689930711,
+              -0.08675009971501856
+            ],
+            "allocated_current_A": [
+              0.0023372730063007784,
+              0.004486689710416336,
+              0.004486689710416336,
+              0.004486689710416336,
+              0.004486689710416336,
+              0.004486689710416336,
+              0.004486689710416336,
+              0.004486689710416336,
+              -0.004486689710416336,
+              0.004486689710416336,
+              0.004486689710416336,
+              -0.004486689710416336
+            ],
+            "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only"
+          },
+          "RK_stages": [
+            {
+              "tau": 0.0,
+              "power": -4.982671312223422e-19,
+              "dissipation": 1.30381097963882e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": 6.987796992797852e-05,
+              "dissipation": 1.2047435238916668e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": 7.003434886594129e-05,
+              "dissipation": 1.1967317293126648e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 0.00013704415648219803,
+              "dissipation": 1.1271305985204638e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 0.0001370434737526747,
+              "dissipation": 1.1273100512589707e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": 0.00020149630585360997,
+              "dissipation": 1.0887956414001894e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": 0.0002019662812436257,
+              "dissipation": 1.0834973626354744e-06
+            },
+            {
+              "tau": 0.001,
+              "power": 0.000264488930866521,
+              "dissipation": 1.0790683265481847e-06
+            }
+          ]
+        },
+        {
+          "name": "baseline_rk4sub2",
+          "step": 2,
+          "tau": 0.002,
+          "time_s": 0.0004486689710416336,
+          "mechanical_energy_E0": 0.0003136758678621748,
+          "work_ledger_E0": 0.00031367919340588064,
+          "cumulative_dissipation_E0": 2.3396896388153358e-09,
+          "independent_energy_ledger_residual_E0": -9.858540670481849e-10,
+          "step_power_residual_E0": -4.928977159843128e-10,
+          "decision_target_power_dE0_dtau": 0.0005280021098449551,
+          "decision_power_upper_dE0_dtau": -2.508877288139944e-06,
+          "maximum_RK_stage_power_dE0_dtau": 0.0005036970407494095,
+          "maximum_current_A": 0.008973379420832673,
+          "maximum_slew_A_s": 20.0,
+          "maximum_B_T": 1.4013112088296755e-05,
+          "maximum_G_T_per_m": 0.0002522584091381002,
+          "current_allocation_residual_A": 0.2728091115012109,
+          "generalized_force_allocation_residual": 0.2913829190654991,
+          "constraint_violation": 0.0,
+          "allocation": {
+            "success": true,
+            "message": "Box projection already satisfies all magnetic-point field constraints",
+            "iterations": 0,
+            "physical_interval_s": 0.0002243344855208168,
+            "current_request_distance_A": 0.2728091115012109,
+            "generalized_force_allocation_residual": 0.2913829190654991,
+            "constraint_violation": 0.0,
+            "active_magnetic_points": 1,
+            "maximum_planned_slew_A_s": 20.0,
+            "requested_current_A": [
+              0.0023372730063007784,
+              0.0913587027186993,
+              0.11246458322507567,
+              0.044194304125749456,
+              0.06105967857904783,
+              0.1376029524428139,
+              0.1106240634238558,
+              0.11951129797581293,
+              -0.05927305201019726,
+              0.08167503906564208,
+              0.012390660689930711,
+              -0.08675009971501856
+            ],
+            "allocated_current_A": [
+              0.0023372730063007784,
+              0.008973379420832673,
+              0.008973379420832673,
+              0.008973379420832673,
+              0.008973379420832673,
+              0.008973379420832673,
+              0.008973379420832673,
+              0.008973379420832673,
+              -0.008973379420832673,
+              0.008973379420832673,
+              0.008973379420832673,
+              -0.008973379420832673
+            ],
+            "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only"
+          },
+          "RK_stages": [
+            {
+              "tau": 0.0,
+              "power": 0.00026448857915171135,
+              "dissipation": 1.0793675940968988e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": 0.0003251076999261317,
+              "dissipation": 1.1101059291291878e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": 0.00032587580966444437,
+              "dissipation": 1.1056060547243989e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 0.00038539256617595565,
+              "dissipation": 1.1695483668641077e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 0.0003853933355433359,
+              "dissipation": 1.1703616908288006e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": 0.0004441131484863208,
+              "dissipation": 1.2682359802119216e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": 0.00044517996982720734,
+              "dissipation": 1.260753125581268e-06
+            },
+            {
+              "tau": 0.001,
+              "power": 0.0005036970407494095,
+              "dissipation": 1.3827393642542395e-06
+            }
+          ]
+        },
+        {
+          "name": "baseline_rk4sub2",
+          "step": 3,
+          "tau": 0.003,
+          "time_s": 0.0006730034565624504,
+          "mechanical_energy_E0": 0.00031429825190615454,
+          "work_ledger_E0": 0.0003143037468315927,
+          "cumulative_dissipation_E0": 4.016306331634013e-09,
+          "independent_energy_ledger_residual_E0": -1.4786191065339101e-09,
+          "step_power_residual_E0": -4.927650394766192e-10,
+          "decision_target_power_dE0_dtau": 0.0007555606948010252,
+          "decision_power_upper_dE0_dtau": -1.020808525052045e-05,
+          "maximum_RK_stage_power_dE0_dtau": 0.0007488267752549586,
+          "maximum_current_A": 0.01346006913124901,
+          "maximum_slew_A_s": 20.000000000000004,
+          "maximum_B_T": 2.1040410342390982e-05,
+          "maximum_G_T_per_m": 0.00037764966878359174,
+          "current_allocation_residual_A": 0.25942842453296855,
+          "generalized_force_allocation_residual": 0.2773027983561872,
+          "constraint_violation": 0.0,
+          "allocation": {
+            "success": true,
+            "message": "Box projection already satisfies all magnetic-point field constraints",
+            "iterations": 0,
+            "physical_interval_s": 0.0002243344855208168,
+            "current_request_distance_A": 0.25942842453296855,
+            "generalized_force_allocation_residual": 0.2773027983561872,
+            "constraint_violation": 0.0,
+            "active_magnetic_points": 1,
+            "maximum_planned_slew_A_s": 20.000000000000004,
+            "requested_current_A": [
+              0.0023372730063007784,
+              0.0913587027186993,
+              0.11246458322507567,
+              0.044194304125749456,
+              0.06105967857904783,
+              0.1376029524428139,
+              0.1106240634238558,
+              0.11951129797581293,
+              -0.05927305201019726,
+              0.08167503906564208,
+              0.012390660689930711,
+              -0.08675009971501856
+            ],
+            "allocated_current_A": [
+              0.0023372730063007784,
+              0.01346006913124901,
+              0.01346006913124901,
+              0.01346006913124901,
+              0.01346006913124901,
+              0.01346006913124901,
+              0.01346006913124901,
+              0.01346006913124901,
+              -0.01346006913124901,
+              0.01346006913124901,
+              0.012390660689930711,
+              -0.01346006913124901
+            ],
+            "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only"
+          },
+          "RK_stages": [
+            {
+              "tau": 0.0,
+              "power": 0.0005036992439728465,
+              "dissipation": 1.3842629271538668e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": 0.0005625975858562159,
+              "dissipation": 1.5312526084436554e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": 0.000563969582605073,
+              "dissipation": 1.5169969418362537e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 0.0006236944323963491,
+              "dissipation": 1.6725450601027759e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 0.0006236977566121194,
+              "dissipation": 1.6745781665465245e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": 0.0006845632409094007,
+              "dissipation": 1.840241844860877e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": 0.000686231040783498,
+              "dissipation": 1.8176746706000932e-06
+            },
+            {
+              "tau": 0.001,
+              "power": 0.0007488267752549586,
+              "dissipation": 1.9756820285392055e-06
+            }
+          ]
+        },
+        {
+          "name": "baseline_rk4sub2",
+          "step": 4,
+          "tau": 0.004,
+          "time_s": 0.0008973379420832672,
+          "mechanical_energy_E0": 0.0003151846222365901,
+          "work_ledger_E0": 0.0003151928354644982,
+          "cumulative_dissipation_E0": 6.241956625334712e-09,
+          "independent_energy_ledger_residual_E0": -1.971271282777779e-09,
+          "step_power_residual_E0": -4.926521762474684e-10,
+          "decision_target_power_dE0_dtau": 0.0010048125991289336,
+          "decision_power_upper_dE0_dtau": -2.2699153764761714e-05,
+          "maximum_RK_stage_power_dE0_dtau": 0.0010390014762198107,
+          "maximum_current_A": 0.017946758841665345,
+          "maximum_slew_A_s": 19.999999999999996,
+          "maximum_B_T": 2.8204491999236012e-05,
+          "maximum_G_T_per_m": 0.000505966928654444,
+          "current_allocation_residual_A": 0.24616191642018764,
+          "generalized_force_allocation_residual": 0.262856529353383,
+          "constraint_violation": 0.0,
+          "allocation": {
+            "success": true,
+            "message": "Box projection already satisfies all magnetic-point field constraints",
+            "iterations": 0,
+            "physical_interval_s": 0.0002243344855208168,
+            "current_request_distance_A": 0.24616191642018764,
+            "generalized_force_allocation_residual": 0.262856529353383,
+            "constraint_violation": 0.0,
+            "active_magnetic_points": 1,
+            "maximum_planned_slew_A_s": 19.999999999999996,
+            "requested_current_A": [
+              0.0023372730063007784,
+              0.0913587027186993,
+              0.11246458322507567,
+              0.044194304125749456,
+              0.06105967857904783,
+              0.1376029524428139,
+              0.1106240634238558,
+              0.11951129797581293,
+              -0.05927305201019726,
+              0.08167503906564208,
+              0.012390660689930711,
+              -0.08675009971501856
+            ],
+            "allocated_current_A": [
+              0.0023372730063007784,
+              0.017946758841665345,
+              0.017946758841665345,
+              0.017946758841665345,
+              0.017946758841665345,
+              0.017946758841665345,
+              0.017946758841665345,
+              0.017946758841665345,
+              -0.017946758841665345,
+              0.017946758841665345,
+              0.012390660689930711,
+              -0.017946758841665345
+            ],
+            "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only"
+          },
+          "RK_stages": [
+            {
+              "tau": 0.0,
+              "power": 0.0007488304726975497,
+              "dissipation": 1.9776985032509834e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": 0.000815175933318282,
+              "dissipation": 2.130401906386358e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": 0.0008171943650328972,
+              "dissipation": 2.1013476348071067e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 0.0008866719030355357,
+              "dissipation": 2.236119861982332e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 0.000886674927847016,
+              "dissipation": 2.2375720970533757e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": 0.0009596167935570774,
+              "dissipation": 2.3572185719454203e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": 0.0009619553156247893,
+              "dissipation": 2.325913221169845e-06
+            },
+            {
+              "tau": 0.001,
+              "power": 0.0010390014762198107,
+              "dissipation": 2.4266503935042463e-06
+            }
+          ]
+        }
+      ],
+      "final_state": [
+        0.009804115350883056,
+        0.006232109261964598,
+        -8.834779084135916e-05,
+        -0.0026659609805520105,
+        -0.0023761591816257193,
+        -0.002059230167380747,
+        -0.00040575377422502466,
+        0.0004387535467879861,
+        0.0010268605239820321,
+        0.0004770536876682569,
+        -5.697201506832713e-05,
+        3.88517643949454e-05,
+        0.000985458309341067,
+        0.0032693980417230106,
+        0.0012123660667412248,
+        0.00021847890373381172,
+        -0.0004043782868197315,
+        -0.0007290765194614722,
+        -0.0001982725809277753,
+        -2.4383108372110904e-05,
+        2.5481902663011343e-05,
+        -0.00041139967670153125,
+        -0.00026521859163504923,
+        4.68876676476668e-05
+      ]
+    },
+    {
+      "name": "governed_rk4sub2",
+      "completed_steps": 4,
+      "failure": null,
+      "elapsed_s": 7.443766057011089,
+      "records": [
+        {
+          "name": "governed_rk4sub2",
+          "step": 1,
+          "tau": 0.001,
+          "time_s": 0.0002243344855208168,
+          "mechanical_energy_E0": 0.00031315724326741126,
+          "work_ledger_E0": 0.0003131588831015882,
+          "cumulative_dissipation_E0": 1.1469562389574556e-09,
+          "independent_energy_ledger_residual_E0": -4.928779379644206e-10,
+          "step_power_residual_E0": -4.928779379431027e-10,
+          "decision_target_power_dE0_dtau": 2.000000000026513e-07,
+          "decision_power_upper_dE0_dtau": 1.9999999999989644e-07,
+          "maximum_RK_stage_power_dE0_dtau": 1.8177901686722199e-07,
+          "maximum_current_A": 4.401387403690955e-06,
+          "maximum_slew_A_s": 0.01961975392892741,
+          "maximum_B_T": 4.833997485550112e-09,
+          "maximum_G_T_per_m": 1.0058080199181901e-07,
+          "current_allocation_residual_A": 0.2999904041577766,
+          "generalized_force_allocation_residual": 0.3194449773878529,
+          "constraint_violation": 6.608821544020963e-17,
+          "allocation": {
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "iterations": 2,
+            "physical_interval_s": 0.0002243344855208168,
+            "current_request_distance_A": 0.2999904041577766,
+            "generalized_force_allocation_residual": 0.3194449773878529,
+            "constraint_violation": 6.608821544020963e-17,
+            "active_magnetic_points": 1,
+            "maximum_planned_slew_A_s": 0.019619753928927414,
+            "requested_current_A": [
+              0.0023372730063007784,
+              0.0913587027186993,
+              0.11246458322507567,
+              0.044194304125749456,
+              0.06105967857904783,
+              0.1376029524428139,
+              0.1106240634238558,
+              0.11951129797581293,
+              -0.05927305201019726,
+              0.08167503906564208,
+              0.012390660689930711,
+              -0.08675009971501856
+            ],
+            "allocated_current_A": [
+              7.476034333785131e-08,
+              2.9222123234086753e-06,
+              3.5973079878072814e-06,
+              1.4136052318676831e-06,
+              1.953063472834478e-06,
+              4.401387403690955e-06,
+              3.5384368624021348e-06,
+              3.8227051976065865e-06,
+              -1.895916183961184e-06,
+              2.6124692948771913e-06,
+              3.9632941674621475e-07,
+              -2.7748008990776188e-06
+            ],
+            "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only",
+            "power_upper_dE0_dtau": 1.9999999999989644e-07,
+            "allocated_power_dE0_dtau": 2.000000000026513e-07,
+            "power_upper_W": 3.2273236917577823e-13,
+            "power_constraint_scope": "decision state only; no between-sample envelope claimed"
+          },
+          "RK_stages": [
+            {
+              "tau": 0.0,
+              "power": -4.982671312223422e-19,
+              "dissipation": 1.30381097963882e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": 4.88852444853788e-08,
+              "dissipation": 1.2047435238916668e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": 4.887309930264615e-08,
+              "dissipation": 1.1960327473816927e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 9.549303323588577e-08,
+              "dissipation": 1.1257646125903142e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 9.549264729393556e-08,
+              "dissipation": 1.1259441831005426e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": 1.3982215369459266e-07,
+              "dissipation": 1.0861252094387664e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": 1.3978655501895412e-07,
+              "dissipation": 1.0801560851343497e-06
+            },
+            {
+              "tau": 0.001,
+              "power": 1.8177901686722199e-07,
+              "dissipation": 1.0738399604668404e-06
+            }
+          ]
+        },
+        {
+          "name": "governed_rk4sub2",
+          "step": 2,
+          "tau": 0.002,
+          "time_s": 0.0004486689710416336,
+          "mechanical_energy_E0": 0.00031315103858879835,
+          "work_ledger_E0": 0.0003131543505858218,
+          "cumulative_dissipation_E0": 2.326233094694175e-09,
+          "independent_energy_ledger_residual_E0": -9.857639287845582e-10,
+          "step_power_residual_E0": -4.92885990813458e-10,
+          "decision_target_power_dE0_dtau": 1.9812083532911284e-07,
+          "decision_power_upper_dE0_dtau": 1.9812083532880394e-07,
+          "maximum_RK_stage_power_dE0_dtau": 1.8177865672506992e-07,
+          "maximum_current_A": 0.004489611922739745,
+          "maximum_slew_A_s": 20.0,
+          "maximum_B_T": 6.603120105141495e-06,
+          "maximum_G_T_per_m": 6.589579669845251e-05,
+          "current_allocation_residual_A": 0.29946298866031223,
+          "generalized_force_allocation_residual": 0.32192679854515066,
+          "constraint_violation": 8.135891374510064e-18,
+          "allocation": {
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "iterations": 2,
+            "physical_interval_s": 0.0002243344855208168,
+            "current_request_distance_A": 0.29946298866031223,
+            "generalized_force_allocation_residual": 0.32192679854515066,
+            "constraint_violation": 8.135891374510064e-18,
+            "active_magnetic_points": 1,
+            "maximum_planned_slew_A_s": 20.0,
+            "requested_current_A": [
+              0.0023372730063007784,
+              0.0913587027186993,
+              0.11246458322507567,
+              0.044194304125749456,
+              0.06105967857904783,
+              0.1376029524428139,
+              0.1106240634238558,
+              0.11951129797581293,
+              -0.05927305201019726,
+              0.08167503906564208,
+              0.012390660689930711,
+              -0.08675009971501856
+            ],
+            "allocated_current_A": [
+              -0.0037416101783367328,
+              0.004489611922739745,
+              0.0025240395458094676,
+              -0.004485276105184469,
+              -0.0044847366469435,
+              0.0016219509006854486,
+              0.002128466427944309,
+              -0.0032294585194988148,
+              -0.0044885856266002975,
+              0.00026665834859742645,
+              0.0044870860398330825,
+              0.004483914909517236
+            ],
+            "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only",
+            "power_upper_dE0_dtau": 1.9812083532880394e-07,
+            "allocated_power_dE0_dtau": 1.9812083532911284e-07,
+            "power_upper_W": 3.1970003284391116e-13,
+            "power_constraint_scope": "decision state only; no between-sample envelope claimed"
+          },
+          "RK_stages": [
+            {
+              "tau": 0.0,
+              "power": 1.8177865672506992e-07,
+              "dissipation": 1.0741391195672905e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": -8.473810304351318e-07,
+              "dissipation": 1.102431075512725e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": -7.50173964250391e-07,
+              "dissipation": 1.0972763340277875e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": -3.546902077031517e-06,
+              "dissipation": 1.1582324083240844e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": -3.5462757318786057e-06,
+              "dissipation": 1.1590453635327282e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": -7.915722742421058e-06,
+              "dissipation": 1.2533938138911657e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": -7.628404397284092e-06,
+              "dissipation": 1.2452589393401521e-06
+            },
+            {
+              "tau": 0.001,
+              "power": -1.3195425775371022e-05,
+              "dissipation": 1.363185051872874e-06
+            }
+          ]
+        },
+        {
+          "name": "governed_rk4sub2",
+          "step": 3,
+          "tau": 0.003,
+          "time_s": 0.0006730034565624504,
+          "mechanical_energy_E0": 0.0003131342887116765,
+          "work_ledger_E0": 0.00031313973993523427,
+          "cumulative_dissipation_E0": 3.97270906370671e-09,
+          "independent_energy_ledger_residual_E0": -1.47851449407632e-09,
+          "step_power_residual_E0": -4.927505652766769e-10,
+          "decision_target_power_dE0_dtau": 2.88771150653552e-07,
+          "decision_power_upper_dE0_dtau": 2.887711506558994e-07,
+          "maximum_RK_stage_power_dE0_dtau": -1.2829448700906324e-05,
+          "maximum_current_A": 0.00897630163315604,
+          "maximum_slew_A_s": 20.000000000000004,
+          "maximum_B_T": 1.2978270648469368e-05,
+          "maximum_G_T_per_m": 0.00012808346126032196,
+          "current_allocation_residual_A": 0.2978888228167622,
+          "generalized_force_allocation_residual": 0.323078711827469,
+          "constraint_violation": 0.0,
+          "allocation": {
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "iterations": 2,
+            "physical_interval_s": 0.0002243344855208168,
+            "current_request_distance_A": 0.2978888228167622,
+            "generalized_force_allocation_residual": 0.323078711827469,
+            "constraint_violation": 0.0,
+            "active_magnetic_points": 1,
+            "maximum_planned_slew_A_s": 20.000000000000004,
+            "requested_current_A": [
+              0.0023372730063007784,
+              0.0913587027186993,
+              0.11246458322507567,
+              0.044194304125749456,
+              0.06105967857904783,
+              0.1376029524428139,
+              0.1106240634238558,
+              0.11951129797581293,
+              -0.05927305201019726,
+              0.08167503906564208,
+              0.012390660689930711,
+              -0.08675009971501856
+            ],
+            "allocated_current_A": [
+              -0.007305036640402154,
+              0.00897630163315604,
+              0.005535872217916508,
+              -0.008971965815600804,
+              -0.008971426357359827,
+              0.003969487062368527,
+              0.005482690391662471,
+              -0.005662365835935914,
+              -0.008975275337016635,
+              0.001624384631108317,
+              0.008973775750249418,
+              0.008970604619933573
+            ],
+            "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only",
+            "power_upper_dE0_dtau": 2.887711506558994e-07,
+            "allocated_power_dE0_dtau": 2.88771150653552e-07,
+            "power_upper_W": 4.659789880042112e-13,
+            "power_constraint_scope": "decision state only; no between-sample envelope claimed"
+          },
+          "RK_stages": [
+            {
+              "tau": 0.0,
+              "power": -1.3193263439770643e-05,
+              "dissipation": 1.3647080451599208e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": -1.327218832209719e-05,
+              "dissipation": 1.5071012661570703e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": -1.2829448700906324e-05,
+              "dissipation": 1.4922573055758508e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": -1.403339211917958e-05,
+              "dissipation": 1.6427316128552412e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": -1.402976395887397e-05,
+              "dissipation": 1.644764014900519e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": -1.617988883678856e-05,
+              "dissipation": 1.8048661429967721e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": -1.557668065245082e-05,
+              "dissipation": 1.7817045503728732e-06
+            },
+            {
+              "tau": 0.001,
+              "power": -1.8354974508517224e-05,
+              "dissipation": 1.933649425029603e-06
+            }
+          ]
+        },
+        {
+          "name": "governed_rk4sub2",
+          "step": 4,
+          "tau": 0.004,
+          "time_s": 0.0008973379420832672,
+          "mechanical_energy_E0": 0.0003131147358214502,
+          "work_ledger_E0": 0.00031312284866824206,
+          "cumulative_dissipation_E0": 6.1417097732701315e-09,
+          "independent_energy_ledger_residual_E0": -1.9711370186084624e-09,
+          "step_power_residual_E0": -4.926225245370922e-10,
+          "decision_target_power_dE0_dtau": 5.809841624059182e-07,
+          "decision_power_upper_dE0_dtau": 5.809841624069764e-07,
+          "maximum_RK_stage_power_dE0_dtau": -1.6004655161363974e-05,
+          "maximum_current_A": 0.013462991343572362,
+          "maximum_slew_A_s": 20.0,
+          "maximum_B_T": 1.8759616442023537e-05,
+          "maximum_G_T_per_m": 0.0001829184555643037,
+          "current_allocation_residual_A": 0.29575231198198687,
+          "generalized_force_allocation_residual": 0.32336906257307596,
+          "constraint_violation": 0.0,
+          "allocation": {
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "iterations": 2,
+            "physical_interval_s": 0.0002243344855208168,
+            "current_request_distance_A": 0.29575231198198687,
+            "generalized_force_allocation_residual": 0.32336906257307596,
+            "constraint_violation": 0.0,
+            "active_magnetic_points": 1,
+            "maximum_planned_slew_A_s": 20.0,
+            "requested_current_A": [
+              0.0023372730063007784,
+              0.0913587027186993,
+              0.11246458322507567,
+              0.044194304125749456,
+              0.06105967857904783,
+              0.1376029524428139,
+              0.1106240634238558,
+              0.11951129797581293,
+              -0.05927305201019726,
+              0.08167503906564208,
+              0.012390660689930711,
+              -0.08675009971501856
+            ],
+            "allocated_current_A": [
+              -0.009851274443627142,
+              0.013462991343572362,
+              0.008028951622251899,
+              -0.01345865552601714,
+              -0.013458116067776141,
+              0.006247024269339308,
+              0.009969380102078807,
+              -0.006907361770214292,
+              -0.013461965047432963,
+              0.004468716695165981,
+              0.013460465460665753,
+              0.013457294330349909
+            ],
+            "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only",
+            "power_upper_dE0_dtau": 5.809841624069764e-07,
+            "allocated_power_dE0_dtau": 5.809841624059182e-07,
+            "power_upper_W": 9.375119759365284e-13,
+            "power_constraint_scope": "decision state only; no between-sample envelope claimed"
+          },
+          "RK_stages": [
+            {
+              "tau": 0.0,
+              "power": -1.8351034558506018e-05,
+              "dissipation": 1.935665143146185e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": -1.7599189914942536e-05,
+              "dissipation": 2.081792058416063e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": -1.6897135949028345e-05,
+              "dissipation": 2.052157634933063e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": -1.6684237979731964e-05,
+              "dissipation": 2.1798367825135142e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": -1.66819735153524e-05,
+              "dissipation": 2.1812881452395844e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": -1.6856742458317994e-05,
+              "dissipation": 2.2933010982452877e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": -1.6004655161363974e-05,
+              "dissipation": 2.261397080604217e-06
+            },
+            {
+              "tau": 0.001,
+              "power": -1.6262510885567372e-05,
+              "dissipation": 2.353922699464517e-06
+            }
+          ]
+        }
+      ],
+      "final_state": [
+        0.009804119892114662,
+        0.006232071846863274,
+        -8.829036616764286e-05,
+        -0.002665603186040405,
+        -0.0023759015493189568,
+        -0.0020581053963521327,
+        -0.00039553662963449714,
+        0.00044149891631812524,
+        0.0010268732012620964,
+        0.00047702740097857287,
+        -5.6954262322547104e-05,
+        3.8855349241997883e-05,
+        0.0009869847454266455,
+        0.0032406731340882916,
+        0.0012243967263040846,
+        0.0002618011750105535,
+        -0.00038885697986506537,
+        -0.0006816725006191896,
+        -0.00010237020597274371,
+        1.0833452645004679e-05,
+        2.5110339798773173e-05,
+        -0.00041159832483795265,
+        -0.00026524592507023894,
+        4.7079305415212856e-05
+      ]
+    },
+    {
+      "name": "baseline_rk4sub4",
+      "completed_steps": 4,
+      "failure": null,
+      "elapsed_s": 13.774198141996749,
+      "records": [
+        {
+          "name": "baseline_rk4sub4",
+          "step": 1,
+          "tau": 0.001,
+          "time_s": 0.0002243344855208168,
+          "mechanical_energy_E0": 0.00031329306849450415,
+          "work_ledger_E0": 0.00031329423293931523,
+          "cumulative_dissipation_E0": 1.1487870532873074e-09,
+          "independent_energy_ledger_residual_E0": -1.565775779530401e-11,
+          "step_power_residual_E0": -1.5657757774472294e-11,
+          "decision_target_power_dE0_dtau": 0.00028618843026783676,
+          "decision_power_upper_dE0_dtau": 1.9999999999989644e-07,
+          "maximum_RK_stage_power_dE0_dtau": 0.00026448858790769275,
+          "maximum_current_A": 0.004486689710416336,
+          "maximum_slew_A_s": 20.0,
+          "maximum_B_T": 7.031491692147488e-06,
+          "maximum_G_T_per_m": 0.00012787566012056927,
+          "current_allocation_residual_A": 0.28633588668966026,
+          "generalized_force_allocation_residual": 0.3053568627796001,
+          "constraint_violation": 0.0,
+          "allocation": {
+            "success": true,
+            "message": "Box projection already satisfies all magnetic-point field constraints",
+            "iterations": 0,
+            "physical_interval_s": 0.0002243344855208168,
+            "current_request_distance_A": 0.28633588668966026,
+            "generalized_force_allocation_residual": 0.3053568627796001,
+            "constraint_violation": 0.0,
+            "active_magnetic_points": 1,
+            "maximum_planned_slew_A_s": 20.0,
+            "requested_current_A": [
+              0.0023372730063007784,
+              0.0913587027186993,
+              0.11246458322507567,
+              0.044194304125749456,
+              0.06105967857904783,
+              0.1376029524428139,
+              0.1106240634238558,
+              0.11951129797581293,
+              -0.05927305201019726,
+              0.08167503906564208,
+              0.012390660689930711,
+              -0.08675009971501856
+            ],
+            "allocated_current_A": [
+              0.0023372730063007784,
+              0.004486689710416336,
+              0.004486689710416336,
+              0.004486689710416336,
+              0.004486689710416336,
+              0.004486689710416336,
+              0.004486689710416336,
+              0.004486689710416336,
+              -0.004486689710416336,
+              0.004486689710416336,
+              0.004486689710416336,
+              -0.004486689710416336
+            ],
+            "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only"
+          },
+          "RK_stages": [
+            {
+              "tau": 0.0,
+              "power": -4.982671312223422e-19,
+              "dissipation": 1.30381097963882e-06
+            },
+            {
+              "tau": 0.000125,
+              "power": 3.535627815391648e-05,
+              "dissipation": 1.2498235711574178e-06
+            },
+            {
+              "tau": 0.000125,
+              "power": 3.5375825937742007e-05,
+              "dissipation": 1.24769855400057e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": 6.99562391113561e-05,
+              "dissipation": 1.2007830514987159e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": 6.995620449087354e-05,
+              "dissipation": 1.2007665904198754e-06
+            },
+            {
+              "tau": 0.000375,
+              "power": 0.00010379974922534118,
+              "dissipation": 1.1610320752440526e-06
+            },
+            {
+              "tau": 0.000375,
+              "power": 0.00010385847656057043,
+              "dissipation": 1.159268737147147e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 0.00013704351694366045,
+              "dissipation": 1.1273238310937402e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 0.00013704347924004318,
+              "dissipation": 1.1273063455174446e-06
+            },
+            {
+              "tau": 0.000625,
+              "power": 0.000169609025151521,
+              "dissipation": 1.1032455071996038e-06
+            },
+            {
+              "tau": 0.000625,
+              "power": 0.00016970693635121297,
+              "dissipation": 1.1018166979111642e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": 0.00020173128334575674,
+              "dissipation": 1.0861565891916698e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": 0.00020173127081248786,
+              "dissipation": 1.0861495770738814e-06
+            },
+            {
+              "tau": 0.000875,
+              "power": 0.00023325349128682779,
+              "dissipation": 1.0789674544456768e-06
+            },
+            {
+              "tau": 0.000875,
+              "power": 0.00023339047793393243,
+              "dissipation": 1.0777721267647521e-06
+            },
+            {
+              "tau": 0.001,
+              "power": 0.00026448858790769275,
+              "dissipation": 1.0793428667204632e-06
+            }
+          ]
+        },
+        {
+          "name": "baseline_rk4sub4",
+          "step": 2,
+          "tau": 0.002,
+          "time_s": 0.0004486689710416336,
+          "mechanical_energy_E0": 0.0003136768223087268,
+          "work_ledger_E0": 0.0003136791934485881,
+          "cumulative_dissipation_E0": 2.339823074208712e-09,
+          "independent_energy_ledger_residual_E0": -3.1316787125317644e-11,
+          "step_power_residual_E0": -1.565902932440204e-11,
+          "decision_target_power_dE0_dtau": 0.0005280022019581756,
+          "decision_power_upper_dE0_dtau": -2.5088759192121862e-06,
+          "maximum_RK_stage_power_dE0_dtau": 0.0005036991847456821,
+          "maximum_current_A": 0.008973379420832673,
+          "maximum_slew_A_s": 20.0,
+          "maximum_B_T": 1.4013112088298212e-05,
+          "maximum_G_T_per_m": 0.00025225840913819,
+          "current_allocation_residual_A": 0.2728091115012109,
+          "generalized_force_allocation_residual": 0.291382919116358,
+          "constraint_violation": 0.0,
+          "allocation": {
+            "success": true,
+            "message": "Box projection already satisfies all magnetic-point field constraints",
+            "iterations": 0,
+            "physical_interval_s": 0.0002243344855208168,
+            "current_request_distance_A": 0.2728091115012109,
+            "generalized_force_allocation_residual": 0.291382919116358,
+            "constraint_violation": 0.0,
+            "active_magnetic_points": 1,
+            "maximum_planned_slew_A_s": 20.0,
+            "requested_current_A": [
+              0.0023372730063007784,
+              0.0913587027186993,
+              0.11246458322507567,
+              0.044194304125749456,
+              0.06105967857904783,
+              0.1376029524428139,
+              0.1106240634238558,
+              0.11951129797581293,
+              -0.05927305201019726,
+              0.08167503906564208,
+              0.012390660689930711,
+              -0.08675009971501856
+            ],
+            "allocated_current_A": [
+              0.0023372730063007784,
+              0.008973379420832673,
+              0.008973379420832673,
+              0.008973379420832673,
+              0.008973379420832673,
+              0.008973379420832673,
+              0.008973379420832673,
+              0.008973379420832673,
+              -0.008973379420832673,
+              0.008973379420832673,
+              0.008973379420832673,
+              -0.008973379420832673
+            ],
+            "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only"
+          },
+          "RK_stages": [
+            {
+              "tau": 0.0,
+              "power": 0.0002644886236426915,
+              "dissipation": 1.0793591884248217e-06
+            },
+            {
+              "tau": 0.000125,
+              "power": 0.00029506954254848386,
+              "dissipation": 1.0897438703285012e-06
+            },
+            {
+              "tau": 0.000125,
+              "power": 0.00029524256182502425,
+              "dissipation": 1.088606188336286e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": 0.00032549144586078294,
+              "dissipation": 1.10769517808768e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": 0.0003254915483611336,
+              "dissipation": 1.1077463954891616e-06
+            },
+            {
+              "tau": 0.000375,
+              "power": 0.00035544662304701094,
+              "dissipation": 1.1355890918785128e-06
+            },
+            {
+              "tau": 0.000375,
+              "power": 0.00035565717759434814,
+              "dissipation": 1.134275840071772e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 0.0003853932937271158,
+              "dissipation": 1.1702760277405895e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 0.0003853934718499966,
+              "dissipation": 1.1703698658302942e-06
+            },
+            {
+              "tau": 0.000625,
+              "power": 0.00041494898644089755,
+              "dissipation": 1.2145728354793838e-06
+            },
+            {
+              "tau": 0.000625,
+              "power": 0.0004151967755862352,
+              "dissipation": 1.212820699833483e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": 0.0004446459254195944,
+              "dissipation": 1.2641030348309453e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": 0.00044464617957270755,
+              "dissipation": 1.264241462748843e-06
+            },
+            {
+              "tau": 0.000875,
+              "power": 0.0004740274410936472,
+              "dissipation": 1.3226533914534399e-06
+            },
+            {
+              "tau": 0.000875,
+              "power": 0.0004743121665491812,
+              "dissipation": 1.3202071690311987e-06
+            },
+            {
+              "tau": 0.001,
+              "power": 0.0005036991847456821,
+              "dissipation": 1.3841351761362185e-06
+            }
+          ]
+        },
+        {
+          "name": "baseline_rk4sub4",
+          "step": 3,
+          "tau": 0.003,
+          "time_s": 0.0006730034565624504,
+          "mechanical_energy_E0": 0.00031429968375654957,
+          "work_ledger_E0": 0.00031430374730395135,
+          "cumulative_dissipation_E0": 4.0165750494550616e-09,
+          "independent_energy_ledger_residual_E0": -4.697235232368829e-11,
+          "step_power_residual_E0": -1.5655565213405896e-11,
+          "decision_target_power_dE0_dtau": 0.0007555610813691465,
+          "decision_power_upper_dE0_dtau": -1.02080861046701e-05,
+          "maximum_RK_stage_power_dE0_dtau": 0.0007488304665623553,
+          "maximum_current_A": 0.01346006913124901,
+          "maximum_slew_A_s": 20.000000000000004,
+          "maximum_B_T": 2.104041034239437e-05,
+          "maximum_G_T_per_m": 0.00037764966878372336,
+          "current_allocation_residual_A": 0.25942842453296855,
+          "generalized_force_allocation_residual": 0.27730279833695154,
+          "constraint_violation": 0.0,
+          "allocation": {
+            "success": true,
+            "message": "Box projection already satisfies all magnetic-point field constraints",
+            "iterations": 0,
+            "physical_interval_s": 0.0002243344855208168,
+            "current_request_distance_A": 0.25942842453296855,
+            "generalized_force_allocation_residual": 0.27730279833695154,
+            "constraint_violation": 0.0,
+            "active_magnetic_points": 1,
+            "maximum_planned_slew_A_s": 20.000000000000004,
+            "requested_current_A": [
+              0.0023372730063007784,
+              0.0913587027186993,
+              0.11246458322507567,
+              0.044194304125749456,
+              0.06105967857904783,
+              0.1376029524428139,
+              0.1106240634238558,
+              0.11951129797581293,
+              -0.05927305201019726,
+              0.08167503906564208,
+              0.012390660689930711,
+              -0.08675009971501856
+            ],
+            "allocated_current_A": [
+              0.0023372730063007784,
+              0.01346006913124901,
+              0.01346006913124901,
+              0.01346006913124901,
+              0.01346006913124901,
+              0.01346006913124901,
+              0.01346006913124901,
+              0.01346006913124901,
+              -0.01346006913124901,
+              0.01346006913124901,
+              0.012390660689930711,
+              -0.01346006913124901
+            ],
+            "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only"
+          },
+          "RK_stages": [
+            {
+              "tau": 0.0,
+              "power": 0.0005036995064355518,
+              "dissipation": 1.3843134911820055e-06
+            },
+            {
+              "tau": 0.000125,
+              "power": 0.0005332538623979032,
+              "dissipation": 1.4538217411260315e-06
+            },
+            {
+              "tau": 0.000125,
+              "power": 0.0005335777604119386,
+              "dissipation": 1.4504745203127411e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": 0.0005632827773787161,
+              "dissipation": 1.523574473846106e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": 0.0005632831470192334,
+              "dissipation": 1.5237815880332029e-06
+            },
+            {
+              "tau": 0.000375,
+              "power": 0.0005931780204283142,
+              "dissipation": 1.6005588007960933e-06
+            },
+            {
+              "tau": 0.000375,
+              "power": 0.0005935389979863602,
+              "dissipation": 1.5961845369997958e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 0.0006236977208512227,
+              "dissipation": 1.6744516257414177e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 0.0006236981160371237,
+              "dissipation": 1.6746715289360234e-06
+            },
+            {
+              "tau": 0.000625,
+              "power": 0.0006541598597672684,
+              "dissipation": 1.7545395198312207e-06
+            },
+            {
+              "tau": 0.000625,
+              "power": 0.000654557810242024,
+              "dissipation": 1.7491171558659525e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": 0.0006853963952381842,
+              "dissipation": 1.8284148247937945e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": 0.000685396788538032,
+              "dissipation": 1.8286289796722222e-06
+            },
+            {
+              "tau": 0.000875,
+              "power": 0.000716651291382403,
+              "dissipation": 1.907493147619956e-06
+            },
+            {
+              "tau": 0.000875,
+              "power": 0.0007170862027124439,
+              "dissipation": 1.9011126775891987e-06
+            },
+            {
+              "tau": 0.001,
+              "power": 0.0007488304665623553,
+              "dissipation": 1.977606693425628e-06
+            }
+          ]
+        },
+        {
+          "name": "baseline_rk4sub4",
+          "step": 4,
+          "tau": 0.004,
+          "time_s": 0.0008973379420832672,
+          "mechanical_energy_E0": 0.0003151865313485438,
+          "work_ledger_E0": 0.00031519283626706325,
+          "cumulative_dissipation_E0": 6.242292606612346e-09,
+          "independent_energy_ledger_residual_E0": -6.262591284384033e-11,
+          "step_power_residual_E0": -1.5653560546303764e-11,
+          "decision_target_power_dE0_dtau": 0.0010048130314599234,
+          "decision_power_upper_dE0_dtau": -2.2699163211934575e-05,
+          "maximum_RK_stage_power_dE0_dtau": 0.0010390029137417435,
+          "maximum_current_A": 0.017946758841665345,
+          "maximum_slew_A_s": 19.999999999999996,
+          "maximum_B_T": 2.8204491999240132e-05,
+          "maximum_G_T_per_m": 0.0005059669286548085,
+          "current_allocation_residual_A": 0.24616191642018764,
+          "generalized_force_allocation_residual": 0.262856529175579,
+          "constraint_violation": 0.0,
+          "allocation": {
+            "success": true,
+            "message": "Box projection already satisfies all magnetic-point field constraints",
+            "iterations": 0,
+            "physical_interval_s": 0.0002243344855208168,
+            "current_request_distance_A": 0.24616191642018764,
+            "generalized_force_allocation_residual": 0.262856529175579,
+            "constraint_violation": 0.0,
+            "active_magnetic_points": 1,
+            "maximum_planned_slew_A_s": 19.999999999999996,
+            "requested_current_A": [
+              0.0023372730063007784,
+              0.0913587027186993,
+              0.11246458322507567,
+              0.044194304125749456,
+              0.06105967857904783,
+              0.1376029524428139,
+              0.1106240634238558,
+              0.11951129797581293,
+              -0.05927305201019726,
+              0.08167503906564208,
+              0.012390660689930711,
+              -0.08675009971501856
+            ],
+            "allocated_current_A": [
+              0.0023372730063007784,
+              0.017946758841665345,
+              0.017946758841665345,
+              0.017946758841665345,
+              0.017946758841665345,
+              0.017946758841665345,
+              0.017946758841665345,
+              0.017946758841665345,
+              -0.017946758841665345,
+              0.017946758841665345,
+              0.012390660689930711,
+              -0.017946758841665345
+            ],
+            "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only"
+          },
+          "RK_stages": [
+            {
+              "tau": 0.0,
+              "power": 0.0007488308280602729,
+              "dissipation": 1.977796938471733e-06
+            },
+            {
+              "tau": 0.000125,
+              "power": 0.0007819040695068002,
+              "dissipation": 2.052079701779598e-06
+            },
+            {
+              "tau": 0.000125,
+              "power": 0.000782388391435227,
+              "dissipation": 2.044935148186532e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": 0.0008161846633496486,
+              "dissipation": 2.115496782017108e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": 0.0008161849635280386,
+              "dissipation": 2.1156482237430535e-06
+            },
+            {
+              "tau": 0.000375,
+              "power": 0.000850745652774777,
+              "dissipation": 2.1826630895602294e-06
+            },
+            {
+              "tau": 0.000375,
+              "power": 0.0008512699130273136,
+              "dissipation": 2.1750141039326014e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 0.0008866748777440178,
+              "dissipation": 2.2375182853453865e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 0.0008866750993970991,
+              "dissipation": 2.23762165708513e-06
+            },
+            {
+              "tau": 0.000625,
+              "power": 0.000922965438409158,
+              "dissipation": 2.2957950554460705e-06
+            },
+            {
+              "tau": 0.000625,
+              "power": 0.0009235298432984955,
+              "dissipation": 2.2879395203867285e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": 0.0009607858511104739,
+              "dissipation": 2.3414147480782365e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": 0.0009607859801935799,
+              "dissipation": 2.3414678137376246e-06
+            },
+            {
+              "tau": 0.000875,
+              "power": 0.0009990484371290747,
+              "dissipation": 2.390420289905401e-06
+            },
+            {
+              "tau": 0.000875,
+              "power": 0.0009996532231998226,
+              "dissipation": 2.3826476734151837e-06
+            },
+            {
+              "tau": 0.001,
+              "power": 0.0010390029137417435,
+              "dissipation": 2.4272677580718654e-06
+            }
+          ]
+        }
+      ],
+      "final_state": [
+        0.009804115252272337,
+        0.006232109617548202,
+        -8.834780129654106e-05,
+        -0.0026659609197979273,
+        -0.002376159090561993,
+        -0.002059230256237483,
+        -0.0004057538224379311,
+        0.0004387536361739247,
+        0.0010268605243648698,
+        0.00047705296156199127,
+        -5.6981860597374195e-05,
+        3.8921895249783135e-05,
+        0.0009854582098306028,
+        0.0032693980835116487,
+        0.0012123658668803808,
+        0.00021847896585078168,
+        -0.0004043781476143037,
+        -0.0007290765442489218,
+        -0.00019827258635687358,
+        -2.43830296559804e-05,
+        2.5481894754976767e-05,
+        -0.0004114006879811309,
+        -0.0002652185162288236,
+        4.687351462582679e-05
+      ]
+    },
+    {
+      "name": "governed_rk4sub4",
+      "completed_steps": 4,
+      "failure": null,
+      "elapsed_s": 13.368911375000607,
+      "records": [
+        {
+          "name": "governed_rk4sub4",
+          "step": 1,
+          "tau": 0.001,
+          "time_s": 0.0002243344855208168,
+          "mechanical_energy_E0": 0.0003131577204411546,
+          "work_ledger_E0": 0.000313158883101553,
+          "cumulative_dissipation_E0": 1.1470054057919792e-09,
+          "independent_energy_ledger_residual_E0": -1.5654992612249962e-11,
+          "step_power_residual_E0": -1.5654992596519882e-11,
+          "decision_target_power_dE0_dtau": 2.000000000026513e-07,
+          "decision_power_upper_dE0_dtau": 1.9999999999989644e-07,
+          "maximum_RK_stage_power_dE0_dtau": 1.817787005321832e-07,
+          "maximum_current_A": 4.401387403690955e-06,
+          "maximum_slew_A_s": 0.01961975392892741,
+          "maximum_B_T": 4.833997485550658e-09,
+          "maximum_G_T_per_m": 1.0058080199182791e-07,
+          "current_allocation_residual_A": 0.2999904041577766,
+          "generalized_force_allocation_residual": 0.3194449773878529,
+          "constraint_violation": 6.608821544020963e-17,
+          "allocation": {
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "iterations": 2,
+            "physical_interval_s": 0.0002243344855208168,
+            "current_request_distance_A": 0.2999904041577766,
+            "generalized_force_allocation_residual": 0.3194449773878529,
+            "constraint_violation": 6.608821544020963e-17,
+            "active_magnetic_points": 1,
+            "maximum_planned_slew_A_s": 0.019619753928927414,
+            "requested_current_A": [
+              0.0023372730063007784,
+              0.0913587027186993,
+              0.11246458322507567,
+              0.044194304125749456,
+              0.06105967857904783,
+              0.1376029524428139,
+              0.1106240634238558,
+              0.11951129797581293,
+              -0.05927305201019726,
+              0.08167503906564208,
+              0.012390660689930711,
+              -0.08675009971501856
+            ],
+            "allocated_current_A": [
+              7.476034333785131e-08,
+              2.9222123234086753e-06,
+              3.5973079878072814e-06,
+              1.4136052318676831e-06,
+              1.953063472834478e-06,
+              4.401387403690955e-06,
+              3.5384368624021348e-06,
+              3.8227051976065865e-06,
+              -1.895916183961184e-06,
+              2.6124692948771913e-06,
+              3.9632941674621475e-07,
+              -2.7748008990776188e-06
+            ],
+            "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only",
+            "power_upper_dE0_dtau": 1.9999999999989644e-07,
+            "allocated_power_dE0_dtau": 2.000000000026513e-07,
+            "power_upper_W": 3.2273236917577823e-13,
+            "power_constraint_scope": "decision state only; no between-sample envelope claimed"
+          },
+          "RK_stages": [
+            {
+              "tau": 0.0,
+              "power": -4.982671312223422e-19,
+              "dissipation": 1.30381097963882e-06
+            },
+            {
+              "tau": 0.000125,
+              "power": 2.472131705490392e-08,
+              "dissipation": 1.2498235711574178e-06
+            },
+            {
+              "tau": 0.000125,
+              "power": 2.4719799230217716e-08,
+              "dissipation": 1.247521853024584e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": 4.8879224425451404e-08,
+              "dissipation": 1.2004337349131758e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": 4.8879203614153645e-08,
+              "dissipation": 1.2004172805155354e-06
+            },
+            {
+              "tau": 0.000375,
+              "power": 7.247364167006123e-08,
+              "dissipation": 1.1603414579952178e-06
+            },
+            {
+              "tau": 0.000375,
+              "power": 7.246915225863734e-08,
+              "dissipation": 1.158405263473655e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 9.549267959799403e-08,
+              "dissipation": 1.1259579702639292e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": 9.549265076761238e-08,
+              "dissipation": 1.125940477225777e-06
+            },
+            {
+              "tau": 0.000625,
+              "power": 1.1794217607507577e-07,
+              "dissipation": 1.1012197067769978e-06
+            },
+            {
+              "tau": 0.000625,
+              "power": 1.1793475961112469e-07,
+              "dissipation": 1.0996215788274607e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": 1.3980441863734322e-07,
+              "dissipation": 1.0831509956539762e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": 1.3980439248641943e-07,
+              "dissipation": 1.0831439616641083e-06
+            },
+            {
+              "tau": 0.000875,
+              "power": 1.6109111850656742e-07,
+              "dissipation": 1.0750039680120807e-06
+            },
+            {
+              "tau": 0.000875,
+              "power": 1.610807808414965e-07,
+              "dissipation": 1.0736425560199501e-06
+            },
+            {
+              "tau": 0.001,
+              "power": 1.817787005321832e-07,
+              "dissipation": 1.074114428557449e-06
+            }
+          ]
+        },
+        {
+          "name": "governed_rk4sub4",
+          "step": 2,
+          "tau": 0.002,
+          "time_s": 0.0004486689710416336,
+          "mechanical_energy_E0": 0.0003131519930247211,
+          "work_ledger_E0": 0.00031315435070497537,
+          "cumulative_dissipation_E0": 2.326366737363873e-09,
+          "independent_energy_ledger_residual_E0": -3.131351689760776e-11,
+          "step_power_residual_E0": -1.565852430230983e-11,
+          "decision_target_power_dE0_dtau": 1.9812083603072606e-07,
+          "decision_power_upper_dE0_dtau": 1.9812083603245115e-07,
+          "maximum_RK_stage_power_dE0_dtau": 1.8177868450702076e-07,
+          "maximum_current_A": 0.004489611922739745,
+          "maximum_slew_A_s": 20.0,
+          "maximum_B_T": 6.6031126267788495e-06,
+          "maximum_G_T_per_m": 6.58955662048433e-05,
+          "current_allocation_residual_A": 0.29946299288506695,
+          "generalized_force_allocation_residual": 0.3219268013424765,
+          "constraint_violation": 0.0,
+          "allocation": {
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "iterations": 2,
+            "physical_interval_s": 0.0002243344855208168,
+            "current_request_distance_A": 0.29946299288506695,
+            "generalized_force_allocation_residual": 0.3219268013424765,
+            "constraint_violation": 0.0,
+            "active_magnetic_points": 1,
+            "maximum_planned_slew_A_s": 20.0,
+            "requested_current_A": [
+              0.0023372730063007784,
+              0.0913587027186993,
+              0.11246458322507567,
+              0.044194304125749456,
+              0.06105967857904783,
+              0.1376029524428139,
+              0.1106240634238558,
+              0.11951129797581293,
+              -0.05927305201019726,
+              0.08167503906564208,
+              0.012390660689930711,
+              -0.08675009971501856
+            ],
+            "allocated_current_A": [
+              -0.0037415882263762256,
+              0.004489611922739745,
+              0.002524025397866206,
+              -0.004485276105184411,
+              -0.004484736646943502,
+              0.0016219415844191624,
+              0.0021284589467526153,
+              -0.0032294422391463597,
+              -0.004488585626600284,
+              0.0002666612608385969,
+              0.004487086039833051,
+              0.004483914909517259
+            ],
+            "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only",
+            "power_upper_dE0_dtau": 1.9812083603245115e-07,
+            "allocated_power_dE0_dtau": 1.9812083603072606e-07,
+            "power_upper_W": 3.197000339793598e-13,
+            "power_constraint_scope": "decision state only; no between-sample envelope claimed"
+          },
+          "RK_stages": [
+            {
+              "tau": 0.0,
+              "power": 1.8177868450702076e-07,
+              "dissipation": 1.0741307132657233e-06
+            },
+            {
+              "tau": 0.000125,
+              "power": -7.565830959666889e-08,
+              "dissipation": 1.0832782878709857e-06
+            },
+            {
+              "tau": 0.000125,
+              "power": -6.352542911788023e-08,
+              "dissipation": 1.0819767629815163e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": -7.989292932601081e-07,
+              "dissipation": 1.0996931175119217e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": -7.988835117679803e-07,
+              "dissipation": 1.0997442813580015e-06
+            },
+            {
+              "tau": 0.000375,
+              "power": -1.98786633142171e-06,
+              "dissipation": 1.1260789027429428e-06
+            },
+            {
+              "tau": 0.000375,
+              "power": -1.951661967970939e-06,
+              "dissipation": 1.1246022395617077e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": -3.546345836774345e-06,
+              "dissipation": 1.1589597644645766e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": -3.546226047696766e-06,
+              "dissipation": 1.1590535345708975e-06
+            },
+            {
+              "tau": 0.000625,
+              "power": -5.522198370025344e-06,
+              "dissipation": 1.2014792028920409e-06
+            },
+            {
+              "tau": 0.000625,
+              "power": -5.462346731421011e-06,
+              "dissipation": 1.1995640328403694e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": -7.772615824658652e-06,
+              "dissipation": 1.2489351616610656e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": -7.77240822460538e-06,
+              "dissipation": 1.2490735094079848e-06
+            },
+            {
+              "tau": 0.000875,
+              "power": -1.0392522186702141e-05,
+              "dissipation": 1.3054401353124294e-06
+            },
+            {
+              "tau": 0.000875,
+              "power": -1.0309479675062587e-05,
+              "dissipation": 1.302831185460066e-06
+            },
+            {
+              "tau": 0.001,
+              "power": -1.3193369805693321e-05,
+              "dissipation": 1.3645803761611726e-06
+            }
+          ]
+        },
+        {
+          "name": "governed_rk4sub4",
+          "step": 3,
+          "tau": 0.003,
+          "time_s": 0.0006730034565624504,
+          "mechanical_energy_E0": 0.00031313572043300305,
+          "work_ledger_E0": 0.00031313974037971027,
+          "cumulative_dissipation_E0": 3.9729780561662e-09,
+          "independent_energy_ledger_residual_E0": -4.69686510516984e-11,
+          "step_power_residual_E0": -1.565513417089564e-11,
+          "decision_target_power_dE0_dtau": 2.887687675854088e-07,
+          "decision_power_upper_dE0_dtau": 2.8876876758494527e-07,
+          "maximum_RK_stage_power_dE0_dtau": -1.2916481467797415e-05,
+          "maximum_current_A": 0.008976301633156013,
+          "maximum_slew_A_s": 20.000000000000004,
+          "maximum_B_T": 1.2978243789567825e-05,
+          "maximum_G_T_per_m": 0.0001280825831640853,
+          "current_allocation_residual_A": 0.2978888527122841,
+          "generalized_force_allocation_residual": 0.32307873934278086,
+          "constraint_violation": 1.360798062546563e-17,
+          "allocation": {
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "iterations": 2,
+            "physical_interval_s": 0.0002243344855208168,
+            "current_request_distance_A": 0.2978888527122841,
+            "generalized_force_allocation_residual": 0.32307873934278086,
+            "constraint_violation": 1.360798062546563e-17,
+            "active_magnetic_points": 1,
+            "maximum_planned_slew_A_s": 20.000000000000004,
+            "requested_current_A": [
+              0.0023372730063007784,
+              0.0913587027186993,
+              0.11246458322507567,
+              0.044194304125749456,
+              0.06105967857904783,
+              0.1376029524428139,
+              0.1106240634238558,
+              0.11951129797581293,
+              -0.05927305201019726,
+              0.08167503906564208,
+              0.012390660689930711,
+              -0.08675009971501856
+            ],
+            "allocated_current_A": [
+              -0.007304960272496421,
+              0.008976301633156013,
+              0.0055358132718909886,
+              -0.008971965815600749,
+              -0.008971426357359789,
+              0.003969442826285286,
+              0.005482656408293463,
+              -0.005662319685673303,
+              -0.008975275337016607,
+              0.0016243892382693864,
+              0.008973775750249385,
+              0.008970604619933594
+            ],
+            "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only",
+            "power_upper_dE0_dtau": 2.8876876758494527e-07,
+            "allocated_power_dE0_dtau": 2.887687675854088e-07,
+            "power_upper_W": 4.659751425335365e-13,
+            "power_constraint_scope": "decision state only; no between-sample envelope claimed"
+          },
+          "RK_stages": [
+            {
+              "tau": 0.0,
+              "power": -1.3193076403654593e-05,
+              "dissipation": 1.3647586014764953e-06
+            },
+            {
+              "tau": 0.000125,
+              "power": -1.30165150008208e-05,
+              "dissipation": 1.4319541873892887e-06
+            },
+            {
+              "tau": 0.000125,
+              "power": -1.2916481467797415e-05,
+              "dissipation": 1.4284603393742333e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": -1.3051709528820532e-05,
+              "dissipation": 1.499129353782781e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": -1.3051349205368512e-05,
+              "dissipation": 1.499336370138241e-06
+            },
+            {
+              "tau": 0.000375,
+              "power": -1.347613206888654e-05,
+              "dissipation": 1.5735631654455937e-06
+            },
+            {
+              "tau": 0.000375,
+              "power": -1.335586993816168e-05,
+              "dissipation": 1.569041660669222e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": -1.4029991146318231e-05,
+              "dissipation": 1.6446375676442786e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": -1.402959935063552e-05,
+              "dissipation": 1.6448573693061469e-06
+            },
+            {
+              "tau": 0.000625,
+              "power": -1.493092429859164e-05,
+              "dissipation": 1.721932040534894e-06
+            },
+            {
+              "tau": 0.000625,
+              "power": -1.4790597572435307e-05,
+              "dissipation": 1.716361675993878e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": -1.5879163960087476e-05,
+              "dissipation": 1.7927423065965182e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": -1.5878788391634582e-05,
+              "dissipation": 1.7929563565647108e-06
+            },
+            {
+              "tau": 0.000875,
+              "power": -1.7132662956391537e-05,
+              "dissipation": 1.8687782247363393e-06
+            },
+            {
+              "tau": 0.000875,
+              "power": -1.6972235454050445e-05,
+              "dissipation": 1.8622488501434782e-06
+            },
+            {
+              "tau": 0.001,
+              "power": -1.835129086126848e-05,
+              "dissipation": 1.9355734371728322e-06
+            }
+          ]
+        },
+        {
+          "name": "governed_rk4sub4",
+          "step": 4,
+          "tau": 0.004,
+          "time_s": 0.0008973379420832672,
+          "mechanical_energy_E0": 0.000313116644408743,
+          "work_ledger_E0": 0.0003131228490763367,
+          "cumulative_dissipation_E0": 6.142046108321314e-09,
+          "independent_energy_ledger_residual_E0": -6.26214853557454e-11,
+          "step_power_residual_E0": -1.5652834319869308e-11,
+          "decision_target_power_dE0_dtau": 5.809752728849363e-07,
+          "decision_power_upper_dE0_dtau": 5.809752728869969e-07,
+          "maximum_RK_stage_power_dE0_dtau": -1.623950464400804e-05,
+          "maximum_current_A": 0.013462991343572348,
+          "maximum_slew_A_s": 19.999999999999996,
+          "maximum_B_T": 1.8759586106894115e-05,
+          "maximum_G_T_per_m": 0.00018291748551370506,
+          "current_allocation_residual_A": 0.29575235927161914,
+          "generalized_force_allocation_residual": 0.3233691103395424,
+          "constraint_violation": 0.0,
+          "allocation": {
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "iterations": 2,
+            "physical_interval_s": 0.0002243344855208168,
+            "current_request_distance_A": 0.29575235927161914,
+            "generalized_force_allocation_residual": 0.3233691103395424,
+            "constraint_violation": 0.0,
+            "active_magnetic_points": 1,
+            "maximum_planned_slew_A_s": 19.999999999999996,
+            "requested_current_A": [
+              0.0023372730063007784,
+              0.0913587027186993,
+              0.11246458322507567,
+              0.044194304125749456,
+              0.06105967857904783,
+              0.1376029524428139,
+              0.1106240634238558,
+              0.11951129797581293,
+              -0.05927305201019726,
+              0.08167503906564208,
+              0.012390660689930711,
+              -0.08675009971501856
+            ],
+            "allocated_current_A": [
+              -0.009851195098363552,
+              0.013462991343572348,
+              0.008028878522186231,
+              -0.013458655526017084,
+              -0.01345811606777609,
+              0.0062469635070018965,
+              0.009969346118709744,
+              -0.006907327601561802,
+              -0.013461965047432908,
+              0.004468713634029221,
+              0.013460465460665715,
+              0.01345729433034993
+            ],
+            "field_constraints_scope": "Decision-state magnet quadrature points; convex along each ramp at these fixed points only",
+            "power_upper_dE0_dtau": 5.809752728869969e-07,
+            "allocated_power_dE0_dtau": 5.809752728849363e-07,
+            "power_upper_W": 9.374976312573094e-13,
+            "power_constraint_scope": "decision state only; no between-sample envelope claimed"
+          },
+          "RK_stages": [
+            {
+              "tau": 0.0,
+              "power": -1.835098873070017e-05,
+              "dissipation": 1.9357635727244636e-06
+            },
+            {
+              "tau": 0.000125,
+              "power": -1.7802005087028976e-05,
+              "dissipation": 2.0067480677116845e-06
+            },
+            {
+              "tau": 0.000125,
+              "power": -1.7635601524747858e-05,
+              "dissipation": 1.9994597210613036e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": -1.7248474034933117e-05,
+              "dissipation": 2.066597317332189e-06
+            },
+            {
+              "tau": 0.00025,
+              "power": -1.724831181487223e-05,
+              "dissipation": 2.066748641552499e-06
+            },
+            {
+              "tau": 0.000375,
+              "power": -1.7004429197351354e-05,
+              "dissipation": 2.130210842694165e-06
+            },
+            {
+              "tau": 0.000375,
+              "power": -1.6819694072265274e-05,
+              "dissipation": 2.1224159161526272e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": -1.668221895074015e-05,
+              "dissipation": 2.1812344537295007e-06
+            },
+            {
+              "tau": 0.0005,
+              "power": -1.6682261533346223e-05,
+              "dissipation": 2.1813376981146386e-06
+            },
+            {
+              "tau": 0.000625,
+              "power": -1.66331363471439e-05,
+              "dissipation": 2.235689398730806e-06
+            },
+            {
+              "tau": 0.000625,
+              "power": -1.6429289390520636e-05,
+              "dissipation": 2.227685625712212e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": -1.6430004110612733e-05,
+              "dissipation": 2.277198466297634e-06
+            },
+            {
+              "tau": 0.00075,
+              "power": -1.643030843654865e-05,
+              "dissipation": 2.2772513898375084e-06
+            },
+            {
+              "tau": 0.000875,
+              "power": -1.6463452776652808e-05,
+              "dissipation": 2.322097499618711e-06
+            },
+            {
+              "tau": 0.000875,
+              "power": -1.623950464400804e-05,
+              "dissipation": 2.314174229092881e-06
+            },
+            {
+              "tau": 0.001,
+              "power": -1.6264487274587405e-05,
+              "dissipation": 2.354539110585513e-06
+            }
+          ]
+        }
+      ],
+      "final_state": [
+        0.00980411979379135,
+        0.006232072202329942,
+        -8.829037705413127e-05,
+        -0.002665603125049003,
+        -0.0023759014587383487,
+        -0.0020581054849097727,
+        -0.00039553668713370013,
+        0.00044149899604533494,
+        0.001026873201613454,
+        0.0004770266749927524,
+        -5.6964107783835024e-05,
+        3.8925479296020195e-05,
+        0.0009869846515652087,
+        0.003240673137529182,
+        0.0012243965101459801,
+        0.0002618012624653292,
+        -0.0003888568651250186,
+        -0.0006816725025810165,
+        -0.0001023701717231201,
+        1.0833485132405777e-05,
+        2.511033100656124e-05,
+        -0.0004115993365652275,
+        -0.00026524584890567535,
+        4.706515945131289e-05
+      ]
+    }
+  ],
+  "baseline_time_refinement": {
+    "endpoint_difference_1_vs_2": 1.1481523339707117e-06,
+    "endpoint_difference_2_vs_4": 7.223145486266622e-08,
+    "note": "fixed control decision interval; trajectory plus independently recomputed allocation; finite differences do not certify asymptotic order"
+  },
+  "governed_time_refinement": {
+    "endpoint_difference_1_vs_2": 1.1481196756240966e-06,
+    "endpoint_difference_2_vs_4": 7.222926394619989e-08,
+    "note": "fixed control decision interval; trajectory plus independently recomputed allocation; finite differences do not certify asymptotic order"
+  },
+  "limitations": [
+    "Only 0.897 ms local experiment; no long-time tracking/clearance certification.",
+    "Power constraint is imposed at decision state; RK-stage powers are observations, not interval envelopes.",
+    "Slew-restricted feasible sets need not include zero; infeasible governor is explicitly tested and rejected.",
+    "Moving-point fields sampled at step endpoints; no continuous workspace field bound.",
+    "Smooth proportional drag only; unknown blood-flow work, contact, wall motion and microgravity physiology are not activated.",
+    "A power governor changes the requested Hamiltonian dynamics and does not imply symplecticity or KAM."
+  ]
+}

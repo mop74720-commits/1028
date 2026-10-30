@@ -1,0 +1,218 @@
+--- stage3/source_inputs/v10/v10_framework_20261028/chinese/sections/supp_general_birkhoff.tex
++++ fusion_archive::chinese/sections/supp_general_birkhoff.tex
+@@ -0,0 +1,215 @@
++\subsection{局部输运、相容性与规范选择}
++\label{ss:general-transport}
++
++补充材料~\ref{ss:birkhoff} 中的局部构造适用于偶数维正则相坐标域。假设 $f$ 在一个开时空邻域上光滑。限制初始坐标球与时间区间，使二参数流 $\Phi_{t,t_0}$ 及其逆映射均在其中有定义。这是针对正则常微分方程的局部假设，并不表示带约束的微分代数系统或非光滑接触律已被约化为这一形式。选择 $\mathcal R_0=(p,0)$，其外微分的矩阵为 $\mathcal K_0=-J$。
++
++令 $S(t,z_0)=D_{z_0}\Phi_{t,t_0}(z_0)$。一形式输运方程 \eqref{struct:transport} 的特征线解为
++\begin{equation}\label{ss:general-characteristics}
++\begin{aligned}
++ \mathcal R(\Phi_{t,t_0}(z_0),t)&=S(t,z_0)^{-\mathsf T}\mathcal R_0(z_0),\\
++ \mathcal K(\Phi_{t,t_0}(z_0),t)
++     &=S(t,z_0)^{-\mathsf T}\mathcal K_0S(t,z_0)^{-1}.
++\end{aligned}
++\end{equation}
++对于第一个恒等式，沿轨迹求导并使用 $\dot S=(D_zf)S$，得到 $\dot{\mathcal R}=-(D_zf)^{\mathsf T}\mathcal R$，恰为输运偏微分方程沿特征线的形式。第二个恒等式由对逆流拉回取外微分得到；外微分与拉回可交换。因此，$\mathcal K$ 反对称、闭合且非退化：
++\[
++ \det\mathcal K=\det\mathcal K_0/(\det S)^2\ne0.
++\]
++坐标分量中的消去式 \eqref{struct:transport-substitution} 证明了取 $\mathcal B=\mathcal R^{\mathsf T}f$ 时的 Birkhoff 方程，无须另行对这一标量施加可积性假设。
++
++沿相流对 $S^{\mathsf T}\mathcal KS=\mathcal K_0$ 求导，得到
++\begin{equation}\label{ss:general-K-transport}
++ \partial_t\mathcal K+(f\cdot\nabla)\mathcal K
++ +(D_zf)^{\mathsf T}\mathcal K+\mathcal KD_zf=0.
++\end{equation}
++将此恒等式与空间闭性结合，可得
++$\partial_t\mathcal K_{ij}=\partial_i b_j-\partial_j b_i$，其中 $b=\mathcal Kf$。这些恰为相容恒等式 \eqref{ss:birkhoff-compatibility}。它们连同反对称性构成 $\mathcal K\dot z-b$ 具有变分自伴性的坐标 Helmholtz 条件。这里已在光滑局部情形下直接建立这些条件。解析表述见 \citet[第~15~章，定理~2.2]{fengqin} 和 \citet[命题~2.1]{suqin2003}；\citet{guo2010} 讨论了约束系统的相关局部解析构造。本文不借助这些文献中更宽泛的术语推断全局、非退化或非光滑结论。
++
++变分含义也可直接核验。对于作用泛函 $\mathcal A_{\rm B}[z]=\int L_{\rm B}(z,\dot z,t)\dd t$，取 $L_{\rm B}=\mathcal R^{\mathsf T}\dot z-\mathcal B$，其 Euler 表达式为
++\begin{equation}\label{ss:general-variational}
++\begin{aligned}
++ \frac{\partial L_{\rm B}}{\partial z_i}
++ -\frac{\dd}{\dd t}\frac{\partial L_{\rm B}}{\partial\dot z_i}
++ &=(\partial_i\mathcal R_j-\partial_j\mathcal R_i)\dot z_j\\
++ &\quad-\partial_i\mathcal B-\partial_t\mathcal R_i\\
++ &=\mathcal K_{ij}\dot z_j-b_i.
++\end{aligned}
++\end{equation}
++对于在两个时间端点均为零的光滑变分，该标量作用泛函的二次变分对称，故其线性化 Euler 算子形式自伴。这一结论针对乘子方程 $\mathcal K\dot z-b=0$，并不要求物理 Jacobian $D_zf$ 为对称矩阵。
++
++一形式与标量并不唯一。在 $z,t$ 的一个共同局部乘积邻域上，固定 $z$ 进行积分，定义
++\begin{equation}\label{ss:general-gauge}
++\begin{aligned}
++ \sigma(z,t)&=\int_{t_0}^{t}[\mathcal B(z,s)-H(z,s)]\dd s,\\
++ \widetilde{\mathcal R}&=\mathcal R+\nabla_z\sigma,\qquad
++ \widetilde{\mathcal B}=\mathcal B-\partial_t\sigma=H.
++\end{aligned}
++\end{equation}
++新增梯度的外微分为零，其时间导数抵消标量梯度的变化。因此 $\widetilde{\mathcal K}=\mathcal K$，且
++$\nabla\widetilde{\mathcal B}+\partial_t\widetilde{\mathcal R}=\mathcal Kf$。
++调整后的 $\widetilde{\mathcal R}$ 一般不再满足以 $\widetilde{\mathcal R}^{\mathsf T}f$ 为标量的原齐次输运规范。因此，只有同时调整一形式，才允许令 $\mathcal B=H$；这并不意味着物理能量守恒。
++
++对于比例阻尼，输运得到的结构与显式选择 \eqref{struct:weighted-hamiltonian} 均以 $-J$ 为初始矩阵，且满足式 \eqref{ss:general-K-transport}。沿特征线的唯一性给出相同的 $\mathcal K=-aJ$。在单连通局部坐标域上，两者的一形式相差一个恰当微分，标量则按上述方式相容地改变。本文保留显式选择，因为其提升与数值实现均可直接获得。
++
++逆流公式证明存在性，但不必直接用作数值算法。对于解析数据，记 $s=t-t_0$、
++$f=\sum_{b\ge0}s^bf^{(b)}$ 和 $\mathcal R=\sum_{a\ge0}s^a\mathcal R^{(a)}$，其中系数已包含 Taylor 阶乘因子。将其代入式 \eqref{struct:transport} 并匹配 $s^m$，得到
++\begin{equation}\label{ss:general-R-recurrence}
++\begin{aligned}
++ \mathcal R^{(m+1)}&=-\frac1{m+1}\sum_{a+b=m}
++ \bigl[(D_z\mathcal R^{(a)})f^{(b)}\\
++ &\hspace{4em}+(D_zf^{(b)})^{\mathsf T}\mathcal R^{(a)}\bigr].
++\end{aligned}
++\end{equation}
++对于 $f=(H_p,-H_q+Q_{\rm nc})$、$H=p^{\mathsf T}M(q)^{-1}p/2+V(q)$ 及 $\mathcal R^{(0)}=(p,0)$，第一个系数为
++\begin{equation}\label{ss:general-first-coefficient}
++\begin{aligned}
++ (\mathcal R^{(1)}_q)_i
++  &=\partial_{q_i}V-\tfrac12p^{\mathsf T}
++                 (\partial_{q_i}M^{-1})p-(Q_{\rm nc})_i,\\
++ \mathcal R^{(1)}_p&=-M^{-1}p.
++\end{aligned}
++\end{equation}
++这里 $Q_{\rm nc}$ 表示给定的非保守广义力，在这第一个系数中于 $t_0$ 求值。一形式的两组坐标分量一般都必须演化；将其动量分量始终置零会限制这一构造。解析性保证在充分小邻域上存在收敛的局部级数。只有有限光滑性时，应仅采用带适当余项的有限展开。在高维情形下，求解输运偏微分方程、构造高阶系数及计算其导数可能代价高昂。这些公式均未建立适用于完整导管模型的一般低成本求解器。
++
++\subsection{相容图表、端点投影与一般中点映射}
++\label{ss:general-chart}
++
++局部 Moser 构造使图表条件 \eqref{struct:general-chart} 具有显式形式。记 $\omega_t=\dd_z(\mathcal R^{\mathsf T}\dd z)$，并使用区别于物理时间的辅助参数 $\lambda\in[0,1]$。令
++\begin{equation}\label{ss:general-moser}
++\begin{aligned}
++ \mathcal K_{\lambda,t}&=\mathcal K_0+\lambda(\mathcal K_t-\mathcal K_0),\\
++ \mathcal K_{\lambda,t}v_{\lambda,t}&=\mathcal R_t-\mathcal R_0,\\
++ \frac{\dd\rho_{\lambda,t}}{\dd\lambda}
++     &=v_{\lambda,t}\circ\rho_{\lambda,t},\qquad \rho_{0,t}=\mathrm{id}.
++\end{aligned}
++\end{equation}
++这里下标 $t$ 表示在物理时刻求值，并非时间导数。缩小时间区间与坐标邻域，使每个 $\mathcal K_{\lambda,t}$ 都非退化，且该辅助流在 $0\le\lambda\le1$ 内始终留在其定义域。这些条件在 $t_0$ 附近可由 $\mathcal K_{t_0}=\mathcal K_0$、光滑性和定义域余量局部保证，但未必全局成立。
++
++在本文的矩阵约定下，二形式的内乘具有系数向量 $-\mathcal K_{\lambda,t}v_{\lambda,t}$。因此，
++\[
++ \iota_{v_{\lambda,t}}\omega_{\lambda,t}
++    =-(\mathcal R_t-\mathcal R_0)^{\mathsf T}\dd z.
++\]
++Cartan 公式与式 \eqref{ss:general-moser} 继而给出
++$\frac{\dd}{\dd\lambda}(\rho_{\lambda,t}^*\omega_{\lambda,t})=0$。
++于是 $\rho_{1,t}^*\omega_t=\omega_0$，并且
++$\mathcal C_t=\rho_{1,t}^{-1}$ 满足式 \eqref{struct:general-chart}。
++这正是 Moser 论证的局部形式 \citep[第~1.4--1.5~节]{cannas2005}。它需要辅助积分与求逆，而不需要原物理相流的精确逆映射。对其中任一步骤作近似仍会产生实现误差。
++
++变换后的精确相流
++$\mathcal C_t\circ\Phi_{t,s}\circ\mathcal C_s^{-1}$ 保持常矩阵 $\mathcal K_0$。在两端时刻相等处对这一恒等式求导，可知式 \eqref{struct:chart-field} 中变换后的向量场满足
++\[
++ (D_Zf_Z)^{\mathsf T}\mathcal K_0+\mathcal K_0D_Zf_Z=0.
++\]
++故以 $\mathcal K_0f_Z$ 为系数的一形式闭合。在以 $Z_c$ 为中心的充分小星形图表域上，可显式定义标量
++\begin{equation}\label{ss:general-chart-Hamiltonian}
++\begin{aligned}
++ \mathcal H(Z,t)&=\int_0^1\bigl[(Z-Z_c)^{\mathsf T}\mathcal K_0\\
++ &\qquad f_Z(Z_c+s(Z-Z_c),t)\bigr]\dd s+c(t).
++\end{aligned}
++\end{equation}
++局部 Poincar\'e 恒等式给出 $\nabla_Z\mathcal H=\mathcal K_0f_Z$，因而 $f_Z=J\nabla_Z\mathcal H$。式 \eqref{struct:chart-field} 中的 $\partial_t\mathcal C_t$ 不可省略；只变换空间向量场一般会得到错误的哈密顿量。
++
++保持原稿的端点约定不变。对于固定的 $t_-=t$ 与 $t_+=t+h$，记 $T_\pm=D\mathcal C_{t_\pm}(z_\pm)$。将 $Z_\pm=\mathcal C_{t_\pm}(z_\pm)$ 代入式 \eqref{struct:endpoint-variables}，得到
++\begin{equation}\label{ss:general-endpoint-Jacobian}
++ D\alpha=\begin{pmatrix}
++ \mathsf E T_+&-\mathsf E T_-\\
++ T_0T_+/2&T_0T_-/2
++ \end{pmatrix}.
++\end{equation}
++由于 $\mathsf E^{\mathsf T}T_0=\mathcal K_0$ 且 $T_0^{\mathsf T}\mathsf E=-\mathcal K_0$，直接进行分块矩阵乘法可得
++\begin{equation}\label{ss:general-endpoint-compatibility}
++\begin{aligned}
++ (D\alpha)^{\mathsf T}J_{4n}D\alpha
++ &=\begin{pmatrix}\mathcal K(z_+,t_+)&0\\
++                   0&-\mathcal K(z_-,t_-)\end{pmatrix},\\
++ J_{4n}&=\begin{pmatrix}0&I_{2n}\\-I_{2n}&0\end{pmatrix}.
++\end{aligned}
++\end{equation}
++在物理坐标图像 $z_+=\Phi(z_-)$ 上，其下方投影的导数为
++$T_0(T_+D\Phi+T_-)/2$。零步长时它为 $T_0D\mathcal C_t$，因此非奇异。有限步长时仍须满足所述投影条件；在固定紧邻域内，局部连续性保证充分小步长下该条件成立。这验证了端点命题以及 \citet[第~15~章，定理~3.5~与~4.1]{fengqin} 所需的假设。对应预印本中的结果编号不同 \citep[定理~3.1~与~4.1]{suqin2003}。标量生成函数只有在固定其加性常数后才唯一。
++
++为与另一约定 $w_B=\bar Z$、$\widehat w_B=J(Z_+-Z_-)$ 比较，有 $w=T_0w_B$ 和 $\widehat w=T_0\widehat w_B$。因此，本文的生成函数为
++\[
++ \varphi_h(w)=-h\mathcal H(T_0w,t+h/2).
++\]
++事实上，$\nabla_w\varphi_h=-hT_0\nabla_Z\mathcal H$，且
++\[
++ Z_+-Z_-=\mathsf E\widehat w
++       =-h\mathsf ET_0\nabla_Z\mathcal H
++       =hJ\nabla_Z\mathcal H(\bar Z,t+h/2).
++\]
++因此，符号与中点方程均由同一组端点变量导出，而非另行独立选择力。其局部 Newton 矩阵为 $I_{2n}-hD_Zf_Z/2$。只要这一矩阵可逆，由补充材料~\ref{ss:exact-symplectic} 中的 Cayley 计算可知精确正则中点映射是辛的。若以 $D_H$ 表示其导数，则复合映射的导数为 $D\Psi=T_+^{-1}D_HT_-$。因此，
++\[
++ (D\Psi)^{\mathsf T}\mathcal K_+D\Psi
++   =T_-^{\mathsf T}D_H^{\mathsf T}\mathcal K_0D_HT_-
++   =\mathcal K_-.
++\]
++这证明了理想映射的式 \eqref{struct:general-K-preservation}，并与 \citet{kong2016} 的变换构造一致。若采用精确逆流图表，变换后的向量场反而为零；这一观察仅是存在性工具，并不是实用积分方法或 KAM 论证。合成验证采用给定的非平凡图表，并具有非零中点误差。
++
++\citet[第~15~章，定理~4.4--4.5]{fengqin} 中完整端点生成函数的解析递推，要求解析的相容变换以及投影条件。其所述阶数来自保留相应的完整时间展开。本文时间中点公式的二阶一致性在下文另行证明；不能仅凭保留了一个生成函数项就指定其阶数。自治 Central4 公式也不能自动用于一般显式含时的 $\mathcal H$。
++
++\subsection{控制相容性与实际闭环的结构}
++\label{ss:general-control}
++
++设 $v_u=Ga_u$ 为第~\ref{ctrl:structure} 节中的光滑反馈向量场。原向量场满足 $\partial_t\omega+\mathcal L_f\omega=0$，因此同一 $\omega$ 对 $f+v_u$ 仍然适用，等价于 $\mathcal L_{v_u}\omega=0$。空间闭性与 Cartan 公式给出
++\[
++ \mathcal L_{v_u}\omega
++  =\dd_z(\iota_{v_u}\omega)
++  =-\dd_z[(\mathcal Kv_u)^{\mathsf T}\dd z].
++\]
++在单连通局部域上，该式为零当且仅当 $\mathcal Kv_u=\nabla_zW$。将这一等式与原 Birkhoff 方程相加，便证明式 \eqref{ctrl:same-K}；可以使用同一形式 $\mathcal R$ 和标量 $\mathcal B+W$。设计期望的 $W$ 时，仍须要求其梯度位于 $\mathcal KG$ 的像空间内，并满足全部输入约束。
++
++当这一条件不成立时，先置 $f_u=f+Ga_u$，再以 $f_u$ 替代 $f$，使用同一初始 $\mathcal R_0$ 求解输运方程。特征线证明在局部域上给出 $\mathcal R_u$、$\mathcal K_u=\dd_z\mathcal R_u$ 和 $\mathcal B_u=\mathcal R_u^{\mathsf T}f_u$。图表与中点构造在同样假设下便保持 $\mathcal K_u$。除非还满足相容条件，否则它不保持无控制时的 $\mathcal K$。仅有这一数学表示，既不能证明跟踪效果良好，也不能证明所选控制可实现。
++
++对于仅含势能的磁残差，在固定时间下，$\mathcal K_\gamma(0,\nabla\widehat R)^{\mathsf T}$ 是 $-e^{\gamma\tau}\widehat R$ 的梯度。与之相比，阻尼补偿产生的系数 $(-e^{\gamma\tau}\widehat\gamma Y,0)$ 在常数 $\widehat\gamma\ne0$ 时具有非零的位置--动量混合旋度，因此原结构发生改变。直接代入保留的控制律得到式 \eqref{struct:route-a-closed}，其比例阻尼结构为 $\mathcal K_{\delta\gamma}=-e^{\delta\gamma\tau}J$。残余阻尼为零时，得到 $h_c$ 的标准精确辛中点映射。残余阻尼为非零常数时，得到式 \eqref{ctrl:weighted-midpoint} 的加权共形辛映射；普通中点法仍是一致的比较方法，但不具有该精确指数因子。
++
++在完整梁模型中，磁力与磁转矩仅提供两个输入列，其秩不可能超过二；仅施加在动量方程中的力也不能直接改变位置方程。势能残差模型与两模态端口求逆均遵守这一限制。理想全驱动的非比例阻尼合成算例在其声明的数学对象上验证了新结构论证，并未提供任意高维广义修正的磁驱动实现。
++
++\subsection{一般图表精度与结构构造误差}
++\label{ss:general-accuracy}
++
++固定有限时间区间 $[t_0,t_0+T]$，要求所选图表、逆图表、变换后的轨迹以及全部一步映射像均留在各自工作域内。假设变换后的向量场 $f_Z$ 二阶连续可微且导数有界，图表具有这些变换所需的导数，逆图表导数在该域内一致有界。一组充分的局部光滑性条件是采用 $C^3$ 图表族和光滑物理向量场。还假设存在稳定且局部唯一的隐式分支，例如在中点不动点迭代将其映入自身的凸邻域上满足 $hL_Z/2<1$，其中 $L_Z$ 为 $f_Z$ 关于状态的 Lipschitz 界。
++
++由与命题~\ref{ctrl:convergence} 相同的时间中点 Taylor 论证，将变换后的精确轨迹代入时间中点增量方程，留下 $O(h^3)$ 缺陷。在 $Z$ 坐标中应用该命题，再通过有界逆图表返回原坐标，得到
++\begin{equation}\label{ss:general-chart-error}
++ \max_{kh\le T}\norm{\widetilde z_k-z(t_k)}
++   \le C_T\bigl(e_0+h^2+\eta_h/h\bigr).
++\end{equation}
++这里 $e_0$ 为初始误差，$\eta_h$ 为完整变换后增量方程中每步残差的上界，并计入任何等价的逐步坐标实现扰动。若报告物理坐标中的残差，必须先给出转换到这些坐标时的界。不能简单地在每一步都为非线性图表赋予一个固定放大因子：应先针对变换后的轨迹在整个区间上建立稳定性估计，然后才转换回原坐标。常数 $C_T$ 包含所需图表界，并不声称当 $T\to\infty$ 时仍一致有界。
++
++若一形式本身被近似，则还存在另一项误差。设光滑的 $\mathcal R_{\rm a},\mathcal B_{\rm a}$ 在共同工作域上定义闭合且非退化的 $\mathcal K_{\rm a}$，并令
++\begin{equation}\label{ss:general-structure-residual}
++\begin{aligned}
++ e_{\rm B}&=\mathcal K_{\rm a}f-\partial_t\mathcal R_{\rm a}
++                             -\nabla\mathcal B_{\rm a},\\
++ f_{\rm a}&=\mathcal K_{\rm a}^{-1}
++                 (\nabla\mathcal B_{\rm a}+\partial_t\mathcal R_{\rm a})\\
++          &=f-\mathcal K_{\rm a}^{-1}e_{\rm B}.
++\end{aligned}
++\end{equation}
++因此，近似结构精确表示的是 $f_{\rm a}$，未必是 $f$。若一致满足 $\norm{\mathcal K_{\rm a}^{-1}}\le C_K$ 和 $\norm{e_{\rm B}}\le\epsilon_{\rm B}$，则有 $\norm{f-f_{\rm a}}\le C_K\epsilon_{\rm B}$。对于相同初态及满足 $L$-Lipschitz 条件的真实向量场，Gronwall 不等式给出
++\[
++ \norm{z(t)-z_{\rm a}(t)}
++ \le C_K\epsilon_{\rm B}\frac{e^{L(t-t_0)}-1}{L},
++\]
++极限值为 $C_K\epsilon_{\rm B}(t-t_0)$，对应 $L=0$ 的情形。只要近似图表方法一致满足前述导数和稳定性界，三角不等式就给出
++\begin{equation}\label{ss:general-total-error}
++\begin{aligned}
++ \max_{kh\le T}\norm{\widetilde z_k-z(t_k)}
++ \le{}&C_T(h^2+\eta_h/h)\\
++ &+C_K\epsilon_{\rm B}(e^{LT}-1)/L.
++\end{aligned}
++\end{equation}
++对这一联合近似进行二阶步长细化，尤其要求在一致常数下有 $\epsilon_{\rm B}=O(h^2)$ 和 $\eta_h=O(h^3)$。固定的结构近似误差与式 \eqref{ctrl:target-error-split} 中固定的学习误差一样，不会因减小积分步长而消除。仅有采样残差并不能建立这一估计所用的一致界。
++
++轨迹收敛与几何结构的保持程度也须区分。设近似光滑图表 $\widetilde{\mathcal C}_t$ 的合同缺陷为
++$E_t=(D\widetilde{\mathcal C}_t)^{\mathsf T}\mathcal K_0D\widetilde{\mathcal C}_t-\mathcal K_t$。
++即使其内部映射精确辛，复合映射仍满足
++\begin{equation}\label{ss:general-chart-defect}
++\begin{aligned}
++ (D\widetilde\Psi)^{\mathsf T}\mathcal K_+D\widetilde\Psi-\mathcal K_-
++ =E_--(D\widetilde\Psi)^{\mathsf T}E_+D\widetilde\Psi.
++\end{aligned}
++\end{equation}
++内部求解误差或切映射误差还会引入额外项。在数值计算状态处求值的理想隐式映射 Jacobian，并不自动等于整个浮点 Newton 程序的导数。因此，实验分别报告理想切映射恒等式、实际增量残差与逆图表残差，以及在代表性步骤和多个差分间距下独立计算的有限差分切映射诊断。它们均不能替代收敛或 KAM 结论中的条件性假设。

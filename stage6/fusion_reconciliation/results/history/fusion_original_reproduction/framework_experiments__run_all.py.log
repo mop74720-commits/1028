@@ -1,0 +1,8 @@
+Running framework experiment matrix
+matrix: n=1,2,4, full-grid equivalence/order/structure passed
+Running framework experiment closed
+closed: frozen model-error midpoint and conservative magnetic Central4 passed
+Running framework experiment defect
+defect: actual per-step residuals and eta/Delta scaling passed
+Running framework experiment weighted
+weighted: nonlinear second order and exact exponential-weighted ideal tangent passed

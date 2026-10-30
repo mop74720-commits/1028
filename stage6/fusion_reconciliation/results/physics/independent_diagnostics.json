@@ -1,0 +1,99 @@
+{
+  "status": "independently executed postprocessing of unchanged experiment NPZ",
+  "command": "python stage6/fusion_reconciliation/program/verify_fusion_physics_results.py",
+  "source_sha256": {
+    "stage5/program/coil_rom.py": "48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc",
+    "stage5/program/coil_control.py": "1b01c4fcdf0e2808d178fa9fc7e1996b1ebb7440c05c81394cf07df6ec772797",
+    "stage3/program/rom_bridge.py": "c847efffca746df6621b3967f867ccb2f84fc8c3689169ab2f9c42cb8fc568fb",
+    "stage3/source_inputs/starter/stage2/program/learning/rod_rom.py": "5aebcea066b73f717c2c26fd0b8f3454e205fbcc1bafd970762f3fb9371ee3c9",
+    "stage6/fusion_reconciliation/program/fusion_physics.py": "178ec854852d60f280624ceea6e7894f41667d304cd0dd3bdb226b5a41c07f6d",
+    "stage6/fusion_reconciliation/program/run_fusion_physics.py": "e99f413ae4d1e4e78f9f21593e6077dac9fac3374e611815e961a58d8d3ede55",
+    "stage6/fusion_reconciliation/tests/test_fusion_physics.py": "28f7ef32e0b62c234193edf15a37f4b7aa6cb891c7fd5dafb74c1a42bcbe8033"
+  },
+  "geometry": {
+    "baseline_rk4sub4": {
+      "maximum_straight_reference_displacement_m": 0.0002451604866725261,
+      "maximum_squared_displacement_over_bound": 0.19921076616996497,
+      "maximum_SO3_orthogonality_defect": 1.4390159226612666e-15,
+      "initial_tip_m": [
+        0.00014909205141642142,
+        -0.00019408758078621278,
+        0.09999960112274718
+      ],
+      "final_tip_m": [
+        0.00014985733976107074,
+        -0.0001940264959333525,
+        0.09999959897497636
+      ],
+      "centerline_nodes": 21,
+      "maximum_observed_work_minus_cap_E0": 2.024047123708628e-06
+    },
+    "governed_rk4sub4": {
+      "maximum_straight_reference_displacement_m": 0.0002451144819832686,
+      "maximum_squared_displacement_over_bound": 0.19933311924704286,
+      "maximum_SO3_orthogonality_defect": 1.4390159226612666e-15,
+      "initial_tip_m": [
+        0.00014909205141642142,
+        -0.00019408758078621278,
+        0.09999960112274718
+      ],
+      "final_tip_m": [
+        0.00014980058342696089,
+        -0.00019401220033034156,
+        0.09999959924340596
+      ],
+      "centerline_nodes": 21,
+      "maximum_observed_work_minus_cap_E0": -9.906041801622557e-09
+    }
+  },
+  "slew_feasibility_counterexample": {
+    "z": [
+      0.009800665778412416,
+      0.006216099682706645,
+      -0.00011714758713290688,
+      -0.002673078944651098,
+      -0.0023400650034276762,
+      -0.002004670955008666,
+      -0.0003434497763517713,
+      0.00042239663856923494,
+      0.0009713964335523372,
+      0.0006164865934812456,
+      0.00028831449452181235,
+      -1.555261969333705e-05,
+      0.0010343207233146883,
+      0.003262136800885292,
+      0.0012121093183480672,
+      0.00019815919912775725,
+      -0.0005689903042813087,
+      -0.0008241289518639397,
+      -0.0002153902030085732,
+      0.00012185349413057576,
+      0.0003601382410412057,
+      0.00018881774099542155,
+      2.064383633527739e-05,
+      -8.281594913786322e-05
+    ],
+    "previous_current_A": [
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      -0.05,
+      0.05,
+      0.05,
+      -0.05
+    ],
+    "physical_interval_s": 1e-07,
+    "allowed_power": 0.0,
+    "previous_power": 0.003193194460664712,
+    "analytic_minimum_power_over_slew_box": 0.0031930667328862856,
+    "physical_field_limits_deliberately_loose": true,
+    "status": "expected physical feasibility failure recorded",
+    "message": "Power/current allocation infeasible or unresolved: Positive directional derivative for linesearch; normalized violation=7.660e-02"
+  },
+  "scope": "Observed full-coil 24D trajectories and straight-reference sufficient geometric inequality; no sampled-data clearance certificate"
+}

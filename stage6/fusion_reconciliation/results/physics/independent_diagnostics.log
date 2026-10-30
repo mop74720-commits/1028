@@ -1,0 +1,37 @@
+{
+  "baseline_rk4sub4": {
+    "maximum_straight_reference_displacement_m": 0.0002451604866725261,
+    "maximum_squared_displacement_over_bound": 0.19921076616996497,
+    "maximum_SO3_orthogonality_defect": 1.4390159226612666e-15,
+    "initial_tip_m": [
+      0.00014909205141642142,
+      -0.00019408758078621278,
+      0.09999960112274718
+    ],
+    "final_tip_m": [
+      0.00014985733976107074,
+      -0.0001940264959333525,
+      0.09999959897497636
+    ],
+    "centerline_nodes": 21,
+    "maximum_observed_work_minus_cap_E0": 2.024047123708628e-06
+  },
+  "governed_rk4sub4": {
+    "maximum_straight_reference_displacement_m": 0.0002451144819832686,
+    "maximum_squared_displacement_over_bound": 0.19933311924704286,
+    "maximum_SO3_orthogonality_defect": 1.4390159226612666e-15,
+    "initial_tip_m": [
+      0.00014909205141642142,
+      -0.00019408758078621278,
+      0.09999960112274718
+    ],
+    "final_tip_m": [
+      0.00014980058342696089,
+      -0.00019401220033034156,
+      0.09999959924340596
+    ],
+    "centerline_nodes": 21,
+    "maximum_observed_work_minus_cap_E0": -9.906041801622557e-09
+  }
+}
+Power/current allocation infeasible or unresolved: Positive directional derivative for linesearch; normalized violation=7.660e-02

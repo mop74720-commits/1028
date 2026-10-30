@@ -1,0 +1,11 @@
+test_current_bounds_and_continuous_ramp (test_coil_interface.CoilTests.test_current_bounds_and_continuous_ramp) ... ok
+test_energy_port_and_bias_counted_once (test_coil_interface.CoilTests.test_energy_port_and_bias_counted_once) ... ok
+test_feedback_partial_then_chain_rule (test_coil_interface.CoilTests.test_feedback_partial_then_chain_rule) ... ok
+test_field_and_analytic_gradient_maxwell (test_coil_interface.CoilTests.test_field_and_analytic_gradient_maxwell) ... ok
+test_force_space_allocation_reports_unreachable_target (test_coil_interface.CoilTests.test_force_space_allocation_reports_unreachable_target) ... ok
+test_mixed_higher_feedback_derivative (test_coil_interface.CoilTests.test_mixed_higher_feedback_derivative) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 10.200s
+
+OK

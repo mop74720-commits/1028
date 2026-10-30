@@ -1,0 +1,309 @@
+{
+  "scope": "Known-model nonlinear weighted-structure comparison; does not give the learning controller access to unknown errors",
+  "duration_tau": 4.0,
+  "initial_state": [
+    0.09,
+    0.08,
+    0.015,
+    -0.01
+  ],
+  "steps": [
+    0.04,
+    0.02,
+    0.01,
+    0.005
+  ],
+  "weighted_update": "S_half * conservative implicit midpoint(V_kappa) * S_half, S_half=diag(I,exp(-gamma*Delta/2)I)",
+  "structure_factor": "exp(-gamma*Delta)",
+  "cases": [
+    {
+      "name": "uncompensated_true_plant",
+      "delta_beta": 0.2,
+      "delta_gamma": 0.05,
+      "independent_reference": {
+        "method": "Independent explicit DOP853 with dense output",
+        "coarse": {
+          "rtol": 1e-11,
+          "atol": 1e-13,
+          "max_step": 0.05
+        },
+        "fine": {
+          "rtol": 2e-13,
+          "atol": 2e-15,
+          "max_step": 0.025
+        },
+        "interval_validation": false
+      },
+      "maximum_reference_refinement_difference": 2.721522028085148e-12,
+      "methods": {
+        "midpoint": [
+          {
+            "step": 0.04,
+            "maximum_state_error": 0.008537497477960732,
+            "endpoint_state_error": 0.008537497477960732,
+            "RMS_state_error": 0.005056581619605245,
+            "observed_order": null,
+            "maximum_increment_residual_inf": 1.8153447495228292e-14,
+            "maximum_Newton_corrections": 2,
+            "failed_steps": 0,
+            "minimum_Newton_matrix_singular_value": 1.0001998293149206,
+            "maximum_ideal_standard_symplectic_defect_spectral2": 0.0019972040921613634,
+            "maximum_ideal_exponential_weighted_defect_spectral2": 2.876272272567331e-05,
+            "structure_diagnostic_scope": "Implicit ideal tangent evaluated at numerical solution points, not the derivative of a finite floating-point Newton program."
+          },
+          {
+            "step": 0.02,
+            "maximum_state_error": 0.002148395158080459,
+            "endpoint_state_error": 0.002148395158080459,
+            "RMS_state_error": 0.00127096451070295,
+            "observed_order": 1.9905538720668217,
+            "maximum_increment_residual_inf": 1.8745421881405377e-14,
+            "maximum_Newton_corrections": 2,
+            "failed_steps": 0,
+            "minimum_Newton_matrix_singular_value": 1.0000499711124569,
+            "maximum_ideal_standard_symplectic_defect_spectral2": 0.0009994003824630121,
+            "maximum_ideal_exponential_weighted_defect_spectral2": 3.6382111069377383e-06,
+            "structure_diagnostic_scope": "Implicit ideal tangent evaluated at numerical solution points, not the derivative of a finite floating-point Newton program."
+          },
+          {
+            "step": 0.01,
+            "maximum_state_error": 0.0005379278688695961,
+            "endpoint_state_error": 0.0005379278688695961,
+            "RMS_state_error": 0.00031806665636473284,
+            "observed_order": 1.997774736293645,
+            "maximum_increment_residual_inf": 1.9945850526781328e-14,
+            "maximum_Newton_corrections": 2,
+            "failed_steps": 0,
+            "minimum_Newton_matrix_singular_value": 1.0000124931862737,
+            "maximum_ideal_standard_symplectic_defect_spectral2": 0.0004998625406579708,
+            "maximum_ideal_exponential_weighted_defect_spectral2": 4.562492723646253e-07,
+            "structure_diagnostic_scope": "Implicit ideal tangent evaluated at numerical solution points, not the derivative of a finite floating-point Newton program."
+          },
+          {
+            "step": 0.005,
+            "maximum_state_error": 0.00013453302541117695,
+            "endpoint_state_error": 0.00013453302541117695,
+            "RMS_state_error": 7.952603811477133e-05,
+            "observed_order": 1.999452362092351,
+            "maximum_increment_residual_inf": 6.0320672068403525e-15,
+            "maximum_Newton_corrections": 1,
+            "failed_steps": 0,
+            "minimum_Newton_matrix_singular_value": 1.0000031226804151,
+            "maximum_ideal_standard_symplectic_defect_spectral2": 0.0002499671921641415,
+            "maximum_ideal_exponential_weighted_defect_spectral2": 5.708449302144443e-08,
+            "structure_diagnostic_scope": "Implicit ideal tangent evaluated at numerical solution points, not the derivative of a finite floating-point Newton program."
+          }
+        ],
+        "weighted_midpoint": [
+          {
+            "step": 0.04,
+            "maximum_state_error": 0.00852836247184825,
+            "endpoint_state_error": 0.00852836247184825,
+            "RMS_state_error": 0.005051726201436072,
+            "observed_order": null,
+            "maximum_increment_residual_inf": 1.5033547323684004e-14,
+            "maximum_Newton_corrections": 2,
+            "failed_steps": 0,
+            "minimum_Newton_matrix_singular_value": 1.0001977074368416,
+            "maximum_ideal_standard_symplectic_defect_spectral2": 0.0019980013326672545,
+            "maximum_ideal_exponential_weighted_defect_spectral2": 3.3771095911639773e-16,
+            "structure_diagnostic_scope": "Implicit ideal tangent evaluated at numerical solution points, not the derivative of a finite floating-point Newton program."
+          },
+          {
+            "step": 0.02,
+            "maximum_state_error": 0.002147331373589674,
+            "endpoint_state_error": 0.002147331373589674,
+            "RMS_state_error": 0.001270253741784105,
+            "observed_order": 1.989723913384168,
+            "maximum_increment_residual_inf": 1.9441696516575568e-14,
+            "maximum_Newton_corrections": 2,
+            "failed_steps": 0,
+            "minimum_Newton_matrix_singular_value": 1.0000488506138796,
+            "maximum_ideal_standard_symplectic_defect_spectral2": 0.0009995001666253112,
+            "maximum_ideal_exponential_weighted_defect_spectral2": 3.370560932705549e-16,
+            "structure_diagnostic_scope": "Implicit ideal tangent evaluated at numerical solution points, not the derivative of a finite floating-point Newton program."
+          },
+          {
+            "step": 0.01,
+            "maximum_state_error": 0.0005377399190215505,
+            "endpoint_state_error": 0.0005377399190215505,
+            "RMS_state_error": 0.00031792094614834735,
+            "observed_order": 1.997564364440947,
+            "maximum_increment_residual_inf": 1.993457482418748e-14,
+            "maximum_Newton_corrections": 2,
+            "failed_steps": 0,
+            "minimum_Newton_matrix_singular_value": 1.0000119240541412,
+            "maximum_ideal_standard_symplectic_defect_spectral2": 0.0004998750208310419,
+            "maximum_ideal_exponential_weighted_defect_spectral2": 4.441207456411786e-16,
+            "structure_diagnostic_scope": "Implicit ideal tangent evaluated at numerical solution points, not the derivative of a finite floating-point Newton program."
+          },
+          {
+            "step": 0.005,
+            "maximum_state_error": 0.00013449093954177266,
+            "endpoint_state_error": 0.00013449093954177266,
+            "RMS_state_error": 7.949161159011971e-05,
+            "observed_order": 1.9993995899860961,
+            "maximum_increment_residual_inf": 6.041608185958225e-15,
+            "maximum_Newton_corrections": 1,
+            "failed_steps": 0,
+            "minimum_Newton_matrix_singular_value": 1.0000028362380478,
+            "maximum_ideal_standard_symplectic_defect_spectral2": 0.00024996875260430157,
+            "maximum_ideal_exponential_weighted_defect_spectral2": 3.34574172638624e-16,
+            "structure_diagnostic_scope": "Implicit ideal tangent evaluated at numerical solution points, not the derivative of a finite floating-point Newton program."
+          }
+        ]
+      }
+    },
+    {
+      "name": "known_model_error_diagnostic",
+      "delta_beta": 0.02,
+      "delta_gamma": 0.01,
+      "independent_reference": {
+        "method": "Independent explicit DOP853 with dense output",
+        "coarse": {
+          "rtol": 1e-11,
+          "atol": 1e-13,
+          "max_step": 0.05
+        },
+        "fine": {
+          "rtol": 2e-13,
+          "atol": 2e-15,
+          "max_step": 0.025
+        },
+        "interval_validation": false
+      },
+      "maximum_reference_refinement_difference": 3.1016176899170554e-12,
+      "methods": {
+        "midpoint": [
+          {
+            "step": 0.04,
+            "maximum_state_error": 0.009231937477833905,
+            "endpoint_state_error": 0.009231937477833905,
+            "RMS_state_error": 0.005368674921575838,
+            "observed_order": null,
+            "maximum_increment_residual_inf": 9.526884489630127e-15,
+            "maximum_Newton_corrections": 2,
+            "failed_steps": 0,
+            "minimum_Newton_matrix_singular_value": 1.0001999032152176,
+            "maximum_ideal_standard_symplectic_defect_spectral2": 0.00039976017415947166,
+            "maximum_ideal_exponential_weighted_defect_spectral2": 5.761812026829854e-06,
+            "structure_diagnostic_scope": "Implicit ideal tangent evaluated at numerical solution points, not the derivative of a finite floating-point Newton program."
+          },
+          {
+            "step": 0.02,
+            "maximum_state_error": 0.002324104433694395,
+            "endpoint_state_error": 0.002324104433694395,
+            "RMS_state_error": 0.0013496539111080617,
+            "observed_order": 1.9899585558020358,
+            "maximum_increment_residual_inf": 1.9997892231060632e-14,
+            "maximum_Newton_corrections": 2,
+            "failed_steps": 0,
+            "minimum_Newton_matrix_singular_value": 1.0000499762268178,
+            "maximum_ideal_standard_symplectic_defect_spectral2": 0.0001999600118568499,
+            "maximum_ideal_exponential_weighted_defect_spectral2": 7.282393305082856e-07,
+            "structure_diagnostic_scope": "Implicit ideal tangent evaluated at numerical solution points, not the derivative of a finite floating-point Newton program."
+          },
+          {
+            "step": 0.01,
+            "maximum_state_error": 0.0005819850025831473,
+            "endpoint_state_error": 0.0005819850025831473,
+            "RMS_state_error": 0.0003377629798319333,
+            "observed_order": 1.9976210164303732,
+            "maximum_increment_residual_inf": 1.971166285752446e-14,
+            "maximum_Newton_corrections": 2,
+            "failed_steps": 0,
+            "minimum_Newton_matrix_singular_value": 1.0000124914376514,
+            "maximum_ideal_standard_symplectic_defect_spectral2": 9.999250104815671e-05,
+            "maximum_ideal_exponential_weighted_defect_spectral2": 9.128833933225314e-08,
+            "structure_diagnostic_scope": "Implicit ideal tangent evaluated at numerical solution points, not the derivative of a finite floating-point Newton program."
+          },
+          {
+            "step": 0.005,
+            "maximum_state_error": 0.00014555539923593415,
+            "endpoint_state_error": 0.00014555539923593415,
+            "RMS_state_error": 8.44494960150534e-05,
+            "observed_order": 1.9994136203736308,
+            "maximum_increment_residual_inf": 5.135215169760343e-15,
+            "maximum_Newton_corrections": 1,
+            "failed_steps": 0,
+            "minimum_Newton_matrix_singular_value": 1.0000031210400817,
+            "maximum_ideal_standard_symplectic_defect_spectral2": 4.999843760967516e-05,
+            "maximum_ideal_exponential_weighted_defect_spectral2": 1.141943195627457e-08,
+            "structure_diagnostic_scope": "Implicit ideal tangent evaluated at numerical solution points, not the derivative of a finite floating-point Newton program."
+          }
+        ],
+        "weighted_midpoint": [
+          {
+            "step": 0.04,
+            "maximum_state_error": 0.009230015593814448,
+            "endpoint_state_error": 0.009230015593814448,
+            "RMS_state_error": 0.005367669224605996,
+            "observed_order": null,
+            "maximum_increment_residual_inf": 9.154352623164108e-15,
+            "maximum_Newton_corrections": 2,
+            "failed_steps": 0,
+            "minimum_Newton_matrix_singular_value": 1.0001980485623814,
+            "maximum_ideal_standard_symplectic_defect_spectral2": 0.00039992001066591065,
+            "maximum_ideal_exponential_weighted_defect_spectral2": 3.360310494945561e-16,
+            "structure_diagnostic_scope": "Implicit ideal tangent evaluated at numerical solution points, not the derivative of a finite floating-point Newton program."
+          },
+          {
+            "step": 0.02,
+            "maximum_state_error": 0.0023238861941161345,
+            "endpoint_state_error": 0.0023238861941161345,
+            "RMS_state_error": 0.0013495101598444666,
+            "observed_order": 1.989793666777651,
+            "maximum_increment_residual_inf": 1.9729660613587718e-14,
+            "maximum_Newton_corrections": 2,
+            "failed_steps": 0,
+            "minimum_Newton_matrix_singular_value": 1.0000490230501282,
+            "maximum_ideal_standard_symplectic_defect_spectral2": 0.00019998000133358916,
+            "maximum_ideal_exponential_weighted_defect_spectral2": 3.3928393762113466e-16,
+            "structure_diagnostic_scope": "Implicit ideal tangent evaluated at numerical solution points, not the derivative of a finite floating-point Newton program."
+          },
+          {
+            "step": 0.01,
+            "maximum_state_error": 0.0005819472126580774,
+            "endpoint_state_error": 0.0005819472126580774,
+            "RMS_state_error": 0.0003377338884723836,
+            "observed_order": 1.9975792184668726,
+            "maximum_increment_residual_inf": 1.9779317073087554e-14,
+            "maximum_Newton_corrections": 2,
+            "failed_steps": 0,
+            "minimum_Newton_matrix_singular_value": 1.0000120106436872,
+            "maximum_ideal_standard_symplectic_defect_spectral2": 9.999500016710791e-05,
+            "maximum_ideal_exponential_weighted_defect_spectral2": 4.441169470773213e-16,
+            "structure_diagnostic_scope": "Implicit ideal tangent evaluated at numerical solution points, not the derivative of a finite floating-point Newton program."
+          },
+          {
+            "step": 0.005,
+            "maximum_state_error": 0.00014554700572671125,
+            "endpoint_state_error": 0.00014554700572671125,
+            "RMS_state_error": 8.444265158330462e-05,
+            "observed_order": 1.9994031350550456,
+            "maximum_increment_residual_inf": 5.139551978450285e-15,
+            "maximum_Newton_corrections": 1,
+            "failed_steps": 0,
+            "minimum_Newton_matrix_singular_value": 1.0000028797587415,
+            "maximum_ideal_standard_symplectic_defect_spectral2": 4.9998750021097974e-05,
+            "maximum_ideal_exponential_weighted_defect_spectral2": 3.3509103661989545e-16,
+            "structure_diagnostic_scope": "Implicit ideal tangent evaluated at numerical solution points, not the derivative of a finite floating-point Newton program."
+          }
+        ]
+      }
+    }
+  ],
+  "status": "all assertions passed",
+  "provenance": {
+    "baseline_file": "../new_baseline.json",
+    "baseline_sha256": "2bac37b2f4444efc6a0ba742139fbf0b35e268e9f4f3597ba13a0793bc2049ac",
+    "script_sha256": "91868f920d3f068d9e00cac22149402bda777d6ca72e4d31dfec28678bc48eb0",
+    "common_sha256": "c31934c80b01c72a877ce7aa858663461a1dcb39d8e76c3c686305e7518d83c8",
+    "environment": {
+      "python": "3.12.14",
+      "numpy": "2.3.5",
+      "scipy": "1.17.0"
+    },
+    "scope": "Synthetic numerical verification on the declared model; no interval, hardware or full-network certificate."
+  }
+}
