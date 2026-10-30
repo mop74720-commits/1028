@@ -1,0 +1,76 @@
+{
+  "command": [
+    "1025_bridges/01_chnn_to_birkhoff/program/verify.py"
+  ],
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "status": "passed",
+  "runs": [
+    {
+      "command": [
+        "/workspace/1028-cloud/venvs/learning/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "1025_bridges/01_chnn_to_birkhoff/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/workspace/1028",
+      "exit_code": 0,
+      "seconds": 7.9082752669928595,
+      "tests": 11,
+      "log": "1025_bridges/01_chnn_to_birkhoff/results/verification_20261030T091207_826702Z/bridge01.log"
+    },
+    {
+      "command": [
+        "/workspace/1028-cloud/venvs/learning/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "stage5/tests",
+        "-p",
+        "test_learning_research.py",
+        "-v"
+      ],
+      "cwd": "/workspace/1028",
+      "exit_code": 0,
+      "seconds": 6.759213166995323,
+      "tests": 6,
+      "log": "1025_bridges/01_chnn_to_birkhoff/results/verification_20261030T091207_826702Z/inherited_learning.log"
+    },
+    {
+      "command": [
+        "/workspace/1028-cloud/venvs/learning/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "stage5/tests",
+        "-p",
+        "test_transport_moser.py",
+        "-v"
+      ],
+      "cwd": "/workspace/1028",
+      "exit_code": 0,
+      "seconds": 3.3491958280064864,
+      "tests": 4,
+      "log": "1025_bridges/01_chnn_to_birkhoff/results/verification_20261030T091207_826702Z/inherited_transport.log"
+    }
+  ],
+  "source_sha256": {
+    "1025_bridges/01_chnn_to_birkhoff/program/bridge_interface.py": "3bc7d1a2ae8fd0265ffe4febb1b8317992a4498c349e89fd631b10f1b941ebf5",
+    "1025_bridges/01_chnn_to_birkhoff/program/check_frozen_network.py": "5e66d66bc487ce05cc5c18c4be9e9b7a1bceb513c677720109b77a6a2cdd72ba",
+    "1025_bridges/01_chnn_to_birkhoff/program/run_bridge.py": "360b8600583985b041e5b0a96f075d43511a6f979342467f5153a0f024fc0303",
+    "1025_bridges/01_chnn_to_birkhoff/program/verify.py": "8ed7b6145144de050f26aee0680b87e02ac7c2891b9e6edb947f0fc5388fed01",
+    "1025_bridges/01_chnn_to_birkhoff/tests/test_birkhoff_bridge.py": "120b14e5edd842f0f8c35a24c6677ac984a64ae28f91605736f56b7376798dd0",
+    "1025_bridges/01_chnn_to_birkhoff/tests/test_network_interface.py": "5c0a1b592481a1fb31c328e847f4f231b32bbaf54509a262d2490ad504c113fc"
+  },
+  "frozen_files": 1351,
+  "frozen_changed": [],
+  "tests": 21,
+  "finished_utc": "2026-10-30T09:12:26.156715+00:00",
+  "scope": "No training, new KAM/generator work or full physical validation."
+}

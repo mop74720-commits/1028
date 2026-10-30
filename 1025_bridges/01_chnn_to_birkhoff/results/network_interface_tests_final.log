@@ -1,0 +1,10 @@
+test_general_a1_matches_lie_and_mechanical_shortcut_fails (test_network_interface.NetworkInterfaceTests.test_general_a1_matches_lie_and_mechanical_shortcut_fails) ... ok
+test_independent_energy_gradient_and_fixed_origin_jet (test_network_interface.NetworkInterfaceTests.test_independent_energy_gradient_and_fixed_origin_jet) ... ok
+test_negative_hpp_does_not_destroy_canonical_phase_form (test_network_interface.NetworkInterfaceTests.test_negative_hpp_does_not_destroy_canonical_phase_form) ... ok
+test_real_energy_canonical_chain_and_power (test_network_interface.NetworkInterfaceTests.test_real_energy_canonical_chain_and_power) ... ok
+test_shared_canonical_drag_need_not_dissipate_learned_energy (test_network_interface.NetworkInterfaceTests.test_shared_canonical_drag_need_not_dissipate_learned_energy) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.511s
+
+OK

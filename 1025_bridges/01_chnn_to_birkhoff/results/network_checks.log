@@ -1,0 +1,56 @@
+{
+  "status": "executed",
+  "seconds": 2.260163642000407,
+  "splits": {
+    "test": {
+      "samples": 512,
+      "canonical_field_relative_l2": 0.03700273048421267,
+      "field_max_sample_error": 0.471028121459813,
+      "energy_rmse": 0.0005347788554071847,
+      "original_report_field_relative_l2": 0.03700273048421267,
+      "exact_prior_restored": true,
+      "drag_power": {
+        "truth_min": -1.6621237709402281,
+        "truth_max": -0.00011020512914437352,
+        "learned_min": -1.5240486140467722,
+        "learned_max": 0.00012060064420767787,
+        "truth_positive_count": 0,
+        "learned_positive_count": 1,
+        "warning": "Finite sample signs only; R=-D(Q,P)P is not automatically dissipative for arbitrary Hhat or arbitrary variable-mass H."
+      }
+    },
+    "OOD": {
+      "samples": 256,
+      "canonical_field_relative_l2": 0.09062824461140896,
+      "field_max_sample_error": 2.1102855409237122,
+      "energy_rmse": 0.0071560435979766135,
+      "original_report_field_relative_l2": 0.09062824461140898,
+      "exact_prior_restored": true,
+      "drag_power": {
+        "truth_min": -12.72108484612886,
+        "truth_max": -0.032480401631506416,
+        "learned_min": -8.533401921107636,
+        "learned_max": -0.03178628517370071,
+        "truth_positive_count": 0,
+        "learned_positive_count": 0,
+        "warning": "Finite sample signs only; R=-D(Q,P)P is not automatically dissipative for arbitrary Hhat or arbitrary variable-mass H."
+      }
+    }
+  },
+  "origin": {
+    "H": 0.0,
+    "gradient_norm": 0.0,
+    "exact_fixed_quadratic_jet_max": 1.1368683772161603e-13,
+    "Hpp_min": 1.0,
+    "scope": "Fixed cubic gate proves positive origin Hessian and, by continuity, some local mechanical Legendre neighborhood; no numerical sampling gives its uniform radius."
+  },
+  "learned_self_legendre_sample": {
+    "split": "test",
+    "index": 292,
+    "success": true,
+    "residual": 2.323234527365937e-16,
+    "momentum_difference": 1.0540837451662875e-16,
+    "message": "The solution converged.",
+    "scope": "Only local solver check on this frozen learned model; not global SPD/invertibility or truth momentum recovery."
+  }
+}

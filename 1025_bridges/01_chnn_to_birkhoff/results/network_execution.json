@@ -1,0 +1,29 @@
+{
+  "scope": "Independent frozen-network checks only; no training and no phase-integrator experiment.",
+  "commands": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /workspace/1028-cloud/venvs/learning/bin/python 1025_bridges/01_chnn_to_birkhoff/program/check_frozen_network.py",
+      "status": "passed after explicit reverse-row Jacobian compatibility fix",
+      "log": "results/network_checks.log",
+      "result": "results/network_checks.json",
+      "seconds": 2.260163642000407
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /workspace/1028-cloud/venvs/learning/bin/python -m unittest discover -s 1025_bridges/01_chnn_to_birkhoff/tests -p test_network_interface.py -v",
+      "status": "passed",
+      "tests": 5,
+      "seconds": 1.511,
+      "log": "results/network_interface_tests_final.log"
+    }
+  ],
+  "retained_failure": [
+    "results/network_checks_failure01.json",
+    "results/network_checks_failure01.log",
+    "results/network_interface_tests_failure01.log"
+  ],
+  "source_sha256": {
+    "1025_bridges/01_chnn_to_birkhoff/program/check_frozen_network.py": "5e66d66bc487ce05cc5c18c4be9e9b7a1bceb513c677720109b77a6a2cdd72ba",
+    "1025_bridges/01_chnn_to_birkhoff/tests/test_network_interface.py": "5c0a1b592481a1fb31c328e847f4f231b32bbaf54509a262d2490ad504c113fc"
+  },
+  "preserved_historical_inputs": true
+}

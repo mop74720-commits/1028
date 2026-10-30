@@ -1,0 +1,40 @@
+{
+  "scope": "Execution corrections retained; no source data, physical parameters, weights or tolerances changed.",
+  "initial_inline_smoke": {
+    "record_type": "Observation transcribed from tool output, before persistent main runner",
+    "operation": "OneFormCache.fit(native,center,maximum_order=2,quadratic_through=1)",
+    "failed_stage": "order2 Jacobian through default torch.func.jacrev/vmap",
+    "error": "RuntimeError: Batching rule not implemented for aten::_neg_view; the fallback path does not work on out= or view ops.",
+    "process_exit_code": 134,
+    "additional_observation": "Python finalization emitted gilstate_tss_set error after the uncaught exception. The independent network failure log is also preserved."
+  },
+  "runs": {
+    "B01_run01": {
+      "numeric_checks": "passed",
+      "superseded_metadata": [
+        "mechanical high_order_ad_identity inherited from S5",
+        "full-coil plant label inherited from S6 loader"
+      ],
+      "fix": "Override labels in new adapter to direct frozen Hhat and H_ideal reference; actual numeric calls already used these."
+    },
+    "B01_run02": {
+      "numeric_checks": "passed",
+      "superseded_cache": "Raw b1 Hessian had roundoff-level antisymmetry; restore the existing S5 check-then-symmetrize convention so the cache evaluator is the exact derivative of the saved polynomial."
+    },
+    "B01_run03": {
+      "numeric_checks": "passed",
+      "final": true,
+      "raw_hessian_saved": true,
+      "changed_physics": false,
+      "changed_tolerances": false,
+      "changed_network": false
+    }
+  },
+  "mathematical_negative_results": [
+    "Hpp negative at existing test146",
+    "same old load increases learned energy at test180",
+    "learning error nonzero",
+    "finite-time-jet e_B nonzero",
+    "old H_ideal b2 cache cannot represent learned Hhat"
+  ]
+}

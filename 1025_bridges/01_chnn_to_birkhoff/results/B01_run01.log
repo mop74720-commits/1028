@@ -1,0 +1,96 @@
+{"order": 1, "seconds": 1.2405782209971221, "spatial_degree": 2}
+{"order": 2, "seconds": 0.5219129440083634, "spatial_degree": 1}
+point diagnostics center
+point diagnostics old_physical_endpoint
+integrated truth base
+integrated truth fine
+integrated learned base
+integrated learned fine
+integrated represented base
+integrated represented fine
+{
+  "status": "passed",
+  "checks": {
+    "split": true,
+    "direct": true,
+    "compatibility": true,
+    "closure": true,
+    "power": true,
+    "domain": true
+  },
+  "integration": {
+    "runs": [
+      {
+        "field": "truth",
+        "level": "base",
+        "method": "DOP853",
+        "rtol": 2e-10,
+        "atol": 2e-12,
+        "max_step": 0.000125,
+        "nfev": 62,
+        "seconds": 2.7473837550060125
+      },
+      {
+        "field": "truth",
+        "level": "fine",
+        "method": "DOP853",
+        "rtol": 5e-12,
+        "atol": 5e-14,
+        "max_step": 6.25e-05,
+        "nfev": 122,
+        "seconds": 5.3047813159937505
+      },
+      {
+        "field": "learned",
+        "level": "base",
+        "method": "DOP853",
+        "rtol": 2e-10,
+        "atol": 2e-12,
+        "max_step": 0.000125,
+        "nfev": 62,
+        "seconds": 0.11927956200088374
+      },
+      {
+        "field": "learned",
+        "level": "fine",
+        "method": "DOP853",
+        "rtol": 5e-12,
+        "atol": 5e-14,
+        "max_step": 6.25e-05,
+        "nfev": 122,
+        "seconds": 0.23702929698629305
+      },
+      {
+        "field": "represented",
+        "level": "base",
+        "method": "DOP853",
+        "rtol": 2e-10,
+        "atol": 2e-12,
+        "max_step": 0.000125,
+        "nfev": 62,
+        "seconds": 2.410499808989698
+      },
+      {
+        "field": "represented",
+        "level": "fine",
+        "method": "DOP853",
+        "rtol": 5e-12,
+        "atol": 5e-14,
+        "max_step": 6.25e-05,
+        "nfev": 122,
+        "seconds": 4.876476577002904
+      }
+    ],
+    "refinement_max": {
+      "truth": 1.0491295238720559e-17,
+      "learned": 2.902780797999754e-18,
+      "represented": 2.6555086755150305e-18
+    },
+    "learned_vs_true_max": 5.769778564923983e-07,
+    "represented_vs_learned_max": 1.0557844319904548e-09,
+    "represented_vs_true_max": 5.763952182153869e-07,
+    "trajectory_split_identity": 0.0,
+    "max_cache_distance": 0.00012191768260878822,
+    "interpretation": "Distinct finite-window numerical errors, not uniform domain learning bounds; no integrator-order claim here."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "source_sha256": "98aa633abc120423c314e7cef3e278d3fa3b314725704ce6de47566b7fe05166",
+  "error": "RuntimeError: Batching rule not implemented for aten::_neg_view",
+  "operation": "torch.func.jacrev(field) default vmap on original complex conjugate network",
+  "change": "Use explicit chunk_size=1 reverse rows; frozen network and physical parameters unchanged.",
+  "scope": "AD backend compatibility failure, not a mathematical model counterexample."
+}

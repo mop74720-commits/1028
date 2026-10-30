@@ -1,0 +1,35 @@
+Traceback (most recent call last):
+  File "/workspace/1028/1025_bridges/01_chnn_to_birkhoff/program/check_frozen_network.py", line 206, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/1028/1025_bridges/01_chnn_to_birkhoff/program/check_frozen_network.py", line 167, in main
+    Df=torch.func.jacrev(lambda yy:model.field(yy)+torch.cat((torch.zeros(12),model.force(yy))))(z)
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/_functorch/eager_transforms.py", line 724, in wrapper_fn
+    flat_jacobians_per_input = compute_jacobian_stacked()
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/_functorch/eager_transforms.py", line 646, in compute_jacobian_stacked
+    chunked_result = vmap(vjp_fn)(basis)
+                     ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/_functorch/apis.py", line 203, in wrapped
+    return vmap_impl(
+           ^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/_functorch/vmap.py", line 331, in vmap_impl
+    return _flat_vmap(
+           ^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/_functorch/vmap.py", line 479, in _flat_vmap
+    batched_outputs = func(*batched_inputs, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/_functorch/eager_transforms.py", line 430, in wrapper
+    result = _autograd_grad(
+             ^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/_functorch/eager_transforms.py", line 180, in _autograd_grad
+    grad_inputs = torch.autograd.grad(
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/autograd/__init__.py", line 496, in grad
+    result = _engine_run_backward(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/1028-cloud/venvs/learning/lib/python3.12/site-packages/torch/autograd/graph.py", line 825, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Batching rule not implemented for aten::_neg_view; the fallback path doesn't work on out= or view ops.

@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "start_head": "2b774acf2a76aefbe732c649a1f02d0fafea3b79",
+  "frozen_files": 1351,
+  "changed": [],
+  "file_integrity_checks": {
+    "json": 12,
+    "py": 6,
+    "npz": 7
+  },
+  "final_experiment": "B01_run03",
+  "experiment_source_hashes_match": true,
+  "tests": 21,
+  "scope": "Packaging/frozen preservation, not global error/positivity or second-bridge certification."
+}
