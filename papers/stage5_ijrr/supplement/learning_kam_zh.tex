@@ -1,0 +1,190 @@
+\section{学习结构、误差界与持久性范围}
+\label{supp:learning-kam}
+
+\subsection{实现的架构与反解诊断}
+为明确起见，复网络输入由训练坐标构成：$\zeta=(x_Q+ix_P)/\sqrt2$、$u=(\zeta,\bar\zeta)\in\mathbb C^{24}$。用 $\odot$ 表示逐元素乘法，实际残差为
+\begin{equation}
+ \begin{aligned}
+ a_1&=W_1u,\\
+ b&=\sigma(W_2\sigma(a_1)+b_2),\\
+ F(x)&=\operatorname{Re}\{w_3(a_1^{\odot3}\odot b)\},\\
+ r_\theta(x)&=\tfrac{s_h}{2}\{F(x_Q,x_P)+F(x_Q,-x_P)\}.
+ \end{aligned}
+ \label{eq:supp-learn-network}
+\end{equation}
+两个隐藏层宽度均为 48，第一层和输出层均无偏置。参数数量为 $1152+2304+48+48=3552$ 个复数项。由于第一层在原点为零，三次门控在原点的二阶及以下导数均为零。动量平均保证偶性，但允许更高偶次动量项。
+
+SPD 模型将 $u$ 替换为实位置输入 $x_Q$，送入宽度 48 的复主干。质量输出为 $r=\operatorname{Re}\{W_m[b(x_Q)-b(0)]\}\in\mathbb R^{78}$。用这些数填充 $L$ 的下三角，并对对角元取指数；势能采用 $V_\theta=s_h\operatorname{Re}\{w_V(a_1^{\odot3}\odot b)\}$。共有 $576+2304+48+3744+48=6720$ 个复参数，且 $L(0)=I$。因此每个有限实输入处的精确动量 Hessian 都正定，而势能和完整 Hessian 无需凸。
+
+Legendre 检验使用 SciPy HYBR，容差为 $10^{-10}$，设置 \texttt{maxfev=120}，并以真实动量初始化。表~\ref{tab:supp-learning-inverse} 报告三个种子、每个划分八个指定状态上的最大值。多项式和 SPD 的所有样本点方程残差均低于 $10^{-8}$，总最大值分别为 $2.15\times10^{-14}$ 和 $1.80\times10^{-15}$。尽管如此，部分进展标志仍为假。无约束复模型达到残差收敛的数量为每八个测试状态中的 4/6/5 个，以及每八个扩展域状态中的 3/4/6 个；最大残差分别为 0.0434103 和 0.521317。因此，方程满足程度、求解器状态和真实物理动量恢复是不同的测量。
+
+\begin{table}[H]
+\centering
+\caption{样本最大相对动量 Hessian 误差、Hessian 条件数和相对恢复动量误差。每项均为测试域/扩展域。}
+\label{tab:supp-learning-inverse}
+\begin{tabular}{lrrr}
+\toprule
+模型 & 相对 $h_{PP}$ 误差 & 条件数 & 相对动量误差\\
+\midrule
+多项式 & 0.4749/0.7316 & 22124/3480 & 27.30/7.244\\
+复网络 & 0.05819/0.2917 & 167322/41387 & 0.6267/1.348\\
+SPD 复网络 & 0.1705/0.3132 & 1199/1811 & 0.5044/1.253\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+历史 SPD 压力域实验报告的 Hessian 误差为 320\%/372\%，条件数约为 $4.61\times10^{10}/1.13\times10^{12}$。这些数值属于较早权重，其原始数值档案未包含于本快照，因此是历史证据，而非重新测得的数值或当前模型统计量。它们同样说明精确结构正定性与可用条件数的区别。较早的亚纯激活失败也保留在源码历史中。
+
+学习到线圈的诊断使用四个测试索引 $(0,146,292,511)$ 和四个扩展域索引 $(0,72,144,255)$。在真实磁体求积点处，分配约束为 2\,A、20\,A/s、5\,mT 和梯度 Frobenius 范数 0.03\,T/m，并采用预通电偏置及 0.25\,s 决策区间。最终最大约束违反量为 $9.39\times10^{-13}$。多项式、复网络和 SPD 模型的无约束请求峰值电流分别达到 326.421\,A、37.9885\,A 和 235.468\,A。初次分配尝试的 23 项失败已保留；最终 72/72 成功结果是在同一力目标下采用可行的上一电流作为暖启动，没有放宽限制。该实验评估通过线圈端口进行修正的能力，并未将理想偏置与线圈 Hamiltonian 等同。
+
+\subsection{确定性有限特征误差界}
+设 $h_\theta=h_0+\sum_jc_{\theta j}\psi_j$、$h_*=h_0+\sum_jc_{*j}\psi_j+R$，且 $Y_i=\nabla h_*(z_i)+\eta_i$。去除常数基方向，将导数特征矩阵堆叠成 $A$。对固定的标量观测归一化 $N_o$，假设
+\begin{equation}
+ \begin{aligned}
+ G&=A^TA/N_o\succeq\lambda I,\qquad\lambda>0,\\
+ r&=\|\nabla h_\theta-Y\|_2/\sqrt{N_o},\\
+ e&=\|\nabla R+\eta\|_2/\sqrt{N_o}.
+ \end{aligned}
+ \label{eq:supp-learn-gram-definitions}
+\end{equation}
+样本上有 $A\Delta c=(\nabla h_\theta-Y)+(\nabla R+\eta)$，其中 $\Delta c=c_\theta-c_*$。于是
+\begin{equation}
+ \sqrt\lambda\|\Delta c\|_2
+ \le(\Delta c^TG\Delta c)^{1/2}\le r+e.
+ \label{eq:supp-learn-coefficient-proof}
+\end{equation}
+对任何满足三角不等式的函数范数，由 Cauchy--Schwarz 不等式得到
+\begin{equation}
+ \begin{aligned}
+ \|h_\theta-h_*\|_{\mathcal X}
+ &\le\Big(\sum_j\|\psi_j\|_{\mathcal X}^2\Big)^{1/2}
+       \frac{r+e}{\sqrt\lambda}\\
+ &\quad+\|R\|_{\mathcal X}.
+ \end{aligned}
+ \label{eq:supp-learn-gram-conclusion}
+\end{equation}
+证明针对拟合系数本身，不要求任何特定优化器的收敛结论。对单项式 $\psi=z^\alpha$，在 $|z_j|\le\rho$ 上的解析范数不超过 $\rho^{|\alpha|}$，实域 $C^\ell$ 界为
+\begin{equation}
+ \max_{|\beta|\le\ell,\,\beta\le\alpha}
+ \frac{\alpha!}{(\alpha-\beta)!}\rho^{|\alpha|-|\beta|}.
+ \label{eq:supp-learn-monomial-bound}
+\end{equation}
+解析作用角图必须映入已认证的复域；实域 $C^\ell$ 复合则需要图导数的界。对于积分方程，同一代数适用于实际积分特征矩阵，求积、端点和观测误差进入 $e$。导出舍入额外增加一个范数界。观测残差很小并不能界定类外项 $R$。
+
+\subsection{条件性统计强范数界}
+设 $\mathcal D=\mathbb T^n\times B$ 的作用量域光滑有界，$d=2n$、$p>d$，且整数 $\ell\ge1$、$s>\ell+d/p$。令 $X_i$ 独立，密度满足 $f\ge m_0>0$。将每个可训练复参数实化，并假设 $\Theta\subset[-B_\Theta,B_\Theta]^{P_\Theta}$。减去空间均值后定义 $e_\theta=h_\theta-h_*-\overline{h_\theta-h_*}$。假设在整个域和参数类上
+\begin{align}
+ \|\nabla e_\theta(x)\|_p&\le Q_*,\nonumber\\
+ \|\nabla h_\theta(x)-\nabla h_\eta(x)\|_p
+ &\le L_g\|\theta-\eta\|_\infty,\nonumber\\
+ \|e_\theta\|_{W^{s,p}}&\le M_s.
+ \label{eq:supp-learn-stat-assumptions}
+\end{align}
+这些是假设于整个函数类的定量条件。若参数 Lipschitz 常数使用欧氏范数，则须先乘以 $\sqrt{P_\Theta}$，才能用于上式的无穷范数。
+
+对固定覆盖半径 $0<b\le2B_\Theta$，无穷范数网格点数至多为 $(1+2B_\Theta/b)^{P_\Theta}$。损失 $r_\theta(x)=\|\nabla e_\theta(x)\|_p^p$ 位于 $[0,Q_*^p]$，并关于参数具有 $L_{\mathrm{par}}=pQ_*^{p-1}L_g$ 的 Lipschitz 常数。Hoeffding 不等式和并集界以至少 $1-\delta$ 的概率控制全部网格点。将经验损失和总体损失分别从网格延拓，代价为 $2L_{\mathrm{par}}b$，得到同时成立的
+\begin{equation}
+ \begin{aligned}
+ R_\theta&\le\widehat R_\theta+\Gamma,\\
+ \Gamma&=2L_{\mathrm{par}}b\\
+ &\quad+Q_*^p\sqrt{\frac{P_\Theta\log(1+2B_\Theta/b)+\log(1/\delta)}{2N}},
+ \end{aligned}
+ \label{eq:supp-learn-covering}
+\end{equation}
+其中 $\widehat R_\theta=N^{-1}\sum_i r_\theta(X_i)$，$R_\theta=\int r_\theta\,d\mu$。因此该事件包含利用这些训练数据选择的参数。
+
+密度下界和均值为零函数的 Poincar\'e 不等式给出
+\begin{equation}
+ \begin{aligned}
+ \|e_\theta\|_{W^{1,p}}&\le G_\theta,\\
+ G_\theta&:=C_Pm_0^{-1/p}(\widehat R_\theta+\Gamma)^{1/p}.
+ \end{aligned}
+ \label{eq:supp-learn-poincare}
+\end{equation}
+对 $g=\nabla e_\theta$ 使用 Gagliardo--Nirenberg 不等式，取导数阶数 $j=\ell-1$、$m=s-1$，两端可积指数均为 $p$。解得
+\begin{equation}
+ \begin{aligned}
+ 0&=\frac{j}{d}+\alpha\left(\frac1p-\frac{m}{d}\right)+\frac{1-\alpha}{p}\\
+ &\Longrightarrow\quad
+ \alpha=\frac{\ell-1+d/p}{s-1}\in(0,1).
+ \end{aligned}
+ \label{eq:supp-learn-interpolation-exponent}
+\end{equation}
+并使用作用量域上的延拓和周期角坐标图，得到
+\begin{equation}
+ \|e_\theta\|_{C^\ell}
+ \le C_{\mathrm{GN}}\left(G_\theta+M_s^\alpha G_\theta^{1-\alpha}\right).
+ \label{eq:supp-learn-interpolation-result}
+\end{equation}
+非齐次项和 $W^{1,p}\hookrightarrow C^0$ 控制低阶导数，条件性蕴含得证。轨迹相邻样本和低经验损失均不能自动提供所需的采样、覆盖及统一高阶导数常数。
+
+\subsection{精确离散映射的条件性持久性}
+设在声明的复作用角域上，$h\circ\mathcal T=h_0+P$，且 $\|P\|\le\varepsilon$。要求正则图 $\mathcal T$ 及其逆解析、导数受控，步进映射 $\Psi_\Delta$ 及其逆在保留域上解析且 exact-symplectic，并具有端点保持于域内的唯一隐式分支。对中心生成函数 $S_\Delta$，$\tfrac12\sup\|JS_\Delta''\|<1$ 配合这些域裕量，是充分的局部逆条件。所研究的映射为 $\mathcal T^{-1}\Psi_\Delta\mathcal T$，并非在非线性坐标代换后重新离散化。
+
+对阶数为 $p_{\mathrm{int}}$ 的方法，较小域上的解析一致性及短时扰动估计给出映射缺陷 $C_1\Delta\varepsilon+C_2\Delta^{p_{\mathrm{int}}+1}$。要求混合端点投影可逆，并存在全局周期原函数。相应混合生成方程为
+\begin{equation}
+ \begin{aligned}
+ I_+&=I_--\partial_\phi G_\Delta(I_+,\phi_-),\\
+ \phi_+&=\phi_-+\Delta\omega(I_+)\\
+ &\quad+\partial_I G_\Delta(I_+,\phi_-),
+ \end{aligned}
+ \label{eq:supp-learn-discrete-generator}
+\end{equation}
+其中 $\omega=\nabla h_0$，且在缩小域上有界
+\begin{equation}
+ \|G_\Delta/\Delta\|\le C_3\varepsilon+C_4\Delta^{p_{\mathrm{int}}}.
+ \label{eq:supp-learn-discrete-budget}
+\end{equation}
+假设统一扭转界为
+\begin{equation}
+ \begin{aligned}
+ \iota\|v\|_\infty&\le\|D_I\omega(I)v\|_\infty\le\Theta\|v\|_\infty,\\
+ &\qquad 0<\iota\le\Theta.
+ \end{aligned}
+ \label{eq:supp-learn-discrete-twist}
+\end{equation}
+对 \citet{Shang1999} 的充分解析映射路线，取 $\tau_D>n+1$、$0<\Delta\le1$ 和 $0<\gamma_D\le\min(1,\rho_I\Theta/2)$，其中 $\rho_I$ 为复作用量半径。保留频率须距频率域边界至少 $2\gamma_D$，并满足正文对全部整数给出的离散除数条件。在定理的较小复域上要求
+\begin{equation}
+ C_3\varepsilon+C_4\Delta^{p_{\mathrm{int}}}
+ \le\delta_0\gamma_D^2\iota^2\Theta^{-3}.
+ \label{eq:supp-learn-discrete-threshold}
+\end{equation}
+此时解析映射定理给出相应不变环面；正测度结论还需要定理的域几何和边界正则性假设。常数依赖维数、指数、宽度、导数和坐标图界，尚未对当前三维模型求值。有限求解残差、耗散力和切换并不自动满足这一精确映射假设。
+
+\subsection{KAM 转移与继承的两模态结果}
+对有限光滑性表述，取 $n\ge2$、$\tau>n-1$ 和整数 $\ell>2(\tau+1)$。在同一正则作用角图上，假设 $h_0\in C^{\ell+2}$，且 $\nabla h_0:B\to\Omega$ 为具有有界 $C^\ell$ 逆的微分同胚。将频率限制为：满足 $|k\cdot\omega|\ge\gamma|k|_1^{-\tau}$，对所有非零整数 $k$ 成立，且 $\operatorname{dist}(\omega,\partial\Omega)\ge\gamma$。采用相应有限光滑性定理\citep{Bounemoura2020}的域、范数及阈值 $c_K$，令 $\beta_\theta\ge\|P_\theta-\bar P_\theta\|_{C^\ell}$，并假设 $\beta_\theta+E_\theta<c_K\gamma^2$。由于
+\begin{equation}
+ P_*-\bar P_*=(P_\theta-\bar P_\theta)-e_\theta,
+ \label{eq:supp-learn-kam-triangle}
+\end{equation}
+两个扰动分别满足阈值。定理为两个 Hamiltonian 给出不变 Lagrangian 环面，其嵌入可能不同。在其频率边界假设下，排除集的测度估计为 $C\gamma$，而非 $C\gamma^2$。这一结论除学习误差外，还要求坐标图和物理扰动界。当前样本损失是平方梯度损失；没有进一步估计，不能把它作为所需 $p>d$ 界的数值评估。
+
+继承的平面完整余弦模型具有四次作用量 Hessian
+\begin{equation}
+ \begin{aligned}
+ A_{\mathrm{old}}&=\frac{\operatorname{diag}(d_j^4)-2vv^T}{8},\\
+ v_j&=d_j^2,\\
+ \det A_{\mathrm{old}}&=(1-2n)8^{-n}\prod_jd_j^4.
+ \end{aligned}
+ \label{eq:supp-learn-old-twist}
+\end{equation}
+当所有 $d_j\ne0$ 时，矩阵行列式引理证明非退化性，无需正定。这一代数属于该余弦模型，不包含新的变质量三次修正。
+
+冻结的两自由度有限幅值计算还使用指定 Fourier 嵌入、复条带、别名和尾项界、扭转逆以及后验小量检验。保存文本针对短轨迹 COMSOL 拟合报告：条带缺陷低于 $2.731\times10^{-77}$、修正低于 $2.0894\times10^{-41}$、端点见证位移大于 1.8977904\,mm。原始 Fourier/Arb/输入档案在此不可用，因此没有独立重新认证这些历史数值。Python 三种子拟合、完整有限元积分拟合和短轨迹拟合是不同的冻结 Hamiltonian，不能交换证书或控制系数。极薄的认证管也不能定位给定物理初态是否位于其中。
+
+该管的原函数需要参考作用量。对 $J=j(t)+DF(t)^{-T}I$，令 $\beta=j\cdot DF\,dt$。Lagrangian 性意味着 $d\beta=0$，但其周期不必为零。定义 $a_j=(2\pi)^{-1}\oint_{\gamma_j}\beta$，则 $\beta-a\cdot dt$ 的周期为零，并等于 $dS$，其中 $S$ 为周期函数，故
+\begin{equation}
+ \Psi^*\lambda-(I+a)\cdot dt=dS.
+ \label{eq:supp-learn-reference-action}
+\end{equation}
+证明方法是在普适覆盖上积分闭的零周期形式；零周期保证原函数可下降到环面。未移位映射仍然是辛的，且保持体积。圆环面满足 $\beta=r^2dt/2$，周期 $\pi r^2$ 非零，说明闭性不能推出未移位的 exact 性。
+
+继承的受控 64 模态平面提升假设低模态动量 Hessian 正定、动量纤维凸、两端口磁接口可逆、几何控制因子非零且输入可实现。正确的 Legendre 反解使受控的两个低模态服从指定 Hamiltonian。其余阻尼线性模态具有 Fourier 响应
+\begin{equation}
+ \begin{aligned}
+ a^*_{j,k}&=\frac{b_jF_k+t_jU_k}{\omega_j^2-(k\cdot\Omega)^2+i\alpha(k\cdot\Omega)},\\
+ &\qquad\alpha>0.
+ \end{aligned}
+ \label{eq:supp-learn-planar-lift}
+\end{equation}
+分母在零频处为正，在任意非零实频处具有非零虚部。因此解析强迫在略小条带上给出解析响应，而偏离该响应的量满足指数稳定齐次方程。这将二维不变环面提升到受控的 128 维平面状态空间，并不使完整闭环成为 Hamiltonian 系统，也不认证 128 维正体积 KAM 族。在其独立的平面 S 路径任务中，CHNN 端点反馈误差为 6.419\,$\mu$m，二次模型为 6.207\,$\mu$m，物理静态反解为 4.124\,$\mu$m，模态输出反馈为 25.308\,$\mu$m。该历史任务采用基座进给，不含流体和接触。这个不利对照及其平面适用范围均保留在证据中。

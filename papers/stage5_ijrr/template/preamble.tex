@@ -1,0 +1,29 @@
+% Shared mathematical and layout conventions; the SAGE class is unmodified.
+\usepackage{fontspec}
+\setmainfont{NimbusRoman-Regular.otf}[BoldFont=NimbusRoman-Bold.otf,ItalicFont=NimbusRoman-Italic.otf,BoldItalicFont=NimbusRoman-BoldItalic.otf]
+\setsansfont{NimbusSans-Regular.otf}[BoldFont=NimbusSans-Bold.otf,ItalicFont=NimbusSans-Italic.otf,BoldItalicFont=NimbusSans-BoldItalic.otf]
+\setmonofont{DejaVu Sans Mono}[Scale=0.78]
+\usepackage{mathtools,tabularx,array,etoolbox}
+\usepackage[unicode,colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\urlstyle{same}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\setlength{\emergencystretch}{1em}
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{remark}{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\StageBase}{1c73a580441200d6594e2a2a96374edc1c0e98e6}
+\def\journalname{IJRR research manuscript}
+\def\volumenumber{Draft}
+\def\issuenumber{2026}
+\def\volumeyear{2026}
+% Remove publication metadata placeholders in the document, not in sagej.cls.
+\makeatletter
+\patchcmd{\@maketitle}{\hbox{}\volumenumber(\issuenumber):\startpage--\endpage\\}{\hbox{}Unsubmitted manuscript\\}{}{\PackageError{paper}{Title metadata patch failed}{}}
+\patchcmd{\@maketitle}{\hbox{}\copyright The Author(s) \volumeyear\\}{\hbox{}Authors to be confirmed\\}{}{\PackageError{paper}{Author metadata patch failed}{}}
+\patchcmd{\@maketitle}{\hbox{}Reprints and permission:\\}{\hbox{}Prepared for IJRR\\}{}{\PackageError{paper}{Submission metadata patch failed}{}}
+\patchcmd{\@maketitle}{\hbox{}sagepub.co.uk/journalsPermissions.nav\\}{}{}{\PackageError{paper}{Permissions metadata patch failed}{}}
+\patchcmd{\@maketitle}{\hbox{}DOI: 10.1177/ToBeAssigned\\}{\hbox{}No DOI assigned\\}{}{\PackageError{paper}{DOI metadata patch failed}{}}
+\makeatother

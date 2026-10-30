@@ -1,0 +1,429 @@
+\section{Complete local proofs for transported structure and generating maps}
+\label{sec:sup-theory}
+
+This supplement supplies the local proofs underlying the theory section. Throughout, $z=(Q,P)\in U\subset\mathbb R^{2n}$, $J=\left(\begin{smallmatrix}0&I\\-I&0\end{smallmatrix}\right)$, $K_0=-J$, and $(Da)_{ij}=\partial_{z_j}a_i$. The matrix $M$ denotes normalized mass. Derivatives are taken at fixed physical time unless indicated otherwise. A time subscript on a differential form denotes its time section; $\partial_\tau$ denotes differentiation. Domains are restricted as necessary to make flows, inverse maps, and implicit branches single-valued. These are local results, with the regularity and uniform estimates stated explicitly below.
+
+\subsection{Variational signs, compatibility, and transported volume}
+% Source: stage5/proofs/corrected_mathematics.md, section 3, R7--R10; stage4/audit/birkhoff_full_audit.md, sections 2--3; original1025 p1113--p1125 and p1180.
+Let $a$ have two continuous spatial derivatives and one continuous time derivative, and let $B$ be differentiable. For a variation $z+\epsilon\xi$ with $\xi$ zero at the endpoints,
+\begin{align}
+ \left.\frac{d}{d\epsilon}\right|_0
+ \int \{a(z+\epsilon\xi,\tau)^T(\dot z+\epsilon\dot\xi)-B(z+\epsilon\xi,\tau)\}\,d\tau
+ &=\int\{\xi^TDa^T\dot z+a^T\dot\xi-\xi^T\nabla B\}\,d\tau\\
+ &=\int\xi^T\{(Da^T-Da)\dot z-\partial_\tau a-\nabla B\}\,d\tau.
+ \label{eq:sup-variation}
+\end{align}
+The fundamental lemma gives $K\dot z=\nabla B+\partial_\tau a$ with $K=Da^T-Da$. In particular the convention $D=-\nabla B-\partial_\tau a$ yields $\dot z=-K^{-1}D$, provided $K$ is invertible. Independently,
+\begin{equation}
+ d(a^Tdz)=\sum_{i,j}\partial_{z_j}a_i\,dz_j\wedge dz_i
+ =\frac12\sum_{i,j}(\partial_{z_i}a_j-\partial_{z_j}a_i)\,dz_i\wedge dz_j.
+ \label{eq:sup-twoform-factor}
+\end{equation}
+The factor $1/2$ is essential when both indices are summed. It gives $\Omega(v,w)=v^TKw$, and hence $\iota_f\Omega=-(Kf)^Tdz$.
+
+Since $d\Omega=0$, Cartan's formula implies
+\begin{equation}
+ \partial_\tau\Omega+\mathcal L_f\Omega
+ =d((\partial_\tau a)^Tdz)-d((Kf)^Tdz)
+ =-d(dB)=0.
+ \label{eq:sup-cartan}
+\end{equation}
+In coordinates this is $K_\tau+DK[f]+Df^TK+KDf=0$. Differentiating the flow pullback therefore gives
+$\frac{d}{d\tau}\Phi_{\tau,s}^*\Omega_\tau=0$, proving $\Phi_{\tau,s}^*\Omega_\tau=\Omega_s$. Wedge powers give preservation of $\Omega_\tau^n/n!$. For a near-identity orientation-preserving flow, taking determinants in the matrix pullback yields
+\begin{equation}
+ \det D\Phi_{\tau,s}(z)\,
+ \frac{\sqrt{|\det K_\tau(\Phi_{\tau,s}z)|}}
+      {\sqrt{|\det K_s(z)|}}=1.
+ \label{eq:sup-density}
+\end{equation}
+This does not require the Euclidean determinant to equal one. For uniform damping of $n$ momenta, it equals $e^{-n\gamma(\tau-s)}$, while the displayed density ratio equals $e^{n\gamma(\tau-s)}$.
+
+\subsection{Homogeneous transport, the sourced equation, and truncation}
+% Source: stage4/audit/birkhoff_full_audit.md, section 3; stage5/proofs/birkhoff_transport.md, sections 1--3 and 6; stage5/program/transport_native.py, coefficient_function, source_coefficient_function, lie_oneform.
+If $f$ generates a smooth local invertible flow and $d\alpha_s$ is nondegenerate, define $\alpha_\tau=(\Phi_{\tau,s}^{-1})^*\alpha_s$. Pullback preserves closedness and nondegeneracy. Differentiation yields $\partial_\tau a+Da f+Df^Ta=0$. Taking $B=a^Tf$ gives
+\begin{equation}
+ \nabla B=Da^Tf+Df^Ta,
+ \qquad \nabla B+\partial_\tau a=(Da^T-Da)f.
+ \label{eq:sup-transport-representation}
+\end{equation}
+Thus this is an existence proof of a Birkhoff representation. It is not an algorithm that presupposes access to the unknown flow.
+
+Let $\theta=\tau-s$ and suppose $f=\sum_{k\ge0}\theta^kf_k$, $a=\sum_{j\ge0}\theta^ja_j$. The coefficient of $\theta^m$ in the transport equation is
+\begin{equation}
+ (m+1)a_{m+1}+\sum_{j+k=m}(Da_jf_k+Df_k^Ta_j)=0.
+ \label{eq:sup-general-transport}
+\end{equation}
+This proves the nonautonomous coefficient recursion, with factorials included in $a_j,f_k$. For an autonomous field, $a_{j+1}=-\mathcal L_fa_j/(j+1)$. Substitution of $a^{[r_o]}=\sum_{j=0}^{r_o}\theta^ja_j$ leaves only
+$\partial_\tau a^{[r_o]}+\mathcal L_fa^{[r_o]}=\theta^{r_o}\mathcal L_fa_{r_o}$. Its representation residual is the negative of this expression. Analyticity on a common complex neighborhood with suitable bounds is required for an infinite-series convergence claim. Finite differentiability suffices to compute finitely many coefficients and state a finite remainder.
+
+For $h=T+V$, $T=P^TM(Q)^{-1}P/2$, and $f=(h_P,-h_Q+r)$, set $a_0=(P,0)$ and $\ell=P^Th_P-h=T-V$. A componentwise calculation gives
+\begin{align}
+ (Da_0 f)_Q&=-h_Q+r,&(Da_0 f)_P&=0,\\
+ (Df^Ta_0)_Q&=(D_Qh_P)^TP,&(Df^Ta_0)_P&=(D_Ph_P)^TP.
+\end{align}
+The gradient of $\ell=P^Th_P-h$ has precisely these conservative components, because the derivative of $P^Th_P$ in momentum contains an additional $h_P$ that cancels the derivative of $h$. Therefore
+\begin{equation}
+ \mathcal L_fa_0=d\ell+(r,0).
+ \label{eq:sup-source-identity}
+\end{equation}
+The notation $d\ell$ here denotes its coefficient vector. Taking $a'=a_0+b$ and requiring $\partial_\tau a'+\mathcal L_fa'=d\ell$ yields
+\begin{equation}
+ b_0=0,\quad b_1=-(r,0),\quad b_{j+1}=-\mathcal L_fb_j/(j+1),
+ \qquad B'=a'^Tf-\ell=h+b^Tf.
+ \label{eq:sup-source-series}
+\end{equation}
+For a truncation at $r_o$, all lower powers cancel and
+\begin{align}
+ e_B&=K^{[r_o]}f-\partial_\tau a'^{[r_o]}-\nabla B'^{[r_o]}
+       =-\theta^{r_o}\mathcal L_fb_{r_o},\\
+ f_a&=(K^{[r_o]})^{-1}(\nabla B'^{[r_o]}+\partial_\tau a'^{[r_o]})
+       =f-(K^{[r_o]})^{-1}e_B.
+ \label{eq:sup-source-remainder}
+\end{align}
+For $r=0$, all $b_j=0$, so $a'=a_0$ and $B'=h$ are already exact.
+
+To verify the gauge relation, solve locally $\sigma_\tau+f^T\nabla\sigma=\ell$, $\sigma(s)=0$. Exterior differentiation commutes with the Lie derivative, so $a=a'-d\sigma$ solves homogeneous transport. Moreover,
+\begin{equation}
+ B=B'+\sigma_\tau=a'^Tf-\ell+\sigma_\tau
+   =(a'-d\sigma)^Tf=a^Tf.
+ \label{eq:sup-gauge-equivalence}
+\end{equation}
+For any gauge $a\mapsto a+d\sigma$, $B\mapsto B-\sigma_\tau$, both $K$ and $e_B$ are unchanged by cancellation of mixed derivatives. This fact does not allow a gauge change to repair a nonzero residual. Indeed, with $\sigma_1=\ell$, $\sigma_{j+1}=-(f^T\nabla\sigma_j)/(j+1)$ and $a_j=b_j-d\sigma_j$, a finite $\sigma^{[r_o]}$ obeys
+\begin{equation}
+ \sigma^{[r_o]}_\tau+f^T\nabla\sigma^{[r_o]}
+ =\ell+\theta^{r_o}f^T\nabla\sigma_{r_o}.
+ \label{eq:sup-gauge-last-term}
+\end{equation}
+Transforming the finite homogeneous pair with this gauge therefore gives the sourced scalar minus $\theta^{r_o}f^T\nabla\sigma_{r_o}$. The source construction truncates a different but infinitely gauge-equivalent equation; it is not a claim that a finite gauge transformation removes truncation error.
+
+\subsection{Spatial coefficient approximation and the represented tangent}
+% Source: stage5/proofs/birkhoff_transport.md, section 3; stage5/program/transport_cache.py, coefficient_data, data, CachedRepresentedField.evaluate and jacobian.
+The implementation approximates the coefficient functions, rather than the original vector field, by polynomials
+\begin{equation}
+ \widetilde b_j(z)=b_j(z_*)+Db_j(z_*)(z-z_*)
+       +\tfrac12D^2b_j(z_*)[z-z_*,z-z_*],
+ \label{eq:sup-cache}
+\end{equation}
+with a zero quadratic term when only linear coefficients have been computed. Form $\widetilde b=\sum_{j=1}^{r_o}\theta^j\widetilde b_j$, $\widetilde a=a_0+\widetilde b$, and $\widetilde B=h+\widetilde b^Tf$. By the product rule and \eqref{eq:sup-source-identity},
+\begin{equation}
+ \widetilde e_B=-\{\widetilde b_\tau+D\widetilde b f+Df^T\widetilde b+(r,0)\},\qquad
+ \widetilde f_a=f-\widetilde K^{-1}\widetilde e_B,
+ \quad\widetilde K=K_0+D\widetilde b^T-D\widetilde b.
+ \label{eq:sup-cache-field}
+\end{equation}
+At the center, exact coefficient values and first derivatives reproduce the native time-jet residual. Away from the center, approximation of these coefficients causes a separate error. At all points $d\widetilde\Omega=0$ holds algebraically, whereas time compatibility with the original field must be checked independently. Exact compatibility holds for $\widetilde f_a$ by its defining representation.
+
+Differentiating $\widetilde K\widetilde f_a=\nabla\widetilde B+\partial_\tau\widetilde a$ in the coordinate $z_j$ and collecting columns yields
+\begin{equation}
+ D\widetilde f_a=\widetilde K^{-1}
+ \left(\nabla^2\widetilde B+D\widetilde b_\tau
+       -[\partial_{z_j}\widetilde K\,\widetilde f_a]_j\right).
+ \label{eq:sup-represented-tangent}
+\end{equation}
+Every derivative of the actual force and Hamiltonian occurring in $\widetilde B$ belongs in this expression. In particular, differentiating a closed-loop field includes the state derivative of its feedback. Freezing feedback in this tangent would differentiate a different field.
+
+\subsection{Moser pullback, state sensitivities, and domain control}
+% Source: stage5/proofs/birkhoff_transport.md, section 4; stage5/program/moser_chart.py; stage5/program/transport_cache.py, ball_bounds.
+Fix $\tau$ and put $\Omega_{\lambda,\tau}=\Omega_0+\lambda d(\widetilde b^Tdz)$. Assume its matrix $K_{\lambda,\tau}$ is nonsingular for $0\le\lambda\le1$, and the flow of $v_{\lambda,\tau}=K_{\lambda,\tau}^{-1}\widetilde b$ exists throughout this interval in a common domain. Then $\iota_v\Omega_{\lambda,\tau}=-\widetilde b^Tdz$, and
+\begin{align}
+ \frac{d}{d\lambda}\rho_{\lambda,\tau}^*\Omega_{\lambda,\tau}
+ &=\rho_{\lambda,\tau}^*
+   \{d(\widetilde b^Tdz)+\mathcal L_v\Omega_{\lambda,\tau}\}\\
+ &=\rho_{\lambda,\tau}^*\{d(\widetilde b^Tdz)+d\iota_v\Omega_{\lambda,\tau}\}=0.
+ \label{eq:sup-moser-proof}
+\end{align}
+Thus $\rho_{1,\tau}^*\widetilde\Omega_\tau=\Omega_0$, and for $\chi_\tau=\rho_{1,\tau}^{-1}$, $D\chi_\tau^TK_0D\chi_\tau=\widetilde K$. This establishes the exact auxiliary-flow identity. Finite numerical integration has a separately measured pullback defect.
+
+If $z=\rho(y,\tau)$, where $\rho=\rho_{1,\tau}$, differentiation along a represented trajectory gives
+$\widetilde f_a=\rho_\tau+D_y\rho\,\dot y$. Therefore $u=\dot y=\mathsf R^{-1}(\widetilde f_a\circ\rho-\upsilon)$, with $\mathsf R=D_y\rho$ and $\upsilon=\rho_\tau$. Compatibility of the represented form and the coordinate transformation implies $\mathcal L_u\Omega_0=0$. Consequently $d((K_0u)^Tdy)=0$. On a star-shaped domain about $y_*$,
+\begin{equation}
+ \mathcal h(y,\tau)=\int_0^1 (K_0u)(y_*+a(y-y_*),\tau)^T(y-y_*)\,da
+ \label{eq:sup-chart-hamiltonian}
+\end{equation}
+has gradient $K_0u$ by the radial Poincar\'e formula, and $u=J\nabla\mathcal h$. No formula for this scalar justifies dropping $\upsilon$.
+
+Differentiating $\rho'=v(\rho,\lambda,\tau)$ first in initial state and physical time gives
+\begin{equation}
+ \mathsf R'=Dv\mathsf R,\qquad
+ \upsilon'=Dv\upsilon+v_\tau,\qquad
+ \mathsf R(0)=I,\quad\upsilon(0)=0.
+ \label{eq:sup-first-sensitivity}
+\end{equation}
+Differentiating again gives, with zero initial second sensitivities,
+\begin{equation}
+ \mathsf S'=Dv\mathsf S+D^2v[\mathsf R,\mathsf R],\qquad
+ \mathsf W'=Dv\mathsf W+D^2v[\mathsf R,\upsilon]+Dv_\tau\mathsf R,
+ \label{eq:sup-second-sensitivity}
+\end{equation}
+where $\mathsf S=D_y^2\rho$, $\mathsf W=D_y\rho_\tau$. Finally differentiate $\mathsf R u=\widetilde f_a\circ\rho-\upsilon$ in an arbitrary direction $\zeta$:
+\begin{equation}
+ Du[\zeta]=\mathsf R^{-1}
+ \{D\widetilde f_a\mathsf R\zeta-\mathsf W\zeta-\mathsf S[\zeta,u]\}.
+ \label{eq:sup-chart-tangent}
+\end{equation}
+This is the full moving-chart tangent, not a frozen-chart derivative.
+
+For the quadratic coefficient cache, $\widetilde K$ is affine in $z$. On a radius-$R_b$ ball about $z_*$, the triangle and Cauchy--Schwarz inequalities give
+\begin{align}
+ \delta_K&=\|\widetilde K(z_*)-K_0\|_2
+       +R_b\left(\sum_j\|\partial_{z_j}\widetilde K\|_2^2\right)^{1/2},\\
+ b_{\max}&=\|\widetilde b(z_*)\|+R_b\|D\widetilde b(z_*)\|_2
+                          +\tfrac12R_b^2\|D^2\widetilde b\|_F.
+ \label{eq:sup-ball-bounds}
+\end{align}
+Since all singular values of $K_0$ equal one, $\delta_K<1$ implies $\sigma_{\min}(K_{\lambda,\tau})\ge1-\delta_K$, uniformly in the ball and $\lambda$. Hence $\|v\|\le b_{\max}/(1-\delta_K)$. If the initial distance from $z_*$ plus this speed bound is strictly less than $R_b$, a first-exit argument prevents the exact auxiliary trajectory from reaching the boundary before $\lambda=1$. These are analytical sufficient conditions for the specified polynomial. Floating-point evaluation without directed rounding does not turn them into an interval-certified bound for all physical coefficients.
+
+\subsection{Proof of Theorem A and the initial gauge}
+% Source: stage5/proofs/corrected_mathematics.md, sections 4--4.1, A1--A4; stage4/audit/birkhoff_full_audit.md, section 5; original1025 p0862--p0879, p1179--p1206.
+Fix endpoint times $s,\tau$, with closed, nondegenerate forms $\Omega_s$ and $\Omega_\tau$ on the respective endpoint domains. Let $\Phi$ be a local diffeomorphism preserving the specified two time sections. Suppose a locally invertible joint endpoint transformation $\mathcal E$ satisfies
+$\mathcal E^*d(\widehat w^Tdw)=\Omega_\tau(z_+)-\Omega_s(z_-)$. For the graph embedding $\iota:z_-\mapsto(\Phi(z_-),z_-)$,
+\begin{equation}
+ d\,\iota^*\mathcal E^*(\widehat w^Tdw)=\Phi^*\Omega_\tau-\Omega_s=0.
+ \label{eq:sup-graph-closed}
+\end{equation}
+Write $D\mathcal E=\left(\begin{smallmatrix}A&B_e\\C&D_e\end{smallmatrix}\right)$ and $M_\Phi=D\Phi$. On this graph,
+\begin{equation}
+ d\widehat w=(AM_\Phi+B_e)\,dz_-,\qquad
+ dw=(CM_\Phi+D_e)\,dz_-.
+ \label{eq:sup-graph-tangent}
+\end{equation}
+If $CM_\Phi+D_e$ is nonsingular, the inverse function theorem makes $w$ a coordinate on a restricted graph neighborhood. Restrict further to a star-shaped coordinate domain. Closedness in \eqref{eq:sup-graph-closed} and the Poincar\'e lemma then provide $\widehat w=\nabla\phi$, and
+\begin{equation}
+ N=D_w\widehat w=(AM_\Phi+B_e)(CM_\Phi+D_e)^{-1}=N^T.
+ \label{eq:sup-hessian}
+\end{equation}
+Matrix order follows directly from \eqref{eq:sup-graph-tangent} and cannot be interchanged.
+
+Conversely, let $\phi$ be a local scalar and define $z_\pm(w)$ through the full joint inverse $\mathcal E^{-1}(\nabla\phi,w)$. If $D_wz_-$ is nonsingular, these endpoints form the graph of a local map $\Psi$. Pullback of $d(\nabla\phi^Tdw)=0$ through this graph and endpoint compatibility give $\Psi^*\Omega_\tau=\Omega_s$. This proves the reverse implication and identifies its extra projection condition. The relation $N(CM_\Phi+D_e)=AM_\Phi+B_e$ can, when its coefficient is invertible, be rearranged as
+\begin{equation}
+ M_\Phi=(A-NC)^{-1}(ND_e-B_e).
+ \label{eq:sup-reconstruct}
+\end{equation}
+It does not involve $N^{-1}$. For central endpoints at the identity map, $N=0$ and $CM_\Phi+D_e=I$, so demanding an invertible generator Hessian would exclude a valid initial state.
+
+At $\tau=s$, define $w_0(z)=\mathcal E_2(z,z,s,s)$. When $D_zw_0=C_0+D_{e,0}$ is invertible, set $z=z(w)$ and $c_0(w;s)=\mathcal E_1(z(w),z(w),s,s)$. The diagonal graph makes the endpoint two-form difference zero, so $Dc_0$ is symmetric. Let $x=w-w_*$. The normalized radial integral
+\begin{equation}
+ \phi_0(w;s)=\int_0^1 c_0(w_*+a x;s)^Tx\,da
+ \label{eq:sup-radial-gauge}
+\end{equation}
+has derivative in direction $\zeta$ equal to
+\begin{equation}
+ \int_0^1\{a(Dc_0\zeta)^Tx+c_0^T\zeta\}\,da
+ =\int_0^1\frac{d}{da}\{a c_0(w_*+a x;s)^T\zeta\}\,da
+ =c_0(w;s)^T\zeta.
+ \label{eq:sup-radial-proof}
+\end{equation}
+It also vanishes at $w_*$. Symmetry of $Dc_0$ is the needed step; radial integration of an arbitrary nonclosed vector field does not produce its potential. General endpoint gauges can have $c_0\ne0$: replacing $\widehat w=J(z_+-z_-)$ by $J(z_+-z_-)+\nabla\psi(w)$ preserves the endpoint two-form but yields $c_0=\nabla\psi$. The zero initial generator is therefore special to the ungauged central construction.
+
+An initial positive smallest singular value ensures transversality only nearby. If $T=CM_\Phi+D_e$ and $\|T(\tau,w)-T(s,w_*)\|_2<\sigma_{\min}(T(s,w_*))$ on a chosen neighborhood, the singular-value perturbation inequality guarantees regularity there. An analogous condition is needed for the negative-endpoint projection in reconstruction. Continuation ends if the joint inverse fails, a projection becomes singular, or an endpoint leaves the common domain. Sampled condition numbers do not establish these uniform neighborhood bounds.
+
+\subsection{Proof of Theorem B and scalar central recursion}
+% Source: stage5/proofs/corrected_mathematics.md, sections 5--5.1, B1--B4; stage4/audit/birkhoff_full_audit.md, section 6; original1025 p0881--p0888 and p1208--p1213.
+Keep $s$ and the initial endpoint fixed, and differentiate the moving final endpoint. At the point reconstructed by $\mathcal E^{-1}(g,w,\tau,s)$,
+\begin{equation}
+ \dot{\widehat w}=Af(z_+,\tau)+\mathcal E_{1,\tau},\qquad
+ \dot w=Cf(z_+,\tau)+\mathcal E_{2,\tau}.
+ \label{eq:sup-endpoint-evolution}
+\end{equation}
+Since $\widehat w=g(w,\tau;s)$, the chain rule yields $\dot{\widehat w}=D_wg\,\dot w+\partial_\tau g|_w$. Subtracting the second contribution gives
+\begin{equation}
+ \partial_\tau g|_w=(A-NC)f+\mathcal E_{1,\tau}-N\mathcal E_{2,\tau}
+ =\Psi(g,w,N,\tau;s),\qquad N=D_wg.
+ \label{eq:sup-fixed-pde}
+\end{equation}
+The explicit time derivatives include any time-dependent charts used to build $\mathcal E$. Differentiation along the moving midpoint is not a replacement for this fixed-$w$ derivative.
+
+Assume analyticity of the field, forms, and endpoint transformation on common local neighborhoods, with analytic joint inverse and regular projections. Analytic flow dependence and the analytic implicit function theorem then give an actual local analytic $g$. Set $g=\sum_{j\ge0}\theta^jc_j$. The coefficient of $\theta^m$ in its time derivative is $(m+1)c_{m+1}$. The coefficient on the right depends only on $c_0,\ldots,c_m$ and their $w$ derivatives, so
+\begin{equation}
+ c_{m+1}=\frac1{m+1}[\theta^m]\Psi\left(
+ \sum_{j=0}^m\theta^jc_j,w,\sum_{j=0}^m\theta^jD_wc_j,s+\theta;s\right).
+ \label{eq:sup-coefficient-recursion}
+\end{equation}
+In particular $c_1=\Psi_0$ and $2c_2=(\Psi_\tau+\Psi_gc_1+\Psi_N[D_wc_1])_0$. The last term is a Fr\'echet derivative with respect to the matrix argument. It cannot be omitted. Symmetry of the analytic $D_wg$ implies coefficientwise symmetry of every $D_wc_j$, so radial integration on the common star-shaped domain supplies $c_j=\nabla\phi_j$. A finite sum remains an exact gradient, and Theorem A reconstructs a structure-preserving local map if its negative projection remains invertible.
+
+If the truncated gradient error is bounded by $C\eta^{r_o+1}$ and the endpoint inverse and negative projection inverses have uniform derivative bounds, the mean value theorem and the implicit function theorem transfer this bound to the endpoint state error. A one-step stability factor $1+C\eta$ then gives global order $r_o$ on fixed time intervals by summation. Additional symmetry can cancel the leading defect. This reasoning uses a local state defect, not merely the number of nonzero displayed coefficients. With finite smoothness one replaces analyticity by a finite Taylor theorem of the required order and makes no infinite-series claim.
+
+For canonical endpoints choose $\widehat w=J(y_+-y_-)$ and $w=(y_++y_-)/2$. Then
+\begin{equation}
+ y_+=w-\tfrac12Jg,\quad y_-=w+\tfrac12Jg,
+ \qquad A=J,\quad C=I/2.
+ \label{eq:sup-central-inverse}
+\end{equation}
+For $u=J\nabla\mathcal h$, equation \eqref{eq:sup-fixed-pde} becomes $(J-N/2)J\nabla\mathcal h(y_+,\tau)$. On the other hand, because $N=N^T$,
+\begin{equation}
+ \nabla_w[-\mathcal h(w-Jg/2,\tau)]
+ =-(I+NJ/2)\nabla\mathcal h
+ =(J-N/2)J\nabla\mathcal h.
+ \label{eq:sup-central-gradient}
+\end{equation}
+The two scalar sides therefore differ by a function only of time. Choosing that time gauge gives
+\begin{equation}
+ \partial_\tau\phi=-\mathcal h(w-J\nabla\phi/2,\tau),\qquad\phi(w,s;s)=0,
+ \label{eq:sup-hamilton-jacobi}
+\end{equation}
+and coefficient extraction gives the computable scalar recursion
+\begin{equation}
+ \phi_{m+1}=-\frac1{m+1}[\theta^m]\mathcal h\left(
+ w-\tfrac12J\nabla\sum_{j=1}^m\theta^j\phi_j,s+\theta\right).
+ \label{eq:sup-scalar-recursion}
+\end{equation}
+For an autonomous Hamiltonian, $\phi_1=-\mathcal h$, $\phi_2=0$. To find $\phi_3$, the shifted argument is $w+\theta J\nabla\mathcal h/2+O(\theta^3)$; the linear contribution vanishes since $\nabla\mathcal h^TJ\nabla\mathcal h=0$. The quadratic coefficient is $f^T\mathcal h''f/8$, giving $\phi_3=-f^T\mathcal h''f/24$. Reversibility makes the local central generator odd in the step, so $\phi_4=0$. General explicit time dependence removes this oddness; for $\mathcal h=h+\tau Q^2/2$ at $s=0$, the next coefficient is $\phi_2=-Q^2/4$. This scalar example illustrates a restriction on extrapolating the autonomous formula, rather than an implemented general nonautonomous 24-dimensional recursion.
+
+\subsection{The original endpoint equations and noncommuting matrix elimination}
+% Source: stage5/proofs/corrected_mathematics.md, section 6, C30--C36; stage4/audit/birkhoff_full_audit.md, section 7; original1025 p0910/m0400, p0920/m0408, p0931/m0417, p0961/m0427, p0963/m0429, p0986/m0434, p1003/m0442.
+For endpoint order $Z=(Q_+,P_+,Q_-,P_-)$, introduce $(\widehat\xi,\widehat\pi,\xi,\pi)$ with $\xi=\overline Q$, $\pi=-\overline P$, $\widehat\xi=\delta P$, and $\widehat\pi=\delta Q$. The joint linear transformation and inverse are
+\begin{equation}
+ L=\begin{pmatrix}
+ 0&I&0&-I\\I&0&-I&0\\I/2&0&I/2&0\\0&-I/2&0&-I/2
+ \end{pmatrix},\qquad
+ L^{-1}=\begin{pmatrix}
+ 0&I/2&I&0\\I/2&0&0&-I\\0&-I/2&I&0\\-I/2&0&0&-I
+ \end{pmatrix}.
+ \label{eq:sup-original-matrix}
+\end{equation}
+Block multiplication gives both products equal to the identity. Fixing the negative endpoint and differentiating gives
+\begin{equation}
+ \dot{\widehat w}=\binom{\dot P_+}{\dot Q_+},\qquad
+ \dot w=\tfrac12\binom{\dot Q_+}{-\dot P_+},\qquad
+ \partial_\tau g|_w=\dot{\widehat w}-N\dot w.
+ \label{eq:sup-original-chain}
+\end{equation}
+The signs and block positions follow from $L$. The scalar $-\eta h(\xi,-\pi,\tau_m)$ has gradient $\eta(-h_Q,h_P)$, producing the conservative midpoint endpoint difference. For a damped oscillator $\dot P=-Q-\gamma P$, the apparent gradient in these variables would be $(-\xi+\gamma\pi,-\pi)$. Its cross derivatives are $\gamma$ and zero. Hence, for $\gamma\ne0$, it cannot be the gradient of a local scalar in this unmodified canonical endpoint chart. Compatible time-dependent forms or a valid specialization are necessary.
+
+For positive-definite $M(Q)$, differentiating $M^{-1}M=I$ gives $\partial_iM^{-1}=-M^{-1}(\partial_iM)M^{-1}$. Thus Hamilton's equations with generalized load give the full midpoint equations
+\begin{equation}
+ \delta Q=\eta M(\overline Q)^{-1}\overline P,\qquad
+ \delta P_i=\eta\{-\tfrac12\overline P^T\partial_iM^{-1}(\overline Q)\overline P
+                    -V_{,i}(\overline Q)+r_i(\overline z,\tau_m)\}.
+ \label{eq:sup-full-midpoint}
+\end{equation}
+All terms use the same unknown midpoint. This preserves the configuration derivatives of the kinetic energy. When $M$, $K_{\mathrm{lin}}$, and $C_d$ are constant and the force is prescribed, the equations reduce to
+\begin{equation}
+ \delta Q=\eta M^{-1}\overline P,\qquad
+ \delta P=-\eta K_{\mathrm{lin}}\overline Q-\eta C_dM^{-1}\overline P+\eta F_m.
+ \label{eq:sup-constant-midpoint}
+\end{equation}
+The first equation gives $\overline Q=Q_-+\eta M^{-1}(P_++P_-)/4$. Substitution into the second, with $\overline P=(P_++P_-)/2$, yields
+\begin{equation}
+ (I+E)P_+=(I-E)P_- -\eta K_{\mathrm{lin}}Q_-+\eta F_m,
+ \qquad E=\tfrac{\eta^2}{4}K_{\mathrm{lin}}M^{-1}+\tfrac\eta2 C_dM^{-1}.
+ \label{eq:sup-leftsolve-proof}
+\end{equation}
+The multiplication orders follow from substitution and require no commutation assumption. If $I+E$ is nonsingular, solve this left system and recover $Q_+=Q_-+\eta M^{-1}(P_++P_-)/2$. A midpoint feedback force depending on the unknown endpoints still leaves an implicit equation. For variable mass, this constant-matrix elimination is unavailable.
+
+For any smooth field, the complete time-midpoint scheme has local defect $O(\eta^3)$ by Taylor expansion about the temporal midpoint, including explicit time derivatives. Its global second order follows under the stability conditions proved below. Calling the generating approximation ``first degree in the step'' does not reduce the order of this symmetric time-midpoint update. A general damped midpoint remains a second-order approximation without automatically preserving the canonical form.
+
+\subsection{Nonseparable Central4, symmetry, and the exact primitive}
+% Source: stage5/proofs/integrators_full_coil.md, sections 2--3; stage3/source_inputs/v10/v10_framework_20261028/english/sections/supp_structure.tex, derivation of the fourth-order central generating function and exact-primitive subsections; stage3/program/rom_integrators.py.
+Let $f=J\nabla h$ be autonomous, with sufficiently many bounded derivatives on the common domain for the displayed remainders. Let $z_c$ be the exact solution at the temporal midpoint. Taylor expansion at $\pm\eta/2$ gives
+\begin{align}
+ m&=z_c+\frac{\eta^2}{8}f'f(z_c)+O(\eta^4),\\
+ z_+-z_-&=\eta f(z_c)+\frac{\eta^3}{24}\{f''[f,f]+(f')^2f\}(z_c)+O(\eta^5).
+ \label{eq:sup-central-taylor}
+\end{align}
+The inverse relation is $z_c=m-\eta^2f'f(m)/8+O(\eta^4)$. Substituting it into the leading field term changes its cubic contribution by $-\eta^3(f')^2f/8$, whereas the already cubic term can be evaluated at $m$ up to $O(\eta^5)$. Hence
+\begin{equation}
+ z_+-z_-=\eta f(m)+\frac{\eta^3}{24}\{f''[f,f]-2(f')^2f\}(m)+O(\eta^5).
+ \label{eq:sup-central-elimination}
+\end{equation}
+For $A_h=h''$ and $q_h=f^TA_hf$, differentiation in a direction $\zeta$ gives
+\begin{align}
+ Dq_h[\zeta]
+ &=2(Df\zeta)^TA_hf+h^{(3)}[\zeta,f,f]\\
+ &=\zeta^T\{h^{(3)}[f,f]-2A_hJA_hf\},
+ \label{eq:sup-central-derivative}
+\end{align}
+because $Df=JA_h$ and $(JA_h)^T=-A_hJ$. Multiplying the gradient by $J$ yields $J\nabla q_h=f''[f,f]-2(f')^2f$. Therefore
+\begin{equation}
+ S_\eta=\eta h+\frac{\eta^3}{24}q_h,\qquad
+ \delta z=J\nabla S_\eta(m)
+ \label{eq:sup-central4-method}
+\end{equation}
+matches the exact endpoint relation through order four, with local state defect $O(\eta^5)$ on a uniformly regular implicit branch. The generator satisfies $S_{-\eta}=-S_\eta$, so interchanging the endpoints and reversing the step leaves the equation unchanged. It is thus symmetric. No part of this derivation assumes a separable Hamiltonian; all mixed mass and potential derivatives remain in $h''$ and $h^{(3)}$.
+
+To prove symplecticity independently, differentiate the implicit equation. With $C_\eta=JS_\eta''(m)/2$,
+\begin{equation}
+ D\Phi=(I-C_\eta)^{-1}(I+C_\eta),\qquad
+ C_\eta^TK_0+K_0C_\eta=0.
+ \label{eq:sup-cayley}
+\end{equation}
+The second relation follows from the symmetry of $S_\eta''$. Expanding both sides gives $(I+C_\eta)^TK_0(I+C_\eta)=(I-C_\eta)^TK_0(I-C_\eta)$. Since $I-C_\eta$ and $I+C_\eta$ commute, multiplication by the inverse factors proves $D\Phi^TK_0D\Phi=K_0$.
+
+Exact symplecticity requires the stronger primitive statement. Write $\lambda_0=P^TdQ$ and expand $P_\pm=\overline P\pm\delta P/2$, $Q_\pm=\overline Q\pm\delta Q/2$. The terms even in the endpoint differences cancel, giving
+\begin{align}
+ P_+^TdQ_+-P_-^TdQ_-
+ &=\overline P^Td(\delta Q)+\delta P^Td\overline Q\\
+ &=\overline P^Td(\delta Q)-S_Q^Td\overline Q\\
+ &=d\{\overline P^T\delta Q-S_\eta(\overline Q,\overline P)\},
+ \label{eq:sup-exact-primitive}
+\end{align}
+where the last equality uses $\delta Q=S_P$ to cancel the $d\overline P$ terms. This proves exactness wherever the generator and implicit branch are single-valued. Ordinary midpoint is the case $S_\eta=\eta h$. The primitive argument concerns the ideal implicit map. It is not an identity for arbitrary finite-iteration output.
+
+The distinction between closed and exact matters on a torus. The closed form $\sum_j I_{0,j}d\theta_j$ has basic periods $2\pi I_{0,j}$ and need not be a differential of a single-valued scalar. More generally, if a symplectic tube map $F$ on $\mathbb T^n\times U_I$, with contractible $U_I$, gives $\beta=F^*\lambda_0-I^Td\theta$, define $I_{0,j}=(2\pi)^{-1}\oint_{\gamma_j}\beta$. Subtracting these periods leaves a closed form with zero periods and hence a single-valued primitive:
+\begin{equation}
+ F^*\lambda_0=(I+I_0)^Td\theta+dS.
+ \label{eq:sup-action-shift}
+\end{equation}
+This identity specifies a shifted reference primitive; it does not silently set $I_0$ to zero. The local Central4 primitive above has its own direct proof and does not depend on such a tube-map assumption.
+
+\subsection{Uniform damping and the scope of a weighted midpoint}
+% Source: stage5/proofs/integrators_full_coil.md, section 4; stage3/program/rom_integrators.py, weighted_midpoint; stage4/audit/birkhoff_full_audit.md, section 8.
+Suppose the sole additional load is $r=-\gamma P$ with constant $\gamma$. Define $\Pi=e^{\gamma\tau}P$ and $\mathcal h(Q,\Pi,\tau)=e^{\gamma\tau}h(Q,e^{-\gamma\tau}\Pi)$. Then
+\begin{equation}
+ \dot Q=h_P=\mathcal h_\Pi,\qquad
+ \dot\Pi=\gamma e^{\gamma\tau}P+e^{\gamma\tau}(-h_Q-\gamma P)
+         =-\mathcal h_Q.
+ \label{eq:sup-weighted-lift}
+\end{equation}
+This proof allows configuration-dependent mass. Center the time coordinate at the step midpoint and write the lifted endpoint momenta as $\Pi_-=e^{-\gamma\eta/2}P_-$, $\Pi_+=e^{\gamma\eta/2}P_+$. At this midpoint the lifted Hamiltonian equals $h$. Canonical time-midpoint therefore gives
+\begin{equation}
+ \Phi_\eta=S_{\eta/2}\circ\mathrm{MP}_{h,\eta}\circ S_{\eta/2},
+ \qquad S_a(Q,P)=(Q,e^{-\gamma a}P).
+ \label{eq:sup-weighted-method}
+\end{equation}
+The scaling and its composition with symplectic midpoint satisfy
+\begin{equation}
+ \begin{aligned}
+ DS_a^TK_0DS_a&=e^{-\gamma a}K_0,\\
+ D\Phi_\eta^TK_0D\Phi_\eta&=e^{-\gamma\eta}K_0.
+ \end{aligned}
+ \label{eq:sup-weighted-pullback}
+\end{equation}
+Equivalently, the update preserves the two time sections $e^{\gamma\tau}K_0$. The lifted complete time-midpoint method is second order. Anisotropic loads, state-dependent feedback, or contact switching do not satisfy the hypothesis used in this calculation.
+
+\subsection{Finite-time stability, algebraic residuals, and representation error}
+% Source: stage5/proofs/integrators_full_coil.md, section 5; stage5/proofs/birkhoff_transport.md, section 5; stage3/source_inputs/v10/v10_framework_20261028/english/sections/supp_structure.tex, implicit solvability and accumulation of algebraic residuals.
+Consider a smooth field on an open domain containing a closed convex neighborhood, with spatial Lipschitz constant $L$, and the midpoint residual
+\begin{equation}
+ \mathcal F_k(x)=x-z_k-\eta f((x+z_k)/2,\tau_k+\eta/2).
+ \label{eq:sup-midpoint-residual}
+\end{equation}
+Assume its fixed-point map stays in that neighborhood and $a_\eta=\eta L/2<1$. Banach's theorem gives a unique fixed point there. If $x_*$ is the exact root and $\mathcal F_k(x)=\varepsilon_k$, subtraction and the Lipschitz bound give
+\begin{equation}
+ (1-a_\eta)\|x-x_*\|\le\|\varepsilon_k\|.
+ \label{eq:sup-residual-to-state}
+\end{equation}
+For two different inputs, subtracting their exact midpoint equations yields the step stability factor $q_\eta=(1+a_\eta)/(1-a_\eta)$. Comparing a numerical step with the exact solution, whose local increment defect is $O(\eta^3)$, gives
+\begin{equation}
+ e_N\le q_\eta^Ne_0+\frac{1}{1-a_\eta}
+ \sum_{j=0}^{N-1}q_\eta^{N-1-j}(C\eta^3+\|\varepsilon_j\|).
+ \label{eq:sup-error-sum}
+\end{equation}
+For $N\eta\le T$ and $a_\eta$ uniformly below one, $q_\eta^N\le e^{C_LT}$. Summing $N$ local defects therefore gives $e_N\le C_T(e_0+\eta^2+\sum_j\|\varepsilon_j\|)$. If all residuals are at most $\varepsilon_\eta$, their contribution is $O(\varepsilon_\eta/\eta)$. A code tolerance in the infinity norm can be converted to the Euclidean norm by at most $\sqrt{2n}$. A fixed absolute solver tolerance cannot retain convergence order under arbitrarily fine step refinement.
+
+For Central4, $S_\eta''=O(\eta)$ on a bounded derivative domain. A uniform inverse bound for $I-JS_\eta''/2$ and step stability $1+O(\eta)$ produce the same argument with local defect $O(\eta^5)$. Thus the global discretization term is $O(\eta^4)$, with the same residual sum. For the weighted method and exact Moser charts, bounded chart derivatives and inverse derivatives on the finite interval transfer the state and residual bounds between coordinates. If finite numerical chart operations introduce additional per-step state errors $\delta_j$, stability accumulates $\sum_j\delta_j$ with the same finite-time weights. Exact structure of the ideal map alone does not bound these implementation errors.
+
+Finally compare solutions of $\dot z=f(z,\tau)$ and $\dot z_a=\widetilde f_a(z_a,\tau)$ starting at the same point. If both remain in a common domain, $f$ is Lipschitz with constant $L$, and $\|\widetilde f_a-f\|\le\epsilon_f$ uniformly there, then
+\begin{equation}
+ \|z_a(\tau)-z(\tau)\|
+ \le\int_0^\tau\{L\|z_a(s)-z(s)\|+\epsilon_f\}\,ds
+ \le\epsilon_f\frac{e^{L\tau}-1}{L},
+ \label{eq:sup-gronwall}
+\end{equation}
+with value $\epsilon_f\tau$ at $L=0$. Adding this bound to the integration estimate yields the conditional total finite-time bound. The uniform field difference contains time truncation and spatial coefficient approximation, while numerical chart and implicit-solve errors enter their own sums. A fixed-time coefficient residual of order $\theta^{r_o}$ is not itself a statement of order $r_o$ for the chart midpoint integrator. Reducing the numerical step can converge to the represented trajectory while leaving a nonzero discrepancy from the original trajectory. No pointwise numerical diagnostic establishes the uniform assumptions of this theorem or the separate hypotheses needed for a continuous or discrete KAM result.
+
+\subsection{Derivative evaluation and the limit of computational verification}
+% Source: stage5/proofs/high_derivative_ad.md, minimal counterexample, symmetry discussion, and replacement-path discussion; stage5/program/transport_native.py, high_order_hamiltonian; stage3/program/rom_integrators.py, central_scalar.
+The identity $h_{\mathrm{AD}}(Q,P)=P^TM(Q)^{-1}P/2+h(Q,0)$ preserves the full mechanical Hamiltonian, including its variable mass. It supplies an alternative computational expression, not a theorem that any automatic differentiation path returns correct high derivatives. The scalar example $h(Q,P)=P^2/[2(1+Q^2)]$ has $h_{QQPP}(0)=h_{PPQQ}(0)=-2$ by expansion. The recorded mixed differentiation path through a linear solve returned zero for one fourth-order component in the tested software version. Full tensor symmetrization cannot generally repair this, because contraction against four copies of one vector is unchanged by permutation averaging.
+
+The retained implementation checks selected third- and fourth-order contractions against independent pure reverse differentiation and finite differences, and uses the inverse expression for the tested transport paths. The physical reference field retains the original solve-based evaluator. Central4 differentiates its complete scalar generator through a separate reverse-mode path. These checks support the specified version, points, and directions; they do not prove all-state, all-order derivative correctness. The analytical arguments above concern the mathematical coefficients, with computational defects remaining part of the numerical evidence and error budget.

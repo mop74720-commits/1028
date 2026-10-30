@@ -1,0 +1,33 @@
+\documentclass[Afour,sageh,times]{sagej}
+\input{../template/preamble}
+\usepackage{xeCJK}
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}[ItalicFont={Noto Sans CJK SC},BoldItalicFont={Noto Sans CJK SC Bold}]
+\setCJKmonofont{Noto Sans Mono CJK SC}
+\renewcommand{\abstractname}{摘要}
+\renewcommand{\figurename}{图}
+\renewcommand{\tablename}{表}
+\renewcommand{\refname}{参考文献}
+\renewcommand{\proofname}{证明}
+\patchcmd{\abstract}{Abstract}{摘要}{}{\PackageError{paper}{Abstract translation failed}{}}
+\patchcmd{\keywords}{Keywords}{关键词}{}{\PackageError{paper}{Keyword translation failed}{}}
+\runninghead{三维磁性杆的局部结构与全线圈控制}
+\hypersetup{pdftitle={三维磁性杆的局部 Birkhoff 结构与全线圈控制},pdfauthor={作者待补充}}
+\title{三维磁性杆的局部 Birkhoff 结构与全线圈控制}
+\author{[作者、单位及通讯作者信息待补充]}
+\begin{document}
+\begin{abstract}
+几何积分与学习 Hamiltonian 用于磁驱软体机器人仿真的前提，是其对应同一机械动力学与可实现输入。本文在具有12个配置坐标、位形相关惯性和完整 Biot--Savart 线圈力的三维 Kirchhoff 降阶模型上研究这一接口。通过输运一形式、可计算的局部 Moser 图及相容端点生成函数，分别考察结构匹配与原场逼近。提高输运阶数可以减小连续表示误差，但未必改善总积分误差。固定电流保守分支的非可分中心生成方法显示四阶收敛；光滑反馈与采样受限控制则需要不同的结构判断。全线圈端口的能量求导与虚功一致，而局部仿射场在所测位形上产生约98.6\%的广义力偏差。冻结复网络的比较揭示场精度与动量正曲率之间的取舍。三维共振计算保留了非作用量四次项，尚未建立 KAM 证书。向空间 Cosserat 杆的转移实现了规定血流和接触下的受限执行，但没有改善跟踪。本文建立了力学、结构与磁执行之间可复现且明确局部的连接，并给出当前验证的边界。
+\end{abstract}
+\keywords{磁驱软体机器人；Cosserat 杆；Birkhoff 系统；几何积分；Hamiltonian 学习；受限磁控制}
+\maketitle
+\input{sections/introduction}
+\input{sections/model_control}
+\input{sections/theory}
+\input{sections/numerical_protocol}
+\input{sections/physical_results}
+\input{sections/learning_kam}
+\input{sections/discussion}
+\bibliographystyle{sageh}
+\bibliography{../references}
+\end{document}

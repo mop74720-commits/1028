@@ -1,0 +1,190 @@
+\section{Learning structure, error bounds and persistence scope}
+\label{supp:learning-kam}
+
+\subsection{Implemented architectures and inverse diagnostics}
+For clarity, the complex network's input is formed from training coordinates: $\zeta=(x_Q+ix_P)/\sqrt2$, $u=(\zeta,\bar\zeta)\in\mathbb C^{24}$. With componentwise products denoted by $\odot$, its implemented residual is
+\begin{equation}
+ \begin{aligned}
+ a_1&=W_1u,\\
+ b&=\sigma(W_2\sigma(a_1)+b_2),\\
+ F(x)&=\operatorname{Re}\{w_3(a_1^{\odot3}\odot b)\},\\
+ r_\theta(x)&=\tfrac{s_h}{2}\{F(x_Q,x_P)+F(x_Q,-x_P)\}.
+ \end{aligned}
+ \label{eq:supp-learn-network}
+\end{equation}
+The two hidden widths are 48; first and output layers have no biases. Parameter counts are $1152+2304+48+48=3552$ complex entries. Because the first layer vanishes at the origin, the cubic gate has vanishing derivatives through order two there. Momentum averaging gives evenness, but permits higher even momentum powers.
+
+The SPD model replaces $u$ by the real position input $x_Q$ to a width-48 complex trunk. Its mass head is $r=\operatorname{Re}\{W_m[b(x_Q)-b(0)]\}\in\mathbb R^{78}$. Fill the lower triangle of $L$ with these entries, exponentiating the diagonal; use $V_\theta=s_h\operatorname{Re}\{w_V(a_1^{\odot3}\odot b)\}$ for the potential. This gives $576+2304+48+3744+48=6720$ complex entries, and $L(0)=I$. Thus the exact momentum Hessian is positive definite at each finite real input, while the potential and full Hessian need not be convex.
+
+The Legendre test uses SciPy HYBR with tolerance $10^{-10}$ and the setting \texttt{maxfev=120}, initialized at the true momentum. Table~\ref{tab:supp-learning-inverse} records maxima across the three seeds and eight prescribed states per split. Polynomial and SPD equation residuals are below $10^{-8}$ at all sampled points; their overall maxima are $2.15\times10^{-14}$ and $1.80\times10^{-15}$. Some progress flags are false despite these residuals. For the unrestricted complex model, residual convergence counts are 4/6/5 out of eight test states and 3/4/6 out of eight wider-domain states; maximum residuals are 0.0434103 and 0.521317. Equation satisfaction, solver status and recovery of physical momentum are therefore distinct measurements.
+
+\begin{table}[H]
+\centering
+\caption{Maximum sampled relative momentum-Hessian error, Hessian condition number and relative recovered-momentum error. Each entry is test/wider domain.}
+\label{tab:supp-learning-inverse}
+\begin{tabular}{lrrr}
+\toprule
+Model & Relative $h_{PP}$ error & Condition number & Relative momentum error\\
+\midrule
+Polynomial & 0.4749/0.7316 & 22124/3480 & 27.30/7.244\\
+Complex & 0.05819/0.2917 & 167322/41387 & 0.6267/1.348\\
+SPD complex & 0.1705/0.3132 & 1199/1811 & 0.5044/1.253\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The historical SPD stress-domain experiment reported Hessian errors of 320\%/372\% and condition numbers approximately $4.61\times10^{10}/1.13\times10^{12}$. These belong to earlier weights whose original numerical archive is absent from the snapshot; they are historical evidence, not remeasured values or current-model statistics. They illustrate the same distinction between exact structural positivity and usable conditioning. The earlier meromorphic-activation failure is likewise retained in the source history.
+
+The learning-to-coil diagnostic uses four test indices $(0,146,292,511)$ and four wider-domain indices $(0,72,144,255)$. Allocation constraints are 2\,A, 20\,A/s, 5\,mT and gradient Frobenius norm 0.03\,T/m at the actual magnet quadrature points, with a preenergized bias and a 0.25\,s decision interval. The maximum final constraint violation is $9.39\times10^{-13}$. Unconstrained requested peak currents reach 326.421\,A, 37.9885\,A and 235.468\,A for polynomial, complex and SPD models. 23 failures of the initial allocation attempt were preserved; the final 72/72 success result uses a feasible previous-current warm start for the same force objective without relaxing limits. This experiment assesses correction through the coil port; it does not equate the ideal-bias and coil Hamiltonians.
+
+\subsection{Deterministic finite-feature error bound}
+Let $h_\theta=h_0+\sum_jc_{\theta j}\psi_j$, $h_*=h_0+\sum_jc_{*j}\psi_j+R$, and $Y_i=\nabla h_*(z_i)+\eta_i$. Remove constant basis directions and stack the derivative-feature matrices into $A$. For one fixed scalar-observation normalization $N_o$, assume
+\begin{equation}
+ \begin{aligned}
+ G&=A^TA/N_o\succeq\lambda I,\qquad\lambda>0,\\
+ r&=\|\nabla h_\theta-Y\|_2/\sqrt{N_o},\\
+ e&=\|\nabla R+\eta\|_2/\sqrt{N_o}.
+ \end{aligned}
+ \label{eq:supp-learn-gram-definitions}
+\end{equation}
+At the samples, $A\Delta c=(\nabla h_\theta-Y)+(\nabla R+\eta)$ for $\Delta c=c_\theta-c_*$. Hence
+\begin{equation}
+ \sqrt\lambda\|\Delta c\|_2
+ \le(\Delta c^TG\Delta c)^{1/2}\le r+e.
+ \label{eq:supp-learn-coefficient-proof}
+\end{equation}
+For any function norm obeying the triangle inequality, Cauchy--Schwarz then gives
+\begin{equation}
+ \begin{aligned}
+ \|h_\theta-h_*\|_{\mathcal X}
+ &\le\Big(\sum_j\|\psi_j\|_{\mathcal X}^2\Big)^{1/2}
+       \frac{r+e}{\sqrt\lambda}\\
+ &\quad+\|R\|_{\mathcal X}.
+ \end{aligned}
+ \label{eq:supp-learn-gram-conclusion}
+\end{equation}
+The proof concerns the fitted coefficient vector itself and does not require an optimizer-specific convergence claim. For monomials $\psi=z^\alpha$, the analytic norm on $|z_j|\le\rho$ is at most $\rho^{|\alpha|}$, and a real $C^\ell$ bound is
+\begin{equation}
+ \max_{|\beta|\le\ell,\,\beta\le\alpha}
+ \frac{\alpha!}{(\alpha-\beta)!}\rho^{|\alpha|-|\beta|}.
+ \label{eq:supp-learn-monomial-bound}
+\end{equation}
+An analytic action--angle chart must map into the certified complex domain. A real $C^\ell$ composition instead needs bounds for the chart derivatives. For integrated equations, the same algebra applies to the actual integrated feature matrix; quadrature, endpoint and observation errors enter $e$. Export rounding adds a separate norm bound. A small observed residual does not bound the out-of-class term $R$.
+
+\subsection{Conditional statistical strong-norm bound}
+Let $\mathcal D=\mathbb T^n\times B$ have smooth bounded action domain, $d=2n$, $p>d$, and integers $\ell\ge1$, $s>\ell+d/p$. Let $X_i$ be independent with density $f\ge m_0>0$. Realify every trainable complex parameter and assume $\Theta\subset[-B_\Theta,B_\Theta]^{P_\Theta}$. After subtracting the spatial mean, set $e_\theta=h_\theta-h_*-\overline{h_\theta-h_*}$. Assume throughout the domain and parameter class that
+\begin{align}
+ \|\nabla e_\theta(x)\|_p&\le Q_*,\nonumber\\
+ \|\nabla h_\theta(x)-\nabla h_\eta(x)\|_p
+ &\le L_g\|\theta-\eta\|_\infty,\nonumber\\
+ \|e_\theta\|_{W^{s,p}}&\le M_s.
+ \label{eq:supp-learn-stat-assumptions}
+\end{align}
+These are quantitative class assumptions. A parameter Lipschitz constant in Euclidean norm must first be multiplied by $\sqrt{P_\Theta}$ to use the displayed infinity norm.
+
+For fixed covering radius $0<b\le2B_\Theta$, an infinity-norm net has at most $(1+2B_\Theta/b)^{P_\Theta}$ points. The loss $r_\theta(x)=\|\nabla e_\theta(x)\|_p^p$ lies in $[0,Q_*^p]$ and is $L_{\mathrm{par}}=pQ_*^{p-1}L_g$-Lipschitz in parameters. Hoeffding and the union bound control all net points with probability at least $1-\delta$. Extending both empirical and population losses from the net costs $2L_{\mathrm{par}}b$, giving simultaneously
+\begin{equation}
+ \begin{aligned}
+ R_\theta&\le\widehat R_\theta+\Gamma,\\
+ \Gamma&=2L_{\mathrm{par}}b\\
+ &\quad+Q_*^p\sqrt{\frac{P_\Theta\log(1+2B_\Theta/b)+\log(1/\delta)}{2N}},
+ \end{aligned}
+ \label{eq:supp-learn-covering}
+\end{equation}
+where $\widehat R_\theta=N^{-1}\sum_i r_\theta(X_i)$ and $R_\theta=\int r_\theta\,d\mu$. The event therefore includes parameters selected using these training data.
+
+The density bound and Poincar\'e inequality for mean-zero functions imply
+\begin{equation}
+ \begin{aligned}
+ \|e_\theta\|_{W^{1,p}}&\le G_\theta,\\
+ G_\theta&:=C_Pm_0^{-1/p}(\widehat R_\theta+\Gamma)^{1/p}.
+ \end{aligned}
+ \label{eq:supp-learn-poincare}
+\end{equation}
+Apply Gagliardo--Nirenberg to $g=\nabla e_\theta$, with derivative orders $j=\ell-1$, $m=s-1$ and both endpoint integrability exponents equal to $p$. Solving
+\begin{equation}
+ \begin{aligned}
+ 0&=\frac{j}{d}+\alpha\left(\frac1p-\frac{m}{d}\right)+\frac{1-\alpha}{p}\\
+ &\Longrightarrow\quad
+ \alpha=\frac{\ell-1+d/p}{s-1}\in(0,1).
+ \end{aligned}
+ \label{eq:supp-learn-interpolation-exponent}
+\end{equation}
+and using extension from the action domain and periodic angular charts yields
+\begin{equation}
+ \|e_\theta\|_{C^\ell}
+ \le C_{\mathrm{GN}}\left(G_\theta+M_s^\alpha G_\theta^{1-\alpha}\right).
+ \label{eq:supp-learn-interpolation-result}
+\end{equation}
+The inhomogeneous term and $W^{1,p}\hookrightarrow C^0$ control lower derivatives. This completes the conditional implication. Neither trajectory-adjacent samples nor a low empirical loss supply the required sampling, coverage and uniform high-derivative constants.
+
+\subsection{Conditional persistence of the exact discrete map}
+Let $h\circ\mathcal T=h_0+P$ with $\|P\|\le\varepsilon$ on a declared complex action--angle domain. Require analytic canonical $\mathcal T$ and inverse, controlled derivatives, an analytic exact-symplectic step $\Psi_\Delta$ and inverse on retained domains, and a unique implicit branch whose endpoints remain there. For a central generator $S_\Delta$, $\tfrac12\sup\|JS_\Delta''\|<1$ is a sufficient local inverse condition when accompanied by these domain margins. The map under consideration is $\mathcal T^{-1}\Psi_\Delta\mathcal T$, rather than discretization after a nonlinear coordinate substitution.
+
+For a method of order $p_{\mathrm{int}}$, analytic consistency and short-time perturbation estimates on smaller domains give a map defect $C_1\Delta\varepsilon+C_2\Delta^{p_{\mathrm{int}}+1}$. Require an invertible mixed endpoint projection and a globally periodic primitive. The resulting mixed generating equations are
+\begin{equation}
+ \begin{aligned}
+ I_+&=I_--\partial_\phi G_\Delta(I_+,\phi_-),\\
+ \phi_+&=\phi_-+\Delta\omega(I_+)\\
+ &\quad+\partial_I G_\Delta(I_+,\phi_-),
+ \end{aligned}
+ \label{eq:supp-learn-discrete-generator}
+\end{equation}
+with $\omega=\nabla h_0$ and the domain-reduced bound
+\begin{equation}
+ \|G_\Delta/\Delta\|\le C_3\varepsilon+C_4\Delta^{p_{\mathrm{int}}}.
+ \label{eq:supp-learn-discrete-budget}
+\end{equation}
+Assume uniform twist bounds
+\begin{equation}
+ \begin{aligned}
+ \iota\|v\|_\infty&\le\|D_I\omega(I)v\|_\infty\le\Theta\|v\|_\infty,\\
+ &\qquad 0<\iota\le\Theta.
+ \end{aligned}
+ \label{eq:supp-learn-discrete-twist}
+\end{equation}
+For the sufficient analytic-map route of \citet{Shang1999}, choose $\tau_D>n+1$, $0<\Delta\le1$ and $0<\gamma_D\le\min(1,\rho_I\Theta/2)$, where $\rho_I$ is the complex action radius. Retained frequencies must have distance at least $2\gamma_D$ from the frequency-domain boundary and satisfy all integer discrete divisors in the main text. On the theorem's smaller complex domain require
+\begin{equation}
+ C_3\varepsilon+C_4\Delta^{p_{\mathrm{int}}}
+ \le\delta_0\gamma_D^2\iota^2\Theta^{-3}.
+ \label{eq:supp-learn-discrete-threshold}
+\end{equation}
+Then the analytic map theorem gives the corresponding invariant tori; its domain geometry and boundary regularity assumptions are also needed for positive measure. The constants depend on dimension, exponent, widths, derivatives and chart bounds. They have not been evaluated for the current three-dimensional model. Finite solve residuals, dissipative forces and switching do not automatically satisfy this exact-map hypothesis.
+
+\subsection{KAM transfer and the inherited two-mode result}
+For a finite-smoothness formulation, take $n\ge2$, $\tau>n-1$ and integer $\ell>2(\tau+1)$. In one canonical action--angle chart, assume $h_0\in C^{\ell+2}$ and $\nabla h_0:B\to\Omega$ is a diffeomorphism with bounded $C^\ell$ inverse. Restrict to frequencies satisfying both $|k\cdot\omega|\ge\gamma|k|_1^{-\tau}$ for every nonzero integer $k$ and $\operatorname{dist}(\omega,\partial\Omega)\ge\gamma$. With the domain, norms and threshold $c_K$ of the applicable finite-smoothness theorem \citep{Bounemoura2020}, let $\beta_\theta\ge\|P_\theta-\bar P_\theta\|_{C^\ell}$ and suppose $\beta_\theta+E_\theta<c_K\gamma^2$. Since
+\begin{equation}
+ P_*-\bar P_*=(P_\theta-\bar P_\theta)-e_\theta,
+ \label{eq:supp-learn-kam-triangle}
+\end{equation}
+the two perturbations satisfy the threshold separately. The theorem provides invariant Lagrangian tori for both Hamiltonians, with potentially different embeddings. Under its frequency-boundary hypotheses, the excluded-measure estimate is $C\gamma$, not $C\gamma^2$. This statement requires the chart and physical perturbation bounds in addition to learning error. The present sample loss is a squared-gradient loss; it is not a numerical evaluation of the required $p>d$ bound without further estimates.
+
+The inherited planar full-cosine model has quartic action Hessian
+\begin{equation}
+ \begin{aligned}
+ A_{\mathrm{old}}&=\frac{\operatorname{diag}(d_j^4)-2vv^T}{8},\\
+ v_j&=d_j^2,\\
+ \det A_{\mathrm{old}}&=(1-2n)8^{-n}\prod_jd_j^4.
+ \end{aligned}
+ \label{eq:supp-learn-old-twist}
+\end{equation}
+The matrix determinant lemma proves nondegeneracy when all $d_j\ne0$; positivity is unnecessary. This algebra belongs to that cosine model and does not include the new variable-mass cubic correction.
+
+The frozen two-degree-of-freedom finite-amplitude calculation additionally uses a specified Fourier embedding, a complex strip, aliasing and tail bounds, a twist inverse and an a-posteriori smallness test. The archived text reports strip defect below $2.731\times10^{-77}$, correction below $2.0894\times10^{-41}$ and a tip witness above 1.8977904\,mm for the short-trajectory COMSOL fit. The original Fourier/Arb/input archive is unavailable here, so these historical numbers are not independently recertified. The Python three-seed fit, full-FE integral fit and short-trajectory fit are distinct frozen Hamiltonians and do not exchange certificates or control coefficients. The extremely thin certified tube also does not locate a given physical initial condition inside it.
+
+The tube's primitive needs a reference action. For $J=j(t)+DF(t)^{-T}I$, let $\beta=j\cdot DF\,dt$. Lagrangianity implies $d\beta=0$, whereas its periods need not vanish. Define $a_j=(2\pi)^{-1}\oint_{\gamma_j}\beta$. Then $\beta-a\cdot dt$ has zero periods and equals $dS$ for a periodic $S$, so
+\begin{equation}
+ \Psi^*\lambda-(I+a)\cdot dt=dS.
+ \label{eq:supp-learn-reference-action}
+\end{equation}
+To prove this, integrate the closed zero-period form on the universal cover; zero periods allow the primitive to descend to the torus. The unshifted map remains symplectic and preserves volume. A circular torus has $\beta=r^2dt/2$ with nonzero period $\pi r^2$, showing why unshifted exactness does not follow from closedness.
+
+The inherited controlled 64-mode planar lift assumes positive low-mode momentum Hessian, convex momentum fibres, an invertible two-port magnetic interface, a nonvanishing geometric control factor and realizable inputs. Correct Legendre inversion makes the two controlled low modes follow the prescribed Hamiltonian. The remaining damped linear modes have Fourier responses
+\begin{equation}
+ \begin{aligned}
+ a^*_{j,k}&=\frac{b_jF_k+t_jU_k}{\omega_j^2-(k\cdot\Omega)^2+i\alpha(k\cdot\Omega)},\\
+ &\qquad\alpha>0.
+ \end{aligned}
+ \label{eq:supp-learn-planar-lift}
+\end{equation}
+The denominator is positive at zero frequency and has nonzero imaginary part at every nonzero real frequency. Analytic forcing thus gives an analytic response on a slightly smaller strip, and deviations satisfy exponentially stable homogeneous equations. This lifts a two-dimensional invariant torus into the controlled 128-dimensional planar state space; it does not make the whole closed loop Hamiltonian or certify a positive-volume 128-dimensional KAM family. In its separate planar S-path task, CHNN tip feedback achieved 6.419\,$\mu$m error, versus 6.207\,$\mu$m for the quadratic model, 4.124\,$\mu$m for static physical inversion and 25.308\,$\mu$m for modal output feedback. That historical task used base feed and excluded flow and contact. The negative comparison and its planar scope remain part of the evidence.

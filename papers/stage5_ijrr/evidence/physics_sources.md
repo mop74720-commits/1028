@@ -1,0 +1,36 @@
+# Physics and control source summary
+
+The English and Chinese model/control sections contain identical displayed equations and labels. The English text is approximately 1,880 alphabetic words including TeX commands and math identifiers; the physical-results section is approximately 1,029 on the same counting rule. No new simulation was performed. All source directories remain read-only.
+
+## Physical ancestry and corrected definitions
+
+- The original DOCX native-OMML reading at `stage4/audit/source_omml/original1025_reading.txt` supplies the three-dimensional centerline/frame opening, angular momentum, Galerkin reduction, and canonical momentum; primary equation locations are original1025-p0014–p0020, p0059/m0037, p0067–p0078, and p0150/m0097 onward. Native XML and indexed records are in the same directory. The source was read alongside `stage4/audit/physical_and_control_audit.md` and `proof_errors_and_corrections.md`.
+- The implemented analytic geometry is `stage3/source_inputs/starter/stage2/program/learning/rod_rom.py`, actually imported by `stage3/program/rom_bridge.py`: four strain Legendre functions per bending/twist axis, 12 q coordinates, 24 phase coordinates, 20/40/80 spatial quadrature cells. Mass includes translational and body rotary Jacobians and remains configuration dependent.
+- The physical configuration is `stage3/source_inputs/starter/stage2/program/rod3d/config.json`; the actual high-dimensional source is its sibling `model.py`. Parameters: length 0.1 m, radius 0.0006 m, E/G 3e6/1e6 Pa, density 1800 kg/m3, structural damping 2/s, distal magnet length 0.005 m, line dipole 0.1448 A m, total moment 0.000724 A m2. E/G and geometry/magnet are literature-informed through Tong2025; extending these material constants over the full shaft is explicitly a benchmark assumption. Flow/wall/acceleration choices are not subject or space-station measurements.
+- Canonical scales for the 20-cell ideal-reference basis: E0=3.62e-7 J, omega0=4.457629408507532 rad/s, q=Sq Q, p=Sp P, Sq^T Sp=(E0/omega0)I. Main notation is z=(Q,P), h=H/E0, tau=omega0 t, K_s for shear/stretch stiffness, and G_I for the current port.
+- Distinguish the original ideal uniform-bias potential from the full-coil potential. The latter receives 12 **total** currents and no extra ideal bias. Its fitted pre-energized bias maximum is 1.5124804024130618 A. The main rod transfer instead starts with zero actual current.
+
+## Actual full-coil programs and final source versions
+
+Read programs: `stage5/program/coil_rom.py`, `coil_control.py`, `run_coil_validation.py`, `run_coil_closed_loop.py`, `closed_loop_sampled.py`, and source-backed notes/proofs `notes/unified_model_contract.md`, `notes/coil_experiments.md`, `notes/closed_loop_experiments.md`, `proofs/coil_energy_ports.md`.
+
+- Final coil kernel SHA256: `48eda69a63a90f210c27ca8d0274021dc24179bdc14fc05a111630dd95cb69fc`. Its off-wire distance norm was algebraically rewritten to support higher AD; this is not a new magnetic model.
+- Final force allocator SHA256: `1b01c4fcdf0e2808d178fa9fc7e1996b1ebb7440c05c81394cf07df6ec772797`. It uses the previous current only after independently checking feasibility at the decision state, preserving the actual force objective and limits.
+- Final local validation and force-compensation rerun are in `stage5/results/coil/force_warm_fix/`. The first three matched full/full, affine/affine, full/affine controller comparisons remain in `stage5/results/coil/`; these are preserved historical source versions, not silently rerun results. `force_warm_fix/version_comparison.json` bounds the rerun changes by 1.1742828600491345e-12 in state norm and 6.508686922757079e-10 A in current components.
+- Final 36D sampled-map results are `stage5/results/closed_loop/sampled_warmfix/matched_initial_bias/`. Both actual bias attributes and the augmented initial vector were fixed to the old saved values. The initial unmatched-rounding run and its rejected exact-match check remain in the parent directory; do not substitute it for the final matched result.
+- Current map ranks 5/7/7 and force discrepancies 0.9852356634542009/0.9859787519912333/0.986182967721294 are common-physical-q, common-coordinate diagnostics with rank rcond 1e-8. They are not a global rank theorem or spatial convergence claim.
+- The controlled-coil window is tau=0.004, 0.89733794 ms; smooth-integrator comparisons elsewhere use tau=0.0005, 0.112167 ms. These windows must not be mixed with the rod horizon.
+
+## Final rod source and interpretation
+
+Source `stage5/program/rod_transfer_control.py` SHA256 is `a406cef62eef1005ee160ea8e924c2d7dabccdff7c0fbf3a4d512a770f7b83e0`, matching each final summary's `extension_sha256`. The source, runner, analysis program, raw JSON/CSV, `notes/rod_transfer.md`, and `proofs/rod_transfer.md` were inspected. An independent read-only reviewer verified the raw summaries, constraint audits, source hash, and refinement values.
+
+- Seven final environmental cases last **0.2 s**. Inherited `parameters.json:numerics.final_time_s=2.0` does not override actual summary/CSV duration. The target ramp lasts 0.3 s; it remains incomplete. Do not interpret inherited `tip_rmse_after_ramp_m` as evidence of completed-ramp tracking.
+- Fair controller comparison: baseline versus port at 32 elements, 10 us. RMSE 0.31855775544209876 versus 0.32003229842861167 mm. Port feedback does not improve this tracking metric.
+- Final constraints use 387 fixed tubular samples and 5% margins (4.75mT,0.0285T/m), ±2A,20A/s, and2ms continuous ramps. Only finite spatial field sampling is certified. Actual full-gradient evidence is `actual_snapshot_gradient_max_T_per_m`; inherited `max_G_frobenius_T_per_m` is affine and must not replace it. Current evidence uses actual continuous-ramp maxima rather than snapshot-only `coil_max_current_A`.
+- Main 3mm lumen has no contact. Separate 1.6mm case starts with **zero** penetration and activates contact during motion, with summary maxima 61.6032203777186um and11.352409631795995uN. These include intermediate observations; snapshots give slightly smaller maxima.
+- The final analytic feasibility repair has zero fallbacks but preserves 1–4 optimizer nonconverged statuses and99 repairs per case. It is a feasibility result, not certified optimality. The original approximately0.133A fallback discrepancy is preserved under `initial_allocator_failure/`.
+- Final observed spatial/time orders 1.007034283145546/0.469234092906824 are adjacent numerical differences on129 common reference-arclength samples, not exact PDE error or second-order time convergence.
+- The separate2ms conservative matched diagnostic retains pre-higher-AD coil source SHA `53004846…` in its ROM reference, disables environment in both models, and shows increasing ROM-to-rod differences with rod refinement. Fixed currents violate the full-rod gradient limit (0.7983942213224946T/m versus0.03T/m). It is not a feasible navigation experiment.
+
+`physics_claims.csv` maps numerical claims directly to raw JSON keys and source SHA256 values. Bibliography keys used in these sections are Antman2005, Gazzola2018, Tong2025, and Abbott2020, as approved by the reference verification task. Figure labels `fig:coil` and `fig:rod` are reserved for the main paper assembly.

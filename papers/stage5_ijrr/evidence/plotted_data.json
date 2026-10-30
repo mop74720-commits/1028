@@ -1,0 +1,1552 @@
+{
+  "schema_version": 1,
+  "base_commit": "1c73a580441200d6594e2a2a96374edc1c0e98e6",
+  "scope": "Plot-only reproduction from existing frozen data; no scientific solver or training invoked",
+  "coordinate_convention": "Canonical state/field norms dimensionless unless explicitly marked SI; time tau=omega0*t_seconds",
+  "sources": {
+    "stage5/results/transport/synthetic/inverse_verified.json": "0cfdb0128fab52995a9e567bc6a8c4c3f802ae4889a4bd19b5e30692cea716d9",
+    "stage5/results/transport/fullcoil_collocated/inverse_verified.json": "2fbb6d19cb1660c243a570bf012d35afe34f4540d8811688b5e6b7d84c5fe506",
+    "stage5/results/closed_loop/results.json": "567a092d120ef725db49742f0060dced5d099aad90d55529862ac5c31c833198",
+    "stage5/results/coil/force_warm_fix/validation.json": "f5f14d5df40a94f76c6d8f7e0211a97c77e72286131cad638fdd51603e6fd65e",
+    "stage5/results/learning/S5_L01_metrics.csv": "a805e7dd699fc0df5a47067d322878e0acf757e753264d428daf168ebcc533c9",
+    "stage5/results/resonance/S5_R02_results.json": "d500d6c86bc9b6bee95ea2f2270c7a2285f0c5d4d1a26648a6a2ca06e012f999",
+    "stage5/results/rod_transfer/comparison.csv": "186f46b63767e2226d2630c02d905bf44cabdb14869f81427dfc602ce07dc022",
+    "stage5/results/rod_transfer/refinement.json": "a689084c31d6f20ef63db0bd6e4739083542c0eacae8eaed587403551398edd6",
+    "stage5/results/transport/inverse_verified_reference_bridge.json": "9800636c3fb484f03937a68d31199f2b385b9076ae42b6eeb402f3c60eeabadf",
+    "stage5/results/transport/inverse_verified_jsonfixed_domains.json": "8d8daf7113641cc0c9d69123ee73d5b44e75038810e3698b5fe4fd121540fdb5"
+  },
+  "excluded_or_historical_sources": [
+    {
+      "source_path": "stage5/results/transport/synthetic/main.json",
+      "source_sha256": "f7ff3d1984db3f1194a0608205ee276bb5527af33a967ae970b3db7db05469e7",
+      "reason": "Rejected nested forward/reverse solve high-derivative evidence; not plotted"
+    },
+    {
+      "source_path": "stage5/results/transport/fullcoil_collocated/main_adfixed.json",
+      "source_sha256": "14f5a3336e3919acbad33efd6b75a378e6eccf021326761c94bcd7d4601fe4fd",
+      "reason": "Pre-inverse-verification high-derivative run; not accepted or plotted"
+    },
+    {
+      "source_path": "stage5/results/transport/legacy_status.json",
+      "source_sha256": "76f87b7b2ee87d712b655387f7fefdd9723cd34710c3b656210bace119d8260c",
+      "reason": "Authoritative legacy status retained; not a plotted accepted result"
+    },
+    {
+      "source_path": "stage5/results/resonance/S5_R02_forward_ad_failed_results.json",
+      "source_sha256": "0ac971c8d8a425641f10fc347adccb3da65b5d8353029e89466c7eec60474db5",
+      "reason": "Rejected forward-AD quartic calculation; not plotted"
+    },
+    {
+      "source_path": "stage5/results/learning/S5_L02_pre_warmfix_coil_reachability.json",
+      "source_sha256": "cc3adb4ea26b612e93a015ee1181608349c49a6a084f4b73d32eceb2c00b7722",
+      "reason": "Pre-warmfix allocation failures retained; not plotted as current results"
+    },
+    {
+      "source_path": "stage5/results/rod_transfer/initial_allocator_failure/refinement.json",
+      "source_sha256": "e3e73aa39c8f03c55516461f7f9bf3aab7eb65eeec209a405078dbde2b8c42ca",
+      "reason": "Pre-repair allocator refinement retained; not plotted as final results"
+    }
+  ],
+  "series": [
+    {
+      "figure": "transport",
+      "panel": "0a",
+      "series": "r=1",
+      "source_path": "stage5/results/transport/synthetic/inverse_verified.json",
+      "source_sha256": "0cfdb0128fab52995a9e567bc6a8c4c3f802ae4889a4bd19b5e30692cea716d9",
+      "fields": "native_center.rows[].native_time_jet_field_error_2",
+      "filter": "order == 1; sorted time ascending; fixed cache center",
+      "x_field": "native_center.rows[].time",
+      "x_unit": "dimensionless tau",
+      "y_unit": "dimensionless canonical field 2-norm",
+      "transform": "none",
+      "x": [
+        6.25e-05,
+        0.000125,
+        0.00025,
+        0.0005
+      ],
+      "y": [
+        4.529709159218544e-06,
+        9.05925622345525e-06,
+        1.8117864101924596e-05,
+        3.623313510324882e-05
+      ]
+    },
+    {
+      "figure": "transport",
+      "panel": "0b",
+      "series": "r=1, original field",
+      "source_path": "stage5/results/transport/synthetic/inverse_verified.json",
+      "source_sha256": "0cfdb0128fab52995a9e567bc6a8c4c3f802ae4889a4bd19b5e30692cea716d9",
+      "fields": "rows[].error_to_original_max",
+      "filter": "order == 1; steps 4,8,16",
+      "x_field": "rows[].steps",
+      "x_unit": "step count",
+      "y_unit": "dimensionless canonical state 2-norm",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        3.922868719408821e-08,
+        1.4222235899338347e-08,
+        9.699546341138534e-09
+      ]
+    },
+    {
+      "figure": "transport",
+      "panel": "0b",
+      "series": "r=1, represented field",
+      "source_path": "stage5/results/transport/synthetic/inverse_verified.json",
+      "source_sha256": "0cfdb0128fab52995a9e567bc6a8c4c3f802ae4889a4bd19b5e30692cea716d9",
+      "fields": "rows[].error_to_represented_max",
+      "filter": "order == 1; steps 4,8,16",
+      "x_field": "rows[].steps",
+      "x_unit": "step count",
+      "y_unit": "dimensionless canonical state 2-norm",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        3.586939063073482e-08,
+        8.977126319761425e-09,
+        2.2455004146555103e-09
+      ]
+    },
+    {
+      "figure": "transport",
+      "panel": "0b",
+      "series": "r=1, continuous representation gap",
+      "source_path": "stage5/results/transport/synthetic/inverse_verified.json",
+      "source_sha256": "0cfdb0128fab52995a9e567bc6a8c4c3f802ae4889a4bd19b5e30692cea716d9",
+      "fields": "model_gaps[].represented_original_reference_gap",
+      "filter": "order == 1; constant across grid",
+      "x_field": "see selection",
+      "x_unit": "step count",
+      "y_unit": "dimensionless canonical state 2-norm",
+      "transform": "repeat scalar as horizontal reference",
+      "x": [
+        4,
+        16
+      ],
+      "y": [
+        8.84021449577297e-09,
+        8.84021449577297e-09
+      ]
+    },
+    {
+      "figure": "transport",
+      "panel": "0c",
+      "series": "r=1, grid total",
+      "source_path": "stage5/results/transport/synthetic/inverse_verified.json",
+      "source_sha256": "0cfdb0128fab52995a9e567bc6a8c4c3f802ae4889a4bd19b5e30692cea716d9",
+      "fields": "rows[].seconds",
+      "filter": "order == 1",
+      "x_field": "rows[].steps",
+      "x_unit": "step count",
+      "y_unit": "wall seconds",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        15.493545516001177,
+        18.535338475998287,
+        30.672224875997927
+      ]
+    },
+    {
+      "figure": "transport",
+      "panel": "0c",
+      "series": "r=1, auxiliary chart",
+      "source_path": "stage5/results/transport/synthetic/inverse_verified.json",
+      "source_sha256": "0cfdb0128fab52995a9e567bc6a8c4c3f802ae4889a4bd19b5e30692cea716d9",
+      "fields": "rows[].auxiliary_seconds",
+      "filter": "order == 1",
+      "x_field": "rows[].steps",
+      "x_unit": "step count",
+      "y_unit": "wall seconds",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        0.6755755990016041,
+        0.833800150987372,
+        1.3484617140056798
+      ]
+    },
+    {
+      "figure": "transport",
+      "panel": "0a",
+      "series": "r=2",
+      "source_path": "stage5/results/transport/synthetic/inverse_verified.json",
+      "source_sha256": "0cfdb0128fab52995a9e567bc6a8c4c3f802ae4889a4bd19b5e30692cea716d9",
+      "fields": "native_center.rows[].native_time_jet_field_error_2",
+      "filter": "order == 2; sorted time ascending; fixed cache center",
+      "x_field": "native_center.rows[].time",
+      "x_unit": "dimensionless tau",
+      "y_unit": "dimensionless canonical field 2-norm",
+      "transform": "none",
+      "x": [
+        6.25e-05,
+        0.000125,
+        0.00025,
+        0.0005
+      ],
+      "y": [
+        1.0080960794764184e-07,
+        4.032310937558643e-07,
+        1.6128656799551454e-06,
+        6.450993305639223e-06
+      ]
+    },
+    {
+      "figure": "transport",
+      "panel": "0b",
+      "series": "r=2, original field",
+      "source_path": "stage5/results/transport/synthetic/inverse_verified.json",
+      "source_sha256": "0cfdb0128fab52995a9e567bc6a8c4c3f802ae4889a4bd19b5e30692cea716d9",
+      "fields": "rows[].error_to_original_max",
+      "filter": "order == 2; steps 4,8,16",
+      "x_field": "rows[].steps",
+      "x_unit": "step count",
+      "y_unit": "dimensionless canonical state 2-norm",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        3.5405917197320034e-08,
+        8.552376912332448e-09,
+        2.003344602831115e-09
+      ]
+    },
+    {
+      "figure": "transport",
+      "panel": "0b",
+      "series": "r=2, represented field",
+      "source_path": "stage5/results/transport/synthetic/inverse_verified.json",
+      "source_sha256": "0cfdb0128fab52995a9e567bc6a8c4c3f802ae4889a4bd19b5e30692cea716d9",
+      "fields": "rows[].error_to_represented_max",
+      "filter": "order == 2; steps 4,8,16",
+      "x_field": "rows[].steps",
+      "x_unit": "step count",
+      "y_unit": "dimensionless canonical state 2-norm",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        3.587019741030745e-08,
+        8.977328377169422e-09,
+        2.245550969057187e-09
+      ]
+    },
+    {
+      "figure": "transport",
+      "panel": "0b",
+      "series": "r=2, continuous representation gap",
+      "source_path": "stage5/results/transport/synthetic/inverse_verified.json",
+      "source_sha256": "0cfdb0128fab52995a9e567bc6a8c4c3f802ae4889a4bd19b5e30692cea716d9",
+      "fields": "model_gaps[].represented_original_reference_gap",
+      "filter": "order == 2; constant across grid",
+      "x_field": "see selection",
+      "x_unit": "step count",
+      "y_unit": "dimensionless canonical state 2-norm",
+      "transform": "repeat scalar as horizontal reference",
+      "x": [
+        4,
+        16
+      ],
+      "y": [
+        1.055597718609538e-09,
+        1.055597718609538e-09
+      ]
+    },
+    {
+      "figure": "transport",
+      "panel": "0c",
+      "series": "r=2, grid total",
+      "source_path": "stage5/results/transport/synthetic/inverse_verified.json",
+      "source_sha256": "0cfdb0128fab52995a9e567bc6a8c4c3f802ae4889a4bd19b5e30692cea716d9",
+      "fields": "rows[].seconds",
+      "filter": "order == 2",
+      "x_field": "rows[].steps",
+      "x_unit": "step count",
+      "y_unit": "wall seconds",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        15.248644546998548,
+        18.54352523000125,
+        29.69512953999947
+      ]
+    },
+    {
+      "figure": "transport",
+      "panel": "0c",
+      "series": "r=2, auxiliary chart",
+      "source_path": "stage5/results/transport/synthetic/inverse_verified.json",
+      "source_sha256": "0cfdb0128fab52995a9e567bc6a8c4c3f802ae4889a4bd19b5e30692cea716d9",
+      "fields": "rows[].auxiliary_seconds",
+      "filter": "order == 2",
+      "x_field": "rows[].steps",
+      "x_unit": "step count",
+      "y_unit": "wall seconds",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        0.5980975439997565,
+        0.8840412899917283,
+        1.3769110330031253
+      ]
+    },
+    {
+      "figure": "transport",
+      "panel": "0a",
+      "series": "r=3",
+      "source_path": "stage5/results/transport/synthetic/inverse_verified.json",
+      "source_sha256": "0cfdb0128fab52995a9e567bc6a8c4c3f802ae4889a4bd19b5e30692cea716d9",
+      "fields": "native_center.rows[].native_time_jet_field_error_2",
+      "filter": "order == 3; sorted time ascending; fixed cache center",
+      "x_field": "native_center.rows[].time",
+      "x_unit": "dimensionless tau",
+      "y_unit": "dimensionless canonical field 2-norm",
+      "transform": "none",
+      "x": [
+        6.25e-05,
+        0.000125,
+        0.00025,
+        0.0005
+      ],
+      "y": [
+        2.5868311557271936e-09,
+        2.0694265414905184e-08,
+        1.6554798254861393e-07,
+        1.3242856293812002e-06
+      ]
+    },
+    {
+      "figure": "transport",
+      "panel": "0b",
+      "series": "r=3, original field",
+      "source_path": "stage5/results/transport/synthetic/inverse_verified.json",
+      "source_sha256": "0cfdb0128fab52995a9e567bc6a8c4c3f802ae4889a4bd19b5e30692cea716d9",
+      "fields": "rows[].error_to_original_max",
+      "filter": "order == 3; steps 4,8,16",
+      "x_field": "rows[].steps",
+      "x_unit": "step count",
+      "y_unit": "dimensionless canonical state 2-norm",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        3.5880555276963855e-08,
+        8.988872896686149e-09,
+        2.261512432694372e-09
+      ]
+    },
+    {
+      "figure": "transport",
+      "panel": "0b",
+      "series": "r=3, represented field",
+      "source_path": "stage5/results/transport/synthetic/inverse_verified.json",
+      "source_sha256": "0cfdb0128fab52995a9e567bc6a8c4c3f802ae4889a4bd19b5e30692cea716d9",
+      "fields": "rows[].error_to_represented_max",
+      "filter": "order == 3; steps 4,8,16",
+      "x_field": "rows[].steps",
+      "x_unit": "step count",
+      "y_unit": "dimensionless canonical state 2-norm",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        3.5870150721594976e-08,
+        8.977316698626197e-09,
+        2.2455480611856356e-09
+      ]
+    },
+    {
+      "figure": "transport",
+      "panel": "0b",
+      "series": "r=3, continuous representation gap",
+      "source_path": "stage5/results/transport/synthetic/inverse_verified.json",
+      "source_sha256": "0cfdb0128fab52995a9e567bc6a8c4c3f802ae4889a4bd19b5e30692cea716d9",
+      "fields": "model_gaps[].represented_original_reference_gap",
+      "filter": "order == 3; constant across grid",
+      "x_field": "see selection",
+      "x_unit": "step count",
+      "y_unit": "dimensionless canonical state 2-norm",
+      "transform": "repeat scalar as horizontal reference",
+      "x": [
+        4,
+        16
+      ],
+      "y": [
+        1.64619124861864e-10,
+        1.64619124861864e-10
+      ]
+    },
+    {
+      "figure": "transport",
+      "panel": "0c",
+      "series": "r=3, grid total",
+      "source_path": "stage5/results/transport/synthetic/inverse_verified.json",
+      "source_sha256": "0cfdb0128fab52995a9e567bc6a8c4c3f802ae4889a4bd19b5e30692cea716d9",
+      "fields": "rows[].seconds",
+      "filter": "order == 3",
+      "x_field": "rows[].steps",
+      "x_unit": "step count",
+      "y_unit": "wall seconds",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        15.263151955998183,
+        19.386922075998882,
+        31.387882635997812
+      ]
+    },
+    {
+      "figure": "transport",
+      "panel": "0c",
+      "series": "r=3, auxiliary chart",
+      "source_path": "stage5/results/transport/synthetic/inverse_verified.json",
+      "source_sha256": "0cfdb0128fab52995a9e567bc6a8c4c3f802ae4889a4bd19b5e30692cea716d9",
+      "fields": "rows[].auxiliary_seconds",
+      "filter": "order == 3",
+      "x_field": "rows[].steps",
+      "x_unit": "step count",
+      "y_unit": "wall seconds",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        0.6312005419931666,
+        0.9303259980115399,
+        1.5215562600133126
+      ]
+    },
+    {
+      "figure": "transport",
+      "panel": "1a",
+      "series": "r=1",
+      "source_path": "stage5/results/transport/fullcoil_collocated/inverse_verified.json",
+      "source_sha256": "2fbb6d19cb1660c243a570bf012d35afe34f4540d8811688b5e6b7d84c5fe506",
+      "fields": "native_center.rows[].native_time_jet_field_error_2",
+      "filter": "order == 1; sorted time ascending; fixed cache center",
+      "x_field": "native_center.rows[].time",
+      "x_unit": "dimensionless tau",
+      "y_unit": "dimensionless canonical field 2-norm",
+      "transform": "none",
+      "x": [
+        6.25e-05,
+        0.000125,
+        0.00025,
+        0.0005
+      ],
+      "y": [
+        2.5190514337514522e-05,
+        5.035217091369711e-05,
+        0.00010058913159583812,
+        0.00020071918050573674
+      ]
+    },
+    {
+      "figure": "transport",
+      "panel": "1b",
+      "series": "r=1, original field",
+      "source_path": "stage5/results/transport/fullcoil_collocated/inverse_verified.json",
+      "source_sha256": "2fbb6d19cb1660c243a570bf012d35afe34f4540d8811688b5e6b7d84c5fe506",
+      "fields": "rows[].error_to_original_max",
+      "filter": "order == 1; steps 4,8,16",
+      "x_field": "rows[].steps",
+      "x_unit": "step count",
+      "y_unit": "dimensionless canonical state 2-norm",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        6.17461444567147e-08,
+        5.0943281195177516e-08,
+        5.016945020863518e-08
+      ]
+    },
+    {
+      "figure": "transport",
+      "panel": "1b",
+      "series": "r=1, represented field",
+      "source_path": "stage5/results/transport/fullcoil_collocated/inverse_verified.json",
+      "source_sha256": "2fbb6d19cb1660c243a570bf012d35afe34f4540d8811688b5e6b7d84c5fe506",
+      "fields": "rows[].error_to_represented_max",
+      "filter": "order == 1; steps 4,8,16",
+      "x_field": "rows[].steps",
+      "x_unit": "step count",
+      "y_unit": "dimensionless canonical state 2-norm",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        3.5869706817860856e-08,
+        8.977205461864445e-09,
+        2.2449202536234703e-09
+      ]
+    },
+    {
+      "figure": "transport",
+      "panel": "1b",
+      "series": "r=1, continuous representation gap",
+      "source_path": "stage5/results/transport/fullcoil_collocated/inverse_verified.json",
+      "source_sha256": "2fbb6d19cb1660c243a570bf012d35afe34f4540d8811688b5e6b7d84c5fe506",
+      "fields": "model_gaps[].represented_original_reference_gap",
+      "filter": "order == 1; constant across grid",
+      "x_field": "see selection",
+      "x_unit": "step count",
+      "y_unit": "dimensionless canonical state 2-norm",
+      "transform": "repeat scalar as horizontal reference",
+      "x": [
+        4,
+        16
+      ],
+      "y": [
+        5.010837635779686e-08,
+        5.010837635779686e-08
+      ]
+    },
+    {
+      "figure": "transport",
+      "panel": "1c",
+      "series": "r=1, grid total",
+      "source_path": "stage5/results/transport/fullcoil_collocated/inverse_verified.json",
+      "source_sha256": "2fbb6d19cb1660c243a570bf012d35afe34f4540d8811688b5e6b7d84c5fe506",
+      "fields": "rows[].seconds",
+      "filter": "order == 1",
+      "x_field": "rows[].steps",
+      "x_unit": "step count",
+      "y_unit": "wall seconds",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        49.66732190600305,
+        66.8125787300014,
+        116.07097361700289
+      ]
+    },
+    {
+      "figure": "transport",
+      "panel": "1c",
+      "series": "r=1, auxiliary chart",
+      "source_path": "stage5/results/transport/fullcoil_collocated/inverse_verified.json",
+      "source_sha256": "2fbb6d19cb1660c243a570bf012d35afe34f4540d8811688b5e6b7d84c5fe506",
+      "fields": "rows[].auxiliary_seconds",
+      "filter": "order == 1",
+      "x_field": "rows[].steps",
+      "x_unit": "step count",
+      "y_unit": "wall seconds",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        0.6006407290042262,
+        0.8053612650182913,
+        1.3764912089900463
+      ]
+    },
+    {
+      "figure": "transport",
+      "panel": "1a",
+      "series": "r=2",
+      "source_path": "stage5/results/transport/fullcoil_collocated/inverse_verified.json",
+      "source_sha256": "2fbb6d19cb1660c243a570bf012d35afe34f4540d8811688b5e6b7d84c5fe506",
+      "fields": "native_center.rows[].native_time_jet_field_error_2",
+      "filter": "order == 2; sorted time ascending; fixed cache center",
+      "x_field": "native_center.rows[].time",
+      "x_unit": "dimensionless tau",
+      "y_unit": "dimensionless canonical field 2-norm",
+      "transform": "none",
+      "x": [
+        6.25e-05,
+        0.000125,
+        0.00025,
+        0.0005
+      ],
+      "y": [
+        1.0178741705187448e-07,
+        4.0690669208084633e-07,
+        1.6256857310570212e-06,
+        6.487258787571039e-06
+      ]
+    },
+    {
+      "figure": "transport",
+      "panel": "1b",
+      "series": "r=2, original field",
+      "source_path": "stage5/results/transport/fullcoil_collocated/inverse_verified.json",
+      "source_sha256": "2fbb6d19cb1660c243a570bf012d35afe34f4540d8811688b5e6b7d84c5fe506",
+      "fields": "rows[].error_to_original_max",
+      "filter": "order == 2; steps 4,8,16",
+      "x_field": "rows[].steps",
+      "x_unit": "step count",
+      "y_unit": "dimensionless canonical state 2-norm",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        3.589225290419176e-08,
+        9.048055682587829e-09,
+        2.4959453788269735e-09
+      ]
+    },
+    {
+      "figure": "transport",
+      "panel": "1b",
+      "series": "r=2, represented field",
+      "source_path": "stage5/results/transport/fullcoil_collocated/inverse_verified.json",
+      "source_sha256": "2fbb6d19cb1660c243a570bf012d35afe34f4540d8811688b5e6b7d84c5fe506",
+      "fields": "rows[].error_to_represented_max",
+      "filter": "order == 2; steps 4,8,16",
+      "x_field": "rows[].steps",
+      "x_unit": "step count",
+      "y_unit": "dimensionless canonical state 2-norm",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        3.586970818747318e-08,
+        8.977205803459358e-09,
+        2.244920334929077e-09
+      ]
+    },
+    {
+      "figure": "transport",
+      "panel": "1b",
+      "series": "r=2, continuous representation gap",
+      "source_path": "stage5/results/transport/fullcoil_collocated/inverse_verified.json",
+      "source_sha256": "2fbb6d19cb1660c243a570bf012d35afe34f4540d8811688b5e6b7d84c5fe506",
+      "fields": "model_gaps[].represented_original_reference_gap",
+      "filter": "order == 2; constant across grid",
+      "x_field": "see selection",
+      "x_unit": "step count",
+      "y_unit": "dimensionless canonical state 2-norm",
+      "transform": "repeat scalar as horizontal reference",
+      "x": [
+        4,
+        16
+      ],
+      "y": [
+        1.0785012234321955e-09,
+        1.0785012234321955e-09
+      ]
+    },
+    {
+      "figure": "transport",
+      "panel": "1c",
+      "series": "r=2, grid total",
+      "source_path": "stage5/results/transport/fullcoil_collocated/inverse_verified.json",
+      "source_sha256": "2fbb6d19cb1660c243a570bf012d35afe34f4540d8811688b5e6b7d84c5fe506",
+      "fields": "rows[].seconds",
+      "filter": "order == 2",
+      "x_field": "rows[].steps",
+      "x_unit": "step count",
+      "y_unit": "wall seconds",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        44.69288251099715,
+        64.50050459900012,
+        107.55291388399928
+      ]
+    },
+    {
+      "figure": "transport",
+      "panel": "1c",
+      "series": "r=2, auxiliary chart",
+      "source_path": "stage5/results/transport/fullcoil_collocated/inverse_verified.json",
+      "source_sha256": "2fbb6d19cb1660c243a570bf012d35afe34f4540d8811688b5e6b7d84c5fe506",
+      "fields": "rows[].auxiliary_seconds",
+      "filter": "order == 2",
+      "x_field": "rows[].steps",
+      "x_unit": "step count",
+      "y_unit": "wall seconds",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        0.6294374900098774,
+        0.7950925220029603,
+        1.3523821490052796
+      ]
+    },
+    {
+      "figure": "integrators",
+      "panel": "00",
+      "series": "Midpoint",
+      "source_path": "stage5/results/closed_loop/results.json",
+      "source_sha256": "567a092d120ef725db49742f0060dced5d099aad90d55529862ac5c31c833198",
+      "fields": "branches.conservative.methods.midpoint[].maximum_state_error",
+      "filter": "all frozen grids; branch-specific reference",
+      "x_field": "steps",
+      "x_unit": "step count",
+      "y_unit": "dimensionless 2-norm",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        3.586970766982001e-08,
+        8.977205679816349e-09,
+        2.2449138176111573e-09
+      ]
+    },
+    {
+      "figure": "integrators",
+      "panel": "10",
+      "series": "Midpoint",
+      "source_path": "stage5/results/closed_loop/results.json",
+      "source_sha256": "567a092d120ef725db49742f0060dced5d099aad90d55529862ac5c31c833198",
+      "fields": "branches.conservative.methods.midpoint[].maximum_sampled_canonical_defect_2",
+      "filter": "all frozen grids; branch-specific reference",
+      "x_field": "steps",
+      "x_unit": "step count",
+      "y_unit": "dimensionless 2-norm",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        6.672284069210727e-16,
+        9.992065273041382e-16,
+        9.992012611885845e-16
+      ]
+    },
+    {
+      "figure": "integrators",
+      "panel": "00",
+      "series": "Central4",
+      "source_path": "stage5/results/closed_loop/results.json",
+      "source_sha256": "567a092d120ef725db49742f0060dced5d099aad90d55529862ac5c31c833198",
+      "fields": "branches.conservative.methods.central4[].maximum_state_error",
+      "filter": "all frozen grids; branch-specific reference",
+      "x_field": "steps",
+      "x_unit": "step count",
+      "y_unit": "dimensionless 2-norm",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        3.759843466493459e-11,
+        2.3543947273024002e-12,
+        1.4749262237590846e-13
+      ]
+    },
+    {
+      "figure": "integrators",
+      "panel": "10",
+      "series": "Central4",
+      "source_path": "stage5/results/closed_loop/results.json",
+      "source_sha256": "567a092d120ef725db49742f0060dced5d099aad90d55529862ac5c31c833198",
+      "fields": "branches.conservative.methods.central4[].maximum_sampled_canonical_defect_2",
+      "filter": "all frozen grids; branch-specific reference",
+      "x_field": "steps",
+      "x_unit": "step count",
+      "y_unit": "dimensionless 2-norm",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        8.882041241555056e-16,
+        6.702446628942567e-16,
+        7.77156141876536e-16
+      ]
+    },
+    {
+      "figure": "integrators",
+      "panel": "01",
+      "series": "Midpoint",
+      "source_path": "stage5/results/closed_loop/results.json",
+      "source_sha256": "567a092d120ef725db49742f0060dced5d099aad90d55529862ac5c31c833198",
+      "fields": "branches.proportional.methods.midpoint[].maximum_state_error",
+      "filter": "all frozen grids; branch-specific reference",
+      "x_field": "steps",
+      "x_unit": "step count",
+      "y_unit": "dimensionless 2-norm",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        3.586993347565747e-08,
+        8.977262107867718e-09,
+        2.24492792291062e-09
+      ]
+    },
+    {
+      "figure": "integrators",
+      "panel": "11",
+      "series": "Midpoint",
+      "source_path": "stage5/results/closed_loop/results.json",
+      "source_sha256": "567a092d120ef725db49742f0060dced5d099aad90d55529862ac5c31c833198",
+      "fields": "branches.proportional.methods.midpoint[].maximum_sampled_weighted_defect_2",
+      "filter": "all frozen grids; branch-specific reference",
+      "x_field": "steps",
+      "x_unit": "step count",
+      "y_unit": "dimensionless 2-norm",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        7.452363884661859e-08,
+        9.336445111130297e-09,
+        1.167717586119706e-09
+      ]
+    },
+    {
+      "figure": "integrators",
+      "panel": "01",
+      "series": "Weighted midpoint",
+      "source_path": "stage5/results/closed_loop/results.json",
+      "source_sha256": "567a092d120ef725db49742f0060dced5d099aad90d55529862ac5c31c833198",
+      "fields": "branches.proportional.methods.weighted_midpoint[].maximum_state_error",
+      "filter": "all frozen grids; branch-specific reference",
+      "x_field": "steps",
+      "x_unit": "step count",
+      "y_unit": "dimensionless 2-norm",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        3.587640366022003e-08,
+        8.978881904779361e-09,
+        2.2453330130243085e-09
+      ]
+    },
+    {
+      "figure": "integrators",
+      "panel": "11",
+      "series": "Weighted midpoint",
+      "source_path": "stage5/results/closed_loop/results.json",
+      "source_sha256": "567a092d120ef725db49742f0060dced5d099aad90d55529862ac5c31c833198",
+      "fields": "branches.proportional.methods.weighted_midpoint[].maximum_sampled_weighted_defect_2",
+      "filter": "all frozen grids; branch-specific reference",
+      "x_field": "steps",
+      "x_unit": "step count",
+      "y_unit": "dimensionless 2-norm",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        7.77469908036495e-16,
+        8.882323774607591e-16,
+        1.1102237161103894e-15
+      ]
+    },
+    {
+      "figure": "integrators",
+      "panel": "02",
+      "series": "Midpoint",
+      "source_path": "stage5/results/closed_loop/results.json",
+      "source_sha256": "567a092d120ef725db49742f0060dced5d099aad90d55529862ac5c31c833198",
+      "fields": "branches.collocated.methods.midpoint[].maximum_state_error",
+      "filter": "all frozen grids; branch-specific reference",
+      "x_field": "steps",
+      "x_unit": "step count",
+      "y_unit": "dimensionless 2-norm",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        3.586971728432941e-08,
+        8.977208079993568e-09,
+        2.2449144171698347e-09
+      ]
+    },
+    {
+      "figure": "integrators",
+      "panel": "12",
+      "series": "Midpoint",
+      "source_path": "stage5/results/closed_loop/results.json",
+      "source_sha256": "567a092d120ef725db49742f0060dced5d099aad90d55529862ac5c31c833198",
+      "fields": "branches.collocated.methods.midpoint[].maximum_sampled_canonical_defect_2",
+      "filter": "all frozen grids; branch-specific reference",
+      "x_field": "steps",
+      "x_unit": "step count",
+      "y_unit": "dimensionless 2-norm",
+      "transform": "none",
+      "x": [
+        4,
+        8,
+        16
+      ],
+      "y": [
+        0.0015695150173150997,
+        0.0007850363243759893,
+        0.0003925863784542407
+      ]
+    },
+    {
+      "figure": "coil",
+      "panel": "a",
+      "series": "Full versus affine force discrepancy",
+      "source_path": "stage5/results/coil/force_warm_fix/validation.json",
+      "source_sha256": "f5f14d5df40a94f76c6d8f7e0211a97c77e72286131cad638fdd51603e6fd65e",
+      "fields": "same_physical_q_spatial_quadrature[].full_vs_affine_relative",
+      "filter": "all rows; same physical q",
+      "x_field": "same_physical_q_spatial_quadrature[].elements",
+      "x_unit": "geometry elements",
+      "y_unit": "%",
+      "transform": "multiply relative discrepancy by 100",
+      "x": [
+        20,
+        40,
+        80
+      ],
+      "y": [
+        98.5235663454201,
+        98.59787519912334,
+        98.6182967721294
+      ]
+    },
+    {
+      "figure": "coil",
+      "panel": "b",
+      "series": "20 elements; rank 5",
+      "source_path": "stage5/results/coil/force_warm_fix/validation.json",
+      "source_sha256": "f5f14d5df40a94f76c6d8f7e0211a97c77e72286131cad638fdd51603e6fd65e",
+      "fields": "same_physical_q_spatial_quadrature[].singular_values",
+      "filter": "elements == 20",
+      "x_field": "see selection",
+      "x_unit": "singular-value index (1 based)",
+      "y_unit": "relative singular value",
+      "transform": "divide each singular value by first",
+      "x": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "y": [
+        1.0,
+        0.7359067645040559,
+        0.41019198003188634,
+        0.3222312769800024,
+        0.000286103561695397,
+        1.9369549979667183e-16,
+        8.505260207532285e-17,
+        3.982414504171051e-17,
+        2.3179320501883904e-18,
+        1.7122915169940989e-18,
+        1.1610248630092894e-18,
+        7.158119807090112e-21
+      ]
+    },
+    {
+      "figure": "coil",
+      "panel": "b",
+      "series": "40 elements; rank 7",
+      "source_path": "stage5/results/coil/force_warm_fix/validation.json",
+      "source_sha256": "f5f14d5df40a94f76c6d8f7e0211a97c77e72286131cad638fdd51603e6fd65e",
+      "fields": "same_physical_q_spatial_quadrature[].singular_values",
+      "filter": "elements == 40",
+      "x_field": "see selection",
+      "x_unit": "singular-value index (1 based)",
+      "y_unit": "relative singular value",
+      "transform": "divide each singular value by first",
+      "x": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "y": [
+        1.0,
+        0.7363726945773127,
+        0.413773725346162,
+        0.3256477483356903,
+        0.0002863214658770507,
+        1.9042703135343415e-06,
+        7.283739072451674e-07,
+        1.001592848717534e-16,
+        2.7167487823873374e-18,
+        1.286777911536198e-18,
+        7.896481181337125e-19,
+        2.0138893474852187e-19
+      ]
+    },
+    {
+      "figure": "coil",
+      "panel": "b",
+      "series": "80 elements; rank 7",
+      "source_path": "stage5/results/coil/force_warm_fix/validation.json",
+      "source_sha256": "f5f14d5df40a94f76c6d8f7e0211a97c77e72286131cad638fdd51603e6fd65e",
+      "fields": "same_physical_q_spatial_quadrature[].singular_values",
+      "filter": "elements == 80",
+      "x_field": "see selection",
+      "x_unit": "singular-value index (1 based)",
+      "y_unit": "relative singular value",
+      "transform": "divide each singular value by first",
+      "x": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "y": [
+        1.0,
+        0.7364980737716225,
+        0.4147023572038462,
+        0.3265262269170055,
+        0.0002873482979868465,
+        2.183859002591034e-06,
+        2.2267433169267245e-07,
+        1.2743298621333523e-10,
+        2.5718866714105515e-12,
+        5.378682035597814e-16,
+        8.062521162406313e-17,
+        1.5125843930199116e-18
+      ]
+    },
+    {
+      "figure": "coil",
+      "panel": "b",
+      "series": "rank threshold",
+      "source_path": "stage5/results/coil/force_warm_fix/validation.json",
+      "source_sha256": "f5f14d5df40a94f76c6d8f7e0211a97c77e72286131cad638fdd51603e6fd65e",
+      "fields": "same_physical_q_spatial_quadrature[].rank_rcond",
+      "filter": "elements=20; all rows share threshold",
+      "x_field": "see selection",
+      "x_unit": "singular-value index",
+      "y_unit": "relative singular value",
+      "transform": "repeat scalar as horizontal threshold",
+      "x": [
+        1,
+        12
+      ],
+      "y": [
+        1e-08,
+        1e-08
+      ]
+    },
+    {
+      "figure": "learning",
+      "panel": "a",
+      "series": "analytic_mechanical4, test, three seeds",
+      "source_path": "stage5/results/learning/S5_L01_metrics.csv",
+      "source_sha256": "a805e7dd699fc0df5a47067d322878e0acf757e753264d428daf168ebcc533c9",
+      "fields": "canonical_field_relative_l2",
+      "filter": "kind=analytic_mechanical4; split=test; seeds ascending 51001,51002,51003",
+      "x_field": "kind/seed/split",
+      "x_unit": "model category + display offset",
+      "y_unit": "%",
+      "transform": "multiply by 100; x offsets distinguish split and seed",
+      "x": [
+        -0.185,
+        -0.15,
+        -0.11499999999999999
+      ],
+      "y": [
+        35.24895208127385,
+        35.260202706434605,
+        35.28220541219162
+      ]
+    },
+    {
+      "figure": "learning",
+      "panel": "b",
+      "series": "analytic_mechanical4, test, three seeds",
+      "source_path": "stage5/results/learning/S5_L01_metrics.csv",
+      "source_sha256": "a805e7dd699fc0df5a47067d322878e0acf757e753264d428daf168ebcc533c9",
+      "fields": "Hpp_nonpositive_count",
+      "filter": "kind=analytic_mechanical4; split=test; seeds ascending 51001,51002,51003",
+      "x_field": "kind/seed/split",
+      "x_unit": "model category + display offset",
+      "y_unit": "nonpositive Hpp samples out of 8",
+      "transform": "x offsets distinguish split and seed",
+      "x": [
+        -0.185,
+        -0.15,
+        -0.11499999999999999
+      ],
+      "y": [
+        4.0,
+        4.0,
+        4.0
+      ]
+    },
+    {
+      "figure": "learning",
+      "panel": "a",
+      "series": "complex_hidden, test, three seeds",
+      "source_path": "stage5/results/learning/S5_L01_metrics.csv",
+      "source_sha256": "a805e7dd699fc0df5a47067d322878e0acf757e753264d428daf168ebcc533c9",
+      "fields": "canonical_field_relative_l2",
+      "filter": "kind=complex_hidden; split=test; seeds ascending 51001,51002,51003",
+      "x_field": "kind/seed/split",
+      "x_unit": "model category + display offset",
+      "y_unit": "%",
+      "transform": "multiply by 100; x offsets distinguish split and seed",
+      "x": [
+        0.815,
+        0.85,
+        0.885
+      ],
+      "y": [
+        3.7002730484212667,
+        3.240661328644327,
+        3.5219492358256397
+      ]
+    },
+    {
+      "figure": "learning",
+      "panel": "b",
+      "series": "complex_hidden, test, three seeds",
+      "source_path": "stage5/results/learning/S5_L01_metrics.csv",
+      "source_sha256": "a805e7dd699fc0df5a47067d322878e0acf757e753264d428daf168ebcc533c9",
+      "fields": "Hpp_nonpositive_count",
+      "filter": "kind=complex_hidden; split=test; seeds ascending 51001,51002,51003",
+      "x_field": "kind/seed/split",
+      "x_unit": "model category + display offset",
+      "y_unit": "nonpositive Hpp samples out of 8",
+      "transform": "x offsets distinguish split and seed",
+      "x": [
+        0.815,
+        0.85,
+        0.885
+      ],
+      "y": [
+        2.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "figure": "learning",
+      "panel": "a",
+      "series": "spd_complex, test, three seeds",
+      "source_path": "stage5/results/learning/S5_L01_metrics.csv",
+      "source_sha256": "a805e7dd699fc0df5a47067d322878e0acf757e753264d428daf168ebcc533c9",
+      "fields": "canonical_field_relative_l2",
+      "filter": "kind=spd_complex; split=test; seeds ascending 51001,51002,51003",
+      "x_field": "kind/seed/split",
+      "x_unit": "model category + display offset",
+      "y_unit": "%",
+      "transform": "multiply by 100; x offsets distinguish split and seed",
+      "x": [
+        1.8150000000000002,
+        1.85,
+        1.885
+      ],
+      "y": [
+        11.553463069251741,
+        11.475656738388592,
+        11.415248211507217
+      ]
+    },
+    {
+      "figure": "learning",
+      "panel": "b",
+      "series": "spd_complex, test, three seeds",
+      "source_path": "stage5/results/learning/S5_L01_metrics.csv",
+      "source_sha256": "a805e7dd699fc0df5a47067d322878e0acf757e753264d428daf168ebcc533c9",
+      "fields": "Hpp_nonpositive_count",
+      "filter": "kind=spd_complex; split=test; seeds ascending 51001,51002,51003",
+      "x_field": "kind/seed/split",
+      "x_unit": "model category + display offset",
+      "y_unit": "nonpositive Hpp samples out of 8",
+      "transform": "x offsets distinguish split and seed",
+      "x": [
+        1.8150000000000002,
+        1.85,
+        1.885
+      ],
+      "y": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "figure": "learning",
+      "panel": "a",
+      "series": "analytic_mechanical4, OOD, three seeds",
+      "source_path": "stage5/results/learning/S5_L01_metrics.csv",
+      "source_sha256": "a805e7dd699fc0df5a47067d322878e0acf757e753264d428daf168ebcc533c9",
+      "fields": "canonical_field_relative_l2",
+      "filter": "kind=analytic_mechanical4; split=OOD; seeds ascending 51001,51002,51003",
+      "x_field": "kind/seed/split",
+      "x_unit": "model category + display offset",
+      "y_unit": "%",
+      "transform": "multiply by 100; x offsets distinguish split and seed",
+      "x": [
+        0.11499999999999999,
+        0.15,
+        0.185
+      ],
+      "y": [
+        59.74256781225029,
+        60.272588124854295,
+        60.20663224848113
+      ]
+    },
+    {
+      "figure": "learning",
+      "panel": "b",
+      "series": "analytic_mechanical4, OOD, three seeds",
+      "source_path": "stage5/results/learning/S5_L01_metrics.csv",
+      "source_sha256": "a805e7dd699fc0df5a47067d322878e0acf757e753264d428daf168ebcc533c9",
+      "fields": "Hpp_nonpositive_count",
+      "filter": "kind=analytic_mechanical4; split=OOD; seeds ascending 51001,51002,51003",
+      "x_field": "kind/seed/split",
+      "x_unit": "model category + display offset",
+      "y_unit": "nonpositive Hpp samples out of 8",
+      "transform": "x offsets distinguish split and seed",
+      "x": [
+        0.11499999999999999,
+        0.15,
+        0.185
+      ],
+      "y": [
+        7.0,
+        7.0,
+        7.0
+      ]
+    },
+    {
+      "figure": "learning",
+      "panel": "a",
+      "series": "complex_hidden, OOD, three seeds",
+      "source_path": "stage5/results/learning/S5_L01_metrics.csv",
+      "source_sha256": "a805e7dd699fc0df5a47067d322878e0acf757e753264d428daf168ebcc533c9",
+      "fields": "canonical_field_relative_l2",
+      "filter": "kind=complex_hidden; split=OOD; seeds ascending 51001,51002,51003",
+      "x_field": "kind/seed/split",
+      "x_unit": "model category + display offset",
+      "y_unit": "%",
+      "transform": "multiply by 100; x offsets distinguish split and seed",
+      "x": [
+        1.115,
+        1.15,
+        1.1849999999999998
+      ],
+      "y": [
+        9.062824461140897,
+        8.409732716724358,
+        8.54917878565289
+      ]
+    },
+    {
+      "figure": "learning",
+      "panel": "b",
+      "series": "complex_hidden, OOD, three seeds",
+      "source_path": "stage5/results/learning/S5_L01_metrics.csv",
+      "source_sha256": "a805e7dd699fc0df5a47067d322878e0acf757e753264d428daf168ebcc533c9",
+      "fields": "Hpp_nonpositive_count",
+      "filter": "kind=complex_hidden; split=OOD; seeds ascending 51001,51002,51003",
+      "x_field": "kind/seed/split",
+      "x_unit": "model category + display offset",
+      "y_unit": "nonpositive Hpp samples out of 8",
+      "transform": "x offsets distinguish split and seed",
+      "x": [
+        1.115,
+        1.15,
+        1.1849999999999998
+      ],
+      "y": [
+        5.0,
+        6.0,
+        7.0
+      ]
+    },
+    {
+      "figure": "learning",
+      "panel": "a",
+      "series": "spd_complex, OOD, three seeds",
+      "source_path": "stage5/results/learning/S5_L01_metrics.csv",
+      "source_sha256": "a805e7dd699fc0df5a47067d322878e0acf757e753264d428daf168ebcc533c9",
+      "fields": "canonical_field_relative_l2",
+      "filter": "kind=spd_complex; split=OOD; seeds ascending 51001,51002,51003",
+      "x_field": "kind/seed/split",
+      "x_unit": "model category + display offset",
+      "y_unit": "%",
+      "transform": "multiply by 100; x offsets distinguish split and seed",
+      "x": [
+        2.1149999999999998,
+        2.15,
+        2.185
+      ],
+      "y": [
+        21.69934191528359,
+        21.91700036183071,
+        20.650844714721465
+      ]
+    },
+    {
+      "figure": "learning",
+      "panel": "b",
+      "series": "spd_complex, OOD, three seeds",
+      "source_path": "stage5/results/learning/S5_L01_metrics.csv",
+      "source_sha256": "a805e7dd699fc0df5a47067d322878e0acf757e753264d428daf168ebcc533c9",
+      "fields": "Hpp_nonpositive_count",
+      "filter": "kind=spd_complex; split=OOD; seeds ascending 51001,51002,51003",
+      "x_field": "kind/seed/split",
+      "x_unit": "model category + display offset",
+      "y_unit": "nonpositive Hpp samples out of 8",
+      "transform": "x offsets distinguish split and seed",
+      "x": [
+        2.1149999999999998,
+        2.15,
+        2.185
+      ],
+      "y": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "figure": "resonance",
+      "panel": "a",
+      "series": "quartic coefficient cancellation",
+      "source_path": "stage5/results/resonance/S5_R02_results.json",
+      "source_sha256": "d500d6c86bc9b6bee95ea2f2270c7a2285f0c5d4d1a26648a6a2ca06e012f999",
+      "fields": "coefficient_of_xi0_squared_chi1_squared.raw_H4_real;coefficient_of_xi0_squared_chi1_squared.cubic_correction_real;coefficient_of_xi0_squared_chi1_squared.corrected_H4_real",
+      "filter": "powers=2,0,0,2; accepted reverse-AD calculation",
+      "x_field": "see selection",
+      "x_unit": "coefficient contribution",
+      "y_unit": "dimensionless normal-form coefficient",
+      "transform": "none",
+      "x": [
+        0,
+        1,
+        2
+      ],
+      "y": [
+        -434.7256304212535,
+        434.719027922014,
+        -0.006602499239534154
+      ]
+    },
+    {
+      "figure": "resonance",
+      "panel": "b",
+      "series": "all canonical bracket channels",
+      "source_path": "stage5/results/resonance/S5_R02_results.json",
+      "source_sha256": "d500d6c86bc9b6bee95ea2f2270c7a2285f0c5d4d1a26648a6a2ca06e012f999",
+      "fields": "cross_mode_cubic_correction[].xi0_squared_chi1_squared_correction_real",
+      "filter": "all 12 modes, including zero contributions",
+      "x_field": "cross_mode_cubic_correction[].mode",
+      "x_unit": "mode index (1 based)",
+      "y_unit": "dimensionless normal-form coefficient",
+      "transform": "add 1 to stored mode index",
+      "x": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "y": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        39.17158625287893,
+        167.40054907200897,
+        196.34694535352446,
+        31.799947243601668
+      ]
+    },
+    {
+      "figure": "rod",
+      "panel": "a",
+      "series": "seven final cases",
+      "source_path": "stage5/results/rod_transfer/comparison.csv",
+      "source_sha256": "186f46b63767e2226d2630c02d905bf44cabdb14869f81427dfc602ce07dc022",
+      "fields": "tip_rmse_m",
+      "filter": "all rows, original CSV order; final repaired allocator",
+      "x_field": "case",
+      "x_unit": "case index",
+      "y_unit": "mm",
+      "transform": "multiply m by 1000",
+      "x": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "y": [
+        0.31855775544209874,
+        0.31989621849191086,
+        0.3200322984286117,
+        0.3200332583973872,
+        0.32003788737658845,
+        0.31962841780515366,
+        0.4286888461427277
+      ]
+    },
+    {
+      "figure": "rod",
+      "panel": "b",
+      "series": "spatial refinement",
+      "source_path": "stage5/results/rod_transfer/refinement.json",
+      "source_sha256": "a689084c31d6f20ef63db0bd6e4739083542c0eacae8eaed587403551398edd6",
+      "fields": "pairs[].centerline_time_space_rms_m",
+      "filter": "pair indices [0, 1]; same reference arclength; adjacent solutions",
+      "x_field": "pairs[].first/second",
+      "x_unit": "adjacent refinement pair",
+      "y_unit": "um",
+      "transform": "multiply m by 1e+06",
+      "x": [
+        0,
+        1
+      ],
+      "y": [
+        3.648024584036586,
+        1.815140430944534
+      ]
+    },
+    {
+      "figure": "rod",
+      "panel": "c",
+      "series": "temporal refinement",
+      "source_path": "stage5/results/rod_transfer/refinement.json",
+      "source_sha256": "a689084c31d6f20ef63db0bd6e4739083542c0eacae8eaed587403551398edd6",
+      "fields": "pairs[].centerline_time_space_rms_m",
+      "filter": "pair indices [2, 3]; same reference arclength; adjacent solutions",
+      "x_field": "pairs[].first/second",
+      "x_unit": "adjacent refinement pair",
+      "y_unit": "nm",
+      "transform": "multiply m by 1e+09",
+      "x": [
+        0,
+        1
+      ],
+      "y": [
+        3.7092818888564283,
+        2.679392282125741
+      ]
+    }
+  ]
+}

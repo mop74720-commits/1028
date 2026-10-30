@@ -1,0 +1,7 @@
+# Preserve upstream package bytes and raw build evidence.
+template/sagej.cls -text -whitespace
+template/sageh.bst -text -whitespace
+template/chinese/** -text -whitespace
+build_logs/** -text -whitespace
+# csv.writer uses standard CRLF records; retain them without whitespace noise.
+evidence/*.csv -text whitespace=cr-at-eol

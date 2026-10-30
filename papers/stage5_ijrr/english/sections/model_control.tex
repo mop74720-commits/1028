@@ -1,0 +1,168 @@
+\section{Three-dimensional mechanics and realizable magnetic control}
+\label{sec:model-control}
+
+\subsection{Two mechanical resolutions of the same robot}
+The physical target is a flexible magnetic robot in a vessel under residual microgravity. Its centerline alone does not determine its state: material twist can change while the centerline remains straight. We therefore retain both the centerline $r(s,t)\in\mathbb R^3$ and material frame $R(s,t)\in SO(3)$, with reference arclength $s\in[0,L]$. The Cosserat strains and body angular velocity are
+\begin{equation}
+ \nu=R^Tr_s,\qquad \widehat\kappa=R^TR_s,\qquad
+ \widehat\Omega=R^TR_t,
+ \label{eq:rod-kinematics}
+\end{equation}
+where $\widehat a b=a\times b$. With internal force $n$, moment $m$, and external force and couple densities $f,\ell$, the balances read
+\begin{equation}
+\begin{aligned}
+ \rho_s A r_{tt}&=n_s+f,\\
+ R\bigl(J_b\dot\Omega+\Omega\times J_b\Omega\bigr)
+ &=m_s+r_s\times n+\ell.
+\end{aligned}
+ \label{eq:rod-balance}
+\end{equation}
+Here $J_b$ is rotary inertia per reference length. The elastic laws use
+$n=RK_s(\nu-e_3)$ and $m=RK_b\kappa$ for an initially straight rod, with
+$K_b=\operatorname{diag}(EI_1,EI_2,GJ_p)$; $K_s$ denotes shear/stretch stiffness, and is unrelated to the Birkhoff two-form. These conventions keep both bending axes, torsion, and rotary inertia explicit \citep{Antman2005,Gazzola2018}.
+
+We use two resolutions with different purposes. The spatial Cosserat model admits shear and extension and evaluates prescribed flow, wall contact, friction, magnetic loads, and residual acceleration. Its base node and first material frame are fixed and its distal end is free. The analytical model imposes the Kirchhoff constraint $\nu=e_3$ and expands each of the two bending strains and the twist strain in four normalized Legendre functions. It consequently has 12 configuration coordinates and 24 phase coordinates. Its 20, 40, or 80 spatial cells are quadrature cells, not additional configuration degrees of freedom. Exponential frame updates and midpoint centerline integration supply the actual three-dimensional embedding. The two models share material and magnetic parameters, but there is no established uniform error bound between them.
+
+The benchmark has $L=100$\,mm, radius $0.6$\,mm, $E=3$\,MPa, $G=1$\,MPa, and density $1800$\,kg\,m$^{-3}$. The distal $5$\,mm carries body-aligned permanent magnetization with line dipole density $0.1448$\,A\,m, giving total moment $7.24\times10^{-4}$\,A\,m$^2$. The ideal axial bias is $0.5$\,mT. Material and magnet values are literature-informed benchmark inputs \citep{Tong2025}; assigning the same elastic constants along the complete shaft is a modeling assumption. Density, damping, coil ratings, wall parameters, and residual acceleration are engineering or synthetic choices, rather than measurements of an implanted device.
+
+In the environmental model, the fluid density and viscosity are $1060$\,kg\,m$^{-3}$ and $3.5$\,mPa\,s. A prescribed curved-tube parabolic profile has centerline speed scale $0.04$\,m\,s$^{-1}$, pulsation fraction $0.45$, and frequency $1.2$\,Hz. Anisotropic linear relative drag, transverse quadratic drag including the rod diameter, and axial-spin drag are implemented. A dimensionally consistent Morison-type inertial extension would depend on fluid acceleration and relative acceleration; added mass is not implemented here. Prescribing fluid velocity can supply mechanical energy even when relative drag is dissipative. The lumen is rigid and stationary, with nominal radius $3$\,mm. Positive penetration $\delta_+$ generates contact potential density $k\delta_+^{5/2}/(5/2)$, supplemented by compressive normal damping and regularized tangential friction. Structural damping is $2$\,s$^{-1}$. Residual acceleration $(8,-5,2)\times10^{-5}$\,m\,s$^{-2}$ and $3\times10^{-5}$\,m\,s$^{-2}$ jitter with nominal frequency $3$\,Hz define a synthetic microgravity case. Neither this flow prescription nor the wall model constitutes two-way fluid--structure interaction.
+
+\subsection{Canonical scaling without freezing inertia}
+Let $q$ denote the physical Ritz coefficients. The embedding induces translational and body-angular velocity Jacobians $J_r(q,s)$ and $J_\Omega(q,s)$, hence
+\begin{equation}
+\begin{aligned}
+ M(q)&=\int_0^L\left(\rho_s A J_r^TJ_r+
+ J_\Omega^TJ_bJ_\Omega\right)\,ds,\\
+ p&=M(q)\dot q.
+\end{aligned}
+ \label{eq:geometric-mass}
+\end{equation}
+All evaluations retain this configuration-dependent mass. In particular, the kinetic contribution to $\dot p_a$ is
+$\tfrac12\dot q^T(\partial_{q_a}M)\dot q$; removing it changes the physical vector field.
+The fixed scaling
+\begin{equation}
+\begin{gathered}
+ q=S_qQ,\qquad p=S_pP,\\
+ S_q^TS_p=\frac{E_0}{\omega_0}I,\\
+ \tau=\omega_0t,\qquad h=H/E_0.
+\end{gathered}
+ \label{eq:canonical-scaling}
+\end{equation}
+gives $z=(Q,P)$, $z'=J\nabla h$, and
+\begin{equation}
+\begin{aligned}
+ \overline M(Q)&=\frac{\omega_0^2}{E_0}S_q^TM(S_qQ)S_q,\\
+ T/E_0&=\tfrac12P^T\overline M(Q)^{-1}P.
+\end{aligned}
+ \label{eq:scaled-mass}
+\end{equation}
+Primes denote differentiation with respect to $\tau$; $J=\left(\begin{smallmatrix}0&I\\-I&0\end{smallmatrix}\right)$.
+For the default 20-cell geometry, $E_0=3.62\times10^{-7}$\,J and $\omega_0=4.4576294085$\,rad\,s$^{-1}$. The scaling is constructed from the ideal-bias linearization and then held fixed. It neither puts the full-coil system at equilibrium at $Q=0$ nor makes the ideal linear frequencies the frequencies of a new coil equilibrium. State norms below are dimensionless canonical norms; dimensional tip errors require geometric reconstruction.
+
+The ideal-field branch uses $h_{\rm ideal}=(T+V_e+V_{\rm uniform})/E_0$, up to a constant. The full-coil branch instead uses
+\begin{equation}
+\begin{aligned}
+ h_{\rm coil}(z,i)&=\tfrac12P^T\overline M^{-1}P\\
+ &\quad+V_e(S_qQ)/E_0+\phi(Q)^Ti.
+\end{aligned}
+ \label{eq:coil-hamiltonian}
+\end{equation}
+The currents $i\in\mathbb R^{12}$ are total currents in amperes. Their pre-energized bias $i_b$ is fitted to the local axial target and has maximum magnitude $1.5124804$\,A. No additional ideal-bias potential is added to \eqref{eq:coil-hamiltonian}. Thus comparisons between ideal and coil branches change the physical potential, whereas comparisons of integrators within one branch keep that potential fixed.
+
+\subsection{Full-coil energy, virtual work, and reachability}
+The engineered air-core array contains twelve circular coils of radius $25$\,mm and 300 turns, centered $75$\,mm from the field origin $(0,0,100)$\,mm. Its geometry is fixed by the archived benchmark, not hardware calibration. For permanent magnetization and a quasistatic linear coil field \citep{Abbott2020},
+\begin{equation}
+\begin{aligned}
+ B(x,i)&=\sum_{j=1}^{12}b_j(x)i_j,\\
+ b_j(x)&=\frac{\mu_0N_c}{4\pi}\oint_{C_j}
+ \frac{d\ell\times(x-x')}{|x-x'|^3}.
+\end{aligned}
+ \label{eq:coil-field}
+\end{equation}
+\begin{equation}
+\begin{aligned}
+ V_{\rm coil}&=-\sum_e\mu_e(Q)\cdot B(r_e(Q),i)\\
+ &=E_0\phi(Q)^Ti,\\
+ G_I(Q)&=-D_Q\phi(Q)^T.
+\end{aligned}
+ \label{eq:current-port}
+\end{equation}
+Each loop uses 256 wire quadrature points by default. Smoothness requires positive distance from the ideal conductors, a valid geometric chart, and positive-definite mass. The model does not include hysteresis, eddy currents, thermal limits, circuit voltage dynamics, or mutual inductance.
+
+At fixed current, differentiating the energy gives
+\begin{equation}
+\begin{aligned}
+ -\partial_{Q_a}V_{\rm coil}
+ &=\sum_e\Bigl[(\partial_{Q_a}\mu_e)\cdot B_e\\
+ &\qquad+\mu_e^T(\nabla B_e)\partial_{Q_a}r_e\Bigr].
+\end{aligned}
+ \label{eq:magnetic-virtual-work}
+\end{equation}
+The two terms include torque work and gradient-force work. With $(\nabla B)_{ab}=\partial_b B_a$, the dipole force and torque are $(\nabla B)^T\mu$ and $\mu\times B$. The current input changes only the momentum equation, through $G_Ii$. Twelve channels therefore do not grant independent control of twelve generalized forces, much less arbitrary corrections of 24 phase coordinates. For a desired momentum-force increment $d$, the irreducible linear residual is
+\begin{equation}
+ r_\perp=(I-G_IG_I^\dagger)d.
+ \label{eq:unreachable-force}
+\end{equation}
+It is reported separately from errors introduced by current and field constraints. Numerical ranks depend on the stated singular-value threshold and quadrature.
+
+\subsection{Feedback derivatives and energy accounting}
+For an explicitly declared synthetic proportional momentum damping rate $\gamma$, define the physical field before substituting feedback:
+\begin{equation}
+\begin{aligned}
+ f(z,i)&=J\partial_z h_{\rm coil}(z,i)\big|_i-
+ \binom{0}{\gamma P},\\
+ f_{\rm cl}(z)&=f(z,k(z)),\\
+ Df_{\rm cl}&=f_z+f_iDk.
+\end{aligned}
+ \label{eq:physical-feedback}
+\end{equation}
+Using $J\nabla_z h_{\rm coil}(z,k(z))$ instead would introduce the nonphysical force term $J(Dk)^T\phi$. Conversely, freezing the feedback when differentiating $f_{\rm cl}$ would omit its genuine chain-rule contribution. An implicit closed-loop residual must evaluate the input at the same unknown midpoint as the state.
+
+Let $h_b=h_{\rm coil}(z,i_b)$, $v=\partial_Ph_b=\overline M^{-1}P$, and $y=G_I^Tv$. The ideal instantaneous collocated law
+\begin{equation}
+\begin{aligned}
+ i&=i_b-\kappa y,\\
+ h_b'&=-\gamma P^T\overline M^{-1}P-\kappa\|y\|^2\leq0.
+\end{aligned}
+ \label{eq:collocated-power}
+\end{equation}
+is a power identity on the actual magnetic port. We select $\kappa=0.2/\|G_I(Q_0)\|_2^2=0.1542504562$. The corresponding physical output and gain are
+\begin{equation}
+\begin{aligned}
+ y_{\rm SI}&=E_0\omega_0y,\\
+ \kappa_{\rm SI}&=\kappa/(E_0\omega_0)\\
+ &=95590.32245\ {\rm A^2/W}.
+\end{aligned}
+ \label{eq:port-units}
+\end{equation}
+This conversion permits transfer to the spatial rod, whose unit-current nodal forces and body torques give
+$y_{{\rm SI},j}=\sum_aF_{j,a}\cdot\dot r_a+\sum_eT_{j,e}\cdot\Omega_e$.
+Its request is $i_{\rm req}=i_{\rm ff}-\kappa_{\rm SI}y_{\rm SI}$; the nominal term retains a local static-compliance feedforward and position feedback. Transfer of the dissipative port does not remove this nominal model error. Nor does \eqref{eq:collocated-power} establish preservation of the original two-form, full-state asymptotic stability, or KAM persistence.
+
+For time-dependent currents, total magnetic energy and mechanical energy have different budgets:
+\begin{align}
+ h_{\rm coil}'&=\phi^Ti'-\gamma v^TP,\label{eq:total-power}\\
+ [(T+V_e)/E_0]'&=v^TG_Ii-\gamma v^TP.
+ \label{eq:mechanical-power}
+\end{align}
+The spatial environmental calculation uses the mechanical budget, adding fluid, dissipative contact, residual-acceleration, and structural-damping work. Contact elastic energy is included in mechanical energy and is not counted twice as external work.
+
+\subsection{Sampled allocation and current memory}
+Two constrained policies are distinguished. One projects a collocated current request onto the feasible current set. The other minimizes
+\begin{equation}
+\begin{gathered}
+ \min_{i\in\mathcal C(Q,i_{\rm prev})}
+ \tfrac12\|G_I(Q)(i-i_b)-d\|^2,\\
+ d=\gamma P.
+\end{gathered}
+ \label{eq:force-allocation}
+\end{equation}
+to attempt damping compensation. The set imposes $|i_j|\leq2$\,A,
+$|i_j-i_{{\rm prev},j}|\leq20\Delta t$\,A, and sampled bounds
+$\|B\|\leq5$\,mT and $\|\nabla B\|_F\leq0.03$\,T\,m$^{-1}$. Here $\Delta t$ is in seconds. At fixed geometry these are convex constraints; rank deficiency can prevent uniqueness of the force-allocation minimizer. Solver success and independently checked feasibility are recorded separately from optimality or smoothness claims.
+
+Between updates the actual current follows
+$i(t)=(1-\theta)i_{\rm prev}+\theta i_{\rm target}$, $0\leq\theta\leq1$.
+Endpoint bounds establish continuous amplitude and almost-everywhere slew limits. Convexity also preserves field bounds at the fixed spatial samples used for allocation. It does not certify all moving magnetic points at all intermediate times, or a continuous vessel workspace. The rod uses fixed tubular samples with a 5\% margin and 2\,ms updates; the ROM checks the actual moving magnetic points at every Runge--Kutta stage.
+
+Projection, sampling, and ramps change the executed input, so the ideal dissipation identity cannot be assigned automatically to either constrained policy. The complete sampled ROM state is $(z,i_{\rm prev})\in\mathbb R^{36}$. Auditing only its $24\times24$ mechanical block omits current memory. Consequently, smooth fixed-current Hamiltonian dynamics, smooth collocated feedback, and the constrained sampled map require distinct structural arguments. This distinction remains necessary even when all recorded current and field samples satisfy their bounds.

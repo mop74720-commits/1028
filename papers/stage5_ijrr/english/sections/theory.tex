@@ -1,0 +1,286 @@
+\section{Transported structure and local generating maps}
+\label{sec:theory}
+
+The mechanical state is the normalized vector $z=(Q,P)\in U\subset\mathbb R^{2n}$, with time $\tau$, Hamiltonian $h$, and step length $\eta=\Delta\tau$. For the rod reduction $n=12$, but the construction below is independent of that dimension. Here $M$ denotes the normalized mass matrix. We work on open domains where the mechanical mass is positive definite and the stated derivatives exist. All local flows, auxiliary flows, and implicit branches must remain in the specified domains. We use
+\begin{equation}
+ J=\begin{pmatrix}0&I\\-I&0\end{pmatrix},\qquad K_0=-J,
+ \qquad (Da)_{ij}=\partial_{z_j}a_i .
+ \label{eq:th-conventions}
+\end{equation}
+This convention fixes the signs in both the variational equations and the endpoint construction. The geometric integration framework follows \citet{FengQin2010,Hairer2006}; the results here specify the compatibility and solvability conditions needed for the present nonseparable mechanical model.
+
+\subsection{A variational representation with a measurable residual}
+% Source: stage5/proofs/corrected_mathematics.md, section 3, R7--R10; stage4/audit/birkhoff_full_audit.md, section 2; original1025 p1113--p1125, p1180.
+Let $\alpha_\tau=a(z,\tau)^T dz$ and $\Omega_\tau=d\alpha_\tau$. Then
+\begin{equation}
+ \Omega_\tau=\frac12\sum_{i,j}K_{ij}\,dz_i\wedge dz_j,
+ \qquad K=(Da)^T-Da .
+ \label{eq:th-form}
+\end{equation}
+Integration by parts in the fixed-endpoint variation of $\int(a^T\dot z-B)\,d\tau$ gives
+\begin{equation}
+ \begin{aligned}
+ \delta\mathcal A&=\int\delta z^T(K\dot z-\partial_\tau a-\nabla B)\,d\tau,\\
+ Kf&=\nabla B+\partial_\tau a .
+\end{aligned}
+ \label{eq:th-variation}
+\end{equation}
+Thus, if $D=-\nabla B-\partial_\tau a$ is introduced, the field is $-K^{-1}D$. Closedness follows from $d^2=0$; invertibility of $K$ is a separate hypothesis. Cartan's identity and $\iota_f\Omega=-(Kf)^Tdz$ imply
+\begin{equation}
+ \begin{aligned}
+ \partial_\tau\Omega+\mathcal L_f\Omega&=0,\\
+ K_\tau+DK[f]+Df^TK+KDf&=0.
+\end{aligned}
+ \label{eq:th-compatibility}
+\end{equation}
+Consequently, the flow satisfies $\Phi_{\tau,s}^*\Omega_\tau=\Omega_s$. The preserved volume is $\Omega_\tau^n/n!$ between the two time sections. It is generally different from Euclidean phase volume: uniform momentum damping contracts the latter while preserving an exponentially weighted two-form.
+
+% Source: stage4/audit/birkhoff_full_audit.md, section 3, recurrence (T); stage5/proofs/birkhoff_transport.md, sections 1--2 and 6; stage5/program/transport_native.py, lie_oneform and source_coefficient_function.
+For a smooth locally invertible flow, $\alpha_\tau=(\Phi_{\tau,s}^{-1})^*\alpha_s$ supplies a local existence construction. Its differential equation and scalar are
+\begin{equation}
+ \begin{aligned}
+ \partial_\tau a+\mathcal L_fa&=0,\qquad B=a^Tf,\\
+ \mathcal L_fa&=Da\,f+Df^Ta.
+\end{aligned}
+ \label{eq:th-homogeneous}
+\end{equation}
+The unknown physical flow is not needed to compute a finite time expansion. With $\theta=\tau-s$, write $f=\sum_{j\ge0}\theta^j f_j$ and $a=\sum_{j\ge0}\theta^j a_j$, where the coefficients include factorial denominators. Matching powers yields
+\begin{equation}
+ a_{m+1}=-\frac1{m+1}\sum_{j+k=m}
+       \bigl(Da_j f_k+Df_k^Ta_j\bigr).
+ \label{eq:th-time-recursion}
+\end{equation}
+Explicit time dependence must enter $f_k$. A finite collection of coefficients does not establish convergence of the infinite series.
+
+For the implemented autonomous mechanical branches, write
+$h=T+V$, $T=P^TM(Q)^{-1}P/2$, and $f=J\nabla h+(0,r)$. With $a_0=(P,0)$ and $\ell=P^Th_P-h=T-V$, direct differentiation gives $\mathcal L_fa_0=d\ell+(r,0)$. It is advantageous to truncate an equivalent equation with a source:
+\begin{equation}
+ \begin{aligned}
+ a'&=a_0+b,\qquad B'=h+b^Tf,\\
+ \partial_\tau a'+\mathcal L_fa'&=d\ell,\\
+ b_1&=-(r,0),\\
+ b_{j+1}&=-\frac{\mathcal L_fb_j}{j+1}.
+\end{aligned}
+ \label{eq:th-source}
+\end{equation}
+Here $b^{[r_o]}=\sum_{j=1}^{r_o}\theta^jb_j$ denotes truncation order $r_o$, distinct from the load $r$. Its representation residual is exactly
+\begin{equation}
+ \begin{aligned}
+ e_B&=K^{[r_o]}f-\partial_\tau a'^{[r_o]}-\nabla B'^{[r_o]}\\
+    &=-\theta^{r_o}\mathcal L_fb_{r_o},\\
+ f_a&=f-(K^{[r_o]})^{-1}e_B .
+\end{aligned}
+ \label{eq:th-source-residual}
+\end{equation}
+For zero load, all $b_j$ vanish and the original Hamiltonian system is recovered at every order. The scalar equation $\sigma_\tau+f^T\nabla\sigma=\ell$ relates this construction to homogeneous transport by $a=a'-d\sigma$, $B=B'+\sigma_\tau$. Gauge changes preserve the representation residual; truncation and gauge change need not commute. In particular, this choice improves the finite approximation by truncating the sourced equation itself.
+
+% Source: stage5/proofs/birkhoff_transport.md, sections 3 and 7; stage5/program/transport_cache.py, OneFormCache and CachedRepresentedField; stage5/proofs/high_derivative_ad.md, replacement-path discussion.
+The numerical chart uses spatial Taylor polynomials $\widetilde b_j$ of these one-form coefficients at a fixed center. It retains the full evaluators of $h$, $f$, and $Df$. Nevertheless, the represented field changes: with $\widetilde B=h+\widetilde b^Tf$ and $\widetilde K=K_0+D\widetilde b^T-D\widetilde b$,
+\begin{equation}
+ \begin{aligned}
+ \widetilde e_B&=-\bigl(\widetilde b_\tau+D\widetilde b f
+                         +Df^T\widetilde b+(r,0)\bigr),\\
+ \widetilde f_a&=f-\widetilde K^{-1}\widetilde e_B .
+\end{aligned}
+ \label{eq:th-cache-residual}
+\end{equation}
+Time truncation, spatial coefficient approximation, and numerical integration therefore have separate errors. The high derivatives are evaluated using the algebraically identical expression $P^TM(Q)^{-1}P/2+h(Q,0)$, with the mass recomputed at the current configuration. Independent reverse-mode directional derivatives and finite differences check the selected derivative paths; algebraic equivalence or tensor symmetry alone does not validate an automatic differentiation implementation.
+
+The need for an independent derivative check can be seen in the scalar function $h(Q,P)=P^2/[2(1+Q^2)]$. Its expansion gives $h_{QQPP}(0)=h_{PPQQ}(0)=-2$. A recorded mixed differentiation path through a linear solve returned zero for one fourth-order component in the tested software version. Averaging tensor permutations cannot in general correct such an error, because contraction against repeated copies of a direction is unchanged by that averaging. The alternative expression is therefore accompanied by numerical cross-checks of the derivative quantities actually used in the transport coefficients. These checks establish evidence for selected paths, points, and directions.
+
+This distinction is operational: a closed cached two-form can be preserved accurately by a chart integrator even when its represented vector field differs appreciably from the target field. At the cache center, exact coefficient values and first derivatives reproduce the native time-truncation residual. Away from that center, an independent evaluation of the native coefficients is required to assess the spatial approximation. Neither a small pullback defect nor a small implicit residual bounds this discrepancy. The present construction uses one fixed time origin and spatial domain; extension by overlapping local charts would additionally require consistent transition maps and forms.
+
+\subsection{Computable canonical charts and their time derivatives}
+% Source: stage5/proofs/birkhoff_transport.md, section 4; stage5/program/moser_chart.py, auxiliary, map, transformed_field, transformed_jacobian.
+At each fixed physical time, set
+\begin{equation}
+ \begin{aligned}
+ K_{\lambda,\tau}&=K_0+\lambda(\widetilde K_\tau-K_0),\\
+ v_{\lambda,\tau}&=K_{\lambda,\tau}^{-1}\widetilde b(\cdot,\tau),\\
+ \partial_\lambda\rho_{\lambda,\tau}
+     &=v_{\lambda,\tau}\circ\rho_{\lambda,\tau}.
+\end{aligned}
+ \label{eq:th-moser}
+\end{equation}
+with $\rho_{0,\tau}=\mathrm{id}$. The subscript $\tau$ on $\widetilde K_\tau$ denotes its time section. This homotopy requires nondegeneracy for every $\lambda\in[0,1]$, not merely at the endpoints. Since $\iota_v\Omega_{\lambda,\tau}=-\widetilde b^Tdz$, differentiation of the pullback gives $\rho_{1,\tau}^*\widetilde\Omega_\tau=\Omega_0$. Thus $\chi_\tau=\rho_{1,\tau}^{-1}$ is a canonical chart.
+
+Write $\rho=\rho_{1,\tau}$, $\mathsf R=D_y\rho$, and $\upsilon=\partial_\tau\rho$. The canonical field is
+\begin{equation}
+ u(y,\tau)=\mathsf R^{-1}\{\widetilde f_a(\rho(y,\tau),\tau)-\upsilon\}.
+ \label{eq:th-chart-field}
+\end{equation}
+It includes the time derivative of the chart. Compatibility makes $(K_0u)^Tdy$ closed, so on a star-shaped chart domain $u=J\nabla\mathcal h$ for a local scalar $\mathcal h$. The auxiliary solve integrates $\mathsf R'=Dv\mathsf R$ and $\upsilon'=Dv\upsilon+v_\tau$, with initial values $I$ and $0$. Its second sensitivities $\mathsf S=D_y^2\rho$ and $\mathsf W=D_y\upsilon$ satisfy
+\begin{equation}
+ \begin{aligned}
+ \mathsf S'&=Dv\mathsf S+D^2v[\mathsf R,\mathsf R],\\
+ \mathsf W'&=Dv\mathsf W+D^2v[\mathsf R,\upsilon]+Dv_\tau\mathsf R,\\
+ Du&=\mathsf R^{-1}\{D\widetilde f_a\mathsf R-\mathsf W-\mathsf S[\cdot,u]\}.
+ \end{aligned}
+ \label{eq:th-chart-sensitivities}
+\end{equation}
+These equations provide the full tangent of the represented dynamics. A sufficient domain condition is $\sup_U\|\widetilde K-K_0\|_2\le\delta_K<1$: then $\sigma_{\min}(K_{\lambda,\tau})\ge1-\delta_K$. A bound on $\|\widetilde b\|/(1-\delta_K)$ additionally controls auxiliary displacement. Polynomial bounds computed in floating point are useful sufficient estimates for that polynomial; they are not interval certificates for the entire physical model.
+
+The homotopy condition and endpoint transversality have different roles. The first ensures a chart can be constructed throughout its auxiliary interval. The second ensures that a chosen generating coordinate parametrizes the endpoint graph. Even an accurate chart does not guarantee that every endpoint projection remains regular over a long physical interval. The numerical implementation therefore checks chart matching, inverse composition, chart time derivatives, and implicit tangents separately. Its auxiliary solve uses only the cached one-form and its derivatives; it does not integrate an unavailable exact physical flow to construct the chart.
+
+\subsection{Endpoint compatibility and fixed-coordinate generation}
+% Source: stage5/proofs/corrected_mathematics.md, sections 4--5, A1--A4 and B1--B4; stage4/audit/birkhoff_full_audit.md, sections 5--6; original1025 p0862--p0888 and p1179--p1213.
+\paragraph{Theorem A (local endpoint generator).}\label{thm:endpoint}
+Let $\Omega_s$ and $\Omega_\tau$ be closed, nondegenerate two-forms on the respective endpoint domains. Let a local diffeomorphism $\Phi$ satisfy $\Phi^*\Omega_\tau=\Omega_s$, and let a locally invertible endpoint transformation $\mathcal E:(z_+,z_-)\mapsto(\widehat w,w)$ obey
+\begin{equation}
+ \mathcal E^*d(\widehat w^Tdw)=\Omega_\tau(z_+)-\Omega_s(z_-).
+ \label{eq:th-endpoint-pullback}
+\end{equation}
+Write $D\mathcal E=\left(\begin{smallmatrix}A&B_e\\C&D_e\end{smallmatrix}\right)$ and $M_\Phi=D\Phi$. If $CM_\Phi+D_e$ is nonsingular, then on a sufficiently small star-shaped $w$ domain there is a scalar $\phi$ such that
+\begin{equation}
+ \begin{aligned}
+ \widehat w&=\nabla_w\phi,\qquad N=\phi_{ww},\\
+ N&=(AM_\Phi+B_e)(CM_\Phi+D_e)^{-1}=N^T.
+\end{aligned}
+ \label{eq:th-endpoint-hessian}
+\end{equation}
+Conversely, reconstructing $(z_+,z_-)=\mathcal E^{-1}(\nabla\phi,w)$ gives a form-preserving map if the negative-endpoint projection has nonsingular derivative.
+
+Indeed, pulling \eqref{eq:th-endpoint-pullback} back to $(\Phi(z_-),z_-)$ makes $\widehat w^Tdw$ closed. Transversality makes $w$ a coordinate, and the local Poincar\'e lemma supplies $\phi$. Its Hessian follows by differentiating both endpoint variables. Reconstruction uses the joint endpoint inverse; when the displayed block is invertible,
+\begin{equation}
+ M_\Phi=(A-NC)^{-1}(ND_e-B_e).
+ \label{eq:th-endpoint-reconstruction}
+\end{equation}
+No inverse of $N$ is required. For the identity in canonical central coordinates, $N=0$ while the required projection remains invertible.
+
+The initial generator must also be determined from this geometry. Invert $w_0(z)=\mathcal E_2(z,z,s,s)$ and set $c_0(w;s)=\mathcal E_1(z(w),z(w),s,s)$. Closedness gives the normalized potential
+\begin{equation}
+ \phi_0(w;s)=\int_0^1 c_0(w_*+u(w-w_*);s)^T(w-w_*)\,du .
+ \label{eq:th-initial-gauge}
+\end{equation}
+In general $c_0$ is nonzero. The potential is unique only after specifying its additive time-dependent gauge. Initial transversality guarantees only a local time interval; continuation requires the joint inverse and both projections to remain regular.
+
+For example, replacing the canonical central variable by $\widehat w=J(y_+-y_-)+\nabla\psi(w)$ leaves the endpoint two-form unchanged, since $d(\nabla\psi^Tdw)=0$. On the diagonal this gives $c_0=\nabla\psi$, rather than zero, and the normalized initial potential is $\psi(w)-\psi(w_*)$. This example isolates the freedom to choose an endpoint gauge from the separate transversality condition. A sampled nonsingular endpoint Jacobian establishes regularity at that sample; uniform continuation requires a neighborhood bound preventing its smallest singular value from approaching zero.
+
+\paragraph{Theorem B (fixed-$w$ evolution and truncation).}\label{thm:fixed-w}
+Under Theorem A's hypotheses on a common local analytic domain, put $g=\nabla_w\phi$ and $N=D_wg$. Evaluate the following quantities through the full endpoint inverse at $(g,w,\tau,s)$:
+\begin{equation}
+ \begin{aligned}
+ \left.\partial_\tau g\right|_w
+ &=(A-NC)f(z_+,\tau)\\
+ &\quad+\mathcal E_{1,\tau}-N\mathcal E_{2,\tau}\\
+ &=:\Psi(g,w,N,\tau;s).
+\end{aligned}
+ \label{eq:th-fixed-w}
+\end{equation}
+This follows from $\dot{\widehat w}=A f+\mathcal E_{1,\tau}$, $\dot w=Cf+\mathcal E_{2,\tau}$, and $\dot{\widehat w}=N\dot w+\partial_\tau g|_w$. For $g=\sum_{j\ge0}\theta^jc_j$, its computable recursion is
+\begin{equation}
+ \begin{aligned}
+ c_{m+1}&=\frac1{m+1}[\theta^m]\Psi\Bigl(
+ \sum_{j=0}^m\theta^jc_j,w,\\
+ &\hspace{2em}\sum_{j=0}^m\theta^jD_wc_j,s+\theta;s\Bigr).
+\end{aligned}
+ \label{eq:th-fixed-recursion}
+\end{equation}
+In particular, $2c_2=(\Psi_\tau+\Psi_g c_1+\Psi_N[D_wc_1])_0$. Symmetry of the exact $N$ implies symmetry of every $D_wc_j$. Hence each finite truncation is a scalar gradient and reconstructs a form-preserving local map whenever the projection remains regular. Analytic dependence of the local flow and the analytic endpoint inverse give a convergent local expansion; finite smoothness instead supports only the corresponding finite Taylor remainder. Accuracy additionally requires uniform inverse bounds and step stability.
+
+For canonical endpoints $y_\pm$, choose $w=(y_++y_-)/2$ and $\widehat w=J(y_+-y_-)$. The joint inverse is $y_\pm=w\mp J\nabla\phi/2$. With the scalar time gauge fixed, \eqref{eq:th-fixed-w} becomes
+\begin{equation}
+ \begin{aligned}
+ \partial_\tau\phi&=-\mathcal h\left(w-\tfrac12J\nabla\phi,\tau\right),\\
+ \phi(w,s;s)&=0.
+\end{aligned}
+ \label{eq:th-central-pde}
+\end{equation}
+Coefficient extraction from this scalar equation retains gradient integrability automatically. Explicit time dependence generally introduces even powers. The implemented 24-dimensional transport branches are autonomous smooth fields with time-dependent charts; these equations do not assert an implementation for arbitrary nonautonomous loads or switching contact.
+
+More explicitly, writing $\phi=\sum_{j\ge1}\theta^j\phi_j$ gives
+\begin{equation}
+ \begin{aligned}
+ \phi_{m+1}&=-\frac1{m+1}[\theta^m]\mathcal h\Bigl(\\
+ &\quad w-\tfrac12J\nabla\sum_{j=1}^{m}\theta^j\phi_j,s+\theta\Bigr).
+\end{aligned}
+ \label{eq:th-scalar-recursion}
+\end{equation}
+For an autonomous Hamiltonian, the first coefficients are $\phi_1=-h$, $\phi_2=0$, and $\phi_3=-f^Th''f/24$. These coefficients depend on derivatives of the supplied Hamiltonian, rather than values of an unknown exact flow. The scalar recursion also explains why an autonomous high-order central formula cannot simply be applied to a time-dependent canonical chart: the explicit chart time dependence contributes to the same coefficient extraction. Its implementation and derivative cost must be established for the chosen branch.
+
+\subsection{Mechanical midpoint and a nonseparable fourth-order map}
+% Source: stage5/proofs/corrected_mathematics.md, section 6, C30--C36; original1025 p0910/m0400 through p1003/m0442; stage3/program/rom_integrators.py, midpoint.
+The endpoint variables of the original relations (30)--(34) can be written, without confusing them with the state, as $\widehat\xi=P_+-P_-$, $\widehat\pi=Q_+-Q_-$, $\xi=\overline Q$, and $\pi=-\overline P$. Their joint inverse is $Q_\pm=\xi\pm\widehat\pi/2$, $P_\pm=-\pi\pm\widehat\xi/2$. For a canonical conservative field, the scalar $-\eta h(\xi,-\pi,\tau_m)$ generates the complete time-midpoint method. A general damped physical midpoint does not acquire a scalar generator merely from this endpoint notation.
+
+The obstruction is visible in one degree of freedom. For $\dot Q=P$, $\dot P=-Q-\gamma P$, the candidate endpoint gradient in $(\xi,\pi)$ would be $(-\xi+\gamma\pi,-\pi)$. Its mixed derivatives are $\gamma$ and zero. When damping is nonzero, a local scalar with this gradient does not exist. Correcting an isolated damping sign therefore cannot restore the missing compatibility. The time-dependent form and chart must first represent the selected physical field, after which the endpoint theorem applies in those adapted coordinates.
+
+For the full variable mass, the corrected mechanical equations are
+\begin{equation}
+ \begin{aligned}
+ \delta Q&=\eta M(\overline Q)^{-1}\overline P,\\
+ \delta P_i&=\eta\Bigl[-\tfrac12\overline P^T
+                  \partial_iM^{-1}(\overline Q)\overline P\\
+ &\hspace{3em}-V_{,i}(\overline Q)+r_i(\overline z,\tau_m)\Bigr].
+\end{aligned}
+ \label{eq:th-mechanical-midpoint}
+\end{equation}
+Mass, geometric inertia, and feedback are evaluated at the same unknown midpoint. A fixed solver preconditioner leaves this residual unchanged. Only for constant mass, stiffness $K_{\mathrm{lin}}$, and damping $C_d$, with a prescribed midpoint force $F_m$, does elimination yield
+\begin{equation}
+ \begin{aligned}
+ E&=\tfrac{\eta^2}{4}K_{\mathrm{lin}}M^{-1}+\tfrac\eta2 C_dM^{-1},\\
+ (I+E)P_+&=(I-E)P_- -\eta K_{\mathrm{lin}}Q_-+\eta F_m,\\
+ Q_+&=Q_-+\tfrac\eta2 M^{-1}(P_++P_-).
+ \end{aligned}
+ \label{eq:th-leftsolve}
+\end{equation}
+This is a left linear solve with $I+E$ nonsingular. Reversing matrix order or using scalar division changes the method; state-dependent midpoint feedback remains implicit.
+
+For a smooth actual closed-loop field $f_c$, the residual is $z_+-z_- -\eta f_c(\overline z,\tau_m)$ and its derivative is $I-\eta Df_c(\overline z,\tau_m)/2$. Thus a feedback law is evaluated at the unknown midpoint, and its state derivative belongs in the tangent. Local solvability follows from a nonsingular residual derivative on the selected branch. A uniform contraction argument further requires a domain mapped into itself; a favorable condition number at one computed state cannot replace that requirement.
+
+% Source: stage5/proofs/integrators_full_coil.md, sections 3--4; stage3/source_inputs/v10/v10_framework_20261028/english/sections/supp_structure.tex, central4 and exact-primitive subsections; stage3/program/rom_integrators.py, central_scalar and central4.
+\paragraph{Proposition (Central4 and its primitive).}\label{thm:central4}
+For an autonomous smooth Hamiltonian $h$, define $f=J\nabla h$ and
+\begin{equation}
+ \begin{aligned}
+ S_\eta&=\eta h+\frac{\eta^3}{24}f^Th''f,\\
+ z_+-z_-&=J\nabla S_\eta\bigl((z_++z_-)/2\bigr).
+\end{aligned}
+ \label{eq:th-central4}
+\end{equation}
+On a smooth single-valued implicit branch with bounded required derivatives and uniform local stability, this symmetric method is fourth order and exact symplectic. No separation of kinetic and potential energies is assumed.
+
+To see the correction, let $z_c$ be the exact temporal midpoint and $m$ the endpoint mean. Taylor expansion gives $m=z_c+\eta^2f'f(z_c)/8+O(\eta^4)$. Eliminating $z_c$ from the endpoint difference yields
+\begin{equation}
+ \begin{aligned}
+ \delta z&=\eta f(m)+\frac{\eta^3}{24}
+          \{f''[f,f]-2(f')^2f\}(m)\\
+ &\quad+O(\eta^5).
+\end{aligned}
+ \label{eq:th-central-expansion}
+\end{equation}
+Writing $A_h=h''$, differentiation of $q_h=f^TA_hf$ gives $\nabla q_h=h^{(3)}[f,f]-2A_hJA_hf$, so its $J$ multiple is exactly the cubic correction. Mixed derivatives of the configuration-dependent mass are therefore part of the formula. The positive sign is the forward central generator correction.
+
+For $\lambda_0=P^TdQ$, the stronger exact-symplectic identity is explicit:
+\begin{equation}
+ \begin{aligned}
+ \Phi_\eta^*\lambda_0-\lambda_0
+ &=\overline P^Td(\delta Q)+\delta P^Td\overline Q\\
+ &=d\{\overline P^T\delta Q-S_\eta(m)\}.
+\end{aligned}
+ \label{eq:th-primitive}
+\end{equation}
+It requires a single-valued generator and branch. Closedness alone does not supply a global primitive on an angle domain with nonzero periods. The Cayley tangent $(I-JS_\eta''/2)^{-1}(I+JS_\eta''/2)$ describes the ideal implicit map; finite iteration residuals need separate accounting.
+
+Uniform momentum damping admits a different exact structure: for $r=-\gamma P$ with constant $\gamma$, $\Pi=e^{\gamma\tau}P$ and $\mathcal h=e^{\gamma\tau}h(Q,e^{-\gamma\tau}\Pi)$ give a canonical time-dependent system. Its centered midpoint update is $S_{\eta/2}\circ\mathrm{MP}_{h,\eta}\circ S_{\eta/2}$, where $S_a(Q,P)=(Q,e^{-\gamma a}P)$. It preserves the factor $e^{-\gamma\eta}$ in $D\Phi^TK_0D\Phi$ and is second order. This specialization does not extend that factor to general damping or magnetic feedback.
+
+\subsection{Conditional finite-time accuracy}
+% Source: stage5/proofs/integrators_full_coil.md, section 5; stage5/proofs/birkhoff_transport.md, section 5; stage3/source_inputs/v10/v10_framework_20261028/english/sections/supp_structure.tex, implicit-solvability subsection.
+\paragraph{Proposition (separated finite-time defects).}\label{thm:finite-time}
+Assume a common smooth domain on $[0,T]$, uniformly bounded chart and inverse derivatives, $\|\widetilde f_a-f\|\le\epsilon_f$, and stable implicit branches. Suppose the midpoint fixed-point map maps a closed convex subset of that domain into itself and $\eta L/2<1$. If $\varepsilon_k$ is the algebraic increment residual, subtraction of the exact and numerical midpoint equations gives
+\begin{equation}
+ (1-\eta L/2)e_{k+1}\le(1+\eta L/2)e_k+C\eta^3+\|\varepsilon_k\|.
+ \label{eq:th-residual-recursion}
+\end{equation}
+Thus the integration error is bounded by $C_T(e_0+\eta^2+\sum_k\|\varepsilon_k\|)$. Central4 replaces $\eta^2$ by $\eta^4$ under its derivative and stability assumptions. If $\delta_k$ bounds additional state defects from numerical chart operations, the physical-state bound takes the form
+\begin{equation}
+ \begin{aligned}
+ \max_{k\eta\le T}\|z_k-z(k\eta)\|
+ &\le C_T\bigl(e_0+\eta^p\bigr)\\
+ &\quad+C_T\sum_k(\|\varepsilon_k\|+\delta_k)\\
+ &\quad+\epsilon_f\frac{e^{LT}-1}{L}.
+\end{aligned}
+ \label{eq:th-error-bound}
+\end{equation}
+where $p=2$ for chart midpoint and $p=4$ for autonomous conservative Central4; the last quotient is $T$ at $L=0$. Uniform per-step residual $\varepsilon_\eta$ contributes $O(\varepsilon_\eta/\eta)$. This explains both a representation-error plateau and loss of asymptotic order at fixed solver tolerance. Pointwise chart diagnostics and directional derivative checks support the implementation but do not certify all uniform assumptions. The theorem concerns finite time; it supplies neither a global chart construction nor a new KAM certificate.
+
+The error estimate also determines the reference comparisons. A reference trajectory of the original field measures total discrepancy, while a reference trajectory of the represented field isolates integration accuracy. Comparing the latter with the chart update measures the combined numerical chart and midpoint contribution. Each comparison must use the same initial state and time interval. Convergence toward one reference cannot replace comparison with the other.

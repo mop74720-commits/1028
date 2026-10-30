@@ -1,0 +1,429 @@
+\section{输运结构与生成映射的完整局部证明}
+\label{sec:sup-theory}
+
+本补充材料给出正文理论部分所依据的局部证明。全文采用 $z=(Q,P)\in U\subset\mathbb R^{2n}$、$J=\left(\begin{smallmatrix}0&I\\-I&0\end{smallmatrix}\right)$、$K_0=-J$ 和 $(Da)_{ij}=\partial_{z_j}a_i$。矩阵 $M$ 表示归一化质量。除特别注明外，导数均在固定物理时间下求取。微分形式的时间下标表示时间截面，$\partial_\tau$ 表示求导。必要时缩小定义域，使流、逆映射和隐式分支单值。以下均为局部结果，并明确给出所需正则性与统一估计。
+
+\subsection{变分符号、相容性与输运体积}
+% Source: stage5/proofs/corrected_mathematics.md, section 3, R7--R10; stage4/audit/birkhoff_full_audit.md, sections 2--3; original1025 p1113--p1125 and p1180.
+设 $a$ 具有二阶连续空间导数和一阶连续时间导数，$B$ 可微。取端点处 $\xi$ 为零的变分 $z+\epsilon\xi$，有
+\begin{align}
+ \left.\frac{d}{d\epsilon}\right|_0
+ \int \{a(z+\epsilon\xi,\tau)^T(\dot z+\epsilon\dot\xi)-B(z+\epsilon\xi,\tau)\}\,d\tau
+ &=\int\{\xi^TDa^T\dot z+a^T\dot\xi-\xi^T\nabla B\}\,d\tau\\
+ &=\int\xi^T\{(Da^T-Da)\dot z-\partial_\tau a-\nabla B\}\,d\tau.
+ \label{eq:sup-variation}
+\end{align}
+变分基本引理给出 $K\dot z=\nabla B+\partial_\tau a$，其中 $K=Da^T-Da$。特别地，在 $K$ 可逆时，约定 $D=-\nabla B-\partial_\tau a$ 给出 $\dot z=-K^{-1}D$。另一方面，
+\begin{equation}
+ d(a^Tdz)=\sum_{i,j}\partial_{z_j}a_i\,dz_j\wedge dz_i
+ =\frac12\sum_{i,j}(\partial_{z_i}a_j-\partial_{z_j}a_i)\,dz_i\wedge dz_j.
+ \label{eq:sup-twoform-factor}
+\end{equation}
+对两个指标同时求和时，因子 $1/2$ 不可省略。由此 $\Omega(v,w)=v^TKw$，从而 $\iota_f\Omega=-(Kf)^Tdz$。
+
+由于 $d\Omega=0$，Cartan 公式给出
+\begin{equation}
+ \partial_\tau\Omega+\mathcal L_f\Omega
+ =d((\partial_\tau a)^Tdz)-d((Kf)^Tdz)
+ =-d(dB)=0.
+ \label{eq:sup-cartan}
+\end{equation}
+坐标形式为 $K_\tau+DK[f]+Df^TK+KDf=0$。于是对流拉回求导可得
+$\frac{d}{d\tau}\Phi_{\tau,s}^*\Omega_\tau=0$，从而证明 $\Phi_{\tau,s}^*\Omega_\tau=\Omega_s$。取外幂得到 $\Omega_\tau^n/n!$ 的保持性。对近恒等且保定向的流，在矩阵拉回恒等式中取行列式，得到
+\begin{equation}
+ \det D\Phi_{\tau,s}(z)\,
+ \frac{\sqrt{|\det K_\tau(\Phi_{\tau,s}z)|}}
+      {\sqrt{|\det K_s(z)|}}=1.
+ \label{eq:sup-density}
+\end{equation}
+它并不要求欧氏 Jacobian 行列式等于一。对于 $n$ 个动量的统一阻尼，欧氏行列式为 $e^{-n\gamma(\tau-s)}$，而式中密度比为 $e^{n\gamma(\tau-s)}$。
+
+\subsection{齐次输运、有源方程与截断}
+% Source: stage4/audit/birkhoff_full_audit.md, section 3; stage5/proofs/birkhoff_transport.md, sections 1--3 and 6; stage5/program/transport_native.py, coefficient_function, source_coefficient_function, lie_oneform.
+若 $f$ 生成光滑局部可逆流，且 $d\alpha_s$ 非退化，定义 $\alpha_\tau=(\Phi_{\tau,s}^{-1})^*\alpha_s$。拉回保持闭性与非退化性。求导得 $\partial_\tau a+Da f+Df^Ta=0$。取 $B=a^Tf$，则
+\begin{equation}
+ \nabla B=Da^Tf+Df^Ta,
+ \qquad \nabla B+\partial_\tau a=(Da^T-Da)f.
+ \label{eq:sup-transport-representation}
+\end{equation}
+这给出 Birkhoff 表示的存在性证明，并非假定能够调用未知流的算法。
+
+令 $\theta=\tau-s$，并设 $f=\sum_{k\ge0}\theta^kf_k$、$a=\sum_{j\ge0}\theta^ja_j$。输运方程中的 $\theta^m$ 项系数为
+\begin{equation}
+ (m+1)a_{m+1}+\sum_{j+k=m}(Da_jf_k+Df_k^Ta_j)=0.
+ \label{eq:sup-general-transport}
+\end{equation}
+这证明了非自治系数递推，其中 $a_j,f_k$ 已含阶乘分母。自治场满足 $a_{j+1}=-\mathcal L_fa_j/(j+1)$。代入 $a^{[r_o]}=\sum_{j=0}^{r_o}\theta^ja_j$ 后仅余
+$\partial_\tau a^{[r_o]}+\mathcal L_fa^{[r_o]}=\theta^{r_o}\mathcal L_fa_{r_o}$。表示残差是该表达式的负值。若要宣称无限级数收敛，须在共同复邻域上具备解析性及适当界。有限阶可微性足以计算有限个系数并给出有限余项。
+
+对 $h=T+V$、$T=P^TM(Q)^{-1}P/2$、$f=(h_P,-h_Q+r)$，令 $a_0=(P,0)$、$\ell=P^Th_P-h=T-V$。逐分量计算得到
+\begin{align}
+ (Da_0 f)_Q&=-h_Q+r,&(Da_0 f)_P&=0,\\
+ (Df^Ta_0)_Q&=(D_Qh_P)^TP,&(Df^Ta_0)_P&=(D_Ph_P)^TP.
+\end{align}
+$\ell=P^Th_P-h$ 的梯度恰具有这些保守分量，因为 $P^Th_P$ 关于动量的导数多出一项 $h_P$，恰好抵消 $h$ 的导数。因此
+\begin{equation}
+ \mathcal L_fa_0=d\ell+(r,0).
+ \label{eq:sup-source-identity}
+\end{equation}
+这里 $d\ell$ 表示其系数向量。取 $a'=a_0+b$ 并要求 $\partial_\tau a'+\mathcal L_fa'=d\ell$，得到
+\begin{equation}
+ b_0=0,\quad b_1=-(r,0),\quad b_{j+1}=-\mathcal L_fb_j/(j+1),
+ \qquad B'=a'^Tf-\ell=h+b^Tf.
+ \label{eq:sup-source-series}
+\end{equation}
+截断到 $r_o$ 阶时，所有低次幂抵消，得到
+\begin{align}
+ e_B&=K^{[r_o]}f-\partial_\tau a'^{[r_o]}-\nabla B'^{[r_o]}
+       =-\theta^{r_o}\mathcal L_fb_{r_o},\\
+ f_a&=(K^{[r_o]})^{-1}(\nabla B'^{[r_o]}+\partial_\tau a'^{[r_o]})
+       =f-(K^{[r_o]})^{-1}e_B.
+ \label{eq:sup-source-remainder}
+\end{align}
+当 $r=0$ 时，所有 $b_j=0$，所以 $a'=a_0$、$B'=h$ 已为精确表示。
+
+为验证规范关系，局部求解 $\sigma_\tau+f^T\nabla\sigma=\ell$、$\sigma(s)=0$。外微分与 Lie 导数可交换，故 $a=a'-d\sigma$ 满足齐次输运。此外，
+\begin{equation}
+ B=B'+\sigma_\tau=a'^Tf-\ell+\sigma_\tau
+   =(a'-d\sigma)^Tf=a^Tf.
+ \label{eq:sup-gauge-equivalence}
+\end{equation}
+对任意规范 $a\mapsto a+d\sigma$、$B\mapsto B-\sigma_\tau$，混合导数抵消使 $K$ 和 $e_B$ 均不变。这不能用来通过规范变换修复非零残差。事实上，若 $\sigma_1=\ell$、$\sigma_{j+1}=-(f^T\nabla\sigma_j)/(j+1)$、$a_j=b_j-d\sigma_j$，则有限阶 $\sigma^{[r_o]}$ 满足
+\begin{equation}
+ \sigma^{[r_o]}_\tau+f^T\nabla\sigma^{[r_o]}
+ =\ell+\theta^{r_o}f^T\nabla\sigma_{r_o}.
+ \label{eq:sup-gauge-last-term}
+\end{equation}
+因此，用此规范变换有限阶齐次表示后，所得标量等于有源标量减去 $\theta^{r_o}f^T\nabla\sigma_{r_o}$。有源构造截断的是另一个在无限阶层面规范等价的方程；它并不声称有限规范变换能消除截断误差。
+
+\subsection{系数的空间近似与被表示场的切线}
+% Source: stage5/proofs/birkhoff_transport.md, section 3; stage5/program/transport_cache.py, coefficient_data, data, CachedRepresentedField.evaluate and jacobian.
+实现中对系数函数作多项式近似，不对原向量场作这种近似：
+\begin{equation}
+ \widetilde b_j(z)=b_j(z_*)+Db_j(z_*)(z-z_*)
+       +\tfrac12D^2b_j(z_*)[z-z_*,z-z_*],
+ \label{eq:sup-cache}
+\end{equation}
+当仅计算了线性系数时，二次项设为零。构造 $\widetilde b=\sum_{j=1}^{r_o}\theta^j\widetilde b_j$、$\widetilde a=a_0+\widetilde b$ 和 $\widetilde B=h+\widetilde b^Tf$。利用乘积法则及 \eqref{eq:sup-source-identity}，
+\begin{equation}
+ \widetilde e_B=-\{\widetilde b_\tau+D\widetilde b f+Df^T\widetilde b+(r,0)\},\qquad
+ \widetilde f_a=f-\widetilde K^{-1}\widetilde e_B,
+ \quad\widetilde K=K_0+D\widetilde b^T-D\widetilde b.
+ \label{eq:sup-cache-field}
+\end{equation}
+在中心点，精确系数值和一阶导数重现原生时间展开残差。离开中心后，这些系数的近似引入独立误差。对所有点，$d\widetilde\Omega=0$ 在代数上成立，而与原场的时间相容性须独立检查。根据定义表示，$\widetilde f_a$ 满足精确相容性。
+
+对 $\widetilde K\widetilde f_a=\nabla\widetilde B+\partial_\tau\widetilde a$ 关于坐标 $z_j$ 求导并将各列收集，得到
+\begin{equation}
+ D\widetilde f_a=\widetilde K^{-1}
+ \left(\nabla^2\widetilde B+D\widetilde b_\tau
+       -[\partial_{z_j}\widetilde K\,\widetilde f_a]_j\right).
+ \label{eq:sup-represented-tangent}
+\end{equation}
+$\widetilde B$ 中实际力与 Hamilton 函数的所有导数均须进入此式。尤其对闭环场求导时，必须包含反馈的状态导数。在此切线中冻结反馈，实际上是在对另一个场求导。
+
+\subsection{Moser 拉回、状态敏感度与域控制}
+% Source: stage5/proofs/birkhoff_transport.md, section 4; stage5/program/moser_chart.py; stage5/program/transport_cache.py, ball_bounds.
+固定 $\tau$，取 $\Omega_{\lambda,\tau}=\Omega_0+\lambda d(\widetilde b^Tdz)$。假设其矩阵 $K_{\lambda,\tau}$ 在 $0\le\lambda\le1$ 上非奇异，且 $v_{\lambda,\tau}=K_{\lambda,\tau}^{-1}\widetilde b$ 的流在共同域内存在于整个区间。于是 $\iota_v\Omega_{\lambda,\tau}=-\widetilde b^Tdz$，并有
+\begin{align}
+ \frac{d}{d\lambda}\rho_{\lambda,\tau}^*\Omega_{\lambda,\tau}
+ &=\rho_{\lambda,\tau}^*
+   \{d(\widetilde b^Tdz)+\mathcal L_v\Omega_{\lambda,\tau}\}\\
+ &=\rho_{\lambda,\tau}^*\{d(\widetilde b^Tdz)+d\iota_v\Omega_{\lambda,\tau}\}=0.
+ \label{eq:sup-moser-proof}
+\end{align}
+因此 $\rho_{1,\tau}^*\widetilde\Omega_\tau=\Omega_0$，且对于 $\chi_\tau=\rho_{1,\tau}^{-1}$，有 $D\chi_\tau^TK_0D\chi_\tau=\widetilde K$。这证明了精确辅助流的恒等式。有限数值积分的拉回缺陷须另行测量。
+
+若 $z=\rho(y,\tau)$，其中 $\rho=\rho_{1,\tau}$，则沿被表示轨迹求导得到
+$\widetilde f_a=\rho_\tau+D_y\rho\,\dot y$。所以 $u=\dot y=\mathsf R^{-1}(\widetilde f_a\circ\rho-\upsilon)$，其中 $\mathsf R=D_y\rho$、$\upsilon=\rho_\tau$。被表示二形式与坐标变换的相容性给出 $\mathcal L_u\Omega_0=0$。因此 $d((K_0u)^Tdy)=0$。在以 $y_*$ 为中心的星形域上，
+\begin{equation}
+ \mathcal h(y,\tau)=\int_0^1 (K_0u)(y_*+a(y-y_*),\tau)^T(y-y_*)\,da
+ \label{eq:sup-chart-hamiltonian}
+\end{equation}
+由径向 Poincar'e 公式可知其梯度为 $K_0u$，且 $u=J\nabla\mathcal h$。这一标量的任何表达式都不能成为省略 $\upsilon$ 的依据。
+
+对 $\rho'=v(\rho,\lambda,\tau)$ 分别关于初始状态和物理时间求导，得到
+\begin{equation}
+ \mathsf R'=Dv\mathsf R,\qquad
+ \upsilon'=Dv\upsilon+v_\tau,\qquad
+ \mathsf R(0)=I,\quad\upsilon(0)=0.
+ \label{eq:sup-first-sensitivity}
+\end{equation}
+再次求导，并取二阶敏感度初值为零，得到
+\begin{equation}
+ \mathsf S'=Dv\mathsf S+D^2v[\mathsf R,\mathsf R],\qquad
+ \mathsf W'=Dv\mathsf W+D^2v[\mathsf R,\upsilon]+Dv_\tau\mathsf R,
+ \label{eq:sup-second-sensitivity}
+\end{equation}
+其中 $\mathsf S=D_y^2\rho$、$\mathsf W=D_y\rho_\tau$。最后对 $\mathsf R u=\widetilde f_a\circ\rho-\upsilon$ 沿任意方向 $\zeta$ 求导：
+\begin{equation}
+ Du[\zeta]=\mathsf R^{-1}
+ \{D\widetilde f_a\mathsf R\zeta-\mathsf W\zeta-\mathsf S[\zeta,u]\}.
+ \label{eq:sup-chart-tangent}
+\end{equation}
+这给出移动坐标图的完整切线，而非冻结坐标图的导数。
+
+对于二次系数缓存，$\widetilde K$ 关于 $z$ 为仿射函数。在以 $z_*$ 为中心、半径为 $R_b$ 的球上，三角不等式与 Cauchy--Schwarz 不等式给出
+\begin{align}
+ \delta_K&=\|\widetilde K(z_*)-K_0\|_2
+       +R_b\left(\sum_j\|\partial_{z_j}\widetilde K\|_2^2\right)^{1/2},\\
+ b_{\max}&=\|\widetilde b(z_*)\|+R_b\|D\widetilde b(z_*)\|_2
+                          +\tfrac12R_b^2\|D^2\widetilde b\|_F.
+ \label{eq:sup-ball-bounds}
+\end{align}
+由于 $K_0$ 的所有奇异值都为一，$\delta_K<1$ 蕴含 $\sigma_{\min}(K_{\lambda,\tau})\ge1-\delta_K$，并且此界在整个球及 $\lambda$ 上统一成立。因此 $\|v\|\le b_{\max}/(1-\delta_K)$。若初态到 $z_*$ 的距离加此速度界严格小于 $R_b$，则首次离域反证表明，精确辅助轨迹在 $\lambda=1$ 之前不能到达边界。这是针对指定多项式的解析充分条件。没有有向舍入的浮点求值，不能将其提升为所有物理系数的区间认证界。
+
+\subsection{定理 A 的证明与初始规范}
+% Source: stage5/proofs/corrected_mathematics.md, sections 4--4.1, A1--A4; stage4/audit/birkhoff_full_audit.md, section 5; original1025 p0862--p0879, p1179--p1206.
+固定端点时间 $s,\tau$，设 $\Omega_s$ 和 $\Omega_\tau$ 分别为两个端点域上的闭非退化二形式。设 $\Phi$ 为保持所指定两个时间截面的局部微分同胚。假设局部可逆的联合端点变换 $\mathcal E$ 满足
+$\mathcal E^*d(\widehat w^Tdw)=\Omega_\tau(z_+)-\Omega_s(z_-)$。对图嵌入 $\iota:z_-\mapsto(\Phi(z_-),z_-)$，有
+\begin{equation}
+ d\,\iota^*\mathcal E^*(\widehat w^Tdw)=\Phi^*\Omega_\tau-\Omega_s=0.
+ \label{eq:sup-graph-closed}
+\end{equation}
+记 $D\mathcal E=\left(\begin{smallmatrix}A&B_e\\C&D_e\end{smallmatrix}\right)$、$M_\Phi=D\Phi$。在该图上，
+\begin{equation}
+ d\widehat w=(AM_\Phi+B_e)\,dz_-,\qquad
+ dw=(CM_\Phi+D_e)\,dz_-.
+ \label{eq:sup-graph-tangent}
+\end{equation}
+若 $CM_\Phi+D_e$ 非奇异，则逆函数定理使 $w$ 成为缩小后的图邻域上的坐标。进一步缩小为星形坐标域，\eqref{eq:sup-graph-closed} 的闭性和 Poincar'e 引理给出 $\widehat w=\nabla\phi$，且
+\begin{equation}
+ N=D_w\widehat w=(AM_\Phi+B_e)(CM_\Phi+D_e)^{-1}=N^T.
+ \label{eq:sup-hessian}
+\end{equation}
+矩阵次序直接由 \eqref{eq:sup-graph-tangent} 得到，不可交换。
+
+反之，设 $\phi$ 为局部标量，通过完整联合逆 $\mathcal E^{-1}(\nabla\phi,w)$ 定义 $z_\pm(w)$。若 $D_wz_-$ 非奇异，这些端点构成局部映射 $\Psi$ 的图。将 $d(\nabla\phi^Tdw)=0$ 拉回该图并利用端点相容性，得到 $\Psi^*\Omega_\tau=\Omega_s$。这证明了反向结论，并明确其附加投影条件。当相应系数可逆时，关系式 $N(CM_\Phi+D_e)=AM_\Phi+B_e$ 可整理为
+\begin{equation}
+ M_\Phi=(A-NC)^{-1}(ND_e-B_e).
+ \label{eq:sup-reconstruct}
+\end{equation}
+该式不涉及 $N^{-1}$。对于恒等映射的中心端点，$N=0$、$CM_\Phi+D_e=I$，所以要求生成函数 Hessian 可逆反而会排除合法初态。
+
+在 $\tau=s$ 时定义 $w_0(z)=\mathcal E_2(z,z,s,s)$。若 $D_zw_0=C_0+D_{e,0}$ 可逆，令 $z=z(w)$、$c_0(w;s)=\mathcal E_1(z(w),z(w),s,s)$。对角图使端点二形式差为零，因此 $Dc_0$ 对称。令 $x=w-w_*$。归一化径向积分
+\begin{equation}
+ \phi_0(w;s)=\int_0^1 c_0(w_*+a x;s)^Tx\,da
+ \label{eq:sup-radial-gauge}
+\end{equation}
+沿方向 $\zeta$ 的导数等于
+\begin{equation}
+ \int_0^1\{a(Dc_0\zeta)^Tx+c_0^T\zeta\}\,da
+ =\int_0^1\frac{d}{da}\{a c_0(w_*+a x;s)^T\zeta\}\,da
+ =c_0(w;s)^T\zeta.
+ \label{eq:sup-radial-proof}
+\end{equation}
+且它在 $w_*$ 处为零。关键是 $Dc_0$ 的对称性；对任意非闭向量场作径向积分，并不能产生其势函数。一般端点规范可以满足 $c_0\ne0$：将 $\widehat w=J(z_+-z_-)$ 替换成 $J(z_+-z_-)+\nabla\psi(w)$ 保持端点二形式，却给出 $c_0=\nabla\psi$。因此零初始生成函数仅属于未附加规范的中心构造。
+
+初始最小奇异值为正仅保证邻近区域的横截性。若 $T=CM_\Phi+D_e$，且所选邻域上 $\|T(\tau,w)-T(s,w_*)\|_2<\sigma_{\min}(T(s,w_*))$，奇异值扰动不等式保证该邻域正则。重构中的负端点投影也需要类似条件。联合逆失效、投影奇异或端点离开共同域时，延拓终止。采样条件数不能证明这些统一邻域界。
+
+\subsection{定理 B 的证明与标量中心递推}
+% Source: stage5/proofs/corrected_mathematics.md, sections 5--5.1, B1--B4; stage4/audit/birkhoff_full_audit.md, section 6; original1025 p0881--p0888 and p1208--p1213.
+固定 $s$ 和初始端点，对运动的末端点求导。在由 $\mathcal E^{-1}(g,w,\tau,s)$ 重构的点处，
+\begin{equation}
+ \dot{\widehat w}=Af(z_+,\tau)+\mathcal E_{1,\tau},\qquad
+ \dot w=Cf(z_+,\tau)+\mathcal E_{2,\tau}.
+ \label{eq:sup-endpoint-evolution}
+\end{equation}
+因为 $\widehat w=g(w,\tau;s)$，链式法则给出 $\dot{\widehat w}=D_wg\,\dot w+\partial_\tau g|_w$。减去第二项贡献，得到
+\begin{equation}
+ \partial_\tau g|_w=(A-NC)f+\mathcal E_{1,\tau}-N\mathcal E_{2,\tau}
+ =\Psi(g,w,N,\tau;s),\qquad N=D_wg.
+ \label{eq:sup-fixed-pde}
+\end{equation}
+显式时间导数包括构造 $\mathcal E$ 时使用的所有时变坐标图。沿移动中点求导不能替代固定 $w$ 的偏导数。
+
+假设场、二形式和端点变换在共同局部邻域解析，联合逆解析且投影正则。流的解析依赖和解析隐函数定理给出实际局部解析的 $g$。令 $g=\sum_{j\ge0}\theta^jc_j$。其时间导数中的 $\theta^m$ 项系数为 $(m+1)c_{m+1}$。右端相应系数仅依赖 $c_0,\ldots,c_m$ 及其 $w$ 导数，因此
+\begin{equation}
+ c_{m+1}=\frac1{m+1}[\theta^m]\Psi\left(
+ \sum_{j=0}^m\theta^jc_j,w,\sum_{j=0}^m\theta^jD_wc_j,s+\theta;s\right).
+ \label{eq:sup-coefficient-recursion}
+\end{equation}
+特别地，$c_1=\Psi_0$、$2c_2=(\Psi_\tau+\Psi_gc_1+\Psi_N[D_wc_1])_0$。最后一项是对矩阵参数的 Fr'echet 导数，不能省略。解析 $D_wg$ 的对称性逐项给出每个 $D_wc_j$ 的对称性，因此在共同星形域上作径向积分可得 $c_j=\nabla\phi_j$。有限和仍是精确梯度；若其负端点投影保持可逆，定理 A 即重构出保持结构的局部映射。
+
+若截断梯度误差被 $C\eta^{r_o+1}$ 控制，且联合端点逆与负投影逆具有统一导数界，则中值定理和隐函数定理将此界传递给端点状态误差。单步稳定因子 $1+C\eta$ 经求和给出固定时间上的 $r_o$ 阶全局精度。附加对称性可抵消领先缺陷。此论证依赖局部状态缺陷，而非仅计数显示的非零系数。有限光滑情形使用相应阶数的有限 Taylor 定理替代解析性，不作无限级数结论。
+
+对正则端点取 $\widehat w=J(y_+-y_-)$、$w=(y_++y_-)/2$，则
+\begin{equation}
+ y_+=w-\tfrac12Jg,\quad y_-=w+\tfrac12Jg,
+ \qquad A=J,\quad C=I/2.
+ \label{eq:sup-central-inverse}
+\end{equation}
+对于 $u=J\nabla\mathcal h$，方程 \eqref{eq:sup-fixed-pde} 化为 $(J-N/2)J\nabla\mathcal h(y_+,\tau)$。另一方面，因为 $N=N^T$，
+\begin{equation}
+ \nabla_w[-\mathcal h(w-Jg/2,\tau)]
+ =-(I+NJ/2)\nabla\mathcal h
+ =(J-N/2)J\nabla\mathcal h.
+ \label{eq:sup-central-gradient}
+\end{equation}
+两个标量表达式因而仅相差时间函数。选择这一时间规范后，得到
+\begin{equation}
+ \partial_\tau\phi=-\mathcal h(w-J\nabla\phi/2,\tau),\qquad\phi(w,s;s)=0,
+ \label{eq:sup-hamilton-jacobi}
+\end{equation}
+再提取系数即得可计算的标量递推
+\begin{equation}
+ \phi_{m+1}=-\frac1{m+1}[\theta^m]\mathcal h\left(
+ w-\tfrac12J\nabla\sum_{j=1}^m\theta^j\phi_j,s+\theta\right).
+ \label{eq:sup-scalar-recursion}
+\end{equation}
+对自治 Hamilton 函数，$\phi_1=-\mathcal h$、$\phi_2=0$。为求 $\phi_3$，平移后的自变量为 $w+\theta J\nabla\mathcal h/2+O(\theta^3)$；由于 $\nabla\mathcal h^TJ\nabla\mathcal h=0$，线性贡献为零。二次系数为 $f^T\mathcal h''f/8$，从而 $\phi_3=-f^T\mathcal h''f/24$。可逆性使局部中心生成函数关于步长为奇函数，因此 $\phi_4=0$。一般显式时间依赖会破坏此奇性；例如在 $s=0$ 处，对 $\mathcal h=h+\tau Q^2/2$，下一系数为 $\phi_2=-Q^2/4$。这个标量例子说明自治公式的推广限制，并不代表已经实现一般非自治 24 维递推。
+
+\subsection{原端点方程与非交换矩阵消元}
+% Source: stage5/proofs/corrected_mathematics.md, section 6, C30--C36; stage4/audit/birkhoff_full_audit.md, section 7; original1025 p0910/m0400, p0920/m0408, p0931/m0417, p0961/m0427, p0963/m0429, p0986/m0434, p1003/m0442.
+按端点顺序 $Z=(Q_+,P_+,Q_-,P_-)$，引入 $(\widehat\xi,\widehat\pi,\xi,\pi)$，其中 $\xi=\overline Q$、$\pi=-\overline P$、$\widehat\xi=\delta P$、$\widehat\pi=\delta Q$。联合线性变换及其逆为
+\begin{equation}
+ L=\begin{pmatrix}
+ 0&I&0&-I\\I&0&-I&0\\I/2&0&I/2&0\\0&-I/2&0&-I/2
+ \end{pmatrix},\qquad
+ L^{-1}=\begin{pmatrix}
+ 0&I/2&I&0\\I/2&0&0&-I\\0&-I/2&I&0\\-I/2&0&0&-I
+ \end{pmatrix}.
+ \label{eq:sup-original-matrix}
+\end{equation}
+分块相乘可验证两个乘积均为恒等矩阵。固定负端点并求导，得到
+\begin{equation}
+ \dot{\widehat w}=\binom{\dot P_+}{\dot Q_+},\qquad
+ \dot w=\tfrac12\binom{\dot Q_+}{-\dot P_+},\qquad
+ \partial_\tau g|_w=\dot{\widehat w}-N\dot w.
+ \label{eq:sup-original-chain}
+\end{equation}
+这些符号和分块位置由 $L$ 确定。标量 $-\eta h(\xi,-\pi,\tau_m)$ 的梯度为 $\eta(-h_Q,h_P)$，给出保守中点的端点差。对阻尼振子 $\dot P=-Q-\gamma P$，这些变量中的表面候选梯度为 $(-\xi+\gamma\pi,-\pi)$。其交叉导数分别为 $\gamma$ 和零。因此当 $\gamma\ne0$ 时，它不能成为这一未修改正则端点图中的局部标量梯度。必须采用相容时变二形式或满足条件的特例。
+
+对正定 $M(Q)$，微分 $M^{-1}M=I$ 得到 $\partial_iM^{-1}=-M^{-1}(\partial_iM)M^{-1}$。因此，含广义载荷的 Hamilton 方程给出完整中点方程
+\begin{equation}
+ \delta Q=\eta M(\overline Q)^{-1}\overline P,\qquad
+ \delta P_i=\eta\{-\tfrac12\overline P^T\partial_iM^{-1}(\overline Q)\overline P
+                    -V_{,i}(\overline Q)+r_i(\overline z,\tau_m)\}.
+ \label{eq:sup-full-midpoint}
+\end{equation}
+所有项均在同一未知中点评价，从而保留动能的位形导数。当 $M$、$K_{\mathrm{lin}}$、$C_d$ 都为常矩阵且外力给定时，方程化为
+\begin{equation}
+ \delta Q=\eta M^{-1}\overline P,\qquad
+ \delta P=-\eta K_{\mathrm{lin}}\overline Q-\eta C_dM^{-1}\overline P+\eta F_m.
+ \label{eq:sup-constant-midpoint}
+\end{equation}
+第一式给出 $\overline Q=Q_-+\eta M^{-1}(P_++P_-)/4$。将其代入第二式并使用 $\overline P=(P_++P_-)/2$，得到
+\begin{equation}
+ (I+E)P_+=(I-E)P_- -\eta K_{\mathrm{lin}}Q_-+\eta F_m,
+ \qquad E=\tfrac{\eta^2}{4}K_{\mathrm{lin}}M^{-1}+\tfrac\eta2 C_dM^{-1}.
+ \label{eq:sup-leftsolve-proof}
+\end{equation}
+乘法次序由代入直接确定，无需交换性假设。若 $I+E$ 非奇异，左求解此系统，再由 $Q_+=Q_-+\eta M^{-1}(P_++P_-)/2$ 恢复位置。若中点反馈力依赖未知端点，方程仍是隐式的。变质量情形不能采用这种常矩阵消元。
+
+对任意光滑场，围绕时间中点作包含显式时间导数的 Taylor 展开，得到完整时间中点法的局部缺陷 $O(\eta^3)$。在下文稳定性条件下，其全局阶数为二。将生成近似称为“步长的一次式”不会降低此对称时间中点更新的阶数。一般有阻尼的中点法仍为二阶近似，但不自动保持正则二形式。
+
+\subsection{非可分 Central4、对称性与恰当辛原函数}
+% Source: stage5/proofs/integrators_full_coil.md, sections 2--3; stage3/source_inputs/v10/v10_framework_20261028/english/sections/supp_structure.tex, derivation of the fourth-order central generating function and exact-primitive subsections; stage3/program/rom_integrators.py.
+设 $f=J\nabla h$ 为自治场，并在共同域上具有足够多的有界导数，以保证下述余项。令 $z_c$ 为时间中点的精确解。在 $\pm\eta/2$ 处 Taylor 展开得到
+\begin{align}
+ m&=z_c+\frac{\eta^2}{8}f'f(z_c)+O(\eta^4),\\
+ z_+-z_-&=\eta f(z_c)+\frac{\eta^3}{24}\{f''[f,f]+(f')^2f\}(z_c)+O(\eta^5).
+ \label{eq:sup-central-taylor}
+\end{align}
+逆关系为 $z_c=m-\eta^2f'f(m)/8+O(\eta^4)$。代入领先场项后，其三次贡献改变 $-\eta^3(f')^2f/8$；已经为三次的项可在 $m$ 处求值，误差为 $O(\eta^5)$。因此
+\begin{equation}
+ z_+-z_-=\eta f(m)+\frac{\eta^3}{24}\{f''[f,f]-2(f')^2f\}(m)+O(\eta^5).
+ \label{eq:sup-central-elimination}
+\end{equation}
+对 $A_h=h''$、$q_h=f^TA_hf$，沿方向 $\zeta$ 求导得到
+\begin{align}
+ Dq_h[\zeta]
+ &=2(Df\zeta)^TA_hf+h^{(3)}[\zeta,f,f]\\
+ &=\zeta^T\{h^{(3)}[f,f]-2A_hJA_hf\},
+ \label{eq:sup-central-derivative}
+\end{align}
+这里使用了 $Df=JA_h$ 和 $(JA_h)^T=-A_hJ$。用 $J$ 左乘梯度，得到 $J\nabla q_h=f''[f,f]-2(f')^2f$。因此
+\begin{equation}
+ S_\eta=\eta h+\frac{\eta^3}{24}q_h,\qquad
+ \delta z=J\nabla S_\eta(m)
+ \label{eq:sup-central4-method}
+\end{equation}
+在四阶内匹配精确端点关系，并在统一正则的隐式分支上具有局部状态缺陷 $O(\eta^5)$。生成函数满足 $S_{-\eta}=-S_\eta$，所以交换端点并反转步长后方程不变，即方法对称。整个推导不假设 Hamilton 函数可分；所有质量与势能的混合导数均保留在 $h''$ 和 $h^{(3)}$ 中。
+
+为独立证明辛性，对隐式方程微分。令 $C_\eta=JS_\eta''(m)/2$，则
+\begin{equation}
+ D\Phi=(I-C_\eta)^{-1}(I+C_\eta),\qquad
+ C_\eta^TK_0+K_0C_\eta=0.
+ \label{eq:sup-cayley}
+\end{equation}
+第二式由 $S_\eta''$ 的对称性得到。展开两边可得 $(I+C_\eta)^TK_0(I+C_\eta)=(I-C_\eta)^TK_0(I-C_\eta)$。由于 $I-C_\eta$ 与 $I+C_\eta$ 可交换，乘以相应逆因子即证明 $D\Phi^TK_0D\Phi=K_0$。
+
+恰当辛性需要更强的原函数结论。令 $\lambda_0=P^TdQ$ 并展开 $P_\pm=\overline P\pm\delta P/2$、$Q_\pm=\overline Q\pm\delta Q/2$。端点差的偶次项抵消，得到
+\begin{align}
+ P_+^TdQ_+-P_-^TdQ_-
+ &=\overline P^Td(\delta Q)+\delta P^Td\overline Q\\
+ &=\overline P^Td(\delta Q)-S_Q^Td\overline Q\\
+ &=d\{\overline P^T\delta Q-S_\eta(\overline Q,\overline P)\},
+ \label{eq:sup-exact-primitive}
+\end{align}
+最后一个等号利用 $\delta Q=S_P$ 抵消 $d\overline P$ 项。因此，只要生成函数和隐式分支单值，即证明恰当性。普通中点法对应 $S_\eta=\eta h$。这一原函数论证针对理想隐式映射，不是任意有限迭代输出的恒等式。
+
+在环面上，闭与恰当的区别不可忽略。闭一形式 $\sum_j I_{0,j}d\theta_j$ 的基本周期为 $2\pi I_{0,j}$，不一定是单值标量的微分。更一般地，若定义于 $\mathbb T^n\times U_I$、其中 $U_I$ 可缩的辛管映射 $F$ 给出 $\beta=F^*\lambda_0-I^Td\theta$，令 $I_{0,j}=(2\pi)^{-1}\oint_{\gamma_j}\beta$。减去这些周期后得到周期为零的闭一形式，因此存在单值原函数：
+\begin{equation}
+ F^*\lambda_0=(I+I_0)^Td\theta+dS.
+ \label{eq:sup-action-shift}
+\end{equation}
+此恒等式明确指定平移后的参考原函数，并未将 $I_0$ 默认为零。前述局部 Central4 原函数具有独立的直接证明，不依赖这样的管图假设。
+
+\subsection{统一阻尼与加权中点法的适用范围}
+% Source: stage5/proofs/integrators_full_coil.md, section 4; stage3/program/rom_integrators.py, weighted_midpoint; stage4/audit/birkhoff_full_audit.md, section 8.
+设唯一附加载荷为 $r=-\gamma P$，其中 $\gamma$ 为常数。定义 $\Pi=e^{\gamma\tau}P$ 和 $\mathcal h(Q,\Pi,\tau)=e^{\gamma\tau}h(Q,e^{-\gamma\tau}\Pi)$，则
+\begin{equation}
+ \dot Q=h_P=\mathcal h_\Pi,\qquad
+ \dot\Pi=\gamma e^{\gamma\tau}P+e^{\gamma\tau}(-h_Q-\gamma P)
+         =-\mathcal h_Q.
+ \label{eq:sup-weighted-lift}
+\end{equation}
+此证明允许质量依赖位形。将时间原点置于步中点，提升后的端点动量写成 $\Pi_-=e^{-\gamma\eta/2}P_-$、$\Pi_+=e^{\gamma\eta/2}P_+$。在该中点处，提升的 Hamilton 函数等于 $h$。因此正则时间中点法给出
+\begin{equation}
+ \Phi_\eta=S_{\eta/2}\circ\mathrm{MP}_{h,\eta}\circ S_{\eta/2},
+ \qquad S_a(Q,P)=(Q,e^{-\gamma a}P).
+ \label{eq:sup-weighted-method}
+\end{equation}
+缩放及其与辛中点法的复合满足
+\begin{equation}
+ \begin{aligned}
+ DS_a^TK_0DS_a&=e^{-\gamma a}K_0,\\
+ D\Phi_\eta^TK_0D\Phi_\eta&=e^{-\gamma\eta}K_0.
+ \end{aligned}
+ \label{eq:sup-weighted-pullback}
+\end{equation}
+等价地，该更新保持两个时间截面的 $e^{\gamma\tau}K_0$。提升后的完整时间中点法为二阶。各向异性载荷、状态相关反馈或接触切换均不满足此计算所用假设。
+
+\subsection{有限时间稳定性、代数残差与表示误差}
+% Source: stage5/proofs/integrators_full_coil.md, section 5; stage5/proofs/birkhoff_transport.md, section 5; stage3/source_inputs/v10/v10_framework_20261028/english/sections/supp_structure.tex, implicit solvability and accumulation of algebraic residuals.
+考虑包含一个闭凸邻域的开域上的光滑场，空间 Lipschitz 常数为 $L$，其中点残差为
+\begin{equation}
+ \mathcal F_k(x)=x-z_k-\eta f((x+z_k)/2,\tau_k+\eta/2).
+ \label{eq:sup-midpoint-residual}
+\end{equation}
+假设其不动点映射留在该邻域内，且 $a_\eta=\eta L/2<1$。Banach 定理给出域内唯一不动点。若 $x_*$ 为精确根，且 $\mathcal F_k(x)=\varepsilon_k$，相减并利用 Lipschitz 界得到
+\begin{equation}
+ (1-a_\eta)\|x-x_*\|\le\|\varepsilon_k\|.
+ \label{eq:sup-residual-to-state}
+\end{equation}
+对于两个不同输入，将其精确中点方程相减，得到单步稳定因子 $q_\eta=(1+a_\eta)/(1-a_\eta)$。将数值步与局部增量缺陷为 $O(\eta^3)$ 的精确解比较，得到
+\begin{equation}
+ e_N\le q_\eta^Ne_0+\frac{1}{1-a_\eta}
+ \sum_{j=0}^{N-1}q_\eta^{N-1-j}(C\eta^3+\|\varepsilon_j\|).
+ \label{eq:sup-error-sum}
+\end{equation}
+若 $N\eta\le T$ 且 $a_\eta$ 统一小于一，则 $q_\eta^N\le e^{C_LT}$。因此对 $N$ 个局部缺陷求和给出 $e_N\le C_T(e_0+\eta^2+\sum_j\|\varepsilon_j\|)$。若所有残差均不超过 $\varepsilon_\eta$，其贡献为 $O(\varepsilon_\eta/\eta)$。程序中的无穷范数容差转成欧氏范数至多乘 $\sqrt{2n}$。固定绝对求解容差不能在任意细化步长时持续保持收敛阶。
+
+对 Central4，在导数有界的域内有 $S_\eta''=O(\eta)$。对 $I-JS_\eta''/2$ 的统一逆界及单步稳定性 $1+O(\eta)$ 给出相同论证，其中局部缺陷为 $O(\eta^5)$。因此全局离散化项为 $O(\eta^4)$，残差和形式不变。对于加权方法和精确 Moser 图，有限区间上有界的坐标图及逆图导数可在坐标间传递状态与残差界。若有限数值坐标图操作引入附加单步状态误差 $\delta_j$，稳定性以相同有限时间权重累积 $\sum_j\delta_j$。仅有理想映射的精确结构不能界定这些实现误差。
+
+最后比较从同一点出发的 $\dot z=f(z,\tau)$ 与 $\dot z_a=\widetilde f_a(z_a,\tau)$ 的解。若两者均留在共同域内，$f$ 的 Lipschitz 常数为 $L$，并且 $\|\widetilde f_a-f\|\le\epsilon_f$ 在该域统一成立，则
+\begin{equation}
+ \|z_a(\tau)-z(\tau)\|
+ \le\int_0^\tau\{L\|z_a(s)-z(s)\|+\epsilon_f\}\,ds
+ \le\epsilon_f\frac{e^{L\tau}-1}{L},
+ \label{eq:sup-gronwall}
+\end{equation}
+当 $L=0$ 时取值为 $\epsilon_f\tau$。将此界与积分估计相加，得到有条件的有限时间总误差界。统一场差包含时间截断和系数空间近似，而数值坐标图误差与隐式求解误差进入各自的累积和。固定时间的系数残差具有 $\theta^{r_o}$ 阶，并不意味着坐标图中点积分器具有 $r_o$ 阶。缩小数值步长可收敛到被表示轨迹，同时仍与原轨迹存在非零差异。任何逐点数值诊断均不能证明此定理的统一假设，也不能证明连续或离散 KAM 结果所需的独立条件。
+
+\subsection{导数求值与计算验证的边界}
+% Source: stage5/proofs/high_derivative_ad.md, minimal counterexample, symmetry discussion, and replacement-path discussion; stage5/program/transport_native.py, high_order_hamiltonian; stage3/program/rom_integrators.py, central_scalar.
+恒等式 $h_{\mathrm{AD}}(Q,P)=P^TM(Q)^{-1}P/2+h(Q,0)$ 保留完整力学 Hamilton 函数及其变质量。它提供另一种计算表达式，但不能证明任意自动微分路径都会返回正确高阶导数。对标量例子 $h(Q,P)=P^2/[2(1+Q^2)]$，展开得到 $h_{QQPP}(0)=h_{PPQQ}(0)=-2$。已记录的软件版本中，经过线性求解的混合求导路径将一个四阶分量计算为零。全张量对称化一般不能修复这种错误，因为与同一向量的四个副本收缩时，置换平均不改变结果。
+
+保留的实现将选定三、四阶收缩与独立纯反向微分及有限差分比较，并在已检验的输运路径中采用逆矩阵表达式。物理参考场保留原来的线性求解求值器。Central4 通过独立反向模式路径对完整标量生成函数求导。这些检验支持指定版本、点和方向，并不证明所有状态、所有阶数的导数均正确。以上解析论证针对数学系数；计算缺陷仍须作为数值证据与误差预算的一部分。

@@ -1,0 +1,167 @@
+\section{三维力学与可实现的磁控制}
+\label{sec:model-control}
+
+\subsection{同一机器人的两种力学分辨率}
+物理对象是残余微重力条件下血管内的柔性磁机器人。仅有中心线不足以确定其状态：中心线保持直线时，材料扭转仍可变化。因此同时保留中心线 $r(s,t)\in\mathbb R^3$ 与材料标架 $R(s,t)\in SO(3)$，其中 $s\in[0,L]$ 为参考弧长。Cosserat 应变与体坐标角速度定义为
+\begin{equation}
+ \nu=R^Tr_s,\qquad \widehat\kappa=R^TR_s,\qquad
+ \widehat\Omega=R^TR_t,
+ \label{eq:rod-kinematics}
+\end{equation}
+其中 $\widehat a b=a\times b$。记内力、内力矩为 $n$、$m$，外力与外力偶密度为 $f,\ell$，则平衡方程为
+\begin{equation}
+\begin{aligned}
+ \rho_s A r_{tt}&=n_s+f,\\
+ R\bigl(J_b\dot\Omega+\Omega\times J_b\Omega\bigr)
+ &=m_s+r_s\times n+\ell.
+\end{aligned}
+ \label{eq:rod-balance}
+\end{equation}
+$J_b$ 是每参考长度的转动惯量。初始直杆采用弹性本构
+$n=RK_s(\nu-e_3)$、$m=RK_b\kappa$，其中
+$K_b=\operatorname{diag}(EI_1,EI_2,GJ_p)$；$K_s$ 专指剪切/伸长刚度，与 Birkhoff 二形式无关。该约定明确保留双轴弯曲、扭转和转动惯性 \citep{Antman2005,Gazzola2018}。
+
+本文使用目的不同的两种分辨率。空间 Cosserat 模型允许剪切和伸长，计算规定血流、壁面接触、摩擦、磁载荷及残余加速度；基部节点和首个材料标架固定，远端自由。解析模型则施加 Kirchhoff 约束 $\nu=e_3$，在两个弯曲应变与扭转应变中各使用四个归一化 Legendre 基函数。因此，它具有 12 个配置坐标和 24 个相空间坐标。20、40、80 个空间单元仅用于求积，并不增加配置自由度。标架指数更新和中心线中点积分给出实际三维嵌入。两模型共享材料与磁参数，但尚无二者之间的统一误差界。
+
+基准参数为 $L=100$\,mm、半径 $0.6$\,mm、$E=3$\,MPa、$G=1$\,MPa、密度 $1800$\,kg\,m$^{-3}$。远端 $5$\,mm 沿材料轴永久磁化，线磁矩密度为 $0.1448$\,A\,m，总磁矩为 $7.24\times10^{-4}$\,A\,m$^2$。理想轴向偏置场为 $0.5$\,mT。材料和磁化数值是参考文献支持的基准输入 \citep{Tong2025}；沿整根杆使用相同弹性常数是模型假设。密度、阻尼、线圈额定值、壁面参数及残余加速度属于工程或合成设定，并非植入器械实测值。
+
+环境模型中的流体密度、黏度分别为 $1060$\,kg\,m$^{-3}$ 和 $3.5$\,mPa\,s。规定弯管抛物线速度剖面的中心线速度尺度为 $0.04$\,m\,s$^{-1}$，脉动比例为 $0.45$，频率为 $1.2$\,Hz。程序实现各向异性线性相对阻力、含杆直径的横向二次阻力及轴向旋转阻力。量纲一致的 Morison 型惯性扩展应依赖流体加速度与相对加速度；本文未实现附加质量。即使相对阻力耗散，规定流速仍可能向杆输入机械能。管腔壁刚性且静止，标称半径为 $3$\,mm。正穿透量 $\delta_+$ 对应接触势密度 $k\delta_+^{5/2}/(5/2)$，并叠加仅压缩的法向阻尼与正则化切向摩擦。结构阻尼率为 $2$\,s$^{-1}$。残余加速度 $(8,-5,2)\times10^{-5}$\,m\,s$^{-2}$，以及幅值 $3\times10^{-5}$\,m\,s$^{-2}$、标称频率 $3$\,Hz 的抖动，构成合成微重力工况。规定流场与该壁面模型均不构成双向流固耦合。
+
+\subsection{保留完整惯性的正则缩放}
+以 $q$ 表示物理 Ritz 系数。几何嵌入给出平移速度和体坐标角速度 Jacobian $J_r(q,s)$、$J_\Omega(q,s)$，从而
+\begin{equation}
+\begin{aligned}
+ M(q)&=\int_0^L\left(\rho_s A J_r^TJ_r+
+ J_\Omega^TJ_bJ_\Omega\right)\,ds,\\
+ p&=M(q)\dot q.
+\end{aligned}
+ \label{eq:geometric-mass}
+\end{equation}
+每次计算均保留位形相关质量。尤其，$\dot p_a$ 中的动能贡献为
+$\tfrac12\dot q^T(\partial_{q_a}M)\dot q$；删去该项会改变实际向量场。固定缩放
+\begin{equation}
+\begin{gathered}
+ q=S_qQ,\qquad p=S_pP,\\
+ S_q^TS_p=\frac{E_0}{\omega_0}I,\\
+ \tau=\omega_0t,\qquad h=H/E_0.
+\end{gathered}
+ \label{eq:canonical-scaling}
+\end{equation}
+给出 $z=(Q,P)$、$z'=J\nabla h$，以及
+\begin{equation}
+\begin{aligned}
+ \overline M(Q)&=\frac{\omega_0^2}{E_0}S_q^TM(S_qQ)S_q,\\
+ T/E_0&=\tfrac12P^T\overline M(Q)^{-1}P.
+\end{aligned}
+ \label{eq:scaled-mass}
+\end{equation}
+撇号表示对 $\tau$ 求导；$J=\left(\begin{smallmatrix}0&I\\-I&0\end{smallmatrix}\right)$。
+默认 20 单元模型中，$E_0=3.62\times10^{-7}$\,J，$\omega_0=4.4576294085$\,rad\,s$^{-1}$。缩放由理想偏置场的线性化构造，此后保持固定。它既不保证 $Q=0$ 为全线圈系统的平衡点，也不使理想线性频率成为新线圈平衡的频率。下文状态范数均为无量纲正则坐标范数，具有长度单位的末端误差须由几何重构获得。
+
+理想场分支采用 $h_{\rm ideal}=(T+V_e+V_{\rm uniform})/E_0$，可减去常数零点。全线圈分支则采用
+\begin{equation}
+\begin{aligned}
+ h_{\rm coil}(z,i)&=\tfrac12P^T\overline M^{-1}P\\
+ &\quad+V_e(S_qQ)/E_0+\phi(Q)^Ti.
+\end{aligned}
+ \label{eq:coil-hamiltonian}
+\end{equation}
+$i\in\mathbb R^{12}$ 为以安培计的总电流。预通电偏置 $i_b$ 拟合局部轴向目标，其最大幅值为 $1.5124804$\,A。式 \eqref{eq:coil-hamiltonian} 不再叠加理想偏置磁势。因此，理想场与线圈分支之间的比较改变了物理势能，而同一分支内积分器的比较保持该势能不变。
+
+\subsection{全线圈能量、虚功与可达性}
+工程空芯阵列含十二个半径 $25$\,mm、300 匝的圆线圈，线圈中心到场原点 $(0,0,100)$\,mm 的距离为 $75$\,mm。其几何由归档基准固定，未经硬件标定。对永久磁化和准静态线性线圈场 \citep{Abbott2020}，
+\begin{equation}
+\begin{aligned}
+ B(x,i)&=\sum_{j=1}^{12}b_j(x)i_j,\\
+ b_j(x)&=\frac{\mu_0N_c}{4\pi}\oint_{C_j}
+ \frac{d\ell\times(x-x')}{|x-x'|^3}.
+\end{aligned}
+ \label{eq:coil-field}
+\end{equation}
+\begin{equation}
+\begin{aligned}
+ V_{\rm coil}&=-\sum_e\mu_e(Q)\cdot B(r_e(Q),i)\\
+ &=E_0\phi(Q)^Ti,\\
+ G_I(Q)&=-D_Q\phi(Q)^T.
+\end{aligned}
+ \label{eq:current-port}
+\end{equation}
+每个圆线圈默认使用 256 个导线求积点。光滑性要求到理想导线的距离为正、几何坐标图有效且质量正定。模型未包含磁滞、涡流、热限制、电路电压动力学或互感。
+
+固定电流对能量求导得到
+\begin{equation}
+\begin{aligned}
+ -\partial_{Q_a}V_{\rm coil}
+ &=\sum_e\Bigl[(\partial_{Q_a}\mu_e)\cdot B_e\\
+ &\qquad+\mu_e^T(\nabla B_e)\partial_{Q_a}r_e\Bigr].
+\end{aligned}
+ \label{eq:magnetic-virtual-work}
+\end{equation}
+两项分别包含力矩功与梯度力功。采用 $(\nabla B)_{ab}=\partial_b B_a$ 时，偶极力和力矩为 $(\nabla B)^T\mu$ 与 $\mu\times B$。电流仅通过 $G_Ii$ 进入动量方程。十二通道因此并不意味着十二个独立广义力，更不意味着可以任意修正 24 维相空间。对期望动量力增量 $d$，不可消除的线性残差为
+\begin{equation}
+ r_\perp=(I-G_IG_I^\dagger)d.
+ \label{eq:unreachable-force}
+\end{equation}
+它与电流、场约束引入的误差分别报告。数值秩依赖所给奇异值阈值和求积设置。
+
+\subsection{反馈导数与能量计账}
+对明确指定的合成比例动量阻尼率 $\gamma$，先定义物理场，再代入反馈：
+\begin{equation}
+\begin{aligned}
+ f(z,i)&=J\partial_z h_{\rm coil}(z,i)\big|_i-
+ \binom{0}{\gamma P},\\
+ f_{\rm cl}(z)&=f(z,k(z)),\\
+ Df_{\rm cl}&=f_z+f_iDk.
+\end{aligned}
+ \label{eq:physical-feedback}
+\end{equation}
+直接使用 $J\nabla_z h_{\rm coil}(z,k(z))$ 会引入非物理力项 $J(Dk)^T\phi$。反之，对 $f_{\rm cl}$ 求导时冻结反馈又会漏掉真实链式导数。隐式闭环残差必须在与状态相同的未知中点上计算输入。
+
+记 $h_b=h_{\rm coil}(z,i_b)$、$v=\partial_Ph_b=\overline M^{-1}P$、$y=G_I^Tv$。理想瞬时共点律
+\begin{equation}
+\begin{aligned}
+ i&=i_b-\kappa y,\\
+ h_b'&=-\gamma P^T\overline M^{-1}P-\kappa\|y\|^2\leq0.
+\end{aligned}
+ \label{eq:collocated-power}
+\end{equation}
+是实际磁端口的功率恒等式。本文选择 $\kappa=0.2/\|G_I(Q_0)\|_2^2=0.1542504562$，其物理输出与增益为
+\begin{equation}
+\begin{aligned}
+ y_{\rm SI}&=E_0\omega_0y,\\
+ \kappa_{\rm SI}&=\kappa/(E_0\omega_0)\\
+ &=95590.32245\ {\rm A^2/W}.
+\end{aligned}
+ \label{eq:port-units}
+\end{equation}
+此换算使同一反馈可转移到空间杆，其单位电流节点力和材料力矩给出
+$y_{{\rm SI},j}=\sum_aF_{j,a}\cdot\dot r_a+\sum_eT_{j,e}\cdot\Omega_e$。
+杆模型请求 $i_{\rm req}=i_{\rm ff}-\kappa_{\rm SI}y_{\rm SI}$；名义项仍含局部静态顺应度前馈和位置反馈。耗散端口的转移并未消除名义模型误差。式 \eqref{eq:collocated-power} 也不证明保持原二形式、全状态渐近稳定或 KAM 持续性。
+
+当电流随时间变化时，总磁能与机械能具有不同功率预算：
+\begin{align}
+ h_{\rm coil}'&=\phi^Ti'-\gamma v^TP,\label{eq:total-power}\\
+ [(T+V_e)/E_0]'&=v^TG_Ii-\gamma v^TP.
+ \label{eq:mechanical-power}
+\end{align}
+空间环境模型使用机械能预算，并加入流体、耗散接触、残余加速度与结构阻尼功。接触弹性能已计入机械能，不再重复计为外力功。
+
+\subsection{采样分配与电流记忆}
+两种受限策略具有不同目标：一种将共点电流请求投影到可行电流集；另一种求解
+\begin{equation}
+\begin{gathered}
+ \min_{i\in\mathcal C(Q,i_{\rm prev})}
+ \tfrac12\|G_I(Q)(i-i_b)-d\|^2,\\
+ d=\gamma P.
+\end{gathered}
+ \label{eq:force-allocation}
+\end{equation}
+以尝试补偿阻尼。可行集包含 $|i_j|\leq2$\,A、
+$|i_j-i_{{\rm prev},j}|\leq20\Delta t$\,A，以及采样约束
+$\|B\|\leq5$\,mT、$\|\nabla B\|_F\leq0.03$\,T\,m$^{-1}$，其中 $\Delta t$ 以秒计。固定位形下这些约束为凸约束；端口秩亏可能使力分配极小解不唯一。求解器成功标志和独立可行性检查分别记录，不能替代最优性或光滑性证明。
+
+两次更新间的实际电流为
+$i(t)=(1-\theta)i_{\rm prev}+\theta i_{\rm target}$，$0\leq\theta\leq1$。
+端点约束保证连续幅值界及几乎处处成立的斜率界。凸性还保证分配所用固定空间采样点上的场约束沿电流线段成立，但不能认证所有运动磁点的全部中间时刻，或整个连续血管工作域。杆模型采用带 5\% 裕度的固定管状采样点和 2\,ms 更新；ROM 则在每个 Runge--Kutta 阶段检查实际运动磁点。
+
+投影、采样和电流斜坡改变了执行输入，因此不能直接将理想耗散恒等式赋予任一受限策略。完整采样 ROM 状态为 $(z,i_{\rm prev})\in\mathbb R^{36}$。仅审计其 $24\times24$ 机械子块会遗漏电流记忆。因此，光滑固定电流 Hamiltonian 动力学、光滑共点反馈和受限采样映射需要各自的结构论证。即便所有已记录电流和场样本满足限值，这一区别仍然成立。

@@ -1,0 +1,22 @@
+# Transient LaTeX products; root deliverable PDFs and final build logs are kept.
+english/main.aux
+english/main.bbl
+english/main.blg
+english/main.log
+english/main.out
+english/main.pdf
+chinese/main.aux
+chinese/main.bbl
+chinese/main.blg
+chinese/main.log
+chinese/main.out
+chinese/main.pdf
+supplement/main_*.aux
+supplement/main_*.bbl
+supplement/main_*.blg
+supplement/main_*.log
+supplement/main_*.out
+supplement/main_*.pdf
+supplement/main_*.toc
+build_logs/*_pass*.txt
+build_logs/*_bibtex.txt

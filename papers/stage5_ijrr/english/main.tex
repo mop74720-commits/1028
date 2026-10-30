@@ -1,0 +1,22 @@
+\documentclass[Afour,sageh,times]{sagej}
+\input{../template/preamble}
+\runninghead{Local structure and full-coil control of a magnetic rod}
+\hypersetup{pdftitle={Local Birkhoff structure and full-coil control of a three-dimensional magnetic rod},pdfauthor={Authors to be confirmed}}
+\title{Local Birkhoff structure and full-coil control of a three-dimensional magnetic rod}
+\author{[Author names, affiliations and corresponding author to be supplied]}
+\begin{document}
+\begin{abstract}
+Geometric integration and learned Hamiltonians can support magnetic soft-robot simulation only when they represent the same mechanical dynamics and realizable inputs. We study this interface on a three-dimensional Kirchhoff reduction with 12 configuration coordinates, configuration-dependent inertia, and full Biot--Savart coil forces. A transported one-form, a computable local Moser chart, and compatible endpoint generators separate structural matching from approximation of the original field. Higher transport order reduces the continuous representation gap, but does not consistently improve total integration error. On a fixed-current conservative branch, a nonseparable central generating method exhibits fourth-order convergence; smooth feedback and sampled constrained control require different structural claims. Energy differentiation and virtual work agree for the full-coil port, whereas a local affine field gives approximately 98.6\% force discrepancy in the tested configuration. Frozen complex-network comparisons expose a trade-off between field accuracy and positive momentum curvature. Three-dimensional resonance calculations retain non-action quartics and do not establish a KAM certificate. Transfer to a spatial Cosserat rod demonstrates constrained execution with prescribed flow and contact, but no tracking improvement. The results provide a reproducible, explicitly local connection between mechanics, structure and actuation, together with the limits of its present validation.
+\end{abstract}
+\keywords{magnetic soft robotics; Cosserat rods; Birkhoff systems; geometric integration; Hamiltonian learning; constrained magnetic control}
+\maketitle
+\input{sections/introduction}
+\input{sections/model_control}
+\input{sections/theory}
+\input{sections/numerical_protocol}
+\input{sections/physical_results}
+\input{sections/learning_kam}
+\input{sections/discussion}
+\bibliographystyle{sageh}
+\bibliography{../references}
+\end{document}

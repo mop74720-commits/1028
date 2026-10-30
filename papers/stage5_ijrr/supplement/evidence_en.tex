@@ -1,0 +1,20 @@
+\section{Evidence selection and reproducibility}
+The repository base is \texttt{1c73a580441200d6594e2a2a96374edc1c0e98e6}. The manuscript branch adds only the paper directory. Source comments in the article and proof files identify the existing derivations; the accompanying CSV manifests give exact numerical fields and SHA-256 identities. Scientific programs are not executed by the manuscript build. The plot builder reads accepted frozen JSON/CSV/NPZ outputs and records every plotted series.
+
+\subsection{Accepted and rejected calculations}
+The accepted transport results are the \texttt{inverse\_verified} runs, checked against reverse differentiation and finite differences. The earlier nested automatic-differentiation path through a linear solve is not used as high-derivative evidence. The final coil-force comparison and sampled-memory diagnostics use the force-allocator warm-start correction. The final spatial-rod set uses the analytic feasibility repair. Earlier failures remain in their source directories. No old output is overwritten, relabeled as a success, or averaged into the accepted series.
+
+The same-state coil quadrature comparison, the short feedback trajectories, the conservative integrator test, the learning labels, and the environmental rod have different purposes and, where specified, different physical branches. Each comparison is internally matched. They do not jointly constitute a single learned, constrained, Birkhoff-integrated environmental trajectory. Field samples certify only the recorded points; local polynomial bounds are not outward-rounded interval certificates.
+
+\subsection{Reproduction entry points}
+The paper bundle provides \texttt{README.md}, \texttt{tools/build.sh} and \texttt{tools/build\_figures.py}. The scientific reproduction commands and dependencies remain in the frozen Stage~3 and Stage~5 READMEs; the paper does not claim to have rerun them. The principal manuscript manifests are:
+\begin{itemize}
+\item \texttt{evidence/theory\_claims.csv}: assumptions, equations and proof sources;
+\item \texttt{evidence/physics\_claims.csv}: physical parameters, force and rod results;
+\item \texttt{evidence/numerical\_claims.csv}: integration, representation and solver diagnostics;
+\item \texttt{evidence/learning\_claims.csv}: training, inversion, allocation and resonance results;
+\item \texttt{evidence/figure\_sources.csv} and \texttt{plotted\_data.json}: accepted series and source hashes;
+\item \texttt{evidence/reference\_verification.csv}: bibliographic provenance and limits of current online verification.
+\end{itemize}
+
+Historical frozen certificates and earlier training are distinct from the new Stage~5 checkpoints. Where the original historical weights, Fourier assets or complete data archive are absent from the lightweight bundle, their absence prevents exact reproduction and is retained as such. The existing Stage~5 results provide their own configurations and outputs; they are not replacements for missing historical files.

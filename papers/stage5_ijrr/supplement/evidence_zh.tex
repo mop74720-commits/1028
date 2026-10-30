@@ -1,0 +1,20 @@
+\section{证据选择与可复现性}
+仓库基准为 \texttt{1c73a580441200d6594e2a2a96374edc1c0e98e6}。论文分支只新增论文目录。正文与证明文件中的源注释定位既有推导，随附 CSV 清单给出精确数值字段及 SHA-256 身份。论文编译不执行科学程序。绘图程序读取已接受的冻结 JSON/CSV/NPZ 输出，并记录全部绘图序列。
+
+\subsection{接受与否定的计算}
+接受的输运结果为经过反向求导及有限差分核验的 \texttt{inverse\_verified} 运行。早期经线性求解器的嵌套自动微分路径不作为高阶导数证据。最终线圈力比较和采样记忆诊断采用力分配器暖启动修正，最终空间杆集合采用解析可行性修复。早期失败仍保留在原目录，旧输出没有被覆盖、改称成功或混入接受序列取平均。
+
+同状态线圈求积比较、短时反馈轨迹、保守积分器测试、学习标签及环境杆具有不同用途，并在所述情况下属于不同物理分支。每组比较内部保持一致，但这些结果共同不能构成一条学习、受限、经 Birkhoff 积分的环境轨迹。磁场采样只检查记录点；局部多项式界不是向外舍入的区间证书。
+
+\subsection{复算入口}
+论文包提供 \texttt{README.md}、\texttt{tools/build.sh} 和 \texttt{tools/build\_figures.py}。科学复算命令及依赖仍见冻结的 Stage~3 和 Stage~5 README；本次论文不声称重新运行了这些实验。主要论文清单为：
+\begin{itemize}
+\item \texttt{evidence/theory\_claims.csv}：假设、公式及证明来源；
+\item \texttt{evidence/physics\_claims.csv}：物理参数、磁力及空间杆结果；
+\item \texttt{evidence/numerical\_claims.csv}：积分、表示及求解器诊断；
+\item \texttt{evidence/learning\_claims.csv}：训练、反解、分配及共振结果；
+\item \texttt{evidence/figure\_sources.csv} 及 \texttt{plotted\_data.json}：接受序列及源哈希；
+\item \texttt{evidence/reference\_verification.csv}：文献来源及当前在线核验限制。
+\end{itemize}
+
+历史冻结证书与早期训练不同于 Stage~5 新检查点。轻量包中缺失的历史权重、Fourier 资产或完整数据归档仍会阻止精确复算，本文保留这一缺失状态。已有 Stage~5 结果具有各自的配置及输出，不能代替缺失的历史文件。

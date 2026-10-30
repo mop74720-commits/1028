@@ -1,0 +1,45 @@
+{
+  "repository": "https://github.com/mop74720-commits/1028",
+  "source_branch": "stage5/unified-3d-repairs",
+  "base_commit": "1c73a580441200d6594e2a2a96374edc1c0e98e6",
+  "manuscript_branch": "manuscript/stage5-ijrr",
+  "date": "2026-10-30",
+  "allowed_scientific_sources": [
+    "original 1025 and historical materials embedded in stage3",
+    "stage3",
+    "stage4/audit",
+    "stage5"
+  ],
+  "excluded_sources": [
+    "stage6",
+    "1025_bridges",
+    "prior original-only audit report"
+  ],
+  "new_scientific_experiments": false,
+  "original_docx": {
+    "path": "stage3/source_inputs/starter/references/推理草稿5月1025.docx",
+    "sha256": "8c62b874caaa6362b0f1c5612ddd6514aa7141454b17ef4cf5688408fe307338"
+  },
+  "sage_template": {
+    "source": "https://github.com/rstudio/rticles",
+    "commit": "accdfa39225570a8ad9b786fbb3077060d1e12a5",
+    "path": "inst/rmarkdown/templates/sage/skeleton",
+    "version": "2017/01/17 v1.20",
+    "class_unmodified": true,
+    "class_sha256": "4e736e371937216f5d1ef4470c2357c844755e0ebbade8888f0b94b8a17c9793",
+    "style_sha256": "70e72e23674f828550e55eadc0de8f110c4d6683c12288d58f6a583ae48a3f71"
+  },
+  "chinese_dependency": {
+    "source": "https://github.com/CTeX-org/ctex-kit",
+    "commit": "13a22565bdd14d750b604c2f1ed0fa1938cb6cd4",
+    "tag": "ctex-v2.5.10",
+    "xecjk_version": "3.9.0",
+    "local_generation": "docstrip from included upstream sources; release Id metadata expanded to tag commit/date; executable package body unchanged"
+  },
+  "network_limits": {
+    "requested_ijrr_url": "https://journals.sagepub.com/author-instructions/ijr",
+    "sage_status": "CONNECT tunnel failed, response 403 from session network policy",
+    "crossref_status": "CONNECT tunnel failed, response 403",
+    "interpretation": "Latest IJRR instructions and fresh publisher metadata checks were unavailable; existing author template and frozen reference records used, with provenance."
+  }
+}

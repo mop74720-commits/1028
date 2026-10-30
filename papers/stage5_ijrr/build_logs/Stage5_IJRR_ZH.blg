@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2025/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: sageh.bst
+Database file #1: ../references.bib
+Warning--empty pages in Greydanus2019
+You've used 15 entries,
+            2921 wiz_defined-function locations,
+            726 strings with 7967 characters,
+and the built_in function-call counts, 14194 in all, are:
+= -- 1432
+> -- 366
+< -- 9
++ -- 145
+- -- 127
+* -- 1047
+:= -- 1850
+add.period$ -- 48
+call.type$ -- 15
+change.case$ -- 120
+chr.to.int$ -- 16
+cite$ -- 16
+duplicate$ -- 1353
+empty$ -- 1107
+format.name$ -- 163
+if$ -- 2891
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 153
+newline$ -- 84
+num.names$ -- 60
+pop$ -- 630
+preamble$ -- 1
+purify$ -- 102
+quote$ -- 0
+skip$ -- 244
+stack$ -- 0
+substring$ -- 1390
+swap$ -- 369
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 126
+warning$ -- 1
+while$ -- 107
+width$ -- 0
+write$ -- 217
+(There was 1 warning)

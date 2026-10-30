@@ -1,0 +1,32 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,graphicx,booktabs,natbib,fontspec,xeCJK,hyperref}
+\setmainfont{NimbusRoman-Regular.otf}[BoldFont=NimbusRoman-Bold.otf,ItalicFont=NimbusRoman-Italic.otf,BoldItalicFont=NimbusRoman-BoldItalic.otf]
+\setsansfont{NimbusSans-Regular.otf}[BoldFont=NimbusSans-Bold.otf,ItalicFont=NimbusSans-Italic.otf,BoldItalicFont=NimbusSans-BoldItalic.otf]
+\setmonofont{DejaVu Sans Mono}[Scale=0.78]
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}[ItalicFont={Noto Sans CJK SC},BoldItalicFont={Noto Sans CJK SC Bold}]
+\setCJKmonofont{Noto Sans Mono CJK SC}
+\hypersetup{hidelinks}
+\usepackage{float}
+\setlength{\emergencystretch}{1em}
+\newcommand{\R}{\mathbb R}
+\renewcommand{\theequation}{S\arabic{equation}}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\tablename}{表}
+\renewcommand{\refname}{参考文献}
+\renewcommand{\contentsname}{目录}
+\renewcommand{\proofname}{证明}
+\title{补充材料：三维磁性杆的局部 Birkhoff 结构与全线圈控制}
+\author{[作者信息待补充]}
+\date{Stage 3--5 证据；仓库基准 1c73a58}
+\begin{document}
+\maketitle
+\noindent 本补充材料展开正文使用的既有局部证明及证据边界，不含 Stage~6 或后续衔接研究的新结果。符号和公式与英文版一致。源注释及证据清单定位既有证明和计算；本次论文准备未新增科学实验。
+\tableofcontents
+\input{theory_zh}
+\input{learning_kam_zh}
+\input{evidence_zh}
+\bibliographystyle{sageh}
+\bibliography{../references}
+\end{document}

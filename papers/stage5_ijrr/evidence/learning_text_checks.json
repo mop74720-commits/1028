@@ -1,0 +1,21 @@
+{
+  "english/sections/learning_kam.tex": {
+    "display_math": 12,
+    "inline_math": 100,
+    "labels": 16,
+    "citations": 4,
+    "english_whitespace_words_including_tex": 1978,
+    "matching": true
+  },
+  "supplement/learning_kam_en.tex": {
+    "display_math": 18,
+    "inline_math": 104,
+    "labels": 20,
+    "citations": 2,
+    "english_whitespace_words_including_tex": 1748,
+    "matching": true
+  },
+  "evidence_rows": 149,
+  "evidence_source_paths_exist": true,
+  "compile_check": "SAGE two-column learning section including inserted figures compiled in EN/ZH with current shared preamble and no overfull boxes; logs /tmp/stage5_learning_sagecheck/learning_sage_{en,zh}.log. Supplement equations additionally split into matching aligned rows. Full manuscript assembly owned by root."
+}

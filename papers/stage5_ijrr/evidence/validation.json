@@ -1,0 +1,180 @@
+{
+  "scope": "Typesetting, bilingual parity and frozen-source integrity only",
+  "new_scientific_experiments": false,
+  "pairs": {
+    "english/sections/discussion.tex": {
+      "matching": {
+        "display": true,
+        "inline": true,
+        "labels": true,
+        "citations": true,
+        "numeric_tokens": true
+      },
+      "display_count": 0,
+      "inline_count": 0,
+      "labels": 0
+    },
+    "english/sections/introduction.tex": {
+      "matching": {
+        "display": true,
+        "inline": true,
+        "labels": true,
+        "citations": true,
+        "numeric_tokens": true
+      },
+      "display_count": 0,
+      "inline_count": 0,
+      "labels": 0
+    },
+    "english/sections/learning_kam.tex": {
+      "matching": {
+        "display": true,
+        "inline": true,
+        "labels": true,
+        "citations": true,
+        "numeric_tokens": true
+      },
+      "display_count": 12,
+      "inline_count": 100,
+      "labels": 16
+    },
+    "english/sections/model_control.tex": {
+      "matching": {
+        "display": true,
+        "inline": true,
+        "labels": true,
+        "citations": true,
+        "numeric_tokens": true
+      },
+      "display_count": 15,
+      "inline_count": 86,
+      "labels": 17
+    },
+    "english/sections/numerical_protocol.tex": {
+      "matching": {
+        "display": true,
+        "inline": true,
+        "labels": true,
+        "citations": true,
+        "numeric_tokens": true
+      },
+      "display_count": 1,
+      "inline_count": 67,
+      "labels": 4
+    },
+    "english/sections/physical_results.tex": {
+      "matching": {
+        "display": true,
+        "inline": true,
+        "labels": true,
+        "citations": true,
+        "numeric_tokens": true
+      },
+      "display_count": 0,
+      "inline_count": 87,
+      "labels": 4
+    },
+    "english/sections/theory.tex": {
+      "matching": {
+        "display": true,
+        "inline": true,
+        "labels": true,
+        "citations": true,
+        "numeric_tokens": true
+      },
+      "display_count": 27,
+      "inline_count": 161,
+      "labels": 32
+    },
+    "supplement/theory_en.tex": {
+      "matching": {
+        "display": true,
+        "inline": true,
+        "labels": true,
+        "citations": true,
+        "numeric_tokens": true
+      },
+      "display_count": 53,
+      "inline_count": 292,
+      "labels": 53
+    },
+    "supplement/learning_kam_en.tex": {
+      "matching": {
+        "display": true,
+        "inline": true,
+        "labels": true,
+        "citations": true,
+        "numeric_tokens": true
+      },
+      "display_count": 18,
+      "inline_count": 104,
+      "labels": 20
+    },
+    "supplement/evidence_en.tex": {
+      "matching": {
+        "display": true,
+        "inline": true,
+        "labels": true,
+        "citations": true,
+        "numeric_tokens": true
+      },
+      "display_count": 0,
+      "inline_count": 0,
+      "labels": 0
+    }
+  },
+  "pdfs": {
+    "Stage5_IJRR_EN": {
+      "pages": 17,
+      "sha256": "aa38a7b40b90d942afee7db8c698ef6e5857ed2a60bc372595ec7fec480a5880",
+      "bytes": 327688,
+      "all_fonts_embedded": true,
+      "overflow_or_missing_reference_errors": 0,
+      "latex_warnings": [],
+      "bibtex_warnings": [
+        "Warning--empty pages in Greydanus2019"
+      ]
+    },
+    "Stage5_IJRR_ZH": {
+      "pages": 13,
+      "sha256": "c02b1a531bbaadf622e58fe7dc91a83891145514ded5946b7daed2c449ab70bf",
+      "bytes": 596503,
+      "all_fonts_embedded": true,
+      "overflow_or_missing_reference_errors": 0,
+      "latex_warnings": [],
+      "bibtex_warnings": [
+        "Warning--empty pages in Greydanus2019"
+      ]
+    },
+    "Stage5_IJRR_Supplement_EN": {
+      "pages": 15,
+      "sha256": "1aaee1bb0cc56a5cecddf61efd85a278c337bf9874f00f7f7bf175816972426b",
+      "bytes": 153600,
+      "all_fonts_embedded": true,
+      "overflow_or_missing_reference_errors": 0,
+      "latex_warnings": [],
+      "bibtex_warnings": []
+    },
+    "Stage5_IJRR_Supplement_ZH": {
+      "pages": 13,
+      "sha256": "582619ce75fb33f951f7d17469abc2d8033f7d9fdbd8cf56f469e5c781199a0b",
+      "bytes": 336127,
+      "all_fonts_embedded": true,
+      "overflow_or_missing_reference_errors": 0,
+      "latex_warnings": [],
+      "bibtex_warnings": []
+    }
+  },
+  "source_files": 53,
+  "compiled_numbering": {
+    "main": {
+      "matching": true,
+      "labels": 73
+    },
+    "supplement": {
+      "matching": true,
+      "labels": 73
+    }
+  },
+  "existing_research_files_changed": []
+}
